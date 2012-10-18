@@ -1,5 +1,7 @@
 ---
 title: Changes and Backward Compatibility
+meta_title: Changes and Backwards Compatibility
+meta_description: A list of breaking changes made for each release of Kendo UI
 slug: gs-changes-and-backward-compatibility
 publish: true
 ---
