@@ -137,7 +137,7 @@ Plays the effect
         });
     </script>
 
-### play
+### reverse
 
 Plays the effect in reverse.
 
