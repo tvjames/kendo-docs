@@ -9,6 +9,36 @@ publish: true
 
 ## Configuration
 
+### altRowTemplate `Function`
+
+Template to be used for rendering the alternate rows in the grid.
+
+#### Example
+
+    //template
+    <script id="altRowTemplate" type="text/x-kendo-tmpl">
+        <tr class="k-alt">
+            <td>
+                <img src="${ BoxArt.SmallUrl }" alt="${ Name }" />
+            </td>
+            <td>
+                ${ Name }
+            </td>
+            <td>
+                ${ AverageRating }
+            </td>
+        </tr>
+    </script>
+
+    //grid intialization
+    <script>PO details informaiton
+        $("#grid").kendoGrid({
+            dataSource: dataSource,
+            altRowTemplate: kendo.template($("#altRowTemplate").html()),
+            height: 200
+        });
+    </script>
+
 ### autoBind `Boolean`*(default: true)*
 
  Indicates whether the grid will call read on the DataSource initially.
@@ -47,9 +77,43 @@ A collection of column objects or collection of strings that represents the name
                    { title: "Year", field: "year", filterable: false, sortable: true, format: "{0:dd/MMMM/yyyy}" } ]
     });
 
-### columns.command `String`
+### columns.attributes `Object`
+
+Definition of column cells' HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+
+#### Example
+
+    $("#grid").kendoGrid({
+        columns: [
+            {
+                field: "Price",
+                attributes: {
+                    "class": "myClass",
+                    style: "text-align: right"
+                }
+            }
+        ]
+    });
+
+### columns.command `String|Array`
 
 Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
+
+### columns.command.name `String`
+
+The unique name of the command. The supported built-in commands are: "create", "cancel", "save", "destroy".
+
+### columns.command.text `String`
+
+The text displayed by the command.
+
+### columns.command.className `String`
+
+The CSS class of the command.
+
+### columns.command.click `Function`
+
+The JavaScript function executed when the user clicks the command button.
 
 ### columns.editor `Function`
 
@@ -114,6 +178,39 @@ The format that will be applied on the column cells.
          ]
       });
 
+### columns.headerAttributes `Object`
+
+Definition of column header cell's HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+
+#### Example
+
+    $("#grid").kendoGrid({
+        columns: [
+            {
+                field: "Price",
+                headerAttributes: {
+                    "class": "myHeader",
+                    style: "text-align: right"
+                }
+            }
+        ]
+    });
+
+### columns.headerTemplate `String`
+
+The template for column's header cell. If sorting is enabled, it will be wrapped in a `<a class="k-link">` element, so the template should consist of only inline elements
+in order to have valid HTML markup in the Grid.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         columns: [
+             {
+                 headerTemplate: '<input type="checkbox" id="checkAll" />'
+            }
+         ]
+      });
+
 ### columns.sortable `Boolean`*(default: true)*
 
  Specifies whether given column is sortable.
@@ -141,6 +238,100 @@ The template for column's cells.
          ]
       });
 
+### columns.aggregates `Array`
+
+The aggregates to be used when grouping is applied
+
+#### Example
+
+    $("#grid").kendoGrid({
+         dataSource: {
+             data: createRandomData(50),
+             pageSize: 10
+         },
+         columns: [
+             {
+                 field: "Name"
+             },
+             {
+                 field: "UnitPrice",
+                 aggregates: ["count", "sum"]
+             }
+         ]
+      });
+
+
+### columns.groupHeaderTemplate `String`
+
+The template for group header item.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         dataSource: {
+             data: createRandomData(50),
+             pageSize: 10,
+             group: { field: "BirthDate" }
+         },
+         columns: [
+             {
+                 field: "Name"
+             },
+             {
+                 field: "BirthDate",
+                 title: "Birth Date",
+                 groupHeaderTemplate: 'Birth Date: #= value #'
+            }
+         ]
+      });
+
+### columns.groupFooterTemplate `String`
+
+The template for column's cell in group footer item.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         dataSource: {
+             data: createRandomData(50),
+             pageSize: 10,
+             group: { field: "BirthDate" }
+         },
+         columns: [
+             {
+                 field: "Name"
+             },
+             {
+                 field: "BirthDate",
+                 title: "Birth Date",
+                 groupFooterTemplate: 'custom text'
+            }
+         ]
+      });
+
+### columns.footerTemplate `String`
+
+The template for column's cell in footer item.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         dataSource: {
+             data: createRandomData(50),
+             pageSize: 10
+         },
+         columns: [
+             {
+                 field: "Name"
+             },
+             {
+                 field: "BirthDate",
+                 title: "Birth Date",
+                 footerTemplate: 'custom footer text'
+            }
+         ]
+      });
+
 ### columns.title `String`
 
 The text that will be displayed in the column header.
@@ -148,6 +339,22 @@ The text that will be displayed in the column header.
 ### columns.width `String`
 
 The width of the column.
+
+### columns.menu `Boolean`
+
+Indicates whether the column should be visible in column menu.
+
+### columnMenu `Boolean | Object`
+
+Enables column header menu
+
+### columnMenu.sortable `Boolean`
+
+Enable/disable sorting section in column header menu.
+
+### columnMenu.filterable `Boolean`
+
+Enable/disable filter section in column header menu.
 
 ### dataSource `kendo.data.DataSource | Object`
 
@@ -178,7 +385,7 @@ Instance of DataSource or Object with DataSource configuration.
 Template to be used for rendering the detail rows in the grid.
 See the [**Detail Template**](http://demos.kendoui.com/web/grid/detailtemplate.html) example.
 
-### editable `Object`
+### editable `Boolean|Object` *(default: false)*
 
 Indicates whether editing is enabled/disabled.
 
@@ -235,6 +442,14 @@ Indicates whether item should be switched to edit mode on click.
 
  Indicates whether filtering is enabled/disabled.
 
+### reorderable `Boolean`*(default:false)*
+
+ Indicates whether column reordering is enabled/disable.
+
+### resizable `Boolean`*(default:false)*
+
+ Indicates whether column resizing is enabled/disable.
+
 ### groupable `Boolean | Object`*(default: false)*
 
  Indicates whether grouping is enabled/disabled.
@@ -282,6 +497,10 @@ Indicates whether item should be switched to edit mode on click.
             }
         }
     });
+
+### height `Number|String`
+
+ Sets the height of the grid.
 
 ### navigatable `Boolean`*(default: false)*
 
@@ -439,24 +658,11 @@ Template to be used for rendering the rows in the grid.
 
 ### scrollable `Boolean | Object`*(default: true)*
 
- Enable/disable grid scrolling. Possible values:
+ Enable/disable grid scrolling.
 
+### scrollable.virtual `Boolean` *(default: false)*
 
-#### *true*
-
-Enables grid vertical scrolling
-
-#### *false*
-
-Disables grid vertical scrolling
-
-#### *{ virtual: false }*
-
-Enables grid vertical scrolling without data virtualization. Same as first option.
-
-#### *{ virtual: true }*
-
-Enables grid vertical scrolling with data virtualization.
+ Enable/disable virtual scrolling. When enabled the grid will display only a single page of data (configured via `dataSource.pageSize`).
 
 #### Example
 
@@ -526,6 +732,7 @@ Defines that multiple columns can be sorted at a time.
 
 This is a list of commands for which the corresponding buttons will be rendered.
 The supported built-in commands are: "create", "cancel", "save", "destroy".
+Or template to be used for rendering the toolbar content.
 
 #### Example
 
@@ -954,6 +1161,28 @@ Fires when the grid has received data from the data source.
      grid.bind("dataBound", function(e) {
          // handle event
      });
+
+### dataBinding
+
+Fires when the grid is about to be rendered.
+
+#### Example
+
+     $("#grid").kendoGrid({
+         dataBinding: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var grid = $("#grid").data("kendoGrid");
+     // bind to the dataBound event
+     grid.bind("dataBound", function(e) {
+         // handle event
+     });
+
 
 ### detailCollapse
 

@@ -23,9 +23,25 @@ will disable all animations in the widget.
 
 The animation that will be used when a Window closes.
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
 The animation that will be used when a Window opens.
+
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
 
 ### appendTo `Object|String`*(default: document.body)*
 

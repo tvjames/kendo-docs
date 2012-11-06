@@ -39,15 +39,33 @@ Close the ActionSheet.
 
 Open the ActionSheet.
 
+#### Example
+
+    <ul data-role="listview">
+        <li> Foo <a data-role="button" id="button">Delete</a></li>
+    </ul>
+
+    <ul data-role="actionsheet" id="actionsheet">
+        <li><a data-action="foo">Foo</a></li>
+        <li><a data-action="bar">Bar</a></li>
+    </ul>
+
+    <script>
+        $("#actionsheet").data("kendoMobileActionSheet").open($("#button"));
+    </script>
+
 #### Parameters
 
 ##### target `jQuery`
 
-(optional) The target of the ActionSheet, available in the callback methods.
+(optional) The target element of the ActionSheet, available in the callback methods.
+
+**Notice** The target element is **mandatory** on tablets, as the ActionSheet widget positions itself relative to opening element when a tablet is detected.
 
 ##### context `Object`
 
 (optional) The context of the ActionSheet, available in the callback methods.
+
 
 ## Events
 

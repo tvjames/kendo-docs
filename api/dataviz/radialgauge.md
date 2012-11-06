@@ -76,7 +76,7 @@ The height of the gauge area.
 
     // sets the top, right, bottom and left margin to 3px.
     margin: 3
-    
+
     // sets the top and left margin to 1px
     // margin right and bottom are with 5px (by default)
     margin: { top: 1, left: 1 }
@@ -227,7 +227,7 @@ The labels are positioned inside.
 
 The labels are positioned outside.
 
-### scale.labels.template `String/Function`
+### scale.labels.template `String|Function`
 
 The label template.
 Template variables:

@@ -76,7 +76,7 @@ The height of the gauge area.
 
     // sets the top, right, bottom and left margin to 3px.
     margin: 3
-    
+
     // sets the top and left margin to 1px
     // margin right and bottom are with 5px (by default)
     margin: { top: 1, left: 1 }
@@ -147,7 +147,7 @@ The color of the pointer.
 
     // sets the top, right, bottom and left margin to 3px.
     margin: 3
-    
+
     // sets the top and left margin to 1px
     // margin right and bottom are with 5px (by default)
     margin: { top: 1, left: 1 }
@@ -334,7 +334,7 @@ The format of the labels.
 
     // sets the top, right, bottom and left margin to 3px.
     margin: 3
-    
+
     // sets the top and left margin to 1px
     // margin right and bottom are with 5px (by default)
     margin: { top: 1, left: 1 }
@@ -343,7 +343,7 @@ The format of the labels.
 
  The padding of the labels.
 
-### scale.labels.template `String/Function`
+### scale.labels.template `String|Function`
 
 The label template.
 Template variables:

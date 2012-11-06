@@ -34,6 +34,14 @@ publish: true
          });
      </script>
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
  Animation to be used for opening of the popup.
@@ -53,6 +61,14 @@ publish: true
              }
          });
      </script>
+
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
 
 ### dataSource `Object | kendo.data.DataSource`
 
@@ -278,7 +294,7 @@ Prepares the **AutoComplete** for safe removal from DOM. Detaches all event hand
 #### Example
 
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
-    
+
     // detach events
     autocomplete.destroy();
 

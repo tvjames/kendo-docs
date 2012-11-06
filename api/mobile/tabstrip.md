@@ -27,10 +27,6 @@ Get the currently selected tab DOM element.
 
 Set the mobile TabStrip active tab to the tab with the specified url.
 
-### clear
-
-Clear the currently selected tab.
-
 #### Example
 
     <div data-role="tabstrip" id="tabstrip"> <a href="#foo">Foo</a> </div>
@@ -46,6 +42,10 @@ Clear the currently selected tab.
 ##### url `String`
 
 The url of the tab.
+
+### clear
+
+Clear the currently selected tab.
 
 ## Events
 

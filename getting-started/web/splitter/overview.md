@@ -81,8 +81,8 @@ To achieve complex layouts, the **Splitter** supports nested layouts.
 
 ### Initialize two Splitters with differing orientations
 
-    $("horizontalSplitter").kendoSplitter();
-    $("verticalSplitter").kendoSplitter({ orientation: "vertical" });
+    $("#horizontalSplitter").kendoSplitter();
+    $("#verticalSplitter").kendoSplitter({ orientation: "vertical" });
 
 ## Loading Content with AJAX
 

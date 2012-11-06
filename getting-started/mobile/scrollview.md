@@ -47,3 +47,20 @@ when the device is rotated. To define a page, wrap the content in a div with `da
         <div data-role="page">Bar</div>
     </div>
 
+### Clearing the whitespaces
+
+Whitespaces between page elements in the mark-up causes the ScrollView pager to display an extra page. In order to fix this any whitespace between page elements should be removed.
+
+    <div data-role="page">
+        <!--page content-->
+    </div><div data-role="page">
+        <!--page content-->
+    </div><div data-role="page">
+        <!--page content-->
+    </div>
+
+If a Kendo template is used to generate the pages the whitespace gaps can be avoided in the following way.
+
+    <script type="text/x-kendo-template" id="tmp"><div data-role="page" >
+        <!-- page content -->
+    </div></script>

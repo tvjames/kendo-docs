@@ -17,13 +17,11 @@ Default options for all chart axes.
 
 The category axis configuration options.
 
-### categoryAxis.axisCrossingValue `Number`*(default: 0)*
+### categoryAxis.axisCrossingValue `Object | Date | Array`
 
-Category index at which the first value axis crosses this axis.
+Category index at which the first value axis crosses this axis. (Only for object)
 
-### categoryAxis.axisCrossingValues `Array`*(default: [0])*
-
-Category indicies at which the value axes cross the category axis.
+Category indicies at which the value axes cross the category axis. (Only for array)
 
 **Note:&nbsp;** Specify an index greater than or equal to the number
 of categories to denote the far end of the axis.
@@ -33,9 +31,9 @@ of categories to denote the far end of the axis.
     $("#chart").kendoChart({
          categoryAxis: {
              categories: ["A", "B"],
-             axisCrossingValues: [0, 100]
+             axisCrossingValue: [0, 100]
          },
-         valueAxis: [{ }, { name: "secondary" }],
+         valueAxis: [{ }, { name: "secondary" }]
          ...
     })
     </p>
@@ -193,7 +191,7 @@ Skips rendering the first n labels.
 Label rendering step.
 Every n-th label is rendered where n is the step
 
-### categoryAxis.labels.template `String/Function`
+### categoryAxis.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -408,7 +406,7 @@ on the chart.
 
 The visibility of the minor ticks.
 
-### categoryAxis.name `Object`*(default: primary)*
+### categoryAxis.name `String`*(default: primary)*
 
 The unique axis name.
 
@@ -571,14 +569,7 @@ Discrete category axis.
 
 Specialized axis for displaying chronological data.
 
-### categoryAxis.type="date"
-
-Properties specific to the date-time value axis.
-
-Note: The Chart will automatically switch to a date category axis if the categories
-are of type Date. Specify type explicitly when such behavior is undesired.
-
-### categoryAxis.type="date".autoBaseUnitSteps `Object`
+### categoryAxis.autoBaseUnitSteps `Object`
 
 Specifies the discrete **baseUnitStep** values when
 either **baseUnit** is set to "fit" or **baseUnitStep** is set to "auto".
@@ -610,7 +601,7 @@ Each setting can be overriden individually.
         ...
     });
 
-### categoryAxis.type="date".baseUnit `String`
+### categoryAxis.baseUnit `String`
 
 The base time interval for the axis.
 The default baseUnit is determined automatically from the minimum difference
@@ -630,25 +621,24 @@ that the total number of categories does not exceed **maxDateGroups**.
 Series data is aggregated for the specified base unit by using the
 **series.aggregate** function.
 
-### categoryAxis.type="date".baseUnitStep `Object`*(default: 1)*
+### categoryAxis.baseUnitStep `Object`*(default: 1)*
 
 Sets the step (interval) between categories in base units.
 Specifiying "auto" will set the step to such value that the total number of categories does not exceed **maxDateGroups**.
 
 This option is ignored if **baseUnit** is set to "fit".
 
-### categoryAxis.type="date".labels `Object`
+### categoryAxis.labels `Object`
 
 Label settings specific to the date axis.
 
-### categoryAxis.type="date".labels.culture `String`*(default: global culture)*
+### categoryAxis.labels.culture `String`*(default: global culture)*
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
 
-### categoryAxis.type="date".labels.dateFormats `Object`
+### categoryAxis.labels.dateFormats `Object`
 
 Date format strings
-
 
 #### *"hours"*
 
@@ -673,21 +663,21 @@ Date format strings
 The Chart will choose the appropriate format for the current `baseUnit`.
 Setting the labels **format** option will override these defaults.
 
-### categoryAxis.type="date".max `Date`
+### categoryAxis.max `Object`
 
 The last date displayed on the axis.
 By default, the minimum date is the same as the last category.
 This is often used in combination with the **min** and **roundToBaseUnit** configuration options to
 set up a fixed date range.
 
-### categoryAxis.type="date".min `Date`
+### categoryAxis.min `Object`
 
 The first date displayed on the axis.
 By default, the minimum date is the same as the first category.
 This is often used in combination with the **max** and **roundToBaseUnit** configuration options to
 set up a fixed date range.
 
-### categoryAxis.type="date".roundToBaseUnit `Boolean`*(default: true)*
+### categoryAxis.roundToBaseUnit `Boolean`*(default: true)*
 
 By default, the first and last dates will be rounded off to the nearest base unit.
 Specifying **false** for this option will disable this behavior.
@@ -696,7 +686,7 @@ This option is most useful in combination with explicit **min** and **max** date
 
 It will be ignored if either bar, column, ohlc or candlestick series are plotted on the axis.
 
-### categoryAxis.type="date".weekStartDay `Number`*(default: kendo.days.Sunday)*
+### categoryAxis.weekStartDay `Number`*(default: kendo.days.Sunday)*
 
 Specifies the week start day when **baseUnit** is set to "weeks".
 Use the *kendo.days* constants to specify the day by name.
@@ -710,7 +700,7 @@ Use the *kendo.days* constants to specify the day by name.
 * kendo.days.Saturday (6)
 
 
-### categoryAxis.type="date".maxDateGroups `Number`*(default: 10)*
+### categoryAxis.maxDateGroups `Number`*(default: 10)*
 
 Specifies the maximum number of groups (categories) to produce when
 either **baseUnit** is set to "fit" or **baseUnitStep** is set to "auto".
@@ -1146,68 +1136,42 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 Array of series definitions.
 
-
-
 The series type is determined by the value of the type field.
 If a type value is missing, the type is assumed to be the one specified in seriesDefaults.
 
-
-
 Each series type has a different set of options.
 
-### series.data `Array`
+### series.type `String`
+
+The type of the series.
+
+### series.type="area" `Object`
+
+Available options for area series:
+
+### series.type="area".data `Array`
 
 Array of data points.
 
-### series.field `String`
+### series.type="area".field `String`
 
 The data field containing the series value.
 
-### series.groupNameTemplate `String`
+### series.type="area".groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
-Template variables:
 
+Template variables:
 
 *   **series** - the series options
 *   **group** - the data group
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-#### Example
-
-    // chart intialization
-    $("#chart").kendoChart({
-         title: {
-             text: "My Chart Title"
-         },
-         dataSource: {
-             data: seriesData,
-             group: {
-                 field: "product",
-                 dir: "desc"
-             }
-         },
-         series: [{
-                 type: "bar",
-                 name: "Sales",
-                 field: "sales",
-                 groupNameTemplate: "#= series.name # for #= group.field # #= group.value #"
-                 // Sales for product Bar,
-                 // Sales for product Foo,
-                 // etc.
-             }
-         ]
-    });
-
-### series.name `String`
+### series.type="area".name `String`
 
 The series name visible in the legend.
-
-### series.type="area"
-
-Available options for area series:
 
 ### series.type="area".aggregate `String`*(default: "max")*
 
@@ -1361,7 +1325,7 @@ The label is positioned at the bottom of the area chart marker.
 
 The label is positioned at the left of the area chart marker.
 
-### series.type="area".labels.template `String/Function`
+### series.type="area".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -1401,7 +1365,7 @@ Template variables:
 
  The visibility of the labels.
 
-### series.type="area".line `String|Object`
+### series.type="area".line `String | Object`
 
 The line of the area chart.
 
@@ -1579,9 +1543,33 @@ Template variables:
 
  A value indicating if the tooltip should be displayed.
 
-### series.type="bar"
+### series.type="bar" `Object`
 
 Available options for bar series:
+
+### series.type="bar".data `Array`
+
+Array of data points.
+
+### series.type="bar".field `String`
+
+The data field containing the series value.
+
+### series.type="bar".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="bar".name `String`
+
+The series name visible in the legend.
 
 ### series.type="bar".aggregate `String`*(default: "max")*
 
@@ -1793,7 +1781,7 @@ The label is positioned inside, near the base of the bar.
 The label is positioned outside, near the end of the bar.
              Not applicable for stacked bar series.
 
-### series.type="bar".labels.template `String/Function`
+### series.type="bar".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -1956,11 +1944,438 @@ Template variables:
 
 ### series.type="bar".tooltip.visible `Boolean`*(default: false)*
 
+A value indicating if the tooltip should be displayed.
+
+### series.type="column" `Object`
+
+Available options for column series:
+
+### series.type="column".data `Array`
+
+Array of data points.
+
+### series.type="column".field `String`
+
+The data field containing the series value.
+
+### series.type="column".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="column".name `String`
+
+The series name visible in the legend.
+
+### series.type="column".aggregate `String`*(default: "max")*
+
+ Aggregate function for date series.
+This function is used when a category (an year, month, etc.) contains two or more points.
+The function return value is displayed instead of the individual points.
+
+
+#### *"max"*
+
+The highest value for the date period.
+
+#### *"min"*
+
+The lowest value for the date period.
+
+#### *"sum"*
+
+The sum of all values for the date period.
+
+#### *"count"*
+
+The number of values for the date period.
+
+#### *"avg"*
+
+The average of all values for the date period.
+
+#### *function (values, series)*
+
+User-defined aggregate function.
+
+### series.type="column".axis `String`*(default: primary)*
+
+ The name of the value axis to use.
+
+### series.type="column".border `Object`
+
+The border of the series.
+
+### series.type="column".border.color `String`*(default: the color of the curren series)*
+
+The color of the border.
+
+### series.type="column".border.dashType `String`*(default: "solid")*
+
+ The dash type of the border.
+
+
+#### *"solid"*
+
+Specifies a solid line.
+
+#### *"dot"*
+
+Specifies a line consisting of dots.
+
+#### *"dash"*
+
+Specifies a line consisting of dashes.
+
+#### *"longDash"*
+
+Specifies a line consisting of a repeating pattern of long-dash.
+
+#### *"dashDot"*
+
+Specifies a line consisting of a repeating pattern of dash-dot.
+
+#### *"longDashDot"*
+
+Specifies a line consisting of a repeating pattern of long-dash-dot.
+
+#### *"longDashDotDot"*
+
+Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+
+### series.type="column".border.width `Number`*(default: 1)*
+
+ The width of the border.
+
+### series.type="column".color `String`
+
+The series base color.
+
+### series.type="column".colorField `String`
+
+The data field containing the column color.
+
+### series.type="column".gap `Number`*(default: 1.5)*
+
+ The distance between category clusters.
+
+### series.type="column".labels `Object`
+
+Configures the series data labels.
+
+### series.type="column".labels.background `String`
+
+The background color of the labels.
+
+### series.type="column".labels.border `Object`
+
+The border of the labels.
+
+### series.type="column".labels.border.color `String`*(default: "black")*
+
+ The color of the border.
+
+### series.type="column".labels.border.dashType `String`*(default: "solid")*
+
+ The dash type of the border.
+
+
+#### *"solid"*
+
+Specifies a solid line.
+
+#### *"dot"*
+
+Specifies a line consisting of dots.
+
+#### *"dash"*
+
+Specifies a line consisting of dashes.
+
+#### *"longDash"*
+
+Specifies a line consisting of a repeating pattern of long-dash.
+
+#### *"dashDot"*
+
+Specifies a line consisting of a repeating pattern of dash-dot.
+
+#### *"longDashDot"*
+
+Specifies a line consisting of a repeating pattern of long-dash-dot.
+
+#### *"longDashDotDot"*
+
+Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+
+### series.type="column".labels.border.width `Number`*(default: 0)*
+
+ The width of the border.
+
+### series.type="column".labels.color `String`
+
+The text color of the labels.
+
+### series.type="column".labels.font `String`*(default: "12px Arial,Helvetica,sans-serif")*
+
+The font style of the labels.
+
+### series.type="column".labels.format `String`
+
+The format of the labels.
+
+#### Example
+
+    //sets format of the labels
+    format: "C"
+
+### series.type="column".labels.margin `Number|Object`*(default: 2)*
+
+ The margin of the labels.
+
+#### Example
+
+    // sets the top, right, bottom and left margin to 3px.
+    margin: 3
+
+    // sets the top and left margin to 1px
+    // margin right and bottom are with 2px (by default)
+    margin: { top: 1, left: 1 }
+
+### series.type="column".labels.padding `Number|Object`*(default: 2)*
+
+ The padding of the labels.
+
+#### Example
+
+    // sets the top, right, bottom and left padding to 3px.
+    padding: 3
+
+    // sets the top and left padding to 1px
+    // padding right and bottom are with 2px (by default)
+    padding: { top: 1, left: 1 }
+
+### series.type="column".labels.position `String`*(default: "outsideEnd")*
+
+Defines the position of the column labels.
+
+
+#### *"center"*
+
+The label is positioned at the column center.
+
+#### *"insideEnd"*
+
+The label is positioned inside, near the end of the column.
+
+#### *"insideBase"*
+
+The label is positioned inside, near the base of the column.
+
+#### *"outsideEnd"*
+
+The label is positioned outside, near the end of the column.
+             Not applicable for stacked column series.
+
+### series.type="column".labels.template `String | Function`
+
+The label template.
+Template variables:
+
+
+*   **value** - the point value
+*   **category** - the category name
+*   **series** - the data series
+*   **dataItem** - the original data item used to construct the point.
+        Will be null if binding to array.
+
+#### Example
+
+    // chart intialization
+    $("#chart").kendoChart({
+         title: {
+             text: "My Chart Title"
+         },
+         series: [
+             {
+                 type: "column",
+                 name: "Series 1",
+                 data: [200, 450, 300, 125],
+                 labels: {
+                     // label template
+                     template: "#= value #%",
+                     visible: true
+                 }
+             }
+         ],
+         categoryAxis: {
+             categories: [2000, 2001, 2002, 2003]
+         }
+    });
+
+### series.type="column".labels.visible `Boolean`*(default: false)*
+
+ The visibility of the labels.
+
+### series.type="column".name `String`
+
+The series name.
+
+### series.type="column".opacity `Number`*(default: 1)*
+
+ The series opacity.
+
+### series.type="column".overlay `Object`
+
+The effects overlay.
+
+### series.type="column".overlay.gradient `String`*(default: "glass")*
+
+ The gradient name.
+
+
+#### *"glass"*
+
+The columns have glass effect overlay.
+
+#### *"none"*
+
+The columns have no effect overlay.
+
+### series.type="column".spacing `Number`*(default: 0.4)*
+
+ Space between columns.
+
+### series.type="column".stack `Boolean`*(default: false)*
+
+A value indicating if the series should be stacked.
+
+### series.type="column".stack `String`
+
+Indicates that the series should be stacked in a group with the specified name.
+
+### series.type="column".tooltip `Object`
+
+The data point tooltip configuration options.
+
+### series.type="column".tooltip.background `String`
+
+The background color of the tooltip. The default is determined from the series color.
+
+### series.type="column".tooltip.border `Object`
+
+The border configuration options.
+
+### series.type="column".tooltip.border.color `String`*(default: "black")*
+
+ The color of the border.
+
+### series.type="column".tooltip.border.width `Number`*(default: 0)*
+
+ The width of the border.
+
+### series.type="column".tooltip.color `String`
+
+The text color of the tooltip. The default is the same as the series labels color.
+
+### series.type="column".tooltip.font `String`*(default: "12px Arial,Helvetica,sans-serif")*
+
+ The tooltip font.
+
+### series.type="column".tooltip.format `String`
+
+The tooltip format.
+
+#### Example
+
+    //sets format of the tooltip
+    format: "C"
+
+### series.type="column".tooltip.padding `Number|Object`
+
+The padding of the tooltip.
+
+#### Example
+
+    // sets the top, right, bottom and left padding to 3px.
+    padding: 3
+
+    // sets the top and left padding to 1px
+    // right and bottom padding are left at their default values
+    padding: { top: 1, left: 1 }
+
+### series.type="column".tooltip.template `String|Function`
+
+The tooltip template.
+Template variables:
+
+
+*   **value** - the point value
+*   **category** - the category name
+*   **series** - the data series
+*   **dataItem** - the original data item used to construct the point.
+        Will be null if binding to array.
+
+#### Example
+
+    $("#chart").kendoChart({
+         title: {
+             text: "My Chart Title"
+         },
+         series: [
+             {
+                 type: "column",
+                 name: "Series 1",
+                 data: [200, 450, 300, 125],
+                 tooltip: {
+                     visible: true,
+                 template: "#= category # - #= value #"
+                 }
+             }
+         ],
+         categoryAxis: {
+             categories: [2000, 2001, 2002, 2003]
+         }
+    });
+
+### series.type="column".tooltip.visible `Boolean`*(default: false)*
+
  A value indicating if the tooltip should be displayed.
 
-### series.type="bubble"
+### series.type="bubble" `Object`
 
 Available options for bubble series:
+
+### series.type="bubble".data `Array`
+
+Array of data points.
+
+### series.type="bubble".field `String`
+
+The data field containing the series value.
+
+### series.type="bubble".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="bubble".name `String`
+
+The series name visible in the legend.
 
 ### series.type="bubble".border `Object`
 
@@ -2119,7 +2534,7 @@ The label is positioned at the bottom of the bubble chart marker.
 
 The label is positioned at the left of the bubble chart marker.
 
-### series.type="bubble".labels.template `String/Function`
+### series.type="bubble".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -2304,14 +2719,33 @@ The data field containing the bubble x value.
 
 The data field containing the bubble y value.
 
-### series.type="column"
-
-Column series accepts the same parameters as bar series.
-The difference is that column series are rendered on a horizontal category axis.
-
-### series.type="donut"
+### series.type="donut" `Object`
 
 Available options for donut series:
+
+### series.type="donut".data `Array`
+
+Array of data points.
+
+### series.type="donut".field `String`
+
+The data field containing the series value.
+
+### series.type="donut".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="donut".name `String`
+
+The series name.
 
 ### series.type="donut".border `Object`
 
@@ -2323,8 +2757,7 @@ The color of the border.
 
 ### series.type="donut".border.dashType `String`*(default: solid)*
 
- The dash type of the border.
-
+The dash type of the border.
 
 #### *"solid"*
 
@@ -2567,7 +3000,7 @@ The labels are positioned inside, near the end of the donut segments.
 The labels are positioned outside, near the end of the donut segments.
              The labels and the donut segments are connected with connector line.
 
-### series.type="donut".labels.template `String/Function`
+### series.type="donut".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -2721,16 +3154,39 @@ Template variables:
 
  A value indicating if the tooltip should be displayed.
 
-### series.type="line"
+### series.type="line" `Object`
 
 Available options for line series:
 
+### series.type="line".data `Array`
+
+Array of data points.
+
+### series.type="line".field `String`
+
+The data field containing the series value.
+
+### series.type="line".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="line".name `String`
+
+The series name visible in the legend.
+
 ### series.type="line".aggregate `String`*(default: "max")*
 
- Aggregate function for date series.
+Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.
-
 
 #### *"max"*
 
@@ -2914,7 +3370,7 @@ The label is positioned at the bottom of the line chart marker.
 
 The label is positioned at the left of the line chart marker.
 
-### series.type="line".labels.template `String/Function`
+### series.type="line".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -3120,9 +3576,33 @@ Template variables:
 
  The line width of the line chart.
 
-### series.type="pie"
+### series.type="pie" `Object`
 
 Available options for pie series:
+
+### series.type="pie".data `Array`
+
+Array of data points.
+
+### series.type="pie".field `String`
+
+The data field containing the series value.
+
+### series.type="pie".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="pie".name `String`
+
+The series name.
 
 ### series.type="pie".border `Object`
 
@@ -3374,7 +3854,7 @@ The labels are positioned inside, near the end of the pie segments.
 The labels are positioned outside, near the end of the pie segments.
              The labels and the pie segments are connected with connector line.
 
-### series.type="pie".labels.template `String/Function`
+### series.type="pie".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -3532,9 +4012,33 @@ A boolean value indicating whether to show the sector in the legend.
 
 A boolean value indicating whether to show the sector in the legend.
 
-### series.type="scatter"
+### series.type="scatter" `Object`
 
 Available options for scatter series:
+
+### series.type="scatter".data `Array`
+
+Array of data points.
+
+### series.type="scatter".field `String`
+
+The data field containing the series value.
+
+### series.type="scatter".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="scatter".name `String`
+
+The series name visible in the legend.
 
 ### series.type="scatter".color `String`
 
@@ -3673,7 +4177,7 @@ The label is positioned at the bottom of the scatter chart marker.
 
 The label is positioned at the left of the scatter chart marker.
 
-### series.type="scatter".labels.template `String/Function`
+### series.type="scatter".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -3846,19 +4350,43 @@ Template variables:
 
 ### series.type="scatter".tooltip.visible `Boolean`*(default: false)*
 
- A value indicating if the tooltip should be displayed.
+A value indicating if the tooltip should be displayed.
 
 ### series.type="scatter".xAxis `String`*(default: primary)*
 
- The name of the X axis to use.
+The name of the X axis to use.
 
 ### series.type="scatter".yAxis `String`*(default: primary)*
 
- The name of the Y axis to use.
+The name of the Y axis to use.
 
-### series.type="scatterLine"
+### series.type="scatterLine" `Object`
 
 Available options for scatter line series:
+
+### series.type="scatterLine".data `Array`
+
+Array of data points.
+
+### series.type="scatterLine".field `String`
+
+The data field containing the series value.
+
+### series.type="scatterLine".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="scatterLine".name `String`
+
+The series name visible in the legend.
 
 ### series.type="scatterLine".color `String`
 
@@ -3866,8 +4394,7 @@ The series base color.
 
 ### series.type="scatterLine".dashType `String`*(default: "solid")*
 
- The dash type of the line.
-
+The dash type of the line.
 
 #### *"solid"*
 
@@ -3901,7 +4428,6 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 Array of data items (optional).
 The scatter chart can be bound to an array of arrays with two numbers (X and Y).
-
 
 #### Example
 
@@ -4030,7 +4556,7 @@ The label is positioned at the bottom of the scatter chart marker.
 
 The label is positioned at the left of the scatter chart marker.
 
-### series.type="scatterLine".labels.template `String/Function`
+### series.type="scatterLine".labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -4244,9 +4770,33 @@ The category axis is rendered vertically instead of horizontally.
 Vertical line series accepts the same parameters as line series.
 The line and the category axis are now vertical instead of horizontal.
 
-### series.type="candlestick"
+### series.type="candlestick" `Object`
 
 Available options for candlestick series.
+
+### series.type="candlestick".data `Array`
+
+Array of data points.
+
+### series.type="candlestick".field `String`
+
+The data field containing the series value.
+
+### series.type="candlestick".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="candlestick".name `String`
+
+The series name visible in the legend.
 
 ### series.type="candlestick".aggregates `Object`*(default: { open: "max", high: "max", close: "min", low: "max" })*
 
@@ -4488,7 +5038,7 @@ Template variables:
 
 A value indicating if the tooltip should be displayed.
 
-### series.type="candlestick".line `String`
+### series.type="candlestick".line `Object`
 
 The line of the candlestick chart.
 
@@ -4504,9 +5054,33 @@ The line opacity of the candlestick chart.
 
 The line width of the candlestick chart.
 
-### series.type="ohlc"
+### series.type="ohlc" `Object`
 
 Available options for ohlc series.
+
+### series.type="ohlc".data `Array`
+
+Array of data points.
+
+### series.type="ohlc".field `String`
+
+The data field containing the series value.
+
+### series.type="ohlc".groupNameTemplate `String`
+
+Name template for auto-generated
+series when binding to grouped data.
+
+Template variables:
+
+*   **series** - the series options
+*   **group** - the data group
+*   **group.field** - the name of the field used for grouping
+*   **group.value** - the field value for this group.
+
+### series.type="ohlc".name `String`
+
+The series name visible in the legend.
 
 ### series.type="ohlc".aggregates `Object`*(default: { open: "max", high: "max", close: "min", low: "max" })*
 
@@ -4727,7 +5301,7 @@ Template variables:
 
 A value indicating if the tooltip should be displayed.
 
-### series.type="ohlc".line `String`
+### series.type="ohlc".line `Object`
 
 The line of the ohlc chart.
 
@@ -4970,7 +5544,7 @@ The format of the labels.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### seriesDefaults.labels.template `String/Function`
+### seriesDefaults.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -5588,7 +6162,7 @@ Skips rendering the first n labels.
 Label rendering step.
 Every n-th label is rendered where n is the step
 
-### valueAxis.labels.template `String/Function`
+### valueAxis.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -5966,23 +6540,15 @@ The axis type.
 Note: The Chart will automatically switch to a date axis if the series X value
 is of type Date. Specify type explicitly when such behavior is undesired.
 
-#### *"numeric"*
+### xAxis.axisCrossingValue `Object | Date | Array`
 
-Generic axis with automatic range.
+Value at which the Y axis crosses this axis. (Only for object)
 
-#### *"date"*
+Value indicies at which the Y axes cross the value axis. (Only for array)
 
-Suitable for displaying chronological data.
+Date at which the Y axis crosses this axis. (Only for date)
 
-### xAxis.type: "date"
-
-Properties specific to the date-time value axis
-
-### xAxis.type: "date".axisCrossingValue `Date`
-
-Date at which the Y axis crosses this axis.
-
-### xAxis.type: "date".baseUnit `String`
+### xAxis.baseUnit `String`
 
 The base time interval for the axis labels.
 The default baseUnit is determined automatically from the value range. Available options:
@@ -5994,15 +6560,15 @@ The default baseUnit is determined automatically from the value range. Available
 * months
 * years
 
-### xAxis.type: "date".labels `Object`
+### xAxis.labels `Object`
 
 Label settings specific to the date axis.
 
-### xAxis.type: "date".labels.culture `String`*(default: global culture)*
+### xAxis.labels.culture `String`*(default: global culture)*
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
 
-### xAxis.type: "date".labels.dateFormats `Object`
+### xAxis.labels.dateFormats `Object`
 
 Date format strings
 
@@ -6025,37 +6591,31 @@ Date format strings
 #### *"years"*
 
 "yyyy"
+
 The Chart will choose the appropriate format for the current `baseUnit`.
 Setting the labels **format** option will override these defaults.
 
-### xAxis.type: "date".majorUnit `Number`
+### xAxis.majorUnit `Number`
 
 The interval between major divisions in base units.
 
-### xAxis.type: "date".max `Date`
+### xAxis.max `Object`
 
 The end date of the axis.
 This is often used in combination with the **min** configuration option.
 
-### xAxis.type: "date".min `Date`
+### xAxis.min `Object`
 
-The start date of the axis.
+The maximum value of the axis.
 This is often used in combination with the **max** configuration option.
 
-### xAxis.type: "date".minorUnit `Number`
+### xAxis.minorUnit `Number`
 
 The interval between minor divisions in base units.
 It defaults to 1/5th of the majorUnit.
 
-### xAxis.type: "numeric" `Number`
-
-Options specific to the numeric axis.
-
-### xAxis.type: "numeric".axisCrossingValue *(default: 0)*
-
+### xAxis.axisCrossingValue `Object | Array`
 Value at which the first Y axis crosses this axis.
-
-### xAxis.type: "numeric".axisCrossingValue `Array`*(default: [0])*
 
 Values at which the Y axes cross this X axis.
 <p>
@@ -6067,7 +6627,7 @@ axis maximum value to denote the far end of the axis.
     $("#chart").kendoChart({
          ...,
          xAxis: {
-             axisCrossingValues: [0, 1000]
+             axisCrossingValue: [0, 1000]
          },
          yAxis: [{ }, { name: "secondary" }],
          ...
@@ -6076,8 +6636,106 @@ axis maximum value to denote the far end of the axis.
 
 ### yAxis `Object`
 
-The scatter charts Y-axis configuration options.
-See **xAxis** for list of available options.
+### yAxis.type `String`*(default: "numeric")*
+
+The axis type.
+
+Note: The Chart will automatically switch to a date axis if the series X value
+is of type Date. Specify type explicitly when such behavior is undesired.
+
+### yAxis.axisCrossingValue `Object | Date | Array`
+
+Value at which the Y axis crosses this axis. (Only for object)
+
+Value indicies at which the Y axes cross the value axis. (Only for array)
+
+Date at which the Y axis crosses this axis. (Only for date)
+
+### yAxis.baseUnit `String`
+
+The base time interval for the axis labels.
+The default baseUnit is determined automatically from the value range. Available options:
+
+* minutes
+* hours
+* days
+* weeks
+* months
+* years
+
+### yAxis.labels `Object`
+
+Label settings specific to the date axis.
+
+### yAxis.labels.culture `String`*(default: global culture)*
+
+Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+
+### yAxis.labels.dateFormats `Object`
+
+Date format strings
+
+#### *"hours"*
+
+"HH:mm"
+
+#### *"days"*
+
+"M/d"
+
+#### *"weeks"*
+
+"M/d"
+
+#### *"months"*
+
+"MMM 'yy"
+
+#### *"years"*
+
+"yyyy"
+
+The Chart will choose the appropriate format for the current `baseUnit`.
+Setting the labels **format** option will override these defaults.
+
+### yAxis.majorUnit `Number`
+
+The interval between major divisions in base units.
+
+### yAxis.max `Object`
+
+The end date of the axis.
+This is often used in combination with the **min** configuration option.
+
+### yAxis.min `Object`
+
+The maximum value of the axis.
+This is often used in combination with the **max** configuration option.
+
+### yAxis.minorUnit `Number`
+
+The interval between minor divisions in base units.
+It defaults to 1/5th of the majorUnit.
+
+### yAxis.axisCrossingValue `Object | Array`
+Value at which the first Y axis crosses this axis.
+
+Values at which the Y axes cross this X axis.
+<p>
+**Note:&nbsp;** Specify a value greater than or equal to the
+axis maximum value to denote the far end of the axis.
+
+#### Example
+
+    $("#chart").kendoChart({
+         ...,
+         yAxis: {
+             axisCrossingValue: [0, 1000]
+         },
+         xAxis: [{ }, { name: "secondary" }],
+         ...
+    });
+    </p>
 
 ## Methods
 

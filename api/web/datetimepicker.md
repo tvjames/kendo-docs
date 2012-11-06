@@ -31,6 +31,14 @@ The animation(s) used for hiding of the pop-up.
         }
     });
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
 The animation(s) used for displaying of the pop-up.
@@ -47,6 +55,14 @@ The animation(s) used for displaying of the pop-up.
         }
     });
 
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
+
 ### culture `String`*(default: en-US)*
 
  Specifies the culture info used by the widget.
@@ -60,13 +76,12 @@ The animation(s) used for displaying of the pop-up.
 
 ### dates `Array`
 
- Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
-
+ Specifies a list of dates, which will be passed to the month template of the DateView. All dates, which match the date portion of the selected date will be used to re-bind the TimeView.
 
 #### Example
 
     $("#dateTimePicker").kendoDateTimePicker({
-        dates: [new Date(2000, 10, 10, 10, 0, 0), new Date(2000, 10, 10, 30, 0)] //the drop-down list will consist only two entries - "10:00 AM" and "10:30 AM"
+        dates: [new Date(2000, 10, 10, 10, 0, 0), new Date(2000, 10, 10, 10, 30, 0)] //the drop-down list will consist only two entries ("10:00 AM", "10:30 AM") if selected date is 10/10/2000
     });
 
 ### depth `String`
@@ -296,7 +311,7 @@ Prepares the **DateTimePicker** for safe removal from DOM. Detaches all event ha
 #### Example
 
     var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    
+
     // detach events
     dateTimePicker.destroy();
 

@@ -41,9 +41,25 @@ Menu content expands from the top down. Similar to slideIn.
 
 The animation that will be used when closing sub menus.
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
 The animation that will be used when opening sub menus.
+
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
 
 ### closeOnClick `Boolean`*(default: true)*
 

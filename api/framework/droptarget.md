@@ -13,6 +13,14 @@ publish: true
 
  Used to group sets of draggable and drop targets. A draggable with the same group value as a drop target will be accepted by the drop target.
 
+## Methods
+
+### destroyGroup
+
+Destroys all DropTarget instances from the group with the given name.
+
+    kendo.ui.DropTarget.destroyGroup("foo");
+
 ## Events
 
 ### dragenter
@@ -48,3 +56,4 @@ Reference to the draggable that is dropped over the drop target.
 ##### e.draggable.currentTarget `jQuery`
 
 The element that the drag and drop operation started from.
+

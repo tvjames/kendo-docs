@@ -40,6 +40,14 @@ publish: true
          });
      </script>
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
  Animation to be used for opening of the popup.
@@ -60,6 +68,14 @@ publish: true
              }
          });
      </script>
+
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
 
 ### autoBind `Boolean`*(default: true)*
 
@@ -345,7 +361,7 @@ Prepares the **ComboBox** for safe removal from DOM. Detaches all event handlers
 #### Example
 
     var combobox = $("#combobox").data("kendoComboBox");
-    
+
     // detach events
     combobox.destroy();
 

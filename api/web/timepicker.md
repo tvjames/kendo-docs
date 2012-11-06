@@ -30,6 +30,14 @@ Animation to be used for closing of the popup.
         }
     });
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
 Animation to be used for opening of the popup.
@@ -46,6 +54,14 @@ Animation to be used for opening of the popup.
         }
     });
 
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
+
 ### culture `String`*(default: en-US)*
 
  Specifies the culture info used by the widget.
@@ -60,7 +76,7 @@ Animation to be used for opening of the popup.
 ### dates `Array`
 
  Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
- 
+
 
 #### Example
 
@@ -117,7 +133,7 @@ Prepares the **TimePicker** for safe removal from DOM. Detaches all event handle
 #### Example
 
     var timePicker = $("#timePicker").data("kendoTimePicker");
-    
+
     // detach events
     timePicker.destroy();
 
@@ -235,12 +251,12 @@ Triggered when the underlying value of a TimePicker is changed.
     var onChange = function(e) {
         // ...
     };
-    
+
     // attach change event handler during initialization
     var timePicker = $("#timePicker").kendoTimePicker({
         change: onChange
     });
-    
+
     // detach change event handler via unbind()
     timePicker.data("kendoTimePicker").unbind("change", onChange);
 
@@ -250,10 +266,10 @@ Triggered when the underlying value of a TimePicker is changed.
     var onChange = function(e) {
         // ...
     };
-    
+
     // attach change event handler via bind()
     $("#timePicker").data("kendoTimePicker").bind("change", onChange);
-    
+
     // detach change event handler via unbind()
     $("#timePicker").data("kendoTimePicker").unbind("change", onChange);
 

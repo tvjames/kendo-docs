@@ -31,6 +31,14 @@ The animation(s) used for hiding of the pop-up.
         }
     });
 
+### animation.close.effects `String`
+
+Effect to be used for closing of the popup.
+
+### animation.close.duration `Number`
+
+Difines the animation duration.
+
 ### animation.open `Object`
 
 The animation(s) used for displaying of the pop-up.
@@ -47,6 +55,14 @@ The animation(s) used for displaying of the pop-up.
         }
     });
 
+### animation.open.effects `String`
+
+Effect to be used for opening of the popup.
+
+### animation.open.duration `Number`
+
+Difines the animation duration.
+
 ### culture `String`*(default: en-US)*
 
  Specifies the culture info used by the widget.
@@ -56,6 +72,17 @@ The animation(s) used for displaying of the pop-up.
     // specify on widget initialization
     $("#datepicker").kendoDatePicker({
         culture: "de-DE"
+    });
+
+### dates `Array`
+
+ Specifies a list of dates, which will be passed to the month template.
+
+
+#### Example
+
+    $("#datepicker").kendoDatePicker({
+        dates: [new Date(2000, 10, 10, 10, 0, 0), new Date(2000, 10, 10, 30, 0)] //can manipulate month template depending on this array.
     });
 
 ### depth `String`
@@ -254,7 +281,7 @@ Prepares the **DatePicker** for safe removal from DOM. Detaches all event handle
 #### Example
 
     var datePicker = $("#datePicker").data("kendoDatePicker");
-    
+
     // detach events
     datePicker.destroy();
 

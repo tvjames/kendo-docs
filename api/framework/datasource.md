@@ -13,6 +13,14 @@ publish: true
 
  Sets fields on which initial aggregates should be calculated
 
+### aggregate.field `String`
+
+ Specifies the field on which the aggregate will be calculated.
+
+### aggregate.aggregate `String`
+
+ Specifies the aggregate function. Possible values are: "min", "max", "count", "sum", "average"
+
 #### Example
 
     // calculates total sum of unitPrice field's values.
@@ -39,7 +47,19 @@ Specifies the local JavaScript object to use for the data source.
 
 ### filter `Array | Object`*(default: undefined)*
 
- Sets initial filter
+ Sets the initial filter.
+
+### filter.operator `String`
+
+ Specifies the filter operator. One of the following values "eq", "neq", "lt", "lte", "gt", "gte", "startswith", "endswith", "contains".
+
+### filter.field `String`
+
+ Specifies the field to filter by.
+
+### filter.value `Object`
+
+ Specifies the value to filter for.
 
 #### Example
 
@@ -62,6 +82,26 @@ Specifies the local JavaScript object to use for the data source.
 ### group `Array | Object`*(default: undefined)*
 
  Sets initial grouping
+
+### group.field `String`
+
+ Specifies the field to group by.
+
+### group.dir `String`
+
+ Specifies the order of the groupped items.
+
+### group.aggregates `Array`
+
+ Specifies the aggregate function for this group.
+
+### group.aggregates.field `String`
+
+ Specifies the field on which the aggregate will be calculated.
+
+### group.aggregates.aggregate `String`
+
+ Specifies the aggregate function. Possible values are: "min", "max", "count", "sum", "average"
 
 #### Example
 
@@ -548,6 +588,14 @@ It is possible to modify these parameters by using the `parameterMap` function f
 
  Sets initial sort order
 
+### sort.field `String`
+
+ Sets the field to sort on.
+
+### sort.dir `String`
+
+ Sets the sort direction. Possible values are: "asc", "desc", null. If null is set, the sort expression is removed.
+
 #### Example
 
     // sorts data ascending by orderId field
@@ -579,7 +627,7 @@ Options for remote create data operation, or the URL of the remote service.
         }
     });
 
-#### Example: Specify Create As Function
+#### Example: Specify Create As Function *(Note: transport methods should be consistent - read, update and destroy should be specified as functions too)*
 
     var dataSource = new kendo.data.DataSource({
         transport: {
@@ -714,7 +762,7 @@ Options for remote destroy data operation, or the URL of the remote service.
         }
     });
 
-#### Example: Specify Destroy As Function
+#### Example: Specify Destroy As Function *(Note: transport methods should be consistent - read, create and update should be specified as functions too)*
 
     var dataSource = new kendo.data.DataSource({
         transport: {
@@ -869,7 +917,7 @@ Options for remote read data operation, or the URL of the remote service.
         }
     });
 
-#### Example: Specify Read As Function
+#### Example: Specify Read As Function *(Note: transport methods should be consistent - create, update and destroy should be specified as functions too)*
 
     var dataSource = new kendo.data.DataSource({
         transport: {
@@ -1004,7 +1052,7 @@ Options for remote update data operation, or the URL of the remote service.
         }
     });
 
-#### Example: Specify Update As Function
+#### Example: Specify Update As Function *(Note: transport methods should be consistent - read, create and destroy should be specified as functions too)*
 
     var dataSource = new kendo.data.DataSource({
         transport: {
