@@ -6,7 +6,7 @@ publish: true
 ---
 
 # Tutorial: HTML5 Development For ASP.NET Developers Part 4
-## Hello Kendo UI 
+## Hello Kendo UI
 
 In this tutorial, you will work with the most complex widget, the **[Kendo UI
 Grid][4]** as well as one of the core components, the **[Kendo UI
@@ -97,7 +97,7 @@ included.  It’s used in all the themes.  Next, pick your favorite theme and
 drag that stylesheet to the head of the page.  For this example, I used the
 default style which is **kendo.default.min.css**.
 
-Expand the **Scripts **folder.  Select **jQuery-1.7.2.min.js** and drag it
+Expand the **Scripts **folder.  Select **jQuery-1.8.2.min.js** and drag it
 into the body of the page.  We put the script files in the body of the page
 because it’s best practice to load scripts last as they will delay loading of
 the whole page.  Loading them last ensures that your application doesn’t
@@ -119,28 +119,28 @@ script tags.
 When you are done pruning, your code should be very simple and look like this…
 
 ### Kendo UI Added To The Page
-                                 
-    <!DOCTYPE html>                  
-     
-    <html>                           
-     
-        <head>                       
-     
-            <title>Hello Kendo UI</title>     
+
+    <!DOCTYPE html>
+
+    <html>
+
+        <head>
+
+            <title>Hello Kendo UI</title>
             <link href="Content/kendo/2012.2.710/kendo.common.min.css" rel="stylesheet" type="text/css" />
             <link href="Content/kendo/2012.2.710/kendo.default.min.css" rel="stylesheet" type="text/css" />
-     
-        </head>                      
-     
-        <body>                       
-      
-            <script src="Scripts/jquery-1.7.2.min.js"></script>
+
+        </head>
+
+        <body>
+
+            <script src="Scripts/jquery-1.8.2.min.js"></script>
             <script src="Scripts/kendo/2012.2.710/kendo.web.min.js"></script>
-     
-        </body>                      
-                    
-    </html>                          
-                                 
+
+        </body>
+
+    </html>
+
 
 
 We now have everything it takes to get started.  Since we already have an
@@ -322,17 +322,17 @@ call the **Skip** and **Take **methods on your query to the **Employees
 
 ### Create A Kendo UI Grid
 
-    HttpRequest request = HttpContext.Current.Request; 
-    
-    public List Get() { 
+    HttpRequest request = HttpContext.Current.Request;
+
+    public List Get() {
         // get the take and skip parameters int skip = request["skip"] == null ? 0 :
         int.Parse(request["skip"]); int take = request["take"] == null ? 10 :
-        int.Parse(request["take"]); 
-        
-        // select the employees from the database, skipping and taking the correct amount 
-        var employees = (from e in _context.Employees 
+        int.Parse(request["take"]);
+
+        // select the employees from the database, skipping and taking the correct amount
+        var employees = (from e in _context.Employees
                          select new Models.Employee(e)).Skip(skip).Take(take);
-                         
+
         return employees.ToList();
     }
 
@@ -378,13 +378,13 @@ Your **Reponse **model object should look like this…
 
 ### Response Model Object
 
-    public class Response { 
+    public class Response {
         // properties public Array Data { get; set; }
-        public int Count { get; set; } 
-        // constructor 
-        public Response(Array data, int count) { 
-            this.Data = data; this.Count = count; 
-        } 
+        public int Count { get; set; }
+        // constructor
+        public Response(Array data, int count) {
+            this.Data = data; this.Count = count;
+        }
     }
 
 I also added a constructor so that I can build this object by passing values
@@ -399,16 +399,16 @@ object by calling its **Count() **method.
 
 ### Return The Models.Response Object
 
-    public Models.Response Get() { 
-        // get the take and skip parameters 
-        int skip = request["skip"] == null ? 0 : int.Parse(request["skip"]); 
-        int take = request["take"] == null ? 10 : int.Parse(request["take"]); 
-        
-        // select the employees from the database, skipping and taking the correct amount 
-        var employees = (from e in _context.Employees 
-                         select new Models.Employee(e)).Skip(skip).Take(take).ToArray();  
-                         
-        return new Models.Response(employees, _context.Employees.Count()); 
+    public Models.Response Get() {
+        // get the take and skip parameters
+        int skip = request["skip"] == null ? 0 : int.Parse(request["skip"]);
+        int take = request["take"] == null ? 10 : int.Parse(request["take"]);
+
+        // select the employees from the database, skipping and taking the correct amount
+        var employees = (from e in _context.Employees
+                         select new Models.Employee(e)).Skip(skip).Take(take).ToArray();
+
+        return new Models.Response(employees, _context.Employees.Count());
     }
 
 If you fire up the application now and have a look, you will see an empty
@@ -426,19 +426,19 @@ and where the total count of records is.  This is done in the **schema
             columns: [ { field: "FirstName", title: "First Name" }, { field: "LastName", title: "Last Name" } ],
             dataSource: new kendo.data.DataSource({
                 transport: {
-                    read: "api/employees" 
-                }, 
+                    read: "api/employees"
+                },
                 schema: {
-                    data: "Data", 
-                    total: "Count" 
+                    data: "Data",
+                    total: "Count"
                 },
                 pageSize: 3,
-                serverPaging: true 
+                serverPaging: true
             }),
-            pageable: true 
-        }); 
+            pageable: true
+        });
     });
-    
+
 Now you can run the application and see that paging is working.  If you open
 the developer tools, you can watch each request go to the server and watch the
 server return only the appropriate page of data.  If you watch closely,
