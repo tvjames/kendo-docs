@@ -345,7 +345,6 @@ can be included on a per-widget basis.
 1.  kendo.mobile.view.js
 1.  kendo.mobile.pane.js
 1.  kendo.mobile.application.js
-1.  kendo.mobile.scroller.js
 1.  kendo.mobile.button.js
 
 
