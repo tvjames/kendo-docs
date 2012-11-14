@@ -39,4 +39,4 @@ The documents in this section provide additional detail and guidance for leverag
 - [Keyboard Support in Kendo UI Web](/tutorials/accessibility/keyboard-support)
 - [Supporting RTL Languages with Kendo UI](/tutorials/accessibility/supporting-rtl-languages)
 - [WAI-ARIA Support in Kendo UI Web](/tutorials/accessibility/wai-aria-support-in-kendo)
-- [Working with the Kendo UI High-Contrast Theme](/tutorials/high-contrast-theme)
+- [Working with the Kendo UI High-Contrast Theme](/tutorials/accessibility/high-contrast-theme)
