@@ -103,7 +103,24 @@ only few graphic editors, so **better stick with PNG24**). The image color is no
         }
     </style>
 
-    <div data-role="button">
-        <a href="#index" data-icon="custom">Home</a>
-    </div>
+    <a data-role="button" href="#index" data-icon="custom">Home</a>
 
+In Q3 2012 due to numerous issues with WebKit mask icons, they were deprecated and Kendo UI Mobile introduced font icons. Since the font is not easy editable,
+the previous method for a mask icon can be used, but with some additional styling.
+
+### Define custom button icon after Q3 2012
+
+    <style>
+        /* Remove font icons styling, use .km- + data-icon name if only one should be overridden */
+        .km-root .km-pane .km-view .km-icon {
+            background-size: 100% 100%;
+            -webkit-background-clip: border-box;
+        }
+
+        .km-custom {
+            -webkit-mask-box-image: url("foo.png");
+            background-color: red;
+        }
+    </style>
+
+    <a data-role="button" href="#index" data-icon="custom">Home</a>

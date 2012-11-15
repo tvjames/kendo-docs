@@ -78,12 +78,33 @@ only few graphic editors, so **better stick with PNG24**). The image color is no
 ### Define custom tab icon
 
     <style>
-    .km-custom {
-      -webkit-mask-box-image: url("foo.png");
-    }
+        .km-custom {
+            -webkit-mask-box-image: url("foo.png");
+        }
     </style>
 
     <div data-role="tabstrip">
-      <a href="#index" data-icon="custom">Home</a>
+        <a href="#index" data-icon="custom">Home</a>
     </div>
 
+In Q3 2012 due to numerous issues with WebKit mask icons, they were deprecated and Kendo UI Mobile introduced font icons. Since the font is not easy editable,
+the previous method for a mask icon can be used, but with some additional styling.
+
+### Define custom tab icon after Q3 2012
+
+    <style>
+        /* Remove font icons styling, use .km- + data-icon name if only one should be overridden */
+        .km-root .km-pane .km-view .km-icon {
+            background-size: 100% 100%;
+            -webkit-background-clip: border-box;
+        }
+
+        .km-custom {
+            -webkit-mask-box-image: url("foo.png");
+            background-color: red;
+        }
+    </style>
+
+    <div data-role="tabstrip">
+        <a href="#index" data-icon="custom">Home</a>
+    </div>

@@ -16,6 +16,14 @@ publish: true
 
 * **Mobile:** the kendoMobileSwipe plugin is obsolete - replace its usage with the **touch** widget.
 
+* **Mobile:** WebKit mask icons are now deprecated and font icons are used instead. If you have custom icons, they might break after the upgrade.
+Add the following CSS rule to fix them /if you have data-icon="custom" on them, or use .km-icon for all/:
+
+    .km-root .km-pane .km-view .km-custom {
+        background-size: 100% 100%;
+        -webkit-background-clip: border-box;
+    }
+
 ## KendoUI 2012 Q2
 
 ### Changes from 2012 Q1 SP1 (2012.1.322)
