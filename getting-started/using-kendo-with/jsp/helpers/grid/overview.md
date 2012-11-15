@@ -16,28 +16,28 @@ Here is how to configure the Kendo Grid for binding to a data passed as model at
 
 2.  Create a new action method and pass the Products table to the View:
 
-    @RequestMapping(value = "/local-data", method = RequestMethod.GET)
-    public String index(Locale locale, Model model) {
-        model.addAttribute("products", product.getList());
-
-        return "web/grid/local-data";
-    }
+        @RequestMapping(value = "/local-data", method = RequestMethod.GET)
+        public String index(Locale locale, Model model) {
+            model.addAttribute("products", product.getList());
+    
+            return "web/grid/local-data";
+        }
 
 3.  Add kendo taglib mapping to the page
 
-    <%@taglib prefix="kendo" uri="http://www.kendoui.com/jsp/tags"%>
+        <%@taglib prefix="kendo" uri="http://www.kendoui.com/jsp/tags"%>
 
 4.  Add a server bound grid:
 
-    <kendo:grid name="productGrid" pageable="true">
-        <kendo:grid-columns>
-            <kendo:grid-column title="Product Name" field="productName" />
-            <kendo:grid-column title="Unit Price" field="unitPrice" format="{0:c}" />
-            <kendo:grid-column title="Units In Stock" field="unitsInStock" />
-        </kendo:grid-columns>
-        <kendo:dataSource data="${products}" pageSize="10"/>
-        <kendo:grid-pageable input="true" numeric="false" />
-    </kendo:grid>
+        <kendo:grid name="productGrid" pageable="true">
+            <kendo:grid-columns>
+                <kendo:grid-column title="Product Name" field="productName" />
+                <kendo:grid-column title="Unit Price" field="unitPrice" format="{0:c}" />
+                <kendo:grid-column title="Units In Stock" field="unitsInStock" />
+            </kendo:grid-columns>
+            <kendo:dataSource data="${products}" pageSize="10"/>
+            <kendo:grid-pageable input="true" numeric="false" />
+        </kendo:grid>
 
 ## Accessing an Existing Grid
 
@@ -46,7 +46,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ### Accessing an existing Grid instance
 
-    //Put this after your Kendo Grid for ASP.NET MVC declaration
+    //Put this after your Kendo Grid tag declaration
     <script>
     $(function() {
         // Notice that the name attribute of the grid is used to get its client-side instance
@@ -63,7 +63,7 @@ You can subscribe to all [events](http://docs.kendoui.com/api/web/grid#events) e
 ### Subscribe by handler name
 
     <kendo:grid name="productGrid" dataBound="productGrid_dataBound" change="productGrid_change">
-        <kendo:dataSource data="${data}"pageSize="10"/>
+        <kendo:dataSource data="${data}" pageSize="10"/>
     </kendo:grid>
 
     <script>
