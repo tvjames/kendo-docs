@@ -14,7 +14,7 @@ Please review the main [Upload Modes](/getting-started/ui-widgets/upload/modes) 
 
 In this mode the upload is executed as part of the form submit (synchronously). No dedicated action methods are required.
 
-1. Add a form declaration and set a controller action. Set the enctype attribute to "multipart/form-data".
+1. Add a form declaration and set a controller action.
     - WebForms
 
             <% using (Html.BeginForm("ProcessSubmit", "Home",
@@ -117,8 +117,8 @@ In this mode the files are uploaded to a controller action without interrupting 
                     )
             )
 
-    The Name is used to specify the unique name of the Upload component. It is used to set the id and name HTML attributes.
-    Setting the name is mandatory and exception would be thrown otherwise.
+    The name attribute is required and must be unique.
+	It will be used as a form field name in the requests to the server.
 
 2. Implement the Save controller action:
 
