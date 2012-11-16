@@ -68,7 +68,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ## Handling Kendo UI Menu events
 
-You can subscribe to all [events](http://docs.kendoui.com/api/web/menu#events) exposed by Kendo UI menu:
+You can subscribe to all [events](http://docs.kendoui.com/api/web/menu#events) exposed by Kendo UI Menu:
 
 ### Subscribe by handler name
 
@@ -81,10 +81,10 @@ You can subscribe to all [events](http://docs.kendoui.com/api/web/menu#events) e
 
     <script>
         function menu_open() {
-            //Handle the change event
+            //Handle the open event
         }
 
         function menu_close() {
-            //Handle the change event
+            //Handle the close event
         }
     </script>
