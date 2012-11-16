@@ -52,7 +52,7 @@ You can subscribe to all [events](http://docs.kendoui.com/api/web/datepicker#eve
 
 ### Subscribe by handler name
 
-    <kendo:datepicker name="datepicker" change="datepicker_change"></kendo:datepicker>
+    <kendo:datePicker name="datepicker" change="datepicker_change"></kendo:datePicker>
 
     <script>
         function datepicker_change() {
