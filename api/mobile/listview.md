@@ -25,6 +25,35 @@ Instance of DataSource or the data that the mobile ListView will be bound to.
 
  If set to true, the listview gets the next page of data when the user scrolls near the bottom of the view.
 
+### endlessScrollParameters 'Function'
+
+ A callback function used when the 'endlessScroll' option is enabled. The result of the function will be send as additional parameters to the DataSource's next method.
+
+#### Example
+
+    $("#pull-with-endless").kendoMobileListView({
+        dataSource: dataSource,
+        endlessScroll: true,
+        endlessScrollParameters: function(firstOrigin, lastOrigin) {
+            if (firstOrigin) {
+                //additional parameters
+                return {
+                    max_id: firstOrigin.id_str
+                };
+            }
+        }
+    });
+
+#### Parameters
+
+##### firstOrigin `Object`
+
+First dataItem of the first loaded page of the ListView. It will not change, even if 'pull-to-refresh' is used.
+
+##### lastOrigin  `Object`
+
+Last dataItem of the first loaded page of the ListView.
+
 ### fixedHeaders `Boolean`*(default: false)*
 
  If set to true, the group headers will persist their position when the user scrolls through the listview. Applicable only when the type is set to group, or when binding to grouped datasource.
@@ -41,6 +70,10 @@ Instance of DataSource or the data that the mobile ListView will be bound to.
 
  The text of the rendered load-more button (applies only if loadMore is set to true).
 
+### loadMoreParameters 'Function'
+
+ Check the 'endlessScrollParameters' option.
+
 ### pullTemplate `String`*(default: "Pull to refresh")*
 
  The message template displayed when the user pulls the listView. Applicable only when pullToRefresh is set to true.
@@ -48,6 +81,31 @@ Instance of DataSource or the data that the mobile ListView will be bound to.
 ### pullToRefresh `Boolean`*(default: false)*
 
  If set to true, the listview will reload its data when the user pulls the view over the top limit.
+
+### pullParameters 'Function'
+
+ A callback function used when the 'pullToRefresh' option is enabled. The result of the function will be send as additional parameters to the DataSource's next method.
+
+#### Example
+
+    $("#pull-with-endless").kendoMobileListView({
+        dataSource: dataSource,
+        appendOnRefresh: true,
+        pullToRefresh: true,
+        pullParameters: function(item) {
+            //additional parameters
+            return {
+                since_id: item.id_str,
+                page: 1
+            };
+        }
+    });
+
+#### Parameters
+
+##### item `Object`
+
+First dataItem of the ListView // => listView.dataSource.get(0);
 
 ### refreshTemplate `String`*(default: "Refreshing")*
 
@@ -111,7 +169,7 @@ Fires when item is tapped.
     <ul data-role="listview" id="foo" data-click="listViewClick">
         <li><a data-role="button" data-name="bar">Bar button</a> | <a data-role="button" data-name="baz">Baz button</a></li>
     </ul>
-    
+
     <script>
      function listViewClick(e) {
          console.log(e.button); // Kendo mobile Button instance
@@ -121,13 +179,13 @@ Fires when item is tapped.
 #### Accessing dataItem in event
 
     <ul id="foo"></ul>
-    
+
     <script>
      $("#foo").kendoMobileListView({
         dataSource: new kendo.data.DataSource({
              data:   [{title: "foo"}, {title: "bar"}]
         }),
-    
+
         click: function(e) {
              console.log(e.dataItem.title);
         }
