@@ -14,7 +14,7 @@ The base class of most Kendo objects. Provides simple inheritance support.
 
 ### fn `Object`
 
-An alias to the `prototype` of the class.
+An alias to the [prototype](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/prototype) of the class. Often used to call methods of the base class. More
 
 #### Example
 
@@ -25,6 +25,8 @@ An alias to the `prototype` of the class.
            this.legs = legs;
         }
     });
+
+    // Inherit from that class
 
     var Bird = Animal.extend({
         init: function() {
