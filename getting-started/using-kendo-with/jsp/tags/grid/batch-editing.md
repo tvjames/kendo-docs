@@ -11,7 +11,7 @@ publish: true
 Cell editing mode allows the user to edit data in a way similar to popular spreadsheet programs - double clicking a cell puts it in edit mode.
 Clicking outside the cell accepts the new value. All modified grid records are updated (saved, inserted or deleted) when the "Save changes" button is clicked.
 
-To enable this mode follow these steps:
+To enable this mode follow these steps (using Spring MVC framework):
 
 1.  Set the edit mode to `InCell`:
 
@@ -35,11 +35,11 @@ To enable this mode follow these steps:
 	            <kendo:grid-column title="Units In Stock" field="unitsInStock" />
 	            <kendo:grid-column title="Discontinued" field="discontinued" />
 	            <kendo:grid-column command="destroy" title="&nbsp;" />
-	        </kendo:grid-columns>	       
+	        </kendo:grid-columns>
 	    </kendo:grid>
-        
+
 3.  Specify the action methods which will handle the `Create`, `Update` and `Destroy` operations:
-	
+
 	       <kendo:grid name="grid">
 				<kendo:grid-editable mode="incell"/>
 		        <kendo:grid-toolbar>
@@ -61,8 +61,8 @@ To enable this mode follow these steps:
 		                <kendo:dataSource-transport-read url="${readUrl}" dataType="json" type="POST" contentType="application/json" />
 		                <kendo:dataSource-transport-update url="${updateUrl}" dataType="json" type="POST" contentType="application/json" />
 		                <kendo:dataSource-transport-destroy url="${destroyUrl}" dataType="json" type="POST" contentType="application/json" />
-		            </kendo:dataSource-transport>	  
-					// <-- CRUD configuration         
+		            </kendo:dataSource-transport>
+					// <-- CRUD configuration
 		        </kendo:dataSource>
 		    </kendo:grid>
 4.  Specify the property of the model which is the unique identifier (primary key):
@@ -81,13 +81,13 @@ To enable this mode follow these steps:
 	            <kendo:grid-column title="Discontinued" field="discontinued" />
 	            <kendo:grid-column command="destroy" title="&nbsp;" />
 	        </kendo:grid-columns>
-	        <kendo:dataSource>				
+	        <kendo:dataSource>
 	            <kendo:dataSource-transport>
 	                <kendo:dataSource-transport-create url="${createUrl}" dataType="json" type="POST" contentType="application/json" />
 	                <kendo:dataSource-transport-read url="${readUrl}" dataType="json" type="POST" contentType="application/json" />
 	                <kendo:dataSource-transport-update url="${updateUrl}" dataType="json" type="POST" contentType="application/json" />
 	                <kendo:dataSource-transport-destroy url="${destroyUrl}" dataType="json" type="POST" contentType="application/json" />
-	            </kendo:dataSource-transport>	  
+	            </kendo:dataSource-transport>
 				<kendo:dataSource-schema>
                 	<kendo:dataSource-schema-model id="productId">
 	                    <kendo:dataSource-schema-model-fields>
@@ -122,15 +122,15 @@ To enable this mode follow these steps:
 	            <kendo:grid-column title="Discontinued" field="discontinued" />
 	            <kendo:grid-column command="destroy" title="&nbsp;" />
 	        </kendo:grid-columns>
-	        <kendo:dataSource batch="true">				
+	        <kendo:dataSource batch="true">
 	           <%-- ... --%>
 	        </kendo:dataSource>
 	    </kendo:grid>
 
 6.  Implement the `Read` action method.
-		@Autowired 
+		@Autowired
 		private ProductDao product;
-		
+
 		@RequestMapping(value = "/editing/read", method = RequestMethod.POST)
 		public @ResponseBody List<Product> read() {
 			return product.getList();
@@ -141,20 +141,20 @@ To enable this mode follow these steps:
         @RequestMapping(value = "/editing/create", method = RequestMethod.POST)
     	public @ResponseBody List<Product> create(@RequestBody ArrayList<Map<String, Object>> models) {
 	        List<Product> products = new ArrayList<Product>();
-	        
+
 	        for (Map<String, Object> model : models) {
 	            Product product = new Product();
-	            
+
 	            product.setProductName((String)model.get("productName"));
 	            product.setUnitPrice(Double.parseDouble(model.get("unitPrice").toString()));
 	            product.setUnitsInStock((int)model.get("unitsInStock"));
-	            product.setDiscontinued((boolean)model.get("discontinued"));            
-	            
+	            product.setDiscontinued((boolean)model.get("discontinued"));
+
 	            products.add(product);
 	        }
-	        
+
 	        product.saveOrUpdate(products);
-	        
+
 	        return products;
 	    }
 8.  Implement the `Update` action method:
@@ -162,22 +162,22 @@ To enable this mode follow these steps:
         @RequestMapping(value = "/editing/update", method = RequestMethod.POST)
     	public @ResponseBody List<Product> update(@RequestBody ArrayList<Map<String, Object>> models) {
 	        List<Product> products = new ArrayList<Product>();
-	        
+
 	        for (Map<String, Object> model : models) {
 	            Product product = new Product();
-	            
+
 	            product.setProductId((int)model.get("productId"));
 	            product.setProductName((String)model.get("productName"));
 	            product.setUnitPrice(Double.parseDouble(model.get("unitPrice").toString()));
 	            product.setUnitsInStock((int)model.get("unitsInStock"));
 	            product.setDiscontinued((boolean)model.get("discontinued"));
 	            product.setCategoryId((int)model.get("categoryId"));
-	            
+
 	            products.add(product);
 	        }
-	        
+
 	        product.saveOrUpdate(products);
-	        
+
 	        return products;
 	    }
 9.  Implement the `Destroy` action method:
@@ -185,16 +185,16 @@ To enable this mode follow these steps:
 	    @RequestMapping(value = "/editing/destroy", method = RequestMethod.POST)
    		public @ResponseBody List<Product> destroy(@RequestBody ArrayList<Map<String, Object>> models) {
 	        List<Product> products = new ArrayList<Product>();
-	        
+
 	        for (Map<String, Object> model : models) {
 	            Product product = new Product();
-	            
+
 	            product.setProductId((int)model.get("productId"));
-	            
+
 	            products.add(product);
 	        }
-	        
+
 	        product.delete(products);
-	        
+
 	        return products;
-	    }  
+	    }
