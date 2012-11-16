@@ -21,7 +21,7 @@ Here is how to configure the Kendo DropDownList for binding to a data passed as 
 
 2.  Create a new action method and pass the Products table to the View:
 
-        @RequestMapping(value = {"api"}, method = RequestMethod.GET)
+        @RequestMapping(value = {"index"}, method = RequestMethod.GET)
         public String index(Model model) {
             model.addAttribute("products", product.getList());
 
