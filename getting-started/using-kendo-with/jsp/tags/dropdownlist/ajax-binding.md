@@ -1,7 +1,7 @@
 ---
 title: Ajax Binding
 slug: jsp-dropdownlist-ajax-binding
-publish: false
+publish: true
 ---
 
 # Ajax Binding

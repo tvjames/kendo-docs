@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-menu-overview
-publish: false
+publish: true
 ---
 
 # Menu

@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-splitter-overview
-publish: false
+publish: true
 ---
 
 # Splitter

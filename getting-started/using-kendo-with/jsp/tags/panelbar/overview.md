@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-panelbar-overview
-publish: false
+publish: true
 ---
 
 # PanelBar

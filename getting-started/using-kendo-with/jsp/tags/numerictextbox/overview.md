@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-numerictextbox-overview
-publish: false
+publish: true
 ---
 
 # NumericTextBox

@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-autocomplete-overview
-publish: false
+publish: true
 ---
 
 # AutoComplete

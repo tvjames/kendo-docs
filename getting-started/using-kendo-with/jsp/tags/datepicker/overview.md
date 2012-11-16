@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-datepicker-overview
-publish: false
+publish: true
 ---
 
 # DatePicker

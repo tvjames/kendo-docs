@@ -1,7 +1,7 @@
 ---
 title: Overview
 slug: jsp-tabstrip-overview
-publish: false
+publish: true
 ---
 
 # TabStrip
