@@ -13,7 +13,7 @@ The AutoComplete JSP tag is a server-side wrapper for the [Kendo UI AutoComplete
 There are two ways to bind a Kendo AutoComplete:
 
 *   **server** - the data will be serialized to the client. No Ajax requests will be made.
-*   **ajax** - the autocomplete will make ajax requests to get the data. [Here](http://docs.kendoui.com/getting-started/using-kendo-with/jsp/helpers/autocomplete/ajax-binding) you can find more information about this binding.
+*   **ajax** - the autocomplete will make ajax requests to get the data. [Here](http://docs.kendoui.com/getting-started/using-kendo-with/jsp/tags/autocomplete/ajax-binding) you can find more information about this binding.
 
 Here is how to configure the Kendo AutoComplete for binding to a data passed as model attribute in Spring MVC:
 
@@ -49,7 +49,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
     <script>
     $(function() {
         // Notice that the Name() of the autocomplete is used to get its client-side instance
-        var autocomplete = $("#colors").data("kendoAutoComplete");
+        var autocomplete = $("#productAutoComplete").data("kendoAutoComplete");
     });
     </script>
 
