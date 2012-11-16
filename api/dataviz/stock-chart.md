@@ -2353,7 +2353,7 @@ The legend is positioned on the right.
 
 The legend is positioned using OffsetX and OffsetY.
 
-### legend.visible `Boolean`*(default: true)*
+### legend.visible `Boolean`*(default: false)*
 
  The visibility of the legend.
 
@@ -2361,8 +2361,8 @@ The legend is positioned using OffsetX and OffsetY.
 
     $("#chart").kendoChart({
         legend: {
-            // hide the legend
-            visible: false
+            // show the legend
+            visible: true
         },
         ...
     });
