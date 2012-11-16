@@ -45,7 +45,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ### Accessing an existing DropDownList instance
 
-    //Put this after your Kendo DropDownList for ASP.NET MVC declaration
+    //Put this after your Kendo DropDownList tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the dropdownlist is used to get its client-side instance

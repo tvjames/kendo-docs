@@ -51,9 +51,9 @@ Here is how to configure a simple Kendo Splitter:
 You can reference an existing Splitter instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/splitter#methods) to control its behavior.
 
-### Accessing an existing Grid instance
+### Accessing an existing Splitter instance
 
-    //Put this after your Kendo Splitter declaration
+    //Put this after your Kendo Splitter tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the splitter is used to get its client-side instance

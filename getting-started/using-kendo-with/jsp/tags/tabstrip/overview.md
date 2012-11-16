@@ -58,7 +58,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ### Accessing an existing TabStrip instance
 
-    //Put this after your Kendo TabStrip for ASP.NET MVC declaration
+    //Put this after your Kendo TabStrip tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the tabstrip is used to get its client-side instance

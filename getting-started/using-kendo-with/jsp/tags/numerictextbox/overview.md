@@ -36,9 +36,9 @@ Here is how to configure a simple Kendo NumericTextBox:
 You can reference an existing NumericTextBox instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/numerictextbox#methods) to control its behavior.
 
-### Accessing an existing Grid instance
+### Accessing an existing NumericTextBox instance
 
-    //Put this after your Kendo NumericTextBox for ASP.NET MVC declaration
+    //Put this after your Kendo NumericTextBox tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the numerictextbox is used to get its client-side instance

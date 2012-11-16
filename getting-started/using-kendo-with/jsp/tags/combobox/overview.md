@@ -45,7 +45,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ### Accessing an existing ComboBox instance
 
-    //Put this after your Kendo ComboBox for ASP.NET MVC declaration
+    //Put this after your Kendo ComboBox tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the combobox is used to get its client-side instance

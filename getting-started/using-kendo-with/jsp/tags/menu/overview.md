@@ -56,9 +56,9 @@ Here is how to configure a simple Kendo Menu:
 You can reference an existing Menu instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/menu#methods) to control its behavior.
 
-### Accessing an existing Grid instance
+### Accessing an existing Menu instance
 
-    //Put this after your Kendo Menu for ASP.NET MVC declaration
+    //Put this after your Kendo Menu tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the menu is used to get its client-side instance

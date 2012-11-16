@@ -50,9 +50,9 @@ Here is how to configure a simple Kendo PanelBar:
 You can reference an existing PanelBar instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/panelbar#methods) to control its behavior.
 
-### Accessing an existing Grid instance
+### Accessing an existing PanelBar instance
 
-    //Put this after your Kendo PanelBar for ASP.NET MVC declaration
+    //Put this after your Kendo PanelBar tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the panelbar is used to get its client-side instance

@@ -36,9 +36,9 @@ Here is how to configure a simple Kendo TimePicker:
 You can reference an existing TimePicker instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
 Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/timepicker#methods) to control its behavior.
 
-### Accessing an existing Grid instance
+### Accessing an existing TimePicker instance
 
-    //Put this after your Kendo TimePicker for ASP.NET MVC declaration
+    //Put this after your Kendo TimePicker tag declaration
     <script>
     $(function() {
         // Notice that the Name() of the timepicker is used to get its client-side instance
