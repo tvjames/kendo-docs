@@ -59,7 +59,16 @@ Defines the text of the labels that are shown within the editor. Used primarily 
             invalidFileType: "The selected file \"{0}\" is not valid. Supported file types are {1}.",
             deleteFile: "Are you sure you want to delete \"{0}\"?",
             overwriteFile: "A file with name \"{0}\" already exists in the current directory. Do you want to overwrite it?",
-            directoryNotFound: "A directory with this name was not found."
+            directoryNotFound: "A directory with this name was not found.",
+            imageWebAddress: "Web address",
+            imageAltText: "Alternate text",
+            linkWebAddress: "Web address",
+            linkText: "Text",
+            linkToolTip: "ToolTip",
+            linkOpenInNewWindow: "Open link in new window",
+            dialogInsert: "Insert",
+            dialogButtonSeparator: "or",
+            dialogCancel: "Cancel"
         }
     });
 
