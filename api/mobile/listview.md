@@ -143,12 +143,12 @@ Get the listview DOM element items
 
 ### refresh
 
-Repaints the listview (works only in databound mode).
+repaints the listview (works only in databound mode).
 
-#### Example
+#### example
 
     // get a reference to the mobile listview widget
-    var listView = $("#listView").data("kendoMobileListView");
+    var listview = $("#listview").data("kendomobilelistview");
     // refreshes the listview
     listview.refresh();
 
@@ -156,13 +156,37 @@ Repaints the listview (works only in databound mode).
 
 ##### e ``
 
+### stopEndlessScrolling
 
+Stops the 'endless scroll' of the ListView.
+
+#### example
+
+    // get a reference to the mobile listview widget
+    var listview = $("#listview").data("kendomobilelistview");
+    // stop endless scroll
+    listview.stopEndlessScrolling();
+
+### stopLoadMore
+
+Stops the 'load more' functionality of the ListView.
+
+#### example
+
+    // get a reference to the mobile listview widget
+    var listview = $("#listview").data("kendomobilelistview");
+    // stop endless scroll
+    listview.stopLoadMore();
 
 ## Events
 
 ### click
 
 Fires when item is tapped.
+
+### lastPageReached
+
+Fires when the last page of the ListView is reached. Event will be raised only if the 'endless scroll' or 'load more' option is enabled.
 
 #### Handling button clicks
 
