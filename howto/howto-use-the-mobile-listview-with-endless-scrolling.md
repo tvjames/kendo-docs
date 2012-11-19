@@ -149,7 +149,7 @@ The developer can solve this problem using the [stopEndlessScrolling](http://doc
             }
         });
 
-    2. If there is no data (the condition could be other) get reference to the ListView and stop endless scrolling:
+2. If there is no data (the condition could be other) get reference to the ListView and stop endless scrolling:
 
         change: function() {
             //check whether any data is returned
