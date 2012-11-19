@@ -10,7 +10,7 @@ publish: true
 
 ## KendoUI 2012 Q3
 
-### Changes from 2012 Q1 SP1 (2011.1.515)
+### Changes from 2012 Q2 SP1 (2011.2.913)
 
 #### Breaking changes
 
@@ -36,6 +36,17 @@ should be changed to this:
         .km-ios .km-tabstrip .km-icon {
             color: rgb(20, 30, 40);
         }
+
+* **DataViz:** Widgets now require theme-specific stylesheets. For example:
+
+    	<link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+
+if using the Default skin, should be updated to:
+
+		<link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+		<link href="styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+
+* **DataViz:** missingValues defaults to "zero" for area, stacked area and stacked line series. The previous default was "gap" which can lead to incorrect results.
 
 ## KendoUI 2012 Q2
 
