@@ -116,45 +116,45 @@ Here's the live example of the representation (above):
 
 In some cases, the total size of the remote data cannot be defined statically. In this scenario, the endless scroll will not be disabled until the developer stops it. In other words,
 when the last page is served the user still be able to scroll the ListView and it will perform requests for additional content. This could lead into duplication of the rendered data.
-The developer can solve this problem using the [stopEndlessScroll]() method of the ListView. We will modify the last example in order to show a possible resolution of the issue:
+The developer can solve this problem using the [stopEndlessScrolling](http://docs.kendoui.com/api/mobile/listview#stopEndlessScrolling) method of the ListView. We will modify the last example in order to show a possible resolution of the issue:
 
 1. Wire the change event of the DataSource and check whether it has data:
 
-    	var dataSource = new kendo.data.DataSource({
-        	pageSize: 30,
-        	serverPaging: true, //specifies whether the paging should be handled by the service
-        	change: function() {
-            	//check whether any data is returned
-            	if (!this.view()[0]) {
+        var dataSource = new kendo.data.DataSource({
+            pageSize: 30,
+            serverPaging: true, //specifies whether the paging should be handled by the service
+            change: function() {
+                //check whether any data is returned
+                if (!this.view()[0]) {
 
-            	}
-        	},
-        	transport: {
-            	read: {
-                	url: "http://search.twitter.com/search.json", // the remote service url
-                	dataType: "jsonp" // JSONP (JSON with padding) is required for cross-domain AJAX
-            	},
-            	parameterMap: function(options) {
-                	var parameters = {
-                    	q: "javascript", //additional parameters sent to the remote service
-                    	rpp: options.pageSize,
-                    	page: options.page //next page
-                	};
+                }
+            },
+            transport: {
+                read: {
+                    url: "http://search.twitter.com/search.json", // the remote service url
+                    dataType: "jsonp" // JSONP (JSON with padding) is required for cross-domain AJAX
+                },
+                parameterMap: function(options) {
+                    var parameters = {
+                        q: "javascript", //additional parameters sent to the remote service
+                        rpp: options.pageSize,
+                        page: options.page //next page
+                    };
 
-                	return parameters;
-            	}
-        	},
-        	schema: { // describe the result format
-            	data: "results" // the data which the DataSource will be bound to is in the "results" field
-        	}
-    	});
+                    return parameters;
+                }
+            },
+            schema: { // describe the result format
+                data: "results" // the data which the DataSource will be bound to is in the "results" field
+            }
+        });
 
-2. If there is no data (the condition could be other) get reference to the ListView and stop endless scrolling:
+    2. If there is no data (the condition could be other) get reference to the ListView and stop endless scrolling:
 
-		change: function() {
-    		//check whether any data is returned
-    		if (!this.view()[0]) {
-				//disable endless scroll
-	        	$("#ListView").data("kendoMobileListView").stopEndlessScroll();
-    		}
-		},
+        change: function() {
+            //check whether any data is returned
+            if (!this.view()[0]) {
+                //disable endless scroll
+                $("#ListView").data("kendoMobileListView").stopEndlessScroll();
+            }
+        },
