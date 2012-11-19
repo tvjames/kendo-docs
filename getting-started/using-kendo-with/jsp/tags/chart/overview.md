@@ -10,18 +10,13 @@ The Chart tag is a server-side wrapper for the [Kendo UI Chart](http://docs.kend
 
 ## Getting Started
 
-There are two ways to bind a Kendo Chart for ASP.NET MVC:
-
-*   server - the chart will bind to a supplied model
-*   ajax - the chart will make ajax requests when binding
-
-Here is how to configure the Kendo Chart for server binding to the list of InternetUsers:
+Here is how to configure the Kendo Chart for binding to a data passed as model attribute in Spring MVC:
 
 1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/jsp/introduction) help topic.
 
 2.  Create a new action method and pass the InternetUsers list as the model:
 
-	    @RequestMapping(value = "/local-data", method = RequestMethod.GET)
+    	@RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
 	    public String index(Model model) {
 	        model.addAttribute("viewModel", ChartDataRepository.InternetUsers());
 	     
@@ -49,7 +44,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ### Accessing an existing Chart instance
 
-    // Put this after your Kendo Chart for ASP.NET MVC declaration
+    // Put this after your Kendo StockChart tag
     <script>
         $(function() {
             // Notice that the Name() of the chart is used to get its client-side instance

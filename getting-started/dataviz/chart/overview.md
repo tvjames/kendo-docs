@@ -33,7 +33,7 @@ publish: true
 The Chart widget uses modern browser technologies to render high-quality data visualizations.
 All graphics are rendered on the client using SVG with a fallback to VML for legacy browsers.
 
-Kendo UI DataViz includes the following chart types:
+Kendo UI Chart supports the following series types:
 
 *   Bar / Column
 *   Line / Vertical Line
