@@ -24,6 +24,19 @@ Add the following CSS rule to fix them /if you have data-icon="custom" on them, 
             -webkit-background-clip: border-box;
         }
 
+Additionally it should be noted that the mask icons used **background-color** for colorization, while the font ones use **color**
+and custom colorization **should be updated**. For example a rule like this:
+
+        .km-ios .km-tabstrip .km-icon {
+            background-color: rgb(20, 30, 40);
+        }
+
+should be changed to this:
+
+        .km-ios .km-tabstrip .km-icon {
+            color: rgb(20, 30, 40);
+        }
+
 ## KendoUI 2012 Q2
 
 ### Changes from 2012 Q1 SP1 (2012.1.322)
