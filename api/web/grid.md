@@ -211,6 +211,10 @@ in order to have valid HTML markup in the Grid.
          ]
       });
 
+### columns.hidden `Boolean`*(default: false)*
+
+Specifies whether given column is hidden.
+
 ### columns.sortable `Boolean`*(default: true)*
 
  Specifies whether given column is sortable.
