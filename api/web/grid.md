@@ -354,13 +354,33 @@ Indicates whether the column should be visible in column menu.
 
 Enables column header menu
 
-### columnMenu.sortable `Boolean`
+### columnMenu.columns `Boolean`
 
-Enable/disable sorting section in column header menu.
+Enable/disable columns section in column header menu.
 
 ### columnMenu.filterable `Boolean`
 
 Enable/disable filter section in column header menu.
+
+### columnMenu.sortable `Boolean`
+
+Enable/disable sorting section in column header menu.
+
+### columnMenu.messages.columns `String`
+
+Set the text of the columns section in column header menu.
+
+### columnMenu.messages.filter `String`
+
+Set the text of the filter section in column header menu.
+
+### columnMenu.messages.sortAscending `String`
+
+Set the text of the sortAscending section in column header menu.
+
+### columnMenu.messages.sortDescending `String`
+
+Set the text of the sortDescending section in column header menu.
 
 ### dataSource `kendo.data.DataSource | Object`
 
