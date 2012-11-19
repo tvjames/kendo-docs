@@ -366,6 +366,10 @@ Enable/disable filter section in column header menu.
 
 Enable/disable sorting section in column header menu.
 
+### columnMenu.messages `Object`
+
+Sets the columnMenu messages.
+
 ### columnMenu.messages.columns `String`
 
 Set the text of the columns section in column header menu.
@@ -472,6 +476,10 @@ Indicates whether item should be switched to edit mode on click.
 
  Indicates whether second filter input is enabled/disabled.
 
+### filterable.messages `Object`
+
+ Sets the filter menu messages.
+
 ### filterable.messages.and `String`
 
  Set the text of the "and" option from logic drop down list.
@@ -504,6 +512,16 @@ Indicates whether item should be switched to edit mode on click.
 
  Set the text of the option label for foreign key drop down list.
 
+### filterable.operators `Object`
+
+ Enable/Disable and set the text of filter operators.
+
+### filterable.operators.string `Object`
+
+ Enable/Disable and set the text of filter operators for fields of type string.
+
+> **Important:** Ommitting an operator will exclude it from the list of available operators in the filter menu.
+
 ### filterable.operators.string.eq `String`
 
  Enable/Disable and set the text of the "Is equal to" filter option for columns with string values.
@@ -527,6 +545,12 @@ Indicates whether item should be switched to edit mode on click.
 ### filterable.operators.string.endswith `String`
 
  Enable/Disable and set the text of the "Ends with" filter option for columns with string values.
+
+### filterable.operators.number `Object`
+
+ Enable/Disable and set the text of filter operators for fields of type number.
+
+> **Important:** Ommitting an operator will exclude it from the list of available operators in the filter menu.
 
 ### filterable.operators.number.eq `String`
 
@@ -552,6 +576,12 @@ Indicates whether item should be switched to edit mode on click.
 
  Enable/Disable and set the text of the "Is less than" filter option for columns with number values.
 
+### filterable.operators.date `Object`
+
+ Enable/Disable and set the text of filter operators for fields of type date.
+
+> **Important:** Ommitting an operator will exclude it from the list of available operators in the filter menu.
+
 ### filterable.operators.date.eq `String`
 
  Enable/Disable and set the text of the "Is equal to" filter option for columns with date values.
@@ -575,6 +605,12 @@ Indicates whether item should be switched to edit mode on click.
 ### filterable.operators.date.lt `String`
 
  Enable/Disable and set the text of the "Is before" filter option for columns with date values.
+
+### filterable.operators.enums `Object`
+
+ Enable/Disable and set the text of filter operators for foreign key columns.
+
+> **Important:** Ommitting an operator will exclude it from the list of available operators in the filter menu.
 
 ### filterable.operators.enums.eq `String`
 
