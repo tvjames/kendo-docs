@@ -8,7 +8,7 @@ publish: true
 
 ## Contents
 
-* [Gettimg started](#getting-started)
+* [Getting started](#getting-started)
 
 * [Categorical charts](#categorical-charts)
     * [Category axis](#category-axis)
