@@ -464,9 +464,125 @@ Template which will be use during popup editing
 
 Indicates whether item should be switched to edit mode on click.
 
-### filterable `Boolean`*(default: false)*
+### filterable `Boolean | Object`*(default: false)*
 
  Indicates whether filtering is enabled/disabled.
+
+### filterable.extra `Boolean`*(default: true)*
+
+ Indicates whether second filter input is enabled/disabled.
+
+### filterable.messages.and `String`
+
+ Set the text of the "and" option from logic drop down list.
+
+### filterable.messages.clear `String`
+
+ Set the text of the clear button of the filter menu.
+
+### filterable.messages.filter `String`
+
+ Set the text of the filter button of the filter menu.
+
+### filterable.messages.info `String`
+
+ Set the text of the information message on top of the filter menu.
+
+### filterable.messages.isFalse `String`
+
+ Set the text of the isFalse radio button of the filter menu for boolean values.
+
+### filterable.messages.isTrue `String`
+
+ Set the text of the isTrue radio button of the filter menu for boolean values.
+
+### filterable.messages.or `String`
+
+ Set the text of the "or" option from logic drop down list.
+
+### filterable.messages.selectValue `String`
+
+ Set the text of the option label for foreign key drop down list.
+
+### filterable.operators.string.eq `String`
+
+ Enable/Disable and set the text of the "Is equal to" filter option for columns with string values.
+
+### filterable.operators.string.neq `String`
+
+ Enable/Disable and set the text of the "Is not equal to" filter option for columns with string values.
+
+### filterable.operators.string.startswith `String`
+
+ Enable/Disable and set the text of the "Starts with" filter option for columns with string values.
+
+### filterable.operators.string.contains `String`
+
+ Enable/Disable and set the text of the "Contains" filter option for columns with string values.
+
+### filterable.operators.string.doesnotcontain `String`
+
+ Enable/Disable and set the text of the "Does not contain" filter option for columns with string values.
+
+### filterable.operators.string.endswith `String`
+
+ Enable/Disable and set the text of the "Ends with" filter option for columns with string values.
+
+### filterable.operators.number.eq `String`
+
+ Enable/Disable and set the text of the "Is equal to" filter option for columns with number values.
+
+### filterable.operators.number.neq `String`
+
+ Enable/Disable and set the text of the "Is not equal to" filter option for columns with number values.
+
+### filterable.operators.number.gte `String`
+
+ Enable/Disable and set the text of the "Is greater than or equal to" filter option for columns with number values.
+
+### filterable.operators.number.gt `String`
+
+ Enable/Disable and set the text of the "Is greater than" filter option for columns with number values.
+
+### filterable.operators.number.lte `String`
+
+ Enable/Disable and set the text of the "Is less than or equal to" filter option for columns with number values.
+
+### filterable.operators.number.lt `String`
+
+ Enable/Disable and set the text of the "Is less than" filter option for columns with number values.
+
+### filterable.operators.date.eq `String`
+
+ Enable/Disable and set the text of the "Is equal to" filter option for columns with date values.
+
+### filterable.operators.date.neq `String`
+
+ Enable/Disable and set the text of the "Is not equal to" filter option for columns with date values.
+
+### filterable.operators.date.gte `String`
+
+ Enable/Disable and set the text of the "Is after or equal to" filter option for columns with date values.
+
+### filterable.operators.date.gt `String`
+
+ Enable/Disable and set the text of the "Is after" filter option for columns with date values.
+
+### filterable.operators.date.lte `String`
+
+ Enable/Disable and set the text of the "Is before or equal to" filter option for columns with date values.
+
+### filterable.operators.date.lt `String`
+
+ Enable/Disable and set the text of the "Is before" filter option for columns with date values.
+
+### filterable.operators.enums.eq `String`
+
+ Enable/Disable and set the text of the "Is equal to" filter option for foreign key columns.
+
+### filterable.operators.enums.neq `String`
+
+ Enable/Disable and set the text of the "Is not equal to" filter option for foreign key columns.
 
 ### reorderable `Boolean`*(default:false)*
 
