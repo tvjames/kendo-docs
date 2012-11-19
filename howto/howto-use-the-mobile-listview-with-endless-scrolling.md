@@ -67,7 +67,7 @@ Finally, we will initialize the Mobile ListView:
 
 Here's the live example of the representation (above):
 
-    <a class="jsbin-embed" href="http://jsbin.com/iyodux/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/iyodux/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Bind the Mobile ListView to a remote data
 
@@ -110,9 +110,9 @@ Initialize the Mobile ListView:
 
 Here's the live example of the representation (above):
 
-    <a class="jsbin-embed" href="http://jsbin.com/isaqaw/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/isaqaw/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-### ListView bound to dynamic remote data
+### ListView bound to a dynamic remote data
 
 In some cases, the total size of the remote data cannot be defined statically. In this scenario, the endless scroll will not be disabled until the developer stops it. In other words,
 when the last page is served the user still be able to scroll the ListView and it will perform requests for additional content. This could lead into duplication of the rendered data.
