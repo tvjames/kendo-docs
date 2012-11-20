@@ -112,7 +112,55 @@ Here's the live example of the representation (above):
 
 <a class="jsbin-embed" href="http://jsbin.com/isaqaw/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-### ListView bound to a dynamic remote data
+## Send additional parameters
+
+The Mobile ListView provides a way to define [endlessScrollParameters](http://docs.kendoui.com/api/mobile/listview#endlessscrollparameters-function) function, which will add its result to the data send to the server.
+These data will be available in the DataSource's [parameterMap](http://docs.kendoui.com/api/framework/datasource#transportparametermap-function) function.
+
+Let's modify the above example to send [an additional parameter](https://dev.twitter.com/docs/api/1.1/get/search/tweets#api-param-max_id) to the Twitter service:
+
+    $("#listView").kendoMobileListView({
+        dataSource: dataSource,
+        template: "#: from_user #",
+        endlessScroll: true,
+        endlessScrollParameters: function(firstOrigin) {
+            if (firstOrigin) {
+                return {
+                    max_id: firstOrigin.id_str
+                };
+            }
+        }
+    });
+
+Now we can use this additional parameter in the parameterMap function of the DataSource:
+
+    var dataSource = new kendo.data.DataSource({
+        serverPaging: true,
+        pageSize: 10,
+        transport: {
+            read: {
+                url: "http://search.twitter.com/search.json", // the remove service url
+                dataType: "jsonp" // JSONP (JSON with padding) is required for cross-domain AJAX
+            },
+            parameterMap: function(options) {
+                return {
+                    q: "javascript",
+                    page: options.page,
+                    rpp: options.pageSize,
+                    max_id: options.max_id //additional parameters sent to the remote service
+                };
+            }
+        },
+        schema: { // describe the result format
+            data: "results" // the data which the data source will be bound to is in the "results" field
+        }
+    });
+
+Here's the live example of the above example:
+
+<a class="jsbin-embed" href="http://jsbin.com/upajoc/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+### ListView bound to dynamic remote data
 
 In some cases, the total size of the remote data cannot be defined statically. In this scenario, the endless scroll will not be disabled until the developer stops it. In other words,
 when the last page is served the user still be able to scroll the ListView and it will perform requests for additional content. This could lead into duplication of the rendered data.
@@ -157,4 +205,4 @@ The developer can solve this problem using the [stopEndlessScrolling](http://doc
                 //disable endless scroll
                 $("#ListView").data("kendoMobileListView").stopEndlessScroll();
             }
-        },
+        }
