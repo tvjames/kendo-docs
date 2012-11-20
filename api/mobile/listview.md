@@ -34,11 +34,11 @@ Instance of DataSource or the data that the mobile ListView will be bound to.
     $("#pull-with-endless").kendoMobileListView({
         dataSource: dataSource,
         endlessScroll: true,
-        endlessScrollParameters: function(firstOrigin, lastOrigin) {
-            if (firstOrigin) {
+        endlessScrollParameters: function(firstItem, lastItem) {
+            if (firstItem) {
                 //additional parameters
                 return {
-                    max_id: firstOrigin.id_str
+                    max_id: firstItem.id_str
                 };
             }
         }
@@ -46,11 +46,11 @@ Instance of DataSource or the data that the mobile ListView will be bound to.
 
 #### Parameters
 
-##### firstOrigin `Object`
+##### firstItem `Object`
 
 First dataItem of the first loaded page of the ListView. It will not change, even if 'pull-to-refresh' is used.
 
-##### lastOrigin  `Object`
+##### lastItem  `Object`
 
 Last dataItem of the first loaded page of the ListView.
 
