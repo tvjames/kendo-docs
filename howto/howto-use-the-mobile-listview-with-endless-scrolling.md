@@ -67,7 +67,7 @@ Finally, we will initialize the Mobile ListView:
 
 Here's the live example of the representation (above):
 
-<a class="jsbin-embed" href="http://jsbin.com/iyodux/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/iyodux/2/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Bind the Mobile ListView to a remote data
 
@@ -110,7 +110,7 @@ Initialize the Mobile ListView:
 
 Here's the live example of the representation (above):
 
-<a class="jsbin-embed" href="http://jsbin.com/isaqaw/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/isaqaw/2/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ## Send additional parameters
 
