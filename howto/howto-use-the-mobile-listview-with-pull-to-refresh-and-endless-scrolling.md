@@ -9,28 +9,24 @@ publish: true
 
 In this how-to, we will examine how to use the [ListView](http://docs.kendoui.com/api/mobile/listview) of Kendo UI Mobile to display dynamic data.
 
-[Check this link to find more information about dynamic data](http://en.wikipedia.org/wiki/Dynamic_data). An excellent example for dynamic data is a [search](https://dev.twitter.com/docs/api/1.1/get/search/tweets)
-for relevant Tweets - here is a search for [#javascript](http://search.twitter.com/search.json?q=javascript). We see the latest tweets about 'javascript'. After some time, these tweets we see will be outdated.
-One possible solution for this is to use 'pull to refresh' pattern invented by [Loren Bricher](https://twitter.com/lorenb). It allows to pull the list and trigger an updated. On the other hand, the user will
-want to scroll down the list to see older data. 'Endless scrolling' pattern will allow to divide the data in pages. Thus only subset of the data will be rendered on demand.
+[Check this link to find more information about dynamic data](http://en.wikipedia.org/wiki/Dynamic_data). An excellent example for dynamic data is a Tweet [search](https://dev.twitter.com/docs/api/1.1/get/search/tweets) for [#javascript](http://search.twitter.com/search.json?q=javascript). If we bound the ListView to the Twitter seach API we will show the latest tweets about JavaScript. Because of the dynamic nature of the data these tweets will be outdated and we will
+need to update the list. This can be achieved using the 'pull to refresh' pattern invented by [Loren Bricher](https://twitter.com/lorenb). It allows to retrieve the data by pulling the list. The Twitter API on the other hand can return older tweets. They can be shown using the 'endless scrolling' pattern. It allows to load a subset of data when the end of the ListView is reached. Let's implement such mobile application.
 
 ## Create a Mobile ListView with pull-to-refresh and endless scrolling
 
-Q: What problem will cause the use of 'pull to refresh' and 'endless scrolling' patterns together?
-A: Difficulty to track what sub-set of data the user sees.
+Q: What problem will cause the usage of 'pull to refresh' and 'endless scrolling'?
 
-Let's review one possible scenario where the 'pull to refresh' and 'endless scrolling' is enabled:
+A: Difficulty to get the correct subset of data.
 
-1. The ListView is loaded and the first page of data is shown.
-2. The users pulls the ListView to update the list. At this point, the service should know which is the first item shown on the client. This is required in order to return only the
-newer data and avoid any duplications. To solve this problem the [pullParameters](http://docs.kendoui.com/api/mobile/listview#pullparameters-function) callback could be used to send additional parameters (id of the item for instance) to the server.
-3. After the update (a few new items were rendered) the user decides to scroll down to see page two. If the id of the first (newest) item is sent to server, then we will
-get duplicated items in the second page. This problem can be solved using the [endlessScrollParameters](http://docs.kendoui.com/api/mobile/listview#endlessscrollparameters-function) callback and sending the id of the first shown item in the ListView.
-Thus the server will be able to return the correct second page.
+Here is how the ListView should behave:
 
-Let's implement aforementioned scenario using the Twitter search service:
+1. The ListView loads first page.
+2. The users pulls the ListView to update the list. The Twitter search API requires the id of the first data item to dermine whether there are newer tweets. We can send it using the [pullParameters](http://docs.kendoui.com/api/mobile/listview#pullparameters-function) callback.
+3. After the update the user decides to scroll down to see older tweets. Here we will need to send the id of the first shown data item, not the newly rendered. Thus the service will return the correct page and will avoid any duplication. First argument of the [endlessScrollParameters](http://docs.kendoui.com/api/mobile/listview#endlessscrollparameters-function) callback exactly this data item.
 
-** In order to proceed with this "How-to", you will need to know how to build [Kendo Mobile application](http://docs.kendoui.com/howto/build-apps-with-kendo-ui-mobile).
+Let's implement the aforementioned scenario:
+
+** In order to proceed with this "How-to", you will need to know how to build [Kendo Mobile application](http://docs.kendoui.com/howto/build-apps-with-kendo-ui-mobile)
 
 First, we'll define a target HTML element such as a list:
 
@@ -74,7 +70,7 @@ Next, we will initialize the Mobile ListView by referring the template and defin
         }
     });
 
-Next, we will use the additional parameters in the DataSource's parameterMap function:
+Finally, we will use the additional parameters in the DataSource's parameterMap function:
 
     var dataSource = new kendo.data.DataSource({
         serverPaging: true,
