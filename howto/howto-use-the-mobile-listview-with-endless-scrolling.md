@@ -123,10 +123,10 @@ Let's modify the above example to send [an additional parameter](https://dev.twi
         dataSource: dataSource,
         template: "#: from_user #",
         endlessScroll: true,
-        endlessScrollParameters: function(firstOrigin) {
-            if (firstOrigin) {
+        endlessScrollParameters: function(firstItem) {
+            if (firstItem) {
                 return {
-                    max_id: firstOrigin.id_str
+                    max_id: firstItem.id_str
                 };
             }
         }
