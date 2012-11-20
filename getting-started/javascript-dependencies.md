@@ -240,6 +240,7 @@ can be included on a per-widget basis.
 
 1.  jquery-1.8.2.js
 1.  kendo.core.js
+1.  kendo.userevents.js
 1.  kendo.binder.js (if using MVVM)
 1.  kendo.draganddrop.js
 1.  kendo.slider.js
@@ -249,6 +250,7 @@ can be included on a per-widget basis.
 
 1.  jquery-1.8.2.js
 1.  kendo.core.js
+1.  kendo.userevents.js
 1.  kendo.draganddrop.js
 1.  kendo.resizable.js
 1.  kendo.splitter.js
@@ -276,6 +278,7 @@ can be included on a per-widget basis.
 
 1.  jquery-1.8.2.js
 1.  kendo.core.js
+1.  kendo.userevents.js
 1.  kendo.data.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.draganddrop.js (if drag &amp; drop enabled)
@@ -300,6 +303,7 @@ can be included on a per-widget basis.
 
 1.  jquery-1.8.2.js
 1.  kendo.core.js
+1.  kendo.userevents.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.draganddrop.js
 1.  kendo.resizable.js
