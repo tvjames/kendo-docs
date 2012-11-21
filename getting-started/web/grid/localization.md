@@ -126,7 +126,7 @@ More info can be found in the [columnMenu.messages](/api/web/grid#columnmenu-boo
             display: "{0} - {1} of {2} items", //{0} is the index of the first record on the page, {1} - index of the last record on the page, {2} is the total amount of records
             empty: "No items to display",
             page: "Page",
-            of: "of {0}", //the widget name
+            of: "of {0}", //{0} is total amount of pages
             itemsPerPage: "items per page",
             first: "Go to the first page",
             previous: "Go to the previous page",
