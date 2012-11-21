@@ -8,7 +8,7 @@ publish: true
 # kendo.data.ObservableObject
 
 The `ObservableObject` is a very important piece of the Kendo UI framework. It is the building block of [Kendo MVVM](/getting-started/framework/mvvm/overview). In addition·
-the Kendo [DataSource](/getting-started/framework/datasource/overview) contains instances of the `ObservableObject`.
+the Kendo [DataSource](/getting-started/framework/datasource/overview) contains instances of the `ObservableObject`. Inherits from [Observable](/api/framework/observable).
 
 ## Configuration
 
@@ -50,7 +50,8 @@ The unique identifier of the `ObservableObject`.
 
 ### bind
 
-Attaches an event handler for the specified event.
+Attaches a handler to an event. More info can be found in the [bind](/api/framework/observable#bind) section of the
+kendo.Observable API reference.
 
 #### Example
 
@@ -61,16 +62,6 @@ Attaches an event handler for the specified event.
     });
 
     observable.set("name", "Jane Doe"); // raises the "change" event and the handler outputs "name"
-
-#### Parameters
-
-##### eventName `String`
-
-The name of the event.
-
-##### handler `Function`
-
-The function which will be invoked when the event is raised.
 
 ### get
 

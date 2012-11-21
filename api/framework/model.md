@@ -51,18 +51,7 @@ Indicates whether the model is modified.
 
 ### bind
 
-Attaches an event handler for the specified event. Inherited from `ObservableObject`. More info can be found in the [bind](/api/framework/observableobject#bind) section of the
-ObservableObject API reference.
-
-#### Parameters
-
-##### eventName `String`
-
-The name of the event.
-
-##### handler `Function`
-
-The function which will be invoked when the event is raised.
+Attaches a handler to an event. More info can be found in the [bind](/api/framework/observable#bind) section of the
 
 ### Model.define
 
