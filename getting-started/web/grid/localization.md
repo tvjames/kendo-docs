@@ -6,7 +6,9 @@ publish: true
 
 # Grid Localization
 
-The localization of the grid is set up through the configuration settings of the widget.
+Localization is the process of adapting software to meet the requirements of local markets and different languages. Kendo widgets allows the developer to change the text messages that are displayed to the end user.
+
+Kendo Grid provides a way to localize the user interface using the configuration options.
 
 ## Localization of the toolbar controls:
 
@@ -121,10 +123,10 @@ More info can be found in the [columnMenu.messages](/api/web/grid#columnmenu-boo
 
     pageable: {
         messages: {
-            display: "{0} - {1} of {2} items",
+            display: "{0} - {1} of {2} items", //{0} is the index of the first record on the page, {1} - index of the last record on the page, {2} is the total amount of records
             empty: "No items to display",
             page: "Page",
-            of: "of {0}",
+            of: "of {0}", //the widget name
             itemsPerPage: "items per page",
             first: "Go to the first page",
             previous: "Go to the previous page",
