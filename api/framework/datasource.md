@@ -896,39 +896,39 @@ One ore more of the following keys will be present (depending on the configurati
 
 - aggregate
 
-An object containing the current aggregate info. Present if there are any aggregates, [serverAggregates](#serverAggregates booleandefault) is set to `true` and the type of the request is "read".
+    An object containing the current aggregate info. Present if there are any aggregates, [serverAggregates](#serverAggregates booleandefault) is set to `true` and the type of the request is "read".
 
 - group
 
-An object containing the current filter info. Present if the data source is grouped, [serverGrouping](#serverGrouping booleandefault) is set to `true` and the type of request is "read".
+    An object containing the current filter info. Present if the data source is grouped, [serverGrouping](#serverGrouping booleandefault) is set to `true` and the type of request is "read".
 
 - filter
 
-An object containing the current filter info. Present if the data source is filtered, [serverFiltering](#serverFiltering booleandefault) is set to `true` and the type of request is "read".
+    An object containing the current filter info. Present if the data source is filtered, [serverFiltering](#serverFiltering booleandefault) is set to `true` and the type of request is "read".
 
 - models
 
-An array of all changed models. Present if there are any changes and [batch](#batch boolean default) is set to `true`.
+    An array of all changed models. Present if there are any changes and [batch](#batch boolean default) is set to `true`.
 
 - page
 
-The current page. Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
+    The current page. Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
 
 - pageSize
 
-The current page size specified via [pageSize](#pagesize numberdefault). Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
+    The current page size specified via [pageSize](#pagesize numberdefault). Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
 
 - skip
 
-A number indicating how many records to skip from the beginning (related to the current page). Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
+    A number indicating how many records to skip from the beginning (related to the current page). Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
 
 - sort
 
-An array containing the current sorting info. Present if the data source is sorted, [serverSorting](#serverSorting booleandefault) is set to `true` and the type of request is "read".
+    An array containing the current sorting info. Present if the data source is sorted, [serverSorting](#serverSorting booleandefault) is set to `true` and the type of request is "read".
 
 - take
 
-The same as `pageSize`. Present if [serverPaging](#serverpaging booleandefault) is set to `true` the and the type of request is "read".
+    The same as `pageSize`. Present if [serverPaging](#serverpaging booleandefault) is set to `true` the and the type of request is "read".
 
 
 ##### type `String`
