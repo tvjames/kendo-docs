@@ -890,7 +890,7 @@ Contains key/value pairs that represent the request.
 
 All key/value pairs specified in the `data` field of the transport settings (create, read, update or destroy) will be included as well.
 
-If [batch[](#batch boolean default) is set to `false` the fields of the changed model will be included.
+If [batch](#batch boolean default) is set to `false` the fields of the changed model will be included.
 
 One ore more of the following keys will be present (depending on the configuration and current request type):
 
