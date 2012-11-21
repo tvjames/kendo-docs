@@ -1,11 +1,11 @@
 ---
-title: kendo.mobile.ui.Widget
-slug: fw-kendo.mobile.ui.Widget
+title: kendo.ui.Widget
+slug: fw-kendo.ui.Widget
 tags: api,framework
 publish: true
 ---
 
-# kendo.mobile.ui.Widget
+# kendo.ui.Widget
 
 Base class of all Kendo UI widgets. Inherits from [Observable](/api/framework/observable).
 
