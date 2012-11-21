@@ -85,3 +85,10 @@ Fires when popover is closed.
 ### open
 
 Fires when popover is opened.
+
+#### Event Data
+
+##### e.target `jQuery`
+
+The DOM element, which triggered the popover opening.
+
