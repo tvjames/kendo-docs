@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.Scroller
 
+Represents the Kendo UI Mobile Scroller widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### zoom `Boolean`*(default: false)*

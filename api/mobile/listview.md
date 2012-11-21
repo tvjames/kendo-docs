@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.ListView
 
+Represents the Kendo UI Mobile ListView widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### appendOnRefresh `Boolean`*(default: false)*

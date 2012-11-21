@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.BackButton
 
+Represents the Kendo UI Mobile BackButton widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## BackButton
 
 The mobile BackButton widget navigates to the previously visited mobile View when pressed. A view can be explicitly set using the `href` attribute.

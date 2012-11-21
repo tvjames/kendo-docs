@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.TabStrip
 
+Represents the Kendo UI Mobile TabStrip widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### selectedIndex `Number`*(default: 0)*

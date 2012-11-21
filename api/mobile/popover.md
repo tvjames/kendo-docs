@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.PopOver
 
+Represents the Kendo UI Mobile PopOver widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### pane `Object`

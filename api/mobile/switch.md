@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.Switch
 
+Represents the Kendo UI Mobile Switch widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### checked `Boolean`*(default: false)*

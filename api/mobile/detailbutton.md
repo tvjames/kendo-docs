@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.DetailButton
 
+Represents the Kendo UI Mobile DetailButton widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## DetailButton
 
 The DetailButton widget navigates to a mobile View when pressed.

@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.ButtonGroup
 
+Represents the Kendo UI Mobile ButtonGroup widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### index `Number`

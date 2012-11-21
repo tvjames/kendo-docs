@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.ActionSheet
 
+Represents the Kendo UI Mobile ActionSheet widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### cancel `String`*(default: Cancel)*

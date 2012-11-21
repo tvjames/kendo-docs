@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.NavBar
 
+Represents the Kendo UI Mobile NavBar widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Methods
 
 ### title
