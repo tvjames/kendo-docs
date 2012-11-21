@@ -7,6 +7,8 @@ publish: true
 
 # kendo.mobile.ui.ScrollView
 
+Represents the Kendo UI Mobile ScrollView widget. Inherits from [kendo.mobile.ui.Widget](/api/framework/mobilewidget).
+
 ## Configuration
 
 ### bounceVelocityThreshold `Number`*(default: 1.6)*
@@ -34,7 +36,7 @@ Update the scrollview HTML content
 #### Example
 
     <div data-role="scrollview" id="scrollview"></div>
-    
+
     <script>
        $("#scrollview").data("kendoMobileScrollView").content("<span>Foo</span>");
     </script>
@@ -52,7 +54,7 @@ Redraw the mobile ScrollView pager. Called automatically on device orientation c
 #### Example
 
     <div data-role="scrollview" id="scrollview"></div>
-    
+
     <script>
        $("#scrollview").data("kendoMobileScrollView").refresh();
     </script>
@@ -64,7 +66,7 @@ Scroll to the given page. Pages are zero-based indexed.
 #### Example
 
     <div data-role="scrollview" id="scrollview"></div>
-    
+
     <script>
        // Scroll to the second page of the scrollView
        $("#scrollview").data("kendoMobileScrollView").scrollTo(1);
