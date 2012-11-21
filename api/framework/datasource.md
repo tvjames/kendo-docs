@@ -880,23 +880,90 @@ The remote url to call when creating a new record.
 
 ### transport.parameterMap `Function`
 
-Convert the request parameters from dataSource format to remote service specific format.
+Converts the request parameters and data from the internal format to a format suitable for the remote service.
+
+#### Parameters
+
+##### data `Object`
+
+Contains key/value pairs that represent the request.
+
+All key/value pairs specified in the `data` field of the transport settings (create, read, update or destroy) will be included as well.
+
+If [batch[](#batch boolean default) is set to `false` the fields of the changed model will be included.
+
+One ore more of the following keys will be present (depending on the configuration and current request type):
+
+- aggregate
+
+An object containing the current aggregate info. Present if there are any aggregates, [serverAggregates](#serverAggregates booleandefault) is set to `true` and the type of the request is "read".
+
+- group
+
+An object containing the current filter info. Present if the data source is grouped, [serverGrouping](#serverGrouping booleandefault) is set to `true` and the type of request is "read".
+
+- filter
+
+An object containing the current filter info. Present if the data source is filtered, [serverFiltering](#serverFiltering booleandefault) is set to `true` and the type of request is "read".
+
+- models
+
+An array of all changed models. Present if there are any changes and [batch](#batch boolean default) is set to `true`.
+
+- page
+
+The current page. Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
+
+- pageSize
+
+The current page size specified via [pageSize](#pagesize numberdefault). Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
+
+- skip
+
+A number indicating how many records to skip from the beginning (related to the current page). Present if [serverPaging](#serverpaging booleandefault) is set to `true` and the type of request is "read".
+
+- sort
+
+An array containing the current sorting info. Present if the data source is sorted, [serverSorting](#serverSorting booleandefault) is set to `true` and the type of request is "read".
+
+- take
+
+The same as `pageSize`. Present if [serverPaging](#serverpaging booleandefault) is set to `true` the and the type of request is "read".
+
+
+##### type `String`
+
+The type of the request being made. One of the following values: "create", "read", "update", "destroy".
 
 #### Example
 
     var dataSource = new kendo.data.DataSource({
+         serverPaging: true,
+         serverSorting: true,
          transport: {
            read: "Catalog/Titles",
-           parameterMap: function(options, type) {
+           parameterMap: function(data, type) {
               return {
-                 pageIndex: options.page,
-                 size: options.pageSize,
-                 orderBy: convertSort(options.sort)
-              }
+                 pageIndex: data.page,
+                 size: data.pageSize,
+                 orderBy: data.sort[0].field
+              };
            }
          }
      });
 
+> The `parameterMap` method is often used to encode the parameters in JSON format.
+
+#### Example - sending the data source request as JSON
+
+    var dataSource = new kendo.data.DataSource({
+         transport: {
+           read: "Catalog/Titles",
+           parameterMap: function(data, type) {
+              return kendo.stringify(data);
+           }
+         }
+     });
 
 ### transport.read `Object|String|Function`
 
