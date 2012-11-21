@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Calendar
 
+Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### culture `String`*(default: en-US)*
@@ -167,7 +169,7 @@ Prepares the **Calendar** for safe removal from DOM. Detaches all event handlers
 #### Example
 
     var calendar = $("#calendar").data("kendoCalendar");
-    
+
     // detach events
     calendar.destroy();
 

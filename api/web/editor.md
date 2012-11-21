@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Editor
 
+Represents the Kendo UI Editor widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### encoded `Boolean` *(default: true)*

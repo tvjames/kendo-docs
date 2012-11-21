@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.RangeSlider
 
+Represents the Kendo UI RangeSlider widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### largeStep `Number`*(default: 5)*
@@ -96,7 +98,7 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
 
 	// deatach events
 	$("#rangeSlider").data("kendoRangeSlider").destroy();
-	
+
 	// remove slider html from DOM
     $("#rangeSlider").closest(".k-slider").remove();
 
@@ -108,10 +110,10 @@ Enable/Disable the **RangeSlider** widget.
 
     // get a reference to the range slider widget
     var rangeSlider = $("#rangeSlider").data("kendoRangeSlider");
-    
+
     // disables the range slider
     rangeSlider.enable(false);
-    
+
     // enables the range slider
     rangeSlider.enable(true);
 

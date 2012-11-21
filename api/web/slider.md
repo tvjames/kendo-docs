@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Slider
 
+Represents the Kendo UI Slider widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### decreaseButtonTitle `String`*(default: "Decrease")*
@@ -105,7 +107,7 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
 
 	// deatach events
 	$("#slider").data("kendoSlider").destroy();
-	
+
 	// remove slider html from DOM
     $("#slider").closest(".k-slider").remove();
 
@@ -117,10 +119,10 @@ Enable/Disable the **Slider** widget.
 
     // get a reference to the slider widget
     var slider = $("#slider").data("kendoSlider");
-    
+
     // disables the slider
     slider.enable(false);
-    
+
     // enables the slider
     slider.enable(true);
 

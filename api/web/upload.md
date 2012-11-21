@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Upload
 
+Represents the Kendo UI Upload. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### async `Object`
@@ -114,7 +116,7 @@ Prepares the **Upload** for safe removal from DOM. Detaches all event handlers a
 #### Example
 
     var upload = $("#upload").data("kendoUpload");
-    
+
     // detach events
     upload.destroy();
 

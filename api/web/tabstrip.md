@@ -7,6 +7,7 @@ publish: true
 
 # kendo.ui.TabStrip
 
+Represents the Kendo UI TabStrip. Inherits from [Widget](/api/framework/widget).
 ## Configuration
 
 ### animation `Object`
@@ -55,9 +56,9 @@ The number of milliseconds used for the visual animation when the current tab is
     $("#tabstrip").kendoTabStrip({
         animation: {
             close: {
-    
+
                        duration: 1000
-    
+
                    }
       }
     });
@@ -305,7 +306,7 @@ Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers
 #### Example
 
     var tabStrip = $("#tabStrip").data("kendoTabStrip");
-    
+
     // detach events
     tabStrip.destroy();
 
@@ -503,12 +504,12 @@ Triggered just after a tab is being made visible, but before the end of the anim
     var onActivate = function(e) {
         // access the activated item via e.item (HTMLElement)
     };
-    
+
     // attach activate event handler during initialization
     var tabStrip = $("#tabStrip").kendoTabStrip({
         activate: onActivate
     });
-    
+
     // detach activate event handler via unbind()
     tabStrip.data("kendoTabStrip").unbind("activate", onActivate);
 
@@ -518,10 +519,10 @@ Triggered just after a tab is being made visible, but before the end of the anim
     var onActivate = function(e) {
         // access the activated item via e.item (HTMLElement)
     };
-    
+
     // attach activate event handler via bind()
     $("#tabStrip").data("kendoTabStrip").bind("activate", onActivate);
-    
+
     // detach activate event handler via unbind()
     $("#tabStrip").data("kendoTabStrip").unbind("activate", onActivate);
 
@@ -573,12 +574,12 @@ Triggered before a tab is selected.
     var onSelect = function(e) {
         // access the selected item via e.item (HTMLElement)
     };
-    
+
     // attach select event handler during initialization
     var tabStrip = $("#tabStrip").kendoTabStrip({
         select: onSelect
     });
-    
+
     // detach select event handler via unbind()
     tabStrip.data("kendoTabStrip").unbind("select", onSelect);
 
@@ -588,10 +589,10 @@ Triggered before a tab is selected.
     var onSelect = function(e) {
         // access the selected item via e.item (HTMLElement)
     };
-    
+
     // attach select event handler via bind()
     $("#tabStrip").data("kendoTabStrip").bind("select", onSelect);
-    
+
     // detach select event handler via unbind()
     $("#tabStrip").data("kendoTabStrip").unbind("select", onSelect);
 

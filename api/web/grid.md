@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Grid
 
+Represents the Kendo UI Grid widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### altRowTemplate `Function`

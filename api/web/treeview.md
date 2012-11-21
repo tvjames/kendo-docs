@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.TreeView
 
+Represents the Kendo UI TreeView. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`
@@ -282,7 +284,7 @@ Returns the model dataItem that corresponds to a TreeView node
 #### Example
 
     var treeview = $("#treeview").data("kendoTreeView");
-    
+
     var dataItem = treeview.dataItem(".k-item:first");
 
 See also: [getting the node data in the select event handler](/getting-started/web/treeview/overview#getting-the-node-data-in-the-select-event-handler)

@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.PanelBar
 
+Represents the Kendo UI PanelBar widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object|Boolean`

@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Window
 
+Represents the Kendo UI Window. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### actions `Array`*(default: ["Close"])*

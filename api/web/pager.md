@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Pager
 
+Represents the Kendo UI Pager widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### autoBind `Boolean`*(default: true)*

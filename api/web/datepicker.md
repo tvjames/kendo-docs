@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.DatePicker
 
+Represents the Kendo UI DatePicker widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`

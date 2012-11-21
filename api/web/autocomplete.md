@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.AutoComplete
 
+Represents the Kendo UI AutoComplete widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`

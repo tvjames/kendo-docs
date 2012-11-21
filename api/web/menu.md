@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.Menu
 
+Represents the Kendo UI Menu widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`

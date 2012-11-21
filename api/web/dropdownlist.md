@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.DropDownList
 
+Represents the Kendo UI DropDownList widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`

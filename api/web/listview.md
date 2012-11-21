@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.ListView
 
+Represents the Kendo UI ListView widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### autoBind `Boolean`*(default: true)*
@@ -179,7 +181,7 @@ Prepares the **ListView** for safe removal from DOM. Detaches all event handlers
 #### Example
 
     var listView = $("#listView").data("kendoListView");
-    
+
     // detach events
     listView.destroy();
 

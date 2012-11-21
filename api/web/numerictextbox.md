@@ -7,6 +7,7 @@ publish: true
 
 # kendo.ui.NumericTextBox
 
+Represents the Kendo UI NumericTextBox widget. Inherits from [Widget](/api/framework/widget).
 ## Configuration
 
 ### culture `String`*(default: en-US)*
@@ -175,7 +176,7 @@ Prepares the **NumericTextBox** for safe removal from DOM. Detaches all event ha
 #### Example
 
     var textbox = $("#textbox").data("kendoNumericTextBox");
-    
+
     // detach events
     textbox.destroy();
 

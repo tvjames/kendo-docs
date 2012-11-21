@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.TimePicker
 
+Represents the Kendo UI TimePicker. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`

@@ -7,6 +7,8 @@ publish: true
 
 # kendo.ui.ComboBox
 
+Represents the Kendo UI ComboBox widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`
