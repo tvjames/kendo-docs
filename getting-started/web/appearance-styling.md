@@ -72,3 +72,13 @@ If you want to override the styling of a given widget, you can use a CSS selecto
     }
 
 When you do, make sure to specify override rules after the inclusion of the respective theme CSS files.
+
+## Browser-specific CSS
+
+While most of the CSS code is cross-browser compatible, some layouts require different styles for different browsers. Kendo UI targets specific browsers by adding browser-specific classes to the document root element instead of relying on CSS parsing hacks. You can take advantage of these classes in the following manner:
+
+    .k-ie { /* styles to be applied to all versions of Internet Explorer */ }
+    .k-ie7 { /* styles to be applied to IE7 only */ }
+    .k-ff { /* styles to be applied to all versions of Firefox */ }
+
+The syntax of the generated classes is `k-[browser] k-[browser][majorVersion]`.
