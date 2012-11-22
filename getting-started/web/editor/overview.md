@@ -62,3 +62,14 @@ The Editor functionality can be extended through custom tools, defined in the `t
 
 The custom buttons get a **k-toolName** CSS class to allow styling. (where `toolName` is the name specified in the custom tool configuration)
 
+## Sizing
+
+Until version **2012.3.1114 (Q3 2012)** the Editor assumed the pixel offset width of the `textarea` from which it was created. From this moment on, the widget behaves in the following way:
+
+* If explicit width or height is set to the `textarea` via inline style, the Editor will apply the same
+* Otherwise, the Editor will be 100% wide and will apply its default height of 250px
+
+If the `textarea` has width and height applied via external CSS styles, a similar approach should be used for the Editor, e.g. by using its `k-editor` CSS class.
+
+Textarea `cols` and `rows` attributes are required and they also can incluence the dimensions of a `textarea` element, however, these attributes are not applied in a consistent manner by browsers,
+so the Editor ignores them when determining its size.
