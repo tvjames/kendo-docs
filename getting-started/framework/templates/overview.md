@@ -49,7 +49,7 @@ Now, when the template is consumed, assuming there are HTML characters in the da
 		template(data); //Pass data to compiled template
 		 
 		//Resulting encoded HTML Output:
-		//<div id="box"><b>Todd</b></div>
+		//<div id="box">&lt;b&gt;Todd&lt;/b&gt;</div>
 
 > HTML encoding is useful when you want to avoid rendering HTML tags in your templates. It will escape the HTML tags in your data and render the tags as a string. You should use HTML encoding when working with data from unknown sources (such as user submitted values) in case users have included HTML markup in the content that could break the layout of your page.
 
