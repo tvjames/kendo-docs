@@ -1270,7 +1270,7 @@ Fires when the grid selection has changed.
 #### Example
 
      $("#grid").kendoGrid({
-         change: function(e) {
+         change: function() {
              // handle event
          }
      });
@@ -1280,8 +1280,49 @@ Fires when the grid selection has changed.
      // get a reference to the grid
      var grid = $("#grid").data("kendoGrid");
      // bind to the change event
-     grid.bind("change", function(e) {
+     grid.bind("change", function() {
          // handle event
+     });
+
+#### Example - getting the selected data item(s) when using row selection
+
+     $("#grid").kendoGrid({
+         selectable: "multiple",
+         change: function() {
+            var selectedRows = this.select();
+
+            var selectedDataItems = [];
+
+            for (var i = 0; i < selectedRows.length; i++) {
+                var dataItem = this.dataItem(selectedRows[i]);
+
+                selectedDataItems.push(dataItem);
+            }
+
+            // selectedDataItems now contains all selected data records
+         }
+     });
+
+#### Example - getting the selected data item(s) when using cell selection
+
+     $("#grid").kendoGrid({
+         selectable: "multiple cell",
+         change: function() {
+            var selectedCells = this.select();
+
+            var selectedDataItems = [];
+
+            for (var i = 0; i < selectedCells.length; i++) {
+                var dataItem = this.dataItem(selectedCells[i].parentNode);
+
+                // Check if the dataItem is not already added. Uses http://api.jquery.com/jQuery.inArray
+                if ($.inArray(dataItem, selectedDataItems) < 0) {
+                    selectedDataItems.push(dataItem);
+                }
+            }
+
+            // selectedDataItems now contains all selected data records
+         }
      });
 
 ### columnResize
