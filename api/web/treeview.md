@@ -114,6 +114,17 @@ If `true` or an object, renders checkboxes within each treeview item.
         checkboxes: true
     });
 
+### checkboxes.name `String`
+
+Indicates the name of the checkbox inputs that will be posted to the server.
+
+    $("#treeview").kendoTreeView({
+        checkboxes: {
+            // renders <input type='checkbox' name='checkedItems[]' />
+            name: "checkedItems[]"
+        }
+    });
+
 ### checkboxes.checkChildren `Boolean`*(default: false)*
 
 Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked.
