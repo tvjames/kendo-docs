@@ -81,6 +81,24 @@ A custom binding is registered by extending the `kendo.data.Binder` object.
     <input data-bind="numericValue: number" />
     Input value: <span data-bind="text: number" />
 
+#### Example: custom widget binding (the widget will be updated when the view-model changes)
+
+    //the following example demonstrates how to bind the max value of a NumericTextBox widget
+    kendo.data.binders.widget.max = kendo.data.Binder.extend({
+        init: function(widget, bindings, options) {
+            //call the base constructor
+            kendo.data.Binder.fn.init.call(this, widget.element[0], bindings, options);
+        },
+        refresh: function() {
+            var that = this,
+            value = that.bindings["max"].get(); //get the value from the View-Model
+            $(that.element).data("kendoNumericTextBox").max(value); //update the widget
+        }
+    });
+
+    <!-- View source -->
+    <input data-role="numerictextbox" id="numeric" data-bind="value: value, max: max" />​
+    
 ### init
 
 This is the binding constructor. If this function is overriden the base Binder constructor should be called explicitly.
