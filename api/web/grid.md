@@ -370,6 +370,17 @@ Enable/disable sorting section in column header menu.
 
 Sets the columnMenu messages.
 
+#### Example
+
+    columnMenu: {
+        messages: {
+            sortAscending: "Sort Ascending",
+            sortDescending: "Sort Descending",
+            filter: "Filter",
+            columns: "Columns"
+        }
+    }
+
 ### columnMenu.messages.columns `String`
 
 Set the text of the columns section in column header menu.
@@ -479,6 +490,24 @@ Indicates whether item should be switched to edit mode on click.
 ### filterable.messages `Object`
 
  Sets the filter menu messages.
+
+#### Example
+
+    filterable: {
+        messages: {
+            info: "Custom header text:", // sets the text on top of the filter menu
+            filter: "CustomFilter", // sets the text for the "Filter" button
+            clear: "CustomClear", // sets the text for the "Clear" button
+            
+            // when filtering boolean numbers
+            isTrue: "custom is true", // sets the text for "isTrue" radio button
+            isFalse: "custom is false", // sets the text for "isFalse" radio button
+            
+            //changes the text of the "And" and "Or" of the filter menu
+            and: "CustomAnd",
+            or: "CustomOr"
+        }
+    }
 
 ### filterable.messages.and `String`
 

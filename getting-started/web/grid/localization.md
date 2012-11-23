@@ -94,7 +94,7 @@ More info can be found in the [columns.command](/api/web/grid#columnscommand-str
 		}
 	}
 
-More info can be found in the [filterable](/api/web/grid#filterable) section of the Grid API reference.
+More info can be found in the [filterable](/api/web/grid#filterablemessages-object) section of the Grid API reference.
 
 ## Localization of the grouping header
 
@@ -117,7 +117,7 @@ More info can be found in the [groupable.messages](/api/web/grid#groupablemessag
         }
     }
 
-More info can be found in the [columnMenu.messages](/api/web/grid#columnmenu-boolean--object) section of the Grid API reference.
+More info can be found in the [columnMenu.messages](/api/web/grid#columnmenumessages-object) section of the Grid API reference.
 
 ## Localization of the pager
 
