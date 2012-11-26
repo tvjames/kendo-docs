@@ -106,7 +106,7 @@ only few graphic editors, so **better stick with PNG24**). The image color is no
     <a data-role="button" href="#index" data-icon="custom">Home</a>
 
 In Q3 2012 due to numerous issues with WebKit mask icons, they were deprecated and Kendo UI Mobile introduced font icons. Since the font is not easy editable,
-the previous method for a mask icon can be used, but with some additional styling.
+the previous method for a mask icon can be used, but with some additional styling. Please note that the below example will restyle all font icons.
 
 ### Define custom button icon after Q3 2012
 
@@ -115,6 +115,7 @@ the previous method for a mask icon can be used, but with some additional stylin
         .km-root .km-pane .km-view .km-icon {
             background-size: 100% 100%;
             -webkit-background-clip: border-box;
+            background-color: currentcolor;
         }
 
         .km-custom {
@@ -124,3 +125,40 @@ the previous method for a mask icon can be used, but with some additional stylin
     </style>
 
     <a data-role="button" href="#index" data-icon="custom">Home</a>
+
+If you want to add only one or two custom icons, specify them with their respective classes (.km- + data-icon name):
+
+### Restyle only the added Kendo UI Mobile custom icon.
+
+    .km-root .km-pane .km-view .km-question {
+        background-size: 100% 100%;
+        -webkit-background-clip: border-box;
+        background-color: currentcolor;
+    }
+
+    .km-question {
+        -webkit-mask-box-image: url("foo.png");
+        background-color: red;
+    }
+
+When custom icons are used and their names are the same as the integrated Kendo UI Mobile icon names, make sure that the font icons are not rendered.
+
+### Hide all Kendo UI Mobile font icons.
+
+    /* Don't render all internal Kendo UI font icons
+    .km-root .km-pane .km-view .km-icon:after,
+    .km-root .km-pane .km-view .km-icon:before
+    {
+        display: none;
+    }
+
+Again if only several icons should be overridden, specify them with their classes instead:
+
+### Hide specific Kendo UI Mobile font icons.
+
+    .km-root .km-pane .km-view .km-favorites:after,
+    .km-root .km-pane .km-view .km-favorites:before
+    {
+        display: none;
+    }
+

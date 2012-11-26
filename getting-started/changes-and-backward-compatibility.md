@@ -17,15 +17,22 @@ publish: true
 * **Mobile:** the kendoMobileSwipe plugin is obsolete - replace its usage with the **touch** widget.
 
 * **Mobile:** WebKit mask icons are now deprecated and font icons are used instead. If you have custom icons, they might break after the upgrade.
-Add the following CSS rule to fix them /if you have data-icon="custom" on them, or use .km-icon for all/:
+Add the following CSS rule to fix them /if you have data-icon="custom" on them, or use .km-icon to remove all non-custom icons/:
 
         .km-root .km-pane .km-view .km-custom {
             background-size: 100% 100%;
             -webkit-background-clip: border-box;
+            background-color: currentcolor;
+        }
+
+        .km-root .km-pane .km-view .km-custom:after,
+        .km-root .km-pane .km-view .km-custom:before
+        {
+            display: none;
         }
 
 Additionally it should be noted that the mask icons used **background-color** for colorization, while the font ones use **color**
-and custom colorization **should be updated**. For example a rule like this:
+and custom colorization (but not on custom icons) **should be updated** after the upgrade. For example a rule like this:
 
         .km-ios .km-tabstrip .km-icon {
             background-color: rgb(20, 30, 40);
