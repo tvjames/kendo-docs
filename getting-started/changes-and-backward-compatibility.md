@@ -28,7 +28,7 @@ Add the following CSS rule to fix them /if you have data-icon="custom" on them, 
         .km-root .km-pane .km-view .km-custom:after,
         .km-root .km-pane .km-view .km-custom:before
         {
-            display: none;
+            visibility: hidden;
         }
 
 Additionally it should be noted that the mask icons used **background-color** for colorization, while the font ones use **color**

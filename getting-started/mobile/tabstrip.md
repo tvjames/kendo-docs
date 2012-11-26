@@ -133,7 +133,7 @@ When custom icons are used and their names are the same as the integrated Kendo 
     .km-root .km-pane .km-view .km-icon:after,
     .km-root .km-pane .km-view .km-icon:before
     {
-        display: none;
+        visibility: hidden;
     }
 
 Again if only several icons should be overridden, specify them with their classes instead:
@@ -143,6 +143,6 @@ Again if only several icons should be overridden, specify them with their classe
     .km-root .km-pane .km-view .km-favorites:after,
     .km-root .km-pane .km-view .km-favorites:before
     {
-        display: none;
+        visibility: hidden;
     }
 
