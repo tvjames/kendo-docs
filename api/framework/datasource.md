@@ -1730,7 +1730,7 @@ Fires when data is changed or read from the transport.
 
 ### error
 
-Fires when an error occurs during data read or sync. The event arguments are the same as the ones of the error event of $.ajax().
+Fires when an error occurs during data read or sync.
 
 > **Important**: If `schema.errors` is specified and the server response contains that field then the `error` event will be raised. The
 `errors` field of the event argument will contain the errors returned by the server.
@@ -1748,6 +1748,20 @@ Fires when an error occurs during data read or sync. The event arguments are the
     dataSource.bind("error", function(e) {
         // handle event
     });
+
+#### Event Data
+
+##### e.xhr `Object`
+
+The jqXHR object
+
+### e.status
+
+String describing the type of the error
+
+### e.errorThrown
+
+An optional exception object.
 
 ### sync
 
