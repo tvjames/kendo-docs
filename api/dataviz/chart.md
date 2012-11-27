@@ -3758,11 +3758,11 @@ Template variables:
 
 ### series.type="line".tooltip.visible `Boolean`*(default: false)*
 
- A value indicating if the tooltip should be displayed.
+A value indicating if the tooltip should be displayed.
 
-### series.type="line".width `String`*(default: 4)*
+### series.type="line".width `Number`*(default: 4)*
 
- The line width of the line chart.
+The line width of the line chart.
 
 ### series.type="pie" `Object`
 
