@@ -15,7 +15,7 @@ The DetailButton widget navigates to a mobile View when pressed.
 
 #### Initialize Kendo mobile DetailButton based on role data attribute
 
-    <a data-role="detail-button">Foo</a>
+    <a data-role="detailbutton">Foo</a>
 
 #### Initialize Kendo mobile DetailButton using jQuery plugin syntax
 
