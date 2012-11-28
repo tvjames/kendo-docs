@@ -15,7 +15,7 @@ To create a Kendo UI Grid, you begin with either an empty div, or an HTML table.
 First start with an empty div that has an ID.
     <div id="grid"></div>
 
-Now turn the div into a grid by selecting the div with a jQuery selector, and calling the kendoGrid() function.  iince the grid is being created off of an empty div, you must specify the column layout by passing an array of column definition objects to the columns option of the grid.
+Now turn the div into a grid by selecting the div with a jQuery selector, and calling the kendoGrid() function. Since the grid is being created off of an empty div, you must specify the column layout by passing an array of column definition objects to the columns option of the grid.
     $("#grid").kendoGrid({
         columns: [ { title: "First Name", field: "firstName" },
                    { title: "Last Name", field: "lastName"}
