@@ -482,6 +482,9 @@ Gets/Sets the text of the ComboBox.
     // get the text of the combobox.
     var text = combobox.text();
 
+    // set the text of the combobox.
+    combobox.text("text");
+
 #### Parameters
 
 ##### text `String`
