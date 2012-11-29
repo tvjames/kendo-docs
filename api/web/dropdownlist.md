@@ -594,3 +594,35 @@ Triggered when a Li element is selected.
 ##### e.item `jQuery`
 
 The selected item chosen by a user.
+
+### cascade
+
+Triggered when value of the widget is changed via API or user interaction.
+
+#### Attach cascade event handler during initialization; detach via unbind()
+
+    // event handler for cascade
+    var onCascade = function() {
+        //cascade event
+    };
+
+    // attach select event handler during initialization
+    var dropdownlist = $("#dropdownlist").kendoDropDownList({
+        cascade: onCascade
+    });
+
+    // detach cascade event handler via unbind()
+    dropdownlist.data("kendoDropDownList").unbind("cascade", onCascade);
+
+#### Attach cascade event handler via bind(); detach via unbind()
+
+    // event handler for cascade
+    var onCascade = function(e) {
+        //cascade event
+    };
+
+    // attach cascade event handler via bind()
+    $("#dropdownlist").data("kendoDropDownList").bind("cascade", onCascade);
+
+    // detach cascade event handler via unbind()
+    $("#dropdownlist").data("kendoDropDownList").unbind("cascade", onCascade);
