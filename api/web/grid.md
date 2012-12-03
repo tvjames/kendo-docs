@@ -1018,8 +1018,8 @@ Returns the index of the cell in the grid item skipping group and hierarchy cell
 
      // get a reference to the grid widget
      var grid = $("#grid").data("kendoGrid");
-     // get the index of the row
-     // TODO: add specific function call here
+     // get the index of the currently edited cell
+     grid.cellIndex(grid.tbody.find(">tr td.k-edit-cell"));
 
 #### Parameters
 
