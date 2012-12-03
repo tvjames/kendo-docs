@@ -175,10 +175,10 @@ Prepares the **NumericTextBox** for safe removal from DOM. Detaches all event ha
 
 #### Example
 
-    var textbox = $("#textbox").data("kendoNumericTextBox");
+    var numerictextbox = $("#textbox").data("kendoNumericTextBox");
 
     // detach events
-    textbox.destroy();
+    numerictextbox.destroy();
 
 ### enable
 
@@ -187,7 +187,7 @@ Enable/Disable the numerictextbox widget.
 #### Example
 
     // get a reference to the numeric textbox
-    var textbox = $("#textbox").data("kendoNumericTextBox");
+    var numerictextbox = $("#textbox").data("kendoNumericTextBox");
 
     // disables the numerictextbox
     numerictextbox.enable(false);
@@ -208,7 +208,7 @@ Focuses the numerictextbox widget.
 #### Example
 
     // get a reference to the numeric textbox
-    var textbox = $("#textbox").data("kendoNumericTextBox");
+    var numerictextbox = $("#textbox").data("kendoNumericTextBox");
 
     // focus the numerictextbox
     numerictextbox.focus();
@@ -330,9 +330,9 @@ Fires when the value is changed
 #### To set after initialization
 
     // get a reference to the numeric textbox widget
-    var numeric = $("#numeric").data("kendoNumericTextBox");
+    var numerictextbox = $("#numeric").data("kendoNumericTextBox");
     // bind to the change event
-    numeric.bind("change", function(e) {
+    numerictextbox.bind("change", function(e) {
         // handle event
     });
 
@@ -351,8 +351,8 @@ Fires when the value is changed from the spin buttons
 #### To set after initialization
 
     // get a reference to the numeric textbox widget
-    var numeric = $("#numeric").data("kendoNumericTextBox");
+    var numerictextbox = $("#numeric").data("kendoNumericTextBox");
     // bind to the spin event
-    numeric.bind("spin", function(e) {
+    numerictextbox.bind("spin", function(e) {
         // handle event
     });
