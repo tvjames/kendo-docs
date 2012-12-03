@@ -290,9 +290,32 @@ and is about to render it.
 
 #### Example
 
-    function onDataBound(e) {
-        // handle event
-    }
+     $("#listView").kendoListView({
+         dataBound: function(e) {
+             // handle event
+         }
+     });
+
+### dataBinding
+
+Fires when the grid is about to be rendered.
+
+#### Example
+
+     $("#listView").kendoListView({
+         dataBinding: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the ListView
+     var listview = $("#listView").data("kendoListView");
+     // bind to the dataBinding event
+     listview.bind("dataBinding", function(e) {
+         // handle event
+     });
 
 ### edit
 
