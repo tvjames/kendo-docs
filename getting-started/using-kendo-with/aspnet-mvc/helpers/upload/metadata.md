@@ -89,8 +89,8 @@ You can also add metadata directly on the client. This is useful when the data i
                 .Async(async => async
                     .Save("Save", "Home" })
                 )
-                .ClientEvents(c => c
-                    .OnUpload("onUpload")
+                .Events(c => c
+                    .Upload("onUpload")
                 )
             %>
     - Razor
@@ -100,8 +100,8 @@ You can also add metadata directly on the client. This is useful when the data i
                 .Async(async => async
                     .Save("Save", "Home" })
                 )
-                .ClientEvents(c => c
-                    .OnUpload("onUpload")
+                .Events(c => c
+                    .Upload("onUpload")
                 )
             )
 
@@ -156,8 +156,8 @@ The Upload requires the response to be in JSON format with Content-Type set to "
                 .Async(async => async
                     .Save("Save", "Home" })
                 )
-                .ClientEvents(c => c
-                    .OnSuccess("onSuccess")
+                .Events(c => c
+                    .Success("onSuccess")
                 )
             %>
     - Razor
@@ -167,8 +167,8 @@ The Upload requires the response to be in JSON format with Content-Type set to "
                 .Async(async => async
                     .Save("Save", "Home" })
                 )
-                .ClientEvents(c => c
-                    .OnSuccess("onSuccess")
+                .Events(c => c
+                    .Success("onSuccess")
                 )
             )
 
