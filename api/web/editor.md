@@ -159,14 +159,19 @@ Configuration for image browser dialog.
                 create: "imagebrowser/createDirectory",
                 uploadUrl: "imagebrowser/upload",
                 thumbnailUrl: "imagebrowser/thumbnail"
-                imageUrl: "/content/images/{0}"
-            }
+                imageUrl: "/content/images/{0}",
+            },
+            path: "/myInitialPath/"
          }
      });
 
-### imagebrowser.fileTypes `String`*(default: "*.png,*.gif,*.jpg,*.jpeg")*
+### imagebrowser.fileTypes `String` *(default: "*.png,*.gif,*.jpg,*.jpeg")*
 
 Defines the allowed file extensions.
+
+### imagebrowser.path `String` *(default: "/")*
+
+Defines the initial folder to display, relative to the root.
 
 ### imagebrowser.transport `Object`
 
