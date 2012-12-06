@@ -204,6 +204,17 @@ for more information.
          });
     </script>
 
+## Place TabStrip at bottom in Android
+
+By default Android Kendo UI Mobile styling switches the places of the application header and footer. If TabStrip at bottom is preferred (as in iOS and BlackBerry) this behavior can be switched off with a simple CSS rule:
+
+### Switch places of header and footer
+
+    .km-root .km-android .km-view {
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+    }
+
 ## Forcing Platform Styles
 
 The **Application** provides a way to force a specific platform look on your application upon init by
