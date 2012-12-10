@@ -259,6 +259,12 @@ The touch event object (available in the event handler event object) contains in
         }
     </script>
 
+### Properties
+
+### target `jQuery`
+
+The element from which the touch originated.
+
 ## TouchAxis
 
 ### Properties
