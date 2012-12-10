@@ -33,14 +33,14 @@ Specify the action method which will create new model
 
     .DataSource(dataSource => dataSource
         .Ajax() // or .Server()
-        .Create(create => create.Action(/### action ###/ "Create", /### controller ###/ "Home"))
+        .Create(create => create.Action(/* action */ "Create", /* controller */ "Home"))
     )
 ###   Destroy
 Specify the action method which will destroy existing models.
 
     .DataSource(dataSource => dataSource
         .Ajax() // or .Server()
-        .Destroy(destroy =>  destroy.Destroy(/### action ###/ "Destroy", /### controller ###/ "Home"))
+        .Destroy(destroy =>  destroy.Destroy(/* action */ "Destroy", /* controller */ "Home"))
     )
 ###   Events
 Handle the [events](http://docs.kendoui.com/api/framework/datasource#events) of the Kendo DataSource object.
@@ -111,7 +111,7 @@ Specify the action method which will read existing models and return them as JSO
 
     .DataSource(dataSource => dataSource
         .Ajax() // or .Server()
-        .Read(read =>  read.Read(/### action ###/ "Read", /### controller ###/ "Home"))
+        .Read(read =>  read.Read(/* action */ "Read", /* controller */ "Home"))
     )
 ###   Sort
 Set the initial sort.
@@ -132,7 +132,7 @@ Specify the action method which will update existing models:
 
     .DataSource(dataSource => dataSource
         .Ajax() // or .Server()
-        .Update(update =>  update.Update(/### action ###/ "Update", /### controller ###/ "Home"))
+        .Update(update =>  update.Update(/* action */ "Update", /* controller */ "Home"))
     )
 
 ## Ajax DataSource Settings
@@ -213,7 +213,7 @@ To add grid columns use the `Columns` method:
 
            // Define a template column - it needs a templated razor delegate
            columns.Template(@<text>
-                @Html.ActionLink("Edit", "Home", new { id = p.ProductID })
+                @Html.ActionLink("Edit", "Home", new { id = item.ProductID })
            </text>);
 
            // Define a command column with a "Destroy" button
