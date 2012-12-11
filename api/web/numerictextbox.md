@@ -8,6 +8,7 @@ publish: true
 # kendo.ui.NumericTextBox
 
 Represents the Kendo UI NumericTextBox widget. Inherits from [Widget](/api/framework/widget).
+
 ## Configuration
 
 ### culture `String`*(default: en-US)*
