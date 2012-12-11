@@ -3901,6 +3901,22 @@ The bubble chart can be bound to an array of arrays with three numbers (X, Y and
      }]
      // ...
 
+### series.type="bubble".highlight `Object`
+
+Configures the appearance of highlighted points.
+
+### series.type="bubble".highlight.border `Object`
+
+The border of highlighted points. The color is computed automatically from the base point color.
+
+### series.type="bubble".highlight.border.width `Number`
+
+The width of the border.
+
+### series.type="bubble".highlight.opacity `Number`
+
+The opacity of the highlighted points.
+
 ### series.type="bubble".labels `Object`
 
 Configures the series data labels.
@@ -5496,6 +5512,34 @@ A boolean value indicating whether to show the sector in the legend.
 
 A boolean value indicating whether to show the sector in the legend.
 
+### series.type="pie".highlight `Object`
+
+Configures the appearance of highlighted segments.
+
+### series.type="pie".highlight.opacity `Number`
+
+The segment opacity.
+
+### series.type="pie".highlight.color `String`
+
+The segment color.
+
+### series.type="pie".highlight.border `Object`
+
+Border options for highlighted segments.
+
+### series.type="pie".highlight.border.width `Number`
+
+The border width.
+
+### series.type="pie".highlight.border.opacity `Number`
+
+The border opacity.
+
+### series.type="pie".highlight.border.color `String`
+
+The border color.
+
 ### series.type="scatter" `Object`
 
 Available options for scatter series:
@@ -6532,19 +6576,47 @@ A value indicating if the tooltip should be displayed.
 
 ### series.type="candlestick".line `Object`
 
-The line of the candlestick chart.
+The candlestick line options.
 
 ### series.type="candlestick".line.color `String`
 
-The line color of the candlestick chart.
+The line color of the candlestick.
 
 ### series.type="candlestick".line.opacity `Number`*(default: 1)*
 
-The line opacity of the candlestick chart.
+The line opacity of the candlestick.
 
 ### series.type="candlestick".line.width `String`*(default: 2)*
 
-The line width of the candlestick chart.
+The line width of the candlestick.
+
+### series.type="candlestick".highlight `Object`
+
+Configures the appearance of highlighted points.
+
+### series.type="candlestick".highlight.border `Object`
+
+The border of highlighted points. The color is computed automatically from the base point color.
+
+### series.type="candlestick".highlight.border.width `Number`
+
+The width of the border.
+
+### series.type="candlestick".highlight.border.opacity `Number`
+
+The opacity of the border.
+
+### series.type="candlestick".highlight.line `Object`
+
+Line options for highlighted points. The color is computed automatically from the base point color.
+
+### series.type="candlestick".highlight.line.width `Number`
+
+The width of the line.
+
+### series.type="candlestick".highlight.opacity `Number`
+
+The opacity of the highlighted points.
 
 ### series.type="ohlc" `Object`
 
@@ -6808,6 +6880,22 @@ The line opacity of the ohlc chart.
 ### series.type="ohlc".line.width `String`*(default: 2)*
 
 The line width of the ohlc chart.
+
+### series.type="ohlc".highlight `Object`
+
+Configures the appearance of highlighted points.
+
+### series.type="ohlc".highlight.line `Object`
+
+Line options for highlighted points. The color is computed automatically from the base point color.
+
+### series.type="ohlc".highlight.line.width `Number`
+
+The width of the line.
+
+### series.type="ohlc".highlight.line.opacity `Number`
+
+The opacity of the line.
 
 ### seriesColors `Array`
 
