@@ -6610,6 +6610,10 @@ The border of highlighted points. The color is computed automatically from the b
 
 The width of the border.
 
+### series.type="candlestick".highlight.border.color `String`
+
+The border color.
+
 ### series.type="candlestick".highlight.border.opacity `Number`
 
 The opacity of the border.
@@ -6621,6 +6625,10 @@ Line options for highlighted points. The color is computed automatically from th
 ### series.type="candlestick".highlight.line.width `Number`
 
 The width of the line.
+
+### series.type="candlestick".highlight.line.color `String`
+
+The line color.
 
 ### series.type="candlestick".highlight.opacity `Number`
 
