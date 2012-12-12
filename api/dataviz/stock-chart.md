@@ -6909,6 +6909,10 @@ Line options for highlighted points. The color is computed automatically from th
 
 The width of the line.
 
+### series.type="ohlc".highlight.line.color `String`
+
+The line color.
+
 ### series.type="ohlc".highlight.line.opacity `Number`
 
 The opacity of the line.
