@@ -3913,6 +3913,14 @@ The border of highlighted points. The color is computed automatically from the b
 
 The width of the border.
 
+### series.type="bubble".highlight.border.color `String`
+
+The border color.
+
+### series.type="bubble".highlight.border.opacity `Number`
+
+The border opacity.
+
 ### series.type="bubble".highlight.opacity `Number`
 
 The opacity of the highlighted points.
