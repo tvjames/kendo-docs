@@ -3843,8 +3843,6 @@ Available options for bubble series:
 
 Array of data points.
 
-### series.type="bubble".aField `String`
-
 ### series.type="bubble".groupNameTemplate `String`
 
 Name template for auto-generated
