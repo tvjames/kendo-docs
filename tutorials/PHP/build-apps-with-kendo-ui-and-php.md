@@ -47,7 +47,7 @@ put your publicly accessible files in a “public” folder and restrict access 
 ones that are server only.  For the sake of simplicity, all the files are
 public.
 
-[![1][8]][9]
+[![1][8]]
 
 
 Let’s look a bit at the structure.
@@ -437,7 +437,7 @@ This has been an example of how to get rolling with PHP and [Kendo UI][32].
 
    [8]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-1_thumb_1.png (1)
 
-   [9]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-1_4_1.png
+   [9]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-1_thumb_1.png (1)
 
    [10]: http://www.kendoui.com/videos.aspx
 
@@ -447,23 +447,23 @@ This has been an example of how to get rolling with PHP and [Kendo UI][32].
 
    [13]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-2_thumb_2.png (2)
 
-   [14]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-2_6.png
+   [14]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-2_thumb_2.png (2)
 
    [15]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-3_thumb_2.png (3)
 
-   [16]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-3_6.png
+   [16]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-3_thumb_2.png (3)
 
    [17]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-4_thumb.png (4)
 
-   [18]: hhttps://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-4_2.png
+   [18]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-4_thumb.png (4)
 
    [19]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-5_thumb_1.png (5)
 
-   [20]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-5_4.png
+   [20]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-5_thumb_1.png (5)
 
    [21]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-6_thumb.png (6)
 
-   [22]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-6_2.png
+   [22]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-6_thumb.png (6)
 
    [23]: http://demos.kendoui.com/web/grid/detailtemplate.html
 
@@ -475,11 +475,11 @@ This has been an example of how to get rolling with PHP and [Kendo UI][32].
 
    [27]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-7_thumb_2.png (7)
 
-   [28]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-7_6.png
+   [28]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-7_thumb_2.png (7)
 
    [29]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-8_thumb_1.png (8)
 
-   [30]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-8_4.png
+   [30]: https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/ff819b019713_9A19-8_thumb_1.png (8)
 
    [31]: /Blogs_Libraries/Source_Code/KendoUI.sflb.ashx
 
