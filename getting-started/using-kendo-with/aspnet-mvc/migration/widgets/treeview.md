@@ -167,7 +167,7 @@ The checkbox support is limited to the functionality shown in the [templates dem
 
 ##### ajaxRequest
 
-Removed. Use **dataItem.dataSource.read()** (after obtaining the dataItem through **treeview.dataItem(node)**)
+Removed. Use **dataItem.children.read()** (after obtaining the dataItem through **treeview.dataItem(node)**)
 
 ##### dataBind
 
