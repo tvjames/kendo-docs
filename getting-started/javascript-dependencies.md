@@ -47,6 +47,14 @@ Kendo UI requires **jQuery 1.8.2** or later. There are occasions in which a new 
 In such cases we recommend using the previous jQuery version until the next official Kendo UI release that resolves the problems. We normally do not change the jQuery version that is shipped with Kendo UI
 for service packs. We can do this for major releases.
 
+## Script tag placement
+
+There is a general recommendation to place `script` tags before the closing `body` tag, so that the scripts are loaded and executed after the HTML markup. The Kendo UI widget
+initialization statements are executed in the document.ready event via a jQuery handler. This means that the jQuery must be registered before any Kendo UI initialization statements. When using
+the pure client-side-only Kendo UI widgets one can control the initialization statements' placement, so the jQuery script file can be registered at the bottom of the page. The Kendo UI widgets'
+server wrappers are self-initialized, which means that each initialization script is rendered right after the widget's HTML markup. In this case the Kendo UI scripts can still be registered
+at the end of the page, but the jQuery script must be registered in the `body` before the first Kendo UI widget on the page, or in the page `head`.
+
 ## Individual scripts
 
 If more granular control is required, the following script files, either minified or not,
