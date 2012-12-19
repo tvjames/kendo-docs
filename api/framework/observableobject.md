@@ -20,7 +20,7 @@ To create a new `ObservableObject` use its constructor or the `kendo.observable`
 
     var observable = kendo.observable({ name: "John Doe" });
 > **Important:** Complex fields are automatically wrapped in `ObservableObject`. Array fields are wrapped in `ObservableArray` objects. The `change` event of the child objects will bubble
-to the parent `ObservableObject`.
+to the parent `ObservableObject`. Fields, which name are prefixed with an underscore will not be wrapped.
 
 ### Creating ObservableObject with complex and array fields
 
