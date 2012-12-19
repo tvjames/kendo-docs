@@ -35,9 +35,9 @@ The pane configuration options.
 
 The popup configuration options.
 
-### popup.direction `Number | String`*(default: down)*
+### popup.direction String`*(default: down)*
 
- The direction to which the popup will expand, relative to the target that opened it.
+The direction to which the popup will expand, relative to the target that opened it.
 Supported directions are up, right, down, and left.
 
 ### popup.height `Number | String`*(default: 320)*
