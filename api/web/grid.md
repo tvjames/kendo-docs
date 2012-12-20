@@ -1231,6 +1231,22 @@ Removes the specified row from the grid. The removeRow method triggers remove ev
 
 Row to be removed.
 
+### reorderColumn
+
+Changes the position of the specified column.
+
+#### Example
+    //get reference to the grid widget
+    var grid = $("#grid").data("kendoGrid");
+    //move first column (index is zero based)
+    grid.reorderColumn(2, grid.columns[0]);
+
+#### Parameters
+
+##### destIndex `number`
+
+##### column `grid column`
+
 ### saveChanges
 
 Calls DataSource sync to submit any pending changes if state is valid. The saveChanges method triggers saveChanges event.
