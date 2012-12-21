@@ -9,31 +9,31 @@ publish: true
 Defining min and max dates:
 
 #### Old
-    
-    Html.Telerik().Calendar().Name("Calendar").MinDate(DateTime.Now)
-    Html.Telerik().Calendar().Name("Calendar").MaxDate(DateTime.Now)
+
+    Html.Telerik().DatePicker().Name("DatePicker").MinDate(DateTime.Now)
+    Html.Telerik().DatePicker().Name("DatePicker").MaxDate(DateTime.Now)
 
 #### New
 
-    Html.Kendo().Calendar().Name("Calendar").Min(DateTime.Now)
-    Html.Kendo().Calendar().Name("Calendar").Max(DateTime.Now)
+    Html.Kendo().DatePicker().Name("DatePicker").Min(DateTime.Now)
+    Html.Kendo().DatePicker().Name("DatePicker").Max(DateTime.Now)
 
 Footer:
 
 #### Old
 
-    Html.Telerik().Calendar().Name("Calendar").TodayButton(“d”)
+    Html.Telerik().DatePicker().Name("DatePicker").TodayButton(“d”)
 
 #### New
-    
-    Html.Kendo().Calendar().Name("Calendar").Footer(“#= kendo.toString(data, ‘MM/dd/yyyy’)”)
+
+    Html.Kendo().DatePicker().Name("DatePicker").Footer(“#= kendo.toString(data, ‘MM/dd/yyyy’)”)
 
 howButton and ButtonTitle:
 
 #### Old
-    
-    Html.Telerik().DatePicker().Name("Calendar").ButtonTitle(“choose date”)
-    Html.Telerik().DatePicker().Name("Calendar").ShowButton(false)
+
+    Html.Telerik().DatePicker().Name("DatePicker").ButtonTitle(“choose date”)
+    Html.Telerik().DatePicker().Name("DatePicker").ShowButton(false)
 
 #### New
 
@@ -43,11 +43,21 @@ howButton and ButtonTitle:
 
 #### Old
 
-    Html.Telerik().DatePicker ().Name("Calendar").OpenOnFocus(true)
+    Html.Telerik().DatePicker().Name("DatePicker").OpenOnFocus(true)
 
 #### New
-    
+
     Not Supported
+
+**Set DateTime.MinValue and show `nothing`**:
+
+#### Old
+
+    Html.Telerik().DatePicker().Name("DatePicker").Value(DateTime.MinValue)
+
+#### New
+
+    Html.Kendo().DatePicker().Name("DatePicker").Value(value == DateTime.MinValue ? null : value)
 
 # Client-Side API
 
@@ -65,6 +75,6 @@ All widgets no longer have the OnLoad event. Please use **$(document).ready()** 
     datePicker.disable();
 
 #### New
-    
+
     var datePicker = $("#datepicker").data("kendoDatePicker");
     datePicker.enable(false);
