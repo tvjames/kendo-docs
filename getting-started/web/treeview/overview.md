@@ -89,6 +89,26 @@ preferably in the $(document).ready() event handler.
 A complete reference on how to bind the TreeView to different service end-points can be found
 on the [HierarchicalDataSource API help](/api/framework/hierarchicaldatasource).
 
+### Enabling drag-and-drop for TreeView nodes
+
+    $("#treeView").kendoTreeView({
+        dragAndDrop: true
+    });
+
+When drag-and-drop is enabled, the nodes of a TreeView can be dragged and dropped between all
+levels, with useful tooltips helping indicate where the node will be dropped.
+
+
+## Accessing an Existing TreeView
+
+You can reference an existing **TreeView** instance via
+[jQuery.data()](http://api.jquery.com/jQuery.data/). Once a reference has been established, you can
+use the API to control its behavior.
+
+### Accessing an existing TreeView instance
+
+    var treeView = $("#treeView").data("kendoTreeView");
+
 ## Item definition
 
 When binding through the dataSource configuration option, each item can have the following properties:
@@ -130,6 +150,8 @@ respectively.
 You can add arbitrary fields when binding through a dataSource. These are stored in the HierarchicalDataSource,
 and can be easily accessed through the treeview [dataItem method](/api/web/treeview#dataitem):
 
+## Common operations
+
 ### Getting the node data in the select event handler
 
     function onSelect(e) {
@@ -165,27 +187,25 @@ you can use its [loaded flag](http://docs.kendoui.com/api/framework/node#loaded)
         expand: onExpand
     });
 
-A number of TreeView behaviors can be easily controlled by simple configuration properties,
-such as animation behaviors and drag-and-drop behaviors.
+The Node.loaded method above sets the loaded flag of the node, indicating that it needs to be refreshed.
 
-### Enabling drag-and-drop for TreeView nodes
+### Gathering the checked nodes from a treeview
 
-    $("#treeView").kendoTreeView({
-        dragAndDrop: true
-    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    var checkedNodes = [];
 
-When drag-and-drop is enabled, the nodes of a TreeView can be dragged and dropped between all
-levels, with useful tooltips helping indicate where the node will be dropped.
+    function gatherStates(nodes) {
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].checked) {
+                checkedNodes.push(nodes[i].id);
+            }
 
+            if (nodes[i].hasChildren) {
+               gatherStates(nodes[i].children.view());
+            }
+        }
+    }
 
-## Accessing an Existing TreeView
+    gatherStates(treeview.dataSource.view());
 
-
-You can reference an existing **TreeView** instance via
-[jQuery.data()](http://api.jquery.com/jQuery.data/). Once a reference has been established, you can
-use the API to control its behavior.
-
-### Accessing an existing TreeView instance
-
-    var treeView = $("#treeView").data("kendoTreeView");
-
+The same approach can be used for gathering of expanded nodes.
