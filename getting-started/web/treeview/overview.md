@@ -130,8 +130,12 @@ When binding through the dataSource configuration option, each item can have the
         encoded: false,
 
         // specifies whether the item is initially expanded
-        // (applicable when the item has child nodes
+        // (applicable when the item has child nodes)
         expanded: true,
+
+        // specifies whether the item checkbox is initially checked
+        // (applicable for items with checkboxes using the default checkbox template)
+        checked: true,
 
         // specifies whether the item is initially selected
         selected: true,
