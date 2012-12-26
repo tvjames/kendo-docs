@@ -121,6 +121,7 @@ Make sure the JavaScript file for that culture is included. Check the previous i
 ## A column template is not displayed
 
 This will happen if the server template is set but the grid is configured for ajax binding. Set the [ClientTemplate](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/configuration#clienttemplate) as well.
+This will also happen if only the client template is set but the grid is configured for server binding. Set the [Template](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/configuration#template) as well.
 
 ## The grid cannot bind to WebAPI controller
 
