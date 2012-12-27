@@ -44,7 +44,7 @@ The appearance of a component may also depend on its state, which is also tied t
 
 ## Customizing Appearance
 
-Usually, a CSS property defined by a primitive class is used by all widgets that use that  class, unless overridden by a higher specificity selector. For example:
+Usually, a CSS property defined by a primitive class is used by all widgets that use that class, unless overridden by a higher specificity selector. For example:
 
     .k-link
     {
@@ -64,15 +64,30 @@ because the latter uses a descendant selector and thus, is more specific (20 ver
 
 For more information about CSS specificity, check out [this excellent article in Smashing Magazine](http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/).
 
-If you want to override the styling of a given widget, you can use a CSS selector with the widget's own CSS class:
+If you want to override the styling for a given **widget type**, you can use a CSS selector with the widget's own CSS class:
 
     .k-menu .k-link
     {
         color: red;
     }
 
-When you do, make sure to specify override rules after the inclusion of the respective theme CSS files.
+When you do this, make sure to register the custom rules after the respective theme CSS files. Otherwise you will need to use higher specificity and longer complex CSS selectors.
 
+In order to customize the appearance of a **particular widget instance**, you will need a custom CSS class or ID, and include it in the CSS selectors. For example the following Menu...
+
+	<ul id="menu1" class="k-widget k-menu">
+		<!-- menu items here -->
+	</ul>
+	
+can be styled by using its ID:
+
+	#menu1 .k-link
+	{
+		color: red;
+	}
+
+The above CSS rule will not affect any other widget instances, which are outside `#menu1`.
+	
 ## Browser-specific CSS
 
 While most of the CSS code is cross-browser compatible, some layouts require different styles for different browsers. Kendo UI targets specific browsers by adding browser-specific classes to the document root element instead of relying on CSS parsing hacks. You can take advantage of these classes in the following manner:
