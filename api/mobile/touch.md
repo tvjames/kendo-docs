@@ -42,7 +42,7 @@ If set to `true`, the document element will be used a s surface for the user dra
 If set to true, the widget will capture and trigger the `gesturestart`, `gesturechange`, and `gestureend` events when the user touches the element with two fingers.
 
 #### Example
-    <div data-role="touch" data-gesturestart="onGesturestart">
+    <div data-role="touch" data-multi-touch="true" data-gesturestart="onGesturestart">
         Touch me with two fingers
     </div>
 
