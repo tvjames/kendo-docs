@@ -372,11 +372,13 @@ occurring.
 
 #### Event Data
 
+##### e `Object`
+
+A custom event object. The event can be cancelled just like when using a standard jQuery event object via `e.preventDefault();`
+
 ##### e.files `Array`
 
 An array of the selected files.
-
-
 
 *   name - the name of a selected file, including its extension
 *   extension - the file extension of a selected file, including the leading dot (i.e. ".jpg")
