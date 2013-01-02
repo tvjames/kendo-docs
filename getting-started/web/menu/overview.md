@@ -17,13 +17,19 @@ initialized from HTML, or the API can be used to add and remove items.
 ### Create a HTML hierarchical list of items
 
     <ul id="menu">
-        <li>Item 1
+        <li>Normal Item
             <ul>
-                <li>Item 1.1</li>
-                <li>Item 1.2</li>
+                <li><span class="k-sprite icon-class"></span>Item with a Sprite</li>
+                <li><img src="Icons/contacts.gif" />Item with an Icon</li>
             </ul>
         </li>
-        <li>Item 2</li>
+        <li><a href="http://www.google.com">Navigation Item</a></li>
+        <li class="k-state-active">Active Item</li>
+        <li>Template Item
+            <div class="k-group k-content">
+                Test button - <a class="k-button">Button</a>
+            </div>
+        </li>
     </ul>
 
 Initialization of a **Menu** should occur after the DOM is fully loaded. It is recommended that
