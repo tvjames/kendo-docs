@@ -11,6 +11,18 @@ Represents the Kendo UI Mobile NavBar widget. Inherits from [kendo.mobile.ui.Wid
 
 ## Methods
 
+### destroy
+Prepares the **NavBar** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the NavBar element from DOM.
+
+#### Example
+
+    var navBar = $("#navBar").data("kendoMobileNavBar");
+
+    // detach events
+    navBar.destroy();
+
 ### title
 
 Update the title element text. The title element is specified by setting the `role` data attribute to `view-title`.

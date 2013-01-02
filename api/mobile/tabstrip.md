@@ -25,6 +25,18 @@ Get the currently selected tab DOM element.
 
 `jQuery` the currently selected tab DOM element.
 
+### destroy
+Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the TabStrip element from DOM.
+
+#### Example
+
+    var tabStrip = $("#tabStrip").data("kendoMobileTabStrip");
+
+    // detach events
+    tabStrip.destroy();
+
 ### switchTo
 
 Set the mobile TabStrip active tab to the tab with the specified url.

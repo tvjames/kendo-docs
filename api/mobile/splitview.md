@@ -13,6 +13,20 @@ publish: true
 
  Defines the SplitView style - horizontal or vertical.
 
+## Methods
+
+### destroy
+Prepares the **SplitView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the SplitView element from DOM.
+
+#### Example
+
+    var splitView = $("#splitView").data("kendoMobileSplitView");
+
+    // detach events
+    splitView.destroy();
+
 ## Events
 
 ### init

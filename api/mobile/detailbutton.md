@@ -21,6 +21,20 @@ The DetailButton widget navigates to a mobile View when pressed.
 
     var button = $("#button").kendoMobileDetailButton();
 
+## Methods
+
+### destroy
+Prepares the **DetailButton** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the DetailButton element from DOM.
+
+#### Example
+
+    var detailButton = $("#detailButton").data("kendoMobileDetailButton");
+
+    // detach events
+    detailButton.destroy();
+
 ## Events
 
 ### click

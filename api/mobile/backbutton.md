@@ -21,6 +21,20 @@ The mobile BackButton widget navigates to the previously visited mobile View whe
 
     var button = $("#button").kendoMobileBackButton();
 
+## Methods
+
+### destroy
+Prepares the **BackButton** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the BackButton element from DOM.
+
+#### Example
+
+    var backButton = $("#backButton").data("kendoMobileBackButton");
+
+    // detach events
+    backButton.destroy();
+
 ## Events
 
 ### click

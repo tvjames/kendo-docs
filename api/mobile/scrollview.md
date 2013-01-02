@@ -47,6 +47,18 @@ Update the scrollview HTML content
 
 the new scrollView content.
 
+### destroy
+Prepares the **ScrollView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ScrollView element from DOM.
+
+#### Example
+
+    var scrollView = $("#scrollView").data("kendoMobileScrollView");
+
+    // detach events
+    scrollView.destroy();
+
 ### refresh
 
 Redraw the mobile ScrollView pager. Called automatically on device orientation change event.

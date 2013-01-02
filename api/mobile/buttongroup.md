@@ -21,6 +21,18 @@ Defines the initially selected Button.
 
 Get the currently selected Button.
 
+### destroy
+Prepares the **ButtonGroup** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ButtonGroup element from DOM.
+
+#### Example
+
+    var buttonGroup = $("#buttonGroup").data("kendoMobileButtonGroup");
+
+    // detach events
+    buttonGroup.destroy();
+
 #### Returns
 
 `jQuery` the currently selected Button.

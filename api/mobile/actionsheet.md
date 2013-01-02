@@ -37,6 +37,18 @@ The popup configuration options (tablet only).
 
 Close the ActionSheet.
 
+### destroy
+Prepares the **ActionSheet** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ActionSheet element from DOM.
+
+#### Example
+
+    var actionSheet = $("#actionSheet").data("kendoMobileActionSheet");
+
+    // detach events
+    actionSheet.destroy();
+
 ### open
 
 Open the ActionSheet.

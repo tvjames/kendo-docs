@@ -135,6 +135,18 @@ The type of the control. Can be either `flat` (default) or group. Determined aut
 
 ## Methods
 
+### destroy
+Prepares the **ListView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ListView element from DOM.
+
+#### Example
+
+    var listView = $("#listView").data("kendoMobileListView");
+
+    // detach events
+    listView.destroy();
+
 ### items
 
 Get the listview DOM element items

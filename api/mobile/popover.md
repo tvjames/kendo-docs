@@ -66,6 +66,18 @@ Close the popover.
      }
     </script>
 
+### destroy
+Prepares the **PopOver** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the PopOver element from DOM.
+
+#### Example
+
+    var popOver = $("#popOver").data("kendoMobilePopOver");
+
+    // detach events
+    popOver.destroy();
+
 ### open
 
 Open the PopOver.

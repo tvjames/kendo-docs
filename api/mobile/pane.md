@@ -27,6 +27,18 @@ publish: true
 
 ## Methods
 
+### destroy
+Prepares the **Pane** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Pane element from DOM.
+
+#### Example
+
+    var pane = $("#pane").data("kendoMobilePane");
+
+    // detach events
+    pane.destroy();
+
 ### hideLoading
 
 Hide the loading animation.

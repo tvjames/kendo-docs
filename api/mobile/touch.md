@@ -91,6 +91,20 @@ The timeout in milliseconds before the `hold` event is fired.
 
 The maximum period (in milliseconds) between two consecutive taps which will trigger the doubletap event.
 
+## Methods
+
+### destroy
+Prepares the **Touch** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Touch element from DOM.
+
+#### Example
+
+    var touch = $("#touch").data("kendoTouch");
+
+    // detach events
+    touch.destroy();
+
 ## Events
 
 ### touchstart

@@ -29,6 +29,18 @@ The width of the ModalView container in pixels. If not set, the element style is
 
 Close the ModalView
 
+### destroy
+Prepares the **ModalView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ModalView element from DOM.
+
+#### Example
+
+    var modalView = $("#modalView").data("kendoMobileModalView");
+
+    // detach events
+    modalView.destroy();
+
 ### open
 
 Open the ModalView

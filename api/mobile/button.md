@@ -19,6 +19,20 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
 
     var button = $("#button").kendoMobileButton({ icon: "stop" });
 
+## Methods
+
+### destroy
+Prepares the **Button** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Button element from DOM.
+
+#### Example
+
+    var button = $("#button").data("kendoMobileButton");
+
+    // detach events
+    button.destroy();
+
 ## Events
 
 ### click

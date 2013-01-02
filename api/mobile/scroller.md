@@ -47,6 +47,18 @@ Has effect only when the pullToRefresh option is set to true.
 
 ## Methods
 
+### destroy
+Prepares the **Scroller** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Scroller element from DOM.
+
+#### Example
+
+    var scroller = $("#scroller").data("kendoMobileScroller");
+
+    // detach events
+    scroller.destroy();
+
 ### pullHandled
 
 Indicate that the pull event is handled (i.e. data from the server has been retrieved).

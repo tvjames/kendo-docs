@@ -54,6 +54,18 @@ Whether to turn the widget on or off.
 
 `Boolean` The checked state of the widget.
 
+### destroy
+Prepares the **Switch** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Switch element from DOM.
+
+#### Example
+
+    var switch = $("#switch").data("kendoMobileSwitch");
+
+    // detach events
+    switch.destroy();
+
 ### toggle
 
 Toggle the checked state of the widget.
