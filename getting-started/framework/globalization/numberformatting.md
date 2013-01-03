@@ -76,7 +76,7 @@ Here is a list of the supported format specifiers:
 
     Multiplies a number by 100 and inserts a localized percentage symbol in the result string.
 
-    **Note**: '%' symbol is interpreted as a format specifier in the format string. If you need to prevent this, you will need to precede the '%' symbol with a backslash - 'kendo.toString(12, "# \\%")' -> 12 % (en-us).
+    **Note**: '%' symbol is interpreted as a format specifier in the format string. If you need to prevent this, you will need to precede the '%' symbol with a double backslash - 'kendo.toString(12, "# \\\%")' -> 12 % (en-us).
 
 - "e" - exponential notation
 
