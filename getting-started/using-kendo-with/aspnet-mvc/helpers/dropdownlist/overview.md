@@ -75,7 +75,7 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
         {
             NorthwindDataContext northwind = new NorthwindDataContext();
 
-            return Json(northwind.Products);
+            return Json(northwind.Products, JsonRequestBehavior.AllowGet);
         }
 4.  Add a ajax bound dropdownlist:
     - WebForms

@@ -75,7 +75,7 @@ Here is how to configure the Kendo ComboBox for ajax binding to the Northwind Pr
         {
             NorthwindDataContext northwind = new NorthwindDataContext();
 
-            return Json(northwind.Products);
+            return Json(northwind.Products, JsonRequestBehavior.AllowGet);
         }
 4.  Add an ajax bound combobox:
     - WebForms
