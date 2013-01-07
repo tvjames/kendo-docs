@@ -1370,6 +1370,41 @@ Fires when the grid selection has changed.
          }
      });
 
+### columnReorder
+
+Fires when the user changes the order of a column.
+
+#### Example
+
+     $("#grid").kendoGrid({
+         columnReorder: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var grid = $("#grid").data("kendoGrid");
+     // bind to the columnReorder event
+     grid.bind("columnReorder", function(e) {
+         // handle event
+     });
+
+#### Event Data
+
+##### e.column `Object`
+
+The column object with its properties, e.g. `encoded`, `field` and `title`.
+
+##### e.newIndex `Number`
+
+The new column index.
+
+##### e.oldIndex `Number`
+
+The previous column index.
+
 ### columnResize
 
 Fires when the user resizes a column.
