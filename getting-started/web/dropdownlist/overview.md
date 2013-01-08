@@ -126,6 +126,18 @@ a detailed description of the capabilities and syntax of the Kendo UI templates,
         });
     </script>
 
+## Customizing the width of the drop-down list
+
+
+Width of widget's drop-down list can be changed via jQuery width method.
+
+### Example
+
+    var dropdownlist = $("#dropdown").data("kendoDropDownList");
+
+    // set width of the drop-down list
+    dropdownlist.list.width(400);
+
 ## Accessing an Existing DropDownList
 
 

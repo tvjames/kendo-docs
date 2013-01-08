@@ -122,6 +122,18 @@ suggestions
      })
     });
 
+## Customizing the width of the drop-down list
+
+
+Width of AutoComplete's drop-down list can be changed via jQuery width method.
+
+### Example
+
+    var autoComplete = $("#autoComplete").data("kendoAutoComplete");
+
+    // set width of the drop-down list
+    autoComplete.list.width(400);
+
 ## Accessing an Existing AutoComplete
 
 
