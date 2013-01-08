@@ -156,9 +156,51 @@ Provides a way to specify custom editor for this column.
 
 The field from the datasource that will be displayed in the column.
 
-### columns.filterable `Boolean`*(default: true)*
+### columns.filterable `Boolean | Object`*(default: true)*
 
- Specifies whether given column is filterable.
+Specifies whether given column is filterable.
+
+### columns.filterable.ui `String | Function`
+
+Role of the widget shown as column filter menu input element.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         dataSource: {
+             data: createRandomData(50),
+             pageSize: 10
+         },
+         columns: [
+             {
+                 field: "Event",
+                 filterable: {
+                    ui: "datetimepicker"
+                 }
+            }
+         ]
+      });
+
+Function which to be called in order to create the widget for the column filter menu input elements.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         dataSource: {
+             data: createRandomData(50),
+             pageSize: 10
+         },
+         columns: [
+             {
+                 field: "Event",
+                 filterable: {
+                    ui: function(element) {
+                        element.kendoDateTimePicker();
+                    }
+                 }
+            }
+         ]
+      });
 
 ### columns.format `String`
 
