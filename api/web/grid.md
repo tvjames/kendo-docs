@@ -1509,6 +1509,33 @@ The previous column width.
 
 The new column width.
 
+### columnShow
+
+Fires when a column is shown.
+
+#### Example
+
+     $("#grid").kendoGrid({
+         columnShow: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var grid = $("#grid").data("kendoGrid");
+     // bind to the columnReorder event
+     grid.bind("columnShow", function(e) {
+         // handle event
+     });
+
+#### Event Data
+
+##### e.column `Object`
+
+The column object with its properties, e.g. `encoded`, `field` and `title`.
+
 ### dataBound
 
 Fires when the grid has received data from the data source.
