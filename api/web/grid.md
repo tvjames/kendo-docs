@@ -1412,6 +1412,33 @@ Fires when the grid selection has changed.
          }
      });
 
+### columnHide
+
+Fires when the user hides a column.
+
+#### Example
+
+     $("#grid").kendoGrid({
+         columnHide: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var grid = $("#grid").data("kendoGrid");
+     // bind to the columnReorder event
+     grid.bind("columnHide", function(e) {
+         // handle event
+     });
+
+#### Event Data
+
+##### e.column `Object`
+
+The column object with its properties, e.g. `encoded`, `field` and `title`.
+
 ### columnReorder
 
 Fires when the user changes the order of a column.
