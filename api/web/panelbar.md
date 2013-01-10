@@ -149,7 +149,8 @@ Appends an item to the PanelBar.
         [
             {
                 text: "Item 1",
-                url: "http://www.kendoui.com/"                  // link URL if navigation is needed (optional)
+                cssClass: "myClass",                            // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
+                url: "http://www.kendoui.com/"                  // link URL if navigation is needed, optional.
             },
             {
                 text: "<b>Item 2</b>",

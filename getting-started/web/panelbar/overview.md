@@ -63,6 +63,7 @@ A **PanelBar** will preserve the content defined within an item.
         dataSource: [
             {
                 text: "Item 1",
+                cssClass: "myClass",                            // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
                 url: "http://www.kendoui.com/"                  // link URL if navigation is needed (optional)
             },
             {

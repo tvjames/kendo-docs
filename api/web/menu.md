@@ -141,12 +141,13 @@ Appends an item to a **Menu** in the specified referenceItem's sub menu.
     menu.append(
         [{
             text: "Item 1",
+            cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
             url: "http://www.kendoui.com"                // Link URL if navigation is needed, optional.
         },
         {
             text: "<b>Item 2</b>",
-            encoded: false,                                 // Allows use of HTML for item text
-            content: "text"                                 // content within an item
+            encoded: false,                              // Allows use of HTML for item text
+            content: "text"                              // content within an item
         },
         {
             text: "Item 3",
