@@ -835,6 +835,19 @@ DataSource configuration or instance.
         }
     });
 
+### autoBind `Boolean`*(default: true)*
+
+Indicates whether the chart will call read on the data source initially.
+
+#### Example
+    $("#chart").kendoChart({
+        dataSource: chartDataSource,
+        autoBind: false
+    });
+
+    // ...
+    chartDataSource.read();
+
 ### legend `Object`
 
 The chart legend configuration options.

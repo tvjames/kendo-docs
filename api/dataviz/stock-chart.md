@@ -26,6 +26,63 @@ The data item field value must be either:
 
 The data navigator configuration options.
 
+### navigator.dataSource `Object`
+
+Navigator DataSource configuration or instance.
+
+When the navigator is bound via its own data source,
+it will automatically set "from" and "to" filters on the main data source.
+
+This, in conjunction with server filtering, allows you to visualize large data sets
+without loading them at once.
+
+#### Example
+
+    $("#stock-chart").kendoStockChart({
+        dataSource: {
+            transport: {
+                 read: "/stock/detail"
+            },
+            serverFiltering: true
+        },
+        navigator: {
+            dataSource: {
+                transport: {
+                    read: "/stock/volume"
+                }
+            }
+        }
+    });
+
+### navigator.autoBind `Boolean`*(default: true)*
+
+Indicates whether the navigator will call read on the data source initially.
+Applicable only when using a dedicated navigator data source.
+
+#### Example
+    $("#stock-chart").kendoStockChart({
+        navigator: {
+            dataSource: naviDataSource,
+            autoBind: false
+        }
+    });
+
+    // ...
+    naviDataSource.read();
+
+### navigator.dateField `String`
+
+The field containing the point date.
+It is used as a default `field` for the navigator axis.
+
+The data item field value must be either:
+
+####* Date instance
+
+####* String parsable by `new Date([field value])`
+
+####* String in ASP.NET JSON format, i.e. "\/Date(1320825600000-0800)\/"
+
 ### navigator.series `Array`
 
 Array of series definitions.
@@ -44,7 +101,7 @@ Omitting the array and specifying a single series is also acceptable.
             }
          },
          ...
-    })
+    });
     </p>
 
 ### navigator.series.type `String`
@@ -2130,6 +2187,19 @@ DataSource configuration or instance.
             field: "year"
         }
     });
+
+### autoBind `Boolean`*(default: true)*
+
+Indicates whether the chart will call read on the data source initially.
+
+#### Example
+    $("#stock-chart").kendoStockChart({
+        dataSource: chartDataSource,
+        chartBind: false
+    });
+
+    // ...
+    naviDataSource.read();
 
 ### legend `Object`
 
@@ -5697,7 +5767,6 @@ The margin of the labels.
 ### series.type="scatter".labels.position `String`*(default: "above")*
 
 Defines the position of the scatter labels.
-
 
 #### *"above"*
 
