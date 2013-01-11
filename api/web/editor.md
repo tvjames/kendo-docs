@@ -90,7 +90,7 @@ Allows custom stylesheets to be included within the editing area.
 ### tools `Array`
 
 A collection of tools that should render a button, combobox, etc, to interact with the Editor. Custom tools are defined
-as a collection of required properties, while the insertHtml  tool requires a collection of text-value pairs
+as a collection of required properties, while the insertHtml tool requires a collection of text-value pairs. A separator may be included multiple times.
 
 #### Example
 
@@ -99,6 +99,7 @@ as a collection of required properties, while the insertHtml  tool requires a co
              "bold",
              "italic",
              "underline",
+			 "separator",
              "strikethrough",
              "fontName",
              "fontSize",
