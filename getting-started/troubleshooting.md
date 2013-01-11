@@ -8,6 +8,13 @@ publish: true
 
 This page provides solutions for common problems you may encounter while working with Kendo UI widgets.
 
+## Checking for JavaScript errors
+
+JavaScript errors are likely to prevent a web page from working as expected. By default all browsers
+hide the JavaScript errors from the end user.
+
+Fortunately there are [browser developer tools](http://javascript.info/tutorial/development) to inspect and debug JavaScript errors.
+
 ## Known JavaScript Errors
 
 ### JavaScript error that jQuery is unavailable or undefined
