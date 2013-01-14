@@ -4,6 +4,8 @@ slug: mvc-grid-configuration
 publish: true
 ---
 
+# Grid Configuration Settings
+
 ## Common DataSource Settings
 
 The `DataSource` of the Kendo Grid for ASP.NET MVC contains configuration used by
@@ -266,8 +268,9 @@ grid columns can be dragged for grouping.
     columns.Bound(p => p.ProductID).Groupable(false);
 ###   Sortable
 Enables or disables sorting by that column.
-// Disable grouping
-columns.Bound(p =&gt; p.ProductID).Sortable(false);
+
+    // Disable grouping
+    columns.Bound(p =&gt; p.ProductID).Sortable(false);
 
 ###   Template
 Sets the server template which will be used when displaying the bound field.  Works **only**
@@ -277,7 +280,7 @@ In Razor the template is a [templated razor delegate](http://haacked.com/archive
 
 #### WebForms
 
-    <% Html.Kendo.Grid(Model)
+    <% Html.Kendo().Grid(Model)
        .Columns(columns =>
        {
             // Template is a server side code block <% %>
@@ -294,7 +297,7 @@ In Razor the template is a [templated razor delegate](http://haacked.com/archive
 
 #### Razor
 
-    @( Html.Kendo.Grid(Model)
+    @( Html.Kendo().Grid(Model)
        .Columns(columns =>
        {
             // Template is a templated razor delegate - the argument of the delegate is called "item"
@@ -328,3 +331,202 @@ Sets the text displayed in the header of the column. Empty by default.
 
 ###   Width
 Sets the width of the column in pixels or other units. By default the width is not set and the column would try to accomodate its content.
+
+## Paging
+
+To configure paging use the `Pageable` method.
+
+### Enable paging
+
+To enable paging with default settings call the `Paegable` method without arguments.
+
+#### WebForms
+
+    <%: Html.Kendo().Grid(Model)
+            .Name("grid")
+            .Pageable() // Enable paging
+    %>
+
+#### Razor
+
+    @(Html.Kendo().Grid(Model)
+          .Name("grid")
+          .Pageable() // Enable paging
+     )
+
+### ButtonCount
+
+The `ButtonCount` method specifies how many numeric buttons should be displayed in the pager. By default 10 buttons are shown.
+
+#### Specify custom button count
+
+    .Pageable(pager => pager.ButtonCount(15))
+
+### Enabled
+
+The `Enabled` method enables or disables paging. Use when paging should be enabled based on a condition:
+
+#### Conditionally enable paging
+
+    .Pageable(pager => pager.Enabled((bool)ViewData["EnablePager"]))
+
+### Info
+
+The `Info` method specifies whether to show additional paging info. By default the pager will display the total number of
+items in the grid and the first and last item number e.g. "1-50 of 50 items".
+If the grid is empty the pager would show "No items to display". Paging info is displayed by default.
+
+#### Hide paging info
+
+    .Pageable(pager => pager.Info(false))
+
+### Input
+
+The `Input` method specifies whether to show a textbox for typing in a page number. By default such a textbox is not shown.
+
+#### Show a textbox for the page number
+
+    .Pageable(pager => pager.Input(true))
+
+### Messages
+
+The `Messages` method configures all messages displayed by the pager. Use this setting to override the default messages or localize the pager.
+The available messages are:
+
+#### Display
+
+The pager info messge. By default set to `"{0} - {1} of {2} items"`. The placeholders represent the first item in the page, the last item in the page and the total number of items in the grid.
+
+    .Pageable(pager => pager
+        .Messages(messages => messages.Display("Showing items from {0} to {1}. Total items: {2}"))
+    )
+
+#### Empty
+
+The pager info message displayed when there are no items in the grid. By default set to `"No items to display"`.
+
+    .Pageable(pager => pager
+        .Messages(messages => messages.Empty("No data"))
+    )
+
+#### First
+
+The tooltip displayed when the user hovers the "first" button of the pager. Clicking that button navigates to the first page.
+By default set to `"Go to the first page"`.
+
+    .Pageable(pager => pager
+        .Messages(messages => messages.First("First page"))
+    )
+
+#### ItemsPerPage
+
+The label displayed when page sizes dropdown is displayed. By default set to `"items per page`".
+
+    .Pageable(pager => pager
+        .PageSizes(true)
+        .Messages(messages => messages.ItemsPerPage("items are currently displayed"))
+    )
+
+#### Last
+
+The tooltip displayed when the user hovers the "last" button of the pager. Clicking that button navigates to the last page.
+By default set to `"Go to the last page"`.
+
+    .Pageable(pager => pager
+        .Messages(messages => messages.Last("Last page"))
+    )
+
+#### Next
+
+The tooltip displayed when the user hovers the "next" button of the pager. Clicking that button navigates to the next page.
+By default set to `"Go to the next page"`.
+
+    .Pageable(pager => pager
+        .Messages(messages => messages.Next("Next page"))
+    )
+
+#### Of
+
+The label displayed after the page textbox. By default set to `"of {0}"`. The placeholder will contain the total number of pages.
+
+    .Pageable(pager => pager
+        .Input(true)
+        .Messages(messages => messages.Of("of {0} pages"))
+    )
+
+#### Page
+
+The label displayed before the page textbox. By default set to `"Page"`.
+
+    .Pageable(pager => pager
+        .Input(true)
+        .Messages(messages => messages.Page("Current page:"))
+    )
+
+#### Previous
+
+The tooltip displayed when the user hovers the "previous" button of the pager. Clicking that button navigates to the previous page.
+By default set to `"Go to the previous page"`.
+
+    .Pageable(pager => pager
+        .Messages(messages => messages.Previous("Previous page"))
+    )
+
+#### Refresh
+
+The tooltip displayed when the user hovers the "refresh" button of the pager. Clicking that button refreshes the current page.
+By default set to `"Refresh"`.
+
+    .Pageable(pager => pager
+        .Refresh(true)
+        .Messages(messages => messages.Refresh("Click to refresh"))
+    )
+
+### Numeric
+
+The `Numeric` method enables or disables the numeric pager. When enabled the pager will display
+numeric pager buttons. Numeric paging is enabled by default.
+
+#### Disable numeric pager
+
+    .Pageable(pager => pager
+        .Numeric(false)
+    )
+
+### PageSizes
+
+The `PageSizes` method enables or disables the page size dropdown. When enabled the pager displays a dropdown which allows the user to
+change the page size to a predefined value. The page size dropdown is disabled by default.
+
+#### Enable page size dropdown
+
+    .Pageable(pager => pager
+        .PageSizes(true) // Default page sizes are 5, 10 and 20
+    )
+
+#### Enable page size dropdown with custom page sizes
+
+    .Pageable(pager => pager
+        .PageSizes(new [] { 10, 20, 30 }) // Default page sizes are 5, 10 and 20
+    )
+
+### PreviousNext
+
+The `PreviousNext` method enables or disables the previous/next/first/last pager buttons. Those buttons navigate to the corresponding page when clicked.
+Enabled by default.
+
+#### Disable previous and next pager buttons
+
+    .Pageable(pager => pager
+        .PreviousNext(false)
+    )
+
+### Refresh
+
+The `Refresh` method enables or disables the refresh pager button. Clicking that button will reload the current page. Disabled by default.
+
+#### Show the refresh button
+
+    .Pageable(pager => pager
+        .Refresh(true)
+    )
