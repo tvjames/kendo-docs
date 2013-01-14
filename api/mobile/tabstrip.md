@@ -39,7 +39,7 @@ Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers
 
 ### switchTo
 
-Set the mobile TabStrip active tab to the tab with the specified url.
+Set the mobile TabStrip active tab to the tab with the specified url. This method doesn't change the current View. To change the View, use Application's [navigate](/api/mobile/application#navigate) method instead.
 
 #### Example
 
