@@ -351,51 +351,6 @@ Gets an instance of the current view used by the calendar.
     // get the current focused date
     var view = calendar.view();
 
-Available views:
-
-    a. "month"
-    b. "year"
-    c. "decade"
-    d. "century"
-
-Each view has **name** property - the name of the view.
-
-Each view has the following methods:
-
-##### first
-
-###### Returns
-The first day/month/year/decade depending on the view
-
-###### Parameter
-`Date` The date used for the calculations
-
-##### last
-
-###### Returns
-The last day/month/year/decade depending on the view
-
-###### Parameter
-`Date` The date used for the calculations
-
-##### compare
-
-Compares two dates using a different condition depending on the view.
-
-- "month" view - compares only years and months
-- "year" view - compares only years
-- "decade" view - compares decades of the dates
-- "century" view - compares centuries of the dates
-
-###### Returns
-`1` | `-1` | `0` if the first date is greater | less | equal than the second one.
-
-###### Parameters
-
-date1 - first date to compare
-
-date2 - second date to compare
-
 ## Events
 
 ### change
