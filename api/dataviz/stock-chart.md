@@ -9141,3 +9141,369 @@ The visibility of the title.
 ### yAxis.visible `Boolean`*(default: true)*
 
 The visibility of the axis.
+
+## Events
+
+### axisLabelClick
+
+Fires when an axis label is clicked.
+
+#### Example
+
+    function onAxisLabelClick(e) {
+        alert("Clicked " + e.axis.type + " axis label with value: " + e.value);
+    }
+
+#### Event Data
+
+##### e.axis `Object`
+
+The axis that the label belongs to.
+
+##### e.value `Object`
+
+The label value or category name.
+
+##### e.text `Object`
+
+The label text.
+
+##### e.index `Object`
+
+The label sequential index or category index.
+
+##### e.dataItem `Object`
+
+The original data item used to generate the label.
+** Applicable only for data bound category axis. **
+
+##### e.element `Object`
+
+The DOM element of the label.
+
+### dataBound
+
+Fires when the chart has received data from the data source
+and is about to render it.
+
+#### Example
+
+    function onDataBound(e) {
+        // Series data is now available
+    }
+
+### dragStart
+
+Fires when the user has used the mouse or a swipe gesture to drag the chart.
+
+The drag operation can be aborted by calling `e.preventDefault()`.
+
+#### Event Data
+
+##### e.axisRanges `Object`
+
+A hastable containing the initial range (min and max values) of *named* axes.
+The axis name is used as a key.
+
+##### e.originalEvent `Object`
+
+The original user event that triggered the drag action.
+
+### drag
+
+Fires as long as the user is dragging the chart using the mouse or swipe gestures.
+
+#### Event Data
+
+##### e.axisRanges `Object`
+
+A hastable containing the suggested current range (min and max values) of *named* axes.
+The axis name is used as a key.
+
+Note that the axis ranges are not updated automatically. You need to call
+set_options with either the suggested or custom min/max values for them to take effect.
+
+#### Example
+
+    $("#chart").kendoChart({
+        valueAxis: {
+            name: "price"
+        },
+        drag: onDrag
+        ...
+    }
+
+    function onDrag(e) {
+        var minPrice = e.axisRanges.price.min;
+    }
+
+##### e.originalEvent `Object`
+
+The original user event that triggered the drag action.
+
+### dragEnd
+
+Fires when the user stops dragging the chart.
+
+#### Event Data
+
+##### e.axisRanges `Object`
+
+A hastable containing the final range (min and max values) of *named* axes.
+The axis name is used as a key.
+
+##### e.originalEvent `Object`
+
+The original user event that triggered the drag action.
+
+### plotAreaClick
+
+Fires when plot area is clicked.
+
+#### Example
+
+    function onPlotAreaClick(e) {
+        alert("Clicked X axis value: " + e.x);
+    }
+
+#### Event Data
+
+##### e.value `Object`
+
+The data point value.
+Available only for categorical charts (bar, line, area and similar).
+
+##### e.category `Object`
+
+The data point category.
+Available only for categorical charts (bar, line, area and similar).
+
+##### e.element `Object`
+
+The DOM element of the plot area.
+
+##### e.x `Object`
+
+The X axis value or array of values for multi-axis charts.
+
+##### e.y `Object`
+
+The X axis value or array of values for multi-axis charts.
+
+### seriesClick
+
+Fires when chart series are clicked.
+
+#### Example
+
+    function onSeriesClick(e) {
+        alert("Clicked value: " + e.value);
+    }
+
+#### Event Data
+
+##### e.value `Object`
+
+The data point value.
+
+##### e.category `Object`
+
+The data point category
+
+##### e.series `Object`
+
+The clicked series.
+
+##### e.series.type `String`
+
+The series type
+
+##### e.series.name `String`
+
+The series name
+
+##### e.series.data `Array`
+
+The series data points
+
+##### e.dataItem `Object`
+
+The original data item (when binding to dataSource).
+
+##### e.element `Object`
+
+The DOM element of the data point.
+
+### seriesHover
+
+Fires when chart series are hovered.
+
+#### Example
+
+    function onSeriesHover(e) {
+        alert("Hovered value: " + e.value);
+    }
+
+#### Event Data
+
+##### e.value `Object`
+
+The data point value.
+
+##### e.category `Object`
+
+The data point category
+
+##### e.series `Object`
+
+The clicked series.
+
+##### e.series.type `String`
+
+The series type
+
+##### e.series.name `String`
+
+The series name
+
+##### e.series.data `Array`
+
+The series data points
+
+##### e.dataItem `Object`
+
+The original data item (when binding to dataSource).
+
+##### e.element `Object`
+
+The DOM element of the data point.
+
+### zoomStart
+
+Fires when the user has used the mousewheel to zoom the chart.
+
+The zoom operation can be aborted by calling `e.preventDefault()`.
+
+#### Event Data
+
+##### e.axisRanges `Object`
+
+A hastable containing the initial range (min and max values) of *named* axes.
+The axis name is used as a key.
+
+##### e.originalEvent `Object`
+
+The original user event that triggered the zoom action.
+
+### zoom
+
+Fires as long as the user is zooming the chart using the mousewheel.
+
+#### Event Data
+
+##### e.axisRanges `Object`
+
+A hastable containing the suggested current range (min and max values) of *named* axes.
+The axis name is used as a key.
+
+Note that the axis ranges are not updated automatically. You need to call
+set_options with either the suggested or custom min/max values for them to take effect.
+
+#### Example
+
+    $("#chart").kendoChart({
+        valueAxis: {
+            name: "price"
+        },
+        zoom: onZoom
+        ...
+    }
+
+    function onZoom(e) {
+        var minPrice = e.axisRanges.price.min;
+    }
+
+##### e.delta `Number`
+
+A number that indicates the zoom amount and direction.
+
+A negative delta indicates "zoom in", while a positive "zoom out".
+
+##### e.originalEvent `Object`
+
+The original user event that triggered the zoom action.
+
+This event can be used to prevent the default mousewheel action (scroll).
+
+#### Example
+
+    function onZoom(e) {
+        // Prevent window scroll
+        e.originalEvent.preventDefault();
+    }
+
+### zoomEnd
+
+Fires when the user stops zooming the chart.
+
+#### Event Data
+
+##### e.axisRanges `Object`
+
+A hastable containing the final range (min and max values) of *named* axes.
+The axis name is used as a key.
+
+##### e.originalEvent `Object`
+
+The original user event that triggered the zoom action.
+
+### selectStart
+
+Fires when the user start to dragging the drag handle.
+
+#### Event Data
+
+##### e.from `Object`
+
+The lower boundary of the selected range.
+
+##### e.to `Object`
+
+### select
+
+Fires when the user drags the drag handle to a new position.
+
+#### Event Data
+
+##### e.from `Object`
+
+The lower boundary of the selected range.
+
+##### e.to `Object`
+
+The upper boundary of the selected range.
+
+#### Example
+
+    $("#chart").kendoChart({
+        select: onSelect
+        ...
+    }
+
+    function onSelect(e) {
+        ...
+    }
+
+### selectEnd
+
+Fires when the user stops dragging the drag handle.
+
+#### Event Data
+
+##### e.from `Object`
+
+The lower boundary of the selected range.
+
+##### e.to `Object`
+
+The upper boundary of the selected range.
