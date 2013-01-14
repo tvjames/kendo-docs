@@ -329,7 +329,7 @@ Gets currently focused date.
     var calendar = $("#calendar").data("kendoCalendar");
 
     // get the current focused date
-    var current = calendar.current(); //will be today as date, because value is `null`
+    var current = calendar.current(); //will be today, because value is `null`
 
 #### Returns
 
@@ -343,13 +343,6 @@ Gets an instance of the current view used by the calendar.
 
 `Object` The instance of the current view used by the calendar.
 
-Available views:
-
-	a. "month"
-	b. "year"
-	c. "decade"
-	d. "century"
-
 #### Example
 
     // get a reference to the calendar widget
@@ -357,6 +350,13 @@ Available views:
 
     // get the current focused date
     var view = calendar.view();
+
+Available views:
+
+	a. "month"
+	b. "year"
+	c. "decade"
+	d. "century"
 
 Each view has **name** property - the name of the view. 
 
