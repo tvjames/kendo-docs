@@ -319,7 +319,7 @@ The date to set.
 
 `Date` The value of the calendar.
 
-### current `Date`
+### current
 
 Gets currently focused date.
 
@@ -335,9 +335,9 @@ Gets currently focused date.
 
 `Date` The current focused date shown in the calendar.
 
-### view `Object`
+### view
 
-Gets an instance of the current view used by the calendar. 
+Gets an instance of the current view used by the calendar.
 
 #### Returns
 
@@ -353,26 +353,26 @@ Gets an instance of the current view used by the calendar.
 
 Available views:
 
-	a. "month"
-	b. "year"
-	c. "decade"
-	d. "century"
+    a. "month"
+    b. "year"
+    c. "decade"
+    d. "century"
 
-Each view has **name** property - the name of the view. 
+Each view has **name** property - the name of the view.
 
 Each view has the following methods:
 
 ##### first
 
-###### Returns 
+###### Returns
 The first day/month/year/decade depending on the view
 
 ###### Parameter
-`Date` The date used for the calculations	
+`Date` The date used for the calculations
 
 ##### last
 
-###### Returns 
+###### Returns
 The last day/month/year/decade depending on the view
 
 ###### Parameter
@@ -387,18 +387,14 @@ Compares two dates using a different condition depending on the view.
 - "decade" view - compares decades of the dates
 - "century" view - compares centuries of the dates
 
-###### Returns 
+###### Returns
 `1` | `-1` | `0` if the first date is greater | less | equal than the second one.
 
 ###### Parameters
 
-####### date1
+date1 - first date to compare
 
-`Date` First date to compare
-
-####### date2
-
-`Date` Second date to compare
+date2 - second date to compare
 
 ## Events
 
