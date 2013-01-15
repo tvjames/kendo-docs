@@ -78,6 +78,12 @@ Here is a list of the supported format specifiers:
 
     **Note**: '%' symbol is interpreted as a format specifier in the format string. If you need to prevent this, you will need to precede the '%' symbol with a double backslash - 'kendo.toString(12, "# \\\%")' -> 12 % (en-us).
 
+- "$" - currency placeholder
+
+    Specifies that the number should be formatted using the currency culture settings. The "$" symbol is replaced with the localized currency symbol.
+
+    **Note**: '$' symbol is interpreted as a format specifier in the format string. If you need to prevent this, you will need to precede the '$' symbol with a double backslash - 'kendo.toString(12, "# \\\$")' -> 12 $ (en-us).
+
 - "e" - exponential notation
 
     `kendo.toString(0.45678, "e0")` -> 5e-1
