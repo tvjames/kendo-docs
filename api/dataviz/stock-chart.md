@@ -1362,6 +1362,44 @@ The lower boundary of the selected range.
 
 The upper boundary of the selected range.
 
+### navigator.hint `Object`
+
+Default options for the navigator hint.
+
+### navigator.hint.visible `Boolean`*(default: true)*
+
+The visibility of the hint.
+
+### navigator.hint.template `String | Function`
+
+The hint template.
+Template variables:
+
+*   **from** - The lower boundary of the selected range
+*   **to** - Theupper boundary of the selected range
+
+#### Example
+
+    // chart intialization
+    $("#stock-chart").kendoStockChart({
+         navigator: {
+            hint: {
+                // hint template
+                template: "From: #= from # To: #= to #"
+            }
+         },
+         ...
+    });
+
+### navigator.hint.format `String`
+
+The format of the hint.
+
+#### Example
+
+    //sets format of the hint
+    format: "From: {0:d} To: {1:d}"
+
 ### axisDefaults `Object`
 
 Default options for all chart axes.
