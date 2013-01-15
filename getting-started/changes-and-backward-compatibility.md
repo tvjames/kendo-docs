@@ -8,6 +8,17 @@ publish: true
 
 # Kendo UI Framework Changes and Backwards Compatibility
 
+## KendoUI 2012 Q3 SP1
+
+### Changes from 2012 Q3 (2011.3.1114)
+
+#### Breaking changes
+
+* **Cascading ComboBoxes/DropDownLists:** The parameterMap of the child widget's dataSource is called before the change event of the parent widget.
+Use [cascade](http://docs.kendoui.com/api/web/combobox#cascade) event instead of change event.
+
+* **Kendo UI Complete for ASP.NET MVC:** Remove Slide effect. Use SlideIn instead.
+
 ## KendoUI 2012 Q3
 
 ### Changes from 2012 Q2 SP1 (2011.2.913)
