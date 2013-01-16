@@ -99,9 +99,9 @@ Specifies whether the window should show a modal overlay over the page.
 Enables (**true**) or disables (**false**) the ability for users to resize a
 **Window**.
 
-### title `String`
+### title `String|Boolean`*default: ""*
 
-The text in the window title bar.
+The text in the window title bar. If `false`, the window will be displayed without a title bar. Note that this will prevent the window from being dragged, and the window titlebar buttons will not be shown.
 
 ### visible `Boolean`*(default: true)*
 
