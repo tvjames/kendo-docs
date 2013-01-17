@@ -198,19 +198,16 @@ Stops the 'load more' functionality of the ListView.
 
 Fires when item is tapped.
 
-### lastPageReached
-
-Fires when the last page of the ListView is reached. Event will be raised only if the 'endless scroll' or 'load more' option is enabled.
-
-#### Handling button clicks
+#### Example
 
     <ul data-role="listview" id="foo" data-click="listViewClick">
-        <li><a data-role="button" data-name="bar">Bar button</a> | <a data-role="button" data-name="baz">Baz button</a></li>
+        <li>Item 1</li>
+		<li>Item 2</li>
     </ul>
 
     <script>
      function listViewClick(e) {
-         console.log(e.button); // Kendo mobile Button instance
+         console.log(e.item); // The clicked item as a jQuery object
      }
     </script>
 
@@ -248,3 +245,7 @@ Note: The dataItem must be from a non-primitive type (Object).
 ##### e.button `kendo.mobile.ui.Button`
 
 The tapped Kendo mobile Button (if present).
+
+### lastPageReached
+
+Fires when the last page of the ListView is reached. Event will be raised only if the 'endless scroll' or 'load more' option is enabled.
