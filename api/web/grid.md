@@ -505,6 +505,10 @@ Indicates whether editing is enabled/disabled.
 
 Defines the text that will be used in confirmation box when delete an item.
 
+### editable.createAt `String`
+
+Indicates whether the created record should be inserted at the top or at the bottom of the current page. Available values are "top" and "bottom".
+
 ### editable.destroy `Boolean`
 
 Indicates whether item should be deleted when click on delete button.
