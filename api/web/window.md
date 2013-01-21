@@ -58,8 +58,11 @@ Note that this *does not* constrain the window dragging within the given element
 
 ### content `Object|String`
 
-Specifies a URL or request options that the window should load its content from. For remote URLs, a
-container iframe element is automatically created.
+Specifies a URL or request options that the window should load its content from.
+
+Note: For URLs starting with a protocol (e.g. http://),
+a container iframe element is automatically created. This behavior may change in future
+versions, so it is advisable to always use the [iframe configuration option](#iframe).
 
 ### content.template `String`
 
