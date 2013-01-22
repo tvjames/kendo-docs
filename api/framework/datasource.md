@@ -387,6 +387,16 @@ Executed before the server response is used. Appropriate for preprocessing or pa
         }
     }
 
+#### Example: One-way data projection
+
+    parse: function(response) {
+        for (var i = 0; i < response.length; i++) {
+            response[i].lowerFoo = response[i].foo.toLowerCase();
+        }
+
+        return response;
+    }
+
 ### schema.total `Function|String`
 
 Specifies the field from the response which contains the total number of data items. If set to a function - the function will be called to
