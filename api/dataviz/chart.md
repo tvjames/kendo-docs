@@ -7814,6 +7814,18 @@ Reloads the data and repaints the chart.
     // refreshes the chart
     chart.refresh();
 
+### setDataSource
+
+Sets the dataSource of an existing Chart and rebinds it.
+
+### Example
+
+    var dataSource = new kendo.data.DataSource({
+        //dataSource configuration
+    });
+
+    $("#chart").data("kendoChart").setDataSource(dataSource);
+
 ### svg
 
 Returns the SVG representation of the current chart.
