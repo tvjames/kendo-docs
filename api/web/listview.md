@@ -260,6 +260,18 @@ Selects the specified ListView item. If called without arguments - returns the s
 
 Items to select.
 
+### setDataSource
+
+Sets the dataSource of an existing ListView and rebinds it.
+
+### Example
+
+    var dataSource = new kendo.data.DataSource({
+        //dataSource configuration
+    });
+
+    $("#listview").data("kendoListView").setDataSource(dataSource);
+
 ## Events
 
 ### change
