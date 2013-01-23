@@ -368,6 +368,18 @@ Selects drop-down list item and sets the text of the autocomplete.
 
 The LI element.
 
+### setDataSource
+
+Sets the dataSource of an existing AutoComplete and rebinds it.
+
+### Example
+
+    var dataSource = new kendo.data.DataSource({
+        //dataSource configuration
+    });
+
+    $("#autocomplete").data("kendoAutoComplete").setDataSource(dataSource);
+
 ### suggest
 
 Forces a suggestion onto the text of the AutoComplete.
