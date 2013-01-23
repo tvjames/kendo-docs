@@ -451,6 +451,18 @@ LI element or index of the item or predicate function, which defines the item th
 
 `Number` The index of the selected LI element.
 
+### setDataSource
+
+Sets the dataSource of an existing ComboBox and rebinds it.
+
+### Example
+
+    var dataSource = new kendo.data.DataSource({
+        //dataSource configuration
+    });
+
+    $("#combobox").data("kendoComboBox").setDataSource(dataSource);
+
 ### suggest
 
 Forces a suggestion onto the text of the ComboBox.
