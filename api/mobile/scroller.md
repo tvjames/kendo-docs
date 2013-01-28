@@ -98,7 +98,7 @@ Returns the height in pixels of the scroller content.
 
 ### scrollTo
 
-Scrolls the container to the specified location
+Scrolls the container to the specified location. The arguments should be negative numbers.
 
 #### Parameters
 
@@ -109,6 +109,12 @@ The horizontal offset in pixels to scroll to.
 ##### y `Number`
 
 The vertical offset in pixels to scroll to.
+
+#### Example
+
+    var scroller = $("#scroller").data("kendoMobileScroller");
+
+    scroller.scrollTo(0, -10); // scroll 10 pixels down
 
 ### scrollWidth
 
