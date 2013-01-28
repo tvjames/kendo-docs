@@ -48,6 +48,45 @@ Kendo UI Mobile includes 33 integrated icons, which can be used directly in a Ke
     <li><span class="km-icon km-wifi"></span><br/>wifi</li>
 </ul>
 
+# Creating custom icon font
+
+Currently there are two options - using a font generator service like [http://fontello.com/](Fontello) to simplify the task, or prepare the icon, SVG and fonts manually.
+
+Using [http://fontello.com/](Fontello) is pretty straightforward - pick the icons, choose the Unicode characters for them, type a font name and click Download to get a ZIP file
+with the needed for mobile TTF and WOFF font formats, which can be directly used for icons. From the other files in there, EOT is not needed as it targets only IE6-8 and the
+SVG font can be used to further modification.
+
+ (though if you go AI, you will have to export the icon to Inkscape as AI can't create SVG fonts).
+
+The manual way is considerably more difficult. First create the desired icons using a vector editing software like Inkscape or Adobe Illustrator.
+Export them to SVG format. Consult [http://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/](these)
+[http://cleversomeday.wordpress.com/2010/02/09/inkscape-dings/](articles) about SVG font creation using [http://inkscape.org/](Inkscape).
+Import the SVG icons in Inkscape and create the SVG font icon by icon, assigning them to separate characters.
+After creating the SVG font, convert it to TTF/WOFF formats, using [http://onlinefontconverter.com/](Online Font Converter) or other similar service.
+
+### Loading the two fonts (TTF/WOFF) with @font-face:
+    @font-face {
+        font-family: "MyCustomFont";
+        src: url("images/MyCustomFont.woff") format("woff"),
+             url("images/MyCustomFont.ttf") format("truetype");
+    }
+
+### Overriding the Kendo UI font for all icons (alternatively separate classes can be used to override them one by one)
+    .km-icon:after,
+    .km-icon:before
+    {
+        font: 1em/1em "MyCustomFont";
+    }
+
+### Specify the character corresponding to every custom icon.
+    .km-mycustomicon:after,
+    .km-mycustomicon:before
+    {
+        content: "\E03a";
+    }
+
+Where mycustomicon is the icon name set in the data-icon attribute and \E03a is the Unicode character code of the icon.
+
 # Serving icon fonts
 
 As of Q3 2012, Kendo UI Mobile employs an icon font for its icon rendering. To be able to render it in most mobile and supported Desktop browsers out there, there are two font formats included in the Kendo UI distribution - TTF and WOFF. Most web servers out there doesn't support serving these fonts with a specific mime type. Since currently there is no standardized mime types for fonts, you only need to serve them both with mime type application/octet-stream or you can come up with any valid mime type (like application/x-font-ttf and application/x-font-woff for instance).
