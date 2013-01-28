@@ -50,19 +50,17 @@ Kendo UI Mobile includes 33 integrated icons, which can be used directly in a Ke
 
 # Creating custom icon font
 
-Currently there are two options - using a font generator service like [http://fontello.com/](Fontello) to simplify the task, or prepare the icon, SVG and fonts manually.
+Currently there are two options - using a font generator service like [Fontello](http://fontello.com/) to simplify the task, or prepare the icon, SVG and fonts manually.
 
-Using [http://fontello.com/](Fontello) is pretty straightforward - pick the icons, choose the Unicode characters for them, type a font name and click Download to get a ZIP file
+Using [Fontello](http://fontello.com/) is pretty straightforward - pick the icons, choose the Unicode characters for them, type a font name and click Download to get a ZIP file
 with the needed for mobile TTF and WOFF font formats, which can be directly used for icons. From the other files in there, EOT is not needed as it targets only IE6-8 and the
 SVG font can be used to further modification.
 
- (though if you go AI, you will have to export the icon to Inkscape as AI can't create SVG fonts).
-
 The manual way is considerably more difficult. First create the desired icons using a vector editing software like Inkscape or Adobe Illustrator.
-Export them to SVG format. Consult [http://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/](these)
-[http://cleversomeday.wordpress.com/2010/02/09/inkscape-dings/](articles) about SVG font creation using [http://inkscape.org/](Inkscape).
+Export them to SVG format. Consult [these](http://www.webdesignerdepot.com/2012/01/how-to-make-your-own-icon-webfont/)
+[articles](http://cleversomeday.wordpress.com/2010/02/09/inkscape-dings/) about SVG font creation using [Inkscape](http://inkscape.org/).
 Import the SVG icons in Inkscape and create the SVG font icon by icon, assigning them to separate characters.
-After creating the SVG font, convert it to TTF/WOFF formats, using [http://onlinefontconverter.com/](Online Font Converter) or other similar service.
+After creating the SVG font, convert it to TTF/WOFF formats, using [Online Font Converter](http://onlinefontconverter.com/) or other similar service.
 
 ### Loading the two fonts (TTF/WOFF) with @font-face:
     @font-face {
