@@ -43,7 +43,8 @@ The minified versions of all JavaScript files (except jQuery) are also available
 
 ## jQuery version
 
-Kendo UI requires **jQuery 1.8.2** or later. There are occasions in which a new jQuery version is released, which introduces breaking changes and is not compatible with existing Kendo UI versions.
+Kendo UI requires **jQuery 1.8.2**. Currently jQuery 1.9 is **not** supported unless the [jquery-migrate](https://github.com/jquery/jquery-migrate/) plugin is also included.
+There are occasions in which a new jQuery version is released, which introduces breaking changes and is not compatible with existing Kendo UI versions.
 In such cases we recommend using the previous jQuery version until the next official Kendo UI release that resolves the problems. We normally do not change the jQuery version that is shipped with Kendo UI
 for service packs. We can do this for major releases.
 
