@@ -509,19 +509,29 @@ The node that is to be removed.
 
 Gets or sets the selected node of a TreeView.
 
-#### Select the node with ID, firstItem
+#### Select the node with HTML id="firstItem"
 
     var treeView = $("#treeView").data("kendoTreeView");
     treeView.select($("#firstItem"));
+
+#### Select the first node in the treeview
+
+    var treeView = $("#treeView").data("kendoTreeView");
+    treeView.select(".k-item:first");
 
 #### Get the currently selected node
 
     var treeView = $("#treeView").data("kendoTreeView");
     var selectedNode = treeView.select();
 
+#### Unselect all nodes
+
+    var treeView = $("#treeView").data("kendoTreeView");
+    treeView.select($());
+
 #### Parameters
 
-##### node `Selector` *(optional)*
+##### node `Selector | jQuery` *(optional)*
 
 If provided, the node of a TreeView that should be selected.
 
