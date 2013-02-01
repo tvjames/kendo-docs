@@ -45,7 +45,7 @@ To do so, the navigational widget should have `data-rel="modalview"` and `href` 
 
 ### Button which opens a ModalView
 
-    <div data-role="view">
+    <div data-role="view" data-role="button">
         <a href="#foo" data-rel="modalview">Foo</a>
     </div>
 
@@ -56,7 +56,7 @@ To do so, the navigational widget should have `data-rel="modalview"` and `href` 
 ### Button which closes a ModalView
 
     <div data-role="view">
-        <a href="#foo" data-rel="modalview">Foo</a>
+        <a href="#foo" data-rel="modalview" data-role="button">Foo</a>
     </div>
 
     <div data-role="modalview" id="foo">
