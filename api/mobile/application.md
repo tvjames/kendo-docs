@@ -11,7 +11,7 @@ publish: true
 
 ### hideAddressBar `Boolean`*(default: true)*
 
-Whether to hide the browser address bar.
+Whether to hide the browser address bar. Supported only in iPhone and iPod. Doesn't affect standalone mode as there the address bar is always hidden.
 
 #### Example
     <script>
