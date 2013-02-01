@@ -17,7 +17,7 @@ If you've disabled the notifications, you can use the Options Dialog to activate
 
 Clicking the **Get Now** button starts the Latest Version Acquirer tool, prompting for your Telerik credentials in its first page. If you do not have www.telerik.com account, you can create one through the **Register** link.
  
-![Get latest version](images/lva1.png)
+![Get latest version](images/login.png)
 
 >**Important:**
 You cannot use the tool if you only have a Trial License (attempt to download a distribution would result in an error message if you don’t have a Dev License).
@@ -28,9 +28,9 @@ You can use the **Save my password** checkbox to avoid having to enter your Tele
 
 The download starts automatically after a confirmation window.
  
-![Get latest version](images/lva2.png)
-![Get latest version](images/lva3.png)
-![Get latest version](images/lva4.png)
+![Get latest version](images/start.png)
+![Get latest version](images/download.png)
+![Get latest version](images/finish.png)
  
 Once the download succeeds, the latest version of Kendo UI for ASP.NET MVC will be available for use in the **Upgrade Wizard** and the **New Project Wizard**.
 
