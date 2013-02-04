@@ -264,25 +264,48 @@ HTML string or array of such strings or JSON.
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### contentElement
 
-Obtains the DOM element representing a tab by its index in the **TabStrip**.
+Obtains the DOM element that encloses tab content by its tab index in the **TabStrip**.
 
-#### Obtain the DOM element representing the first tab in a TabStrip
+> **Important:** To remove the tab contents safely, use contentHolder to get the element to empty.
+
+#### Obtain the content element representing the first tab in a TabStrip
 
     var tabContent = $("#tabStrip").data("kendoTabStrip").contentElement(0);
 
 #### Parameters
 
-##### itemIndex `int`
+##### itemIndex `Number`
 
 The index of the tab in the TabStrip.
 
 #### Returns
 
-`HTMLElement` The DOM element representing a tab by its index in the <strong>TabStrip</strong>.
+`Element` The DOM element enclosing tab content by its tab index in the **TabStrip**.
+
+### contentHolder
+
+Obtains the DOM element that holds tab content by its tab index in the **TabStrip**.
+The difference between contentElement and contentHolder is that contentHolder returns the DOM element that really holds the content, which on mobile is the scroll container.
+
+> **Important:** Use this method to get the element you want to empty when removing tab contents.
+
+#### Obtain the content holder representing the first tab in a TabStrip
+
+    var tabContent = $("#tabStrip").data("kendoTabStrip").contentHolder(0);
+
+#### Parameters
+
+##### itemIndex `Number`
+
+The index of the tab in the TabStrip.
+
+#### Returns
+
+`Element` The DOM element holding tab content by its tab index in the **TabStrip**.
 
 ### deactivateTab
 
@@ -323,7 +346,7 @@ The target tab(s), specified as a selector, to be disabled.
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### enable
 
@@ -336,14 +359,14 @@ Disables (**false**) or enables (**true**) a tab(s) of a **TabStrip**.
 The target tab(s), specified as a selector, to be enabled (**true**) or disabled
 (**false**).
 
-##### enable `Boolean`
+##### enable `Boolean` *(optional)*
 
 Desired state of the tab(s) specified by the selector; enabled (**true**) or disabled
 (**false**).
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### insertAfter
 
@@ -383,13 +406,13 @@ Inserts a newly-created tab after a specified tab.
 Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
 HTML string or array of such strings or JSON.
 
-##### referenceTab `Item`
+##### referenceTab `Selector`
 
 A reference tab to insert the new item after.
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### insertBefore
 
@@ -429,13 +452,13 @@ Inserts a newly-created tab before a specified tab.
 Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
 HTML string or array of such strings or JSON.
 
-##### referenceTab `Item`
+##### referenceTab `Selector`
 
 A reference tab to insert the new item before
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### reload
 
@@ -449,7 +472,7 @@ The target tab(s), specified as a selector, to be reloaded via AJAX.
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### remove
 
@@ -467,11 +490,11 @@ The target tab(s), specified as a selector, to be removed.
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`kendo.ui.TabStrip` Returns the TabStrip object to support chaining.
 
 ### select
 
-Selects the specified tab(s) within a **TabStrip**. If called without arguments, it returns the
+Get/set the selected tab. If called without arguments, it returns the
 currently selected tab.
 
 #### Example
@@ -484,14 +507,13 @@ currently selected tab.
 
 #### Parameters
 
-##### element `Selector/Index`
+##### element `Selector|Number`
 
-or index
 The target tab(s), specified as a selector or index in the tab group.
 
 #### Returns
 
-`TabStrip` Returns the TabStrip object to support chaining.
+`jQuery` the selected tab if called without arguments. `kendo.ui.TabStrip` if called with arguments.
 
 ## Events
 
@@ -503,7 +525,7 @@ Triggered just after a tab is being made visible, but before the end of the anim
 
     // event handler for activate
     var onActivate = function(e) {
-        // access the activated item via e.item (HTMLElement)
+        // access the activated item via e.item (Element)
     };
 
     // attach activate event handler during initialization
@@ -518,7 +540,7 @@ Triggered just after a tab is being made visible, but before the end of the anim
 
     // event handler for activate
     var onActivate = function(e) {
-        // access the activated item via e.item (HTMLElement)
+        // access the activated item via e.item (Element)
     };
 
     // attach activate event handler via bind()
@@ -529,7 +551,7 @@ Triggered just after a tab is being made visible, but before the end of the anim
 
 #### Event Data
 
-##### e.item `HTMLElement`
+##### e.item `Element`
 
 The activated tab.
 
@@ -573,7 +595,7 @@ Triggered before a tab is selected.
 
     // event handler for select
     var onSelect = function(e) {
-        // access the selected item via e.item (HTMLElement)
+        // access the selected item via e.item (Element)
     };
 
     // attach select event handler during initialization
@@ -588,7 +610,7 @@ Triggered before a tab is selected.
 
     // event handler for select
     var onSelect = function(e) {
-        // access the selected item via e.item (HTMLElement)
+        // access the selected item via e.item (Element)
     };
 
     // attach select event handler via bind()
@@ -599,7 +621,7 @@ Triggered before a tab is selected.
 
 #### Event Data
 
-##### e.item `HTMLElement`
+##### e.item `Element`
 
 The selected item chosen by a user.
 
