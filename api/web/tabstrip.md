@@ -270,7 +270,7 @@ HTML string or array of such strings or JSON.
 
 Obtains the DOM element that encloses tab content by its tab index in the **TabStrip**.
 
-> **Important:** To remove the tab contents safely, use contentHolder to get the element to empty.
+> **Important:** To remove the tab contents safely, use **contentHolder** to get the element to empty.
 
 #### Obtain the content element representing the first tab in a TabStrip
 
@@ -291,7 +291,7 @@ The index of the tab in the TabStrip.
 Obtains the DOM element that holds tab content by its tab index in the **TabStrip**.
 The difference between contentElement and contentHolder is that contentHolder returns the DOM element that really holds the content, which on mobile is the scroll container.
 
-> **Important:** Use this method to get the element you want to empty when removing tab contents.
+> **Important:** To remove the tab contents safely, use this method to get the element to empty.
 
 #### Obtain the content holder representing the first tab in a TabStrip
 
