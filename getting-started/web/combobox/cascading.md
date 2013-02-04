@@ -122,8 +122,8 @@ Other option is to pass the ID of the parent combobox manually, using the data c
            transport: {
                read: {
                    url: "",
-                   data: {
-                       parentID: $("#parent").val()
+                   data: function() {
+                       return { parentID: $("#parent").val() };
                    }
                }
            }
