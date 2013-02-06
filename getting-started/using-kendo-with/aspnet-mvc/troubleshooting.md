@@ -64,9 +64,29 @@ If using ASP.NET bundles make sure the `Scripts.Render("~/bundles/jquery")` bloc
 2. Rebuild your solution.
 3. Close and open again the view you were editing. Intellisense should be working now.
 
-## Menu renders too slow in 'debug' mode
+## Menu renders too slow in debug mode
 
-Menu widget has a "security trimming" functionality, which is turned on by default. Under the hood, 
-we create an AuthorizationContext object for each Menu item with defined Action/Controller. In 'release' 
-mode those objects are cached. In 'debug' mode, we do not cache anything and that is why you can observe performance
-issues with the rendering of the Menu widget.
+The Menu has security trimming functionality, which is enabled by default. Under the hood,
+it creates an [AuthorizationContext](http://msdn.microsoft.com/en-us/library/system.web.mvc.authorizationcontext(v=vs.108).aspx] for every menu item
+with set Action/Controller. In 'debug' mode those context objects are not cached and as a result there may be delay in rendering the menu in
+case there are a lot of items. When your application is deployed and debug mode is disabled the authorization context objects are cached.
+
+More info about ASP.NET debug mode can be found in this Scott Guthrie blog post: [Don’t run production ASP.NET Applications with debug="true" enabled](http://weblogs.asp.net/scottgu/archive/2006/04/11/Don_1920_t-run-production-ASP.NET-Applications-with-debug_3D001D20_true_1D20_-enabled.aspx).
+
+### Solution
+
+1. Disable security trimming (if not needed or during development). Enable it again when deploying the site.
+    * WebForms View Engine
+
+            <%: Html.Kendo().Menu()
+                    .SecurityTrimming(false)
+            %>
+    * Razor
+
+            @(Html.Kendo().Menu()
+                  .SecurityTrimming(false)
+            )
+2. Disable debug mode. Set the `debug` attribute of the `compilation` element in web.config to `false`:
+
+    <compilation debug="false">
+
