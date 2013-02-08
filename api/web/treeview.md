@@ -187,10 +187,10 @@ the sprite CSS class of the treeview nodes.
         dataSpriteCssClassField: "sprite"
     });
 
-### dataTextField `String`*(default: null)*
+### dataTextField `String|Array` *(default: null)*
 
- Sets the field of the data item that provides
-the text content of the treeview nodes.
+Sets the field of the data item that provides the text content of the treeview nodes.
+If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
 
@@ -198,6 +198,23 @@ the text content of the treeview nodes.
     $("#treeview").kendoTreeView({
         dataSource: items,
         dataTextField: "ProductName"
+    });
+
+#### Using different fields on different levels
+
+    var items = [
+        { CategoryName: "Hot drinks", items: [
+            { ProductName: "Tea", items: [
+                { ProductName: "Green Tea" },
+                { ProductName: "White Tea" }
+            ] },
+            { ProductName: "Coffee"}
+        ] }
+    ];
+
+    $("#treeview").kendoTreeView({
+        dataSource: items,
+        dataTextField: [ "CategoryName", "ProductName" ]
     });
 
 ### dataUrlField `String`*(default: null)*
