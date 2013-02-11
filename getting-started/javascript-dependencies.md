@@ -95,7 +95,7 @@ can be included on a per-widget basis.
 1.  kendo.dataviz.svg.js
 1.  kendo.dataviz.themes.js
 1.  kendo.dataviz.chart.js
-
+1.  kendo.userevents.js
 
 ### ComboBox
 
@@ -236,14 +236,12 @@ can be included on a per-widget basis.
 1.  kendo.core.js
 1.  kendo.numerictextbox.js
 
-
 ### PanelBar
 
 1.  jquery-1.8.2.js
 1.  kendo.core.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.panelbar.js
-
 
 ### Slider and RangeSlider
 
@@ -254,7 +252,6 @@ can be included on a per-widget basis.
 1.  kendo.draganddrop.js
 1.  kendo.slider.js
 
-
 ### Splitter
 
 1.  jquery-1.8.2.js
@@ -264,6 +261,21 @@ can be included on a per-widget basis.
 1.  kendo.resizable.js
 1.  kendo.splitter.js
 
+### StockChart
+
+1.  jquery-1.8.2.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.userevents.js
+1.  <span>kendo.binder.js (if using MVVM)</span>
+1.  kendo.dataviz.core.js
+1.  kendo.dataviz.vml.js
+1.  kendo.dataviz.svg.js
+1.  kendo.dataviz.themes.js
+1.  kendo.dataviz.chart.js
+1.  kendo.dataviz.stock.js
 
 ### TabStrip
 
