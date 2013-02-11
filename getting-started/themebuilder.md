@@ -1,11 +1,11 @@
 ---
-title: ThemeBuilder
+title: ThemeBuilderTesting
 slug: gs-themebuilder
-tags: themebuilder, customization, css
+tags: themebuilder, customization, css, testing
 publish: true
 ---
 
-### What is the Kendo ThemeBuilder?
+### What is the Kendo ThemeBuilder Testing?
 
 The Kendo ThemeBuilder is a tool that lets you modify Kendo themes so that they match the look and feel of your site or app.
 
