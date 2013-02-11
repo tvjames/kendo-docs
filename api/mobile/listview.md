@@ -246,6 +246,48 @@ Note: The dataItem must be from a non-primitive type (Object).
 
 The tapped Kendo mobile Button (if present).
 
+### dataBound
+
+Fires when the ListView has received data from the data source.
+
+#### Example
+
+     $("#listview").kendoMobileListView({
+         dataBound: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var listview = $("#listview").data("kendoMobileListView");
+     // bind to the dataBound event
+     listview.bind("dataBound", function(e) {
+         // handle event
+     });
+
+### dataBinding
+
+Fires when the ListView is about to be rendered.
+
+#### Example
+
+     $("#listview").kendoMobileListView({
+         dataBinding: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the ListView
+     var listview = $("#listview").data("kendoMobileListView");
+     // bind to the dataBound event
+     listview.bind("dataBinding", function(e) {
+         // handle event
+     });
+
 ### lastPageReached
 
 Fires when the last page of the ListView is reached. Event will be raised only if the 'endless scroll' or 'load more' option is enabled.
