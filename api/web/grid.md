@@ -1590,7 +1590,7 @@ Fires when the grid is about to be rendered.
      // get a reference to the grid
      var grid = $("#grid").data("kendoGrid");
      // bind to the dataBound event
-     grid.bind("dataBound", function(e) {
+     grid.bind("dataBinding", function(e) {
          // handle event
      });
 
