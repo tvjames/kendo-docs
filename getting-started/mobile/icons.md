@@ -48,8 +48,7 @@ Kendo UI Mobile includes 33 integrated icons, which can be used directly in a Ke
     <li><span class="km-icon km-wifi"></span><br/>wifi</li>
 </ul>
 
-<br />
-## Creating custom icon font
+# Creating custom icon font
 
 Currently there are two options - using a font generator service like [Fontello](http://fontello.com/) to simplify the task, or prepare the icon, SVG and fonts manually.
 
