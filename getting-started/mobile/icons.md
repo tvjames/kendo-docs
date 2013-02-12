@@ -165,13 +165,13 @@ Since fonts are usually copyrighted, most browsers doesn't allow using them acro
 
 # Using Custom Icons with WebKit masks
 
-> **Important:** WebKit masks have numerous bugs across most platforms - **consider using them only if necessary**! <br /><br />
-In Android and MeeGo Webkit masks are unreliable - they can be turned into colorized rectangles by a simple CSS transformation at the wrong place.
-In BBOS 7.0 WebKit masks are completely broken - though they work in BBOS 6.0 and 7.1!
-
 To use colorizable icon masks, specify the icon image as a **box mask** (either as dataURI or as a separate image).
 The image should be **PNG8** or **PNG24** with alpha channel (**PNG8+Alpha** is supported by only few graphic editors, so **better stick with PNG24** if not sure).
 The image color is not important - it will be used as a mask only - the alpha transparency will clip the colorized content.
+
+> **Important:** WebKit masks have numerous bugs across most platforms - **consider using them only if necessary**! <br /><br />
+In Android and MeeGo Webkit masks are unreliable - they can be turned into colorized rectangles by a simple CSS transformation at the wrong place.
+In BBOS 7.0 WebKit masks are completely broken - though they work in BBOS 6.0 and 7.1!
 
 ### Define custom icon
 
