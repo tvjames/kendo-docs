@@ -48,6 +48,7 @@ Kendo UI Mobile includes 33 integrated icons, which can be used directly in a Ke
     <li><span class="km-icon km-wifi"></span><br/>wifi</li>
 </ul>
 
+
 ## Creating custom icon font
 
 Currently there are two options - using a font generator service like [Fontello](http://fontello.com/) to simplify the task, or prepare the icon, SVG and fonts manually.
@@ -89,7 +90,7 @@ Where mycustomicon is the icon name set in the data-icon attribute and \E03a is 
 
 As of Q3 2012, Kendo UI Mobile employs an icon font for its icon rendering. To be able to render it in most mobile and supported Desktop browsers out there, there are two font formats included in the Kendo UI distribution - TTF and WOFF. Most web servers out there doesn't support serving these fonts with a specific mime type. Since currently there is no standardized mime types for fonts, you only need to serve them both with mime type application/octet-stream or you can come up with any valid mime type (like application/x-font-ttf and application/x-font-woff for instance).
 
-### Configure IIS
+## Configure IIS
 
 The two mime types can be specified either through the IIS managemenet console (inetmgr) or in the site Web.config, like this:
 
@@ -111,7 +112,7 @@ The two mime types can be specified either through the IIS managemenet console (
 
 Removing the mime type first is there to avoid clashes if the mime types for these files are already defined /IIS throws exception if they are/. Can be removed if not needed.
 
-### Configure Apache
+## Configure Apache
 
 Apache configuration in some distributions includes mime-types application/x-font-ttf and application/x-font-woff by default. If these mime types are not listed, they can be added easily like this:
 
@@ -125,7 +126,7 @@ Apache configuration in some distributions includes mime-types application/x-fon
     application/x-font-ttf .ttf
     application/x-font-woff .woff
 
-### Configure Nginx
+## Configure Nginx
 
 For Nginx the configuration is similar:
 
