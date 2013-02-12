@@ -162,3 +162,83 @@ Since fonts are usually copyrighted, most browsers doesn't allow using them acro
             add_header Access-Control-Allow-Origin *;
         }
     }
+
+# Using Custom Icons with WebKit masks
+
+> **Important:** WebKit masks have numerous bugs across most platforms - **consider using them only if necessary**! <br /><br />
+In Android and MeeGo Webkit masks are unreliable - they can be turned into colorized rectangles by a simple CSS transformation at the wrong place.
+In BBOS 7.0 WebKit masks are completely broken - though they work in BBOS 6.0 and 7.1!
+
+To use colorizable icon masks, specify the icon image as a **box mask** (either as dataURI or as a separate image).
+The image should be **PNG8** or **PNG24** with alpha channel (**PNG8+Alpha** is supported by only few graphic editors, so **better stick with PNG24** if not sure).
+The image color is not important - it will be used as a mask only - the alpha transparency will clip the colorized content.
+
+### Define custom icon
+
+    <style>
+        .km-custom {
+            -webkit-mask-box-image: url("foo.png");
+        }
+    </style>
+
+    <div data-role="tabstrip">
+        <a href="#index" data-icon="custom">Home</a>
+    </div>
+
+In Q3 2012 due to numerous issues with WebKit mask icons, they were deprecated and Kendo UI Mobile introduced font icons. This change requires the usage of additional styling
+to enable the WebKit masks as icons. Please note that the below example will disable all font icons.
+
+### Define custom icon after Q3 2012
+
+    <style>
+        .km-root .km-pane .km-view .km-icon {
+            background-size: 100% 100%;
+            -webkit-background-clip: border-box;
+            background-color: currentcolor;
+        }
+
+        .km-custom {
+            -webkit-mask-box-image: url("foo.png");
+            background-color: red;
+        }
+    </style>
+
+    <div data-role="tabstrip">
+        <a href="#index" data-icon="custom">Home</a>
+    </div>
+
+If you want to add only one or two custom icons, specify them with their respective classes (.km- + data-icon name):
+
+### Restyle only the custom icon.
+
+    .km-root .km-pane .km-view .km-question {
+        background-size: 100% 100%;
+        -webkit-background-clip: border-box;
+        background-color: currentcolor;
+    }
+
+    .km-question {
+        -webkit-mask-box-image: url("foo.png");
+        background-color: red;
+    }
+
+When custom icons are used and their names are the same as the integrated Kendo UI Mobile icon names, make sure that the font icons are not rendered.
+
+### Hide all Kendo UI Mobile font icons.
+
+    .km-root .km-pane .km-view .km-icon:after,
+    .km-root .km-pane .km-view .km-icon:before
+    {
+        visibility: hidden;
+    }
+
+Again if only several icons should be overridden, specify them with their classes instead:
+
+### Hide only one Kendo UI Mobile font icon.
+
+    .km-root .km-pane .km-view .km-favorites:after,
+    .km-root .km-pane .km-view .km-favorites:before
+    {
+        visibility: hidden;
+    }
+
