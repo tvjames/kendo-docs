@@ -249,7 +249,6 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                     @Scripts.Render("~/bundles/jquery")
                     @Scripts.Render("~/bundles/kendo")
                 </head>
-
     * If the Kendo UI JavaScript files are in **~/Scripts/kendo/{version}** and the CSS files are in **~/Content/kendo/{version}** where **{version}** is the current Kendo UI version (e.g. 2012.3.1315):
         * WebForms:
 
