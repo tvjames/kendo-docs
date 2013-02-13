@@ -34,11 +34,13 @@ One of the most basic templating tasks is rendering a value as-is in a template.
 
 This approach will create a "compiled" in-line template that's ready for rendering with data. Consuming the template in an application looks like this:
 
-        var data = { firstName: "Todd" }; //A value in JavaScript/JSON
-        template(data); //Pass the data to the compiled template
-
-        //Resulting HTML Output:
-        //<div id='box'>Todd</div>
+        <div id="example"></div>
+        <script>
+            var template = kendo.template("<div id='box'>#= firstName #</div>");
+            var data = { firstName: "Todd" }; //A value in JavaScript/JSON
+            var result = template(data); /Pass the data to the compiled template
+            $("#example").html(result); //display the result
+        </script>
 
 #### Rendering HTML-Encoded Values
 If you want to render an encoded HTML value in a template, Kendo UI templates can automatically handle the encoding. To do that, use a slightly different syntax:
@@ -47,11 +49,13 @@ If you want to render an encoded HTML value in a template, Kendo UI templates ca
 
 Now, when the template is consumed, assuming there are HTML characters in the data, the following output will be produced:
 
-        var data = { firstName: "<b>Todd</b>" }; //Data with HTML
-        template(data); //Pass data to compiled template
-
-        //Resulting encoded HTML Output:
-        //<div id="box">&lt;b&gt;Todd&lt;/b&gt;</div>
+        <div id="example"></div>
+        <script>
+            var template = kendo.template("<div id='box'>#: firstName #</div>");
+            var data = { firstName: "<b>Todd</b>" }; //Data with HTML tags
+            var result = template(data); //Pass the data to the compiled template
+            $("#example").html(result); //display the resulting encoded HTML Output (<b>Todd</b>)
+        </script>
 
 > HTML encoding is useful when you want to avoid rendering HTML tags in your templates. It will escape the HTML tags in your data and render the tags as a string. You should use HTML encoding when working with data from unknown sources (such as user submitted values) in case users have included HTML markup in the content that could break the layout of your page.
 
@@ -71,21 +75,26 @@ For example, to display a list of items using JavaScript and Kendo UI templates,
 
 To then consume this external template with an expression, we simply need to initialize a template that uses this definition and receives an array of values:
 
-        //Get the external template definition using a jQuery selector
-        var template = kendo.template($("#javascriptTemplate").html());
-
-        //Create some dummy data
-        var data = ["Todd", "Steve", "Burke"];
-
-        //Execute the template
-        template(data);
-
-        //HTML Output:
-        //<ul>
-        //<li>Todd</li>
-        //<li>Steve</li>
-        //<li>Burke</li>
-        //</ul>
+        <div id="example"></div>
+    
+        <script id="javascriptTemplate" type="text/x-kendo-template">
+            <ul>
+            # for (var i = 0; i < data.length; i++) { #
+                <li>#= data[i] #</li>
+            # } #
+            </ul>
+        </script>
+        
+        <script type="text/javascript">
+            //Get the external template definition using a jQuery selector
+            var template = kendo.template($("#javascriptTemplate").html());
+    
+            //Create some dummy data
+            var data = ["Todd", "Steve", "Burke"];
+    
+            var result = template(data); //Execute the template
+            $("#example").html(result); //Append the result
+        </script>
 
 As you can see, the JavaScript executes a `for` loop inside of the template and produces a HTML list item for each name.
 
@@ -107,9 +116,16 @@ As long as the data passed-in to the template contains a variable called "myName
 
         var templateString = '<a href="\\#index">#: myName #</a>';
 
-This will produce the following result (assuming myName is Todd):
+This will produce an anchor tag displayed on the page:
 
-        <a href="#index">Todd</a>
+        <div id="example"></div>
+        
+        <script type="text/javascript">
+            var templateString = '<a href="\\#index">#: myName #</a>';
+            var template = kendo.template(templateString);
+    
+            $("#example").html(template({ myName: "Todd" }));
+        </script>
 
 #### Creating an external template
 Extnernal templates do not live in JavaScript, but instead in special blocks in HTML. To define an external template, create a script block in your HTML with the type `text/x-kendo-template`, like this:
@@ -120,17 +136,46 @@ Extnernal templates do not live in JavaScript, but instead in special blocks in 
 
 External templates should always have an ID, too, so that you can select the template content when initalizign in JavaScript:
 
-        var templateContent = $("#myTemplate").html();
+        //extract the template content from script tag
+        var templateContent = $("#myTemplate").html(); 
+        //compile a template
         var template = kendo.template(templateContent);
 
 Within an external template, you can add any HTML and JavaScript, as long as the JavaScript is properly formatted with the Kendo UI template syntax. For example:
 
         <script type="text/x-kendo-template" id="myTemplate">
-            #if(isAdministrator){#
-                <h1>Admin</h1>
+            #if(isAdmin){#
+                <li>#: name # is Admin</li>
             #}else{#
-                <h1>User</h1>
+                <li>#: name # is User</li>
             #}#
+        </script>
+
+Example:
+
+        <ul id="users"></ul>
+
+        <script type="text/x-kendo-template" id="myTemplate">
+            #if(isAdmin){#
+                <li>#: name # is Admin</li>
+            #}else{#
+                <li>#: name # is User</li>
+            #}#
+        </script>
+        
+        <script type="text/javascript">
+            var templateContent = $("#myTemplate").html();
+            var template = kendo.template(templateContent);
+    
+            //Create some dummy data
+            var data = [
+                { name: "John", isAdmin: false },
+                { name: "Alex", isAdmin: true }
+            ];
+            
+            var result = kendo.render(template, data); //render the template
+    
+            $("#users").html(result); //append the result to the page
         </script>
 
 > Why doesn't Kendo UI provide helper syntax for things like loops? Other templating libraries include shorthand like {{ each }}. Kendo UI opts to use normal JavaScript instead of custom syntax sugar because it's much faster and it's easy for anyone familiar with JavaScript to use. If you know JavaScript, you know Kendo UI templates!
