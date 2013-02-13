@@ -89,7 +89,6 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
 
 6.  Configure your ASP.NET MVC layout page to include the Kendo UI DataViz JavaScript and CSS files. **Important**: If you want to use Kendo UI Web and DataViz at the same time you should include **kendo.all.min.js** instead of **kendo.web.min.js** and **kendo.dataviz.min.js**. You
     can also create a custom JavaScript file using the [Custom Download Builder](http://www.kendoui.com/custom-download).
-
     * WebForms:
 
              <link href="<%= Url.Content("~/Content/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
