@@ -176,31 +176,61 @@ If you want to use CDN skip steps 4 and 5 and check the [Using CDN](#using-cdn) 
 copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), the theme folder (e.g. **Default**) and the **textures** folder.
 
 6.  Create bundles for the CSS and JavaScript files of Kendo UI:
+    * If the Kendo UI JavaScript files are in **~/Scripts** and the CSS files are in **~/Content** :
 
-        public static void RegisterBundles(BundleCollection bundles)
-        {
-            // The jQuery bundle
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                            "~/Scripts/jquery-1.*"));
+            public static void RegisterBundles(BundleCollection bundles)
+            {
+                // The jQuery bundle
+                bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                                "~/Scripts/jquery-1.*"));
 
-            // The Kendo JavaScript bundle
-            bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
-                    "~/Scripts/kendo.web.*", // or kendo.all.* if you want to use Kendo UI Web and Kendo UI DataViz
-                    "~/Scripts/kendo.aspnetmvc.*"));
+                // The Kendo JavaScript bundle
+                bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
+                        "~/Scripts/kendo.web.*", // or kendo.all.* if you want to use Kendo UI Web and Kendo UI DataViz
+                        "~/Scripts/kendo.aspnetmvc.*"));
 
-            // The Kendo CSS bundle
-            bundles.Add(new StyleBundle("~/Content/kendo").Include(
-                    "~/Content/kendo.common.*",
-                    "~/Content/kendo.default.*"));
+                // The Kendo CSS bundle
+                bundles.Add(new StyleBundle("~/Content/kendo").Include(
+                        "~/Content/kendo.common.*",
+                        "~/Content/kendo.default.*"));
 
-            // Clear all items from the default ignore list to allow minified CSS and JavaScript files to be included in debug mode
-            bundles.IgnoreList.Clear();
+                // Clear all items from the default ignore list to allow minified CSS and JavaScript files to be included in debug mode
+                bundles.IgnoreList.Clear();
 
-            // Add back the default ignore list rules sans the ones which affect minified files and debug mode
-            bundles.IgnoreList.Ignore("*.intellisense.js");
-            bundles.IgnoreList.Ignore("*-vsdoc.js");
-            bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
-        }
+                // Add back the default ignore list rules sans the ones which affect minified files and debug mode
+                bundles.IgnoreList.Ignore("*.intellisense.js");
+                bundles.IgnoreList.Ignore("*-vsdoc.js");
+                bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
+            }
+    * If the Kendo UI JavaScript files are in **~/Scripts/kendo/{version}** and the CSS files are in **~/Content/kendo/{version}** where **{version}** is the current Kendo UI version (e.g. 2012.3.1315):
+
+            public static void RegisterBundles(BundleCollection bundles)
+            {
+                // The jQuery bundle
+                bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                                "~/Scripts/jquery-1.*"));
+
+                // The Kendo JavaScript bundle - replace "2012.3.1315" with the Kendo UI version that you are using
+
+                bundles.Add(new ScriptBundle("~/bundles/kendo")
+                     .Include("~/Scripts/kendo/2012.3.1315/kendo.web.*") // or kendo.all.* if you want to use Kendo UI Web and Kendo UI DataViz
+                     .Include("~/Scripts/kendo/2012.3.1315/kendo.aspnetmvc.*")
+                );
+
+                // The Kendo CSS bundle - replace "2012.3.1315" with the Kendo UI version that you are using
+                bundles.Add(new StyleBundle("~/Content/kendo/2012.3.1315/css")
+                      .Include("~/Content/kendo/2012.3.1315/kendo.common.*")
+                      .Include("~/Content/kendo/2012.3.1315/kendo.default.*")
+                );
+
+                // Clear all items from the default ignore list to allow minified CSS and JavaScript files to be included in debug mode
+                bundles.IgnoreList.Clear();
+
+                // Add back the default ignore list rules sans the ones which affect minified files and debug mode
+                bundles.IgnoreList.Ignore("*.intellisense.js");
+                bundles.IgnoreList.Ignore("*-vsdoc.js");
+                bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
+            }
 
 7.  Register the bundles in your layout page at the end of the `head` element. **Remove any existing jQuery bundle registration at end of the `body` element of the page.** **Note:** If you don't want to use ASP.NET bundles perform steps 5 and 6 from the [Using Kendo UI in ASP.NET MVC 3 application](#using-kendo-ui-in-asp.net-mvc-3-application) section.
     * WebForms:
@@ -219,6 +249,24 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                 @Scripts.Render("~/bundles/jquery")
                 @Scripts.Render("~/bundles/kendo")
             </head>
+
+    * If the Kendo UI JavaScript files are in **~/Scripts/kendo/{version}** and the CSS files are in **~/Content/kendo/{version}** where **{version}** is the current Kendo UI version (e.g. 2012.3.1315):
+        * WebForms:
+
+                <head>
+                    <!-- other content -->
+                    <%: Styles.Render("~/Content/kendo/2012.3.1315/css") %>
+                    <%: Scripts.Render("~/bundles/jquery") %>
+                    <%: Scripts.Render("~/bundles/kendo") %>
+                </head>
+        * Razor:
+
+                <head>
+                    <!-- other content -->
+                    @Styles.Render("~/Content/kendo/2012.3.1315/css")
+                    @Scripts.Render("~/bundles/jquery")
+                    @Scripts.Render("~/bundles/kendo")
+                </head>
 
 8. Add a reference to the **Kendo.Mvc.UI** namespace to your **web.config**. Then the `Kendo` HtmlHelper extension would
 be availble in your views. Rebuild your project after adding the namespace to the web.config (required for Visual Studio to show intellisense for Kendo.Mvc.UI).
