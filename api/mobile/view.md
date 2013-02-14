@@ -53,17 +53,6 @@ Prepares the **View** for safe removal from DOM. Detaches all event handlers and
     // detach events
     view.destroy();
 
-### contentElement
-Retrieves the current content holder of the View - this is the content element if the View is stretched or the scroll container otherwise.
-
-> **Important:** Use this method to get a reference container in order to remove or append contents to the View
-
-#### Example
-
-    var view = $("#myView").data("kendoMobileView");
-
-    view.contentElement();
-
 ## Events
 
 ### beforeShow
