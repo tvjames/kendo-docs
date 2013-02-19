@@ -14,12 +14,13 @@ You can download Kendo UI [here](http://www.kendoui.com/download)
 
 Contents of Kendo UI zip file distribution:
 
-* /examples - Kendo UI quick start demos
-* /js - Kendo UI minified javascript files
-* /source - Kendo UI complete source code
-* /styles - Kendo UI minified css styles
-* /vsdoc - Kendo UI completion helper for VS2008 SP1 or newer
-* changelog.html - Kendo UI release notes
+* /examples - quick start demos.
+* /js - minified JavaScript files.
+* /src - complete source code. Not available in the trial distribution.
+* /styles - minified CSS files and other theme resources.
+* /vsdoc - completion helper for VS2008 SP1 or newer.
+* /wrappers - server-side wrappers. Available only in Kendo UI Complete for ASP.NET MVC or Kendo UI Complete for JSP.
+* changelog.html - Kendo UI release notes.
 
 ## Installing and Getting Started with Kendo UI
 
@@ -27,7 +28,7 @@ Kendo UI is a pure JavaScript library, so installing and getting started is quic
 
 1. Download [Kendo UI](http://www.kendoui.com/download)
 2. Copy the Kendo UI CSS and JavaScript resources to your project
-3. Configure your page to use Kendo UI scripts and skins (see below).  
+3. Configure your page to use Kendo UI scripts and skins (see below).
 
 ### Kendo UI Web
 
@@ -62,5 +63,5 @@ Then paste the following for Kendo UI Mobile scripts:
 
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/kendo.mobile.min.js" type="text/javascript"></script>
-    
+
 You are now ready to use Kendo UI. Check out some of the [demos](http://demos.kendoui.com) or take a [tutorial](http://docs.kendoui.com/tutorials) to see how quickly you can begin building rich HTML5 applications.
