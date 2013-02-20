@@ -99,7 +99,16 @@ Beside the built-in validation rules, KendoUI Validator you can set custom rules
 
 Important things to note about custom validation rules and messages:
 
-- **Each custom rule will be run for each element in a form.** If there are multiple inputs in the form and the validation should only apply to a specific input, the custom validation code should check the input before validating. For example: `return input.is("[name=firstName") && input.val() === "Test"`
+- **Each custom rule will be run for each element in a form.** If there are multiple inputs in the form and the validation should only apply to a specific input, the custom validation code should check the input before validating. For example: 
+    
+        custom: function (input) {
+            if (input.is("[name=firstName]")) {
+                return input.val() === "Test"  
+            } else {
+                return true;
+            }
+        }
+
 - If the custom validation returns `true`, the validation will pass (and vice versa)
 - If there are multiple custom rules, the rules will run in order. The validation will stop at the first rule that fails and display the validation error message associated with that rule. A form will be valid only if all custom validation rules pass in addition to the standard HTML5 constraints.
 - **Any HTML5 constraints applied to a form (required, type, etc.) will be checked *before* custom rules are evaluated.** Custom rules will not run until a input passes the basic HTML5 constraints.
