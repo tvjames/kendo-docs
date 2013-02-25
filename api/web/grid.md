@@ -390,6 +390,33 @@ The text that will be displayed in the column header.
 
 The width of the column.
 
+### columns.values `Array`
+
+An array of values that will be used in a foreign key column. Each item in the array should have a `text` and `value` field.
+
+#### Example
+
+     var categories = [{
+             "value": 1,
+             "text": "Beverages"
+         },{
+             "value": 2,
+             "text": "Condiments"
+         },{
+             "value": 3,
+             "text": "Confections"
+         }
+     ];
+
+     $("#grid").kendoGrid({
+         dataSource: productsDataSource,
+         columns: [
+             { field: "ProductName", title: "Product Name" },
+             { field: "CategoryID", values: categories, title: "Category" },
+             { field: "UnitPrice", title:"Unit Price", format: "{0:c}" }
+         ]
+     });
+
 ### columns.menu `Boolean`
 
 Indicates whether the column should be visible in column menu.
