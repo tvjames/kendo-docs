@@ -1,5 +1,5 @@
 ---
-title: 4th
+title: 4th document
 slug: the-fourth-file
 publish: true
 ---
