@@ -1,6 +1,6 @@
 ---
 title: Fangle
-slug: this-is-deeply-nested
+slug: this-is-deeply-nested-newslug
 publish: true
 ---
 
