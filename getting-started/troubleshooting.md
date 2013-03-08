@@ -8,7 +8,7 @@ publish: true
 
 This page provides solutions for common problems you may encounter while working with Kendo UI widgets.
 
-## Known JavaScript Errors
+## Known JavaScript ErrorsNOPENOPE
 
 ### JavaScript error that jQuery is unavailable or undefined
 
