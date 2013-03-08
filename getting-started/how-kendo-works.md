@@ -7,3 +7,5 @@ relatedDocs: gs-using-kendo-widgets, gs-downloading-kendo
 ---
 
 # How Kendo UI Works
+
+Sweet
