@@ -8,7 +8,7 @@ publish: true
 
 Below are the system requirements for the Kendo UI Framework.
 
-## Browser support
+## Browser supportasdfasdf
 <table class="devices-platforms stripes">
    <tbody>
         <tr>
