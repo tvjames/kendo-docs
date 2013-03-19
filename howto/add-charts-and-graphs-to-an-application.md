@@ -56,7 +56,7 @@ The first step is to add script and stylesheet references for jQuery and Kendo U
 		</footer>
 
 		<!-- CDN-based script reference for jQuery; utilizing a local reference if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 
 		<!-- CDN-based script reference for Kendo UI DataViz; utilizing a local reference if offline -->
@@ -95,7 +95,7 @@ The next step is to declare a target element for a chart. This will be represent
 		</footer>
 
 		<!-- Google CDN reference for jQuery; utilizing a local reference if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 
 		<!-- Kendo UI HTTP CDN script reference for DataViz; utilizing a local reference if offline -->

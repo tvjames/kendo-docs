@@ -45,11 +45,11 @@ The minified versions of all JavaScript files (except jQuery) are also available
 
 ## jQuery version
 
-The current official version of Kendo UI requires **jQuery 1.8.2**. Currently jQuery 1.9 is **not** supported unless the [jquery-migrate](https://github.com/jquery/jquery-migrate/) plugin
-is also included. There are occasions in which a new jQuery version is released, which introduces breaking changes and is not compatible with existing Kendo UI versions.
+The current official version of Kendo UI requires **jQuery 1.9.1**. There are occasions in which a new jQuery version is released, which introduces breaking changes and is not compatible with existing Kendo UI versions.
 In such cases we recommend using the previous jQuery version until the next official Kendo UI release that resolves the problems. We normally do not change the jQuery version that is shipped
 with Kendo UI for service packs. We can do this for major releases. The following list provides compatibility information about previous major Kendo UI releases:
 
+* Kendo UI 2013.1.319 (Q1 2013) - jQuery 1.9.1
 * Kendo UI 2012.3.1114 (Q3 2012) - jQuery 1.8.2
 * Kendo UI 2012.2.710 (Q2 2012) - jQuery 1.7.1
 * Kendo UI 2012.1.322 (Q1 2012) - jQuery 1.7.1
@@ -72,7 +72,7 @@ can be included on a per-widget basis.
 
 ### AutoComplete
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.model.js (if binding to XML)
@@ -86,14 +86,14 @@ can be included on a per-widget basis.
 
 ### Calendar
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.calendar.js
 
 ### Chart
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.data.xml.js (if binding to XML)
@@ -108,7 +108,7 @@ can be included on a per-widget basis.
 
 ### ComboBox
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.model.js (if binding to XML)
@@ -122,7 +122,7 @@ can be included on a per-widget basis.
 
 ### DataSource
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.model.js (if binding to XML or editing)
@@ -132,7 +132,7 @@ can be included on a per-widget basis.
 
 ### DatePicker
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.popup.js
@@ -142,14 +142,14 @@ can be included on a per-widget basis.
 
 ### Drag and Drop
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.draganddrop.js
 
 
 ### DropDownList
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.model.js (if binding to XML)
@@ -163,7 +163,7 @@ can be included on a per-widget basis.
 
 ### Editor
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.popup.js
 1.  kendo.list.js
@@ -177,7 +177,7 @@ can be included on a per-widget basis.
 
 ### Gauge
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.js (if using MVVM)
 1.  kendo.binder.js (if using MVVM)
@@ -189,7 +189,7 @@ can be included on a per-widget basis.
 
 ### Grid
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.data.xml.js (if binding to XML)
@@ -217,7 +217,7 @@ can be included on a per-widget basis.
 
 ### ListView
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.data.xml.js (if binding to XML)
@@ -232,7 +232,7 @@ can be included on a per-widget basis.
 
 ### Menu
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.popup.js
@@ -241,20 +241,20 @@ can be included on a per-widget basis.
 
 ### NumericTextBox
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.numerictextbox.js
 
 ### PanelBar
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.panelbar.js
 
 ### Slider and RangeSlider
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.userevents.js
 1.  kendo.binder.js (if using MVVM)
@@ -263,7 +263,7 @@ can be included on a per-widget basis.
 
 ### Splitter
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.userevents.js
 1.  kendo.draganddrop.js
@@ -272,7 +272,7 @@ can be included on a per-widget basis.
 
 ### StockChart
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.data.xml.js (if binding to XML)
@@ -288,7 +288,7 @@ can be included on a per-widget basis.
 
 ### TabStrip
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.js
 1.  kendo.fx.js (optional for animation)
@@ -297,7 +297,7 @@ can be included on a per-widget basis.
 
 ### TimePicker
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.fx.js (optional for animation)
 1.  kendo.popup.js
@@ -306,7 +306,7 @@ can be included on a per-widget basis.
 
 ### TreeView
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.userevents.js
 1.  kendo.data.js
@@ -317,21 +317,21 @@ can be included on a per-widget basis.
 
 ### Upload
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.upload.js
 
 
 ### Validator
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.validator.js
 
 
 ### Window
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.userevents.js
 1.  kendo.fx.js (optional for animation)
@@ -342,7 +342,7 @@ can be included on a per-widget basis.
 
 ### Mobile Application
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -354,7 +354,7 @@ can be included on a per-widget basis.
 
 ### Mobile ActionSheet
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.popup.js
@@ -370,7 +370,7 @@ can be included on a per-widget basis.
 
 ### Mobile Button
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -384,7 +384,7 @@ can be included on a per-widget basis.
 
 ### Mobile ButtonGroup
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -398,7 +398,7 @@ can be included on a per-widget basis.
 
 ### Mobile ListView
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.js
 1.  kendo.data.odata.js
@@ -415,7 +415,7 @@ can be included on a per-widget basis.
 
 ### Mobile ModalView
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.popup.js
 1.  kendo.history.js
@@ -430,7 +430,7 @@ can be included on a per-widget basis.
 
 ### Mobile NavBar
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -443,7 +443,7 @@ can be included on a per-widget basis.
 
 ### Mobile PopOver
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.popup.js
 1.  kendo.history.js
@@ -458,7 +458,7 @@ can be included on a per-widget basis.
 
 ### Mobile Scroller
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -468,7 +468,7 @@ can be included on a per-widget basis.
 
 ### Mobile ScrollView
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -481,7 +481,7 @@ can be included on a per-widget basis.
 
 ### Mobile SplitView
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -495,7 +495,7 @@ can be included on a per-widget basis.
 
 ### Mobile Switch
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js
@@ -509,7 +509,7 @@ can be included on a per-widget basis.
 
 ### Mobile TabStrip
 
-1.  jquery-1.8.2.js
+1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.history.js
 1.  kendo.fx.js

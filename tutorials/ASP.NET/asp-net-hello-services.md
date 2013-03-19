@@ -315,7 +315,7 @@ displaying each employee in an HTML table row.
 
 Open the **Site.Master** file and drag the **jquery.min** file over to the
 page just below the **Site.css** link tag in the head of the page. At the time
-of this writing, the current version of jQuery is **jquery-1.8.2.min.js**.
+of this writing, the current version of jQuery is **jquery-1.9.1.min.js**.
 
 ![Add jQuery To Master Page](images/hello-services-add-jquery-to-master-page.png)
 

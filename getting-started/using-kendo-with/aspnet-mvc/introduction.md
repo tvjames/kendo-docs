@@ -311,7 +311,7 @@ You can include the JavaScript and CSS files from CDN. Don't forget to specify t
     <link href="http://cdn.kendostatic.com/<version>/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
     <link href="http://cdn.kendostatic.com/<version>/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />
     <!-- jQuery is not hosted on Kendo CDN - include from another location -->
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://cdn.kendostatic.com/<version>/js/kendo.web.min.js"></script>
     <script src="http://cdn.kendostatic.com/<version>/js/kendo.aspnetmvc.min.js"></script>
 

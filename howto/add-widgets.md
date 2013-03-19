@@ -57,7 +57,7 @@ The first step is to add script and stylesheet references for jQuery and Kendo U
 		</footer>
 
 		<!-- CDN-based script reference for jQuery; utilizing a local reference if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 
 		<!-- CDN-based script reference for Kendo UI DataViz; utilizing a local reference if offline -->
@@ -103,7 +103,7 @@ Here's an example for a pair of [AutoComplete](http://docs.kendoui.com/api/web/a
 		</footer>
 
 		<!-- CDN-based script reference for jQuery; utilizing a local reference if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 
 		<!-- CDN-based script reference for Kendo UI DataViz; utilizing a local reference if offline -->

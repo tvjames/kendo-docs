@@ -44,7 +44,7 @@ In practice, if you use RequireJS you will probably have some files of your own 
       });
 
       require([
-          "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js",
+          "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",
           "app/foo",
           "app/bar",
           "k/kendo.menu.min",
