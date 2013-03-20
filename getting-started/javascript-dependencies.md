@@ -321,6 +321,13 @@ can be included on a per-widget basis.
 1.  kendo.popup.js
 1.  kendo.timepicker.js
 
+### Tooltip
+
+1.  jquery-1.9.1.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.tooltip.js
 
 ### TreeView
 
