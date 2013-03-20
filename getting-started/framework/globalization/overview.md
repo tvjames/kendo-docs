@@ -22,9 +22,9 @@ First let's start by adding the required culture script:
     <script src="kendo.culture.en-GB.js"></script>
 
     <!-- or when using the Kendo CDN -->
-    <script src="http://cdn.kendostatic.com/<version>/js/jquery.js"></script>
+    <script src="http://cdn.kendostatic.com/<version>/js/jquery.min.js"></script>
     <script src="http://cdn.kendostatic.com/<version>/js/kendo.all.min.js"></script>
-    <script src="http://cdn.kendostatic.com/<version>/js/cultures/kendo.culture.en-GB.js"></script>
+    <script src="http://cdn.kendostatic.com/<version>/js/cultures/kendo.culture.en-GB.min.js"></script>
 
 
 Now, you just need to set the culture script, which kendo should use:
