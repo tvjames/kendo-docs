@@ -10,14 +10,15 @@ publish: true
 
 Below are the system requirements for the Kendo UI Framework.
 
-## Browser support
+### Supported Desktop Browsers
+
 <table class="devices-platforms stripes">
    <tbody>
         <tr>
             <th class="browsers"></th>
-            <th class="browsers-windows">Windows</th>
-            <th class="browsers-mac">Mac OS</th>
-            <th class="browsers">Linux</th>
+            <th class="browsers-windows" style="width: 100px">Windows</th>
+            <th class="browsers-mac" style="width: 100px">Mac OS</th>
+            <th class="browsers" style="width: 100px">Linux</th>
         </tr>
         <tr>
            <td><span class="ie"></span>Internet Explorer</td>
@@ -27,9 +28,9 @@ Below are the system requirements for the Kendo UI Framework.
         </tr>
         <tr>
             <td><span class="firefox"></span>Firefox</td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a></td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a></td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a></td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</td>
         </tr>
         <tr>
             <td><span class="chrome"></span>Chrome</td>
@@ -39,61 +40,78 @@ Below are the system requirements for the Kendo UI Framework.
         </tr>
         <tr>
             <td><span class="opera"></span>Opera</td>
-            <td>10.0 +</td>
-            <td>10.0 +</td>
-            <td>10.0 +</td>
+            <td>11.0 +</td>
+            <td>11.0 +</td>
+            <td>11.0 +</td>
         </tr>
         <tr>
             <td><span class="safari"></span>Safari</td>
-            <td>4.0 +</td>
-            <td>4.0 +</td>
+            <td>-</td>
+            <td>5.0 +</td>
             <td>-</td>
         </tr>
     </tbody>
 </table>
 
-**Previous versions are supported with some limitations**
-**NOTE: Browsers in BETA stage are not supported. Also note that Internet Explorer Quirksmode is not supported as it uses IE 5.5 rendering engine. Always specify [DOCTYPE](http://reference.sitepoint.com/html/doctypes) on your pages!**
+**NOTES:**
 
-## Platform support
- <table class="devices-platforms stripes">
-     <tbody>
-         <tr>
-             <th class="platform"></th>
-             <th class="platform-version">Version</th>
-         </tr>
-         <tr>
-             <td style="width: 100px;"><span class="windows"></span>Windows</td>
-             <td>XP / Vista / 7 /Server 2003,2008 R1,R2 32,64-bit editions</td>
-         </tr>
-         <tr>
-             <td><span class="mac"></span> Mac OS</td>
-             <td>OS X +</td>
-         </tr>
-         <tr>
-             <td><span class="android"></span> Android</td>
-             <td>2.0 +</td>
-         </tr>
-         <tr>
-             <td><span class="ios"></span> iOS</td>
-             <td>3.0 +</td>
-         </tr>
-         <tr>
-             <td><span class="blackberry"></span>BlackBerry</td>
-             <td>6.0+</td>
-         </tr>
-         <tr>
-             <td><span class="webos"></span>WebOS</td>
-             <td>2.2+</td>
-         </tr>
-**Kendo UI Mobile currently supports iOS 3.0+, Android 2.0+ and BlackBerry touchscreen devices.**
+* Browsers in BETA stage are not supported
+* Internet Explorer Quirksmode is not supported as it uses IE 5.5 rendering engine. Always specify [DOCTYPE](http://reference.sitepoint.com/html/doctypes) on your pages!
 
+### Kendo UI Platform support
 
-##Prerequisites:
+<table class="devices-platforms stripes">
+    <tr>
+        <th class="platform">Platform</th>
+        <th class="platform-version">Version</th>
+    </tr>
+    <tr>
+        <td style="width: 150px;"><span class="windows"></span>Windows</td>
+        <td>XP +, Server 2003 +</td>
+    </tr>
+    <tr>
+        <td><span class="mac"></span> Mac OS</td>
+        <td>OS X +</td>
+    </tr>
+    <tr>
+        <td><span class="android"></span> Android</td>
+        <td>2.2 +</td>
+    </tr>
+    <tr>
+        <td><span class="ios"></span> iOS</td>
+        <td>4.0 +</td>
+    </tr>
+    <tr>
+        <td><span class="blackberry"></span>BlackBerry</td>
+        <td>7.0+</td>
+    </tr>
+    <tr>
+        <td><span class="blackberry"></span>Windows Phone</td>
+        <td>8.0+</td>
+    </tr>
+</table>
 
-*   JavaScript must be enabled on all browsers
+**NOTES:**
+
+* Kendo UI DataViz is not supported on Android 2.x.
+* Hybrid mouse and touch devices are supported (for instance IE10, Chrome and Firefox on Windows 8).
+
+### Kendo UI Mobile Device Compatibility
+
+Kendo UI Mobile currently supports the default browsers on
+
+* iOS 4.0+
+* Android 2.2+
+* Windows Phone 8+ 
+* BlackBerry 7.0+ touchscreen devices.
+
+Chrome for Android is also supported.
+
+## Prerequisites:
+
+* JavaScript must be enabled on all browsers
 
 For best performance:
 
-*   'Disable script debugging' in the browser's config options must be checked
-*   Caching on Internet Explorer must be activated
+* 'Disable script debugging' in the browser's config options must be checked
+* Caching on Internet Explorer must be activated
