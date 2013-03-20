@@ -2,7 +2,7 @@
 title: Kendo UI Mobile FAQ
 meta_title: Kendo UI Mobile Frequently Asked Questions
 meta_description: Answers to Frequently Asked Questions about how Kendo UI Mobile works and behaves
-slug: gs-mobile-faq
+slug: gs-kendo-mobile-faq
 tags: getting-started, mobile, faq
 publish: true
 ---
