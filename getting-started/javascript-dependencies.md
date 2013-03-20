@@ -119,6 +119,27 @@ can be included on a per-widget basis.
 1.  kendo.list.js
 1.  kendo.combobox.js
 
+### ColorPicker
+
+1.  jquery-1.9.1.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.userevents.js
+1.  kendo.popup.js
+1.  kendo.draganddrop.js
+1.  kendo.slider.js
+1.  kendo.data.js (if using MVVM)
+1.  kendo.binder.js (if using MVVM)
+1.  kendo.colorpicker.js
+
+### ColorPalette
+
+1.  jquery-1.9.1.js
+1.  kendo.core.js
+1.  kendo.userevents.js
+1.  kendo.data.js (if using MVVM)
+1.  kendo.binder.js (if using MVVM)
+1.  kendo.colorpicker.js
 
 ### DataSource
 
@@ -176,7 +197,19 @@ can be included on a per-widget basis.
 1.  kendo.fx.js (optional for animation)
 1.  kendo.draganddrop.js (if popups are draggable and/or resizable)
 1.  kendo.window.js
+1.  kendo.colorpicker.js
 1.  kendo.editor.js
+
+### FlatColorPicker
+
+1.  jquery-1.9.1.js
+1.  kendo.core.js
+1.  kendo.userevents.js
+1.  kendo.draganddrop.js
+1.  kendo.slider.js
+1.  kendo.data.js (if using MVVM)
+1.  kendo.binder.js (if using MVVM)
+1.  kendo.colorpicker.js
 
 
 ### Gauge
