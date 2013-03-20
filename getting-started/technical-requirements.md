@@ -6,13 +6,38 @@ slug: gs-technical-requirements
 publish: true
 ---
 
+<style scoped>
+    .stripes
+    {
+        border: 1px solid #E15613;
+        border-collapse: collapse;
+    }
+    .stripes th
+    {
+        background: #E15613;
+        color: #fff;
+    }
+    .stripes tr:nth-child(2n+1) td
+    {
+        background: #fed;
+    }
+    .stripes td:nth-child(n+2)
+    {
+        text-align: center;
+    }
+    .stripes th,
+    .stripes td
+    {
+        padding: 3px 5px;
+    }
+</style>
+
 # Technical Requirements for using Kendo UI
 
 Below are the system requirements for the Kendo UI Framework.
 
 ### Supported Desktop Browsers
-
-<table class="devices-platforms stripes">
+<table class="devices-platforms stripes" style="margin-top: 1.2em;">
    <tbody>
         <tr>
             <th class="browsers"></th>
@@ -60,7 +85,7 @@ Below are the system requirements for the Kendo UI Framework.
 
 ### Kendo UI Platform support
 
-<table class="devices-platforms stripes">
+<table class="devices-platforms stripes" style="margin-top: 1.2em;">
     <tr>
         <th class="platform">Platform</th>
         <th class="platform-version">Version</th>
@@ -97,15 +122,16 @@ Below are the system requirements for the Kendo UI Framework.
 * Hybrid mouse and touch devices are supported (for instance IE10, Chrome and Firefox on Windows 8).
 
 ### Kendo UI Mobile Device Compatibility
-
-Kendo UI Mobile currently supports the default browsers on
+<p style="margin-top: 1.2em;">Kendo UI Mobile currently supports the default browsers on</p>
 
 * iOS 4.0+
 * Android 2.2+
 * Windows Phone 8+ 
 * BlackBerry 7.0+ touchscreen devices.
 
-Chrome for Android is also supported.
+**NOTE:**
+
+* Chrome for Android is also supported.
 
 ## Prerequisites:
 
