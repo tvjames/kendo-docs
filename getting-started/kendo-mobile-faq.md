@@ -90,7 +90,11 @@ external CSS should load web fonts, but we were not able to confirm this. As a w
 A: By default Windows Phone 8 highlights all links when they are active (hold down). Stopping this behaviour requires manually adding a meta tag to your application/site -
 adding the tag through Javascript is ignored:
 
-### Stop link highlighting in WP8
+#### Stop link highlighting in WP8
 
     <meta name="msapplication-tap-highlight" content="no" />
 
+### Q: When I change the Windows Phone 8 theme, my application starts to look different. Why?
+
+A: Kendo UI Mobile adapts to the current theme in Windows Phone 8 and changes the background and highlight colors of your application. In the browser this is
+semi-automatic when you click inside the application to focus it, but in PhoneGap it happens automatically on app resume after you change the theme.
