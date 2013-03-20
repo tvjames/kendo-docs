@@ -239,6 +239,20 @@ can be included on a per-widget basis.
 1.  kendo.menu.js
 
 
+### MultiSelect
+
+1.  jquery-1.9.1.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.model.js (if binding to XML)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.list.js
+1.  kendo.multiselect.js
+
+
 ### NumericTextBox
 
 1.  jquery-1.9.1.js
