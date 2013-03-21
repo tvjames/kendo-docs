@@ -165,7 +165,7 @@ Here is the complete example:
         </div>
         <script>
         // Initialize a new Kendo Mobile Application
-        var app = new kendo.mobile.Applilcation();
+        var app = new kendo.mobile.Application();
         </script>
 
 Here is the complete example:
