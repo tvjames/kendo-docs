@@ -437,7 +437,7 @@ Applicable when the widget is bound to a [HierarchicalDataSource](/api/framework
     var treeView = $("#treeView").data("kendoTreeView");
     var node = treeView.findByUid("95c1925d-a779-47fc-8420-b4274f01c037");
 
-If you want to find a node by its `id`, use the [datasource.get()](/api/framework/datasource#get) method and supply its uid to the `findByUid` method.
+If you want to find a node by its `id`, use the [dataSource.get()](/api/framework/datasource#get) method and supply its uid to the `findByUid` method.
 
 #### Parameters
 
