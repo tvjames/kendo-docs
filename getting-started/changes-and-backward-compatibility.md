@@ -18,6 +18,10 @@ publish: true
 * **AutoComplete/ComboBox/DropDownList:** Rename enable option to **enabled**.
 * **TreeView/HierarchicalDataSource/Node:** The `children` field is initialized depending on the `hasChildren` field, as previously documented. Use the `append` and `load` methods to initialize it, and if accessing the children field directly, verify if it is present.
 
+#### ASP.NET MVC
+
+Some ASP.NET MVC applications may be broken if using other libraries incompatible with jQuery 1.9.1. Further details available in the [troubleshooting guide](/getting-started/using-kendo-with/aspnet-mvc/troubleshooting#javascript-error-that-live-method-is-unavailable,-undefined-or-unsupported)
+
 ## KendoUI 2012 Q3 SP1
 
 ### Changes from 2012 Q3 (2011.3.1114)
