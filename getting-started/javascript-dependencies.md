@@ -243,6 +243,7 @@ can be included on a per-widget basis.
 1.  kendo.filtermenu.js (if filtering is enabled)
 1.  kendo.pager.js (if paging is enabled)
 1.  kendo.sortable.js (if sorting is enabled)
+1.  kendo.userevents.js (if grouping, resizing or reordering is enabled)
 1.  kendo.draganddrop.js (if grouping, resizing or reordering is enabled)
 1.  kendo.groupable.js (if grouping is enabled)
 1.  kendo.editable.js (if editing is enabled)
