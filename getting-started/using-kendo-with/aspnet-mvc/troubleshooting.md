@@ -32,6 +32,21 @@ If the application is also using Telerik Extensions for ASP.NET MVC tell the `Sc
 
 If using ASP.NET bundles make sure the `Scripts.Render("~/bundles/jquery")` block appears **before** the Kendo JavaScript files. In that case you should not include jQuery as a `script` element.
 
+## JavaScript error that live method is unavailable, undefined or unsupported
+
+This error occurs after upgrading jQuery to 1.9. The `live` method is no longer available in this version of jQuery.
+As a result some JavaScript libraries which are often used in ASP.NET MVC applications will throw errors.
+Those libraries are **jquery.unobtrusive-ajax**, **jquery.validate** and **jquery.validate.unobtrusive**. You need to update the following packages via [Nuget](http://nuget.org):
+
+* [jQuery.Validation](https://nuget.org/packages/jQuery.Validation)
+* [Microsoft.jQuery.Unobtrusive.Ajax](http://nuget.org/packages/Microsoft.jQuery.Unobtrusive.Ajax)
+* [Microsoft.jQuery.Unobtrusive.Validation](http://nuget.org/packages/Microsoft.jQuery.Unobtrusive.Validation)
+
+> **Important**: In ASP.NET MVC 3 applications **jquery.unobtrusive-ajax** and **jquery.validate.unobtrusive** are not installed as NUget packages.
+You would need to install them separately. The packages are [Microsoft.jQuery.Unobtrusive.Ajax](http://nuget.org/packages/Microsoft.jQuery.Unobtrusive.Ajax) and [Microsoft.jQuery.Unobtrusive.Validation](http://nuget.org/packages/Microsoft.jQuery.Unobtrusive.Validation).
+First you must delete **jquery.unobtrusive-ajax.js**, **jquery.unobtrusive-ajax.min.js**, **jquery.validate.unobtrusive.js** and **jquery.validate.unobtrusive.min.js**
+from your **~/Sripts** folder. Then install Microsoft.jQuery.Unobtrusive.Ajax and Microsoft.jQuery.Unobtrusive.Validation.
+
 ## Visual Studio IntelliSense does not show the Kendo HtmlHelper extension method
 
 ### Solution
