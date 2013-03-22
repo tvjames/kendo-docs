@@ -14,6 +14,7 @@ publish: true
 
 #### Breaking changes
 
+* jQuery is updated to 1.9.1.
 * **Mobile:** Rename scrollTreshold option of the ListView to **scrollThreshold**.
 * **AutoComplete/ComboBox/DropDownList:** Rename enable option to **enabled**.
 * **TreeView/HierarchicalDataSource/Node:** The `children` field is initialized depending on the `hasChildren` field, as previously documented. Use the `append` and `load` methods to initialize it, and if accessing the children field directly, verify if it is present.
