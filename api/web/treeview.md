@@ -278,11 +278,11 @@ TreeView.
 
 #### Parameters
 
-##### nodeData `String|Selector`
+##### nodeData `Object`
 
 A JSON-formatted string or selector that specifies the node to be appended.
 
-##### parentNode `Element` *(optional)*
+##### parentNode `jQuery` *(optional)*
 
 The node that will contain the newly appended node. If not specified, the new node will be appended to the
 root group of the TreeView.
@@ -304,7 +304,7 @@ Collapses nodes.
 
 #### Parameters
 
-##### nodes `jQuery | Element | Selector`
+##### nodes `jQuery | Element | String`
 
 The nodes that are to be collapsed.
 
@@ -356,7 +356,7 @@ Removes a node from a TreeView, but keeps its jQuery.data() objects.
 
 #### Parameters
 
-##### node `Selector`
+##### node `jQuery | Element | String`
 
 The node that is to be detached.
 
@@ -380,7 +380,7 @@ Enables or disables nodes.
 
 #### Parameters
 
-##### nodes `Selector`
+##### nodes `jQuery | Element | String`
 
 The nodes that are to be enabled/disabled.
 
@@ -404,7 +404,7 @@ Expands nodes.
 
 #### Parameters
 
-##### nodes `jQuery | Element | Selector`
+##### nodes `jQuery | Element | String`
 
 The nodes that are to be collapsed.
 
@@ -466,11 +466,11 @@ TreeView.
 
 #### Parameters
 
-##### nodeData `String | Selector`
+##### nodeData `Object`
 
 A JSON-formatted string or selector that specifies the node to be inserted.
 
-##### referenceNode `Element`
+##### referenceNode `jQuery`
 
 The node that will be preceed the newly-appended node.
 
@@ -491,11 +491,11 @@ TreeView.
 
 #### Parameters
 
-##### nodeData `String | Selector`
+##### nodeData `Object`
 
 A JSON-formatted string or selector that specifies the node to be inserted.
 
-##### referenceNode `Element`
+##### referenceNode `jQuery`
 
 The node that follows the inserted node.
 
@@ -510,9 +510,13 @@ Gets the parent node of the item
 
 #### Parameters
 
-##### node `Element`
+##### node `jQuery | Element | String`
 
 The child node whose parent will be returned.
+
+#### Returns
+
+`jQuery` The parent node of the given parameter node.
 
 ### remove
 
@@ -525,7 +529,7 @@ Removes a node from a TreeView.
 
 #### Parameters
 
-##### node `Selector`
+##### node `jQuery | Element | String`
 
 The node that is to be removed.
 
@@ -555,7 +559,7 @@ Gets or sets the selected node of a TreeView.
 
 #### Parameters
 
-##### node `Selector | jQuery` *(optional)*
+##### node `jQuery | Element | String` *(optional)*
 
 If provided, the node of a TreeView that should be selected.
 
@@ -592,7 +596,7 @@ Gets or sets the text of a node in a TreeView.
 
 #### Parameters
 
-##### node `Selector`
+##### node `String`
 
 The node of which the text is being retrieved.
 
@@ -619,7 +623,7 @@ Toggles the node of a TreeView between its expanded and collapsed states.
 
 #### Parameters
 
-##### node `Selector`
+##### node `String`
 
 The node that should be toggled.
 
