@@ -19,6 +19,9 @@ The settings under the General category affect all of the installed **Telerik Vi
 
 ![Options Dialog](images/options.png)
 
+###Project setup
+- **Add referenced assemblies to solution and source control** – Sets the default value for the Add referenced assemblies to solution option in the Project Configuration Wizard.
+
 ###Project Upgrade Notifications for Detected Local Distributions
 
 - **Suggest project upgrades for Telerik product version available on my computer** – When enabled, you will be prompted to upgrade upon opening a project, which is not using the latest version of Telerik products installed on your system.

@@ -17,6 +17,7 @@ The Convert Project Wizard converts an existing ASP.NET MVC 3 or 4 Application t
 You can modify the following project-wide settings:
 
 - **Version** - Choose which version of Kendo UI for ASP.NET MVC to use
+- **Add referenced assemblies to solution** - Choose whether to copy referenced assemblies to your solution folder. The assemblies will automatically get added to source control when using Microsoft Team Foundation Server
 - **Copy Editor Templates** - Copy the predefined editor templates to ~/Views/Shared/EditorTemplates
 - **Use CDN Support** - Enable or disable [CDN](http://docs.kendoui.com/getting-started/javascript-dependencies#cdn) support.
 - **Copy Global Resources** - Copy the localization files to ~/Scripts/kendo/{version}/cultures 
