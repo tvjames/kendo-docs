@@ -17,6 +17,7 @@ The New Project wizard is used for creation of a new Kendo UI for ASP.NET MVC Ap
 Using the options in the Kendo UI for ASP.NET MVC Project Settings page you can modify various project-wide settings:
 
 -	**Version** - Choose which version of Kendo UI for ASP.NET MVC to use
+- **Add referenced assemblies to solution** - Choose whether to copy referenced assemblies to your solution folder. The assemblies will automatically get added to source control when using Microsoft Team Foundation Server. 
 -	**Target ASP.NET MVC Version** – Choose the targeted ASP.NET MVC version
 -	**View Engine** – Choose between Razor and WebForms
 -	**Theme** – Choose the visual theme for your Kendo UI for ASP.NET MVC Application
@@ -47,6 +48,7 @@ When you click 'Finish', the creation of new Kendo UI web application will begin
 - Copy all Kendo UI content files (if CDN support is not enabled)
 - Copy all Kendo UI global resources (optional)
 - Copy all Kendo UI editor templates (optional)
+- Copy the Kendo UI assembly to your solution folder (optional)
 - Add reference to the Kendo.Mvc assembly
 - Apply the pre-selected theme
 - Create test project (optional)
