@@ -56,6 +56,58 @@ Open the ModalView
 
 ## Events
 
+### close
+
+Fired when the mobile ModalView is closed by the user.
+
+#### Example
+
+    <div data-role="view">
+        <a data-role="button" href="#foo" data-rel="modalview">Foo</a>
+    </div>
+
+    <div data-role="modalview" id="foo" data-close="onClose">
+        Foo
+    </div>
+
+    <script>
+        function onClose(e) {
+            //handle event
+        }
+    </script>
+
+#### Event Data
+
+##### e.sender `kendo.mobile.ui.ModalView`
+
+The widget instance which fired the event.
+
+### init
+
+Fired when the mobile ModalView and its child widgets are initialized.
+
+#### Example
+
+    <div data-role="view">
+        <a data-role="button" href="#foo" data-rel="modalview">Foo</a>
+    </div>
+
+    <div data-role="modalview" id="foo" data-init="onInit">
+        Foo
+    </div>
+
+    <script>
+        function onInit(e) {
+            //handle event
+        }
+    </script>
+
+#### Event Data
+
+##### e.sender `kendo.mobile.ui.ModalView`
+
+The widget instance which fired the event.
+
 ### open
 
 Fires when the ModalView is shown.
