@@ -49,6 +49,6 @@ For the scroller to work, its element should have fixed dimensions (width and/or
 
 The mobile Scroller widget exposes the following fields:
 
+*   **scrollElement** - the inner Scroller element that holds the scrolling content. Use this field if you wish to change the element contents after the Scroller is initialized on it.
 *   **scrollTop** - the number of pixels that are hidden from view above the scrollable area.
 *   **scrollLeft** - the number of pixels that are hidden from view to the left of the scrollable area.
-
