@@ -76,8 +76,9 @@ This example sets the [height](http://docs.kendoui.com/api/web/grid#height-numbe
 
 ## Getting reference to a Kendo UI widget
 
-When you call a Kendo jQuery plugin method (e.g. `$("#autocomplete").kendoAutoComplete()`) a new instance of the widget is initialized. That instance is associated with the target element
-and can be retrieved later using the [jQuery data](http://api.jquery.com/data/) method.
+Kendo UI widgets are initialized with a jQuery plugin method, as shown above. Calling one of these methods will not return the Kendo UI widget instance, though. Instead, the jQuery convention of returning the selected DOM element is maintained. This allows jQuery methods to be chained on the selected element, but does not provide immediate access to the Kendo UI widget instance.
+
+To get a reference to a widget instance, use the [jQuery data](http://api.jquery.com/data/) method to ask for the control by specifying the control type, prefixed with "kendo".
 
 ### Example - get reference to a Kendo UI widget
 
