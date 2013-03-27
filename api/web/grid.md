@@ -20,7 +20,7 @@ The template used to render alternating rows. Be default renders a table row (`<
 
 > **Important:** The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
 
-> **Info:** Set the `class` of the table row to `k-alt` to get the default alternating look and feel.
+> **Info:** Set the `class` of the table row to `k-alt` to get the default "alternating" look and feel.
 
 #### Example - specify alternating template as a function
 
@@ -84,7 +84,7 @@ The configuration of the grid columns. Set to array of JavaScript objects or str
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: ["name", "age"], // create two columns: bound to "name" and "age"
+      columns: ["name", "age"], // two columns bound to the "name" and "age" fields
       dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
     });
     </script>
@@ -107,57 +107,188 @@ The configuration of the grid columns. Set to array of JavaScript objects or str
 
 ### columns.attributes `Object`
 
-Definition of column cells' HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+HTML attributes of the table cell (`<td>`) rendered for the column.
 
-#### Example
+> HTML attributes which are also JavaScript keywords (such as *class*) should be quoted.
 
+#### Example - specify column HTML attributes
+
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-        columns: [
-            {
-                field: "Price",
-                attributes: {
-                    "class": "myClass",
-                    style: "text-align: right"
-                }
-            }
-        ]
+      columns: [{
+          field: "name",
+          title: "Name",
+          attributes: {
+            "class": "table-cell",
+            style: "text-align: right; font-size: 14px"
+          }
+      }],
+      dataSource: [ { name: "Jane Doe"}, { name:"John Doe"}]
     });
+    </script>
+
+The table cells would look like this: `<td class="table-cell" style="text-align: right; font-size: 14px">...</td>`.
 
 ### columns.command `String|Array`
 
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").
+
+The "edit" built-in command will put the current row in edit mode.
+
+The "destroy" built-in command will delete the current row.
+
+Custom command are supported via the `click` option.
+
+> **Note:** The built-in "edit" and "destroy" commands work *only* if editing is enabled via the `editable` option. The "edit" command supports "inline" and "popup" editing modes.
+
+#### Example - set command as a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name" },
+          { command: "destroy" } // displays the built-in "destroy" command
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+
+#### Example - set command as array of strings
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name" },
+          { command: ["edit", "destroy"] } // displays the built-in "edit" and "destroy" commands
+      ],
+      editable: "inline",
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+
+#### Example - set command as array of objects
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name" },
+          { command: [
+                {
+                    name: "details",    // custom command named "details"
+                    click: function(e) {
+                    }
+                },
+                { name: "destroy" } // the built-in "destroy" command
+            ]
+          }
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
 ### columns.command.name `String`
 
-The unique name of the command. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The name of the command. The supported built-in commands are "edit" and "destroy". Can also be set to a custom value.
+
+#### Example - set the command name
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name" },
+          { command: [{ name: "edit" }]
+      ],
+      editable: "popup",
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
 ### columns.command.text `String`
 
-The text displayed by the command.
+The text displayed by the command button. If not set the `name` option would be used as the button text instead.
+
+#### Example - customize the text of the command
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name" },
+          { command: [{ name: "destroy", text: "Remove" }]
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
 ### columns.command.className `String`
 
-The CSS class of the command.
+The CSS class applied to the command button.
+
+#### Example - set the CSS class of the command
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name" },
+          { command: [{ className: "btn-destroy", name: "destroy", text: "Remove" }]
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+    <style>
+    .btn-destroy {
+        color: red;
+    }
+    </style>
 
 ### columns.command.click `Function`
 
-The JavaScript function executed when the user clicks the command button.
+The JavaScript function executed when the user clicks the command button. The single parameter of the function is a [jQuery Event](http://api.jquery.com/category/events/event-object/).
+The function context (available via the `this` keyword) will be set to the grid instance.
+
+#### Example - handle the click event of the custom command button
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name"
+      }, {
+        command: [{
+          name: "details",
+          click: function(e) {
+            // e.target is the DOM element representing the button
+            var tr = $(e.target).closest("tr"); // get the current table row (tr)
+            // get the data bound to the current table row
+            var data = this.dataItem(tr);
+            alert("Details for: " + data.name);
+          }
+        }]
+      }],
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
 ### columns.editor `Function`
 
-Provides a way to specify custom editor for this column.
+Provides a way to specify a custom editing UI for the column. Use the `container` parameter to create the editing UI.
+
+> **Important**: The editing UI should contain an element whose `name` HTML attribute is set as field to which the column is bound to.
 
 #### Parameters
 
 ##### container `jQuery`
 
-The jQuery object representing the editor container element.
+The jQuery object representing the container element.
 
 ##### options `Object`
 
 ##### options.field `String`
 
-The name of the field which the column represents.
+The name of the field which the column is bound to.
 
 ##### options.format `String`
 
@@ -165,130 +296,179 @@ The format string of the column specified via `columns.format`.
 
 ##### options.model `kendo.data.Model`
 
-The model instance.
+The model instance which the current row is bound to.
 
 ##### options.values `Array`
 
 Array of values specified via `columns.values`.
 
-#### Example
-
-    $(".k-grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50)
-         },
-         editable: true,
-         columns: [
-             {
-                 field: "Name",
-                 editor: function(container, options) {
-                     // create a KendoUI AutoComplete widget as column editor
-                      $('<input name="' + options.field + '"/>')
-                          .appendTo(container)
-                          .kendoAutoComplete({
-                              dataTextField: "ProductName",
-                              dataSource: {
-                                  transport: {
-                                    //...
-                                  }
-                              }
-                          });
-                 }
-             }
-         ]
+#### Example - create a custom column editor using the Kendo UI AutoComplete
+      <div id="grid"></div>
+      <script>
+      $("#grid").kendoGrid({
+        columns: [ {
+            field: "name",
+            editor: function(container, options) {
+             // create an input element
+             var input = $("<input/>");
+             // set its name to the field to which the column is bound ('name' in this case)
+             input.attr("name", options.field);
+             // append it to the container
+             input.appendTo(container);
+             // initialize a Kendo UI AutoComplete
+             input.kendoAutoComplete({
+               dataTextField: "name",
+               dataSource: [
+                 { name: "Jane Doe" },
+                 { name: "John Doe" }
+               ]
+             });
+            }
+        } ],
+        editable: true,
+        dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
       });
+      </script>
 
-### columns.encoded `Boolean`*(default: true)*
+### columns.encoded `Boolean` *(default: true)*
 
- Specified whether the column content is escaped. Disable encoding if the data contains HTML markup.
+If set to `true` the column value will be HTML-encoded before it is displayed. If set to `false` the column value will be displayed as is. By default the column value is HTML-encoded.
+
+#### Example - prevent HTML encoding
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [ {
+          field: "name",
+          encoded: false
+        } ],
+        dataSource: [ { name: "<strong>Jane Doe</strong>" } ]
+    });
+    </script>
+
 
 ### columns.field `String`
 
-The field from the datasource that will be displayed in the column.
+The field which the column will display.
 
-### columns.filterable `Boolean | Object`*(default: true)*
+#### Example - specify the column field
 
-Specifies whether given column is filterable.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          // create a column bound to the "name" field
+          { field: "name" },
+          // create a column bound to the "age" field
+          { field: "age" }
+      ],
+      dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
+    });
+    </script>
+
+### columns.filterable `Boolean|Object` *(default: true)*
+
+If set to `true` the filter menu for this column will be displayed when grid filtering is enabled. If set to `false` the filter menu will not be displayed.
+Can also be set to a JavaScript object which represents the filter menu configuration for this column.
+
+#### Example - disable filtering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+          { field: "name", filterable: false },
+          { field: "age" }
+      ],
+      filterable: true,
+      dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
+    });
+    </script>
 
 ### columns.filterable.ui `String | Function`
 
-Role of the widget shown as column filter menu input element.
+The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
 
-#### Example
-
+#### Example - specify the filter UI as a string
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Event",
-                 filterable: {
-                    ui: "datetimepicker"
-                 }
-            }
-         ]
-      });
+      columns: [ {
+        field: "date",
+        filterable: {
+          ui: "datetimepicker" // use Kendo UI DateTimePicker
+        }
+      } ],
+      filterable: true,
+      dataSource: [ { date: new Date() }, { date: new Date() } ]
+    });
+    </script>
 
-Function which to be called in order to create the widget for the column filter menu input elements.
+#### Example - initialize the filter UI
 
-#### Example
-
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Event",
-                 filterable: {
-                    ui: function(element) {
-                        element.kendoDateTimePicker();
-                    }
-                 }
-            }
-         ]
-      });
+      columns: [ {
+        field: "date",
+        filterable: {
+          ui: function(element) {
+            element.kendoDateTimePicker(); // initialize a Kendo UI DateTimePicker
+          }
+        }
+      } ],
+      filterable: true,
+      dataSource: [ { date: new Date() }, { date: new Date() } ]
+    });
+    </script>
 
 ### columns.format `String`
 
-The format that will be applied on the column cells.
+The format that is applied to the value before it is displayed. Must be in the form "{0:format}" where "format" is a [standard number format](/api/framework/kendo#standard-number-formats),
+[custom number format](/api/framework/kendo#custom-number-formats), [standard date format](/api/framework/kendo#standard-date-formats) or a [custom date format](/api/framework/kendo#custom-date-formats).
 
-#### Example
+> The [kendo.format](/api/framework/kendo#methods-format) function is used to format the value.
 
+#### Example - specify the column format string
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 format: "{0:dd/MMMM/yyyy}"
-            }
-         ]
-      });
+      columns: [ {
+        field: "date",
+        format: "{0: yyyy-MM-dd HH:mm:ss}"
+      }, {
+        field: "number",
+        format: "{0:c}"
+      }],
+      filterable: true,
+      dataSource: [ { date: new Date(), number: 3.1415 } ]
+    });
+    </script>
 
 ### columns.headerAttributes `Object`
 
-Definition of column header cell's HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+HTML attributes of the table header cell (`<th>`) rendered for the column.
 
-#### Example
+> HTML attributes which are also JavaScript keywords (such as *class*) should be quoted.
 
+#### Example - set the column header HTML attributes
+
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-        columns: [
-            {
-                field: "Price",
-                headerAttributes: {
-                    "class": "myHeader",
-                    style: "text-align: right"
-                }
-            }
-        ]
+      columns: [{
+          field: "name",
+          headerAttributes: {
+            "class": "table-header-cell",
+            style: "text-align: right; font-size: 14px"
+          }
+      }],
+      dataSource: [ { name: "Jane Doe"}, { name:"John Doe"}]
     });
+    </script>
+
+The table header cell would look like this: `<th class="table-header-cell" style="text-align: right; font-size: 14px">name</th>`.
 
 ### columns.headerTemplate `String`
 
