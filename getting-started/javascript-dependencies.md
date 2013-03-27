@@ -187,6 +187,7 @@ can be included on a per-widget basis.
 1.  jquery-1.9.1.js
 1.  kendo.core.js
 1.  kendo.data.js
+1.  kendo.userevents.js
 1.  kendo.upload.js (if imagebrowser is used)
 1.  kendo.listview.js (if imagebrowser is used)
 1.  kendo.imagebrowser.js (if imagebrowser is used)
