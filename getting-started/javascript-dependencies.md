@@ -296,6 +296,7 @@ can be included on a per-widget basis.
 
 1.  jquery-1.9.1.js
 1.  kendo.core.js
+1.  kendo.userevents.js
 1.  kendo.numerictextbox.js
 
 ### PanelBar
