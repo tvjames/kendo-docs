@@ -471,7 +471,7 @@ Reloads TabStrip tab(s) via AJAX.
 
 ##### element `Selector`
 
-The target tab(s), specified as a selector, to be reloaded via AJAX.
+The target tab(s), specified as a selector or jQuery object, to be reloaded via AJAX.
 
 #### Returns
 
@@ -489,7 +489,7 @@ Removes a specified tab from a TabStrip.
 
 ##### element `Selector`
 
-The target tab(s), specified as a selector, to be removed.
+The target tab(s), specified as a selector or jQuery object, to be removed.
 
 #### Returns
 
@@ -512,7 +512,7 @@ currently selected tab.
 
 ##### element `Selector|Number`
 
-The target tab(s), specified as a selector or index in the tab group.
+The target tab(s), specified as a selector, jQuery object or index in the tab group.
 
 #### Returns
 
