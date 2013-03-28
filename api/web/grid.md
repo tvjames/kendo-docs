@@ -1140,11 +1140,13 @@ Indicates whether item should be switched to edit mode on click.
 
 Template to be used for rendering the rows in the grid.
 
+> **Important:** The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
+
 #### Example
 
     //template
      <script id="rowTemplate" type="text/x-kendo-tmpl">
-         <tr>
+         <tr data-uid="${ uid }">
              <td>
                  <img src="${ BoxArt.SmallUrl }" alt="${ Name }" />
              </td>
