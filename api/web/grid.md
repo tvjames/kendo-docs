@@ -14,9 +14,37 @@ Represents the Kendo UI Grid widget. Inherits from [Widget](/api/framework/widge
 
 ## Configuration
 
+### columns.aggregates `Array`
+
+The aggregate(s) to be calculated for this column when the grid is grouped by its [field](/api/web/grid/configuration-columns.field).
+The supported aggregates are "average", "count", "max", "min" and "sum".
+
+#### Example - set column aggregates
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "firstName", groupable: false },
+          { field: "lastName" }, /* group by this column to see the footer template */
+          { field: "age",
+            groupable: false,
+            aggregates: [ "count", "min", "max" ],
+            groupFooterTemplate: "age total: #: count #, min: #: min #, max: #: max #"
+          }
+        ],
+        groupable: true,
+        dataSource: {
+          data: [
+            { firstName: "Jane", lastName: "Doe", age: 30 },
+            { firstName: "John", lastName: "Doe", age: 33 }
+          ]
+        }
+    });
+    </script>
+
 ### altRowTemplate `String|Function`
 
-The template used to render alternating rows. Be default renders a table row (`<tr>`) for every data source item.
+The [template](/api/framework/kendo#methods-template) which is used to render alternating rows. Be default renders a table row (`<tr>`) for every data source item.
 
 > **Important:** The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
 
@@ -84,8 +112,8 @@ The configuration of the grid columns. Set to array of JavaScript objects or str
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: ["name", "age"], // two columns bound to the "name" and "age" fields
-      dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
+        columns: ["name", "age"], // two columns bound to the "name" and "age" fields
+        dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
     });
     </script>
 
@@ -94,14 +122,14 @@ The configuration of the grid columns. Set to array of JavaScript objects or str
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [{
+        columns: [{
           field: "name",// create a column bound to the "name" field
           title: "Name" // set its title to "Name"
-      }, {
+        }, {
           field: "age",// create a column bound to the "age" field
           title: "Age" // set its title to "Age"
-      }],
-      dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
+        }],
+        dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
     });
     </script>
 
@@ -116,15 +144,15 @@ HTML attributes of the table cell (`<td>`) rendered for the column.
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [{
+        columns: [{
           field: "name",
           title: "Name",
           attributes: {
             "class": "table-cell",
             style: "text-align: right; font-size: 14px"
           }
-      }],
-      dataSource: [ { name: "Jane Doe"}, { name:"John Doe"}]
+        }],
+        dataSource: [ { name: "Jane Doe"}, { name:"John Doe"}]
     });
     </script>
 
@@ -146,12 +174,12 @@ Custom command are supported via the `click` option.
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name" },
           { command: "destroy" } // displays the built-in "destroy" command
-      ],
-      editable: true,
-      dataSource: [ { name: "Jane Doe" } ]
+        ],
+        editable: true,
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
 
@@ -159,12 +187,12 @@ Custom command are supported via the `click` option.
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name" },
           { command: ["edit", "destroy"] } // displays the built-in "edit" and "destroy" commands
-      ],
-      editable: "inline",
-      dataSource: [ { name: "Jane Doe" } ]
+        ],
+        editable: "inline",
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
 
@@ -172,7 +200,7 @@ Custom command are supported via the `click` option.
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name" },
           { command: [
                 {
@@ -183,9 +211,9 @@ Custom command are supported via the `click` option.
                 { name: "destroy" } // the built-in "destroy" command
             ]
           }
-      ],
-      editable: true,
-      dataSource: [ { name: "Jane Doe" } ]
+        ],
+        editable: true,
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
 
@@ -197,12 +225,12 @@ The name of the command. The supported built-in commands are "edit" and "destroy
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name" },
           { command: [{ name: "edit" }]
-      ],
-      editable: "popup",
-      dataSource: [ { name: "Jane Doe" } ]
+        ],
+        editable: "popup",
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
 
@@ -214,12 +242,12 @@ The text displayed by the command button. If not set the `name` option would be 
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name" },
           { command: [{ name: "destroy", text: "Remove" }]
-      ],
-      editable: true,
-      dataSource: [ { name: "Jane Doe" } ]
+        ],
+        editable: true,
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
 
@@ -231,12 +259,12 @@ The CSS class applied to the command button.
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name" },
           { command: [{ className: "btn-destroy", name: "destroy", text: "Remove" }]
-      ],
-      editable: true,
-      dataSource: [ { name: "Jane Doe" } ]
+        ],
+        editable: true,
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
     <style>
@@ -254,21 +282,20 @@ The function context (available via the `this` keyword) will be set to the grid 
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [ {
-        field: "name"
-      }, {
-        command: [{
-          name: "details",
-          click: function(e) {
-            // e.target is the DOM element representing the button
-            var tr = $(e.target).closest("tr"); // get the current table row (tr)
-            // get the data bound to the current table row
-            var data = this.dataItem(tr);
-            alert("Details for: " + data.name);
-          }
-        }]
-      }],
-      dataSource: [ { name: "Jane Doe" } ]
+        columns: [
+            { field: "name" },
+            { command: [ {
+              name: "details",
+              click: function(e) {
+                // e.target is the DOM element representing the button
+                var tr = $(e.target).closest("tr"); // get the current table row (tr)
+                // get the data bound to the current table row
+                var data = this.dataItem(tr);
+                alert("Details for: " + data.name);
+              }
+            } ]
+        }],
+        dataSource: [ { name: "Jane Doe" } ]
     });
     </script>
 
@@ -303,9 +330,10 @@ The model instance which the current row is bound to.
 Array of values specified via `columns.values`.
 
 #### Example - create a custom column editor using the Kendo UI AutoComplete
-      <div id="grid"></div>
-      <script>
-      $("#grid").kendoGrid({
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
         columns: [ {
             field: "name",
             editor: function(container, options) {
@@ -327,8 +355,8 @@ Array of values specified via `columns.values`.
         } ],
         editable: true,
         dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
-      });
-      </script>
+    });
+    </script>
 
 ### columns.encoded `Boolean` *(default: true)*
 
@@ -350,39 +378,41 @@ If set to `true` the column value will be HTML-encoded before it is displayed. I
 
 ### columns.field `String`
 
-The field which the column will display.
+The field to which the column is bound. The value of this field is displayed by the column during data binding.
 
 #### Example - specify the column field
 
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           // create a column bound to the "name" field
           { field: "name" },
           // create a column bound to the "age" field
           { field: "age" }
-      ],
-      dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
+        ],
+        dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
     });
     </script>
 
 ### columns.filterable `Boolean|Object` *(default: true)*
 
-If set to `true` the filter menu for this column will be displayed when grid filtering is enabled. If set to `false` the filter menu will not be displayed.
-Can also be set to a JavaScript object which represents the filter menu configuration for this column.
+If set to `true` a filter menu will be displayed for this column when filtering is enabled for the grid. If set to `false` the filter menu will not be displayed. By default a filter menu is displayed
+for all columns when filtering is enabled.
+
+Can be set to a JavaScript object which represents the filter menu configuration.
 
 #### Example - disable filtering
 
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [
+        columns: [
           { field: "name", filterable: false },
           { field: "age" }
-      ],
-      filterable: true,
-      dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
+        ],
+        filterable: true,
+        dataSource: [ { name: "Jane", age: 30 }, { name:"John", age: 33 }]
     });
     </script>
 
@@ -394,14 +424,14 @@ The role data attribute of the widget used in the filter menu or a JavaScript fu
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [ {
-        field: "date",
-        filterable: {
-          ui: "datetimepicker" // use Kendo UI DateTimePicker
-        }
-      } ],
-      filterable: true,
-      dataSource: [ { date: new Date() }, { date: new Date() } ]
+        columns: [ {
+            field: "date",
+            filterable: {
+              ui: "datetimepicker" // use Kendo UI DateTimePicker
+            }
+        } ],
+        filterable: true,
+        dataSource: [ { date: new Date() }, { date: new Date() } ]
     });
     </script>
 
@@ -410,16 +440,51 @@ The role data attribute of the widget used in the filter menu or a JavaScript fu
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [ {
-        field: "date",
-        filterable: {
-          ui: function(element) {
-            element.kendoDateTimePicker(); // initialize a Kendo UI DateTimePicker
+        columns: [ {
+            field: "date",
+            filterable: {
+              ui: function(element) {
+                element.kendoDateTimePicker(); // initialize a Kendo UI DateTimePicker
+              }
+            }
+        } ],
+        filterable: true,
+        dataSource: [ { date: new Date() }, { date: new Date() } ]
+    });
+    </script>
+
+### columns.footerTemplate `String|Footer`
+The [template](/api/framework/kendo#methods-template) which is used to render the footer table cell for the column.
+
+The fields which can be used in the template are:
+
+* average - the value of the "average" aggregate (if specified)
+* count - the value of the "count" aggregate (if specified)
+* max - the value of the "max" aggregate (if specified)
+* min - the value of the "min" aggregate (if specified)
+* sum - the value of the "sum" aggregate (if specified)
+
+#### Example - specify column footer template
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name"},
+          { field: "age",
+            footerTemplate: "Min: #: min # Max: #: max #"
           }
+        ],
+        dataSource: {
+          data: [
+            { name: "Jane Doe", age: 30 },
+            { name: "John Doe", age: 33 }
+          ],
+          aggregate: [
+              { field: "age", aggregate: "min" },
+              { field: "age", aggregate: "max" }
+          ]
         }
-      } ],
-      filterable: true,
-      dataSource: [ { date: new Date() }, { date: new Date() } ]
     });
     </script>
 
@@ -434,21 +499,87 @@ The format that is applied to the value before it is displayed. Must be in the f
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [ {
-        field: "date",
-        format: "{0: yyyy-MM-dd HH:mm:ss}"
-      }, {
-        field: "number",
-        format: "{0:c}"
-      }],
-      filterable: true,
-      dataSource: [ { date: new Date(), number: 3.1415 } ]
+        columns: [ {
+          field: "date",
+          format: "{0: yyyy-MM-dd HH:mm:ss}"
+        }, {
+          field: "number",
+          format: "{0:c}"
+        }],
+        filterable: true,
+        dataSource: [ { date: new Date(), number: 3.1415 } ]
     });
     </script>
 
+### columns.groupHeaderTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which is used to render the group header when the grid is grouped by the column field. By default the name of the field
+and the current group value is displayed.
+
+The fields which can be used in the template are:
+
+* value - the current group value
+* average - the value of the "average" aggregate (if specified)
+* count - the value of the "count" aggregate (if specified)
+* max - the value of the "max" aggregate (if specified)
+* min - the value of the "min" aggregate (if specified)
+* sum - the value of the "sum" aggregate (if specified)
+
+#### Example - set the group header template
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name"},
+          { field: "age",
+            groupHeaderTemplate: "Age: #= value # total: #= count #"
+          }
+        ],
+        dataSource: {
+          data: [
+            { name: "Jane Doe", age: 30 },
+            { name: "John Doe", age: 30 }
+          ],
+          group: { field: "age", aggregates: [ { field: "age", aggregate: "count" }] }
+        }
+    });
+
+### columns.groupFooterTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which is used to render the group footer when the grid is grouped by the column field. By default the group footer is not displayed.
+
+The fields which can be used in the template are:
+
+* average - the value of the "average" aggregate (if specified)
+* count - the value of the "count" aggregate (if specified)
+* max - the value of the "max" aggregate (if specified)
+* min - the value of the "min" aggregate (if specified)
+* sum - the value of the "sum" aggregate (if specified)
+
+#### Example - set the group header template
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name"},
+          { field: "age",
+            groupFooterTemplate: "Total: #= count #"
+          }
+        ],
+        dataSource: {
+          data: [
+            { name: "Jane Doe", age: 30 },
+            { name: "John Doe", age: 30 }
+          ],
+          group: { field: "age", aggregates: [ { field: "age", aggregate: "count" }] }
+        }
+    });
+
 ### columns.headerAttributes `Object`
 
-HTML attributes of the table header cell (`<th>`) rendered for the column.
+HTML attributes of the column header. The grid renders a table header cell (`<th>`) for every column. The `headerAttributes` option can be used to set the HTML attributes of that `th`.
 
 > HTML attributes which are also JavaScript keywords (such as *class*) should be quoted.
 
@@ -457,197 +588,224 @@ HTML attributes of the table header cell (`<th>`) rendered for the column.
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-      columns: [{
-          field: "name",
-          headerAttributes: {
-            "class": "table-header-cell",
-            style: "text-align: right; font-size: 14px"
-          }
-      }],
-      dataSource: [ { name: "Jane Doe"}, { name:"John Doe"}]
+        columns: [{
+            field: "name",
+            headerAttributes: {
+              "class": "table-header-cell",
+              style: "text-align: right; font-size: 14px"
+            }
+        }],
+        dataSource: [ { name: "Jane Doe"}, { name:"John Doe"}]
     });
     </script>
 
 The table header cell would look like this: `<th class="table-header-cell" style="text-align: right; font-size: 14px">name</th>`.
 
-### columns.headerTemplate `String`
+### columns.headerTemplate `String|Function`
 
-The template for column's header cell. If sorting is enabled, it will be wrapped in a `<a class="k-link">` element, so the template should consist of only inline elements
-in order to have valid HTML markup in the Grid.
+The [template](/api/framework/kendo#methods-template) which is used to render the column header content. By default the value of the [title](#configuration-columns.title) column option
+is displayed in the column header cell.
 
-#### Example
+> **Important:** If sorting is enabled, the column header content will be wrapped in a `<a>` element. As a result the template **must** contain only inline elements.
 
+#### Example - column header template as a string
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         columns: [
-             {
-                 headerTemplate: '<input type="checkbox" id="checkAll" />'
-            }
-         ]
-      });
+        columns: [ {
+            field: "name",
+            headerTemplate: '<input type="checkbox" id="check-all" /><label for="check-all">Check All</label>'
+        }],
+        dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
 
-### columns.hidden `Boolean`*(default: false)*
+### columns.hidden `Boolean` *(default: false)*
 
-Specifies whether given column is hidden.
+If set to `true` the column will not be displayed in the grid. By default all columns are displayed in the grid.
 
-### columns.sortable `Boolean`*(default: true)*
-
- Specifies whether given column is sortable.
-
-### columns.template `String`
-
-The template for column's cells.
-
-#### Example
-
+#### Example - hide columns
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ]
-      });
+        columns: [
+            { hidden: true, field: "id" },
+            { field: "name" }
+        ],
+        dataSource: [ { id: 1, name: "Jane Doe" }, { id: 2, name: "John Doe" } ]
+    });
+    </script>
 
-### columns.aggregates `Array`
+### columns.sortable `Boolean` *(default: true)*
 
-The aggregates to be used when grouping is applied
+If set to `true` the user can click the column header and sort the grid by the column [field](#configuration-columns.field) (when sorting is enabled for the grid). If set to `false` sorting will
+be disabled for this column. By default all columns are sortable.
 
-#### Example
-
+#### Example - disable sorting
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "UnitPrice",
-                 aggregates: ["count", "sum"]
-             }
-         ]
-      });
+        columns: [
+            { sortable: false, field: "id" },
+            { field: "name" }
+        ],
+        sortable: true,
+        dataSource: [ { id: 1, name: "Jane Doe" }, { id: 2, name: "John Doe" } ]
+    });
+    </script>
 
+### columns.template `String|Function`
 
-### columns.groupHeaderTemplate `String`
+The [template](/api/framework/kendo#methods-template) which is used to render the column content. The Kendo UI Grid widget renders table rows (`<tr>`) which represent the data source items.
+Each table row consists of table cells (`<td>`) which represent the grid columns. By default the HTML-encoded value of the [field](#configuration-columns.field) is displayed in the column.
 
-The template for group header item.
+Use the `template` to customize the way the column displays its value.
 
-#### Example
+#### Example - set the template as a string (wrap the column value in HTML)
 
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10,
-             group: { field: "BirthDate" }
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 groupHeaderTemplate: 'Birth Date: #= value #'
-            }
-         ]
-      });
+        columns: [ {
+          field: "name",
+          template: "<strong>#: name # </strong>"
+        }],
+        dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
 
-### columns.groupFooterTemplate `String`
+#### Example - set the template as a function returned by kendo.template
 
-The template for column's cell in group footer item.
-
-#### Example
-
+    <div id="grid"></div>
+    <script id="name-template" type="text/x-kendo-template">
+      <strong>#: name #</strong>
+    </script>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10,
-             group: { field: "BirthDate" }
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 groupFooterTemplate: 'custom text'
-            }
-         ]
-      });
+        columns: [ {
+          field: "name",
+          template: kendo.template($("#name-template").html())
+        }],
+        dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
 
-### columns.footerTemplate `String`
-
-The template for column's cell in footer item.
-
-#### Example
-
+#### Example - set the template as a function which returns a string
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 footerTemplate: 'custom footer text'
-            }
-         ]
-      });
+        columns: [ {
+          field: "name",
+          template: function(dataItem) {
+              return "<strong>" + kendo.htmlEncode(dataItem.name) + "</strong>";
+          }
+        }],
+        dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
 
 ### columns.title `String`
 
-The text that will be displayed in the column header.
+The text that is displayed in the column header cell. If not set the [field](#configuration-columns.field) will be used.
 
-### columns.width `String`
+#### Example - set the title of the column
 
-The width of the column.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [ {
+          field: "name",
+          title: "Name"
+        }],
+        dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+### columns.width `String|Number`
+
+The width of the column. Numeric values are treated as pixels.
+
+> **Important:** If the total sum of the column widths exceeds the width of the grid a horizontal scrollbar will appear (if scrolling is enabled). If that sum is less than the width of the grid
+one of the columns would stretch out to occupy the remaining space. Thus it is a good idea to have a column without specified width.
+
+#### Example - set the column width as a string
+     <div id="grid"></div>
+     <script>
+     $("#grid").kendoGrid({
+         columns: [
+           { field: "name", width: "200px" },
+           { field: "age" }
+         ],
+         dataSource: [
+             { name: "Jane Doe", age: 30 },
+             { name: "John Doe", age: 33 }
+         ]
+     });
+     </script>
+
+#### Example - set the column width as a number
+     <div id="grid"></div>
+     <script>
+     $("#grid").kendoGrid({
+         columns: [
+           { field: "name", width: 200 },
+           { field: "age" }
+         ],
+         dataSource: [
+             { name: "Jane Doe", age: 30 },
+             { name: "John Doe", age: 33 }
+         ]
+     });
+     </script>
 
 ### columns.values `Array`
 
-An array of values that will be used in a foreign key column. Each item in the array should have a `text` and `value` field.
+An array of values that will be displayed instead of the bound value. Each item in the array must have a `text` and `value` fields.
 
-#### Example
+Useful to display user-friendly text instead of database values.
 
-     var categories = [{
-             "value": 1,
-             "text": "Beverages"
-         },{
-             "value": 2,
-             "text": "Condiments"
-         },{
-             "value": 3,
-             "text": "Confections"
-         }
-     ];
+#### Example - specify column values
 
-     $("#grid").kendoGrid({
-         dataSource: productsDataSource,
-         columns: [
-             { field: "ProductName", title: "Product Name" },
-             { field: "CategoryID", values: categories, title: "Category" },
-             { field: "UnitPrice", title:"Unit Price", format: "{0:c}" }
-         ]
-     });
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "productName" },
+          { field: "category", values: [
+            { text: "Beverages", value: 1 },
+            { text: "Food", value: 2 }
+          ] }
+        ],
+        dataSource: [
+            { productName: "Tea", category: 1 },
+            { productName: "Ham", category: 2 }
+        ]
+    });
+    </script>
+
+This example displays "Beverages" and "Food" in the "category" column instead of "1" and "2".
 
 ### columns.menu `Boolean`
 
-Indicates whether the column should be visible in column menu.
+If set to `true` the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their `field` set).
+
+#### Example - hide a column from the column menu
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "id", menu: false },
+          { field: "productName" },
+          { field: "age" }
+        ],
+        columnMenu: true,
+        dataSource: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
 ### columnMenu `Boolean | Object`
 
@@ -1140,13 +1298,11 @@ Indicates whether item should be switched to edit mode on click.
 
 Template to be used for rendering the rows in the grid.
 
-> **Important:** The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
-
 #### Example
 
     //template
      <script id="rowTemplate" type="text/x-kendo-tmpl">
-         <tr data-uid="${ uid }">
+         <tr>
              <td>
                  <img src="${ BoxArt.SmallUrl }" alt="${ Name }" />
              </td>
