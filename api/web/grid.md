@@ -1153,48 +1153,138 @@ See the [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html)
 
 ### editable `Boolean|Object` *(default: false)*
 
-Indicates whether editing is enabled/disabled.
+If set to `true` the user would be able to edit the data to which the grid is bound to. By default editing is disabled.
 
-#### Example
+Can be set to a string ("inline", "incell" or "popup") to specify the editing mode. The default editing mode is "incell".
 
+Can be set to a JavaScript object which represents the editing configuration.
+
+> **Important:** The "inline" and "popup" editing modes are triggered by the "edit" column command. Thus it is required to have a column with an "edit" command.
+
+#### Example - enable editing
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ]
-         toolbar: [
-             "create",
-             { name: "save", text: "Save This Record" },
-             { name: "cancel", template: "<img src="icons/cancel.png' rel='cancel' />" }
-         ],
-         editable: {
-             update: true, // puts the row in edit mode when it is clicked
-             destroy: false, // does not remove the row when it is deleted, but marks it for deletion
-             confirmation: "Are you sure you want to remove this item?"
-         }
-     });
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        editable: true
+    });
+    </script>
 
-### editable.confirmation `Boolean | String`
+#### Example - enable popup editing
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" },
+          { command: "edit" }
+        ],
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        editable: "popup"
+    });
+    </script>
 
-Defines the text that will be used in confirmation box when delete an item.
+### editable.confirmation `Boolean | String` *(default: true)*
 
-### editable.createAt `String`
+If set to `true` the grid will display a confirmation dialog when the user clicks the "destroy" command button.
 
-Indicates whether the created record should be inserted at the top or at the bottom of the current page. Available values are "top" and "bottom".
+Can be set to a string which will be used as the confirmation text.
 
-### editable.destroy `Boolean`
+#### Example - disable delete confirmation
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       editable: {
+         confirmation: false
+       }
+    });
+    </script>
 
-Indicates whether item should be deleted when click on delete button.
+#### Example - set delete confirmation text
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       editable: {
+         confirmation: "Are you sure that you want to delete this record?"
+       }
+    });
+    </script>
+
+### editable.createAt `String` *(default: "top")*
+
+The positon at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
+
+#### Example - insert new data items at the bottom
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      editable: {
+        createAt: "bottom"
+      },
+      toolbar: ["create"]
+    });
+    </script>
+
+### editable.destroy `Boolean` *(default: true)*
+
+If set to `true` the user can delete data items from the grid by clicking the "destroy" command button. Deleting is enabled by default.
+
+#### Example - disable deleting
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      editable: {
+        destroy: false
+      },
+      toolbar: ["create"]
+    });
+    </script>
 
 ### editable.mode `String`
 
