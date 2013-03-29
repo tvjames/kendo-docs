@@ -23,7 +23,7 @@ The [template](/api/framework/kendo#methods-template) which is used to render al
 
 > **Info:** Set the `class` of the table row to `k-alt` to get the default "alternating" look and feel.
 
-#### Example - specify alternating template as a function
+#### Example - specify alternating row template as a function
 
     <div id="grid"></div>
     <script id="alt-template" type="text/x-kendo-template">
@@ -36,12 +36,15 @@ The [template](/api/framework/kendo#methods-template) which is used to render al
     </script>
     <script>
     $("#grid").kendoGrid({
-        dataSource: [ { name: "Jane Doe", age: 30 }, { name: "John Doe", age: 33 } ],
+        dataSource: [
+            { name: "Jane Doe", age: 30 },
+            { name: "John Doe", age: 33 }
+        ],
         altRowTemplate: kendo.template($("#alt-template").html())
     });
     </script>
 
-#### Example - specify alternating template as a string
+#### Example - specify alternating row template as a string
 
     <div id="grid"></div>
     <script>
@@ -796,7 +799,7 @@ If set to `true` the column will be visible in the grid column menu. By default 
     $("#grid").kendoGrid({
         columns: [
           { field: "id", menu: false },
-          { field: "productName" },
+          { field: "name" },
           { field: "age" }
         ],
         columnMenu: true,
@@ -807,81 +810,346 @@ If set to `true` the column will be visible in the grid column menu. By default 
     });
     </script>
 
-### columnMenu `Boolean|Object`
+### columnMenu `Boolean|Object` *(default: false)*
 
-Enables column header menu
+If set to `true` the grid will display the column menu when the user clicks the chevron icon in the column headers. The column menu allows the user to show and hide columns, filter and sort (if filtering and sorting are enabled).
+By default the column menu is not enabled.
 
-### columnMenu.columns `Boolean`
+Can be set to a JavaScript object which represents the column menu configuration.
 
-Enable/disable columns section in column header menu.
+#### Example - enable the column menu
 
-### columnMenu.filterable `Boolean`
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
-Enable/disable filter section in column header menu.
+### columnMenu.columns `Boolean` *(default: true)*
 
-### columnMenu.sortable `Boolean`
+If set to `true` the column menu would allow the user to select (show and hide) grid columns. By default the column menu allows column selection.
 
-Enable/disable sorting section in column header menu.
+#### Example - disable column selection
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          columns: false
+        },
+        sortable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
+
+### columnMenu.filterable `Boolean` *(default: true)*
+
+If set to `true` the column menu would allow the user to filter the grid. By default the column menu allows the user to filter if grid filtering is enabled.
+
+#### Example - disable column menu filtering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          filterable: false
+        },
+        filterable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
+
+### columnMenu.sortable `Boolean` *(default: true)*
+
+If set to `true` the column menu would allow the user to sort the grid by the column field. By default the column menu allows the user to sort if grid sorting is enabled.
+
+> **Note:** If this option is set to `false` the user could still sort by clicking the column header cell.
+
+#### Example - disable column menu sorting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          sortable: false
+        },
+        sortable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
 ### columnMenu.messages `Object`
 
-Sets the columnMenu messages.
+The text messages displayed in the column menu. Use it to customize or localize the column menu messages.
 
-#### Example
+#### Example - customize column menu messages
 
-    columnMenu: {
-        messages: {
-            sortAscending: "Sort Ascending",
-            sortDescending: "Sort Descending",
-            filter: "Filter",
-            columns: "Columns"
-        }
-    }
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          messages: {
+            columns: "Choose columns",
+            filter: "Apply filter",
+            sortAscending: "Sort (asc)",
+            sortDescending: "Sort (desc)"
+          }
+        },
+        sortable: true,
+        filterable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
-### columnMenu.messages.columns `String`
+### columnMenu.messages.columns `String` *(default: "Columns")*
 
-Set the text of the columns section in column header menu.
+The text message displayed for the column selection menu item.
 
-### columnMenu.messages.filter `String`
+#### Example - set the column selection message
 
-Set the text of the filter section in column header menu.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          messages: {
+            columns: "Choose columns"
+          }
+        },
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
-### columnMenu.messages.sortAscending `String`
+### columnMenu.messages.filter `String` *(default: "Filter")*
 
-Set the text of the sortAscending section in column header menu.
+The text message displayed for the filter menu item.
+
+#### Example - set the filter message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          messages: {
+            filter: "Apply filter",
+          }
+        },
+        filterable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
+
+### columnMenu.messages.sortAscending `String` *(default: "Sort Ascending")*
+
+The text message displayed for the menu item which performs ascending sort.
+
+#### Example - set the sort ascending message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          messages: {
+            sortAscending: "Sort (asc)",
+          }
+        },
+        sortable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
 ### columnMenu.messages.sortDescending `String`
 
-Set the text of the sortDescending section in column header menu.
+The text message displayed for the menu item which performs descending sort.
 
-### dataSource `kendo.data.DataSource | Object`
+#### Example - set the sort descending message
 
-Instance of DataSource or Object with DataSource configuration.
-
-#### Example
-
-    var sharedDataSource = new kendo.data.DataSource({
-         data: [{title: "Star Wars: A New Hope", year: 1977}, {title: "Star Wars: The Empire Strikes Back", year: 1980}],
-         pageSize: 1
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        columnMenu: {
+          messages: {
+            sortDescending: "Sort (desc)",
+          }
+        },
+        sortable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
     });
+    </script>
 
+### dataSource `Object|Array|kendo.data.DataSource`
+
+The data source of the widget which is used display table rows. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.DataSource](/api/framework/datasource)
+instance.
+
+If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.DataSource](/api/framework/datasource) instance using that value as data source configuration.
+
+If the `dataSource` option is an existing [kendo.data.DataSource](/api/framework/datasource) instance the widget will use that instance and will **not** initialize a new one.
+
+#### Example - set dataSource as a JavaScript object
+
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: sharedDataSource
-     });
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        dataSource: {
+          data: [
+            { name: "Jane Doe", age: 30 },
+            { name: "John Doe", age: 33 }
+          ]
+        }
+    });
+    </script>
 
-#### Example
+#### Example - set dataSource as a JavaScript array
 
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: [{title: "Star Wars: A New Hope", year: 1977}, {title: "Star Wars: The Empire Strikes Back", year: 1980}],
-             pageSize: 1
-         }
-     });
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
-### detailTemplate `Function`
+#### Example - set dataSource as an existing kendo.data.DataSource instance
 
-Template to be used for rendering the detail rows in the grid.
-See the [**Detail Template**](http://demos.kendoui.com/web/grid/detailtemplate.html) example.
+    <div id="grid"></div>
+    <script>
+    var dataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                url: "/remote-service-url",
+                type: "POST"
+            }
+        }
+    });
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        dataSource: dataSource
+    });
+    </script>
+
+### detailTemplate `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which is used to render the detail rows.
+
+See the [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html) example.
+
+#### Example - specify detail template as a function
+    <script id="detail-template">
+      <div>
+        Name: #: name #
+      </div>
+      <div>
+        Age: #: age #
+      </div>
+    </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        detailTemplate: kendo.template($("#detail-template").html())
+    });
+    </script>
+
+#### Example - specify detail template as a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    </script>
 
 ### editable `Boolean|Object` *(default: false)*
 
