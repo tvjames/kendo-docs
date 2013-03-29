@@ -448,8 +448,6 @@ Verify that this is an actual XHR before accessing any other fields.
 Fires when one or more files are about to be uploaded.
 Cancelling the event will prevent the upload.
 
-
-
 Note: The upload event fires only when the upload is in
 [async mode](http://www.kendoui.com/documentation/ui-widgets/upload/modes.aspx#async).
 
@@ -489,3 +487,29 @@ List of the files that will be uploaded. Each file has:
 
 Optional object that will be
 sent to the save handler in the form of key/value pairs.
+
+##### e.XMLHttpRequest `Object`
+
+Note: Will be *undefined* if the browser does not support File API.
+
+The XMLHttpRequest instance that will be used to carry out the upload.
+The request will be in UNSENT state.
+
+##### Example
+
+    $("#photos").kendoUpload({
+        // ...
+        upload: onUpload
+    });
+
+    function onUpload(e) {
+        var xhr = e.XMLHttpRequest;
+        if (xhr) {
+            xhr.addEventListener("readystatechange", function(e) {
+                if (xhr.readyState == 1 /* OPENED */) {
+                    xhr.setRequestHeader("X-Foo", "Bar");
+                }
+            });
+        }
+    }
+
