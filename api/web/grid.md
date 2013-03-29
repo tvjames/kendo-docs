@@ -14,33 +14,6 @@ Represents the Kendo UI Grid widget. Inherits from [Widget](/api/framework/widge
 
 ## Configuration
 
-### columns.aggregates `Array`
-
-The aggregate(s) to be calculated for this column when the grid is grouped by its [field](/api/web/grid/configuration-columns.field).
-The supported aggregates are "average", "count", "max", "min" and "sum".
-
-#### Example - set column aggregates
-    <div id="grid"></div>
-    <script>
-    $("#grid").kendoGrid({
-        columns: [
-          { field: "firstName", groupable: false },
-          { field: "lastName" }, /* group by this column to see the footer template */
-          { field: "age",
-            groupable: false,
-            aggregates: [ "count", "min", "max" ],
-            groupFooterTemplate: "age total: #: count #, min: #: min #, max: #: max #"
-          }
-        ],
-        groupable: true,
-        dataSource: {
-          data: [
-            { firstName: "Jane", lastName: "Doe", age: 30 },
-            { firstName: "John", lastName: "Doe", age: 33 }
-          ]
-        }
-    });
-    </script>
 
 ### altRowTemplate `String|Function`
 
@@ -133,6 +106,33 @@ The configuration of the grid columns. Set to array of JavaScript objects or str
     });
     </script>
 
+### columns.aggregates `Array`
+
+The aggregate(s) to be calculated for this column when the grid is grouped by its [field](/api/web/grid/configuration-columns.field).
+The supported aggregates are "average", "count", "max", "min" and "sum".
+
+#### Example - set column aggregates
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "firstName", groupable: false },
+          { field: "lastName" }, /* group by this column to see the footer template */
+          { field: "age",
+            groupable: false,
+            aggregates: [ "count", "min", "max" ],
+            groupFooterTemplate: "age total: #: count #, min: #: min #, max: #: max #"
+          }
+        ],
+        groupable: true,
+        dataSource: {
+          data: [
+            { firstName: "Jane", lastName: "Doe", age: 30 },
+            { firstName: "John", lastName: "Doe", age: 33 }
+          ]
+        }
+    });
+    </script>
 ### columns.attributes `Object`
 
 HTML attributes of the table cell (`<td>`) rendered for the column.
@@ -807,7 +807,7 @@ If set to `true` the column will be visible in the grid column menu. By default 
     });
     </script>
 
-### columnMenu `Boolean | Object`
+### columnMenu `Boolean|Object`
 
 Enables column header menu
 
