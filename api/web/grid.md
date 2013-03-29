@@ -1286,75 +1286,402 @@ If set to `true` the user can delete data items from the grid by clicking the "d
     });
     </script>
 
-### editable.mode `String`
+### editable.mode `String` *(default: "incell")
 
-Indicates which of the available edit modes(incell(default)/inline/popup) will be used
+The editing mode to use. The supported editing modes are "incell", "inline" and "popup".
 
-### editable.template `String`
+> **Important:** The "inline" and "popup" editing modes are triggered by the "edit" column command. Thus it is required to have a column with an "edit" command.
 
-Template which will be use during popup editing
+#### Example - specify inline editing mode
 
-### editable.update `Boolean`
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "inline"
+      }
+    });
+    </script>
 
-Indicates whether item should be switched to edit mode on click.
+### editable.template `String|Function`
 
-### filterable `Boolean | Object`*(default: false)*
+The [template](/api/framework/kendo#methods-template) which is used to render popup editor.
 
- Indicates whether filtering is enabled/disabled.
+The template should contain elements whose `name` HTML attributes are set as the editable fields. This is how the grid will know
+which field to update. The other option is to use [MVVM](/getting-started/framework/mvvm/overview) bindings in order to bind HTML elements to data item fields.
 
-### filterable.extra `Boolean`*(default: true)*
+> **Note:** Use the `role` data attribute to initialize Kendo UI widgets in the template. Check [data attribute initialization](/getting-started/data-attribute-initialization) for more info.
 
- Indicates whether second filter input is enabled/disabled.
+#### Example - customize the popup editor
+
+    <script id="popup-editor" type="text/x-kendo-template">
+      <h3>Edit Person</h3>
+      <p>
+        <label>Name:<input name="name" /></label>
+      </p>
+      <p>
+        <label>Age: <input data-role="numerictextbox" name="age" /></label>
+      </p>
+    </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "popup",
+        template: kendo.template($("#popup-editor").html())
+      }
+    });
+    </script>
+
+#### Example - using MVVM in the popup editor template
+
+    <script id="popup-editor" type="text/x-kendo-template">
+      <h3>Edit Person</h3>
+      <p>
+        <label>Name:<input data-bind="value: name" /></label>
+      </p>
+      <p>
+        <label>Age:<input data-role="numerictextbox" data-bind="value:age" /></label>
+      </p>
+    </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "popup",
+        template: kendo.template($("#popup-editor").html())
+      }
+    });
+    </script>
+
+### editable.update `Boolean` *(default: true)*
+
+If set to `true` the user can edit data items when editing is enabled.
+
+#### Example - enable only deleting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+      ],
+      editable: {
+        mode: "incell",
+        update: false
+      }
+    });
+    </script>
+
+### filterable `Boolean | Object` *(default: false)*
+
+If set to `true` the user can filter the data source using the grid filter menu. Filtering is disabled by default.
+
+Can be set to a JavaScript object which represents the column menu configuration.
+
+#### Example - enable the filtering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        filterable: true,
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
+
+### filterable.extra `Boolean` *(default: true)*
+
+If set to `true` the filter menu allows the user to input a second criteria.
+
+#### Example - disable the extra filtering criteria
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+          { field: "name" },
+          { field: "age" }
+        ],
+        filterable: {
+          extra: false
+        },
+        dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+    });
+    </script>
 
 ### filterable.messages `Object`
 
- Sets the filter menu messages.
+The text messages displayed in the filter menu. Use it to customize or localize the filter menu messages.
 
-#### Example
-
-    filterable: {
+#### Example - customize filter menu messages
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
         messages: {
-            info: "Custom header text:", // sets the text on top of the filter menu
-            filter: "CustomFilter", // sets the text for the "Filter" button
-            clear: "CustomClear", // sets the text for the "Clear" button
-
-            // when filtering boolean numbers
-            isTrue: "custom is true", // sets the text for "isTrue" radio button
-            isFalse: "custom is false", // sets the text for "isFalse" radio button
-
-            //changes the text of the "And" and "Or" of the filter menu
-            and: "CustomAnd",
-            or: "CustomOr"
+          and: "and",
+          or: "or",
+          filter: "Apply filter",
+          clear: "Clear filter"
         }
-    }
+      }
+    });
+    </script>
 
-### filterable.messages.and `String`
+### filterable.messages.and `String` *(default: "And")*
 
- Set the text of the "and" option from logic drop down list.
+The text of the option which represents the "and" logical operation.
 
-### filterable.messages.clear `String`
+#### Example - set the "and" message
 
- Set the text of the clear button of the filter menu.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          and: "and"
+        }
+      }
+    });
+    </script>
 
-### filterable.messages.filter `String`
+### filterable.messages.clear `String` *(default: "Clear")*
 
- Set the text of the filter button of the filter menu.
+The text of the button which clears the filter.
 
-### filterable.messages.info `String`
+#### Example - set the "clear" message
 
- Set the text of the information message on top of the filter menu.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          clear: "Clear filter"
+        }
+      }
+    });
+    </script>
 
-### filterable.messages.isFalse `String`
+### filterable.messages.filter `String` *(default: "Filter")*
 
- Set the text of the isFalse radio button of the filter menu for boolean values.
+The text of the button which applies the filter.
 
-### filterable.messages.isTrue `String`
+#### Example - set the "filter" message
 
- Set the text of the isTrue radio button of the filter menu for boolean values.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          filter: "Apply filter"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.info `String` *(default: "Show items with value that:")*
+
+The text of the information message on the top of the filter menu.
+
+#### Example - set the "info" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          info: "Filter by:"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.isFalse `String` *(default: "is false")*
+
+The text of the radio button for `false` values. Displayed when filtering `Boolean` fields.
+
+#### Example - set the "isFalse" message
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "active" }
+      ],
+      dataSource: {
+        data: [
+          { active: true },
+          { active: false }
+        ],
+        schema: {
+          model: {
+            fields: {
+              active: { type: "boolean" }
+            }
+          }
+        }
+      },
+      filterable: {
+        messages: {
+          isFalse: "False"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.isTrue `String` *(default: "is true")*
+
+The text of the radio button for `true` values. Displayed when filtering `Boolean` fields.
+
+#### Example - set the "isTrue" message
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "active" }
+      ],
+      dataSource: {
+        data: [
+          { active: true },
+          { active: false }
+        ],
+        schema: {
+          model: {
+            fields: {
+              active: { type: "boolean" }
+            }
+          }
+        }
+      },
+      filterable: {
+        messages: {
+          isTrue: "True"
+        }
+      }
+    });
+    </script>
 
 ### filterable.messages.or `String`
 
- Set the text of the "or" option from logic drop down list.
+The text of the option which represents the "or" logical operation.
+
+#### Example - set the "or" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          or: "or"
+        }
+      }
+    });
+    </script>
 
 ### filterable.messages.selectValue `String`
 
@@ -1656,11 +1983,13 @@ Indicates whether item should be switched to edit mode on click.
 
 Template to be used for rendering the rows in the grid.
 
+> **Important:** The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
+
 #### Example
 
     //template
      <script id="rowTemplate" type="text/x-kendo-tmpl">
-         <tr>
+         <tr data-uid="${ uid }">
              <td>
                  <img src="${ BoxArt.SmallUrl }" alt="${ Name }" />
              </td>
