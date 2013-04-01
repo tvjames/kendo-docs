@@ -78,7 +78,8 @@ By default this option is set to `true` which means that the widget will bind to
 
 ### columns `Array`
 
-The configuration of the grid columns. Set to array of JavaScript objects or strings. A JavaScript object is interpreted as column configuration. A string is interpreted as the field to which the column is bound to. The grid will create a column for every item of the array.
+The configuration of the grid columns. Set to array of JavaScript objects or strings. A JavaScript object is interpreted as column configuration. A string is interpreted as the
+[field](#configuration-columns.field) to which the column is bound to. The grid will create a column for every item of the array.
 
 > If this setting is **not** specified the grid will create a column for every field of the data item.
 
@@ -110,7 +111,7 @@ The configuration of the grid columns. Set to array of JavaScript objects or str
 
 ### columns.aggregates `Array`
 
-The aggregate(s) to be calculated for this column when the grid is grouped by its [field](/api/web/grid/configuration-columns.field).
+The aggregate(s) to be calculated for this column when the grid is grouped by its [field](#configuration-columns.field).
 The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example - set column aggregates
@@ -326,7 +327,7 @@ The name of the field which the column is bound to.
 
 ##### options.format `String`
 
-The format string of the column specified via `columns.format`.
+The format string of the column specified via the [format](#configuration-columns.format) option.
 
 ##### options.model `kendo.data.Model`
 
@@ -334,7 +335,7 @@ The model instance which the current row is bound to.
 
 ##### options.values `Array`
 
-Array of values specified via `columns.values`.
+Array of values specified via the [values](#configuration-columns.values) option.
 
 #### Example - create a custom column editor using the Kendo UI AutoComplete
 
@@ -406,7 +407,7 @@ The field to which the column is bound. The value of this field is displayed by 
 ### columns.filterable `Boolean|Object` *(default: true)*
 
 If set to `true` a filter menu will be displayed for this column when filtering is enabled for the grid. If set to `false` the filter menu will not be displayed. By default a filter menu is displayed
-for all columns when filtering is enabled.
+for all columns when filtering is enabled via the [filterable](#configuration-filterable) option.
 
 Can be set to a JavaScript object which represents the filter menu configuration.
 
@@ -424,7 +425,7 @@ Can be set to a JavaScript object which represents the filter menu configuration
     });
     </script>
 
-### columns.filterable.ui `String | Function`
+### columns.filterable.ui `String|Function`
 
 The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
 
@@ -523,7 +524,7 @@ The format that is applied to the value before it is displayed. Must be in the f
 
 ### columns.groupHeaderTemplate `String|Function`
 
-The [template](/api/framework/kendo#methods-template) which is used to render the group header when the grid is grouped by the column field. By default the name of the field
+The [template](/api/framework/kendo#methods-template) which is used to render the group header when the grid is grouped by the column [field](#configuration-columns.field). By default the name of the field
 and the current group value is displayed.
 
 The fields which can be used in the template are:
@@ -1206,7 +1207,7 @@ Can be set to a JavaScript object which represents the editing configuration.
 
 > Check [Batch editing](http://demos.kendoui.com/web/grid/editing.html), [Inline editing](http://demos.kendoui.com/web/grid/editing-inline.html) and [Popup editing](http://demos.kendoui.com/web/grid/editing-popup.html) for live demos.
 
-### editable.confirmation `Boolean | String` *(default: true)*
+### editable.confirmation `Boolean|String` *(default: true)*
 
 If set to `true` the grid will display a confirmation dialog when the user clicks the "destroy" command button.
 
@@ -1298,7 +1299,7 @@ If set to `true` the user can delete data items from the grid by clicking the "d
     });
     </script>
 
-### editable.mode `String` *(default: "incell")
+### editable.mode `String` *(default: "incell")*
 
 The editing mode to use. The supported editing modes are "incell", "inline" and "popup".
 
@@ -1433,11 +1434,11 @@ If set to `true` the user can edit data items when editing is enabled.
     });
     </script>
 
-### filterable `Boolean | Object` *(default: false)*
+### filterable `Boolean|Object` *(default: false)*
 
 If set to `true` the user can filter the data source using the grid filter menu. Filtering is disabled by default.
 
-Can be set to a JavaScript object which represents the column menu configuration.
+Can be set to a JavaScript object which represents the filter menu configuration.
 
 #### Example - enable the filtering
 
@@ -3606,7 +3607,7 @@ Returns the index of the cell in the grid item skipping group and hierarchy cell
 
 #### Parameters
 
-##### cell `Selector | DOM Element`
+##### cell `Selector|DOM Element`
 
 Target cell.
 
@@ -3645,7 +3646,7 @@ Collapses specified group.
 
 #### Parameters
 
-##### group `Selector | DOM Element`
+##### group `Selector|DOM Element`
 
 Target group item to collapse.
 
@@ -3662,7 +3663,7 @@ Collapses specified master row.
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `Selector|DOM Element`
 
 Target master row to collapse.
 
@@ -3679,7 +3680,7 @@ Returns the data item to which a given table row (tr DOM element) is bound.
 
 #### Parameters
 
-##### tr `Selector | DOM Element`
+##### tr `Selector|DOM Element`
 
 Target row.
 
@@ -3725,7 +3726,7 @@ Switches the specified row from the grid into edit mode. The editRow method trig
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `Selector|DOM Element`
 
 Row to be edited.
 
@@ -3742,7 +3743,7 @@ Expands specified group.
 
 #### Parameters
 
-##### group `Selector | DOM Element`
+##### group `Selector|DOM Element`
 
 Target group item to expand.
 
@@ -3759,7 +3760,7 @@ Expands specified master row.
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `Selector|DOM Element`
 
 Target master row to expand.
 
@@ -3780,7 +3781,7 @@ Hides the specified column.
 
 #### Parameters
 
-##### column `Number | String`
+##### column `Number|String`
 
 The index or the bound field of the column to hide.
 
@@ -3810,7 +3811,7 @@ Removes the specified row from the grid. The removeRow method triggers remove ev
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `Selector|DOM Element`
 
 Row to be removed.
 
@@ -3867,7 +3868,7 @@ Gets/Sets the selected rows/cells.
 
 #### Parameters
 
-##### items `Selector | Array`
+##### items `Selector|Array`
 
 Items to select.
 
@@ -3904,7 +3905,7 @@ Shows the specified column.
 
 #### Parameters
 
-##### column `Number | String`
+##### column `Number|String`
 
 The index or the bound field of the column to show.
 
