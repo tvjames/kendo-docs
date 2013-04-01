@@ -172,9 +172,9 @@ The "edit" built-in command will put the current row in edit mode.
 
 The "destroy" built-in command will delete the current row.
 
-Custom command are supported via the `click` option.
+Custom commands are supported via the [click](#configuration-columns.command.click) option.
 
-> **Note:** The built-in "edit" and "destroy" commands work *only* if editing is enabled via the `editable` option. The "edit" command supports "inline" and "popup" editing modes.
+> **Note:** The built-in "edit" and "destroy" commands work *only* if editing is enabled via the [editable](#configuration-editable) option. The "edit" command supports "inline" and "popup" editing modes.
 
 #### Example - set command as a string
     <div id="grid"></div>
@@ -243,7 +243,7 @@ The name of the command. The supported built-in commands are "edit" and "destroy
 
 ### columns.command.text `String`
 
-The text displayed by the command button. If not set the `name` option would be used as the button text instead.
+The text displayed by the command button. If not set the [name](#configuration-columns.command.name) option would be used as the button text.
 
 #### Example - customize the text of the command
     <div id="grid"></div>
@@ -311,7 +311,7 @@ The function context (available via the `this` keyword) will be set to the grid 
 
 Provides a way to specify a custom editing UI for the column. Use the `container` parameter to create the editing UI.
 
-> **Important**: The editing UI should contain an element whose `name` HTML attribute is set as field to which the column is bound to.
+> **Important**: The editing UI should contain an element whose `name` HTML attribute is set as column [field](#configuration-columns.field).
 
 #### Parameters
 
@@ -464,7 +464,7 @@ The role data attribute of the widget used in the filter menu or a JavaScript fu
 
 > Check [Filter menu customization](http://demos.kendoui.com/web/grid/filter-menu-customization.html) for a live demo.
 
-### columns.footerTemplate `String|Footer`
+### columns.footerTemplate `String|Function`
 The [template](/api/framework/kendo#methods-template) which is used to render the footer table cell for the column.
 
 The fields which can be used in the template are:
@@ -797,7 +797,7 @@ This example displays "Beverages" and "Food" in the "category" column instead of
 
 ### columns.menu `Boolean`
 
-If set to `true` the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their `field` set).
+If set to `true` the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their [field](#configuration-columns.field) set).
 
 #### Example - hide a column from the column menu
     <div id="grid"></div>
@@ -1698,7 +1698,7 @@ The text of the option which represents the "or" logical operation.
 
 ### filterable.messages.selectValue `String` *(default: "-Select value-")*
 
-The text of the dropdownlist displayed in the filter menu for columns whose `values` option is set.
+The text of the dropdownlist displayed in the filter menu for columns whose [values](#configuration-columns.values) option is set.
 
 #### Example - set the "selectValue" message
 
@@ -2424,7 +2424,7 @@ The text of the "less than" filter operator.
 
 ### filterable.operators.enums `Object`
 
-The texts of the filter operators displayed for columns which have their `values` option set.
+The texts of the filter operators displayed for columns which have their [values](#configuration-columns.values) option set.
 
 > **Important:** Omitting an operator will exclude it from the dropdown list with the available operators.
 
@@ -3541,7 +3541,7 @@ The [template](/api/framework/kendo#methods-template) which is used to render th
 
 ### toolbar.text `String`
 
-The text displayed by the command button. If not set the `name` option would be used as the button text instead.
+The text displayed by the command button. If not set the [name](#configuration-toolbar.name)` option would be used as the button text instead.
 
 #### Example - set the text of the toolbar button
     <div id="grid"></div>
