@@ -135,6 +135,9 @@ The supported aggregates are "average", "count", "max", "min" and "sum".
       }
     });
     </script>
+
+Check [Aggregates](http://demos.kendoui.com/web/grid/aggregates.html) for a live demo.
+
 ### columns.attributes `Object`
 
 HTML attributes of the table cell (`<td>`) rendered for the column.
@@ -362,6 +365,8 @@ Array of values specified via `columns.values`.
     });
     </script>
 
+Check [Editing custom editor](http://demos.kendoui.com/web/grid/editing-custom.html) for a live demo.
+
 ### columns.encoded `Boolean` *(default: true)*
 
 If set to `true` the column value will be HTML-encoded before it is displayed. If set to `false` the column value will be displayed as is. By default the column value is HTML-encoded.
@@ -455,6 +460,8 @@ The role data attribute of the widget used in the filter menu or a JavaScript fu
         dataSource: [ { date: new Date() }, { date: new Date() } ]
     });
     </script>
+
+Check [Filter menu customization](http://demos.kendoui.com/web/grid/filter-menu-customization.html) for a live demo.
 
 ### columns.footerTemplate `String|Footer`
 The [template](/api/framework/kendo#methods-template) which is used to render the footer table cell for the column.
@@ -707,7 +714,6 @@ Use the `template` to customize the way the column displays its value.
     });
     </script>
 
-
 ### columns.title `String`
 
 The text that is displayed in the column header cell. If not set the [field](#configuration-columns.field) will be used.
@@ -786,6 +792,8 @@ Useful to display user-friendly text instead of database values.
 
 This example displays "Beverages" and "Food" in the "category" column instead of "1" and "2".
 
+Check [ForeignKey column](http://demos.kendoui.com/web/grid/foreignkeycolumn.html) for a live demo.
+
 ### columns.menu `Boolean`
 
 If set to `true` the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their `field` set).
@@ -830,6 +838,8 @@ Can be set to a JavaScript object which represents the column menu configuration
       ]
     });
     </script>
+
+Check [Column menu](http://demos.kendoui.com/web/grid/column-menu.html) for a live demo.
 
 ### columnMenu.columns `Boolean` *(default: true)*
 
@@ -1102,11 +1112,12 @@ If the `dataSource` option is an existing [kendo.data.DataSource](/api/framework
     });
     </script>
 
+Check [Binding to local data](http://demos.kendoui.com/web/grid/local-data.html) and [Binding to remote data](http://demos.kendoui.com/web/grid/remote-data.html) for live demos.
+
 ### detailTemplate `String|Function`
 
 The [template](/api/framework/kendo#methods-template) which is used to render the detail rows.
 
-See the [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html) example.
 
 #### Example - specify detail template as a function
     <script id="detail-template">
@@ -1147,6 +1158,8 @@ See the [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html)
       detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
     });
     </script>
+
+Check [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html) for a live demo.
 
 ### editable `Boolean|Object` *(default: false)*
 
@@ -1190,6 +1203,8 @@ Can be set to a JavaScript object which represents the editing configuration.
       editable: "popup"
     });
     </script>
+
+Check [Batch editing](http://demos.kendoui.com/web/grid/editing.html), [Inline editing](http://demos.kendoui.com/web/grid/editing-inline.html) and [Popup editing](http://demos.kendoui.com/web/grid/editing-popup.html) for live demos.
 
 ### editable.confirmation `Boolean | String` *(default: true)*
 
@@ -2527,6 +2542,8 @@ Can be set to a JavaScript object which represents the grouping configuration.
     });
     </script>
 
+Check [Basic usage](http://demos.kendoui.com/web/grid/index.html) for a live demo.
+
 ### groupable.messages `Object`
 
 The text messages displayed during grouping.
@@ -2620,6 +2637,8 @@ If set to `true` the use could navigate the widget using the keyboard navigation
       selectable: true
     });
     </script>
+
+Check [Keyboard navigation](http://demos.kendoui.com/web/grid/navigation.html) for a live demo.
 
 ### pageable `Boolean|Object` *(default: false)*
 
@@ -3188,6 +3207,8 @@ If set to `true` the user could reorder the columns by dragging their header cel
     });
     </script>
 
+Check [Column reordering](http://demos.kendoui.com/web/grid/column-reordering.html) for a live demo.
+
 ### resizable `Boolean` *(default:false)*
 
 If set to `true` the user could resize the columns by dragging the edges of their header cells. By default resizing is disabled.
@@ -3208,6 +3229,8 @@ If set to `true` the user could resize the columns by dragging the edges of thei
       resizable: true
     });
     </script>
+
+Check [Column resizing](http://demos.kendoui.com/web/grid/column-resizing.html) for a live demo.
 
 ### rowTemplate `String|Function`
 
@@ -3246,6 +3269,8 @@ The [template](/api/framework/kendo#methods-template) which is used to render ro
     });
     </script>
 
+Check [Row template](http://demos.kendoui.com/web/grid/rowtemplate.html) for a live demo.
+
 ### scrollable `Boolean|Object` *(default: true)*
 
 If set to `true` the grid will display a scrollbar when the total row height (or width) exceeds the grid height (or width). By default scrolling is enabled.
@@ -3272,6 +3297,8 @@ Can be set to a JavaScript object which represents the scrolling configuration.
 ### scrollable.virtual `Boolean` *(default: false)*
 
 If set to `true` the grid will always display a single page of data. Scrolling would just change the data which is currently displayed.
+
+Check [Virtualization of local data](http://demos.kendoui.com/web/grid/virtualization-local-data.html) and [Virtualization of remote data](http://demos.kendoui.com/web/grid/virtualization-remote-data.html) for live demos.
 
 ### selectable `Boolean|String` *(default: false)*
 
@@ -3316,6 +3343,8 @@ Can also be set to the following string values:
     });
     </script>
 
+Check [Selection](http://demos.kendoui.com/web/grid/selection.html) for a live demo.
+
 ### sortable `Boolean|Object` *(default: false)*
 
 If set to `true` the user could sort the grid by clicking the column header cells. By default sorting is disabled.
@@ -3338,6 +3367,8 @@ Can be set to a JavaScript object which represents the sorting configuration.
       sortable: true
     });
     </script>
+
+Check [Sorting](http://demos.kendoui.com/web/grid/sorting.html) for a live demo.
 
 ### sortable.allowUnsort `Boolean` *(default: true)*
 
@@ -3479,6 +3510,8 @@ The [template](/api/framework/kendo#methods-template) which is used to render th
       ]
     });
     </script>
+
+Check [Toolbar template](http://demos.kendoui.com/web/grid/toolbar-template.html) for a live demo.
 
 #### Example - set the template as a string
 
