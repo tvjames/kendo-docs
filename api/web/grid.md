@@ -298,7 +298,7 @@ The function context (available via the `this` keyword) will be set to the grid 
               var tr = $(e.target).closest("tr"); // get the current table row (tr)
               // get the data bound to the current table row
               var data = this.dataItem(tr);
-              alert("Details for: " + data.name);
+              console.log("Details for: " + data.name);
             }
           } ]
        }
@@ -3494,7 +3494,7 @@ The [template](/api/framework/kendo#methods-template) which is used to render th
     </script>
     <script>
     function toolbar_click() {
-      alert("Toolbar command is clicked!");
+      console.log("Toolbar command is clicked!");
       return false;
     }
     $("#grid").kendoGrid({
@@ -3519,7 +3519,7 @@ The [template](/api/framework/kendo#methods-template) which is used to render th
     <div id="grid"></div>
     <script>
     function toolbar_click() {
-      alert("Toolbar command is clicked!");
+      console.log("Toolbar command is clicked!");
       return false;
     }
     $("#grid").kendoGrid({
@@ -3566,348 +3566,797 @@ The text displayed by the command button. If not set the [name](#configuration-t
 
 ### addRow
 
-Adds a new empty table row in edit mode. The addRow method triggers edit event.
+Adds an empty data item to the grid. In "incell" and "inline" editing mode a table row will be appended. Popup window will be displayed in "popup" editing mode.
 
-#### Example
+Fires the [edit](#events-edit) event.
 
-    // get a reference to the grid widget
+#### Example - add a new data item
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      toolbar: ["save"]
+    });
     var grid = $("#grid").data("kendoGrid");
     grid.addRow();
 
 ### cancelChanges
 
-Cancels any pending changes during. Deleted rows are restored. Inserted rows are removed. Updated rows are restored to their original values.
+Cancels any pending changes in the data source. Deleted data items are restored, new data items are removed and updated data items are restored to their initial state.
 
-#### Example
+#### Example - cancel any changes
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.addRow();
     grid.cancelChanges();
+    </script>
 
 ### cancelRow
 
-Switch the current edited row into display mode and revert changes made to the data
+Cancels editing for the table row which is in edit mode. Reverts any changes made.
 
-#### Example
+#### Example - cancel editing
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.addRow();
     grid.cancelRow();
+    </script>
 
 ### cellIndex
 
-Returns the index of the cell in the grid item skipping group and hierarchy cells.
-
-#### Example
-
-     // get a reference to the grid widget
-     var grid = $("#grid").data("kendoGrid");
-     // get the index of the currently edited cell
-     grid.cellIndex(grid.tbody.find(">tr td.k-edit-cell"));
+Returns the index of the specified table cell. Skips group and detail table cells.
 
 #### Parameters
 
-##### cell `Selector|DOM Element`
+##### cell `String|Element|jQuery`
 
-Target cell.
+A string, DOM element or jQuery object which represents the table cell. A string is treated as a jQuery selector.
+
+#### Returns
+
+`Number` the index of the specified table cell.
+
+#### Example - find the cell index when the cell is a jQuery object
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var cell = $("#grid td:eq(1)");
+    console.log(grid.cellIndex(cell));
+    </script>
+
+#### Example - find the cell index when the cell is a string
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    console.log(grid.cellIndex("td:eq(1)"));
+    </script>
 
 ### clearSelection
 
-Clears currently selected items.
+Clears the currently selected table rows or cells (depending on the current selection [mode](#configuration-selectable)).
 
-#### Example
+#### Example - clear selection
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      selectable: true
+    });
     var grid = $("#grid").data("kendoGrid");
-    // clear the selection of items in the grid
+    // select the first table row
+    grid.select("tr:eq(1)");
     grid.clearSelection();
+    </script>
 
 ### closeCell
 
-Closes current edited cell.
+Stops editing the table cell which is in edit mode. Requires "incell" [edit mode](#configuration-editable.mode).
 
-#### Example
+#### Example - cancel cell editing
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      editable: "incell"
+    });
     var grid = $("#grid").data("kendoGrid");
-    // close the cell being edited
+    grid.addRow();
     grid.closeCell();
+    </script>
 
 ### collapseGroup
 
-Collapses specified group.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // collapses first group item
-    grid.collapseGroup(grid.tbody.find(">tr.k-grouping-row:first"));
+Collapses the specified group. This hides the group items.
 
 #### Parameters
 
-##### group `Selector|DOM Element`
+##### row `String|Element|jQuery`
 
-Target group item to collapse.
+A string, DOM element or jQuery object which represents the group table row. A string is treated as a jQuery selector.
+
+#### Example - collapse the first group
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: {
+        data: [
+          { productName: "Tea", category: "Beverages" },
+          { productName: "Coffee", category: "Beverages" },
+          { productName: "Ham", category: "Food" },
+          { productName: "Bread", category: "Food" }
+        ],
+        group: { field: "category" }
+      },
+      groupable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.collapseGroup(".k-grouping-row:contains(Beverages)");
+    </script>
 
 ### collapseRow
 
-Collapses specified master row.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // collapses first master row
-    grid.collapseRow(grid.tbody.find(">tr.k-master-row:first"));
+Collapses the specified master table row. This hides its detail table row.
 
 #### Parameters
 
-##### row `Selector|DOM Element`
+##### row `String|Element|jQuery`
 
-Target master row to collapse.
+A string, DOM element or jQuery object which represents the master table row. A string is treated as a jQuery selector.
+
+#### Example - collapse the first master table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    // first expand the first master table row
+    grid.expandRow(".k-master-row:first");
+    grid.collapseRow(".k-master-row:first");
+    </script>
 
 ### dataItem
 
-Returns the data item to which a given table row (tr DOM element) is bound.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // returns the data item for first row
-    grid.dataItem(grid.tbody.find(">tr:first"));
+Returns the data item to which the specified table row is bound.
 
 #### Parameters
 
-##### tr `Selector|DOM Element`
+##### row `String|Element|jQuery`
 
-Target row.
+A string, DOM element or jQuery object which represents the table row. A string is treated as a jQuery selector.
+
+#### Returns
+
+`kendo.data.ObservableObject` the data item to which the specified table row is bound.
+
+#### Example - get the data item to which the first table row is bound
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataItem("tr:eq(1)");
+    console.log(data.name); // displays "Jane Doe"
+    </script>
 
 ### destroy
-Prepares the **Grid** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
-> **Important:** This method does not remove the Grid element from DOM.
+Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the widget element from DOM.
 
 #### Example
 
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
     var grid = $("#grid").data("kendoGrid");
-
-    // detach events
     grid.destroy();
+    </script>
 
 ### editCell
 
-Puts the specified table cell in edit mode. It requires a jQuery object representing the cell. The editCell method triggers edit event.
+Switches the specified table cell in edit mode. Requires "incell" [edit mode](#configuration-editable.mode).
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // edit first table cell
-    grid.editCell(grid.tbody.find(">tr>td:first"));
+Fires the [edit](#events-edit) event.
 
 #### Parameters
 
-##### cell `String|jQuery|Element`
+##### cell `jQuery`
 
-Cell to be edited.
+A jQuery object which represents the table cell.
+
+#### Example - switch the first cell to edit mode
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "incell"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.editCell($("#grid td:eq(0)"));
+    </script>
 
 ### editRow
 
-Switches the specified row from the grid into edit mode. The editRow method triggers edit event.
+Switches the specified table cell in edit mode. Requires "inline" or "popup" [edit mode](#configuration-editable.mode).
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // edit first table row
-    grid.editRow(grid.tbody.find(">tr:first"));
+Fires the [edit](#events-edit) event.
 
 #### Parameters
 
-##### row `Selector|DOM Element`
+##### row `jQuery`
 
-Row to be edited.
+A jQuery object which represents the table row.
+
+#### Example - switch the first row in edit mode
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "inline"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.editRow($("#grid tr:eq(1)"));
+    </script>
 
 ### expandGroup
 
-Expands specified group.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // expands first group item
-    grid.expandGroup(grid.tbody.find(">tr.k-grouping-row:first"));
+Expands the specified group. This shows the group items.
 
 #### Parameters
 
-##### group `Selector|DOM Element`
+##### row `String|Element|jQuery`
 
-Target group item to expand.
+A string, DOM element or jQuery object which represents the group table row. A string is treated as a jQuery selector.
+Expands specified group.
+
+#### Example - expand the first group
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: {
+        data: [
+          { productName: "Tea", category: "Beverages" },
+          { productName: "Coffee", category: "Beverages" },
+          { productName: "Ham", category: "Food" },
+          { productName: "Bread", category: "Food" }
+        ],
+        group: { field: "category" }
+      },
+      groupable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    // first collapse the group
+    grid.collapseGroup(".k-grouping-row:contains(Beverages)");
+    grid.expandGrup(".k-grouping-row:contains(Beverages)");
+    </script>
 
 ### expandRow
 
-Expands specified master row.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // expands first master row
-    grid.expandRow(grid.tbody.find(">tr.k-master-row:first"));
+Expands the specified master table row. This shows its detail table row.
 
 #### Parameters
 
-##### row `Selector|DOM Element`
+##### row `String|Element|jQuery`
 
-Target master row to expand.
+A string, DOM element or jQuery object which represents the master table row. A string is treated as a jQuery selector.
+Expands specified master row.
+
+#### Example - expand the first master table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.expandRow(".k-master-row:first");
+    </script>
 
 ### hideColumn
 
-Hides the specified column.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-
-    // hide the "id" column
-    grid.hideColumn("id");
-
-    // hide the 3rd column
-    grid.hideColumn(2);
+Hides the specified grid column.
 
 #### Parameters
 
 ##### column `Number|String`
 
-The index or the bound field of the column to hide.
+The index of the column or the [field](#configuration-columns.field) to which the columns is bound.
+
+#### Example - hide a column by index
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.hideColumn(1);
+    </script>
+
+#### Example - hide a column by field
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.hideColumn("age");
+    </script>
 
 ### refresh
 
-Redraws the grid using the current data of the DataSource.
+Renders all table rows using the current data items.
 
-#### Example
+#### Example - refresh the widget
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
     var grid = $("#grid").data("kendoGrid");
-    // refreshes the grid
     grid.refresh();
-
+    </script>
 
 ### removeRow
 
-Removes the specified row from the grid. The removeRow method triggers remove event.
-(Note: In inline or popup edit modes the changes will be automatically synced)
+Removes the specified table row from the grid. Also removes the corresponding data item from the data source.
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // remove first table row
-    grid.removeRow(grid.tbody.find(">tr:first"));
+Fires the [remove](#events-remove) event.
 
 #### Parameters
 
-##### row `Selector|DOM Element`
+##### row `String|Element|jQuery`
 
-Row to be removed.
+A string, DOM element or jQuery object which represents the table row. A string is treated as a jQuery selector.
+
+##### Example - remove the first table row
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.removeRow("tr:eq(1)");
+    </script>
 
 ### reorderColumn
 
 Changes the position of the specified column.
 
-#### Example
-    //get reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    //move first column (index is zero based)
-    grid.reorderColumn(2, grid.columns[0]);
-
 #### Parameters
 
 ##### destIndex `Number`
 
+The new position of the column.
+
 ##### column `Object`
+
+The column whose position should be changed.
+
+#### Example - move a column
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.reorderColumn(1, grid.kk[0]);
+    </script>
 
 ### saveChanges
 
-Calls DataSource sync to submit any pending changes if state is valid. The saveChanges method triggers saveChanges event.
+Saves any pending changes by calling the [sync](/api/framework/datasource#methods-sync) method.
 
-#### Example
+Fires the [saveChanges](#events-saveChanges) event.
 
-    // get a reference to the grid widget
+#### Example - save changes
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.addRow();
     grid.saveChanges();
+    </script>
 
 ### saveRow
 
-Switch the current edited row into dislay mode and save changes made to the data
-(Note: the changes will be automatically synced)
+Switches the table row which is in edit mode and saves any changes made by the user.
 
-#### Example
+#### Example - save row
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "inline"
+    });
     var grid = $("#grid").data("kendoGrid");
-    grid.saveRow();
+    grid.editRow($("#grid tr:eq(1)");
+    grid.saveChanges();
+    </script>
 
 ### select
 
-Gets/Sets the selected rows/cells.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // selects first grid item
-    grid.select(grid.tbody.find(">tr:first"));
-
-#### Returns
-`jQuery` the selected rows or cells.
+Gets or sets the table rows (or cells) which are selected.
 
 #### Parameters
 
-##### items `Selector|Array`
+##### rows `String|Element|jQuery`
 
-Items to select.
+A string, DOM element or jQuery object which represents the table row(s) or cell(s). A string is treated as a jQuery selector.
+
+#### Returns
+
+`jQuery` the selected table rows or cells.
+
+#### Example - select the first and second table rows
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, row"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.select("tr:eq(1), tr:eq(2)");
+    </script>
+
+#### Example - select the first table cell
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      selectable: "cell"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.select("td:eq(0)");
+    </script>
+
+#### Example - get the selected table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      selectable: "row"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.select("tr:eq(1)");
+    var row = grid.select();
+    var data = grid.dataItem(row);
+    console.log(data.name); // displays "Jane Doe"
+    </script>
 
 ### setDataSource
 
-Sets the dataSource of an existing Grid and rebinds it.
+Sets the data source of the widget.
 
 #### Parameters
 
 ##### dataSource `kendo.data.DataSource`
 
-#### Example
+The data source to which the widget should be bound.
 
-    var dataSource = new kendo.data.DataSource({
-        //dataSource configuration
+#### Example - set the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 }
+      ]
     });
-
-    $("#grid").data("kendoGrid").setDataSource(dataSource);
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.setDataSource(dataSource);
+    </script>
 
 ### showColumn
 
 Shows the specified column.
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-
-    // show the "id" column
-    grid.showColumn("id");
-
-    // show the 3rd column
-    grid.showColumn(2);
-
 #### Parameters
 
 ##### column `Number|String`
 
-The index or the bound field of the column to show.
+The index of the column or the [field](#configuration-columns.field) to which the columns is bound.
+
+#### Example - show a hidden column by index
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age", hidden: true }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.showColumn(1);
+    </script>
+
+#### Example - show a hidden column by field
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age", hidden: true }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.showColumn("age");
+    </script>
 
 ## Events
 
