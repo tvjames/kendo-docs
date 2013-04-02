@@ -103,7 +103,7 @@ The effect(s) to use when playing the open animation. Multiple effects should be
 
 The duration of the open animation in milliseconds.
 
-### dataSource `Object | Array | kendo.data.DataSource`
+### dataSource `Object|Array|kendo.data.DataSource`
 
 The data source of the widget which is used to display suggestions for the current value. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.DataSource](/api/framework/datasource)
 instance.
@@ -305,7 +305,7 @@ If set to `true` the widget will automatically use the first suggestion as its v
     });
     </script>
 
-### template `String | Function`
+### template `String|Function`
 
 The [template](http://docs.kendoui.com/api/framework/kendo#methods-template) used to render the suggestions. By default the widget displays only the text of the suggestion (configured via `dataTextField`).
 
@@ -361,6 +361,16 @@ Closes the widget suggestion popup.
 
 Returns the data item at the specified index.
 
+#### Parameters
+
+##### index `Number`
+
+The zero-based index of of the data item.
+
+#### Returns
+
+`Object` the data item at the specified index. Returns `undefined` if the index is not within bounds.
+
 #### Example - get the item at certain index
 
     <input id="autocomplete" />
@@ -373,16 +383,6 @@ Returns the data item at the specified index.
     autocomplete.search("A");
     console.log(autocomplete.dataItem(0)); // Displays "Apples" in the browser console
     </script>
-
-#### Parameters
-
-##### index `Number`
-
-The zero-based index of of the data item.
-
-#### Returns
-
-`Object` the data item at the specified index. Returns `undefined` if the index is not within bounds.
 
 ### destroy
 
@@ -402,6 +402,12 @@ Prepares the widget for safe removal from DOM. Detaches all event handlers and r
 ### enable
 
 Enables or disables the widget.
+
+#### Parameters
+
+##### enable `Boolean`
+
+If set to `true` the widget will be enabled. If set to `false` the widget will be disabled.
 
 #### Example - enable the widget
 
@@ -423,17 +429,17 @@ Enables or disables the widget.
     autocomplete.enable(false);
     </script>
 
-#### Parameters
-
-##### enable `Boolean`
-
-If set to `true` the widget will be enabled. If set to `false` the widget will be disabled.
-
 ### readonly
 
 Toggles the readonly state of the widget. When the widget is readonly it doesn't allow user input.
 
 > There is a difference between disabled and readonly mode. The value of a disabled widget is **not** posted as part of a `form` whereas the value of a readonly widget is posted.
+
+#### Parameters
+
+##### readonly `Boolean`
+
+If set to `true` the widget will not allow user input. If set to `false` the widget will allow user input.
 
 #### Example - make the widget readonly
 
@@ -443,12 +449,6 @@ Toggles the readonly state of the widget. When the widget is readonly it doesn't
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.readonly(true);
     </script>
-
-#### Parameters
-
-##### readonly `Boolean`
-
-If set to `true` the widget will not allow user input. If set to `false` the widget will allow user input.
 
 ### focus
 
@@ -480,6 +480,12 @@ Refresh the suggestion popup by rendering all items again.
 
 Searches the data source for the provided value and displays any matches as suggestions.
 
+#### Parameters
+
+##### word `String`
+
+The value to search for. All matches are displayed in the suggestion popup.
+
 #### Example - search the widget
 
     <input id="autocomplete" />
@@ -491,15 +497,15 @@ Searches the data source for the provided value and displays any matches as sugg
     autocomplete.search("A"); // Displays "Apples" in the suggestion popup
     </script>
 
-#### Parameters
-
-##### word `String`
-
-The value to search for. All matches are displayed in the suggestion popup.
-
 ### select
 
 Selects the item provided as an argument and updates the value of the widget.
+
+#### Parameters
+
+##### item `String|Element|jQuery`
+
+A string, DOM element or jQuery object which represents the item to be selected. A string is treated as a jQuery selector.
 
 #### Example - select item
 
@@ -514,12 +520,6 @@ Selects the item provided as an argument and updates the value of the widget.
     autocomplete.select(autocomplete.ul.children().eq(1)); // Selects the second suggestion which is "Jane"
     </script>
 
-#### Parameters
-
-##### item `String | Element | jQuery`
-
-A string, DOM element or jQuery object which represents the item to be selected. A string is provided it would be treated as a jQuery selector.
-
 ### setDataSource
 
 Sets the data source of the widget.
@@ -527,6 +527,8 @@ Sets the data source of the widget.
 #### Parameters
 
 ##### dataSource `kendo.data.DataSource`
+
+The data source to which the widget should be bound.
 
 #### Example
 
@@ -546,6 +548,12 @@ Sets the data source of the widget.
 
 Sets the value of the widget to the specified argument and visually selects the text.
 
+#### Parameters
+
+##### value `String`
+
+The value to set.
+
 #### Example
 
     <input id="autocomplete" />
@@ -557,15 +565,19 @@ Sets the value of the widget to the specified argument and visually selects the 
     autocomplete.suggest("Apples");
     </script>
 
+### value
+
+Gets or sets the value of the widget.
+
 #### Parameters
 
 ##### value `String`
 
 The value to set.
 
-### value
+#### Returns
 
-Gets or sets the value of the widget.
+`String` the value of the widget.
 
 #### Example - set and get the value of the widget
 
@@ -579,16 +591,6 @@ Gets or sets the value of the widget.
     var value = autocomplete.value();
     console.log(value); // Displays "Apples"
     </script>
-
-#### Parameters
-
-##### value `String`
-
-The value to set.
-
-#### Returns
-
-`String` the value of the widget.
 
 ## Events
 
