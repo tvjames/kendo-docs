@@ -1871,3 +1871,24 @@ The raw data received from the server.
 ##### e.type `String`
 
 The type of the request. Set to `"create"`, `"read"`, `"update"`or `"destroy"`.
+
+## Class methods
+
+### create
+
+Creates a DataSource instance from the passed options. Useful for parsing the dataSource configuration option when creating new widgets.
+
+#### Returns
+
+`kendo.data.DataSource` The created DataSource.
+
+#### Parameters
+
+##### options `Object`
+
+A key/value pair of the DataSource options.
+
+#### Example - parsing the dataSource configuration option in a custom widget
+
+    this.dataSource = kendo.data.DataSource.create(this.options.dataSource);
+
