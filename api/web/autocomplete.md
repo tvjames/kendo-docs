@@ -602,6 +602,12 @@ The event handler function context (available via the `this` keyword) will be se
 
 > **Important:** The event is not fired when the value of the widget is changed from code.
 
+#### Event Data
+
+##### e.sender `kendo.ui.AutoComplete`
+
+The widget instance which fired the event.
+
 #### Example - handle the change event during initialization
 
     <input id="autocomplete" />
@@ -627,17 +633,17 @@ The event handler function context (available via the `this` keyword) will be se
     autocomplete.bind("change", autocomplete_change);
     </script>
 
-#### Event Data
-
-##### e.sender `kendo.ui.AutoComplete`
-
-The widget instance which fired the event.
-
 ### close
 
 Fired when the suggestion popup of the widget is closed by the user.
 
 The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.sender `kendo.ui.AutoComplete`
+
+The widget instance which fired the event.
 
 #### Example - handle the close event during initialization
 
@@ -662,19 +668,17 @@ The event handler function context (available via the `this` keyword) will be se
     autocomplete.bind("close", autocomplete_close);
     </script>
 
-#### Event Data
-
-##### e.sender `kendo.ui.AutoComplete`
-
-The widget instance which fired the event.
-
 ### dataBound
 
 Fired when the widget is bound to data from its data source.
 
 The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-#### Example
+#### Event Data
+
+##### e.sender `kendo.ui.AutoComplete`
+
+The widget instance which fired the event.
 
 #### Example - handle the dataBound event during initialization
 
@@ -699,17 +703,17 @@ The event handler function context (available via the `this` keyword) will be se
     autocomplete.bind("dataBound", autocomplete_dataBound);
     </script>
 
-#### Event Data
-
-##### e.sender `kendo.ui.AutoComplete`
-
-The widget instance which fired the event.
-
 ### open
 
 Fired when the suggestion popup of the widget is opened by the user.
 
 The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.sender `kendo.ui.AutoComplete`
+
+The widget instance which fired the event.
 
 #### Example - handle the open event during initialization
 
@@ -734,15 +738,19 @@ The event handler function context (available via the `this` keyword) will be se
     autocomplete.bind("open", autocomplete_open);
     </script>
 
+### select
+
+Fired when an item from the suggestion popup is selected by the user.
+
 #### Event Data
+
+##### e.item `jQuery`
+
+The jQuery object which represents the selected item.
 
 ##### e.sender `kendo.ui.AutoComplete`
 
 The widget instance which fired the event.
-
-### select
-
-Fired when an item from the suggestion popup is selected by the user.
 
 #### Example - handle the select event during initialization
 
@@ -770,13 +778,3 @@ Fired when an item from the suggestion popup is selected by the user.
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.bind("select", autocomplete_select);
     </script>
-
-#### Event Data
-
-##### e.item `jQuery`
-
-The jQuery object which represents the selected item.
-
-##### e.sender `kendo.ui.AutoComplete`
-
-The widget instance which fired the event.
