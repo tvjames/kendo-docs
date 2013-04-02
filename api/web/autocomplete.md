@@ -608,7 +608,7 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - handle the change event during initialization
+#### Example - subscribe to the change event during initialization
 
     <input id="autocomplete" />
     <script>
@@ -620,7 +620,7 @@ The widget instance which fired the event.
     });
     </script>
 
-#### Example - handle the change event after initialization
+#### Example - subscribe to the change event after initialization
 
     <input id="autocomplete" />
     <script>
@@ -645,23 +645,23 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - handle the close event during initialization
+#### Example - subscribe to the close event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
         close: function(e) {
-            // Handle the event
+            // subscribe to the event
         }
     });
     </script>
 
-#### Example - handle the close event after initialization
+#### Example - subscribe to the close event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_close(e) {
-        // Handle the event
+        // subscribe to the event
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -680,23 +680,23 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - handle the dataBound event during initialization
+#### Example - subscribe to the dataBound event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
         dataBound: function(e) {
-            // Handle the event
+            // subscribe to the event
         }
     });
     </script>
 
-#### Example - handle the dataBound event after initialization
+#### Example - subscribe to the dataBound event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_dataBound(e) {
-        // Handle the event
+        // subscribe to the event
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -715,23 +715,23 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - handle the open event during initialization
+#### Example - subscribe to the open event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
         open: function(e) {
-            // Handle the event
+            // subscribe to the event
         }
     });
     </script>
 
-#### Example - handle the open event after initialization
+#### Example - subscribe to the open event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_open(e) {
-        // Handle the event
+        // subscribe to the event
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -752,7 +752,7 @@ The jQuery object which represents the selected item.
 
 The widget instance which fired the event.
 
-#### Example - handle the select event during initialization
+#### Example - subscribe to the select event during initialization
 
     <input id="autocomplete" />
     <script>
@@ -765,7 +765,7 @@ The widget instance which fired the event.
     });
     </script>
 
-#### Example - handle the select event after initialization
+#### Example - subscribe to the select event after initialization
 
     <input id="autocomplete" />
     <script>

@@ -4362,24 +4362,9 @@ The index of the column or the [field](#configuration-columns.field) to which th
 
 ### cancel
 
-Raised when the user clicks the "cancel" button (in inline or popup editing mode) or closes the popup window (popup editing mode).
+Fired when the user clicks the "cancel" button (in inline or popup [editing mode](#configuration-editable.mode)) or closes the popup window.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         cancel: function() {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the cancel event
-     grid.bind("cancel", function() {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
@@ -4389,127 +4374,207 @@ The jQuery object that represents the edit form container element.
 
 ##### e.model `kendo.data.Model`
 
-The model to which the current grid row is bound to.
+The data item to which the table row is bound.
 
 ##### e.preventDefault `Function`
 
-If invoked prevents the cancel action. The row remains in edit mode.
+If invoked prevents the cancel action. The table row remains in edit mode.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "cancel" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "popup",
+      cancel: function(e) {
+        e.preventDefault()
+      }
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.editRow($("#grid tr:eq(1)"));
+    </script>
+
+#### Example - subscribe to the "cancel" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_cancel(e) {
+      e.preventDefault()
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "popup"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("cancel", grid_cancel);
+    grid.editRow($("#grid tr:eq(1)"));
+    </script>
 
 ### change
 
-Fires when the grid selection has changed.
+Fired when the user selects a table row or cell in the grid.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-     $("#grid").kendoGrid({
-         change: function() {
-             // handle event
-         }
-     });
+#### Event Data
 
-#### To set after initialization
+##### e.sender `kendo.ui.Grid`
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the change event
-     grid.bind("change", function() {
-         // handle event
-     });
+The widget instance which fired the event.
 
-#### Example - getting the selected data item(s) when using row selection
+#### Example - get the selected data item(s) when using row selection
 
-     $("#grid").kendoGrid({
-         selectable: "multiple",
-         change: function() {
-            var selectedRows = this.select();
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, row",
+      change: function(e) {
+        var selectedRows = this.select();
+        var selectedDataItems = [];
+        for (var i = 0; i < selectedRows.length; i++) {
+          var dataItem = this.dataItem(selectedRows[i]);
+          selectedDataItems.push(dataItem);
+        }
+        // selectedDataItems contains all selected data items
+      }
+    });
+    </script>
 
-            var selectedDataItems = [];
-
-            for (var i = 0; i < selectedRows.length; i++) {
-                var dataItem = this.dataItem(selectedRows[i]);
-
-                selectedDataItems.push(dataItem);
-            }
-
-            // selectedDataItems now contains all selected data records
-         }
-     });
-
-#### Example - getting the selected data item(s) when using cell selection
-
-     $("#grid").kendoGrid({
-         selectable: "multiple cell",
-         change: function() {
-            var selectedCells = this.select();
-
-            var selectedDataItems = [];
-
-            for (var i = 0; i < selectedCells.length; i++) {
-                var dataItem = this.dataItem(selectedCells[i].parentNode);
-
-                // Check if the dataItem is not already added. Uses http://api.jquery.com/jQuery.inArray
-                if ($.inArray(dataItem, selectedDataItems) < 0) {
-                    selectedDataItems.push(dataItem);
-                }
-            }
-
-            // selectedDataItems now contains all selected data records
-         }
-     });
+#### Example - get the selected data item(s) when using cell selection
+    <div id="grid"></div>
+    <script>
+    function grid_change(e) {
+      var selectedCells = this.select();
+      var selectedDataItems = [];
+      for (var i = 0; i < selectedCells.length; i++) {
+        var dataItem = this.dataItem(selectedCells[i].parentNode);
+        if ($.inArray(dataItem, selectedDataItems) < 0) {
+          selectedDataItems.push(dataItem);
+        }
+      }
+      // selectedDataItems contains all selected data items
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, cell"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("change", grid_change);
+    </script>
 
 ### columnHide
 
-Fires when the user hides a column.
+Fired when the user hides a column.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         columnHide: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the columnHide event
-     grid.bind("columnHide", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
 ##### e.column `Object`
 
-The column object with its properties, e.g. `encoded`, `field` and `title`.
+A JavaScript object which represents the [column](#configuration-columns) configuration.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnHide" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true,
+      columnHide: function(e) {
+        console.log(e.column.field); // displays the field of the hidden column
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnHide" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_columnHide(e) {
+      console.log(e.column.field); // displays the field of the hidden column
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnHide", grid_columnHide);
+    </script>
 
 ### columnReorder
 
-Fires when the user changes the order of a column.
+Fired when the user changes the order of a column.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         columnReorder: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the columnReorder event
-     grid.bind("columnReorder", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
 ##### e.column `Object`
 
-The column object with its properties, e.g. `encoded`, `field` and `title`.
+A JavaScript object which represents the [column](#configuration-columns) configuration.
 
 ##### e.newIndex `Number`
 
@@ -4519,242 +4584,592 @@ The new column index.
 
 The previous column index.
 
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnReorder" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      reorderable: true,
+      columnReorder: function(e) {
+        console.log(e.column.field, e.newIndex, e.oldIndex);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnReorder" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_columnReorder(e) {
+      console.log(e.column.field, e.newIndex, e.oldIndex);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      reorderable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnReorder", grid_columnReorder);
+    </script>
+
 ### columnResize
 
-Fires when the user resizes a column.
+Fired when the user resizes a column.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         columnResize: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the columnResize event
-     grid.bind("columnResize", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
 ##### e.column `Object`
 
-The column object with its properties, e.g. `encoded`, `field` and `title`.
-
-##### e.oldWidth `Number`
-
-The previous column width.
+A JavaScript object which represents the [column](#configuration-columns) configuration.
 
 ##### e.newWidth `Number`
 
 The new column width.
 
+##### e.oldWidth `Number`
+
+The previous column width.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnResize" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      resizable: true,
+      columnResize: function(e) {
+        console.log(e.column.field, e.newWidth, e.oldWidth);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnResize" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_columnResize(e) {
+      console.log(e.column.field, e.newWidth, e.oldWidth);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      resizable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnResize", grid_columnResize);
+    </script>
+
 ### columnShow
 
-Fires when a column is shown.
+Fired when the user shows a column.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         columnShow: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the columnShow event
-     grid.bind("columnShow", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
 ##### e.column `Object`
 
-The column object with its properties, e.g. `encoded`, `field` and `title`.
+A JavaScript object which represents the [column](#configuration-columns) configuration.
 
-### dataBound
+##### e.sender `kendo.ui.Grid`
 
-Fires when the grid has received data from the data source.
+The widget instance which fired the event.
 
-#### Example
+#### Example - subscribe to the "columnShow" event during initialization
 
-     $("#grid").kendoGrid({
-         dataBound: function(e) {
-             // handle event
-         }
-     });
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true,
+      columnShow: function(e) {
+        console.log(e.column.field); // displays the field of the hidden column
+      }
+    });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "columnShow" event after initialization
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the dataBound event
-     grid.bind("dataBound", function(e) {
-         // handle event
-     });
+    <div id="grid"></div>
+    <script>
+    function grid_columnShow(e) {
+      console.log(e.column.field); // displays the field of the hidden column
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnShow", grid_columnShow);
+    </script>
 
 ### dataBinding
 
-Fires when the grid is about to be rendered.
+Fired before the widget binds to its data source.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-     $("#grid").kendoGrid({
-         dataBinding: function(e) {
-             // handle event
-         }
-     });
+#### Event Data
 
-#### To set after initialization
+##### e.sender `kendo.ui.Grid`
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the dataBound event
-     grid.bind("dataBinding", function(e) {
-         // handle event
-     });
+The widget instance which fired the event.
 
+#### Example - subscribe to the "dataBinding" event before initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      dataBinding: function(e) {
+        console.log("dataBinding");
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dataBinding" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_dataBinding(e) {
+      console.log("dataBinding");
+    }
+    $("#grid").kendoGrid({
+      autoBind: false,
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("dataBinding", grid_dataBinding);
+    grid.dataSource.fetch();
+    </script>
+
+### dataBound
+
+Fired when the widget is bound to data from its data source.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "dataBound" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      dataBound: function(e) {
+        console.log("dataBound");
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dataBound" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_dataBound(e) {
+      console.log("dataBound");
+    }
+    $("#grid").kendoGrid({
+      autoBind: false,
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("dataBound", grid_dataBound);
+    grid.dataSource.fetch();
+    </script>
 
 ### detailCollapse
 
-Fires when the grid detail row is collapsed.
+Fired when the user collapses a detail table row.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         detailCollapse: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailCollapse event
-     grid.bind("detailCollapse", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.masterRow `jQuery`
-
-The jQuery element representing master row.
-
 ##### e.detailRow `jQuery`
 
-The jQuery element representing detail row.
+A jQuery object which represents the detail table row.
+
+##### e.masterRow `jQuery`
+
+A jQuery object which represents the master table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "detailCollapse" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>",
+      detailCollapse: function(e) {
+        console.log(e.masterRow, e.detailRow);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "detailCollapse" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_detailCollapse(e) {
+      console.log(e.masterRow, e.detailRow);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("detailCollapse", grid_detailCollapse);
+    </script>
 
 ### detailExpand
 
-Fires when the grid detail row is expanded.
+Fired when the user expands a detail table row.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         detailExpand: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailExpand event
-     grid.bind("detailExpand", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.masterRow `jQuery`
-
-The jQuery element representing master row.
-
 ##### e.detailRow `jQuery`
 
-The jQuery element representing detail row.
+A jQuery object which represents the detail table row.
+
+##### e.masterRow `jQuery`
+
+A jQuery object which represents the master table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "detailExpand" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>",
+      detailExpand: function(e) {
+        console.log(e.masterRow, e.detailRow);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "detailExpand" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_detailExpand(e) {
+      console.log(e.masterRow, e.detailRow);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("detailExpand", grid_detailExpand);
+    </script>
 
 ### detailInit
 
-Fires when the grid detail is initialized.
+Fired when a detail table row is initialized.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         detailInit: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailInit event
-     grid.bind("detailInit", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.masterRow `jQuery`
+##### e.data `kendo.data.ObservableObject`
 
-The jQuery element representing master row.
-
-##### e.detailRow `jQuery`
-
-The jQuery element representing detail row.
+The data item to which the master table row is bound.
 
 ##### e.detailCell `jQuery`
 
-The jQuery element representing detail cell.
+A jQuery object which represents the detail table cell.
 
-##### e.data `kendo.data.ObservableObject`
+##### e.detailRow `jQuery`
 
-The data for the master row.
+A jQuery object which represents the detail table row.
+
+##### e.masterRow `jQuery`
+
+A jQuery object which represents the master table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "detailInit" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        {
+          name: "Beverages",
+          products: [
+            { name: "Tea" },
+            { name: "Coffee" }
+          ]
+        },
+        {
+          name: "Food",
+          products: [
+            { name: "Ham" },
+            { name: "Bread" }
+          ]
+        }
+      ],
+      detailTemplate: 'Products: <div class="grid"></div>',
+      detailInit: function(e) {
+        e.detailRow.find(".grid").kendoGrid({
+          dataSource: e.data.products
+        });
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "detailInit" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_detailInit(e) {
+      e.detailRow.find(".grid").kendoGrid({
+        dataSource: e.data.products
+      });
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        {
+          name: "Beverages",
+          products: [
+            { name: "Tea" },
+            { name: "Coffee" }
+          ]
+        },
+        {
+          name: "Food",
+          products: [
+            { name: "Ham" },
+            { name: "Bread" }
+          ]
+        }
+      ],
+      detailTemplate: 'Products: <div class="grid"></div>'
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("detailInit", grid_detailInit);
+    </script>
 
 ### edit
 
-Fires when the grid enters edit mode.
+Fired when the user edits or creates a data item.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         edit: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the edit event
-     grid.bind("edit", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
 ##### e.container `jQuery`
 
-The jQuery element to be edited.
+A jQuery object representing the container element. That element contains the editing UI.
 
 ##### e.model `kendo.data.Model`
 
-The model to be edited.
+The data item which is going to be edited. Use its [isNew](/api/framework/model#methods-isNew) method to check if the data item is new (created) or not (edited).
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "edit" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "id" },
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            id: "id",
+            fields: {
+              "id": { type: "number" }
+            }
+          }
+        }
+      },
+      editable: "popup",
+      toolbar:["create"],
+      edit: function(e) {
+        if (!e.model.isNew()) {
+          // Disable the editor of the "id" column when editing data items
+          var numeric = e.container.find("input[name=id]").data("kendoNumericTextBox");
+          numeric.enable(false);
+        }
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "edit" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_edit(e) {
+      if (!e.model.isNew()) {
+        // Disable the editor of the "id" column when editing data items
+        var numeric = e.container.find("input[name=id]").data("kendoNumericTextBox");
+        numeric.enable(false);
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "id" },
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            id: "id",
+            fields: {
+              "id": { type: "number" }
+            }
+          }
+        }
+      },
+      editable: "popup",
+      toolbar:["create"]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("edit", grid_edit);
+    </script>
 
 ### filterMenuInit
 
