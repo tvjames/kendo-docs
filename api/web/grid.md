@@ -234,7 +234,7 @@ The name of the command. The supported built-in commands are "edit" and "destroy
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
-        { command: [{ name: "edit" }]
+        { command: [{ name: "edit" }] }
       ],
       editable: "popup",
       dataSource: [ { name: "Jane Doe" } ]
@@ -251,7 +251,7 @@ The text displayed by the command button. If not set the [name](#configuration-c
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
-        { command: [{ name: "destroy", text: "Remove" }]
+        { command: [{ name: "destroy", text: "Remove" }] }
       ],
       editable: true,
       dataSource: [ { name: "Jane Doe" } ]
@@ -268,7 +268,7 @@ The CSS class applied to the command button.
     $("#grid").kendoGrid({
       columns: [
         { field: "name" },
-        { command: [{ className: "btn-destroy", name: "destroy", text: "Remove" }]
+        { command: [{ className: "btn-destroy", name: "destroy", text: "Remove" }] }
       ],
       editable: true,
       dataSource: [ { name: "Jane Doe" } ]
