@@ -25,7 +25,7 @@ Configures the opening and closing animations of the suggestion popup. Setting t
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        animation: false
+      animation: false
     });
     </script>
 
@@ -34,16 +34,16 @@ Configures the opening and closing animations of the suggestion popup. Setting t
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        animation: {
-           close: {
-               effects: "fadeOut zoom:out",
-               duration: 300
-           },
-           open: {
-               effects: "fadeIn zoom:in",
-               duration: 300
-           }
-        }
+      animation: {
+       close: {
+         effects: "fadeOut zoom:out",
+         duration: 300
+       },
+       open: {
+         effects: "fadeIn zoom:in",
+         duration: 300
+       }
+      }
     });
     </script>
 
@@ -56,12 +56,12 @@ The animation played when the suggestion popup is closed.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        animation: {
-           close: {
-               effects: "fadeOut zoom:out",
-               duration: 300
-           }
+      animation: {
+       close: {
+         effects: "fadeOut zoom:out",
+         duration: 300
        }
+      }
     });
     </script>
 
@@ -84,12 +84,12 @@ The animation played when the suggestion popup is opened.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        animation: {
-           open: {
-               effects: "fadeIn zoom:in",
-               duration: 300
-           }
-        }
+      animation: {
+       open: {
+         effects: "fadeIn zoom:in",
+         duration: 300
+       }
+      }
     });
     </script>
 
@@ -117,9 +117,9 @@ If the `dataSource` option is an existing [kendo.data.DataSource](http://docs.ke
     <input id="autocomplete" />
     <script>
     $("#autoComplete").kendoAutoComplete({
-        dataSource: {
-            data: ["One", "Two"]
-        }
+      dataSource: {
+        data: ["One", "Two"]
+      }
     });
     </script>
 
@@ -129,7 +129,7 @@ If the `dataSource` option is an existing [kendo.data.DataSource](http://docs.ke
     <script>
     var data = ["One", "Two"];
     $("#autoComplete").kendoAutoComplete({
-        dataSource: data
+      dataSource: data
     });
     </script>
 
@@ -138,15 +138,16 @@ If the `dataSource` option is an existing [kendo.data.DataSource](http://docs.ke
     <input id="autocomplete" />
     <script>
     var dataSource = new kendo.data.DataSource({
-        transport: {
-            read: {
-                url: "/remote-service-url",
-                type: "POST"
-            }
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
         }
+      }
     });
-    $("#autoComplete").kendoAutoComplete({
-        dataSource: dataSource
+    $("#autocomplete").kendoAutoComplete({
+      dataSource: dataSource,
+      dataTextField: "ProductName"
     });
     </script>
 
@@ -158,10 +159,13 @@ The field of the data item used when searching for suggestions.  This is the tex
 
     <input id="autocomplete" />
     <script>
-    var data = [ { id: 1, name: "Apples" }, { id: 2, name: "Oranges" } ];
+    var data = [
+      { id: 1, name: "Apples" },
+      { id: 2, name: "Oranges" }
+    ];
     $("#autocomplete").kendoAutoComplete({
-        dataTextField: "name", // The widget is bound to the "name" field
-        dataSource: data
+      dataTextField: "name", // The widget is bound to the "name" field
+      dataSource: data
     });
     </script>
 
@@ -174,7 +178,7 @@ The delay in milliseconds between a keystroke and when the widget displays the s
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        delay: 500
+      delay: 500
     });
     </script>
 
@@ -187,7 +191,7 @@ If set to `false` the widget will be disabled and will not allow user input. The
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        enable: false
+      enable: false
     });
     </script>
 
@@ -201,7 +205,7 @@ all data items which begin with the current widget value are displayed in the su
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        filter: "contains"
+      filter: "contains"
     });
     </script>
 
@@ -214,7 +218,7 @@ The height of the suggestion popup in pixels. The default value is 200 pixels.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        height: 500
+      height: 500
     });
     </script>
 
@@ -227,7 +231,7 @@ If set to `true` the first suggestion will be automatically highlighted.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        highlightFirst: false
+      highlightFirst: false
     });
     </script>
 
@@ -240,7 +244,7 @@ If set to `false` case-sensitive search will be performed to find suggestions. T
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        ignoreCase: false
+      ignoreCase: false
     });
     </script>
 
@@ -253,7 +257,7 @@ The minimum number of characters the user must type before a search is performed
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        minLength: 3
+      minLength: 3
     });
     </script>
 
@@ -266,7 +270,7 @@ The hint displayed by the widget when it is empty. Not set by default.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        placeholder: "Enter value ..."
+      placeholder: "Enter value ..."
     });
     </script>
 
@@ -288,7 +292,7 @@ The character used to separate multiple values. Empty by default.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        separator: ", "
+      separator: ", "
     });
     </script>
 
@@ -301,7 +305,7 @@ If set to `true` the widget will automatically use the first suggestion as its v
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        suggest: true
+      suggest: true
     });
     </script>
 
@@ -313,16 +317,19 @@ The [template](http://docs.kendoui.com/api/framework/kendo#methods-template) use
 
     <input id="autocomplete" />
     <script id="template" type="text/x-kendo-template">
-        <span>
-            <img src="/img/#: id #.png" alt="#: name #" />
-            #: name #
-        </span>
+      <span>
+        <img src="/img/#: id #.png" alt="#: name #" />
+        #: name #
+      </span>
     </script>
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ { id: 1, name: "Apples" }, { id: 2, name: "Oranges" }],
-        dataTextField: "name",
-        template: kendo.template($("#template").html())
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      template: kendo.template($("#template").html())
     });
     </script>
 
@@ -331,10 +338,39 @@ The [template](http://docs.kendoui.com/api/framework/kendo#methods-template) use
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ { id: 1, name: "Apples" }, { id: 2, name: "Oranges" }],
-        dataTextField: "name",
-        template: '<span><img src="/img/#: id #.png" alt="#: name #" />#: name #</span>'
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      template: '<span><img src="/img/#: id #.png" alt="#: name #" />#: name #</span>'
     });
+    </script>
+
+## Fields
+
+### dataSource `kendo.data.DataSource`
+
+The [data source](/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
+
+> Changes of the data source will be reflected in the widget.
+
+> **Important:** Assigning a new data source would have no effect. Use the [setDataSource](#methods-setDataSource) method instead.
+
+#### Example - add a data item to the data source
+    <input id="autocomplete" />
+    <script>
+    $("#autocomplete").kendoAutoComplete({
+      dataSource: [
+        { name: "Apples" },
+        { name: "Oranges" }
+      ],
+      dataTextField: "name"
+    });
+    var autocomplete = $("#autocomplete").data("kendoAutoComplete");
+    autocomplete.dataSource.read();
+    autocomplete.dataSource.add({ name: "Appricot" });
+    autocomplete.search("A");
     </script>
 
 ## Methods
@@ -348,7 +384,7 @@ Closes the widget suggestion popup.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ "Apples", "Oranges" ]
+      dataSource: [ "Apples", "Oranges" ]
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     // Search for items starting with "A" - will open the suggestion popup and show "Apples"
@@ -414,7 +450,7 @@ If set to `true` the widget will be enabled. If set to `false` the widget will b
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        enable: false
+      enable: false
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.enable(true);
@@ -491,7 +527,7 @@ The value to search for. All matches are displayed in the suggestion popup.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ "Apples", "Oranges" ]
+      dataSource: [ "Apples", "Oranges" ]
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.search("A"); // Displays "Apples" in the suggestion popup
@@ -512,11 +548,10 @@ A string, DOM element or jQuery object which represents the item to be selected.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ "John", "Jane" ]
+      dataSource: [ "John", "Jane" ]
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.search("J");
-
     autocomplete.select(autocomplete.ul.children().eq(1)); // Selects the second suggestion which is "Jane"
     </script>
 
@@ -535,10 +570,10 @@ The data source to which the widget should be bound.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ "Apples", "Oranges" ]
+      dataSource: [ "Apples", "Oranges" ]
     });
     var dataSource = new kendo.data.DataSource({
-        data: [ "Bananas", "Cherries" ]
+      data: [ "Bananas", "Cherries" ]
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.setDataSource(dataSource);
@@ -559,7 +594,7 @@ The value to set.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ "Apples", "Oranges" ]
+      dataSource: [ "Apples", "Oranges" ]
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.suggest("Apples");
@@ -584,7 +619,7 @@ The value to set.
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataSource: [ "Apples", "Oranges" ]
+      dataSource: [ "Apples", "Oranges" ]
     });
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     autocomplete.value("Apples");
@@ -608,25 +643,25 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - subscribe to the change event during initialization
+#### Example - subscribe to the "change" event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        change: function(e) {
-            var value = this.value();
-            // Use the value of the widget
-        }
+      change: function(e) {
+        var value = this.value();
+        // Use the value of the widget
+      }
     });
     </script>
 
-#### Example - subscribe to the change event after initialization
+#### Example - subscribe to the "change" event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_change(e) {
-        var value = this.value();
-        // Use the value of the widget
+      var value = this.value();
+      // Use the value of the widget
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -645,23 +680,23 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - subscribe to the close event during initialization
+#### Example - subscribe to the "close" event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        close: function(e) {
-            // subscribe to the event
-        }
+      close: function(e) {
+        // handle the event
+      }
     });
     </script>
 
-#### Example - subscribe to the close event after initialization
+#### Example - subscribe to the "close" event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_close(e) {
-        // subscribe to the event
+      // handle the event
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -680,23 +715,23 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - subscribe to the dataBound event during initialization
+#### Example - subscribe to the "dataBound" event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        dataBound: function(e) {
-            // subscribe to the event
-        }
+      dataBound: function(e) {
+          // handle the event
+      }
     });
     </script>
 
-#### Example - subscribe to the dataBound event after initialization
+#### Example - subscribe to the "dataBound" event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_dataBound(e) {
-        // subscribe to the event
+      // handle the event
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -715,23 +750,23 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-#### Example - subscribe to the open event during initialization
+#### Example - subscribe to the "open" event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        open: function(e) {
-            // subscribe to the event
-        }
+      open: function(e) {
+        // handle the event
+      }
     });
     </script>
 
-#### Example - subscribe to the open event after initialization
+#### Example - subscribe to the "open" event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_open(e) {
-        // subscribe to the event
+      // handle the event
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
@@ -752,27 +787,27 @@ The jQuery object which represents the selected item.
 
 The widget instance which fired the event.
 
-#### Example - subscribe to the select event during initialization
+#### Example - subscribe to the "select" event during initialization
 
     <input id="autocomplete" />
     <script>
     $("#autocomplete").kendoAutoComplete({
-        select: function(e) {
-            var item = e.item;
-            var text = item.text();
-            // Use the selected item or its text
-        }
+      select: function(e) {
+        var item = e.item;
+        var text = item.text();
+        // Use the selected item or its text
+      }
     });
     </script>
 
-#### Example - subscribe to the select event after initialization
+#### Example - subscribe to the "select" event after initialization
 
     <input id="autocomplete" />
     <script>
     function autocomplete_select(e) {
-        var item = e.item;
-        var text = item.text();
-        // Use the selected item or its text
+      var item = e.item;
+      var text = item.text();
+      // Use the selected item or its text
     }
     $("#autocomplete").kendoAutoComplete();
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");

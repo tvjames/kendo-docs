@@ -1099,17 +1099,15 @@ If the `dataSource` option is an existing [kendo.data.DataSource](/api/framework
     var dataSource = new kendo.data.DataSource({
       transport: {
         read: {
-          url: "/remote-service-url",
-          type: "POST"
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
         }
-      }
+      },
+      pageSize: 10
     });
     $("#grid").kendoGrid({
-      columns: [
-        { field: "name" },
-        { field: "age" }
-      ],
-      dataSource: dataSource
+      dataSource: dataSource,
+      pageable: true
     });
     </script>
 
@@ -3562,6 +3560,94 @@ The text displayed by the command button. If not set the [name](#configuration-t
     });
     </script>
 
+## Fields
+
+### dataSource `kendo.data.DataSource`
+
+The [data source](/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
+
+> Changes of the data source will be reflected in the widget.
+
+> **Important:** Assigning a new data source would have no effect. Use the [setDataSource](#methods-setDataSource) method instead.
+
+#### Example - add a data item to the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30}
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.dataSource.add({ name: "John Doe", age: 33 });
+    </script>
+
+#### Example - update a data item in the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataSource.at(0);
+    data.set("name", "John Doe");
+    </script>
+
+#### Example - remove a data item from the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33},
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataSource.at(1);
+    grid.dataSource.remove(data);
+    </script>
+
+### tbody `jQuery`
+
+The jQuery object which reprents the table body. Contains all grid table rows.
+
+#### Example - get the first table row
+
+  <div id="grid"></div>
+  <script>
+  $("#grid").kendoGrid({
+    columns: [
+      { field: "name" },
+      { field: "age" }
+    ],
+    dataSource: [
+      { name: "Jane Doe", age: 30},
+      { name: "John Doe", age: 33},
+    ]
+  });
+  var grid = $("#grid").data("kendoGrid");
+  var row = grid.tbody.find("tr:eq(0)");
+  var data = grid.dataItem(row);
+  console.log(data.name); // displays "Jane Doe"
+  </script>
+
 ## Methods
 
 ### addRow
@@ -3882,7 +3968,7 @@ Fires the [edit](#events-edit) event.
 
 ##### cell `jQuery`
 
-A jQuery object which represents the table cell.
+The jQuery object which represents the table cell.
 
 #### Example - switch the first cell to edit mode
 
@@ -3918,7 +4004,7 @@ Fires the [edit](#events-edit) event.
 
 ##### row `jQuery`
 
-A jQuery object which represents the table row.
+The jQuery object which represents the table row.
 
 #### Example - switch the first row in edit mode
 
@@ -4564,6 +4650,81 @@ The widget instance which fired the event.
     grid.bind("columnHide", grid_columnHide);
     </script>
 
+### columnMenuInit
+
+Fired when the column menu is initialized.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.container `jQuery`
+
+The jQuery object representing column menu form element.
+
+##### e.field `String`
+
+The field of the column for which the column menu is initialized.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnMenuInit" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33}
+      ],
+      columnMenu: true,
+      columnMenuInit: function(e) {
+        var menu = e.container.find(".k-menu").data("kendoMenu");
+        var field = e.field;
+        menu.append({ text: "Custom" });
+        menu.bind("select", function(e) {
+          if ($(e.item).text() == "Custom") {
+            console.log("Custom button for", field);
+          }
+        });
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnMenuInit" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_columnMenuInit(e) {
+      var menu = e.container.find(".k-menu").data("kendoMenu");
+      var field = e.field;
+      menu.append({ text: "Custom" });
+      menu.bind("select", function(e) {
+        if ($(e.item).text() == "Custom") {
+          console.log("Custom button for", field);
+        }
+      });
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33}
+      ],
+      columnMenu: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnMenuInit", grid_columnMenuInit);
+    </script>
+
 ### columnReorder
 
 Fired when the user changes the order of a column.
@@ -4870,11 +5031,11 @@ The event handler function context (available via the `this` keyword) will be se
 
 ##### e.detailRow `jQuery`
 
-A jQuery object which represents the detail table row.
+The jQuery object which represents the detail table row.
 
 ##### e.masterRow `jQuery`
 
-A jQuery object which represents the master table row.
+The jQuery object which represents the master table row.
 
 ##### e.sender `kendo.ui.Grid`
 
@@ -4930,11 +5091,11 @@ The event handler function context (available via the `this` keyword) will be se
 
 ##### e.detailRow `jQuery`
 
-A jQuery object which represents the detail table row.
+The jQuery object which represents the detail table row.
 
 ##### e.masterRow `jQuery`
 
-A jQuery object which represents the master table row.
+The jQuery object which represents the master table row.
 
 ##### e.sender `kendo.ui.Grid`
 
@@ -4994,15 +5155,15 @@ The data item to which the master table row is bound.
 
 ##### e.detailCell `jQuery`
 
-A jQuery object which represents the detail table cell.
+The jQuery object which represents the detail table cell.
 
 ##### e.detailRow `jQuery`
 
-A jQuery object which represents the detail table row.
+The jQuery object which represents the detail table row.
 
 ##### e.masterRow `jQuery`
 
-A jQuery object which represents the master table row.
+The jQuery object which represents the master table row.
 
 ##### e.sender `kendo.ui.Grid`
 
@@ -5086,7 +5247,7 @@ The event handler function context (available via the `this` keyword) will be se
 
 ##### e.container `jQuery`
 
-A jQuery object representing the container element. That element contains the editing UI.
+The jQuery object representing the container element. That element contains the editing UI.
 
 ##### e.model `kendo.data.Model`
 
@@ -5173,149 +5334,309 @@ The widget instance which fired the event.
 
 ### filterMenuInit
 
-Fires when the grid column filter menu is initialized.
+Fired when the grid filter menu is initialized.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         filterMenuInit: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailInit event
-     grid.bind("filterMenuInit", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.field `Object`
-
-The name of the field for which the menu is initialized.
-
 ##### e.container `jQuery`
 
-The jQuery element representing filter menu form.
+The jQuery object representing filter menu form element.
 
-### columnMenuInit
+##### e.field `String`
 
-Fires when the grid column menu is initialized.
+The field of the column for which the filter menu is initialized.
 
-#### Example
+##### e.sender `kendo.ui.Grid`
 
-     $("#grid").kendoGrid({
-         columnMenuInit: function(e) {
-             // handle event
-         }
-     });
+The widget instance which fired the event.
 
-#### To set after initialization
+#### Example - subscribe to the "filterMenuInit" event during initialization
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the columnMenuInit event
-     grid.bind("columnMenuInit", function(e) {
-         // handle event
-     });
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe"},
+        { name: "John Doe"}
+      ],
+      filterable: true,
+      filterMenuInit: function(e) {
+        if (e.field == "name") {
+          var firstValueDropDown = e.container.find("select:eq(0)").data("kendoDropDownList");
+          firstValueDropDown.value("contains");
+          var logicDropDown = e.container.find("select:eq(1)").data("kendoDropDownList");
+          logicDropDown.value("or");
+          var secondValueDropDown = e.container.find("select:eq(2)").data("kendoDropDownList");
+          secondValueDropDown.value("contains");
+        }
+      }
+    });
+    </script>
 
-#### Event Data
+#### Example - subscribe to the "filterMenuInit" event after initialization
 
-##### e.field `Object`
-
-The name of the field for which the menu is initialized.
-
-##### e.container `jQuery`
-
-The jQuery element representing menu container.
+    <div id="grid"></div>
+    <script>
+    function grid_filterMenuInit(e) {
+      if (e.field == "name") {
+        var firstValueDropDown = e.container.find("select:eq(0)").data("kendoDropDownList");
+        firstValueDropDown.value("contains");
+        var logicDropDown = e.container.find("select:eq(1)").data("kendoDropDownList");
+        logicDropDown.value("or");
+        var secondValueDropDown = e.container.find("select:eq(2)").data("kendoDropDownList");
+        secondValueDropDown.value("contains");
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe"},
+        { name: "John Doe"}
+      ],
+      filterable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("filterMenuInit", grid_filterMenuInit);
+    </script>
 
 ### remove
 
-Fires before the grid item is removed.
+Fired when the user clicks the "destroy" command button.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         remove: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the remove event
-     grid.bind("remove", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
-
-##### e.row `jQuery`
-
-The row element to be deleted.
 
 ##### e.model `kendo.data.Model`
 
-The model which to be deleted.
+The data item to which the table row is bound.
+
+##### e.row `jQuery`
+
+The jQuery object representing the current table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "remove" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      remove: function(e) {
+        console.log("Removing", e.model.name);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "remove" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_remove(e) {
+      console.log("Removing", e.model.name);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("remove", grid_remove);
+    </script>
 
 ### save
 
-Fires before the grid item is changed.
+Fired when a data item is saved.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         save: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the save event
-     grid.bind("save", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
+
+##### e.model `kendo.data.Model`
+
+The data item to which the table row is bound.
+
+##### e.row `jQuery`
+
+The jQuery object representing the current table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
 
 ##### e.values `Object`
 
 The values entered by the user.
 
-##### e.container `jQuery`
+#### Example - subscribe to the "save" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      save: function(e) {
+        if (e.values.name) {
+          // the user changed the name field
+          if (e.values.name != e.model.name) {
+            console.log("name is modified");
+          }
+        }
+      }
+    });
+    </script>
 
-The jQuery element which is in edit mode.
-
-##### e.model `kendo.data.Model`
-
-The edited model.
+#### Example - subscribe to the "save" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_save(e) {
+      if (e.values.name) {
+        // the user changed the name field
+        if (e.values.name != e.model.name) {
+          console.log("name is modified");
+        }
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("save", grid_save);
+    </script>
 
 ### saveChanges
 
-Fires before the grid calls DataSource sync.
+Fired when the user clicks the "save" command button.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-     $("#grid").kendoGrid({
-         saveChanges: function(e) {
-             // handle event
-         }
-     });
+#### Event Data
 
-#### To set after initialization
+##### e.preventDefault `Function`
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the saveChanges event
-     grid.bind("saveChanges", function(e) {
-         // handle event
-     });
+If invoked the grid will not call the [sync](/api/framework/datasource#methods-sync) method of the data source.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "saveChanges" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      saveChanges: function(e) {
+        if (!confirm("Are you sure you want to save all changes?")) {
+           e.preventDefault();
+        }
+      },
+      toolbar: ["save"]
+    });
+    </script>
+
+#### Example - subscribe to the "saveChanges" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_saveChanges(e) {
+      if (!confirm("Are you sure you want to save all changes?")) {
+         e.preventDefault();
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+      toolbar: ["save"]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("saveChanges", grid_saveChanges);
+    </script>
