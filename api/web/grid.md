@@ -3630,23 +3630,23 @@ The jQuery object which reprents the table body. Contains all grid table rows.
 
 #### Example - get the first table row
 
-  <div id="grid"></div>
-  <script>
-  $("#grid").kendoGrid({
-    columns: [
-      { field: "name" },
-      { field: "age" }
-    ],
-    dataSource: [
-      { name: "Jane Doe", age: 30},
-      { name: "John Doe", age: 33},
-    ]
-  });
-  var grid = $("#grid").data("kendoGrid");
-  var row = grid.tbody.find("tr:eq(0)");
-  var data = grid.dataItem(row);
-  console.log(data.name); // displays "Jane Doe"
-  </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33},
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var row = grid.tbody.find("tr:eq(0)");
+    var data = grid.dataItem(row);
+    console.log(data.name); // displays "Jane Doe"
+    </script>
 
 ## Methods
 
