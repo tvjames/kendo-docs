@@ -56,3 +56,11 @@ Specifies the text displayed by the item
     <kendo:menu-item text="text">
     </kendo:menu-item>
 
+### url `String`
+
+Specifies the URL that the item links to
+
+#### Example
+    <kendo:menu-item url="url">
+    </kendo:menu-item>
+
