@@ -92,3 +92,12 @@ and check the [JavaScript Dependencies](http://docs.kendoui.com/getting-started/
         ?>
         </body>
     </html>
+
+## Next Steps
+
+You can watch the videos in the [Kendo UI YouTube channel](http://www.youtube.com/kendouitv):
+
+1. [Getting Started With The PHP Wrappers For Kendo UI: Part 1](http://www.youtube.com/watch?v=2Kpgp_nocEI)
+1. [Getting Started With The PHP Wrappers For Kendo UI: Part 2](http://www.youtube.com/watch?v=RQCLqA6Pu_E)
+1. [Getting Started With The PHP Wrappers For Kendo UI: Part 3](http://www.youtube.com/watch?v=zYh6cuU_leQ)
+

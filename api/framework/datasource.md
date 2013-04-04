@@ -1,6 +1,6 @@
 ---
 title: kendo.data.DataSource
-meta_title: Configuration of DataSource component in Kendo UI framework
+meta_title: Configuration, methods and events of the Kendo DataSource component.
 meta_description: Easy to follow steps for DataSource component configuration, examples of supported methods and executed events.
 slug: api-framework-datasource
 tags: api,framework
