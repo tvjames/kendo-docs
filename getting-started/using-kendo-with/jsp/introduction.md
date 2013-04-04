@@ -86,7 +86,7 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
     can also create a custom JavaScript file using the [Custom Download Builder](http://www.kendoui.com/custom-download).
 
         <link href="resources/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
-        <link href="resources/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />        
+        <link href="resources/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
         <link href="resources/styles/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
 
         <script src="resources/js/jquery.min.js"></script>
@@ -109,3 +109,12 @@ You can include the JavaScript and CSS files from CDN. Don't forget to specify t
     <!-- jQuery is not hosted on Kendo CDN - include from another location -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://cdn.kendostatic.com/<version>/js/kendo.web.min.js"></script>
+
+## Next Steps
+
+You can watch the videos in the [Kendo UI YouTube channel](http://www.youtube.com/kendouitv):
+
+1. [Getting Started With The Kendo UI JSP Wrappers - Episode 1](http://www.youtube.com/watch?v=3VH75XVhLCI)
+1. [Getting Started With The Kendo UI JSP Wrappers - Episode 2](http://www.youtube.com/watch?v=LyGHeRMmq5I)
+1. [Getting Started With The Kendo UI JSP Wrappers - Episode 3](http://www.youtube.com/watch?v=sCwqj_ZRGI8)
+1. [Getting Started With The Kendo UI JSP Wrappers - Episode 4](http://www.youtube.com/watch?v=fcbw4YR4P2I)
