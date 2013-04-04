@@ -205,7 +205,7 @@ Here is the complete example:
 
 ## Next Steps
 
-You are now ready to use Kendo UI. Check out our interactive tutorials in the [Kendo UI Dojo](http://www.kendoui.com/dojo.aspx) or continue with the following help topics or examples:
+You are now ready to use Kendo UI. Watch the videos in the [Kendo UI YouTube channel](http://www.youtube.com/kendouitv). Also check out our interactive tutorials in the [Kendo UI Dojo](http://www.kendoui.com/dojo.aspx) or continue with the following help topics or examples:
 
 ### Further reading
 
