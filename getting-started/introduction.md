@@ -205,7 +205,13 @@ Here is the complete example:
 
 ## Next Steps
 
-You are now ready to use Kendo UI. Watch the videos in the [Kendo UI YouTube channel](http://www.youtube.com/kendouitv). Also check out our interactive tutorials in the [Kendo UI Dojo](http://www.kendoui.com/dojo.aspx) or continue with the following help topics or examples:
+### Kendo UI videos
+
+You can watch the videos in the [Kendo UI YouTube channel](http://www.youtube.com/kendouitv).
+
+### Kendo UI Dojo
+
+A lot of interactive tutorials are available in the [Kendo UI Dojo](http://www.kendoui.com/dojo.aspx).
 
 ### Further reading
 
