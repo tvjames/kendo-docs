@@ -22,7 +22,7 @@ Represents the Kendo UI Mobile TabStrip widget. Inherits from [kendo.mobile.ui.W
 
 ### badge
 
-Sets a badge on one of the **tabs** with the specified value. If invoked without second parameter, returns the tab's current badge value. Set the value to false to remove the badge.
+**Introduced in Q1 2013 SP** Sets a badge on one of the **tabs** with the specified value. If invoked without second parameter, returns the tab's current badge value. Set the value to false to remove the badge.
 
 #### Parameters
 

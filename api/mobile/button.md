@@ -26,7 +26,7 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
 
 ### badge
 
-Sets a badge on the **Button** with the specified value. If invoked without parameters, returns the current badge value. Set the value to false to remove the badge.
+**Introduced in Q1 2013 SP** Sets a badge on the **Button** with the specified value. If invoked without parameters, returns the current badge value. Set the value to false to remove the badge.
 
 #### Parameters
 

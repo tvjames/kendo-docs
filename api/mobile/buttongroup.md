@@ -29,7 +29,7 @@ However, if the widget is placed in a scrollable view, the user may accidentally
 
 ### badge
 
-Sets a badge on one of the ButtonGroup buttons with the specified value. If invoked without parameters, returns the button's current badge value. Set the value to false to remove the badge.
+**Introduced in Q1 2013 SP** Sets a badge on one of the ButtonGroup buttons with the specified value. If invoked without parameters, returns the button's current badge value. Set the value to false to remove the badge.
 
 #### Parameters
 
