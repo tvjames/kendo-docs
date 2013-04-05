@@ -174,7 +174,7 @@ If you want to use CDN skip steps 4 and 5 and check the [Using CDN](#using-cdn) 
 5.  Copy the Kendo UI CSS files and folders from the **\styles** folder of the installation to the **Content** folder of your application. If you want to use only one theme
 copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), the theme folder (e.g. **Default**) and the **textures** folder.
 
-6.  Create bundles for the CSS and JavaScript files of Kendo UI:
+6.  Create bundles for the CSS and JavaScript files of Kendo UI by defining them in a static method of a class, e.g. in **~/BundlesConfig.cs**:
     * If the Kendo UI JavaScript files are in **~/Scripts** and the CSS files are in **~/Content** :
 
             public static void RegisterBundles(BundleCollection bundles)
@@ -230,8 +230,17 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                 bundles.IgnoreList.Ignore("*-vsdoc.js");
                 bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
             }
+		
+7.  Register the bundles by executing the static method from the previous point in the `Application_Start()` method in **~/Global.asax.cs**:
 
-7.  Register the bundles in your layout page at the end of the `head` element. **Remove any existing jQuery bundle registration at end of the `body` element of the page.** **Note:** If you don't want to use ASP.NET bundles perform steps 5 and 6 from the [Using Kendo UI in ASP.NET MVC 3 application](#using-kendo-ui-in-asp.net-mvc-3-application) section.
+        protected void Application_Start()
+        {
+            // ...
+
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+8.  Load the bundles in your layout page at the end of the `head` element. **Remove any existing jQuery bundle registration at end of the `body` element of the page.** **Note:** If you don't want to use ASP.NET bundles perform steps 5 and 6 from the [Using Kendo UI in ASP.NET MVC 3 application](#using-kendo-ui-in-asp.net-mvc-3-application) section.
     * If the Kendo UI JavaScript files are in **~/Scripts** and the CSS files are in **~/Content** :
         * WebForms:
 
@@ -267,7 +276,7 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                     @Scripts.Render("~/bundles/kendo")
                 </head>
 
-8. Add a reference to the **Kendo.Mvc.UI** namespace to your **web.config**. Then the `Kendo` HtmlHelper extension would
+9. Add a reference to the **Kendo.Mvc.UI** namespace to your **web.config**. Then the `Kendo` HtmlHelper extension would
 be availble in your views. Rebuild your project after adding the namespace to the web.config (required for Visual Studio to show intellisense for Kendo.Mvc.UI).
     * If you are using the WebForms view engine open the **web.config** file in the root folder of your application. Add
      `<add namespace="Kendo.Mvc.UI" />` before the closing `namespaces` tag:
@@ -296,7 +305,7 @@ be availble in your views. Rebuild your project after adding the namespace to th
                  </pages>
              </system.web.webPages.razor>
 
-9.  Use any Kendo UI HtmlHelper extension:
+10.  Use any Kendo UI HtmlHelper extension:
     * WebForms
 
             <%: Html.Kendo().DatePicker().Name("Birthday") %>
