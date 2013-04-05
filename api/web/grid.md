@@ -4176,7 +4176,7 @@ Fires the [remove](#events-remove) event.
 
 A string, DOM element or jQuery object which represents the table row. A string is treated as a jQuery selector.
 
-##### Example - remove the first table row
+#### Example - remove the first table row
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
