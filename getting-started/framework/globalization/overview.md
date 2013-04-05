@@ -45,7 +45,10 @@ Kendo exposes methods which can format number or date object using specific form
 - [kendo.toString(object, format, [culture])](http://docs.kendoui.com/api/framework/kendo#tostring) - returns a string representation of the current object taking into account the given format and culture.
 - [kendo.format(format, arguments)](http://docs.kendoui.com/api/framework/kendo#format) -  replaces each format item in a specified string with the text equivalent of a corresponding object's value.
 
-For more detail information check [this help topic](http://docs.kendoui.com/getting-started/framework/globalization/formatting).
+For more detail information check these helps topics:
+[Number Formatting](http://docs.kendoui.com/getting-started/framework/globalization/numberformatting)
+and
+[Date Formatting](http://docs.kendoui.com/getting-started/framework/globalization/dateformatting)
 
 ## Parsing a string
 Kendo exposes methods which converts the specified string to date or number object:
@@ -54,7 +57,10 @@ Kendo exposes methods which converts the specified string to date or number obje
 - [kendo.parseFloat(string, [culture])](http://docs.kendoui.com/api/framework/kendo#parseFloat) - converts a string to a number with floating point using the specified culture (current culture by default).
 - [kendo.parseDate(string, [formats], [culture])](http://docs.kendoui.com/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object, taking into account the given format/formats (or the given culture's set of default formats).
 
-For more detail information check [this help topic](http://docs.kendoui.com/getting-started/framework/globalization/parsers).
+For more detail information, check these help topics:
+[Number Parsing](http://docs.kendoui.com/getting-started/framework/globalization/numberparsing)
+and
+[Date Parsing](http://docs.kendoui.com/getting-started/framework/globalization/dateparsing)
 
 ## Widgets that depend on culture info
 
