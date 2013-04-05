@@ -11,7 +11,7 @@ publish: true
 
 ## Configuration
 
-### aggregate `Array` *(default: undefined)*
+### aggregate `Array`
 
 The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
 
@@ -1002,7 +1002,7 @@ It is possible to modify these parameters by using the `parameterMap` function f
         sort: { field: "orderId", dir: "asc" }
     });
 
-### sort `Array|Object` *(default: undefined)*
+### sort `Array|Object`
 
  Sets initial sort order
 
