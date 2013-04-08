@@ -132,6 +132,28 @@ The style of the control. Can be either empty string(""), or inset.
 
  The item template.
 
+#### Example:
+
+    <div id="foo" data-role="view">
+        <ul id="list" data-role="listview" data-source="dataSource" data-template="tmp"></ul>
+    </div>
+
+    <script id="tmp" type="text/x-kendo-template">
+        <p>#: name # <span>Age: #: age #</span></p>
+    </script>
+    
+    <script>
+        var app = new kendo.mobile.Application();
+        var dataSource = new kendo.data.DataSource({
+            data: [
+                { name: "Jane Doe", age: 30 },
+                { name: "John Doe", age: 33 }
+            ]
+        });
+    </script>
+
+> The ListView automatically wraps the template content in `<li>` tag. Putting a `<li>` tag inside the template creates invalid nesting of elements.
+
 ### type `String`
 
 The type of the control. Can be either `flat` (default) or group. Determined automatically in databound mode.

@@ -98,6 +98,8 @@ The mobile ListView leverages Kendo UI high-performance Templates to provide com
 over item rendering. For a complete overview of Kendo UI Template capabilities and syntax,
 please review the [Kendo UI Templates](http://www.kendoui.com/documentation/framework/templates/ "Kendo UI Template") documentation.
 
+> The ListView automatically wraps the template content in `<li>` tag. Putting a `<li>` tag inside the template creates invalid nesting of elements.
+
 ### Basic item template customization
 
     <ul id="listview"></ul>
@@ -108,6 +110,26 @@ please review the [Kendo UI Templates](http://www.kendoui.com/documentation/fram
                 template : "<strong>#:data.foo#</strong>",
                 dataSource: kendo.data.DataSource.create([{foo: "bar"}, {foo: "baz"}])
             });
+        });
+    </script>
+
+### Setting item template via data attribute
+
+    <div id="foo" data-role="view">
+        <ul id="list" data-role="listview" data-source="dataSource" data-template="tmp"></ul>
+    </div>
+
+    <script id="tmp" type="text/x-kendo-template">
+        <p>#: name # <span>Age: #: age #</span></p>
+    </script>
+    
+    <script>
+        var app = new kendo.mobile.Application();
+        var dataSource = new kendo.data.DataSource({
+            data: [
+                { name: "Jane Doe", age: 30 },
+                { name: "John Doe", age: 33 }
+            ]
         });
     </script>
 
