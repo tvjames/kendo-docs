@@ -2356,11 +2356,17 @@ Template variables:
 
 A value indicating if the tooltip should be displayed.
 
+### series.visibleInLegend `Boolean`*(default: true)*
+
+A value indicating whether to show the point category name (for bubble, donut and pie series) and series name (for other available series types) in the legend.
+
+** Available for all series. **
+
 ### series.visibleInLegendField `String`
 
-A boolean value indicating whether to show the point category name in the legend.
+A data field containing a boolean value which indicates whether to show the point category name in the legend.
 
-** Available for bubble and pie series. **
+** Available for bubble, donut and pie series. **
 
 ### series.width `Number`
 
