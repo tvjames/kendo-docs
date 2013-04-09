@@ -699,6 +699,10 @@ Serializes the currently selected text to a XHTML string.
 
 `String` The selectied text as valid XHTML.
 
+### refresh
+
+Reinitializes the editing area iframe. Should be used after moving the editor in the DOM.
+
 ### selectRange
 
 Focuses the editable area and selects the range described by the range parameter.
