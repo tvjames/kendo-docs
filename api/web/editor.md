@@ -102,7 +102,7 @@ as a collection of required properties, while the insertHtml tool requires a col
              "bold",
              "italic",
              "underline",
-			 "separator",
+             "separator",
              "strikethrough",
              "fontName",
              "fontSize",
@@ -850,3 +850,17 @@ Fires when the Editor selection has changed.
      editor.bind("select", function(e) {
          // handle event
      }
+
+## Class Fields
+
+### defaultTools `Array`
+
+An array of tool definitions that are used for initializing the default tools. Note: Editors that are already initialized will not be affected by changes to this array.
+
+#### Example - insert paragraphts on Shift+Enter, line breaks on Enter
+
+    var defaultTools = kendo.ui.Editor.defaultTools;
+
+    defaultTools["insertLineBreak"].options.shift = false;
+    defaultTools["insertParagraph"].options.shift = true;
+
