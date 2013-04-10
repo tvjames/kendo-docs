@@ -287,7 +287,7 @@ Specifies the aggregate for each data item field.
         low: "max"
     }
 
-### navigator.series.axis `String`*(default: primary)*
+### navigator.series.axis `String`*(default: "primary")*
 
 The name of the value axis to use.
 
@@ -299,9 +299,9 @@ The border of the points.
 
 ** Applicable to column, ohlc and candlestick series **
 
-### navigator.series.border.color `String`*(default: the color of the curren series)*
+### navigator.series.border.color `String`
 
-The color of the border.
+The color of the border.  It defaults to the color of the current series.
 
 ### navigator.series.border.dashType `String`*(default: "solid")*
 
@@ -1229,7 +1229,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 The visibility of the lines.
 
-### categoryAxis.minorGridLines.width `Number`*(default: 1> The width of the lines. <p)*
+### categoryAxis.minorGridLines.width `Number`
 
 The width of the lines.
 
@@ -1249,7 +1249,7 @@ on the chart.
 
 The visibility of the minor ticks.
 
-### categoryAxis.name `String`*(default: primary)*
+### categoryAxis.name `String`*(default: "primary")*
 
 The unique axis name.
 
@@ -1540,9 +1540,10 @@ Specifiying "auto" will set the step to such value that the total number of cate
 
 This option is ignored if **baseUnit** is set to "fit".
 
-### categoryAxis.labels.culture `String`*(default: global culture)*
+### categoryAxis.labels.culture `String`
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+It defaults to the global culture.
 
 ### categoryAxis.labels.dateFormats `Object`
 
@@ -1958,7 +1959,7 @@ Configures the legend labels.
 The color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
 
-### legend.labels.font `String`*(default: 12px Arial,Helvetica,sans-serif)*
+### legend.labels.font `String`*(default: "12px Arial,Helvetica,sans-serif")*
 
 The font style of the labels.
 
@@ -2540,7 +2541,7 @@ Specifies the aggregate for each data item field.
         low: "max"
     }
 
-### series.axis `String`*(default: primary)*
+### series.axis `String`*(default: "primary")*
 
 The name of the value axis to use.
 
@@ -2552,9 +2553,9 @@ The border of the points.
 
 ** Applicable to column, ohlc and candlestick series **
 
-### series.border.color `String`*(default: the color of the curren series)*
+### series.border.color `String`
 
-The color of the border.
+The color of the border.  It defaults to the color of the current series.
 
 ### series.border.dashType `String`*(default: "solid")*
 
@@ -4146,7 +4147,7 @@ The visibility of the minor ticks.
 The interval between minor divisions.
 It defaults to 1/5th of the majorUnit.
 
-### valueAxis.name `Object`*(default: primary)*
+### valueAxis.name `Object`*(default: "primary")*
 
 The unique axis name.
 
@@ -4604,9 +4605,10 @@ The label template.
 
 The visibility of the labels.
 
-### xAxis.labels.culture `String`*(default: global culture)*
+### xAxis.labels.culture `String`
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+By default it uses the global culture.
 
 ### xAxis.labels.dateFormats `Object`
 
@@ -4733,7 +4735,7 @@ The axis major tick size. This is the length of the line in pixels that is drawn
 
 The visibility of the major ticks.
 
-### xAxis.name `Object`*(default: primary)*
+### xAxis.name `Object`*(default: "primary")*
 
 The unique axis name.
 
@@ -5191,9 +5193,10 @@ The label template.
 
 The visibility of the labels.
 
-### yAxis.labels.culture `String`*(default: global culture)*
+### yAxis.labels.culture `String`
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+It defaults to the global culture.
 
 ### yAxis.labels.dateFormats `Object`
 
@@ -5320,7 +5323,7 @@ The axis major tick size. This is the length of the line in pixels that is drawn
 
 The visibility of the major ticks.
 
-### yAxis.name `Object`*(default: primary)*
+### yAxis.name `Object`*(default: "primary")*
 
 The unique axis name.
 

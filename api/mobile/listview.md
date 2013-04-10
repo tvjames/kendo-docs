@@ -63,7 +63,7 @@ Last dataItem of the first loaded page of the ListView.
 
  If set to true, the group headers will persist their position when the user scrolls through the listview. Applicable only when the type is set to group, or when binding to grouped datasource.
 
-### headerTemplate `String`*(default: #:value#)*
+### headerTemplate `String`*(default: "#:value#")*
 
  The header item template (applicable when the type is set to group).
 
@@ -128,7 +128,7 @@ First dataItem of the ListView // => listView.dataSource.get(0);
 
 The style of the control. Can be either empty string(""), or inset.
 
-### template `String`*(default: #:data#)*
+### template `String`*(default: "#:data#")*
 
  The item template.
 

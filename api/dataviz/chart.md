@@ -388,7 +388,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 The visibility of the lines.
 
-### categoryAxis.minorGridLines.width `Number`*(default: 1> The width of the lines. <p)*
+### categoryAxis.minorGridLines.width `Number`
 
 The width of the lines.
 
@@ -732,9 +732,10 @@ Specifiying "auto" will set the step to such value that the total number of cate
 This option is ignored if **baseUnit** is set to "fit".
 
 
-### categoryAxis.labels.culture `String`*(default: global culture)*
+### categoryAxis.labels.culture `String`
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+Uses the global culture by default.
 
 ### categoryAxis.labels.dateFormats `Object`
 
@@ -1150,7 +1151,7 @@ Configures the legend labels.
 The color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
 
-### legend.labels.font `String`*(default: 12px Arial,Helvetica,sans-serif)*
+### legend.labels.font `String`*(default: "12px Arial,Helvetica,sans-serif")*
 
 The font style of the labels.
 
@@ -1754,9 +1755,9 @@ The border of the points.
 
 ** Applicable to bar, column, bubble, donut, pie, ohlc and candlestick series **
 
-### series.border.color `String`*(default: the color of the curren series)*
+### series.border.color `String`
 
-The color of the border.
+The color of the border.  It defaults to the color of the current series.
 
 ### series.border.dashType `String`*(default: "solid")*
 
@@ -3994,9 +3995,10 @@ The label template.
 
 The visibility of the labels.
 
-### xAxis.labels.culture `String`*(default: global culture)*
+### xAxis.labels.culture `String`
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+Uses the global culture by default.
 
 ### xAxis.labels.dateFormats `Object`
 
@@ -4581,9 +4583,10 @@ The label template.
 
 The visibility of the labels.
 
-### yAxis.labels.culture `String`*(default: global culture)*
+### yAxis.labels.culture `String`
 
 Culture to use for formatting the dates. See [Globalization](http://www.kendoui.com/documentation/framework/globalization/overview.aspx) for more information.
+Uses the global culture by default.
 
 ### yAxis.labels.dateFormats `Object`
 
