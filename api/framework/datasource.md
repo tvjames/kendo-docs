@@ -1155,7 +1155,7 @@ Use the [parameterMap](#configuration-transport.parameterMap) option to send the
 
 ### sort `Array|Object`
 
-The sort order which will be applied over the data items. By the data items are not sorted.
+The sort order which will be applied over the data items. By default the data items are not sorted.
 
 #### Example - sort the data items
 
