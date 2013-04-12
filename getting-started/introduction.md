@@ -197,7 +197,7 @@ Here is the complete example:
                 </footer>
             </div>
             <script>
-            var app = new kendo.mobile.Applilcation();
+            var app = new kendo.mobile.Application();
             </script>
         </body>
     </html>
