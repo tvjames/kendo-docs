@@ -3276,183 +3276,365 @@ Returns `0` if the data source hasn't been populated with data items via the [re
 
 ### totalPages
 
-Get the number of available pages.
-
-#### Example
-
-    var pages = dataSource.totalPages();
+Gets the number of available pages.
 
 #### Returns
 
 `Number` the available pages.
 
+#### Example - get the total number of pages
+
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      pageSize: 1
+    });
+    console.log(dataSource.totalPages());   // displays "2"
+    </script>
+
 ### view
 
-Returns a the current state of the data items - with applied paging, sorting, filtering and grouping.
+Returns the data items which correspond to the current page, filter, sort and group configuration.
 
-To ensure that data is available this method should be use from within `change` event of the DataSource.
-
-#### Example
-
-    var dataSource = new kendo.data.DataSource({
-        transport: {
-            read: "orders.json"
-        }
-        change: function(e) {
-           // create a template instance
-           var template = kendo.template($("#template").html());
-           // render a view by passing the data to a template
-           kendo.render(template, dataSource.view());
-        }
-    });
+To ensure that data is available this method should be used within the [change](#events-change) event handler or the [fetch](#methods-fetch) method.
 
 #### Returns
 
-`kendo.data.ObservableArray` the data items.
+`kendo.data.ObservableArray` the data items. Returns groups if the data items are grouped (via the [group](#configuration-group) option or the [group](#methods-group) method).
+
+#### Example - get the paged and sorted data items
+
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "Tea", category: "Beverages" },
+        { name: "Coffee", category: "Beverages" },
+        { name: "Ham", category: "Food" }
+      ],
+      pageSize: 1,
+      page: 2,
+      sort: { field: "category", dir: "desc" }
+    });
+    dataSource.fetch(function() {
+      var view = dataSource.view();
+      console.log(view.length); // displays "1"
+      console.log(view[0].name); // displays "Tea"
+    });
+    </script>
+
+#### Example - get the paged, sorted and grouped data items
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "Tea", category: "Beverages" },
+        { name: "Coffee", category: "Beverages" },
+        { name: "Ham", category: "Food" }
+      ],
+      group: { field: "category" },
+      sort: { field: "name", dir: "asc" },
+      pageSize: 2,
+      page: 1
+    });
+    dataSource.fetch(function() {
+      var view = dataSource.view();
+      console.log(view.length); // displays "1"
+      var beverages = view[0];
+      console.log(beverages.value); // displays "Beverages"
+      console.log(beverages.items.length); // displays "2"
+      console.log(beverages.items[0].name); // displays "Coffee"
+      console.log(beverages.items[1].name); // displays "Tea"
+    });
+    </script>
 
 ## Events
 
 ### change
 
-Fires when data is changed or read from the transport.
+Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.
 
-#### Example
-
-    var dataSource = new kendo.data.DataSource({
-        change: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    dataSource.bind("change", function(e) {
-        // handle event
-    });
-
-### error
-
-Fires when an error occurs during data read or sync.
-
-> **Important**: If `schema.errors` is specified and the server response contains that field then the `error` event will be raised. The
-`errors` field of the event argument will contain the errors returned by the server.
-
-#### Example
-
-    var dataSource = new kendo.data.DataSource({
-        error: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    dataSource.bind("error", function(e) {
-        // handle event
-    });
-
-#### Event Data
-
-###### e.xhr `Object`
-
-The jqXHR object
-
-###### e.status
-
-String describing the type of the error
-
-###### e.errorThrown
-
-An optional exception object.
-
-### sync
-
-Fires after changes are synced.
-
-#### Example
-
-    var dataSource = new kendo.data.DataSource({
-        sync: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    dataSource.bind("sync", function(e) {
-        // handle event
-    });
-
-
-### requestStart
-
-Fires when data request is to be made.
-
-#### Example
-
-    var dataSource = new kendo.data.DataSource({
-        requestStart: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    dataSource.bind("requestStart", function(e) {
-        // handle event
-    });
+The event handler function context (available via the `this` keyword) will be set to the data source instance.
 
 #### Event Data
 
 ##### e.sender `kendo.data.DataSource`
 
-Reference to the dataSource object instance.
+The data source instance which fired the event.
+
+#### Example - subscribe to the "change" event during initialization
+
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp" //"jsonp" is required for cross-domain requests; use "json" for same-domain requests
+        }
+      },
+      change: function(e) {
+        var data = this.data();
+        console.log(data.length); // displays "77"
+      }
+    });
+    dataSource.fetch();
+    </script>
+
+#### Example - subscribe to the "change" event after initialization
+
+    <script>
+    function dataSource_change(e) {
+      var data = this.data();
+      console.log(data.length); // displays "77"
+    }
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp" //"jsonp" is required for cross-domain requests; use "json" for same-domain requests
+        }
+      }
+    });
+    dataSource.bind("change", dataSource_change);
+    dataSource.fetch();
+    </script>
+
+### error
+
+Fired when a request to the remote service fails.
+
+The event handler function context (available via the `this` keyword) will be set to the data source instance.
+
+> If the [schema.errors](#configuration-schema.errors) option is set and the server response contains that field then the `error` event will be fired. The
+`errors` field of the event argument will contain the errors returned by the server.
+
+#### Event Data
+
+##### e.errorThrown `Object` *(optional)*
+
+Optional exception.
+
+##### e.sender `kendo.data.DataSource`
+
+The data source instance which fired the event.
+
+##### e.status `String`
+
+String describing the type of the error
+
+##### e.xhr `Object`
+
+The current [jqXHR](http://api.jquery.com/Types/#jqXHR).
+
+#### Example - subscribe to the "error" event during initialization
+    <script>
+    function dataSource_error(e) {
+      console.log(e.status); // displays "error"
+    }
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/"
+        }
+      }
+    });
+    dataSource.bind("error", dataSource_error);
+    dataSource.fetch();
+    </script>
 
 ### requestEnd
 
-Fires when a data request is received. Raised after a Create, Read, Update or Destroy request is performed.
+Fired when a remote service request is finished.
 
-#### Example
-
-    var dataSource = new kendo.data.DataSource({
-        requestEnd: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    dataSource.bind("requestEnd", function(e) {
-        // handle event
-    });
+The event handler function context (available via the `this` keyword) will be set to the data source instance.
 
 #### Event Data
 
 ##### e.response `Object`
 
-The raw data received from the server.
+The raw remote service response.
+
+##### e.sender `kendo.data.DataSource`
+
+The data source instance which fired the event.
 
 ##### e.type `String`
 
-The type of the request. Set to `"create"`, `"read"`, `"update"`or `"destroy"`.
+The type of the request. Set to "create", "read", "update" or "destroy".
+
+#### Example - subscribe to the "requestEnd" event during initialization
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
+        }
+      },
+      requestEnd: function(e) {
+        var response = e.response;
+        var type = e.type;
+        console.log(type); // displays "read"
+        console.log(response.length); // displays "77"
+      }
+    });
+    dataSource.fetch();
+    </script>
+
+#### Example - subscribe to the "requestEnd" event after initialization
+    <script>
+    function dataSource_requestEnd(e) {
+      var response = e.response;
+      var type = e.type;
+      console.log(type); // displays "read"
+      console.log(response.length); // displays "77"
+    }
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
+        }
+      }
+    });
+    dataSource.bind("requestEnd", dataSource_requestEnd);
+    dataSource.fetch();
+    </script>
+
+### requestStart
+
+Fired when the data source makes a remote service request.
+
+The event handler function context (available via the `this` keyword) will be set to the data source instance.
+
+#### Event Data
+
+##### e.sender `kendo.data.DataSource`
+
+The data source instance which fired the event.
+
+#### Example - subscribe to the "requestStart" event during initialization
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
+        }
+      },
+      requestStart: function(e) {
+        console.log("request started");
+      }
+    });
+    dataSource.fetch();
+    </script>
+
+#### Example - subscribe to the "requestStart" event after initialization
+    <script>
+    function dataSource_requestStart(e) {
+      console.log("request started");
+    }
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
+        }
+      }
+    });
+    dataSource.bind("requestEnd", dataSource_requestStart);
+    dataSource.fetch();
+    </script>
+
+### sync
+
+Fired after the data source saves data item changes. The data source saves the data item changes when the [sync](#methods-sync) method is called.
+
+The event handler function context (available via the `this` keyword) will be set to the data source instance.
+
+> The `sync` event is fired after all remote requests finish.
+
+#### Event Data
+
+##### e.sender `kendo.data.DataSource`
+
+The data source instance which fired the event.
+
+#### Example - subscribe to the "sync" event during initialization
+
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      batch: true,
+      transport: {
+        create: {
+          url: "http://demos.kendoui.com/service/products/create",
+          dataType: "jsonp" //"jsonp" is required for cross-domain requests; use "json" for same-domain requests
+        },
+        parameterMap: function(data) {
+          return { models: kendo.stringify(data.models) };
+        }
+      },
+      sync: function(e) {
+        console.log("sync complete");
+      },
+      schema: {
+        model: { id: "ProductID" }
+      }
+    });
+    dataSource.add( { ProductName: "Ham" } );
+    dataSource.sync();
+    </script>
+
+#### Example - subscribe to the "sync" event after initialization
+
+    <script>
+    function dataSource_sync(e) {
+      console.log("sync complete");
+    }
+    var dataSource = new kendo.data.DataSource({
+      batch: true,
+      transport: {
+        create: {
+          url: "http://demos.kendoui.com/service/products/create",
+          dataType: "jsonp" //"jsonp" is required for cross-domain requests; use "json" for same-domain requests
+        },
+        parameterMap: function(data) {
+          return { models: kendo.stringify(data.models) };
+        }
+      },
+      schema: {
+        model: { id: "ProductID" }
+      }
+    });
+    dataSource.bind("sync", dataSource_sync);
+    dataSource.add( { ProductName: "Ham" } );
+    dataSource.sync();
+    </script>
 
 ## Class methods
 
 ### create
 
-Creates a DataSource instance from the passed options. Useful for parsing the dataSource configuration option when creating new widgets.
+Creates a data source instance using the specified configuration. If the configuration is a data source instance the same instance will be returned.
 
 #### Returns
 
-`kendo.data.DataSource` The created DataSource.
+`kendo.data.DataSource` the new data source instance.
 
 #### Parameters
 
 ##### options `Object`
 
-A key/value pair of the DataSource options.
+The data source [configuration](#configuration).
 
 #### Example - parsing the dataSource configuration option in a custom widget
 
-    this.dataSource = kendo.data.DataSource.create(this.options.dataSource);
+    <script>
+    var dataSource = kendo.data.DataSource.create({
+      data: [
+        { name: "Jane Doe" }
+      ]
+    });
+    </script>
 
