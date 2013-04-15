@@ -2,7 +2,7 @@
 title: Performance tips
 meta_title: Performance guide for Kendo UI DataViz
 meta_description: Find valuable tips for making the most performance out of the Kendo UI DataViz suite.
-slug: dataviz-troubleshooting
+slug: dataviz-performance-tips
 publish: true
 ---
 
