@@ -764,7 +764,7 @@ return the errors for response. If there are any errors the [error](#events-erro
       },
       schema: {
         errors: function(response) {
-          response.error; // twitter's response is { "error": "Invalid query" }
+          return response.error; // twitter's response is { "error": "Invalid query" }
         }
       },
       error: function(e) {
