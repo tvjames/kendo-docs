@@ -40,7 +40,7 @@ The aggregate(s) which are calculated when the data source populates with data. 
 
 ### aggregate.aggregate `String`
 
-The name of the aggregate function. Specifies the aggregate function. The supported aggregates are "average", "count", "max", "min" and "sum".
+The name of the aggregate function. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example - specify aggregate function
 
@@ -61,7 +61,7 @@ The name of the aggregate function. Specifies the aggregate function. The suppor
 
 ### aggregate.field `String`
 
-The field which will be aggregated.
+The data item field which will be used to calculate the aggregates.
 
 #### Example - specify aggregate field
 
@@ -83,7 +83,7 @@ The field which will be aggregated.
 
 ### autoSync `Boolean` *(default: false)*
 
-If set to `true` the data source would automatically [sync](#methods-sync) any changes to its data items. By default changes are not automatically sync-ed.
+If set to `true` the data source would automatically save any changed data items by calling the [sync](#methods-sync) method. By default changes are not automatically saved.
 
 #### Example - enable auto sync
     <script>
@@ -111,7 +111,7 @@ If set to `true` the data source would automatically [sync](#methods-sync) any c
 
 ### batch `Boolean` *(default: false)*
 
-If set to `true` the data source will batch CRUD operation requests. For example updating two data items would cause one HTTP request instead of two during [sync](#methods-sync). By default the data source
+If set to `true` the data source will batch CRUD operation requests. For example updating two data items would cause one HTTP request instead of two. By default the data source
 makes a HTTP request for every CRUD operation.
 
 > The changed data items are sent by default as `models`. This can be changed via the [parameterMap](#configuration-transport.parameterMap) option.
@@ -145,7 +145,7 @@ makes a HTTP request for every CRUD operation.
 
 ### data `Array|String`
 
-The array of data items. The data source will internally wrap them as [kendo.data.ObservableObject](/api/framework/obvservableobject).
+The array of data items which the data source contains. The data source will wrap those items as [kendo.data.ObservableObject](/api/framework/obvservableobject) or [kendo.data.Model](/api/framework/model) (if [schema.model](#configuration-schema.model) is set).
 
 Can be set to a string value if the [schema.type](#configuration-schema.type) option is set to "xml".
 
@@ -191,7 +191,7 @@ Can be set to a string value if the [schema.type](#configuration-schema.type) op
 
 ### filter `Array|Object`
 
-The filter(s) which is (are) applied over the items when the data source populates with data. By default no filter is applied.
+The filter(s) which is (are) applied over the data items. By default no filter is applied.
 
 > The data source filters the data items client-side unless the [serverFiltering](#configuration-serverFiltering) option is set to `true`.
 
@@ -259,7 +259,7 @@ The filter(s) which is (are) applied over the items when the data source populat
 
 ### filter.field `String`
 
-The field to which the filter is applied.
+The data item field to which the filter operator is applied.
 
 #### Example - set the filter field
 
@@ -322,7 +322,7 @@ The value to which the [field](#configuration-filter.field) is compared. The val
 
 ### group `Array|Object`
 
-The grouping configuration of the data source. If set the data items will be grouped when the data source populates with data. By default grouping is not applied.
+The grouping configuration of the data source. If set the data items will be grouped when the data source is populated. By default grouping is not applied.
 
 > The data source groups the data items client-side unless the [serverGrouping](#configuration-serverGrouping) option is set to `true`.
 
@@ -406,7 +406,7 @@ The sort order of the group. The supported values are "asc" (ascending order) an
 
 ### group.field `String`
 
-The field to group by.
+The data item field to group by.
 
 #### Example - set the field
 
@@ -490,7 +490,7 @@ The name of the aggregate function. Specifies the aggregate function. The suppor
 
 ### group.aggregates.field `String`
 
-The field which will be aggregated.
+The data item field which will be used to calculate the aggregates.
 
 #### Example - specify aggregate field
 
@@ -518,7 +518,7 @@ The field which will be aggregated.
 
 ### page `Number`
 
-The page of data which the data source will return when the [view](#methods-view) method is invoked.
+The page of data which the data source will return when the [view](#methods-view) method is invoked or request from the remote service.
 
 > The data source will page the data items client-side unless the [serverPaging](#configuration-serverPaging) option is set to `true`.
 
@@ -544,7 +544,7 @@ The page of data which the data source will return when the [view](#methods-view
 
 ### pageSize `Number`
 
-The number of data items which a single page of data contains.
+The number of data items per page.
 
 > The data source will page the data items client-side unless the [serverPaging](#configuration-serverPaging) option is set to `true`.
 
@@ -571,7 +571,7 @@ The number of data items which a single page of data contains.
 
 ### schema `Object`
 
-The description of the response returned by the remote service.
+The configuration used to parse the remote sevice response.
 
 #### Example - specify the schema of the remote service
 
@@ -598,7 +598,7 @@ The description of the response returned by the remote service.
 
 ### schema.aggregates `Function|String`
 
-The field from the server response which contains the aggregate results. If set to a function - the function will be called to
+The field from the response which contains the aggregate results. Can be set to a function which is called to
 return the aggregate results from the response.
 
 > The `aggregates` option is used only when the [serverAggregates](#configuration-serverAggregates) option is set to `true`.
@@ -676,7 +676,7 @@ The aggregate results should have the following format:
 
 ### schema.data `Function|String`
 
-The field from the server response which contains the data items. If set to a function - the function will be called to
+The field from the server response which contains the data items. Can be set to a functin which is called to
 return the data items for the response.
 
 #### Returns
@@ -729,7 +729,7 @@ return the data items for the response.
 
 ### schema.errors `Function|String` *(default: "errors")*
 
-The field from the server response which contains server-side errors. If set to a function - the function will be called to
+The field from the server response which contains server-side errors. Can be set to a function which is called to
 return the errors for response. If there are any errors the [error](#events-error) event will be fired.
 
 #### Example - specify the error field as a string
@@ -776,7 +776,7 @@ return the errors for response. If there are any errors the [error](#events-erro
 
 ### schema.groups `Function|String`
 
-The field from the server response which contains the groups. If set to a function - the function will be called to
+The field from the server response which contains the groups. Can be set to a function which is called to
 return the groups from the response.
 
 > The `groups` option is used only when the [serverGrouping](#configuration-serverGrouping) option is set to `true`.
@@ -917,7 +917,7 @@ If set to an existing [kendo.data.Model](/api/framework/model) instance the data
 
 ### schema.parse `Function`
 
-Executed before the server response is used. Appropriate for preprocessing or parsing of the server response.
+Executed before the server response is used. Use it to preprocess or parse the server response.
 
 #### Example - data projection
 
@@ -952,12 +952,12 @@ Executed before the server response is used. Appropriate for preprocessing or pa
 
 ### schema.total `Function|String`
 
-The field from the server response which contains the total number of data items. If set to a function - the function will be called to
+The field from the server response which contains the total number of data items. Can be set to a function which is called to
 return the total number of data items for the response.
 
 > If `schema.total` is not specified the `length` of the `Array` returned by [schema.data](#configuration-schema.data) will be used.
 
-The `schema.total` option must be specified when the [serverPaging](#configuration-serverPaging) option is set to `true`.
+> The `schema.total` option must be set if the [serverPaging](#configuration-serverPaging) option is set to `true`.
 
 #### Returns
 
@@ -1158,6 +1158,8 @@ Use the [parameterMap](#configuration-transport.parameterMap) option to send the
 
 The sort order which will be applied over the data items. By default the data items are not sorted.
 
+> The data source sorts the data items client-side unless the [serverSorting](#configuration-serverSorting) option is set to `true`.
+
 #### Example - sort the data items
 
     <script>
@@ -1239,12 +1241,14 @@ The sort order (direction). The supported values are "asc" (ascending order) and
 
 ### transport `Object`
 
-The configuration used to load and save the data items. Based on the way of data retrieval the data source is remote or local. Remote data sources load/save data from/to a remote end-point (a.k.a. remote service or server).
-The `transport` option describes the remote service configuration - URL, HTTP verb, HTTP headers etc. The `transport` option can also be used to implement custom data loading and saving.
+The configuration used to load and save the data items. A data source is remote or local based on the way of it retrieves data items.
+
+Remote data sources load and save data items from and to a remote end-point (a.k.a. remote service or server). The `transport` option describes the remote service configuration - URL, HTTP verb, HTTP headers etc.
+The `transport` option can also be used to implement custom data loading and saving.
 
 Local data sources are bound to a JavaScript array via the [data](#configuration-data) option.
 
-#### Example - configure remote service
+#### Example - specify the remote service configuration
 
     <script>
     var dataSource = new kendo.data.DataSource({
@@ -1786,14 +1790,14 @@ If set to function the data source will invoke it and use the result as the URL.
 The function which converts the request parameters to a format suitable for the remote service. By default
 the data source sends the parameters using jQuery's [conventions](http://api.jquery.com/jQuery.param/).
 
+> The `parameterMap` method is often used to encode the parameters in JSON format.
+
 #### Parameters
 
 ##### data `Object`
 
 The parameters which will be sent to the remote service. The value specified in the `data` field of the transport settings (create, read, update or destroy) is included as well.
 If [batch](#batch-boolean-default) is set to `false` the fields of the changed data items are also included.
-
-> The `parameterMap` method is often used to encode the parameters in JSON format.
 
 ##### data.aggregate `Array`
 
@@ -2399,7 +2403,7 @@ If set the data source will use a predefined [transport](#configuration-transpor
 
 ### add
 
-Adds a data item to the data source.
+Appends a data item to the data source.
 
 #### Parameters
 
@@ -2622,10 +2626,10 @@ The optional data item (model). If specified only the changes of this data item 
 Gets or sets the data items of the data source.
 
 If the data source is bound to a remote service (via the [transport](#configuration-transport) option) the `data` method will return the service response.
-Every item from the response is wrapped in a [kendo.data.ObservableObject](/api/framework/observableobject) or [kendo.data.Model](/api/framework/model)(if the [schema.model](#configuration-schema.model) option is set).
+Every item from the response is wrapped in a [kendo.data.ObservableObject](/api/framework/observableobject) or [kendo.data.Model](/api/framework/model) (if the [schema.model](#configuration-schema.model) option is set).
 
 If the data source is bound to a JavaScript array (via the [data](#configuration-data) option) the `data` method will return the items of that array.
-Every item from the array is wrapped in a [kendo.data.ObservableObject](/api/framework/observableobject) or [kendo.data.Model](/api/framework/model)(if the [schema.model](#configuration-schema.model) option is set).
+Every item from the array is wrapped in a [kendo.data.ObservableObject](/api/framework/observableobject) or [kendo.data.Model](/api/framework/model) (if the [schema.model](#configuration-schema.model) option is set).
 
 If the data source is grouped (via the [group](#configuration-group) option or the [group](#methods-group) method) and the [serverGrouping](#configuration-serverGrouping) is set to `true`
 the `data` method will return the group items.
@@ -2862,11 +2866,11 @@ The grouping configuration. Accepts the same values as the [group](#configuratio
 
 ### hasChanges `Boolean`
 
-Returns `true` if the data source has changes.
+Cheks if the data itams have changed.
 
 #### Returns
 
-`Boolean` `true` if the data items are modified. Otherwise, `false`.
+`Boolean` returns `true` if the data items have changed. Otherwise, `false`.
 
 #### Example - check if the data source has changes
 
@@ -2892,7 +2896,7 @@ Gets the index of the specified data item.
 
 #### Parameters
 
-##### model `kendo.data.ObservableObject`
+##### dataItem `kendo.data.ObservableObject`
 
 The target data item.
 
@@ -3109,7 +3113,7 @@ option is set to `true`.
 
 ### read
 
-Reads the data items from a remote service (if the [transport](#configuration-transport) option is set) or from a JavaScript array (if the [data](#configuration-data) option is set).
+Reads data items from a remote service (if the [transport](#configuration-transport) option is set) or from a JavaScript array (if the [data](#configuration-data) option is set).
 
 > The `read` method always makes a request to the remote service.
 
@@ -3214,9 +3218,10 @@ The sort configuration. Accepts the same values as the [sort](#configuration-sor
 Saves any data item changes.
 
 The `sync` method will request the remote service if:
- - the [transport.create](#configuration-transport.create) option is set and the data source contains new data items
- - the [transport.destroy](#configuration-transport.destroy) option is set and data items have been removed from the data source
- - the [transport.update](#configuration-transport.update) option is set and the data source contains updated data items
+
+* the [transport.create](#configuration-transport.create) option is set and the data source contains new data items
+* the [transport.destroy](#configuration-transport.destroy) option is set and data items have been removed from the data source
+* the [transport.update](#configuration-transport.update) option is set and the data source contains updated data items
 
 #### Example - save the changes
 
