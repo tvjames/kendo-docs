@@ -90,7 +90,7 @@ instead of on hover.
     $("#menu").kendoMenu({
         animation: {
             open: { effects: "fadeIn" },
-            hoverDelay: 500
+            duration: 500
         },
         openOnClick: true
     });
