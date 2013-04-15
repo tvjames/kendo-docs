@@ -89,7 +89,7 @@ You can also add metadata directly on the client. This is useful when the data i
             <%= Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
                 .Events(c => c
                     .Upload("onUpload")
@@ -100,7 +100,7 @@ You can also add metadata directly on the client. This is useful when the data i
             @(Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
                 .Events(c => c
                     .Upload("onUpload")
@@ -156,7 +156,7 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             <%= Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
                 .Events(c => c
                     .Success("onSuccess")
@@ -167,7 +167,7 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             @(Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
                 .Events(c => c
                     .Success("onSuccess")
