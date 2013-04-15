@@ -75,7 +75,7 @@ There are several ways to define items of the Kendo Menu for ASP.NET MVC
         {
             if (!SiteMapManager.SiteMaps.ContainsKey("sample"))
             {
-                SiteMapManager.SiteMaps.Register<xmlsitemap>("sample", sitmap => sitmap.LoadFrom("~/sample.sitemap"));
+                SiteMapManager.SiteMaps.Register<XmlSiteMap>("sample", sitmap => sitmap.LoadFrom("~/sample.sitemap"));
             }
             return View();
         }
