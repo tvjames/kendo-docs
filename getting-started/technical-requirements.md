@@ -81,7 +81,8 @@ Below are the system requirements for the Kendo UI Framework.
 **NOTES:**
 
 * Browsers in BETA stage are not supported
-* Internet Explorer Quirksmode is not supported as it uses IE 5.5 rendering engine. Always specify [DOCTYPE](http://reference.sitepoint.com/html/doctypes) on your pages!
+* Quirks mode is not supported. Always specify a [DOCTYPE](http://reference.sitepoint.com/html/doctypes) on your pages!
+* Internet Explorer issues caused by inconsistent compatibility modes are not supported. For example, if an IE7 compatibility mode has a different behavior compared to a true IE7, then the true IE7 browser is supported.
 
 ### Kendo UI Platform support
 
