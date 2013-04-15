@@ -1,14 +1,22 @@
 ---
 title: Performance tips
 meta_title: Performance guide for Kendo UI DataViz
-meta_description: Find valuable tips for making the most performance out of the Kendo UI DataViz suite.
+meta_description: Find valuable tips for maximizing the performance out of Kendo UI DataViz charts, graphs and gauges.
 slug: dataviz-performance-tips
 publish: true
 ---
+# Performance Tips for Kendo UI DataViz
 
-# Turning off animated transitions
+By default, Kendo UI DataViz charts, graphs and gauges ship with smooth animations and transitions that come alive when used in your applications. And while these transitions and animations are designed for maximum performance, you may wish to disable these effects in certain cases, for instance, when using a large number of DataViz widgets on a single page.
 
-Animated transitions can slow the browser down, especially with many active charts on the page.
+This document covers two ways that you can manage the performance of DataViz widgets:
+
+1. Turning off animation transitions
+2. Disabling of gradients
+
+## Turning off animated transitions
+
+Animated transitions can slow the browser down, especially with many active charts on the page. Turn them off by passing `transitions: false` into the chart options object.
 
 #### Example configuration
     <div id="chart"></div>
@@ -52,9 +60,9 @@ Animated transitions can slow the browser down, especially with many active char
       });
     </script>
 
-# Disable gradients
+## Disable widget gradients
 
-Using solid fills instead of gradients can improve performance noticably.
+Using solid fills instead of gradients can improve performance noticably. In the following snippet, we can disable gradients by setting the `gradient` property of the `overlay` `seriesDefaults` object to null.
 
 ### Example
     <div id="chart"></div>
