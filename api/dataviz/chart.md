@@ -12,6 +12,35 @@ publish: true
 
 ## Configuration
 
+### autoBind `Boolean` *(default: true)*
+
+If set to `false` the widget will not bind to the data source during initialization. In this case data binding will occur when the [change](/api/framework/datasource#events-change) event of the
+data source is fired. By default the widget will bind to the data source specified in the configuration.
+
+> Setting `autoBind` to `false` is useful when multiple widgets are bound to the same data source. Disabling automatic binding ensures that the shared data source doesn't make more than one request to the remote service.
+
+#### Example - disable automatic binding
+
+    <div id="chart"></div>
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/stockdata",
+          dataType: "jsonp"
+        }
+      }
+    });
+    $("#chart").kendoChart({
+      autoBind: false,
+      dataSource: dataSource,
+      series: [
+        { field: "Volume" }
+      ]
+    });
+    dataSource.read(); // "read()" will fire the "change" event of the dataSource and the widget will be bound
+    </script>
+
 ### axisDefaults `Object`
 
 The default options for all chart axes. Accepts the options supported by [categoryAxis](#configuration-categoryAxis), [valueAxis](#configuration-valueAxis), [xAxis](#configuration-xAxis) and [yAxis](#configuration-yAxis).
@@ -25,7 +54,7 @@ The default options for all chart axes. Accepts the options supported by [catego
         categories: [ "2012", "2013"]
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -44,7 +73,7 @@ The category axis configuration options.
         color: "#ff0000"
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -119,7 +148,7 @@ Category indices at which the value axes cross the category axis (when set as an
       },
       valueAxis: [{}, {}],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -164,7 +193,7 @@ The category names. The chart will create a category for every item of the array
         categories: [ "2012", "2013"]
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -184,7 +213,7 @@ The color to apply to all axis elements. Accepts a valid CSS color string, inclu
         color: "#aa00bb"
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -199,7 +228,7 @@ The color to apply to all axis elements. Accepts a valid CSS color string, inclu
         color: "rgb(128, 0, 255)"
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -214,7 +243,7 @@ The color to apply to all axis elements. Accepts a valid CSS color string, inclu
         color: "green"
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -239,7 +268,7 @@ The crosshair configuration options.
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -261,7 +290,7 @@ The color of the crosshair. Accepts a valid CSS color string, including hex and 
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -295,7 +324,7 @@ The following dash types are supported:
       series: [
         {
           type: "line",
-          data: [1, 2]
+          data: [1, 2, 3]
         }
       ]
     });
@@ -318,7 +347,7 @@ The opacity of the crosshair. By default the crosshair is opaque.
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -352,7 +381,7 @@ The crosshar tooltip options.
       series: [
         {
           type: "line",
-          data: [1, 2]
+          data: [1, 2, 3]
         }
       ]
     });
@@ -378,7 +407,7 @@ The background color of the tooltip. Accepts a valid CSS color string, including
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -406,7 +435,7 @@ The border options.
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -434,7 +463,7 @@ The color of the border. Accepts a valid CSS color string, including hex and rgb
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -472,7 +501,7 @@ The following dash types are supported:
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -499,7 +528,7 @@ The width of the border in pixels. By default the border width is set to zero wh
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -524,7 +553,7 @@ The text color of the tooltip. Accepts a valid CSS color string, including hex a
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -545,7 +574,7 @@ The text color of the tooltip. Accepts a valid CSS color string, including hex a
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -566,7 +595,7 @@ The text color of the tooltip. Accepts a valid CSS color string, including hex a
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -591,7 +620,7 @@ The tooltip font.
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -616,7 +645,7 @@ The format used to display the tooltip. Uses [kendo.format](/api/framework/kendo
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -642,7 +671,7 @@ The padding of the crosshair tooltip. A numeric value will set all paddings.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -669,7 +698,7 @@ The bottom padding of the crosshair tooltip.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -696,7 +725,7 @@ The left padding of the crosshair tooltip.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -723,7 +752,7 @@ The right padding of the crosshair tooltip.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -750,7 +779,7 @@ The top padding of the crosshair tooltip.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -779,7 +808,7 @@ The fields which can be used in the template are:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -800,7 +829,7 @@ The fields which can be used in the template are:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -824,7 +853,7 @@ If set to `true` the chart will display the category axis crosshair tooltip. By 
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -845,7 +874,7 @@ If set to `true` the chart will display the category axis crosshair. By default 
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -867,7 +896,7 @@ The width of the crosshair in pixels.
         }
       },
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -910,7 +939,7 @@ If set to `true` the chart will position categories and series points on major t
         categories: ["2012", "2013"]
       }],
       series: [
-        { type: "line", data: [1, 2] }
+        { type: "line", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -931,7 +960,7 @@ The axis labels configuration.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -952,7 +981,7 @@ The background color of the labels. Accepts a valid CSS color string, including 
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -969,7 +998,7 @@ The background color of the labels. Accepts a valid CSS color string, including 
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -986,7 +1015,7 @@ The background color of the labels. Accepts a valid CSS color string, including 
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1010,7 +1039,7 @@ The border of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1034,7 +1063,7 @@ The color of the border. Accepts a valid CSS color string, including hex and rgb
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1068,7 +1097,7 @@ The following dash types are supported:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1091,7 +1120,7 @@ The width of the border in pixels. By default the border width is set to zero wh
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1112,7 +1141,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1129,7 +1158,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1146,7 +1175,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1335,7 +1364,7 @@ The font style of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1356,7 +1385,7 @@ The format used to display the labels. Uses [kendo.format](/api/framework/kendo#
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1377,7 +1406,7 @@ The margin of the labels. A numeric value will set all margins.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1400,7 +1429,7 @@ The bottom margin of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1423,7 +1452,7 @@ The left margin of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1446,7 +1475,7 @@ The right margin of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1469,7 +1498,7 @@ The top margin of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1490,7 +1519,7 @@ If set to `true` the chart will mirror the axis labels and ticks. If the labels 
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1511,7 +1540,7 @@ The padding of the labels. A numeric value will set all paddings.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1534,7 +1563,7 @@ The bottom padding of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1557,7 +1586,7 @@ The left padding of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1580,7 +1609,7 @@ The right padding of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1603,7 +1632,7 @@ The top padding of the labels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1624,7 +1653,7 @@ The rotation angle of the labels. By default the labels are not rotated.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1645,7 +1674,7 @@ The number of labels to skip. By default no labels are skipped.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1690,7 +1719,7 @@ The fields which can be used in the template are:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1707,7 +1736,7 @@ The fields which can be used in the template are:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1728,7 +1757,7 @@ If set to `true` the chart will display the category axis labels. By default the
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1750,7 +1779,7 @@ The configuration of the axis lines. Also affects the major and minor ticks, but
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1773,7 +1802,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1790,7 +1819,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1807,7 +1836,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1838,7 +1867,7 @@ The following dash types are supported:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1859,7 +1888,7 @@ If set to `true` the chart will display the category axis lines. By default the 
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1880,7 +1909,7 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1904,7 +1933,7 @@ body of the chart.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1925,7 +1954,7 @@ The color of the major grid lines. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1942,7 +1971,7 @@ The color of the major grid lines. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1959,7 +1988,7 @@ The color of the major grid lines. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -1990,7 +2019,7 @@ The following dash types are supported:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2011,7 +2040,7 @@ If set to `true` the chart will display the major grid lines. By default the maj
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2033,7 +2062,7 @@ The width of the category axis major grid lines in pixels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2056,7 +2085,7 @@ The configuration of the category axis major ticks.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2077,7 +2106,7 @@ The color of the category axis major ticks lines. Accepts a valid CSS color stri
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2094,7 +2123,7 @@ The color of the category axis major ticks lines. Accepts a valid CSS color stri
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2111,7 +2140,7 @@ The color of the category axis major ticks lines. Accepts a valid CSS color stri
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2132,7 +2161,7 @@ The length of the tick line in pixels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2153,7 +2182,7 @@ If set to `true` the chart will display the category axis major ticks. By defaul
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2174,7 +2203,7 @@ The width of the major ticks in pixels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2214,7 +2243,7 @@ body of the chart.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2235,7 +2264,7 @@ The color of the minor grid lines. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2252,7 +2281,7 @@ The color of the minor grid lines. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2269,7 +2298,7 @@ The color of the minor grid lines. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2300,7 +2329,7 @@ The following dash types are supported:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2321,7 +2350,7 @@ If set to `true` the chart will display the minor grid lines. By default the min
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2343,7 +2372,7 @@ The width of the category axis minor grid lines in pixels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2366,7 +2395,7 @@ The configuration of the category axis minor ticks.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2387,7 +2416,7 @@ The color of the category axis minor ticks lines. Accepts a valid CSS color stri
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2404,7 +2433,7 @@ The color of the category axis minor ticks lines. Accepts a valid CSS color stri
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2421,7 +2450,7 @@ The color of the category axis minor ticks lines. Accepts a valid CSS color stri
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2442,7 +2471,7 @@ The length of the tick line in pixels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2463,7 +2492,7 @@ If set to `true` the chart will display the category axis minor ticks. By defaul
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2484,7 +2513,7 @@ The width of the minor ticks in pixels.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2503,7 +2532,7 @@ The unique axis name. Used to associate a series with a category axis using the 
         { name: "year", categories: [ 2012 ] }
       ],
       series: [
-        { categoryAxis: "month", data: [1, 2] }
+        { categoryAxis: "month", data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2654,7 +2683,7 @@ If set to `true` the category axis direction will be reversed. By default catego
         reverse: true
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2889,7 +2918,7 @@ The title configuration of the category axis.
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2910,7 +2939,7 @@ The background color of the title. Accepts a valid CSS color string, including h
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2936,7 +2965,7 @@ The border of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2961,7 +2990,7 @@ The color of the border. Accepts a valid CSS color string, including hex and rgb
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -2996,7 +3025,7 @@ The following dash types are supported:
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3020,7 +3049,7 @@ The width of the border in pixels. By default the border width is set to zero wh
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3042,7 +3071,7 @@ The text color of the title. Accepts a valid CSS color string, including hex and
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3060,7 +3089,7 @@ The text color of the title. Accepts a valid CSS color string, including hex and
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3078,7 +3107,7 @@ The text color of the title. Accepts a valid CSS color string, including hex and
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3100,7 +3129,7 @@ The font style of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3122,7 +3151,7 @@ The margin of the title. A numeric value will set all margins.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3146,7 +3175,7 @@ The bottom margin of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3170,7 +3199,7 @@ The left margin of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3194,7 +3223,7 @@ The right margin of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3218,7 +3247,7 @@ The top margin of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3248,7 +3277,7 @@ The supported values are:
         }
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3270,7 +3299,7 @@ The padding of the title. A numeric value will set all paddings.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3294,7 +3323,7 @@ The bottom padding of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3318,7 +3347,7 @@ The left padding of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3342,7 +3371,7 @@ The right padding of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3366,7 +3395,7 @@ The top padding of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3388,7 +3417,7 @@ The rotation angle of the title. By default the title is not rotated.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3409,7 +3438,7 @@ The text of the title.
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3430,7 +3459,7 @@ If set to `true` the chart will display the category axis title. By default the 
         categories: ["2012", "2013"]
       }],
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3458,7 +3487,7 @@ The supported values are:
         type: "date"
       },
       series: [
-        { data: [1, 2] }
+        { data: [1, 2, 3] }
       ]
     });
     </script>
@@ -3484,240 +3513,504 @@ The supported values are:
 
 ### chartArea `Object`
 
-The chart area configuration options.
-This is the entire visible area of the chart.
+The chart area configuration options. Represents the entire visible area of the chart.
 
 ### chartArea.background `String` *(default: "white")*
 
-The background color of the chart area.
+The background color of the chart area. Accepts a valid CSS color string, including hex and rgb.
 
-### chartArea.opacity `Number` *(default: 1)*
+#### Example - set the chart area background as a hex string
 
-The background opacity of the chart area.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        background: "#aa00bb"
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart area background as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        background: "rgb(128, 0, 255)"
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart area background by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        background: "green"
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
 
 ### chartArea.border `Object`
 
 The border of the chart area.
 
+#### Example - set the chart area border
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        border: {
+          width: 2,
+          color: "green"
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
 ### chartArea.border.color `String` *(default: "black")*
 
-The color of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart area border color
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        border: {
+          width: 2,
+          color: "green"
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### chartArea.border.dashType `String` *(default: "solid")*
 
 The dash type of the border.
 
-#### *"solid"*
+The following dash types are supported:
 
-Specifies a solid line.
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
 
-#### *"dot"*
+#### Example - set the chart area border dash type
 
-Specifies a line consisting of dots.
-
-#### *"dash"*
-
-Specifies a line consisting of dashes.
-
-#### *"longDash"*
-
-Specifies a line consisting of a repeating pattern of long-dash.
-
-#### *"dashDot"*
-
-Specifies a line consisting of a repeating pattern of dash-dot.
-
-#### *"longDashDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot.
-
-#### *"longDashDotDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        border: {
+          width: 2,
+          dashType: "dashDot"
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### chartArea.border.width `Number` *(default: 0)*
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+#### Example - set the chart area border width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        border: {
+          width: 2
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### chartArea.height `Number` *(default: 400)*
 
 The height of the chart area.
 
+#### Example - set the chart area height
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        height: 200
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
 ### chartArea.margin `Number|Object` *(default: 5)*
 
-The margin of the chart area.
+The margin of the chart area. A numeric value will set all margins.
 
-#### Example
-
-    // sets the top, right, bottom and left margin to 3px.
-    margin: 3
-
-    // sets the top and left margin to 1px
-    // margin right and bottom are with 5px (by default)
-    margin: { top: 1, left: 1 }
-
-### chartArea.width `Number` *(default: 600)*
-
- The width of the chart area.
-
-### dataSource `Object`
-
-DataSource configuration or instance.
-
-#### Example
-
+#### Example - set the chart area margin
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        dataSource: {
-            transport: {
-                 read: "spain-electricity.json"
-            }
-        },
-        series: [{
-            field: "value"
-        }],
-        categoryAxis: {
-            field: "year"
+      chartArea: {
+        margin: 10
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### chartArea.margin.bottom `Number` *(default: 5)*
+
+The bottom margin of the chart area.
+
+#### Example - set the chart area bottom margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        margin: {
+          bottom: 10
         }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
     });
+    </script>
 
-    // Alternative configuration
-    var dataSource = new kendo.data.DataSource({
-        transport: {
-             read: "spain-electricity.json"
+### chartArea.margin.left `Number` *(default: 5)*
+
+The left margin of the chart area.
+
+#### Example - set the chart area left margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        margin: {
+          left: 10
         }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
     });
+    </script>
 
+### chartArea.margin.right `Number` *(default: 5)*
+
+The right margin of the chart area.
+
+#### Example - set the chart area right margin
+
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        dataSource: dataSource,
-        series: [{
-            field: "value"
-        }],
-        categoryAxis: {
-            field: "year"
+      chartArea: {
+        margin: {
+          right: 10
         }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
     });
+    </script>
 
-### autoBind `Boolean` *(default: true)*
+### chartArea.margin.top `Number` *(default: 5)*
 
-Indicates whether the chart will call read on the data source initially.
+The top margin of the chart area.
 
-#### Example
+#### Example - set the chart area top margin
+
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        dataSource: chartDataSource,
-        autoBind: false
-    });
-
-    // ...
-    chartDataSource.read();
-
-### legend `Object`
-
-The chart legend configuration options.
-
-#### Example
-
-    $("#chart").kendoChart({
-        legend: {
-            // set the background color to a dark blue
-            background: "#336699",
-            labels: {
-                // set the font to a size of 14px
-                font: "14px Arial,Helvetica,sans-serif",
-                // set the color to red
-                color: "red"
-            },
-            // move the legend to the left
-            position: "left",
-            // move the legend a bit closer to the chart by setting the x offset to 20
-            offsetX: 20,
-            // move the legend up to the top by setting the y offset to -100
-            offsetY: -100,
+      chartArea: {
+        margin: {
+          top: 10
         }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
     });
+    </script>
 
-### legend.background `String` *(default: "white")*
+### chartArea.opacity `Number` *(default: 1)*
 
- The background color of the legend. Any valid CSS color string will work here, including hex and rgb.
+The background opacity of the chart area. By default the background is opaque.
 
-### legend.border `Object`
-
-The border of the legend.
-
-#### Example
-
+#### Example - set the chart area opacity
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            border: {
-                // set the border width to 2 pixels
-                width: 2,
-                // set the color to grey
-                color: "grey",
-                // set the dash type to solid. this is the default so we could leave this line out.
-                dashType: "solid"
-            }
-        },
-        ...
+      chartArea: {
+        background: "green",
+        opacity: 0.1
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
     });
+    </script>
 
+<<<<<<< HEAD
 ### legend.border.color `String` *(default: "black")*
 
  The color of the border.
 
 ### legend.border.dashType `String` *(default: "solid")*
 
- The dash type of the border.
+The dash type of the border.
+=======
+### chartArea.width `Number` *(default: 600)*
 
+The width of the chart area.
+>>>>>>> f4ea6fd... Chart API revamp WIP
 
-#### *"solid"*
+#### Example - set the chart area width
 
-Specifies a solid line.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      chartArea: {
+        width: 500
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
-#### *"dot"*
+### dataSource `Object|Array|kendo.data.DataSource`
 
-Specifies a line consisting of dots.
+The data source of the chart which is used to display the series. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.DataSource](/api/framework/datasource)
+instance.
 
-#### *"dash"*
+If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.DataSource](/api/framework/datasource) instance using that value as data source configuration.
 
-Specifies a line consisting of dashes.
+If the `dataSource` option is an existing [kendo.data.DataSource](/api/framework/datasource) instance the widget will use that instance and will **not** initialize a new one.
 
-#### *"longDash"*
+#### Example - set dataSource as a JavaScript object
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      dataSource: {
+        data: [
+          { price: 10 },
+          { price: 20 }
+        ]
+      },
+      series: [
+        { field: "price" }
+      ]
+    });
+    </script>
 
-Specifies a line consisting of a repeating pattern of long-dash.
+#### Example - set dataSource as a JavaScript array
 
-#### *"dashDot"*
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      dataSource: [
+        { price: 10 },
+        { price: 20 }
+      ],
+      series: [
+        { field: "price" }
+      ]
+    });
+    </script>
 
-Specifies a line consisting of a repeating pattern of dash-dot.
+#### Example - set dataSource as an existing kendo.data.DataSource instance
+    <div id="chart"></div>
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/stockdata",
+          dataType: "jsonp"
+        }
+      }
+    });
+    $("#chart").kendoChart({
+      dataSource: dataSource,
+      series: [
+        { field: "Volume" }
+      ]
+    });
+    </script>
 
-#### *"longDashDot"*
+### legend `Object`
 
-Specifies a line consisting of a repeating pattern of long-dash-dot.
+The chart legend configuration options.
 
-#### *"longDashDotDot"*
+#### Example - configure the chart legend
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ],
+      legend: {
+        background: "green",
+        position: "left",
+        labels: {
+          font: "20px sans-serif",
+          color: "red"
+        }
+      }
+    });
+    </script>
 
-Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+### legend.background `String` *(default: "white")*
 
-#### Example
+The background color of the legend. Accepts a valid CSS color string, including hex and rgb.
 
-
-
+<<<<<<< HEAD
 ### legend.border.width `Number` *(default: 0)*
 
- The width of the border.
+The width of the border.
+=======
+#### Example - set the chart legend background as a hex string
 
-### legend.labels `Object`
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        background: "#aa00bb"
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend background as a RGB value
+
+    $("#chart").kendoChart({
+      legend: {
+        background: "rgb(128, 0, 255)"
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend background by name
+>>>>>>> f4ea6fd... Chart API revamp WIP
+
+    $("#chart").kendoChart({
+      legend: {
+        background: "green"
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.border `Object`
+
+The border of the legend.
+
+#### Example - set the chart legend border
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        border: {
+          width: 2,
+          color: "green"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### labels.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart legend border color
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        border: {
+          width: 2,
+          color: "green"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### labels.border.dashType `String` *(default: "solid")*
+
+<<<<<<< HEAD
+### legend.inactiveItems `Object`
+
+Configures the legend inactive items.
+
+### legend.inactiveItems.labels `Object`
 
 Configures the legend labels.
 
-### legend.labels.color `String` *(default: "black")*
+### legend.inactiveItems.labels.color `String` *(default: "black")*
 
 The color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
 
-### legend.labels.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+### legend.inactiveItems.labels.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
 
 The font style of the labels.
 
-### legend.labels.template `String`
+### legend.inactiveItems.labels.template `String`
 
 The template of the labels.
 Template variables:
@@ -3728,124 +4021,511 @@ Template variables:
 *   **percentage** - the point value represented as a percentage value. (only for donut and pie charts)
 *   **dataItem** - the original data item used to construct the point. (only for donut and pie charts)
 
+### legend.inactiveItems.markers `Object`
+
+Configures the legend markers.
+
+### legend.inactiveItems.markers.color `String`
+
+The color of the markers.
+Any valid CSS color string will work here, including hex and rgb.
+=======
+The dash type of the border.
+>>>>>>> f4ea6fd... Chart API revamp WIP
+
+The following dash types are supported:
+
+<<<<<<< HEAD
+The margin of the legend.
+=======
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+>>>>>>> f4ea6fd... Chart API revamp WIP
+
+#### Example - set the chart legend border dash type
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        border: {
+          width: 2,
+          dashType: "dashDot"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### labels.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+#### Example - set the chart legend border width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        border: {
+          width: 2
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.labels `Object`
+
+The chart legend label configuration.
+
+#### Example - configure the chart legend labels
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: [{
+        labels: {
+          background: "green",
+          color: "white"
+        }
+      }],
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.labels.color `String` *(default: "black")*
+
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart legend label color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          color: "#aa00bb"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+<<<<<<< HEAD
+### legend.position `String` *(default: "right")*
+
+The positions of the legend.
+=======
+#### Example - set the chart legend label color as a RGB value
+>>>>>>> f4ea6fd... Chart API revamp WIP
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          color: "rgb(128, 0, 255)"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend label color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          color: "green"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.labels.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+
+The font style of the labels.
+
+#### Example - set the chart legend label font
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: [{
+        labels: {
+           font: "20px sans-serif",
+        }
+      }],
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
 
 ### legend.margin `Number|Object` *(default: 10)*
 
- The margin of the legend.
+The margin of the labels. A numeric value will set all margins.
 
-#### Example
+#### Example - set the chart legend label margin as a number
 
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            // sets the top, right, bottom and left margin to 3px.
-            margin: 3
-        },
-        ...
+      legend: {
+        labels: {
+          margin: 20
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
     });
-    //
+    </script>
+
+### legend.labels.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the labels.
+
+#### Example - set the chart legend label bottom margin
+
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            // sets the top and left margin to 1px
-            // margin right and bottom are with 10px (by default)
-            margin: { top: 1, left: 1 }
-        },
-        ...
+      legend: {
+        labels: {
+          margin: {
+            bottom: 20
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
     });
+    </script>
+
+### legend.labels.margin.left `Number` *(default: 0)*
+
+The left margin of the labels.
+
+#### Example - set the chart legend label left margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          margin: {
+            left: 20
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.labels.margin.right `Number` *(default: 0)*
+
+The right margin of the labels.
+
+#### Example - set the chart legend label right margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          margin: {
+            right: 20
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.labels.margin.top `Number` *(default: 0)*
+
+The top margin of the labels.
+
+#### Example - set the chart legend label top margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          margin: {
+            top: 20
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
 
 ### legend.offsetX `Number` *(default: 0)*
 
- The X offset from its position.  The offset is relative to the current position of the legend.
-For instance, a value of 20 will move the legend 20 pixels to the right of it's initial position.  A negative value will move the legend
-to the left of the current position.
+The X offset of the chart legend. The offset is relative to the default position of the legend.
+For instance, a value of 20 will move the legend 20 pixels to the right of its initial position.
+A negative value will move the legend to the left of its current position.
 
-#### Example
+#### Example - set the chart legend horizontal offset
 
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            // move the legend to the left side of the chart
-            offsetX: 20
-        },
-        ...
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ],
+      legend: {
+        offsetX: 10
+      }
     });
+    </script>
 
 ### legend.offsetY `Number` *(default: 0)*
 
- The Y offset from its position.  The offset is relative to the current position of the legend.
-For instance, a value of 20 will move the legend 20 pixels down from it's initial position.  A negative value will move the legend
-upwards from the current position.
+The Y offset of the chart legend.  The offset is relative to the current position of the legend.
+For instance, a value of 20 will move the legend 20 pixels down from its initial position.
+A negative value will move the legend upwards from its current position.
 
-#### Example
+#### Example - set the chart legend vertical offset
 
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            // move the legend up 100 pixels
-            offsetY: -100
-        },
-        ...
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ],
+      legend: {
+        offsetY: 10
+      }
     });
+    </script>
 
 ### legend.padding `Number|Object` *(default: 5)*
 
- The padding of the legend.
+The padding of the chart legend. A numeric value will set all paddings.
 
-#### Example
+#### Example - set the chart legend padding as a number
 
-    // sets the top, right, bottom and left padding to 3px.
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            // sets the top, right, bottom and left padding to 3px.
-            padding: 3
-        },
-        ...
+      legend: {
+        padding: 20
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
     });
-    //
+    </script>
+
+### legend.padding.bottom `Number` *(default: 0)*
+
+The bottom padding of the chart legend.
+
+#### Example - set the chart legend bottom padding
+
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-           // sets the top and left padding to 1px
-           // padding right and bottom are with 5px (by default)
-           padding: { top: 1, left: 1 }
-        },
-        ...
+      legend: {
+        padding: {
+          bottom: 20
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
     });
+    </script>
+
+### legend.padding.left `Number` *(default: 0)*
+
+The left padding of the chart legend.
+
+#### Example - set the chart legend left padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        padding: {
+          left: 20
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.padding.right `Number` *(default: 0)*
+
+The right padding of the chart legend.
+
+#### Example - set the chart legend right padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        padding: {
+          right: 20
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.padding.top `Number` *(default: 0)*
+
+The top padding of the chart legend.
+
+#### Example - set the chart legend top padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        padding: {
+          top: 20
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
 
 ### legend.position `String` *(default: "right")*
 
- The positions of the legend.
+The positions of the chart legend.
 
+The supported values are:
 
-#### *"top"*
+* "top" - the legend is positioned on the top.
 
-The legend is positioned on the top.
+* "bottom" - the legend is positioned on the bottom.
 
-#### *"bottom"*
+* "left" - the legend is positioned on the left.
 
-The legend is positioned on the bottom.
+* "right" - the legend is positioned on the right.
 
-#### *"left"*
+* "custom" - the legend is positioned using [legend.offsetX](#configuration-legend.offsetX) and [legend.offsetY](#configuration-legend.offsetY).
 
-The legend is positioned on the left.
+### legend.labels.template `String|Function`
 
-#### *"right"*
+The [template](/api/framework/kendo#methods-template) which renders the labels.
 
-The legend is positioned on the right.
+The fields which can be used in the template are:
 
-#### *"custom"*
+*   text - the text the legend item.
+*   series - the data series.
+*   value - the point value. (only for donut and pie charts)
+*   percentage - the point value represented as a percentage value. (only for donut and pie charts)
+*   dataItem - the original data item used to construct the point. (only for donut and pie charts)
 
-The legend is positioned using OffsetX and OffsetY.
+#### Example - set the chart legend label template as a string
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ],
+      legend: {
+        labels: {
+          template: "Name: #: text #"
+        }
+      }
+    });
+    </script>
+
+#### Example - set the chart legend label template as a function
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ],
+      legend: {
+        labels: {
+          template: kendo.template("Name: #: text #")
+        }
+      }
+    });
+    </script>
 
 ### legend.visible `Boolean` *(default: true)*
 
- The visibility of the legend.
+If set to `true` the chart will display the legend. By default the chart legend is visible.
 
-#### Example
+#### Example - hide the legend
 
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        legend: {
-            // hide the legend
-            visible: false
-        },
-        ...
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ],
+      legend: {
+        visible: false
+      }
     });
+    </script>
 
 ### panes `Array`
 
@@ -3858,313 +4538,1638 @@ Axis that don't have specified pane are placed in the top (default) pane.
 
 Series are moved to the desired pane by associating them with an axis.
 
-### panes.name `String`
-
-The unique pane name.
-
-### panes.margin `Number|Object`
-
-The margin of the pane.
-
-#### Example
-
-    // sets the top, right, bottom and left margin to 3px.
-    margin: 3
-
-    // sets the top and left margin to 1px
-    margin: { top: 1, left: 1 }
-
-### panes.padding `Number|Object`
-
-The padding of the pane.
-
-#### Example
-
-    // sets the top, right, bottom and left padding to 3px.
-    padding: 3
-
-    // sets the top and left padding to 1px
-    padding: { top: 1, left: 1 }
+#### Example - configure the chart panes
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane" },
+        { name: "bottom-pane" }
+      ]
+    });
+    </script>
 
 ### panes.background `String`
 
-The background color of the pane.
+The background color of the chart pane. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart panes background as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane", background: "#00ff00" },
+        { name: "bottom-pane", background: "#ff00ff" }
+      ]
+    });
+    </script>
+
+#### Example - set the chart panes background as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane", background: "rgb(0, 255, 0)" },
+        { name: "bottom-pane", background: "rgb(255, 0, 255)" }
+      ]
+    });
+    </script>
+
+#### Example - set the chart panes background by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane", background: "red" },
+        { name: "bottom-pane", background: "green" }
+      ]
+    });
+    </script>
 
 ### panes.border `Object`
 
-The border of the pane.
+The border of the chart pane.
+
+#### Example - set the chart pane border
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane",
+          border: {
+            color: "red",
+            width: 2
+          }
+        },
+        { name: "bottom-pane",
+          border: {
+            color: "green",
+            width: 2
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.border.color `String` *(default: "black")*
 
-The color of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart pane border color
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane",
+          border: {
+            color: "red",
+            width: 2
+          }
+        },
+        { name: "bottom-pane",
+          border: {
+            color: "green",
+            width: 2
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.border.dashType `String` *(default: "solid")*
 
 The dash type of the border.
 
-#### *"solid"*
+The following dash types are supported:
 
-Specifies a solid line.
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
 
-#### *"dot"*
+#### Example - set the chart pane border dash type
 
-Specifies a line consisting of dots.
-
-#### *"dash"*
-
-Specifies a line consisting of dashes.
-
-#### *"longDash"*
-
-Specifies a line consisting of a repeating pattern of long-dash.
-
-#### *"dashDot"*
-
-Specifies a line consisting of a repeating pattern of dash-dot.
-
-#### *"longDashDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot.
-
-#### *"longDashDotDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane",
+          border: {
+            dashType: "dashDot",
+            width: 2
+          }
+        },
+        { name: "bottom-pane",
+          border: {
+            dashType: "dashDot",
+            width: 2
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.border.width `Number` *(default: 0)*
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+#### Example - set the chart pane border width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane",
+          border: {
+            width: 2
+          }
+        },
+        { name: "bottom-pane",
+          border: {
+            width: 2
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.height `Number`
 
-The pane height in pixels.
+The chart pane height in pixels.
+
+#### Example - set the chart pane height
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane", height: 200 },
+        { name: "bottom-pane", height: 300  }
+      ]
+    });
+    </script>
+
+### panes.name `String`
+
+The unique name of the chart pane.
+
+#### Example - set the chart pane name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane" },
+        { name: "bottom-pane" }
+      ]
+    });
+    </script>
+
+### panes.margin `Number|Object` *(default: 0)*
+
+The margin of the pane. A numeric value will set all margins.
+
+#### Example - set the chart pane margin as a number
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane", margin: 10 },
+        { name: "bottom-pane", margin: 10 }
+      ]
+    });
+    </script>
+
+### pane.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the chart pane.
+
+#### Example - set the chart pane bottom margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          margin: {
+            bottom: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          margin: {
+            bottom: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### pane.margin.left `Number` *(default: 0)*
+
+The left margin of the chart pane.
+
+#### Example - set the chart pane left margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          margin: {
+            left: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          margin: {
+            left: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### pane.margin.right `Number` *(default: 0)*
+
+The right margin of the chart pane.
+
+#### Example - set the chart pane right margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          margin: {
+            right: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          margin: {
+            right: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### pane.margin.top `Number` *(default: 0)*
+
+The top margin of the chart pane.
+
+#### Example - set the chart pane top margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          margin: {
+            top: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          margin: {
+            top: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### panes.padding `Number|Object` *(default: 0)*
+
+The padding of the pane. A numeric value will set all paddings.
+
+#### Example - set the chart pane padding as a number
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        { name: "top-pane", padding: 10 },
+        { name: "bottom-pane", padding: 10 }
+      ]
+    });
+    </script>
+
+### pane.padding.bottom `Number` *(default: 0)*
+
+The bottom padding of the chart pane.
+
+#### Example - set the chart pane bottom padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          padding: {
+            bottom: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          padding: {
+            bottom: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### pane.padding.left `Number` *(default: 0)*
+
+The left padding of the chart pane.
+
+#### Example - set the chart pane left padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          padding: {
+            left: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          padding: {
+            left: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### pane.padding.right `Number` *(default: 0)*
+
+The right padding of the chart pane.
+
+#### Example - set the chart pane right padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          padding: {
+            right: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          padding: {
+            right: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### pane.padding.top `Number` *(default: 0)*
+
+The top padding of the chart pane.
+
+#### Example - set the chart pane top padding
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top" },
+        { pane: "bottom", name: "bottom-pane" }
+      ],
+      panes: [
+        {
+          name: "top-pane",
+          padding: {
+            top: 10
+          }
+        },
+        {
+          name: "bottom-pane",
+          padding: {
+            top: 10
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title `String|Object`
 
-The pane title text or configuration.
+The title configuration of the chart pane.
+
+> The [panes.title.text](#configuration-panes.title.text) option must be set in order to display the title.
+
+#### Example - set the chart pane title
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom"
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.background `String`
 
-The background color of the title. Any valid CSS color string will work here, including
-hex and rgb.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart pane title background
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            background: "red"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            background: "green"
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.border `Object`
 
 The border of the title.
 
+#### Example - set the chart pane title border
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            border: {
+              color: "red",
+              width: 2
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            border: {
+              color: "green",
+              width: 2
+            }
+          }
+        }
+      ]
+    });
+    </script>
+
 ### panes.title.border.color `String` *(default: "black")*
 
-The color of the border. Any valid CSS color string will work here, including
-hex and rgb.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart pane title border color
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            border: {
+              color: "red",
+              width: 2
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            border: {
+              color: "green",
+              width: 2
+            }
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.border.dashType `String` *(default: "solid")*
 
 The dash type of the border.
 
-#### *"solid"*
+The following dash types are supported:
 
-Specifies a solid line.
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
 
-#### *"dot"*
+#### Example - set the chart pane title border dashType
 
-Specifies a line consisting of dots.
-
-#### *"dash"*
-
-Specifies a line consisting of dashes.
-
-#### *"longDash"*
-
-Specifies a line consisting of a repeating pattern of long-dash.
-
-#### *"dashDot"*
-
-Specifies a line consisting of a repeating pattern of dash-dot.
-
-#### *"longDashDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot.
-
-#### *"longDashDotDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            border: {
+              dashType: "dashDot",
+              width: 2
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            border: {
+              dashType: "dashDot",
+              width: 2
+            }
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.border.width `Number` *(default: 0)*
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+#### Example - set the category axis title border width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            border: {
+              width: 2
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            border: {
+              width: 2
+            }
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.color `String`
 
-The text color of the title. Any valid CSS color string will work here, including hex and rgb.
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart pane title color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            color: "#aa00bb"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            color: "#a0b0c0"
+          }
+        }
+      ]
+    });
+    </script>
+
+#### Example - set the chart pane title color as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            color: "rgb(128, 0, 255)"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            color: "rgb(128, 0, 255)"
+          }
+        }
+      ]
+    });
+    </script>
+
+#### Example - set the chart pane title color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            color: "red"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            color: "green"
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.font `String` *(default: "16px Arial,Helvetica,sans-serif")*
 
 The font style of the title.
 
+#### Example - set the chart pane title font
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            font: "20px sans-serif"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            color: "green"
+          }
+        }
+      ]
+    });
+    </script>
+
 ### panes.title.margin `Number|Object` *(default: 5)*
 
-The margin of the title.
+The margin of the title. A numeric value will set all margins.
+
+#### Example - set the chart pane title margin as a number
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            margin: 10
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            margin: 10
+          }
+        }
+      ]
+    });
+    </script>
+
+### panes.title.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the title.
+
+#### Example - set the chart pane title bottom margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            margin: {
+              bottom: 10
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            margin: {
+              bottom: 10
+            }
+          }
+        }
+      ]
+    });
+    </script>
+
+### panes.title.margin.left `Number` *(default: 0)*
+
+The left margin of the title.
+
+#### Example - set the chart pane title left margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            margin: {
+              left: 10
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            margin: {
+              left: 10
+            }
+          }
+        }
+      ]
+    });
+    </script>
+
+### panes.title.margin.right `Number` *(default: 0)*
+
+The right margin of the title.
+
+#### Example - set the chart pane title right margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            margin: {
+              right: 10
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            margin: {
+              right: 10
+            }
+          }
+        }
+      ]
+    });
+    </script>
+
+### panes.title.margin.top `Number` *(default: 0)*
+
+The top margin of the title.
+
+#### Example - set the chart pane title top margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            margin: {
+              top: 10
+            }
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            margin: {
+              top: 10
+            }
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.position `String` *(default: "center")*
 
 The position of the title.
 
-#### *"left"*
+The supported values are:
 
-The pane title is positioned on the left
+* "left" - the axis title is positioned on the left (applicable to horizontal axis)
+* "right" - the axis title is positioned on the right (applicable to horizontal axis)
+* "center" - the axis title is positioned in the center
 
-#### *"right"*
+#### Example - set the chart pane title position
 
-The pane title is positioned on the right
-
-#### *"center"*
-
-The pane title is positioned in the center
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            position: "left"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            position: "left"
+          }
+        }
+      ]
+    });
+    </script>
 
 ### panes.title.text `String`
 
 The text of the title.
 
+#### Example - set the chart pane title text
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top"
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom"
+          }
+        }
+      ]
+    });
+    </script>
+
 ### panes.title.visible `Boolean` *(default: true)*
 
-The visibility of the title.
+If set to `true` the chart will display the pane title. By default the pane title is visible.
+
+#### Example - hide the chart pane title
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] },
+        { data: [1, 2, 3, 4], axis: "bottom" }
+      ],
+      valueAxis: [
+        { pane: "top-pane" },
+        { pane: "bottom-pane", name: "bottom" }
+      ],
+      panes: [
+        { name: "top-pane",
+          title: {
+            text: "Top",
+            visible: false
+          }
+        },
+        { name: "bottom-pane",
+          title: {
+            text: "Bottom",
+            visible: false
+          }
+        }
+      ]
+    });
+    </script>
 
 ### plotArea `Object`
 
-The plot area configuration options. This is the area containing the plotted series.
+The plot area configuration options. The plot area is the area which displays the series.
+
+#### Example - configure the chart plot area
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        background: "green",
+
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### plotArea.background `String` *(default: "white")*
 
- The background color of the plot area.
+The background color of the chart plot area. Accepts a valid CSS color string, including hex and rgb.
 
-### plotArea.opacity `Number` *(default: 1)*
+#### Example - set the chart plot area background as a hex string
 
- The background opacity of the plot area.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        background: "#aa00bb"
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart plot area background as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        background: "rgb(128, 0, 255)"
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart plot area background by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        background: "green"
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
 
 ### plotArea.border `Object`
 
-The border of the plot area.
+The border of the chart plot area.
+
+#### Example - set the chart plot area border
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        border: {
+          width: 2,
+          color: "green"
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### plotArea.border.color `String` *(default: "black")*
 
- The color of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart plot area border color
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        border: {
+          width: 2,
+          color: "green"
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### plotArea.border.dashType `String` *(default: "solid")*
 
- The dash type of the border.
+The dash type of the border.
 
+The following dash types are supported:
 
-#### *"solid"*
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
 
-Specifies a solid line.
+#### Example - set the chart plot area border dash type
 
-#### *"dot"*
-
-Specifies a line consisting of dots.
-
-#### *"dash"*
-
-Specifies a line consisting of dashes.
-
-#### *"longDash"*
-
-Specifies a line consisting of a repeating pattern of long-dash.
-
-#### *"dashDot"*
-
-Specifies a line consisting of a repeating pattern of dash-dot.
-
-#### *"longDashDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot.
-
-#### *"longDashDotDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        border: {
+          width: 2,
+          dashType: "dashDot"
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### plotArea.border.width `Number` *(default: 0)*
 
- The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+#### Example - set the chart plot area border width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        border: {
+          width: 2
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### plotArea.margin `Number|Object` *(default: 5)*
 
- The margin of the plot area.
+The margin of the chart plot area. A numeric value will set all margins.
 
-#### Example
+#### Example - set the chart plot area margin
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        margin: 10
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
-    // sets the top, right, bottom and left margin to 3px.
-    margin: 3
+### plotArea.margin.bottom `Number` *(default: 5)*
 
-    // sets the top and left margin to 1px
-    // margin right and bottom are with 5px (by default)
-    margin: { top: 1, left: 1 }
+The bottom margin of the chart plot area.
+
+#### Example - set the chart plot area bottom margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        margin: {
+          bottom: 10
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### plotArea.margin.left `Number` *(default: 5)*
+
+The left margin of the chart plot area.
+
+#### Example - set the chart plot area left margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        margin: {
+          left: 10
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### plotArea.margin.right `Number` *(default: 5)*
+
+The right margin of the chart plot area.
+
+#### Example - set the chart plot area right margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        margin: {
+          right: 10
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### plotArea.margin.top `Number` *(default: 5)*
+
+The top margin of the chart plot area.
+
+#### Example - set the chart plot area top margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        margin: {
+          top: 10
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### plotArea.opacity `Number` *(default: 1)*
+
+The background opacity of the chart plot area. By default the background is opaque.
+
+#### Example - set the chart plot area opacity
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      plotArea: {
+        background: "green",
+        opacity: 0.1
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### series `Array`
 
-Array of series definitions.
+The configuration of the chart series.
 
 The series type is determined by the value of the type field.
 If a type value is missing, the type is assumed to be the one specified in seriesDefaults.
 
-Each series type has a different set of options.
+> Some options accept function as argument. They will be evaluated for each point (supplied as parameter). The theme/seriesDefaults value will be used if no value is returned.
 
-### series.type `String`
+#### Example - configure the chart series
 
-The type of the series. Available types:
-
-* area, verticalArea
-* bar, column
-* line, verticalLine
-* scatterLine
-* bubble
-* pie
-* donut
-* candlestick, ohlc
-* bullet, verticalBullet
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { type: "line", data: [1, 2, 3] },
+        { type: "bar", data: [4, 5, 6] }
+      ]
+    });
+    </script>
 
 ### series.dashType `String` *(default: "solid")*
 
-The series line dash type.
+The dash type of line chart.
 
-** Applicable only to line and scatterLine series **
+> The `dashType` option is taken into consideration only if the [series.type](#configuration-series.type) option is set to "line".
 
-#### *"solid"*
+The following dash types are supported:
 
-Specifies a solid line.
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
 
-#### *"dot"*
-
-Specifies a line consisting of dots.
-
-#### *"dash"*
-
-Specifies a line consisting of dashes.
-
-#### *"longDash"*
-
-Specifies a line consisting of a repeating pattern of long-dash.
-
-#### *"dashDot"*
-
-Specifies a line consisting of a repeating pattern of dash-dot.
-
-#### *"longDashDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot.
-
-#### *"longDashDotDot"*
-
-Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
+#### Example - set the chart legend border dash type
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        {
+          dashType: "dashDot",
+          type: "line",
+          data: [1, 2, 3]
+        }
+      ]
+    });
+    </script>
 
 ### series.data `Array`
 
-Array of data items. The data item type can be either a:
+The array of data items which represent the series data.
 
-* Array of objects. Each point is bound to the specified series fields.
-* Array of numbers. Available for area, bar, column, donut, pie and line series.
-* Array of arrays of numbers. Available for:
-    * Bubble series (X, Y, Size)
-    * Scatter and scatter line series (X and Y)
-    * OHLC and candlestick series (open, high, low, close)
+Can be set to :
+
+* Array of objects. Each point is bound to the field specified via the [series.field](#configuration-series.field) option.
+* Array of numbers. Supported when the [series.type](#configuration-series.type) option is set to "area", "bar", "column", "donut", "pie" or "line".
+* Array of arrays of numbers. Supported when the [series.type](#configuration-series.type) option is set to "bubble", "scatter", "scatterLine" or "ohlc".
+    * Bubble series need arrays of three values - X value, Y value and Size value e.g. `[1, 1, 10]`
+    * Scatter and scatter line series need arrays of two values - X value and Y value
+    * OHLC and candlestick series need arrays of four values - open, high, low and close
+
+#### Example - set the chart series data as array of objects
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        {
+          field: "price",
+          data: [
+            { price: 1 },
+            { price: 2 },
+            { price: 3 }
+          ]
+        }
+      ]
+    });
+    </script>
+
+#### Example - set the chart series data as array of numbers
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart series data as array of arrays
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        {
+          type: "bubble",
+          data: [
+            [1, 2, 15],
+            [2, 3, 4]
+          ]
+        }
+      ]
+    });
+    </script>
 
 ### series.explodeField `String`
 
@@ -4922,6 +6927,38 @@ Template variables:
 ### series.tooltip.visible `Boolean` *(default: false)*
 
 A value indicating if the tooltip should be displayed.
+
+### series.type `String` *(default: "column")*
+
+The type of the series.
+
+The supported values are:
+
+* area
+* bar
+* bubble
+* bullet
+* candlestick
+* column
+* donut
+* line
+* ohlc
+* pie
+* scatterLine
+* verticalArea
+* verticalBullet
+* verticalLine
+
+#### Example - set the chart series type
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { type: "line", data: [1, 2, 3] }
+      ]
+    });
+    </script>
 
 ### series.visibleInLegend `Boolean` *(default: true)*
 
