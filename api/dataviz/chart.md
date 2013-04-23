@@ -7657,7 +7657,7 @@ The data field containing the low value.
     });
     </script>
 
-### series.margin `Number` *(default: 1)*
+### series.margin `Number|Object` *(default: 1)*
 
 The margin around each donut series (ring). A numeric value will set all margins.
 
