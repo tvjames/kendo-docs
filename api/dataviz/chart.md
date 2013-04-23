@@ -4950,9 +4950,9 @@ The padding of the pane. A numeric value will set all paddings.
     });
     </script>
 
-### pane.padding.bottom `Number` *(default: 0)*
+### panes.padding.bottom `Number` *(default: 0)*
 
-The bottom padding of the chart pane.
+The bottom padding of the chart panes.
 
 #### Example - set the chart pane bottom padding
 
@@ -4984,9 +4984,9 @@ The bottom padding of the chart pane.
     });
     </script>
 
-### pane.padding.left `Number` *(default: 0)*
+### panes.padding.left `Number` *(default: 0)*
 
-The left padding of the chart pane.
+The left padding of the chart panes.
 
 #### Example - set the chart pane left padding
 
@@ -5018,9 +5018,9 @@ The left padding of the chart pane.
     });
     </script>
 
-### pane.padding.right `Number` *(default: 0)*
+### panes.padding.right `Number` *(default: 0)*
 
-The right padding of the chart pane.
+The right padding of the chart panes.
 
 #### Example - set the chart pane right padding
 
@@ -5052,9 +5052,9 @@ The right padding of the chart pane.
     });
     </script>
 
-### pane.padding.top `Number` *(default: 0)*
+### panes.padding.top `Number` *(default: 0)*
 
-The top padding of the chart pane.
+The top padding of the chart panes.
 
 #### Example - set the chart pane top padding
 
