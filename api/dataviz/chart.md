@@ -4143,7 +4143,7 @@ The font style of the labels.
     });
     </script>
 
-### legend.margin `Number|Object` *(default: 10)*
+### legend.labels.margin `Number|Object` *(default: 10)*
 
 The margin of the labels. A numeric value will set all margins.
 
