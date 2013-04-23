@@ -3889,10 +3889,6 @@ The chart legend configuration options.
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
-      series: [
-        { name: "Series 1", data: [1, 2, 3] },
-        { name: "Series 2", data: [3, 4, 5] }
-      ],
       legend: {
         background: "green",
         position: "left",
@@ -3900,7 +3896,11 @@ The chart legend configuration options.
           font: "20px sans-serif",
           color: "red"
         }
-      }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
     });
     </script>
 
@@ -4054,12 +4054,12 @@ The chart legend label configuration.
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
-      legend: [{
+      legend: {
         labels: {
           background: "green",
           color: "white"
         }
-      }],
+      },
       series: [
         { name: "Series 1", data: [1, 2, 3] },
         { name: "Series 2", data: [3, 4, 5] }
@@ -4131,11 +4131,11 @@ The font style of the labels.
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
-      legend: [{
+      legend: {
         labels: {
-           font: "20px sans-serif",
+           font: "20px sans-serif"
         }
-      }],
+      },
       series: [
         { name: "Series 1", data: [1, 2, 3] },
         { name: "Series 2", data: [3, 4, 5] }
@@ -4256,6 +4256,226 @@ The top margin of the labels.
     });
     </script>
 
+### legend.labels.template `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the labels.
+
+The fields which can be used in the template are:
+
+*   text - the text the legend item.
+*   series - the data series.
+*   value - the point value. (only for donut and pie charts)
+*   percentage - the point value represented as a percentage value. (only for donut and pie charts)
+*   dataItem - the original data item used to construct the point. (only for donut and pie charts)
+
+#### Example - set the chart legend label template as a string
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          template: "Name: #: text #"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend label template as a function
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          template: kendo.template("Name: #: text #")
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.inactiveItems `Object`
+
+The chart inactive legend items configuration.
+
+#### Example - configure the chart legend inactive items
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        inactiveItems: {
+          labels: {
+            background: "green",
+            color: "white"
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.inactiveItems.labels `Object`
+
+The chart legend label configuration.
+
+#### Example - configure the chart legend labels
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        inactiveItems: {
+          labels: {
+            background: "green",
+            color: "white"
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.inactiveItems.labels.color `String` *(default: "black")*
+
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the chart legend label color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        inactiveItems: {
+          labels: {
+            color: "#aa00bb"
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend label color as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        inactiveItems: {
+          labels: {
+            color: "rgb(128, 0, 255)"
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend label color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        inactiveItems: {
+          labels: {
+            color: "green"
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.inactiveItems.labels.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+
+The font style of the labels.
+
+#### Example - set the chart legend label font
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        inactiveItems: {
+          labels: {
+            font: "20px sans-serif"
+          }
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.inactiveItems.labels.template `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the labels.
+
+The fields which can be used in the template are:
+
+*   text - the text the legend item.
+*   series - the data series.
+*   value - the point value. (only for donut and pie charts)
+*   percentage - the point value represented as a percentage value. (only for donut and pie charts)
+*   dataItem - the original data item used to construct the point. (only for donut and pie charts)
+
+#### Example - set the chart legend label template as a string
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          template: "Name: #: text #"
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+#### Example - set the chart legend label template as a function
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        labels: {
+          template: kendo.template("Name: #: text #")
+        }
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
 ### legend.offsetX `Number` *(default: 0)*
 
 The X offset of the chart legend. The offset is relative to the default position of the legend.
@@ -4267,13 +4487,13 @@ A negative value will move the legend to the left of its current position.
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
+      legend: {
+        offsetX: 10
+      },
       series: [
         { name: "Series 1", data: [1, 2, 3] },
         { name: "Series 2", data: [3, 4, 5] }
-      ],
-      legend: {
-        offsetX: 10
-      }
+      ]
     });
     </script>
 
@@ -4288,27 +4508,8 @@ A negative value will move the legend upwards from its current position.
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
-      series: [
-        { name: "Series 1", data: [1, 2, 3] },
-        { name: "Series 2", data: [3, 4, 5] }
-      ],
       legend: {
         offsetY: 10
-      }
-    });
-    </script>
-
-### legend.padding `Number|Object` *(default: 5)*
-
-The padding of the chart legend. A numeric value will set all paddings.
-
-#### Example - set the chart legend padding as a number
-
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      legend: {
-        padding: 20
       },
       series: [
         { name: "Series 1", data: [1, 2, 3] },
@@ -4317,17 +4518,36 @@ The padding of the chart legend. A numeric value will set all paddings.
     });
     </script>
 
-### legend.padding.bottom `Number` *(default: 0)*
+### legend.margin `Number|Object` *(default: 5)*
 
-The bottom padding of the chart legend.
+The margin of the chart legend. A numeric value will set all paddings.
 
-#### Example - set the chart legend bottom padding
+#### Example - set the chart legend margin as a number
 
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
       legend: {
-        padding: {
+        margin: 20
+      },
+      series: [
+        { name: "Series 1", data: [1, 2, 3] },
+        { name: "Series 2", data: [3, 4, 5] }
+      ]
+    });
+    </script>
+
+### legend.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the chart legend.
+
+#### Example - set the chart legend bottom margin
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      legend: {
+        margin: {
           bottom: 20
         }
       },
@@ -4338,17 +4558,17 @@ The bottom padding of the chart legend.
     });
     </script>
 
-### legend.padding.left `Number` *(default: 0)*
+### legend.margin.left `Number` *(default: 0)*
 
-The left padding of the chart legend.
+The left margin of the chart legend.
 
-#### Example - set the chart legend left padding
+#### Example - set the chart legend left margin
 
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
       legend: {
-        padding: {
+        margin: {
           left: 20
         }
       },
@@ -4359,17 +4579,17 @@ The left padding of the chart legend.
     });
     </script>
 
-### legend.padding.right `Number` *(default: 0)*
+### legend.margin.right `Number` *(default: 0)*
 
-The right padding of the chart legend.
+The right margin of the chart legend.
 
-#### Example - set the chart legend right padding
+#### Example - set the chart legend right margin
 
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
       legend: {
-        padding: {
+        margin: {
           right: 20
         }
       },
@@ -4380,17 +4600,17 @@ The right padding of the chart legend.
     });
     </script>
 
-### legend.padding.top `Number` *(default: 0)*
+### legend.margin.top `Number` *(default: 0)*
 
-The top padding of the chart legend.
+The top margin of the chart legend.
 
-#### Example - set the chart legend top padding
+#### Example - set the chart legend top margin
 
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
       legend: {
-        padding: {
+        margin: {
           top: 20
         }
       },
@@ -4417,50 +4637,6 @@ The supported values are:
 
 * "custom" - the legend is positioned using [legend.offsetX](#configuration-legend.offsetX) and [legend.offsetY](#configuration-legend.offsetY).
 
-### legend.labels.template `String|Function`
-
-The [template](/api/framework/kendo#methods-template) which renders the labels.
-
-The fields which can be used in the template are:
-
-*   text - the text the legend item.
-*   series - the data series.
-*   value - the point value. (only for donut and pie charts)
-*   percentage - the point value represented as a percentage value. (only for donut and pie charts)
-*   dataItem - the original data item used to construct the point. (only for donut and pie charts)
-
-#### Example - set the chart legend label template as a string
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      series: [
-        { name: "Series 1", data: [1, 2, 3] },
-        { name: "Series 2", data: [3, 4, 5] }
-      ],
-      legend: {
-        labels: {
-          template: "Name: #: text #"
-        }
-      }
-    });
-    </script>
-
-#### Example - set the chart legend label template as a function
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      series: [
-        { name: "Series 1", data: [1, 2, 3] },
-        { name: "Series 2", data: [3, 4, 5] }
-      ],
-      legend: {
-        labels: {
-          template: kendo.template("Name: #: text #")
-        }
-      }
-    });
-    </script>
-
 ### legend.visible `Boolean` *(default: true)*
 
 If set to `true` the chart will display the legend. By default the chart legend is visible.
@@ -4470,13 +4646,13 @@ If set to `true` the chart will display the legend. By default the chart legend 
     <div id="chart"></div>
     <script>
     $("#chart").kendoChart({
+      legend: {
+        visible: false
+      },
       series: [
         { name: "Series 1", data: [1, 2, 3] },
         { name: "Series 2", data: [3, 4, 5] }
-      ],
-      legend: {
-        visible: false
-      }
+      ]
     });
     </script>
 
