@@ -3970,7 +3970,7 @@ The border of the legend.
     });
     </script>
 
-### labels.border.color `String` *(default: "black")*
+### legend.border.color `String` *(default: "black")*
 
 The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
@@ -3992,7 +3992,7 @@ The color of the border. Accepts a valid CSS color string, including hex and rgb
     });
     </script>
 
-### labels.border.dashType `String` *(default: "solid")*
+### legend.border.dashType `String` *(default: "solid")*
 
 The dash type of the border.
 
@@ -4024,7 +4024,7 @@ The following dash types are supported:
     });
     </script>
 
-### labels.border.width `Number` *(default: 0)*
+### legend.border.width `Number` *(default: 0)*
 
 The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
