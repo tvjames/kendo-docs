@@ -6760,7 +6760,7 @@ The data item field which contains category name.
     });
     </script>
 
-### series.color `String|Function`
+### series.color `String`
 
 The series base color. Accepts a valid CSS color string, including hex and rgb.
 
@@ -7245,7 +7245,7 @@ The distance of the labels when [series.type](#configuration-series.type) is set
     });
     </script>
 
-### series.labels.font `String|Function` *(default: "12px Arial,Helvetica,sans-serif")*
+### series.labels.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
 
 The font style of the labels.
 
@@ -7478,7 +7478,7 @@ The top padding of the labels.
     });
     </script>
 
-### series.labels.position `String|Function` *(default: "above")*
+### series.labels.position `String` *(default: "above")*
 
 The position of the labels.
 
@@ -7533,7 +7533,7 @@ The fields which can be used in the template are:
     });
     </script>
 
-### series.labels.visible `Boolean|Function` *(default: false)*
+### series.labels.visible `Boolean` *(default: false)*
 
 If set to `true` the chart will display the series labels. By default chart series labels are not displayed.
 
@@ -7922,7 +7922,7 @@ The supported values are:
     });
     </script>
 
-### series.markers.visible `Boolean|Function` *(default: false)*
+### series.markers.visible `Boolean` *(default: false)*
 
 If set to `true` the chart will display the series markers. By default chart series markers are not displayed.
 
@@ -7935,27 +7935,6 @@ If set to `true` the chart will display the series markers. By default chart ser
         type: "line",
         markers: {
           visible: true
-        },
-        data: [1, 2, 3]
-      }]
-    });
-    </script>
-
-### series.markers.rotation `Number`
-
-The rotation angle of the markers.
-
-#### Example - set the chart series marker rotation angle
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      series: [ {
-        type: "line",
-        markers: {
-          visible: true,
-          type: "triangle",
-          size: 30,
-          rotation: 33
         },
         data: [1, 2, 3]
       }]
@@ -8905,7 +8884,7 @@ The target line options.
       ]
     });
 
-### series.target.line.width `Object|Function`
+### series.target.line.width `Object`
 
 The width of the line.
 
@@ -8928,7 +8907,7 @@ The width of the line.
         }
       ]
     });
-### series.target.color `String|Function`
+### series.target.color `String`
 
 The target color.
 
@@ -8951,7 +8930,7 @@ The target color.
     });
     </script>
 
-### series.target.border `Object|Function`
+### series.target.border `Object`
 
 The border of the target.
 
@@ -8977,7 +8956,7 @@ The border of the target.
     });
     </script>
 
-### series.target.border.color `String|Function` *(default: "black")*
+### series.target.border.color `String` *(default: "black")*
 
 The color of the border.
 
@@ -9003,7 +8982,7 @@ The color of the border.
     });
     </script>
 
-### series.target.border.dashType `String|Function` *(default: "solid")*
+### series.target.border.dashType `String` *(default: "solid")*
 
 The following dash types are supported:
 
@@ -9037,7 +9016,7 @@ The following dash types are supported:
     });
     </script>
 
-### series.target.border.width `Number|Function` *(default: 0)*
+### series.target.border.width `Number` *(default: 0)*
 
 The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
@@ -19783,142 +19762,6 @@ The label value or category name.
     });
     var chart = $("#chart").data("kendoChart");
     chart.bind("axisLabelClick", chart_axisLabelClick);
-    </script>
-
-### legendItemClick
-
-Fired when the user clicks a legend item.
-
-The event handler function context (available via the `this` keyword) will be set to the widget instance.
-
-#### Event Data
-
-##### e.element `Object`
-
-The DOM element of the plot area.
-
-##### e.pointIndex `Number`
-
-The point index.
-
-##### e.sender `kendo.ui.Chart`
-
-The widget instance which fired the event.
-
-##### e.series `Object`
-
-The series options.
-
-##### e.seriesIndex `Number`
-
-The series index.
-
-##### e.text `String`
-
-The name of the series.
-
-#### Example - subscribe to the "legendItemClick" event during initialization
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      categoryAxis: {
-        categories: [2012, 2013]
-      },
-      series: [
-        { name: "Series 1", data: [1, 2] } ,
-        { name: "Series 2", data: [1, 2] }
-      ],
-      legendItemClick: function(e) {
-        console.log(e.text);
-      }
-    });
-    </script>
-
-#### Example - subscribe to the "legendItemClick" event after initialization
-    <div id="chart"></div>
-    <script>
-    function chart_legendItemClick(e) {
-      console.log(e.text);
-    }
-    $("#chart").kendoChart({
-      categoryAxis: {
-        categories: [2012, 2013]
-      },
-      series: [
-        { name: "Series 1", data: [1, 2] } ,
-        { name: "Series 2", data: [1, 2] }
-      ]
-    });
-    var chart = $("#chart").data("kendoChart");
-    chart.bind("legendItemClick", chart_legendItemClick);
-    </script>
-
-### legendItemHover
-
-Fired when the user hovers a legend item.
-
-The event handler function context (available via the `this` keyword) will be set to the widget instance.
-
-#### Event Data
-
-##### e.element `Object`
-
-The DOM element of the plot area.
-
-##### e.pointIndex `Number`
-
-The point index.
-
-##### e.sender `kendo.ui.Chart`
-
-The widget instance which fired the event.
-
-##### e.series `Object`
-
-The series options.
-
-##### e.seriesIndex `Number`
-
-The series index.
-
-##### e.text `String`
-
-The name of the series.
-
-#### Example - subscribe to the "legendItemHover" event during initialization
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      categoryAxis: {
-        categories: [2012, 2013]
-      },
-      series: [
-        { name: "Series 1", data: [1, 2] } ,
-        { name: "Series 2", data: [1, 2] }
-      ],
-      legendItemHover: function(e) {
-        console.log(e.text);
-      }
-    });
-    </script>
-
-#### Example - subscribe to the "legendItemHover" event after initialization
-    <div id="chart"></div>
-    <script>
-    function chart_legendItemHover(e) {
-      console.log(e.text);
-    }
-    $("#chart").kendoChart({
-      categoryAxis: {
-        categories: [2012, 2013]
-      },
-      series: [
-        { name: "Series 1", data: [1, 2] } ,
-        { name: "Series 2", data: [1, 2] }
-      ]
-    });
-    var chart = $("#chart").data("kendoChart");
-    chart.bind("legendItemHover", chart_legendItemHover);
     </script>
 
 ### dataBound
