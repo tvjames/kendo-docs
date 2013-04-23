@@ -4790,9 +4790,9 @@ The margin of the pane. A numeric value will set all margins.
     });
     </script>
 
-### pane.margin.bottom `Number` *(default: 0)*
+### panes.margin.bottom `Number` *(default: 0)*
 
-The bottom margin of the chart pane.
+The bottom margin of the chart panes.
 
 #### Example - set the chart pane bottom margin
 
@@ -4824,9 +4824,9 @@ The bottom margin of the chart pane.
     });
     </script>
 
-### pane.margin.left `Number` *(default: 0)*
+### panes.margin.left `Number` *(default: 0)*
 
-The left margin of the chart pane.
+The left margin of the chart panes.
 
 #### Example - set the chart pane left margin
 
@@ -4858,9 +4858,9 @@ The left margin of the chart pane.
     });
     </script>
 
-### pane.margin.right `Number` *(default: 0)*
+### panes.margin.right `Number` *(default: 0)*
 
-The right margin of the chart pane.
+The right margin of the chart panes.
 
 #### Example - set the chart pane right margin
 
@@ -4892,9 +4892,9 @@ The right margin of the chart pane.
     });
     </script>
 
-### pane.margin.top `Number` *(default: 0)*
+### panes.margin.top `Number` *(default: 0)*
 
-The top margin of the chart pane.
+The top margin of the chart panes.
 
 #### Example - set the chart pane top margin
 
