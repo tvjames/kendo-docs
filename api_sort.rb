@@ -32,7 +32,7 @@ File.open(filename, "w") do |file|
 
         subsections.each do |subsection|
             file.write(subsection[:key])
-            file.write(subsection[:value])
+            file.puts(subsection[:value])
         end
     end
 end
