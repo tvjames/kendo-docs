@@ -29,10 +29,14 @@ File.open(filename, "w") do |file|
         subsections = sections_as_key_values(section[:value], /^### .*/).sort { |a,b| a[:key] <=> b[:key] }
 
         file.puts(section[:key])
+        file.puts()
 
         subsections.each do |subsection|
             file.write(subsection[:key])
-            file.puts(subsection[:value])
+            file.puts()
+            file.puts()
+            file.puts(subsection[:value].strip)
+            file.puts()
         end
     end
 end
