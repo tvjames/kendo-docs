@@ -11,6 +11,7 @@ publish: true
 # kendo.dataviz.ui.Chart
 
 ## Configuration
+
 ### autoBind `Boolean` *(default: true)*
 
 If set to `false` the widget will not bind to the data source during initialization. In this case data binding will occur when the [change](/api/framework/datasource#events-change) event of the
@@ -351,7 +352,6 @@ The opacity of the crosshair. By default the crosshair is opaque.
     });
     </script>
 
-
 ### categoryAxis.crosshair.tooltip `Object`
 
 The crosshar tooltip options.
@@ -648,7 +648,6 @@ The format used to display the tooltip. Uses [kendo.format](/api/framework/kendo
       ]
     });
     </script>
-
 
 ### categoryAxis.crosshair.tooltip.padding `Number|Object` *(default: 0)*
 
@@ -1913,7 +1912,6 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
     });
     </script>
 
-
 ### categoryAxis.majorGridLines `Object`
 
 The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
@@ -2043,7 +2041,6 @@ If set to `true` the chart will display the major grid lines. By default the maj
       ]
     });
     </script>
-
 
 ### categoryAxis.majorGridLines.width `Number` *(default: 1)*
 
@@ -2218,6 +2215,7 @@ set up a fixed date range.
 The maximum number of groups (categories) to display when
 [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "fit" or
 [categoryAxis.baseUnitStep](#configuration-categoryAxis.baseUnitStep) is set to "auto".
+
 ### categoryAxis.min `Object`
 
 The first date displayed on the category date axis. By default, the minimum date is the same as the first category.
@@ -2353,7 +2351,6 @@ If set to `true` the chart will display the minor grid lines. By default the min
       ]
     });
     </script>
-
 
 ### categoryAxis.minorGridLines.width `Number` *(default: 1)*
 
@@ -3491,7 +3488,6 @@ The supported values are:
     });
     </script>
 
-
 ### categoryAxis.visible `Boolean` *(default: true)*
 
 If set to `true` the chart will display the category axis. By default the category axis is visible.
@@ -3577,7 +3573,6 @@ The background color of the chart area. Accepts a valid CSS color string, includ
       ]
     });
     </script>
-
 
 ### chartArea.border `Object`
 
@@ -5981,7 +5976,6 @@ The background color of the chart plot area. Accepts a valid CSS color string, i
     });
     </script>
 
-
 ### plotArea.border `Object`
 
 The border of the chart plot area.
@@ -8141,6 +8135,7 @@ The maximum size of the chart bubble series marker.
       }]
     });
     </script>
+
 ### series.minSize `Number` *(default: 5)*
 
 The minimum size of the chart bubble series marker.
@@ -8238,7 +8233,6 @@ The options for displaying the chart negative bubble values.
       }]
     });
     </script>
-
 
 ### series.negativeValues.color `String` *(default: "#ffffff")*
 
@@ -8683,6 +8677,7 @@ The width of the line.
         }
       ]
     });
+
 ### series.targetField `String` *(default: "target")*
 
 The data item field containing the target value.
@@ -9013,7 +9008,6 @@ The top padding of the tooltip.
     });
     </script>
 
-
 ### series.tooltip.template `String|Function`
 
 The [template](/api/framework/kendo#methods-template) which renders the tooltip.
@@ -9299,6 +9293,7 @@ The border of the series.
       ]
     });
     </script>
+
 ### seriesDefaults.border.color `String` *(default: "black")*
 
 The color of the border. Accepts a valid CSS color string, including hex and rgb.
@@ -9430,7 +9425,6 @@ The column chart series options. Accepts all values supported by the [series](#c
       ]
     });
     </script>
-
 
 ### seriesDefaults.donut `Object`
 
@@ -10576,7 +10570,6 @@ The verticalLine chart series options. Accepts all values supported by the [seri
     });
     </script>
 
-
 ### theme `String`
 
 The chart theme.
@@ -10684,6 +10677,7 @@ The border of the series.
       ]
     });
     </script>
+
 ### title.border.color `String` *(default: "black")*
 
 The color of the border. Accepts a valid CSS color string, including hex and rgb.
@@ -10818,7 +10812,6 @@ The bottom margin of the title.
     });
     </script>
 
-
 ### title.margin.left `Number` *(default: 0)*
 
 The left margin of the title.
@@ -10921,7 +10914,6 @@ The bottom padding of the title.
       ]
     });
     </script>
-
 
 ### title.padding.left `Number` *(default: 0)*
 
@@ -11615,7 +11607,6 @@ The opacity of the crosshair. By default the crosshair is opaque.
     });
     </script>
 
-
 ### valueAxis.crosshair.tooltip `Object`
 
 The crosshar tooltip options.
@@ -11901,7 +11892,6 @@ The format used to display the tooltip. Uses [kendo.format](/api/framework/kendo
       ]
     });
     </script>
-
 
 ### valueAxis.crosshair.tooltip.padding `Number|Object` *(default: 0)*
 
@@ -12911,6 +12901,7 @@ body of the chart.
       ]
     });
     </script>
+
 ### valueAxis.majorGridLines.color `String` *(default: "black")*
 
 The color of the major grid lines. Accepts a valid CSS color string, including hex and rgb.
@@ -13012,7 +13003,6 @@ If set to `true` the chart will display the major grid lines. By default the maj
       ]
     });
     </script>
-
 
 ### valueAxis.majorGridLines.width `Number` *(default: 1)*
 
@@ -13211,7 +13201,6 @@ If set to `true` the chart will display the minor grid lines. By default the min
       ]
     });
     </script>
-
 
 ### valueAxis.minorGridLines.width `Number` *(default: 1)*
 
@@ -14328,7 +14317,6 @@ The opacity of the crosshair. By default the crosshair is opaque.
     });
     </script>
 
-
 ### xAxis.crosshair.tooltip `Object`
 
 The crosshar tooltip options.
@@ -14611,7 +14599,6 @@ The format used to display the tooltip. Uses [kendo.format](/api/framework/kendo
       ]
     });
     </script>
-
 
 ### xAxis.crosshair.tooltip.padding `Number|Object` *(default: 0)*
 
@@ -15434,7 +15421,6 @@ If set to `true` the chart will mirror the axis labels and ticks. If the labels 
       }
     });
     </script>
-
 
 ### xAxis.labels.padding `Number|Object` *(default: 0)*
 
@@ -16276,6 +16262,7 @@ The color of the plot band.
       }
     });
     </script>
+
 ### xAxis.plotBands.from `Number`
 
 The start position of the plot band in axis units.
@@ -16335,6 +16322,7 @@ The end position of the plot band in axis units.
       }
     });
     </script>
+
 ### xAxis.reverse `Boolean` *(default: false)*
 
 If set to `true` the value axis direction will be reversed. By default values increase from left to right and from bottom to top.
@@ -17138,7 +17126,6 @@ The opacity of the crosshair. By default the crosshair is opaque.
     });
     </script>
 
-
 ### yAxis.crosshair.tooltip `Object`
 
 The crosshar tooltip options.
@@ -17422,7 +17409,6 @@ The format used to display the tooltip. Uses [kendo.format](/api/framework/kendo
     });
     </script>
 
-
 ### yAxis.crosshair.tooltip.padding `Number|Object` *(default: 0)*
 
 The padding of the crosshair tooltip. A numeric value will set all paddings.
@@ -17662,6 +17648,7 @@ The width of the crosshair in pixels.
       ]
     });
     </script>
+
 ### yAxis.labels `Object`
 
 The axis labels configuration.
@@ -18243,7 +18230,6 @@ If set to `true` the chart will mirror the axis labels and ticks. If the labels 
       }
     });
     </script>
-
 
 ### yAxis.labels.padding `Number|Object` *(default: 0)*
 
@@ -19085,6 +19071,7 @@ The color of the plot band.
       }
     });
     </script>
+
 ### yAxis.plotBands.from `Number`
 
 The start position of the plot band in axis units.
@@ -19144,6 +19131,7 @@ The end position of the plot band in axis units.
       }
     });
     </script>
+
 ### yAxis.reverse `Boolean` *(default: false)*
 
 If set to `true` the value axis direction will be reversed. By default values increase from left to right and from bottom to top.
@@ -19756,6 +19744,7 @@ If set to `true` the chart will display the y axis. By default the y axis is vis
     </script>
 
 ## Fields
+
 ### dataSource `kendo.data.DataSource`
 
 The [data source](/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
@@ -19833,7 +19822,9 @@ The [configuration](#configuration) options with which the chart is initialized.
     chart.options.series[0].type = "bar";
     chart.refresh();
     </script>
+
 ## Methods
+
 ### destroy
 
 Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
@@ -19942,7 +19933,9 @@ Returns the [SVG](http://www.w3.org/Graphics/SVG/) representation of the chart. 
     var svg = chart.svg();
     console.log(svg); // displays the SVG string
     </script>
+
 ## Events
+
 ### axisLabelClick
 
 Fired when the user clicks an axis label.
@@ -20408,6 +20401,7 @@ The last selected category is at index [to - 1] unless the axis is justified. In
     var chart = $("#chart").data("kendoChart");
     chart.bind("selectEnd", chart_selectEnd);
     </script>
+
 ### selectStart
 
 Fired when the user starts modifying the axis selection.

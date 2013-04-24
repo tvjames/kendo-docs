@@ -11,6 +11,7 @@ publish: true
 # kendo.data.DataSource
 
 ## Configuration
+
 ### aggregate `Array`
 
 The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
@@ -671,7 +672,6 @@ The aggregate results should have the following format:
       }
     });
     </script>
-
 
 ### schema.data `Function|String`
 
@@ -2397,7 +2397,9 @@ If set the data source will use a predefined [transport](#configuration-transpor
       console.log(dataSource.view().length); // displays "20"
     });
     </script>
+
 ## Methods
+
 ### add
 
 Appends a data item to the data source.
@@ -3350,7 +3352,9 @@ To ensure that data is available this method should be used within the [change](
       console.log(beverages.items[1].name); // displays "Tea"
     });
     </script>
+
 ## Events
+
 ### change
 
 Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.
@@ -3611,7 +3615,9 @@ The data source instance which fired the event.
     dataSource.add( { ProductName: "Ham" } );
     dataSource.sync();
     </script>
+
 ## Class methods
+
 ### create
 
 Creates a data source instance using the specified configuration. If the configuration is a data source instance the same instance will be returned.
@@ -3635,3 +3641,4 @@ The data source [configuration](#configuration).
       ]
     });
     </script>
+
