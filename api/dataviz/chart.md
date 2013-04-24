@@ -19757,6 +19757,86 @@ The width of the crosshair in pixels.
     });
     </script>
 
+## Fields
+
+### dataSource `kendo.data.DataSource`
+
+The [data source](/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
+
+> Changes of the data source will be reflected in the widget.
+
+> Assigning a new data source would have no effect. Use the [setDataSource](#methods-setDataSource) method instead.
+
+#### Example - add a data item to the data source
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      dataSource: [
+        { value: 1 }
+      ],
+      series: [
+        { field: "value" }
+      ]
+    });
+    var chart = $("#chart").data("kendoChart");
+    chart.dataSource.add({ value: 2 });
+    </script>
+
+#### Example - update a data item in the data source
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataSource.at(0);
+    data.set("name", "John Doe");
+    </script>
+
+#### Example - remove a data item from the data source
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      dataSource: [
+        { value: 1 },
+        { value: 2 }
+      ],
+      series: [
+        { field: "value" }
+      ]
+    });
+    var chart = $("#chart").data("kendoChart");
+    var data = chart.dataSource.at(0);
+    chart.dataSource.remove(data);
+    </script>
+
+### options `Object`
+
+The [configuration](#configuration) options with which the chart is initialized.
+
+> Call the [refresh](#methods-refresh) method after modifying the `options` field.
+
+#### Example - change the chart options
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [
+        { type: "line", data: [1, 2] }
+      ]
+    });
+    var chart = $("#chart").data("kendoChart");
+    chart.options.series[0].type = "bar";
+    chart.refresh();
+    </script>
+
 ## Methods
 
 ### destroy
