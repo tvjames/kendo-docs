@@ -17661,7 +17661,8 @@ The width of the crosshair in pixels.
         { type: "scatter", data: [[1, 2]] }
       ]
     });
-    </script>### yAxis.labels `Object`
+    </script>
+### yAxis.labels `Object`
 
 The axis labels configuration.
 
@@ -19831,7 +19832,8 @@ The [configuration](#configuration) options with which the chart is initialized.
     var chart = $("#chart").data("kendoChart");
     chart.options.series[0].type = "bar";
     chart.refresh();
-    </script>## Methods
+    </script>
+## Methods
 ### destroy
 
 Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
@@ -19939,7 +19941,8 @@ Returns the [SVG](http://www.w3.org/Graphics/SVG/) representation of the chart. 
     var chart = $("#chart").data("kendoChart");
     var svg = chart.svg();
     console.log(svg); // displays the SVG string
-    </script>## Events
+    </script>
+## Events
 ### axisLabelClick
 
 Fired when the user clicks an axis label.
@@ -20404,7 +20407,8 @@ The last selected category is at index [to - 1] unless the axis is justified. In
     });
     var chart = $("#chart").data("kendoChart");
     chart.bind("selectEnd", chart_selectEnd);
-    </script>### selectStart
+    </script>
+### selectStart
 
 Fired when the user starts modifying the axis selection.
 
