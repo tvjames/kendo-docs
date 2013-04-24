@@ -129,6 +129,9 @@ More documentation is available at [kendo:treeView-items](treeview/items).
 
 Triggered before a subgroup gets collapsed.
 
+
+For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
+
 #### Example
     <kendo:treeView collapse="handle_collapse">
     </kendo:treeView>
@@ -141,6 +144,9 @@ Triggered before a subgroup gets collapsed.
 ### dataBound `String`
 
 Triggered after the dataSource change event has been processed (adding/removing items);
+
+
+For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeView dataBound="handle_dataBound">
@@ -155,6 +161,9 @@ Triggered after the dataSource change event has been processed (adding/removing 
 
 Triggered while a node is being dragged.
 
+
+For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
+
 #### Example
     <kendo:treeView drag="handle_drag">
     </kendo:treeView>
@@ -167,6 +176,9 @@ Triggered while a node is being dragged.
 ### dragend `String`
 
 Triggered after a node has been dropped.
+
+
+For additional information check the [dragend](/api/web/treeview#events-dragend) event documentation.
 
 #### Example
     <kendo:treeView dragend="handle_dragend">
@@ -181,6 +193,9 @@ Triggered after a node has been dropped.
 
 Triggered before the dragging of a node starts.
 
+
+For additional information check the [dragstart](/api/web/treeview#events-dragstart) event documentation.
+
 #### Example
     <kendo:treeView dragstart="handle_dragstart">
     </kendo:treeView>
@@ -193,6 +208,9 @@ Triggered before the dragging of a node starts.
 ### drop `String`
 
 Triggered when a node is being dropped.
+
+
+For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
 
 #### Example
     <kendo:treeView drop="handle_drop">
@@ -207,6 +225,9 @@ Triggered when a node is being dropped.
 
 Triggered before a subgroup gets expanded.
 
+
+For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
+
 #### Example
     <kendo:treeView expand="handle_expand">
     </kendo:treeView>
@@ -219,6 +240,9 @@ Triggered before a subgroup gets expanded.
 ### change `String`
 
 Triggered when the selection has changed (either by the user or through the select method).
+
+
+For additional information check the [change](/api/web/treeview#events-change) event documentation.
 
 #### Example
     <kendo:treeView change="handle_change">
@@ -233,6 +257,9 @@ Triggered when the selection has changed (either by the user or through the sele
 
 Triggered when a node is being selected by the user. Cancellable.
 
+
+For additional information check the [select](/api/web/treeview#events-select) event documentation.
+
 #### Example
     <kendo:treeView select="handle_select">
     </kendo:treeView>
@@ -245,6 +272,9 @@ Triggered when a node is being selected by the user. Cancellable.
 ### navigate `String`
 
 Triggered when the user moves the focus on another node
+
+
+For additional information check the [navigate](/api/web/treeview#events-navigate) event documentation.
 
 #### Example
     <kendo:treeView navigate="handle_navigate">
@@ -261,6 +291,9 @@ Triggered when the user moves the focus on another node
 
 Triggered before a subgroup gets collapsed.
 
+
+For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
+
 #### Example
     <kendo:treeView>
         <kendo:treeView-collapse>
@@ -275,6 +308,9 @@ Triggered before a subgroup gets collapsed.
 ### kendo:treeView-dataBound
 
 Triggered after the dataSource change event has been processed (adding/removing items);
+
+
+For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -291,6 +327,9 @@ Triggered after the dataSource change event has been processed (adding/removing 
 
 Triggered while a node is being dragged.
 
+
+For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
+
 #### Example
     <kendo:treeView>
         <kendo:treeView-drag>
@@ -305,6 +344,9 @@ Triggered while a node is being dragged.
 ### kendo:treeView-dragend
 
 Triggered after a node has been dropped.
+
+
+For additional information check the [dragend](/api/web/treeview#events-dragend) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -321,6 +363,9 @@ Triggered after a node has been dropped.
 
 Triggered before the dragging of a node starts.
 
+
+For additional information check the [dragstart](/api/web/treeview#events-dragstart) event documentation.
+
 #### Example
     <kendo:treeView>
         <kendo:treeView-dragstart>
@@ -335,6 +380,9 @@ Triggered before the dragging of a node starts.
 ### kendo:treeView-drop
 
 Triggered when a node is being dropped.
+
+
+For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -351,6 +399,9 @@ Triggered when a node is being dropped.
 
 Triggered before a subgroup gets expanded.
 
+
+For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
+
 #### Example
     <kendo:treeView>
         <kendo:treeView-expand>
@@ -365,6 +416,9 @@ Triggered before a subgroup gets expanded.
 ### kendo:treeView-change
 
 Triggered when the selection has changed (either by the user or through the select method).
+
+
+For additional information check the [change](/api/web/treeview#events-change) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -381,6 +435,9 @@ Triggered when the selection has changed (either by the user or through the sele
 
 Triggered when a node is being selected by the user. Cancellable.
 
+
+For additional information check the [select](/api/web/treeview#events-select) event documentation.
+
 #### Example
     <kendo:treeView>
         <kendo:treeView-select>
@@ -395,6 +452,9 @@ Triggered when a node is being selected by the user. Cancellable.
 ### kendo:treeView-navigate
 
 Triggered when the user moves the focus on another node
+
+
+For additional information check the [navigate](/api/web/treeview#events-navigate) event documentation.
 
 #### Example
     <kendo:treeView>

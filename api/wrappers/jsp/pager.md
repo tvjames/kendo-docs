@@ -112,6 +112,9 @@ More documentation is available at [kendo:pager-messages](pager/messages).
 
 Fires when the current page has changed.
 
+
+For additional information check the [change](/api/web/pager#events-change) event documentation.
+
 #### Example
     <kendo:pager change="handle_change">
     </kendo:pager>
@@ -126,6 +129,9 @@ Fires when the current page has changed.
 ### kendo:pager-change
 
 Fires when the current page has changed.
+
+
+For additional information check the [change](/api/web/pager#events-change) event documentation.
 
 #### Example
     <kendo:pager>

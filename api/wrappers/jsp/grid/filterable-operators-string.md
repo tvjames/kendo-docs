@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable-operators-string\>
 
-Enable/Disable and set the text of filter operators for fields of type string.
+The texts of the filter operators displayed for columns bound to string fields.
 
 #### Example
     <kendo:grid-filterable-operators>
@@ -18,7 +18,7 @@ Enable/Disable and set the text of filter operators for fields of type string.
 
 ### contains `String`
 
-Enable/Disable and set the text of the "Contains" filter option for columns with string values.
+The text of the "contains" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-string contains="contains">
@@ -26,7 +26,7 @@ Enable/Disable and set the text of the "Contains" filter option for columns with
 
 ### doesnotcontain `String`
 
-Enable/Disable and set the text of the "Does not contain" filter option for columns with string values.
+The text of the "does not contain" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-string doesnotcontain="doesnotcontain">
@@ -34,7 +34,7 @@ Enable/Disable and set the text of the "Does not contain" filter option for colu
 
 ### endswith `String`
 
-Enable/Disable and set the text of the "Ends with" filter option for columns with string values.
+The text of the "ends with" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-string endswith="endswith">
@@ -42,7 +42,7 @@ Enable/Disable and set the text of the "Ends with" filter option for columns wit
 
 ### eq `String`
 
-Enable/Disable and set the text of the "Is equal to" filter option for columns with string values.
+The text of the "equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-string eq="eq">
@@ -50,7 +50,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for columns w
 
 ### neq `String`
 
-Enable/Disable and set the text of the "Is not equal to" filter option for columns with string values.
+The text of the "not equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-string neq="neq">
@@ -58,7 +58,7 @@ Enable/Disable and set the text of the "Is not equal to" filter option for colum
 
 ### startswith `String`
 
-Enable/Disable and set the text of the "Starts with" filter option for columns with string values.
+The text of the "starts with" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-string startswith="startswith">

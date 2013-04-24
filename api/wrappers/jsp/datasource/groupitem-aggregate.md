@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-groupItem-aggregate\>
 
-Specifies the aggregate function for this group.
+The aggregate(s) which are calculated during grouping. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
     <kendo:dataSource-groupItem-aggregates>
@@ -18,7 +18,7 @@ Specifies the aggregate function for this group.
 
 ### aggregate `String`
 
-Specifies the aggregate function. Possible values are: "min", "max", "count", "sum", "average"
+The name of the aggregate function. Specifies the aggregate function. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
     <kendo:dataSource-groupItem-aggregate aggregate="aggregate">
@@ -26,7 +26,7 @@ Specifies the aggregate function. Possible values are: "min", "max", "count", "s
 
 ### field `String`
 
-Specifies the field on which the aggregate will be calculated.
+The data item field which will be used to calculate the aggregates.
 
 #### Example
     <kendo:dataSource-groupItem-aggregate field="field">

@@ -67,6 +67,7 @@ for more details.
 ### cancel
 Fires when the upload has been cancelled while in progress.Note: The cancel event fires only when the upload is in
 async mode.
+For additional information check the [cancel](/api/web/upload#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -103,6 +104,7 @@ async mode.
 ### complete
 Fires when all active uploads have completed either successfully or with errors.Note: The complete event fires only when the upload is in
 async mode.
+For additional information check the [complete](/api/web/upload#events-complete) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -158,6 +160,7 @@ Upload may be re-enabled via enable().
 ### error
 Fires when an upload / remove operation has failed.Note: The error event fires only when the upload is in
 async mode.
+For additional information check the [error](/api/web/upload#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -243,6 +246,7 @@ limit the total number of uploaded files in an asynchronous configuration.
 ### progress
 Fires when upload progress data is available.Note: The progress event fires only when the upload is in
 async mode.
+For additional information check the [progress](/api/web/upload#events-progress) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -279,6 +283,7 @@ async mode.
 ### remove
 Fires when an uploaded file is about to be removed.
 Cancelling the event will prevent the remove.
+For additional information check the [remove](/api/web/upload#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -315,6 +320,7 @@ Cancelling the event will prevent the remove.
 ### select
 Triggered when a file(s) is selected. Note: Cancelling this event will prevent the selection from
 occurring.
+For additional information check the [select](/api/web/upload#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -371,6 +377,7 @@ client-side events to build your own UI.
 ### success
 Fires when an upload / remove operation has been completed successfully.Note: The success event fires only when the upload is in
 async mode.
+For additional information check the [success](/api/web/upload#events-success) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -408,6 +415,7 @@ async mode.
 Fires when one or more files are about to be uploaded.
 Cancelling the event will prevent the upload.Note: The upload event fires only when the upload is in
 async mode.
+For additional information check the [upload](/api/web/upload#events-upload) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`

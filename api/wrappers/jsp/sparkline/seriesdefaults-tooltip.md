@@ -96,6 +96,7 @@ More documentation is available at [kendo:sparkline-seriesDefaults-tooltip-borde
 The tooltip template.
 Template variables:
 
+
 #### Example
     <kendo:sparkline-seriesDefaults-tooltip template="handle_template">
     </kendo:sparkline-seriesDefaults-tooltip>
@@ -111,6 +112,7 @@ Template variables:
 
 The tooltip template.
 Template variables:
+
 
 #### Example
     <kendo:sparkline-seriesDefaults-tooltip>

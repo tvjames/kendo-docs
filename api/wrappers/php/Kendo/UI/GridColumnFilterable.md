@@ -13,7 +13,7 @@ A PHP class representing the filterable setting of GridColumn.
 ## Methods
 
 ### ui
-Role of the widget shown as column filter menu input element.
+The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
 
 #### Returns
 `\Kendo\UI\GridColumnFilterable`

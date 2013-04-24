@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-highlight-line\>
 
-Line options for highlighted points. The color is computed automatically from the base point color.** Available only for candlestick series **
+The line of the highlighted chart series. The color is computed automatically from the base point color.
 
 #### Example
     <kendo:chart-seriesItem-highlight>
@@ -18,7 +18,7 @@ Line options for highlighted points. The color is computed automatically from th
 
 ### color `String`
 
-The line color.
+The line color. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-highlight-line color="color">
@@ -26,7 +26,7 @@ The line color.
 
 ### opacity `float`
 
-The opacity of the line.
+The opacity of the line. By default the border is opaque.
 
 #### Example
     <kendo:chart-seriesItem-highlight-line opacity="opacity">

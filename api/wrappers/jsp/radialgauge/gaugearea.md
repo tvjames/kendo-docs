@@ -28,7 +28,8 @@ Any valid CSS color string will work here, including hex and rgb.
 
 ### height `float`
 
-The height of the gauge area.
+The height of the gauge area.  By default, the vertical gauge is 200px and
+the horizontal one is 60px.
 
 #### Example
     <kendo:radialGauge-gaugeArea height="height">
@@ -44,7 +45,8 @@ The margin of the gauge area.
 
 ### width `float`
 
-The width of the gauge area.
+The width of the gauge area.  By default the vertical gauge is 60px
+and horizontal gauge is 200px.
 
 #### Example
     <kendo:radialGauge-gaugeArea width="width">

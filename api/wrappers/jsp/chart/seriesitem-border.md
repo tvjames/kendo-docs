@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-border\>
 
-The border of the points.** Applicable to bar, column, bubble, donut, pie, ohlc and candlestick series **
+The border of the chart series.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ The border of the points.** Applicable to bar, column, bubble, donut, pie, ohlc 
 
 ### color `String`
 
-The color of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb. By default it is set to color of the current series.
 
 #### Example
     <kendo:chart-seriesItem-border color="color">
@@ -26,7 +26,7 @@ The color of the border.
 
 ### dashType `String`
 
-The dash type of the border.
+The dash type of the border.The following dash types are supported:
 
 #### Example
     <kendo:chart-seriesItem-border dashType="dashType">
@@ -34,7 +34,7 @@ The dash type of the border.
 
 ### opacity `float`
 
-The border opacity.
+The opacity of the border. By default the border is opaque.
 
 #### Example
     <kendo:chart-seriesItem-border opacity="opacity">
@@ -42,7 +42,7 @@ The border opacity.
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels.
 
 #### Example
     <kendo:chart-seriesItem-border width="width">

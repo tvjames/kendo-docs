@@ -7,8 +7,7 @@ publish: true
 
 # \<kendo:chart-yAxis\>
 
-Scatter charts Y-axis configuration options.
-Includes all valueAxis options in addition to:
+The y axis configuration options of the scatter chart. Supports all valueAxis options.
 
 #### Example
     <kendo:chart>
@@ -22,8 +21,7 @@ Includes all valueAxis options in addition to:
 
 ### kendo:chart-yAxisItem
 
-Scatter charts Y-axis configuration options.
-Includes all valueAxis options in addition to:
+The y axis configuration options of the scatter chart. Supports all valueAxis options.
 
 More documentation is available at [kendo:chart-yAxisItem](chart/yaxisitem).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-pageable\>
 
-Indicates whether paging is enabled/disabled.
+If set to true the grid will display a pager. By default paging is disabled.Can be set to a JavaScript object which represents the pager configuration.
 
 #### Example
     <kendo:grid>
@@ -18,7 +18,7 @@ Indicates whether paging is enabled/disabled.
 
 ### buttonCount `float`
 
-Defines the number of buttons displayed in the numeric pager.
+The maximum number of buttons displayed in the numeric pager. The pager will display ellipsis (...) if there are more pages than the specified number.
 
 #### Example
     <kendo:grid-pageable buttonCount="buttonCount">
@@ -26,7 +26,7 @@ Defines the number of buttons displayed in the numeric pager.
 
 ### info `boolean`
 
-Defines if a label showing current paging information will be displayed.
+If set to true the pager will display information about the current page and total number of data items. By default the paging information is displayed.
 
 #### Example
     <kendo:grid-pageable info="info">
@@ -34,7 +34,7 @@ Defines if a label showing current paging information will be displayed.
 
 ### input `boolean`
 
-Defines if an input element which allows the user to navigate to given page will be displayed.
+If set to true the pager will display an input element which allows the user to type a specific page number. By default the page input is not displayed.
 
 #### Example
     <kendo:grid-pageable input="input">
@@ -42,7 +42,7 @@ Defines if an input element which allows the user to navigate to given page will
 
 ### numeric `boolean`
 
-Defines if numeric portion of the pager will be shown.
+If set to true the pager will display buttons for navigating to specific pages. By default those buttons are displayed.
 
 #### Example
     <kendo:grid-pageable numeric="numeric">
@@ -50,7 +50,7 @@ Defines if numeric portion of the pager will be shown.
 
 ### pageSize `float`
 
-Defines the number of records which will be displyed.
+The number of data items which will be displayed in the grid.
 
 #### Example
     <kendo:grid-pageable pageSize="pageSize">
@@ -58,7 +58,7 @@ Defines the number of records which will be displyed.
 
 ### pageSizes `Object`
 
-Displayes a list with predefined page sizes. An array of values to be displayed can be provided.
+If set to true the pager will display a dropdown list which allows the user to pick a page size. By default the page size dropdown list is not displayed.Can be set to an array with the available page sizes.
 
 #### Example
     <kendo:grid-pageable pageSizes="pageSizes">
@@ -66,7 +66,7 @@ Displayes a list with predefined page sizes. An array of values to be displayed 
 
 ### previousNext `boolean`
 
-Defines if buttons for navigating to the first, last, previous and next pages will be shown.
+If set to true the pager will display buttons for going to the first, previous, next and last pages. By default those buttons are displayed.
 
 #### Example
     <kendo:grid-pageable previousNext="previousNext">
@@ -74,7 +74,7 @@ Defines if buttons for navigating to the first, last, previous and next pages wi
 
 ### refresh `boolean`
 
-Defines if a refresh button will be displayed.
+If set to true the pager will display the refresh button. Clicking the refresh button will refresh the grid. By default the refresh button is not displayed.
 
 #### Example
     <kendo:grid-pageable refresh="refresh">
@@ -85,7 +85,7 @@ Defines if a refresh button will be displayed.
 
 ### kendo:grid-pageable-messages
 
-Defines texts shown within the pager.
+The text messages displayed in pager. Use this option to customize or localize the pager messages.
 
 More documentation is available at [kendo:grid-pageable-messages](grid/pageable-messages).
 

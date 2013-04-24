@@ -113,6 +113,7 @@ More documentation is available at [kendo:sparkline-tooltip-border](sparkline/to
 The tooltip template.
 Template variables:
 
+
 #### Example
     <kendo:sparkline-tooltip template="handle_template">
     </kendo:sparkline-tooltip>
@@ -128,6 +129,7 @@ Template variables:
 
 The tooltip template.
 Template variables:
+
 
 #### Example
     <kendo:sparkline-tooltip>

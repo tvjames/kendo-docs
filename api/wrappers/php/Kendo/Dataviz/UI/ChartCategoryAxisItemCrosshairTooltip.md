@@ -13,7 +13,7 @@ A PHP class representing the tooltip setting of ChartCategoryAxisItemCrosshair.
 ## Methods
 
 ### background
-The background color of the tooltip.
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`
@@ -32,7 +32,7 @@ The background color of the tooltip.
 
 ### border
 
-The border configuration options.
+The border options.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`
@@ -60,7 +60,7 @@ The border configuration options.
     ?>
 
 ### color
-The text color of the tooltip.
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`
@@ -96,7 +96,7 @@ The tooltip font.
     ?>
 
 ### format
-The tooltip format.
+The format used to display the tooltip. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`
@@ -114,14 +114,16 @@ The tooltip format.
     ?>
 
 ### padding
-The padding of the tooltip.
+
+The padding of the crosshair tooltip. A numeric value will set all paddings.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltipPadding|array`
+
 
 
 
@@ -131,9 +133,26 @@ The padding of the tooltip.
     $tooltip->padding(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltipPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemCrosshairTooltipPadding)
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip();
+    $padding = new \Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltipPadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $tooltip->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip();
+    $bottom = 1;
+    $tooltip->padding(array('bottom' => $bottom));
+    ?>
+
 ### template
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`
@@ -157,7 +176,7 @@ Template variables:
     ?>
 
 ### visible
-A value indicating if the tooltip should be displayed.
+If set to true the chart will display the category axis crosshair tooltip. By default the category axis crosshair tooltip is not visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip`

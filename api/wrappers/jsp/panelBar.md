@@ -63,6 +63,9 @@ More documentation is available at [kendo:panelBar-items](panelbar/items).
 
 Triggered when an item of a PanelBar is activated.
 
+
+For additional information check the [activate](/api/web/panelbar#events-activate) event documentation.
+
 #### Example
     <kendo:panelBar activate="handle_activate">
     </kendo:panelBar>
@@ -75,6 +78,9 @@ Triggered when an item of a PanelBar is activated.
 ### collapse `String`
 
 Triggered when an item of a PanelBar is collapsed.
+
+
+For additional information check the [collapse](/api/web/panelbar#events-collapse) event documentation.
 
 #### Example
     <kendo:panelBar collapse="handle_collapse">
@@ -89,6 +95,9 @@ Triggered when an item of a PanelBar is collapsed.
 
 Fires when content is fetched from an AJAX request.
 
+
+For additional information check the [contentLoad](/api/web/panelbar#events-contentLoad) event documentation.
+
 #### Example
     <kendo:panelBar contentLoad="handle_contentLoad">
     </kendo:panelBar>
@@ -101,6 +110,9 @@ Fires when content is fetched from an AJAX request.
 ### error `String`
 
 Fires when AJAX request results in an error.
+
+
+For additional information check the [error](/api/web/panelbar#events-error) event documentation.
 
 #### Example
     <kendo:panelBar error="handle_error">
@@ -115,6 +127,9 @@ Fires when AJAX request results in an error.
 
 Triggered when an item of a PanelBar is expanded.
 
+
+For additional information check the [expand](/api/web/panelbar#events-expand) event documentation.
+
 #### Example
     <kendo:panelBar expand="handle_expand">
     </kendo:panelBar>
@@ -127,6 +142,9 @@ Triggered when an item of a PanelBar is expanded.
 ### select `String`
 
 Triggered when an item of a PanelBar is selected.
+
+
+For additional information check the [select](/api/web/panelbar#events-select) event documentation.
 
 #### Example
     <kendo:panelBar select="handle_select">
@@ -143,6 +161,9 @@ Triggered when an item of a PanelBar is selected.
 
 Triggered when an item of a PanelBar is activated.
 
+
+For additional information check the [activate](/api/web/panelbar#events-activate) event documentation.
+
 #### Example
     <kendo:panelBar>
         <kendo:panelBar-activate>
@@ -157,6 +178,9 @@ Triggered when an item of a PanelBar is activated.
 ### kendo:panelBar-collapse
 
 Triggered when an item of a PanelBar is collapsed.
+
+
+For additional information check the [collapse](/api/web/panelbar#events-collapse) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -173,6 +197,9 @@ Triggered when an item of a PanelBar is collapsed.
 
 Fires when content is fetched from an AJAX request.
 
+
+For additional information check the [contentLoad](/api/web/panelbar#events-contentLoad) event documentation.
+
 #### Example
     <kendo:panelBar>
         <kendo:panelBar-contentLoad>
@@ -187,6 +214,9 @@ Fires when content is fetched from an AJAX request.
 ### kendo:panelBar-error
 
 Fires when AJAX request results in an error.
+
+
+For additional information check the [error](/api/web/panelbar#events-error) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -203,6 +233,9 @@ Fires when AJAX request results in an error.
 
 Triggered when an item of a PanelBar is expanded.
 
+
+For additional information check the [expand](/api/web/panelbar#events-expand) event documentation.
+
 #### Example
     <kendo:panelBar>
         <kendo:panelBar-expand>
@@ -217,6 +250,9 @@ Triggered when an item of a PanelBar is expanded.
 ### kendo:panelBar-select
 
 Triggered when an item of a PanelBar is selected.
+
+
+For additional information check the [select](/api/web/panelbar#events-select) event documentation.
 
 #### Example
     <kendo:panelBar>

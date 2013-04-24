@@ -26,7 +26,7 @@ The color of the border.
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Example
     <kendo:chart-tooltip-border width="width">

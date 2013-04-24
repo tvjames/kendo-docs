@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-column-command\>
 
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option.
 
 #### Example
     <kendo:grid-column>
@@ -21,7 +21,7 @@ Definition of command column. The supported built-in commands are: "create", "ca
 
 ### kendo:grid-column-commandItem
 
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option.
 
 More documentation is available at [kendo:grid-column-commandItem](grid/column-commanditem).
 

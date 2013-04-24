@@ -7,8 +7,8 @@ publish: true
 
 # \<kendo:chart-categoryAxisItem-minorGridLines\>
 
-Configures the minor grid lines.  These are the lines that are an extension of the minor ticks through
-the body of the chart.Note that minor grid lines are not visible by default, therefore none of these settings will take effect with the minor grid lines visibility being set to true.
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
 
 #### Example
     <kendo:chart-categoryAxisItem>
@@ -19,9 +19,7 @@ the body of the chart.Note that minor grid lines are not visible by default, the
 
 ### color `String`
 
-The color of the lines. Any valid CSS color string will work here, including hex and
-rgb.Note that this setting has no effect if the visibility of the minor
-grid lines is not set to true.
+The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-categoryAxisItem-minorGridLines color="color">
@@ -29,7 +27,7 @@ grid lines is not set to true.
 
 ### dashType `String`
 
-The dash type of the grid lines.
+The dash type of the minor grid lines.The following dash types are supported:
 
 #### Example
     <kendo:chart-categoryAxisItem-minorGridLines dashType="dashType">
@@ -37,7 +35,7 @@ The dash type of the grid lines.
 
 ### visible `boolean`
 
-The visibility of the lines.
+If set to true the chart will display the minor grid lines. By default the minor grid lines are visible.
 
 #### Example
     <kendo:chart-categoryAxisItem-minorGridLines visible="visible">
@@ -45,8 +43,7 @@ The visibility of the lines.
 
 ### width `float`
 
-The width of the lines.Note that this setting has no effect if the visibility of the minor
-grid lines is not set to true.
+The width of the category axis minor grid lines in pixels.
 
 #### Example
     <kendo:chart-categoryAxisItem-minorGridLines width="width">

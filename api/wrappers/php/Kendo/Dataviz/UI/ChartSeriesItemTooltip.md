@@ -13,7 +13,7 @@ A PHP class representing the tooltip setting of ChartSeriesItem.
 ## Methods
 
 ### background
-The background color of the tooltip. The default is determined from the series color.
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTooltip`
@@ -60,7 +60,7 @@ The border configuration options.
     ?>
 
 ### color
-The text color of the tooltip. The default is the same as the series labels color.
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTooltip`
@@ -96,7 +96,7 @@ The tooltip font.
     ?>
 
 ### format
-The tooltip format. Format variables depend on the series type:
+The format of the labels. Uses kendo.format.Format placeholders:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTooltip`
@@ -114,14 +114,16 @@ The tooltip format. Format variables depend on the series type:
     ?>
 
 ### padding
-The padding of the tooltip.
+
+The padding of the tooltip. A numeric value will set all paddings.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTooltip`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartSeriesItemTooltipPadding|array`
+
 
 
 
@@ -131,9 +133,26 @@ The padding of the tooltip.
     $tooltip->padding(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemTooltipPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemTooltipPadding)
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartSeriesItemTooltip();
+    $padding = new \Kendo\Dataviz\UI\ChartSeriesItemTooltipPadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $tooltip->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartSeriesItemTooltip();
+    $bottom = 1;
+    $tooltip->padding(array('bottom' => $bottom));
+    ?>
+
 ### template
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTooltip`
@@ -157,7 +176,7 @@ Template variables:
     ?>
 
 ### visible
-A value indicating if the tooltip should be displayed.
+If set to true the chart will display the series tooltip. By default the series tooltip is not displayed.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTooltip`

@@ -13,7 +13,7 @@ A PHP class representing the enums setting of GridFilterableOperators.
 ## Methods
 
 ### eq
-Enable/Disable and set the text of the "Is equal to" filter option for foreign key columns.
+The text of the "equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsEnums`
@@ -31,7 +31,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for foreign k
     ?>
 
 ### neq
-Enable/Disable and set the text of the "Is not equal to" filter option for foreign key columns.
+The text of the "not equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsEnums`

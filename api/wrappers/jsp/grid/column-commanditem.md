@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-column-commandItem\>
 
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option.
 
 #### Example
     <kendo:grid-column-command>
@@ -18,7 +18,7 @@ Definition of command column. The supported built-in commands are: "create", "ca
 
 ### className `String`
 
-The CSS class of the command.
+The CSS class applied to the command button.
 
 #### Example
     <kendo:grid-column-commandItem className="className">
@@ -26,7 +26,7 @@ The CSS class of the command.
 
 ### click `String`
 
-The JavaScript function executed when the user clicks the command button.
+The JavaScript function executed when the user clicks the command button. The function receives a jQuery Event as an argument.The function context (available via the this keyword) will be set to the grid instance.
 
 #### Example
     <kendo:grid-column-commandItem click="click">
@@ -34,7 +34,7 @@ The JavaScript function executed when the user clicks the command button.
 
 ### name `String`
 
-The unique name of the command. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The name of the command. The built-in commands are "edit" and "destroy". Can be set to a custom value.
 
 #### Example
     <kendo:grid-column-commandItem name="name">
@@ -42,7 +42,7 @@ The unique name of the command. The supported built-in commands are: "create", "
 
 ### text `String`
 
-The text displayed by the command.
+The text displayed by the command button. If not set the name option is used as the button text.
 
 #### Example
     <kendo:grid-column-commandItem text="text">
@@ -53,7 +53,8 @@ The text displayed by the command.
 
 ### click `String`
 
-The JavaScript function executed when the user clicks the command button.
+The JavaScript function executed when the user clicks the command button. The function receives a jQuery Event as an argument.The function context (available via the this keyword) will be set to the grid instance.
+
 
 #### Example
     <kendo:grid-column-commandItem click="handle_click">
@@ -68,7 +69,8 @@ The JavaScript function executed when the user clicks the command button.
 
 ### kendo:grid-column-commandItem-click
 
-The JavaScript function executed when the user clicks the command button.
+The JavaScript function executed when the user clicks the command button. The function receives a jQuery Event as an argument.The function context (available via the this keyword) will be set to the grid instance.
+
 
 #### Example
     <kendo:grid-column-commandItem>

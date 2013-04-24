@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-filterItem\>
 
-Sets the initial filter.
+The filter(s) which is (are) applied over the data items. By default no filter is applied.
 
 #### Example
     <kendo:dataSource-filter>
@@ -18,7 +18,7 @@ Sets the initial filter.
 
 ### field `String`
 
-Specifies the field to filter by.
+The data item field to which the filter operator is applied.
 
 #### Example
     <kendo:dataSource-filterItem field="field">
@@ -26,7 +26,8 @@ Specifies the field to filter by.
 
 ### operator `String`
 
-Specifies the filter operator. One of the following values "eq", "neq", "lt", "lte", "gt", "gte", "startswith", "endswith", "contains".
+The filter operator (comparison). The supported operators are: "eq" (equal to), "neq" (not equal to), "lt" (less than), "lte" (less than or equal to), "gt" (greater than), "gte" (greater than or equal to),
+"startswith", "endswith", "contains". The last three are supported only for string fields.
 
 #### Example
     <kendo:dataSource-filterItem operator="operator">
@@ -34,7 +35,7 @@ Specifies the filter operator. One of the following values "eq", "neq", "lt", "l
 
 ### value `Object`
 
-Specifies the value to filter for.
+The value to which the field is compared. The value must be from the same type as the field.
 
 #### Example
     <kendo:dataSource-filterItem value="value">

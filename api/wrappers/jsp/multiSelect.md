@@ -152,6 +152,9 @@ More documentation is available at [kendo:multiSelect-animation](multiselect/ani
 
 Fires when the value has been changed.
 
+
+For additional information check the [change](/api/web/multiselect#events-change) event documentation.
+
 #### Example
     <kendo:multiSelect change="handle_change">
     </kendo:multiSelect>
@@ -164,6 +167,9 @@ Fires when the value has been changed.
 ### close `String`
 
 Fires when the drop-down list is closed
+
+
+For additional information check the [close](/api/web/multiselect#events-close) event documentation.
 
 #### Example
     <kendo:multiSelect close="handle_close">
@@ -178,6 +184,9 @@ Fires when the drop-down list is closed
 
 Fires when the multiselect has received data from the data source.
 
+
+For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
+
 #### Example
     <kendo:multiSelect dataBound="handle_dataBound">
     </kendo:multiSelect>
@@ -191,6 +200,9 @@ Fires when the multiselect has received data from the data source.
 
 Fires when the drop-down list is opened
 
+
+For additional information check the [open](/api/web/multiselect#events-open) event documentation.
+
 #### Example
     <kendo:multiSelect open="handle_open">
     </kendo:multiSelect>
@@ -203,6 +215,9 @@ Fires when the drop-down list is opened
 ### select `String`
 
 Triggered when a Li element is selected.
+
+
+For additional information check the [select](/api/web/multiselect#events-select) event documentation.
 
 #### Example
     <kendo:multiSelect select="handle_select">
@@ -219,6 +234,9 @@ Triggered when a Li element is selected.
 
 Fires when the value has been changed.
 
+
+For additional information check the [change](/api/web/multiselect#events-change) event documentation.
+
 #### Example
     <kendo:multiSelect>
         <kendo:multiSelect-change>
@@ -233,6 +251,9 @@ Fires when the value has been changed.
 ### kendo:multiSelect-close
 
 Fires when the drop-down list is closed
+
+
+For additional information check the [close](/api/web/multiselect#events-close) event documentation.
 
 #### Example
     <kendo:multiSelect>
@@ -249,6 +270,9 @@ Fires when the drop-down list is closed
 
 Fires when the multiselect has received data from the data source.
 
+
+For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
+
 #### Example
     <kendo:multiSelect>
         <kendo:multiSelect-dataBound>
@@ -264,6 +288,9 @@ Fires when the multiselect has received data from the data source.
 
 Fires when the drop-down list is opened
 
+
+For additional information check the [open](/api/web/multiselect#events-open) event documentation.
+
 #### Example
     <kendo:multiSelect>
         <kendo:multiSelect-open>
@@ -278,6 +305,9 @@ Fires when the drop-down list is opened
 ### kendo:multiSelect-select
 
 Triggered when a Li element is selected.
+
+
+For additional information check the [select](/api/web/multiselect#events-select) event documentation.
 
 #### Example
     <kendo:multiSelect>

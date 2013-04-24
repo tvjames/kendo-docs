@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-line\>
 
-Line options.** Applicable to area, candlestick and ohlc series. **
+The chart line configuration options.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ Line options.** Applicable to area, candlestick and ohlc series. **
 
 ### color `String`
 
-The line color.
+The line color. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-line color="color">
@@ -26,7 +26,7 @@ The line color.
 
 ### opacity `float`
 
-The line opacity.
+The line opacity. By default the line is opaque.
 
 #### Example
     <kendo:chart-seriesItem-line opacity="opacity">
@@ -34,7 +34,7 @@ The line opacity.
 
 ### width `String`
 
-The line width.
+The line width in pixels.
 
 #### Example
     <kendo:chart-seriesItem-line width="width">

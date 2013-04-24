@@ -61,7 +61,7 @@ The target color.
 
 ### line
 
-The target line.
+The target line options.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTarget`

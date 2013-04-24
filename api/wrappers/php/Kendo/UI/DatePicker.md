@@ -65,6 +65,7 @@ will disable the animation(s).
 
 ### change
 Fires when the selected date is changed
+For additional information check the [change](/api/web/datepicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\DatePicker`
@@ -100,6 +101,7 @@ Fires when the selected date is changed
 
 ### close
 Fires when the calendar is closed
+For additional information check the [close](/api/web/datepicker#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\DatePicker`
@@ -291,6 +293,7 @@ Templates for the cells rendered in the calendar "month" view.
 
 ### open
 Fires when the calendar is opened
+For additional information check the [open](/api/web/datepicker#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\DatePicker`

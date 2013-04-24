@@ -13,7 +13,7 @@ A PHP class representing the messages setting of GridColumnMenu.
 ## Methods
 
 ### columns
-Set the text of the columns section in column header menu.
+The text message displayed for the column selection menu item.
 
 #### Returns
 `\Kendo\UI\GridColumnMenuMessages`
@@ -31,7 +31,7 @@ Set the text of the columns section in column header menu.
     ?>
 
 ### filter
-Set the text of the filter section in column header menu.
+The text message displayed for the filter menu item.
 
 #### Returns
 `\Kendo\UI\GridColumnMenuMessages`
@@ -49,7 +49,7 @@ Set the text of the filter section in column header menu.
     ?>
 
 ### sortAscending
-Set the text of the sortAscending section in column header menu.
+The text message displayed for the menu item which performs ascending sort.
 
 #### Returns
 `\Kendo\UI\GridColumnMenuMessages`
@@ -67,7 +67,7 @@ Set the text of the sortAscending section in column header menu.
     ?>
 
 ### sortDescending
-Set the text of the sortDescending section in column header menu.
+The text message displayed for the menu item which performs descending sort.
 
 #### Returns
 `\Kendo\UI\GridColumnMenuMessages`

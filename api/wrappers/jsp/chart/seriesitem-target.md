@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-target\>
 
-The target of the bullet chart.
+The configuration options of the target
 
 #### Example
     <kendo:chart-seriesItem>
@@ -41,7 +41,7 @@ More documentation is available at [kendo:chart-seriesItem-target-border](chart/
 
 ### kendo:chart-seriesItem-target-line
 
-The target line.
+The target line options.
 
 More documentation is available at [kendo:chart-seriesItem-target-line](chart/seriesitem-target-line).
 

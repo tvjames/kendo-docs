@@ -104,6 +104,9 @@ More documentation is available at [kendo:calendar-month](calendar/month).
 
 Fires when the selected date is changed
 
+
+For additional information check the [change](/api/web/calendar#events-change) event documentation.
+
 #### Example
     <kendo:calendar change="handle_change">
     </kendo:calendar>
@@ -116,6 +119,9 @@ Fires when the selected date is changed
 ### navigate `String`
 
 Fires when navigate
+
+
+For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.
 
 #### Example
     <kendo:calendar navigate="handle_navigate">
@@ -132,6 +138,9 @@ Fires when navigate
 
 Fires when the selected date is changed
 
+
+For additional information check the [change](/api/web/calendar#events-change) event documentation.
+
 #### Example
     <kendo:calendar>
         <kendo:calendar-change>
@@ -146,6 +155,9 @@ Fires when the selected date is changed
 ### kendo:calendar-navigate
 
 Fires when navigate
+
+
+For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.
 
 #### Example
     <kendo:calendar>

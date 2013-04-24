@@ -18,7 +18,7 @@ The border of the points.** Applicable to bar, column and pie series **
 
 ### color `String`
 
-The color of the border.
+The color of the border.  It defaults to the color of the current series.
 
 #### Example
     <kendo:sparkline-seriesItem-border color="color">

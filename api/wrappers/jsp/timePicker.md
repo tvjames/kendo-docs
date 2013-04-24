@@ -96,6 +96,9 @@ More documentation is available at [kendo:timePicker-animation](timepicker/anima
 
 Triggered when the underlying value of a TimePicker is changed.
 
+
+For additional information check the [change](/api/web/timepicker#events-change) event documentation.
+
 #### Example
     <kendo:timePicker change="handle_change">
     </kendo:timePicker>
@@ -109,6 +112,9 @@ Triggered when the underlying value of a TimePicker is changed.
 
 Fires when the time drop-down list is closed
 
+
+For additional information check the [close](/api/web/timepicker#events-close) event documentation.
+
 #### Example
     <kendo:timePicker close="handle_close">
     </kendo:timePicker>
@@ -121,6 +127,9 @@ Fires when the time drop-down list is closed
 ### open `String`
 
 Fires when the time drop-down list is opened
+
+
+For additional information check the [open](/api/web/timepicker#events-open) event documentation.
 
 #### Example
     <kendo:timePicker open="handle_open">
@@ -137,6 +146,9 @@ Fires when the time drop-down list is opened
 
 Triggered when the underlying value of a TimePicker is changed.
 
+
+For additional information check the [change](/api/web/timepicker#events-change) event documentation.
+
 #### Example
     <kendo:timePicker>
         <kendo:timePicker-change>
@@ -152,6 +164,9 @@ Triggered when the underlying value of a TimePicker is changed.
 
 Fires when the time drop-down list is closed
 
+
+For additional information check the [close](/api/web/timepicker#events-close) event documentation.
+
 #### Example
     <kendo:timePicker>
         <kendo:timePicker-close>
@@ -166,6 +181,9 @@ Fires when the time drop-down list is closed
 ### kendo:timePicker-open
 
 Fires when the time drop-down list is opened
+
+
+For additional information check the [open](/api/web/timepicker#events-open) event documentation.
 
 #### Example
     <kendo:timePicker>

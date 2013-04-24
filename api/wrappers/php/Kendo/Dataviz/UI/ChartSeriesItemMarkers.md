@@ -13,7 +13,7 @@ A PHP class representing the markers setting of ChartSeriesItem.
 ## Methods
 
 ### background
-The background color of the current series markers.
+The background color of the series markers.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemMarkers`
@@ -60,7 +60,7 @@ The border of the markers.
     ?>
 
 ### size
-The marker size.
+The marker size in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemMarkers`
@@ -78,7 +78,10 @@ The marker size.
     ?>
 
 ### type
-Configures the markers shape type.
+The markers shape.The supported values are:
+* "circle" - the marker shape is circle.
+* "square" - the marker shape is square.
+* "triangle" - the marker shape is triangle.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemMarkers`
@@ -96,7 +99,7 @@ Configures the markers shape type.
     ?>
 
 ### visible
-The markers visibility.
+If set to true the chart will display the series markers. By default chart series markers are not displayed.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemMarkers`

@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### activate
 Triggered just after a tab is being made visible, but before the end of the animation
+For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -118,6 +119,7 @@ Specifies whether the TabStrip should be able to collapse completely when clicki
 
 ### contentLoad
 Triggered when content is fetched from an AJAX request.
+For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -266,6 +268,7 @@ tab.
 
 ### error
 Triggered when an AJAX request results in an error.
+For additional information check the [error](/api/web/tabstrip#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -339,6 +342,7 @@ Adds one or more TabStripItem to the TabStrip.
 
 ### select
 Triggered before a tab is selected.
+For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`

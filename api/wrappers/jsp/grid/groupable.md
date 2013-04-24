@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-groupable\>
 
-Indicates whether grouping is enabled/disabled.
+If set to true the user could group the grid by dragging the column header cells. By default grouping is disabled.Can be set to a JavaScript object which represents the grouping configuration.
 
 #### Example
     <kendo:grid>
@@ -21,7 +21,7 @@ Indicates whether grouping is enabled/disabled.
 
 ### kendo:grid-groupable-messages
 
-Sets the messages displayed during grouping.
+The text messages displayed during grouping.
 
 More documentation is available at [kendo:grid-groupable-messages](grid/groupable-messages).
 

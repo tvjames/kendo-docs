@@ -25,9 +25,7 @@ The lower boundary of the selected range.
 
 
 ### max
-The maximum value that is selectable by the user.Note: The category with the specified index (date) is not included in the selected range
-unless the axis is justified. In order to select all categories specify
-a value larger than the last category index (date).
+The maximum value which the user can select.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemSelect`
@@ -39,7 +37,7 @@ a value larger than the last category index (date).
 
 
 ### min
-The minimum value that is selectable by the user.
+The minimum value which the user can select.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemSelect`
@@ -52,7 +50,7 @@ The minimum value that is selectable by the user.
 
 ### mousewheel
 
-Mousewheel zoom settings for the selection.
+The mouse wheel configuration of the selection.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemSelect`
@@ -80,9 +78,7 @@ Mousewheel zoom settings for the selection.
     ?>
 
 ### to
-The upper boundary of the selected range.Note: The category with the specified index (date) is not included in the selected range
-unless the axis is justified. In order to select all categories specify
-a value larger than the last category index (date).
+The upper boundary of the selected range.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemSelect`

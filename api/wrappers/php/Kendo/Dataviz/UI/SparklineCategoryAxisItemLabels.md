@@ -79,6 +79,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
 
 ### culture
 Culture to use for formatting the dates. See Globalization for more information.
+It uses the global culture by default.
 
 #### Returns
 `\Kendo\Dataviz\UI\SparklineCategoryAxisItemLabels`

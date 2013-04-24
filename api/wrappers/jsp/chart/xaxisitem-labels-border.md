@@ -18,8 +18,7 @@ The border of the labels.
 
 ### color `String`
 
-The color of the border. Any valid CSS color string will work here, including
-hex and rgb.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-xAxisItem-labels-border color="color">
@@ -27,7 +26,7 @@ hex and rgb.
 
 ### dashType `String`
 
-The dash type of the border.
+The dash type of the border.The following dash types are supported:
 
 #### Example
     <kendo:chart-xAxisItem-labels-border dashType="dashType">
@@ -35,7 +34,7 @@ The dash type of the border.
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Example
     <kendo:chart-xAxisItem-labels-border width="width">

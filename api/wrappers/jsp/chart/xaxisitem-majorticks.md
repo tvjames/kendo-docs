@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-xAxisItem-majorTicks\>
 
-The major ticks of the axis.
+The configuration of the scatter chart x axis major ticks.
 
 #### Example
     <kendo:chart-xAxisItem>
@@ -16,9 +16,17 @@ The major ticks of the axis.
 
 ## Configuration Attributes
 
+### color `String`
+
+The color of the scatter chart x axis major ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example
+    <kendo:chart-xAxisItem-majorTicks color="color">
+    </kendo:chart-xAxisItem-majorTicks>
+
 ### size `float`
 
-The axis major tick size. This is the length of the line in pixels that is drawn to indicate the tick on the chart.
+The length of the tick line in pixels.
 
 #### Example
     <kendo:chart-xAxisItem-majorTicks size="size">
@@ -26,9 +34,17 @@ The axis major tick size. This is the length of the line in pixels that is drawn
 
 ### visible `boolean`
 
-The visibility of the major ticks.
+If set to true the chart will display the scatter chart x axis major ticks. By default the category axis major ticks are visible.
 
 #### Example
     <kendo:chart-xAxisItem-majorTicks visible="visible">
+    </kendo:chart-xAxisItem-majorTicks>
+
+### width `float`
+
+The width of the major ticks in pixels.
+
+#### Example
+    <kendo:chart-xAxisItem-majorTicks width="width">
     </kendo:chart-xAxisItem-majorTicks>
 

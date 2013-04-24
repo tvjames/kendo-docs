@@ -13,8 +13,7 @@ A PHP class representing the line setting of ChartValueAxisItem.
 ## Methods
 
 ### color
-The color of the line. This will also effect the major and minor ticks, but
-not the grid lines.
+The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemLine`
@@ -32,7 +31,7 @@ not the grid lines.
     ?>
 
 ### dashType
-The dash type of the line.
+The dash type of the line.The following dash types are supported:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemLine`
@@ -50,7 +49,7 @@ The dash type of the line.
     ?>
 
 ### visible
-The visibility of the line.
+If set to true the chart will display the value axis lines. By default the value axis lines are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemLine`
@@ -68,8 +67,7 @@ The visibility of the line.
     ?>
 
 ### width
-The width of the line. This will also effect the major and minor ticks, but
-not the grid lines.
+The width of the line in pixels. Also affects the major and minor ticks, but not the grid lines.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemLine`

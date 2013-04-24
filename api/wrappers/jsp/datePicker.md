@@ -127,6 +127,9 @@ More documentation is available at [kendo:datePicker-month](datepicker/month).
 
 Fires when the selected date is changed
 
+
+For additional information check the [change](/api/web/datepicker#events-change) event documentation.
+
 #### Example
     <kendo:datePicker change="handle_change">
     </kendo:datePicker>
@@ -140,6 +143,9 @@ Fires when the selected date is changed
 
 Fires when the calendar is closed
 
+
+For additional information check the [close](/api/web/datepicker#events-close) event documentation.
+
 #### Example
     <kendo:datePicker close="handle_close">
     </kendo:datePicker>
@@ -152,6 +158,9 @@ Fires when the calendar is closed
 ### open `String`
 
 Fires when the calendar is opened
+
+
+For additional information check the [open](/api/web/datepicker#events-open) event documentation.
 
 #### Example
     <kendo:datePicker open="handle_open">
@@ -168,6 +177,9 @@ Fires when the calendar is opened
 
 Fires when the selected date is changed
 
+
+For additional information check the [change](/api/web/datepicker#events-change) event documentation.
+
 #### Example
     <kendo:datePicker>
         <kendo:datePicker-change>
@@ -183,6 +195,9 @@ Fires when the selected date is changed
 
 Fires when the calendar is closed
 
+
+For additional information check the [close](/api/web/datepicker#events-close) event documentation.
+
 #### Example
     <kendo:datePicker>
         <kendo:datePicker-close>
@@ -197,6 +212,9 @@ Fires when the calendar is closed
 ### kendo:datePicker-open
 
 Fires when the calendar is opened
+
+
+For additional information check the [open](/api/web/datepicker#events-open) event documentation.
 
 #### Example
     <kendo:datePicker>

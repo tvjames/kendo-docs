@@ -13,7 +13,7 @@ A PHP class representing the pageable setting of Grid.
 ## Methods
 
 ### buttonCount
-Defines the number of buttons displayed in the numeric pager.
+The maximum number of buttons displayed in the numeric pager. The pager will display ellipsis (...) if there are more pages than the specified number.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -31,7 +31,7 @@ Defines the number of buttons displayed in the numeric pager.
     ?>
 
 ### info
-Defines if a label showing current paging information will be displayed.
+If set to true the pager will display information about the current page and total number of data items. By default the paging information is displayed.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -49,7 +49,7 @@ Defines if a label showing current paging information will be displayed.
     ?>
 
 ### input
-Defines if an input element which allows the user to navigate to given page will be displayed.
+If set to true the pager will display an input element which allows the user to type a specific page number. By default the page input is not displayed.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -68,7 +68,7 @@ Defines if an input element which allows the user to navigate to given page will
 
 ### messages
 
-Defines texts shown within the pager.
+The text messages displayed in pager. Use this option to customize or localize the pager messages.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -96,7 +96,7 @@ Defines texts shown within the pager.
     ?>
 
 ### numeric
-Defines if numeric portion of the pager will be shown.
+If set to true the pager will display buttons for navigating to specific pages. By default those buttons are displayed.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -114,7 +114,7 @@ Defines if numeric portion of the pager will be shown.
     ?>
 
 ### pageSize
-Defines the number of records which will be displyed.
+The number of data items which will be displayed in the grid.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -132,7 +132,7 @@ Defines the number of records which will be displyed.
     ?>
 
 ### pageSizes
-Displayes a list with predefined page sizes. An array of values to be displayed can be provided.
+If set to true the pager will display a dropdown list which allows the user to pick a page size. By default the page size dropdown list is not displayed.Can be set to an array with the available page sizes.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -156,7 +156,7 @@ Displayes a list with predefined page sizes. An array of values to be displayed 
     ?>
 
 ### previousNext
-Defines if buttons for navigating to the first, last, previous and next pages will be shown.
+If set to true the pager will display buttons for going to the first, previous, next and last pages. By default those buttons are displayed.
 
 #### Returns
 `\Kendo\UI\GridPageable`
@@ -174,7 +174,7 @@ Defines if buttons for navigating to the first, last, previous and next pages wi
     ?>
 
 ### refresh
-Defines if a refresh button will be displayed.
+If set to true the pager will display the refresh button. Clicking the refresh button will refresh the grid. By default the refresh button is not displayed.
 
 #### Returns
 `\Kendo\UI\GridPageable`

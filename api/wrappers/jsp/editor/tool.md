@@ -71,6 +71,7 @@ More documentation is available at [kendo:editor-tool-items](editor/tool-items).
 
 The JavaScript function which will be executed when the end-user clicks the tool button.
 
+
 #### Example
     <kendo:editor-tool exec="handle_exec">
     </kendo:editor-tool>
@@ -85,6 +86,7 @@ The JavaScript function which will be executed when the end-user clicks the tool
 ### kendo:editor-tool-exec
 
 The JavaScript function which will be executed when the end-user clicks the tool button.
+
 
 #### Example
     <kendo:editor-tool>

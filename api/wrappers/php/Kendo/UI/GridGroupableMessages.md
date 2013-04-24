@@ -13,7 +13,7 @@ A PHP class representing the messages setting of GridGroupable.
 ## Methods
 
 ### _empty
-Sets the text of the empty grouping area message
+The text displayed in the grouping drop area.
 
 #### Returns
 `\Kendo\UI\GridGroupableMessages`

@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### collapse
 Triggered when a pane of a Splitter is collapsed.
+For additional information check the [collapse](/api/web/splitter#events-collapse) event documentation.
 
 #### Returns
 `\Kendo\UI\Splitter`
@@ -70,6 +71,7 @@ Triggered when a pane of a Splitter is collapsed.
 
 ### contentLoad
 Triggered when the content for a pane has finished loading.
+For additional information check the [contentLoad](/api/web/splitter#events-contentLoad) event documentation.
 
 #### Returns
 `\Kendo\UI\Splitter`
@@ -105,6 +107,7 @@ Triggered when the content for a pane has finished loading.
 
 ### expand
 Triggered when a pane of a Splitter is expanded.
+For additional information check the [expand](/api/web/splitter#events-expand) event documentation.
 
 #### Returns
 `\Kendo\UI\Splitter`
@@ -140,6 +143,7 @@ Triggered when a pane of a Splitter is expanded.
 
 ### layoutChange
 Fires when the splitter layout has changed
+For additional information check the [layoutChange](/api/web/splitter#events-layoutChange) event documentation.
 
 #### Returns
 `\Kendo\UI\Splitter`
@@ -231,6 +235,7 @@ Adds one or more SplitterPane to the Splitter.
 
 ### resize
 Triggered when a pane is resized.
+For additional information check the [resize](/api/web/splitter#events-resize) event documentation.
 
 #### Returns
 `\Kendo\UI\Splitter`

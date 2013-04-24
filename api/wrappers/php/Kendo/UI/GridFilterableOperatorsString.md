@@ -13,7 +13,7 @@ A PHP class representing the string setting of GridFilterableOperators.
 ## Methods
 
 ### contains
-Enable/Disable and set the text of the "Contains" filter option for columns with string values.
+The text of the "contains" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsString`
@@ -31,7 +31,7 @@ Enable/Disable and set the text of the "Contains" filter option for columns with
     ?>
 
 ### doesnotcontain
-Enable/Disable and set the text of the "Does not contain" filter option for columns with string values.
+The text of the "does not contain" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsString`
@@ -49,7 +49,7 @@ Enable/Disable and set the text of the "Does not contain" filter option for colu
     ?>
 
 ### endswith
-Enable/Disable and set the text of the "Ends with" filter option for columns with string values.
+The text of the "ends with" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsString`
@@ -67,7 +67,7 @@ Enable/Disable and set the text of the "Ends with" filter option for columns wit
     ?>
 
 ### eq
-Enable/Disable and set the text of the "Is equal to" filter option for columns with string values.
+The text of the "equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsString`
@@ -85,7 +85,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for columns w
     ?>
 
 ### neq
-Enable/Disable and set the text of the "Is not equal to" filter option for columns with string values.
+The text of the "not equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsString`
@@ -103,7 +103,7 @@ Enable/Disable and set the text of the "Is not equal to" filter option for colum
     ?>
 
 ### startswith
-Enable/Disable and set the text of the "Starts with" filter option for columns with string values.
+The text of the "starts with" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsString`

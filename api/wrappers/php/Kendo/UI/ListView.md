@@ -71,6 +71,7 @@ Indicates whether the list view will call read on the DataSource initially.
 
 ### cancel
 Raised when the user clicks the "cancel" button.
+For additional information check the [cancel](/api/web/listview#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -106,6 +107,7 @@ Raised when the user clicks the "cancel" button.
 
 ### change
 Fires when the list view selection has changed.
+For additional information check the [change](/api/web/listview#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -141,6 +143,7 @@ Fires when the list view selection has changed.
 
 ### dataBinding
 Fires when the grid is about to be rendered.
+For additional information check the [dataBinding](/api/web/listview#events-dataBinding) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -177,6 +180,7 @@ Fires when the grid is about to be rendered.
 ### dataBound
 Fires when the list view has received data from the data source.
 and is about to render it.
+For additional information check the [dataBound](/api/web/listview#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -239,6 +243,7 @@ Sets the data source of the dataSource.
 
 ### edit
 Fires when the list view enters edit mode.
+For additional information check the [edit](/api/web/listview#events-edit) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -348,6 +353,7 @@ Indicates whether paging is enabled/disabled.
 
 ### remove
 Fires before the list view item is removed.
+For additional information check the [remove](/api/web/listview#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -389,11 +395,17 @@ Indicates whether selection is enabled/disabled. Possible values:
 
 #### Parameters
 
-##### $value `string`
+##### $value `boolean|string`
 
 
 
-#### Example 
+#### Example  - using boolean
+    <?php
+    $listView = new \Kendo\UI\ListView('ListView');
+    $listView->selectable(true);
+    ?>
+
+#### Example  - using string
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
     $listView->selectable('value');

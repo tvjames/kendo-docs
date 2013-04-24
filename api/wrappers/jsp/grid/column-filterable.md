@@ -7,7 +7,8 @@ publish: true
 
 # \<kendo:grid-column-filterable\>
 
-Specifies whether given column is filterable.
+If set to true a filter menu will be displayed for this column when filtering is enabled. If set to false the filter menu will not be displayed. By default a filter menu is displayed
+for all columns when filtering is enabled via the filterable option.Can be set to a JavaScript object which represents the filter menu configuration.
 
 #### Example
     <kendo:grid-column>
@@ -18,7 +19,7 @@ Specifies whether given column is filterable.
 
 ### ui `String`
 
-Role of the widget shown as column filter menu input element.
+The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
 
 #### Example
     <kendo:grid-column-filterable ui="ui">
@@ -29,7 +30,8 @@ Role of the widget shown as column filter menu input element.
 
 ### ui `String`
 
-Role of the widget shown as column filter menu input element.
+The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
+
 
 #### Example
     <kendo:grid-column-filterable ui="handle_ui">
@@ -44,7 +46,8 @@ Role of the widget shown as column filter menu input element.
 
 ### kendo:grid-column-filterable-ui
 
-Role of the widget shown as column filter menu input element.
+The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
+
 
 #### Example
     <kendo:grid-column-filterable>

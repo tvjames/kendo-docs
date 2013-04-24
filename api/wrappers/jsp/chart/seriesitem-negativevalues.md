@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-negativeValues\>
 
-The settings for negative values.** Applicable only to bubble series. **
+The options for displaying the chart negative bubble values.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ The settings for negative values.** Applicable only to bubble series. **
 
 ### color `String`
 
-The color of the negative values.
+The color of the chart negative bubble values.
 
 #### Example
     <kendo:chart-seriesItem-negativeValues color="color">
@@ -26,7 +26,7 @@ The color of the negative values.
 
 ### visible `boolean`
 
-The visibility of the negative values.
+If set to true the chart will display the negative bubbles. By default the negative bubbles are not displayed.
 
 #### Example
     <kendo:chart-seriesItem-negativeValues visible="visible">

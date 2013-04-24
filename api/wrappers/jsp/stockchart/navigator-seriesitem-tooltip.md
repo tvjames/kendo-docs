@@ -96,6 +96,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-toolti
 The tooltip template.
 Template variables:
 
+
 #### Example
     <kendo:stockChart-navigator-seriesItem-tooltip template="handle_template">
     </kendo:stockChart-navigator-seriesItem-tooltip>
@@ -111,6 +112,7 @@ Template variables:
 
 The tooltip template.
 Template variables:
+
 
 #### Example
     <kendo:stockChart-navigator-seriesItem-tooltip>

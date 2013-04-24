@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-plotArea\>
 
-The plot area configuration options. This is the area containing the plotted series.
+The plot area configuration options. The plot area is the area which displays the series.
 
 #### Example
     <kendo:chart>
@@ -18,15 +18,15 @@ The plot area configuration options. This is the area containing the plotted ser
 
 ### background `String`
 
-The background color of the plot area.
+The background color of the chart plot area. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-plotArea background="background">
     </kendo:chart-plotArea>
 
-### margin `Object`
+### margin `float`
 
-The margin of the plot area.
+The margin of the chart plot area. A numeric value will set all margins. Further configuration is available via [kendo:chart-plotArea-margin](#kendo-chart-plotArea-margin). 
 
 #### Example
     <kendo:chart-plotArea margin="margin">
@@ -34,7 +34,7 @@ The margin of the plot area.
 
 ### opacity `float`
 
-The background opacity of the plot area.
+The background opacity of the chart plot area. By default the background is opaque.
 
 #### Example
     <kendo:chart-plotArea opacity="opacity">
@@ -45,7 +45,7 @@ The background opacity of the plot area.
 
 ### kendo:chart-plotArea-border
 
-The border of the plot area.
+The border of the chart plot area.
 
 More documentation is available at [kendo:chart-plotArea-border](chart/plotarea-border).
 
@@ -53,5 +53,17 @@ More documentation is available at [kendo:chart-plotArea-border](chart/plotarea-
 
     <kendo:chart-plotArea>
         <kendo:chart-plotArea-border></kendo:chart-plotArea-border>
+    </kendo:chart-plotArea>
+
+### kendo:chart-plotArea-margin
+
+The margin of the chart plot area. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-plotArea-margin](chart/plotarea-margin).
+
+#### Example
+
+    <kendo:chart-plotArea>
+        <kendo:chart-plotArea-margin></kendo:chart-plotArea-margin>
     </kendo:chart-plotArea>
 

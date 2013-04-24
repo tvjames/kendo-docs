@@ -39,6 +39,7 @@ Specifies the function which will parse the field value. If not set default pars
 
 Specifies the function which will parse the field value. If not set default parsers will be used.
 
+
 #### Example
     <kendo:editor-imageBrowser-schema-model-fields-size parse="handle_parse">
     </kendo:editor-imageBrowser-schema-model-fields-size>
@@ -53,6 +54,7 @@ Specifies the function which will parse the field value. If not set default pars
 ### kendo:editor-imageBrowser-schema-model-fields-size-parse
 
 Specifies the function which will parse the field value. If not set default parsers will be used.
+
 
 #### Example
     <kendo:editor-imageBrowser-schema-model-fields-size>

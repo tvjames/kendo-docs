@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-categoryAxisItem-select-mousewheel\>
 
-Mousewheel zoom settings for the selection.
+The mouse wheel configuration of the selection.
 
 #### Example
     <kendo:chart-categoryAxisItem-select>
@@ -18,8 +18,7 @@ Mousewheel zoom settings for the selection.
 
 ### reverse `boolean`
 
-Reverses the mousewheel zoom direction.
-Normal direction is down for "zoom out", up for "zoom in".
+If set to true will reverse the mouse wheel direction. The normal direction is down for "zoom out", up for "zoom in".
 
 #### Example
     <kendo:chart-categoryAxisItem-select-mousewheel reverse="reverse">
@@ -27,7 +26,7 @@ Normal direction is down for "zoom out", up for "zoom in".
 
 ### zoom `String`
 
-The zoom direction. Possible values:
+The zoom direction.The supported values are:
 
 #### Example
     <kendo:chart-categoryAxisItem-select-mousewheel zoom="zoom">

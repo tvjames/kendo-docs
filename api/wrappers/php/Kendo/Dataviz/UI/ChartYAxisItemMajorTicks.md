@@ -12,8 +12,26 @@ A PHP class representing the majorTicks setting of ChartYAxisItem.
 
 ## Methods
 
+### color
+The color of the scatter chart y axis major ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Returns
+`\Kendo\Dataviz\UI\ChartYAxisItemMajorTicks`
+
+#### Parameters
+
+##### $value `string`
+
+
+
+#### Example 
+    <?php
+    $majorTicks = new \Kendo\Dataviz\UI\ChartYAxisItemMajorTicks();
+    $majorTicks->color('value');
+    ?>
+
 ### size
-The axis major tick size. This is the length of the line in pixels that is drawn to indicate the tick on the chart.
+The length of the tick line in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItemMajorTicks`
@@ -31,7 +49,7 @@ The axis major tick size. This is the length of the line in pixels that is drawn
     ?>
 
 ### visible
-The visibility of the major ticks.
+If set to true the chart will display the scatter chart y axis major ticks. By default the category axis major ticks are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItemMajorTicks`
@@ -46,5 +64,23 @@ The visibility of the major ticks.
     <?php
     $majorTicks = new \Kendo\Dataviz\UI\ChartYAxisItemMajorTicks();
     $majorTicks->visible(true);
+    ?>
+
+### width
+The width of the major ticks in pixels.
+
+#### Returns
+`\Kendo\Dataviz\UI\ChartYAxisItemMajorTicks`
+
+#### Parameters
+
+##### $value `float`
+
+
+
+#### Example 
+    <?php
+    $majorTicks = new \Kendo\Dataviz\UI\ChartYAxisItemMajorTicks();
+    $majorTicks->width(1);
     ?>
 

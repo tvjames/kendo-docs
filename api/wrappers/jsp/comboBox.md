@@ -168,6 +168,9 @@ More documentation is available at [kendo:comboBox-animation](combobox/animation
 
 Fires when the value has been changed.
 
+
+For additional information check the [change](/api/web/combobox#events-change) event documentation.
+
 #### Example
     <kendo:comboBox change="handle_change">
     </kendo:comboBox>
@@ -180,6 +183,9 @@ Fires when the value has been changed.
 ### close `String`
 
 Fires when the drop-down list is closed
+
+
+For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Example
     <kendo:comboBox close="handle_close">
@@ -194,6 +200,9 @@ Fires when the drop-down list is closed
 
 Fires when the ComboBox has received data from the data source.
 
+
+For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
+
 #### Example
     <kendo:comboBox dataBound="handle_dataBound">
     </kendo:comboBox>
@@ -206,6 +215,9 @@ Fires when the ComboBox has received data from the data source.
 ### open `String`
 
 Fires when the drop-down list is opened
+
+
+For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Example
     <kendo:comboBox open="handle_open">
@@ -220,6 +232,9 @@ Fires when the drop-down list is opened
 
 Triggered when a Li element is selected.
 
+
+For additional information check the [select](/api/web/combobox#events-select) event documentation.
+
 #### Example
     <kendo:comboBox select="handle_select">
     </kendo:comboBox>
@@ -232,6 +247,9 @@ Triggered when a Li element is selected.
 ### cascade `String`
 
 Triggered when value of the widget is changed via API or user interaction.
+
+
+For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Example
     <kendo:comboBox cascade="handle_cascade">
@@ -248,6 +266,9 @@ Triggered when value of the widget is changed via API or user interaction.
 
 Fires when the value has been changed.
 
+
+For additional information check the [change](/api/web/combobox#events-change) event documentation.
+
 #### Example
     <kendo:comboBox>
         <kendo:comboBox-change>
@@ -262,6 +283,9 @@ Fires when the value has been changed.
 ### kendo:comboBox-close
 
 Fires when the drop-down list is closed
+
+
+For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -278,6 +302,9 @@ Fires when the drop-down list is closed
 
 Fires when the ComboBox has received data from the data source.
 
+
+For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
+
 #### Example
     <kendo:comboBox>
         <kendo:comboBox-dataBound>
@@ -292,6 +319,9 @@ Fires when the ComboBox has received data from the data source.
 ### kendo:comboBox-open
 
 Fires when the drop-down list is opened
+
+
+For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -308,6 +338,9 @@ Fires when the drop-down list is opened
 
 Triggered when a Li element is selected.
 
+
+For additional information check the [select](/api/web/combobox#events-select) event documentation.
+
 #### Example
     <kendo:comboBox>
         <kendo:comboBox-select>
@@ -322,6 +355,9 @@ Triggered when a Li element is selected.
 ### kendo:comboBox-cascade
 
 Triggered when value of the widget is changed via API or user interaction.
+
+
+For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Example
     <kendo:comboBox>

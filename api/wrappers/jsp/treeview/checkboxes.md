@@ -47,6 +47,7 @@ Template for the checkbox rendering. Used to set the  checkbox name attribute, o
 
 Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
 
+
 #### Example
     <kendo:treeView-checkboxes template="handle_template">
     </kendo:treeView-checkboxes>
@@ -61,6 +62,7 @@ Template for the checkbox rendering. Used to set the  checkbox name attribute, o
 ### kendo:treeView-checkboxes-template
 
 Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
+
 
 #### Example
     <kendo:treeView-checkboxes>

@@ -110,6 +110,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-labels
 
 The label template. Template variables:
 
+
 #### Example
     <kendo:stockChart-navigator-seriesItem-labels template="handle_template">
     </kendo:stockChart-navigator-seriesItem-labels>
@@ -124,6 +125,7 @@ The label template. Template variables:
 ### kendo:stockChart-navigator-seriesItem-labels-template
 
 The label template. Template variables:
+
 
 #### Example
     <kendo:stockChart-navigator-seriesItem-labels>

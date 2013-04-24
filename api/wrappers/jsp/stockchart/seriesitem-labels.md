@@ -110,6 +110,7 @@ More documentation is available at [kendo:stockChart-seriesItem-labels-border](s
 
 The label template. Template variables:
 
+
 #### Example
     <kendo:stockChart-seriesItem-labels template="handle_template">
     </kendo:stockChart-seriesItem-labels>
@@ -124,6 +125,7 @@ The label template. Template variables:
 ### kendo:stockChart-seriesItem-labels-template
 
 The label template. Template variables:
+
 
 #### Example
     <kendo:stockChart-seriesItem-labels>

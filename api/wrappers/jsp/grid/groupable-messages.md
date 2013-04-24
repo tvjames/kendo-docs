@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-groupable-messages\>
 
-Sets the messages displayed during grouping.
+The text messages displayed during grouping.
 
 #### Example
     <kendo:grid-groupable>
@@ -18,7 +18,7 @@ Sets the messages displayed during grouping.
 
 ### empty `String`
 
-Sets the text of the empty grouping area message
+The text displayed in the grouping drop area.
 
 #### Example
     <kendo:grid-groupable-messages empty="empty">

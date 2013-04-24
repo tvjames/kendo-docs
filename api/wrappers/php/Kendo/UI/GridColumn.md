@@ -13,7 +13,8 @@ A PHP class representing the column setting of GridColumns.
 ## Methods
 
 ### aggregates
-The aggregates to be used when grouping is applied
+The aggregate(s) which are calculated when the grid is grouped by the columns field.
+The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -31,7 +32,7 @@ The aggregates to be used when grouping is applied
     ?>
 
 ### attributes
-Definition of column cells' HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+HTML attributes of the table cell (<td>) rendered for the column.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -81,7 +82,7 @@ Adds one or more GridColumnCommandItem to the GridColumn.
     ?>
 
 ### editor
-Provides a way to specify custom editor for this column.
+Provides a way to specify a custom editing UI for the column. Use the container parameter to create the editing UI.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -99,7 +100,7 @@ Provides a way to specify custom editor for this column.
     ?>
 
 ### encoded
-Specified whether the column content is escaped. Disable encoding if the data contains HTML markup.
+If set to true the column value will be HTML-encoded before it is displayed. If set to false the column value will be displayed as is. By default the column value is HTML-encoded.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -117,7 +118,7 @@ Specified whether the column content is escaped. Disable encoding if the data co
     ?>
 
 ### field
-The field from the datasource that will be displayed in the column.
+The field to which the column is bound. The value of this field is displayed by the column during data binding.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -136,7 +137,8 @@ The field from the datasource that will be displayed in the column.
 
 ### filterable
 
-Specifies whether given column is filterable.
+If set to true a filter menu will be displayed for this column when filtering is enabled. If set to false the filter menu will not be displayed. By default a filter menu is displayed
+for all columns when filtering is enabled via the filterable option.Can be set to a JavaScript object which represents the filter menu configuration.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -173,25 +175,32 @@ Specifies whether given column is filterable.
     ?>
 
 ### footerTemplate
-The template for column's cell in footer item.
+The template which renders the footer table cell for the column.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\UI\GridColumn`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $column = new \Kendo\UI\GridColumn();
     $column->footerTemplate('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $column = new \Kendo\UI\GridColumn();
+    $column->footerTemplate(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### format
-The format that will be applied on the column cells.
+The format that is applied to the value before it is displayed. Takes the form "{0:format}" where "format" is a standard number format,
+custom number format, standard date format or a custom date format.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -209,43 +218,56 @@ The format that will be applied on the column cells.
     ?>
 
 ### groupFooterTemplate
-The template for column's cell in group footer item.
+The template which renders the group footer when the grid is grouped by the column field. By default the group footer is not displayed.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\UI\GridColumn`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $column = new \Kendo\UI\GridColumn();
     $column->groupFooterTemplate('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $column = new \Kendo\UI\GridColumn();
+    $column->groupFooterTemplate(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### groupHeaderTemplate
-The template for group header item.
+The template which renders the group header when the grid is grouped by the column field. By default the name of the field
+and the current group value is displayed.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\UI\GridColumn`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $column = new \Kendo\UI\GridColumn();
     $column->groupHeaderTemplate('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $column = new \Kendo\UI\GridColumn();
+    $column->groupHeaderTemplate(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### headerAttributes
-Definition of column header cell's HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+HTML attributes of the column header. The grid renders a table header cell (<th>) for every column. The headerAttributes option can be used to set the HTML attributes of that th.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -257,26 +279,32 @@ Definition of column header cell's HTML attributes. Reserved words in Javascript
 
 
 ### headerTemplate
-The template for column's header cell. If sorting is enabled, it will be wrapped in a <a class="k-link"> element, so the template should consist of only inline elements
-in order to have valid HTML markup in the Grid.
+The template which renders the column header content. By default the value of the title column option
+is displayed in the column header cell.
 
 #### Returns
 `\Kendo\UI\GridColumn`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $column = new \Kendo\UI\GridColumn();
     $column->headerTemplate('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $column = new \Kendo\UI\GridColumn();
+    $column->headerTemplate(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### hidden
-Specifies whether given column is hidden.
+If set to true the column will not be displayed in the grid. By default all columns are displayed.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -294,7 +322,7 @@ Specifies whether given column is hidden.
     ?>
 
 ### menu
-Indicates whether the column should be visible in column menu.
+If set to true the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their field set).
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -312,7 +340,8 @@ Indicates whether the column should be visible in column menu.
     ?>
 
 ### sortable
-Specifies whether given column is sortable.
+If set to true the user can click the column header and sort the grid by the column field when sorting is enabled. If set to false sorting will
+be disabled for this column. By default all columns are sortable if sorting is enabled via the sortable option.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -330,25 +359,32 @@ Specifies whether given column is sortable.
     ?>
 
 ### template
-The template for column's cells.
+The template which renders the column content. The grid renders table rows (<tr>) which represent the data source items.
+Each table row consists of table cells (<td>) which represent the grid columns. By default the HTML-encoded value of the field is displayed in the column.
 
 #### Returns
 `\Kendo\UI\GridColumn`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $column = new \Kendo\UI\GridColumn();
     $column->template('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $column = new \Kendo\UI\GridColumn();
+    $column->template(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### title
-The text that will be displayed in the column header.
+The text that is displayed in the column header cell. If not set the field is used.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -366,7 +402,7 @@ The text that will be displayed in the column header.
     ?>
 
 ### values
-An array of values that will be used in a foreign key column. Each item in the array should have a text and value field.
+An array of values that will be displayed instead of the bound value. Each item in the array must have a text and value fields.
 
 #### Returns
 `\Kendo\UI\GridColumn`
@@ -384,20 +420,26 @@ An array of values that will be used in a foreign key column. Each item in the a
     ?>
 
 ### width
-The width of the column.
+The width of the column. Numeric values are treated as pixels.
 
 #### Returns
 `\Kendo\UI\GridColumn`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|float`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $column = new \Kendo\UI\GridColumn();
     $column->width('value');
+    ?>
+
+#### Example  - using float
+    <?php
+    $column = new \Kendo\UI\GridColumn();
+    $column->width(1);
     ?>
 

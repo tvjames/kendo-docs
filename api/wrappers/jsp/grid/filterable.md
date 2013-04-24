@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable\>
 
-Indicates whether filtering is enabled/disabled.
+If set to true the user can filter the data source using the grid filter menu. Filtering is disabled by default.Can be set to a JavaScript object which represents the filter menu configuration.
 
 #### Example
     <kendo:grid>
@@ -18,7 +18,7 @@ Indicates whether filtering is enabled/disabled.
 
 ### extra `boolean`
 
-Indicates whether second filter input is enabled/disabled.
+If set to true the filter menu allows the user to input a second criteria.
 
 #### Example
     <kendo:grid-filterable extra="extra">
@@ -29,7 +29,7 @@ Indicates whether second filter input is enabled/disabled.
 
 ### kendo:grid-filterable-messages
 
-Sets the filter menu messages.
+The text messages displayed in the filter menu. Use it to customize or localize the filter menu messages.
 
 More documentation is available at [kendo:grid-filterable-messages](grid/filterable-messages).
 
@@ -41,7 +41,7 @@ More documentation is available at [kendo:grid-filterable-messages](grid/filtera
 
 ### kendo:grid-filterable-operators
 
-Enable/Disable and set the text of filter operators.
+The text of the filter operators displayed in the filter menu.
 
 More documentation is available at [kendo:grid-filterable-operators](grid/filterable-operators).
 

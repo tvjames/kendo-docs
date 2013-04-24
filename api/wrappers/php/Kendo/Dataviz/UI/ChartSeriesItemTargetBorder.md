@@ -31,7 +31,7 @@ The color of the border.
     ?>
 
 ### dashType
-The dash type of the border.
+The following dash types are supported:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTargetBorder`
@@ -49,7 +49,7 @@ The dash type of the border.
     ?>
 
 ### width
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemTargetBorder`

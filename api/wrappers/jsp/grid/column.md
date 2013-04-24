@@ -7,7 +7,8 @@ publish: true
 
 # \<kendo:grid-column\>
 
-A collection of column objects or collection of strings that represents the name of the fields.
+The configuration of the grid columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
+field to which the column is bound. The grid will create a column for every item of the array.
 
 #### Example
     <kendo:grid-columns>
@@ -18,7 +19,8 @@ A collection of column objects or collection of strings that represents the name
 
 ### aggregates `Object`
 
-The aggregates to be used when grouping is applied
+The aggregate(s) which are calculated when the grid is grouped by the columns field.
+The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
     <kendo:grid-column aggregates="aggregates">
@@ -26,7 +28,7 @@ The aggregates to be used when grouping is applied
 
 ### attributes `Object`
 
-Definition of column cells' HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+HTML attributes of the table cell (<td>) rendered for the column.
 
 #### Example
     <kendo:grid-column attributes="attributes">
@@ -34,7 +36,7 @@ Definition of column cells' HTML attributes. Reserved words in Javascript should
 
 ### command `String`
 
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy". Further configuration is available via [kendo:grid-column-command](#kendo-grid-column-command). 
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option. Further configuration is available via [kendo:grid-column-command](#kendo-grid-column-command). 
 
 #### Example
     <kendo:grid-column command="command">
@@ -42,7 +44,7 @@ Definition of command column. The supported built-in commands are: "create", "ca
 
 ### editor `String`
 
-Provides a way to specify custom editor for this column.
+Provides a way to specify a custom editing UI for the column. Use the container parameter to create the editing UI.
 
 #### Example
     <kendo:grid-column editor="editor">
@@ -50,7 +52,7 @@ Provides a way to specify custom editor for this column.
 
 ### encoded `boolean`
 
-Specified whether the column content is escaped. Disable encoding if the data contains HTML markup.
+If set to true the column value will be HTML-encoded before it is displayed. If set to false the column value will be displayed as is. By default the column value is HTML-encoded.
 
 #### Example
     <kendo:grid-column encoded="encoded">
@@ -58,7 +60,7 @@ Specified whether the column content is escaped. Disable encoding if the data co
 
 ### field `String`
 
-The field from the datasource that will be displayed in the column.
+The field to which the column is bound. The value of this field is displayed by the column during data binding.
 
 #### Example
     <kendo:grid-column field="field">
@@ -66,7 +68,8 @@ The field from the datasource that will be displayed in the column.
 
 ### filterable `boolean`
 
-Specifies whether given column is filterable. Further configuration is available via [kendo:grid-column-filterable](#kendo-grid-column-filterable). 
+If set to true a filter menu will be displayed for this column when filtering is enabled. If set to false the filter menu will not be displayed. By default a filter menu is displayed
+for all columns when filtering is enabled via the filterable option.Can be set to a JavaScript object which represents the filter menu configuration. Further configuration is available via [kendo:grid-column-filterable](#kendo-grid-column-filterable). 
 
 #### Example
     <kendo:grid-column filterable="filterable">
@@ -74,7 +77,7 @@ Specifies whether given column is filterable. Further configuration is available
 
 ### footerTemplate `String`
 
-The template for column's cell in footer item.
+The template which renders the footer table cell for the column.The fields which can be used in the template are:
 
 #### Example
     <kendo:grid-column footerTemplate="footerTemplate">
@@ -82,7 +85,8 @@ The template for column's cell in footer item.
 
 ### format `String`
 
-The format that will be applied on the column cells.
+The format that is applied to the value before it is displayed. Takes the form "{0:format}" where "format" is a standard number format,
+custom number format, standard date format or a custom date format.
 
 #### Example
     <kendo:grid-column format="format">
@@ -90,7 +94,7 @@ The format that will be applied on the column cells.
 
 ### groupFooterTemplate `String`
 
-The template for column's cell in group footer item.
+The template which renders the group footer when the grid is grouped by the column field. By default the group footer is not displayed.The fields which can be used in the template are:
 
 #### Example
     <kendo:grid-column groupFooterTemplate="groupFooterTemplate">
@@ -98,7 +102,8 @@ The template for column's cell in group footer item.
 
 ### groupHeaderTemplate `String`
 
-The template for group header item.
+The template which renders the group header when the grid is grouped by the column field. By default the name of the field
+and the current group value is displayed.The fields which can be used in the template are:
 
 #### Example
     <kendo:grid-column groupHeaderTemplate="groupHeaderTemplate">
@@ -106,7 +111,7 @@ The template for group header item.
 
 ### headerAttributes `Object`
 
-Definition of column header cell's HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
+HTML attributes of the column header. The grid renders a table header cell (<th>) for every column. The headerAttributes option can be used to set the HTML attributes of that th.
 
 #### Example
     <kendo:grid-column headerAttributes="headerAttributes">
@@ -114,8 +119,8 @@ Definition of column header cell's HTML attributes. Reserved words in Javascript
 
 ### headerTemplate `String`
 
-The template for column's header cell. If sorting is enabled, it will be wrapped in a <a class="k-link"> element, so the template should consist of only inline elements
-in order to have valid HTML markup in the Grid.
+The template which renders the column header content. By default the value of the title column option
+is displayed in the column header cell.
 
 #### Example
     <kendo:grid-column headerTemplate="headerTemplate">
@@ -123,7 +128,7 @@ in order to have valid HTML markup in the Grid.
 
 ### hidden `boolean`
 
-Specifies whether given column is hidden.
+If set to true the column will not be displayed in the grid. By default all columns are displayed.
 
 #### Example
     <kendo:grid-column hidden="hidden">
@@ -131,7 +136,7 @@ Specifies whether given column is hidden.
 
 ### menu `boolean`
 
-Indicates whether the column should be visible in column menu.
+If set to true the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their field set).
 
 #### Example
     <kendo:grid-column menu="menu">
@@ -139,7 +144,8 @@ Indicates whether the column should be visible in column menu.
 
 ### sortable `boolean`
 
-Specifies whether given column is sortable.
+If set to true the user can click the column header and sort the grid by the column field when sorting is enabled. If set to false sorting will
+be disabled for this column. By default all columns are sortable if sorting is enabled via the sortable option.
 
 #### Example
     <kendo:grid-column sortable="sortable">
@@ -147,7 +153,8 @@ Specifies whether given column is sortable.
 
 ### template `String`
 
-The template for column's cells.
+The template which renders the column content. The grid renders table rows (<tr>) which represent the data source items.
+Each table row consists of table cells (<td>) which represent the grid columns. By default the HTML-encoded value of the field is displayed in the column.
 
 #### Example
     <kendo:grid-column template="template">
@@ -155,15 +162,15 @@ The template for column's cells.
 
 ### title `String`
 
-The text that will be displayed in the column header.
+The text that is displayed in the column header cell. If not set the field is used.
 
 #### Example
     <kendo:grid-column title="title">
     </kendo:grid-column>
 
-### width `String`
+### width `Object`
 
-The width of the column.
+The width of the column. Numeric values are treated as pixels.
 
 #### Example
     <kendo:grid-column width="width">
@@ -174,7 +181,7 @@ The width of the column.
 
 ### kendo:grid-column-command
 
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option.
 
 More documentation is available at [kendo:grid-column-command](grid/column-command).
 
@@ -186,7 +193,8 @@ More documentation is available at [kendo:grid-column-command](grid/column-comma
 
 ### kendo:grid-column-filterable
 
-Specifies whether given column is filterable.
+If set to true a filter menu will be displayed for this column when filtering is enabled. If set to false the filter menu will not be displayed. By default a filter menu is displayed
+for all columns when filtering is enabled via the filterable option.Can be set to a JavaScript object which represents the filter menu configuration.
 
 More documentation is available at [kendo:grid-column-filterable](grid/column-filterable).
 
@@ -201,7 +209,8 @@ More documentation is available at [kendo:grid-column-filterable](grid/column-fi
 
 ### editor `String`
 
-Provides a way to specify custom editor for this column.
+Provides a way to specify a custom editing UI for the column. Use the container parameter to create the editing UI.
+
 
 #### Example
     <kendo:grid-column editor="handle_editor">
@@ -212,11 +221,85 @@ Provides a way to specify custom editor for this column.
         }
     </script>
 
+### footerTemplate `String`
+
+The template which renders the footer table cell for the column.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:grid-column footerTemplate="handle_footerTemplate">
+    </kendo:grid-column>
+    <script>
+        function handle_footerTemplate(e) {
+            // Code to handle the footerTemplate event.
+        }
+    </script>
+
+### groupHeaderTemplate `String`
+
+The template which renders the group header when the grid is grouped by the column field. By default the name of the field
+and the current group value is displayed.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:grid-column groupHeaderTemplate="handle_groupHeaderTemplate">
+    </kendo:grid-column>
+    <script>
+        function handle_groupHeaderTemplate(e) {
+            // Code to handle the groupHeaderTemplate event.
+        }
+    </script>
+
+### groupFooterTemplate `String`
+
+The template which renders the group footer when the grid is grouped by the column field. By default the group footer is not displayed.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:grid-column groupFooterTemplate="handle_groupFooterTemplate">
+    </kendo:grid-column>
+    <script>
+        function handle_groupFooterTemplate(e) {
+            // Code to handle the groupFooterTemplate event.
+        }
+    </script>
+
+### headerTemplate `String`
+
+The template which renders the column header content. By default the value of the title column option
+is displayed in the column header cell.
+
+
+#### Example
+    <kendo:grid-column headerTemplate="handle_headerTemplate">
+    </kendo:grid-column>
+    <script>
+        function handle_headerTemplate(e) {
+            // Code to handle the headerTemplate event.
+        }
+    </script>
+
+### template `String`
+
+The template which renders the column content. The grid renders table rows (<tr>) which represent the data source items.
+Each table row consists of table cells (<td>) which represent the grid columns. By default the HTML-encoded value of the field is displayed in the column.
+
+
+#### Example
+    <kendo:grid-column template="handle_template">
+    </kendo:grid-column>
+    <script>
+        function handle_template(e) {
+            // Code to handle the template event.
+        }
+    </script>
+
 ## Event Tags
 
 ### kendo:grid-column-editor
 
-Provides a way to specify custom editor for this column.
+Provides a way to specify a custom editing UI for the column. Use the container parameter to create the editing UI.
+
 
 #### Example
     <kendo:grid-column>
@@ -227,5 +310,88 @@ Provides a way to specify custom editor for this column.
                 }
             </script>
         </kendo:grid-column-editor>
+    </kendo:grid-column>
+
+### kendo:grid-column-footerTemplate
+
+The template which renders the footer table cell for the column.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:grid-column>
+        <kendo:grid-column-footerTemplate>
+            <script>
+                function(e) {
+                    // Code to handle the footerTemplate event.
+                }
+            </script>
+        </kendo:grid-column-footerTemplate>
+    </kendo:grid-column>
+
+### kendo:grid-column-groupHeaderTemplate
+
+The template which renders the group header when the grid is grouped by the column field. By default the name of the field
+and the current group value is displayed.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:grid-column>
+        <kendo:grid-column-groupHeaderTemplate>
+            <script>
+                function(e) {
+                    // Code to handle the groupHeaderTemplate event.
+                }
+            </script>
+        </kendo:grid-column-groupHeaderTemplate>
+    </kendo:grid-column>
+
+### kendo:grid-column-groupFooterTemplate
+
+The template which renders the group footer when the grid is grouped by the column field. By default the group footer is not displayed.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:grid-column>
+        <kendo:grid-column-groupFooterTemplate>
+            <script>
+                function(e) {
+                    // Code to handle the groupFooterTemplate event.
+                }
+            </script>
+        </kendo:grid-column-groupFooterTemplate>
+    </kendo:grid-column>
+
+### kendo:grid-column-headerTemplate
+
+The template which renders the column header content. By default the value of the title column option
+is displayed in the column header cell.
+
+
+#### Example
+    <kendo:grid-column>
+        <kendo:grid-column-headerTemplate>
+            <script>
+                function(e) {
+                    // Code to handle the headerTemplate event.
+                }
+            </script>
+        </kendo:grid-column-headerTemplate>
+    </kendo:grid-column>
+
+### kendo:grid-column-template
+
+The template which renders the column content. The grid renders table rows (<tr>) which represent the data source items.
+Each table row consists of table cells (<td>) which represent the grid columns. By default the HTML-encoded value of the field is displayed in the column.
+
+
+#### Example
+    <kendo:grid-column>
+        <kendo:grid-column-template>
+            <script>
+                function(e) {
+                    // Code to handle the template event.
+                }
+            </script>
+        </kendo:grid-column-template>
     </kendo:grid-column>
 

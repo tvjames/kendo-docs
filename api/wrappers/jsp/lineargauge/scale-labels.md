@@ -106,6 +106,7 @@ More documentation is available at [kendo:linearGauge-scale-labels-border](linea
 The label template.
 Template variables:
 
+
 #### Example
     <kendo:linearGauge-scale-labels template="handle_template">
     </kendo:linearGauge-scale-labels>
@@ -121,6 +122,7 @@ Template variables:
 
 The label template.
 Template variables:
+
 
 #### Example
     <kendo:linearGauge-scale-labels>

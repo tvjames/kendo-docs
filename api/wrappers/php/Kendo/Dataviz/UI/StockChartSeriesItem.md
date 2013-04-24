@@ -693,6 +693,24 @@ The type of the series. Available types:
     $seriesItem->type('value');
     ?>
 
+### visibleInLegend
+A value indicating whether to show the series name in the legend.
+
+#### Returns
+`\Kendo\Dataviz\UI\StockChartSeriesItem`
+
+#### Parameters
+
+##### $value `boolean`
+
+
+
+#### Example 
+    <?php
+    $seriesItem = new \Kendo\Dataviz\UI\StockChartSeriesItem();
+    $seriesItem->visibleInLegend(true);
+    ?>
+
 ### width
 The line width.** Applicable for area and line series. **
 

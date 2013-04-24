@@ -143,6 +143,9 @@ More documentation is available at [kendo:dateTimePicker-month](datetimepicker/m
 
 Triggered when the underlying value of a DateTimePicker is changed.
 
+
+For additional information check the [change](/api/web/datetimepicker#events-change) event documentation.
+
 #### Example
     <kendo:dateTimePicker change="handle_change">
     </kendo:dateTimePicker>
@@ -156,6 +159,9 @@ Triggered when the underlying value of a DateTimePicker is changed.
 
 Fires when the calendar or the time drop-down list is closed
 
+
+For additional information check the [close](/api/web/datetimepicker#events-close) event documentation.
+
 #### Example
     <kendo:dateTimePicker close="handle_close">
     </kendo:dateTimePicker>
@@ -168,6 +174,9 @@ Fires when the calendar or the time drop-down list is closed
 ### open `String`
 
 Fires when the calendar or the time drop-down list is opened
+
+
+For additional information check the [open](/api/web/datetimepicker#events-open) event documentation.
 
 #### Example
     <kendo:dateTimePicker open="handle_open">
@@ -184,6 +193,9 @@ Fires when the calendar or the time drop-down list is opened
 
 Triggered when the underlying value of a DateTimePicker is changed.
 
+
+For additional information check the [change](/api/web/datetimepicker#events-change) event documentation.
+
 #### Example
     <kendo:dateTimePicker>
         <kendo:dateTimePicker-change>
@@ -199,6 +211,9 @@ Triggered when the underlying value of a DateTimePicker is changed.
 
 Fires when the calendar or the time drop-down list is closed
 
+
+For additional information check the [close](/api/web/datetimepicker#events-close) event documentation.
+
 #### Example
     <kendo:dateTimePicker>
         <kendo:dateTimePicker-close>
@@ -213,6 +228,9 @@ Fires when the calendar or the time drop-down list is closed
 ### kendo:dateTimePicker-open
 
 Fires when the calendar or the time drop-down list is opened
+
+
+For additional information check the [open](/api/web/datetimepicker#events-open) event documentation.
 
 #### Example
     <kendo:dateTimePicker>

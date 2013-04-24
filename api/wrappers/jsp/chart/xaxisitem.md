@@ -7,8 +7,7 @@ publish: true
 
 # \<kendo:chart-xAxisItem\>
 
-Scatter charts X-axis configuration options.
-Includes all valueAxis options in addition to:
+The X-axis configuration options of the scatter chart X-axis. Supports all valueAxis options.
 
 #### Example
     <kendo:chart-xAxis>
@@ -19,8 +18,7 @@ Includes all valueAxis options in addition to:
 
 ### axisCrossingValue `Object`
 
-Value at which the Y axis crosses this axis. (Only for object)Value indicies at which the Y axes cross the value axis. (Only for array)Date at which the Y axis crosses this axis. (Only for date)Note: Specify a value greater than or equal to the
-axis maximum value to denote the far end of the axis.
+Value at which the Y axis crosses this axis. (Only for object)Value indices at which the Y axes cross the value axis. (Only for array)Date at which the Y axis crosses this axis. (Only for date)
 
 #### Example
     <kendo:chart-xAxisItem axisCrossingValue="axisCrossingValue">
@@ -28,8 +26,7 @@ axis maximum value to denote the far end of the axis.
 
 ### baseUnit `String`
 
-The base time interval for the axis labels.
-The default baseUnit is determined automatically from the value range. Available options:
+The base time interval for the axis labels. The default baseUnit is determined automatically from the value range. Available options:
 
 #### Example
     <kendo:chart-xAxisItem baseUnit="baseUnit">
@@ -37,8 +34,7 @@ The default baseUnit is determined automatically from the value range. Available
 
 ### color `String`
 
-Color to apply to all axis elements.
-Individual color settings for line and labels take priority. Any valid CSS color string will work here, including hex and rgb.
+The color of the axis. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-xAxisItem color="color">
@@ -46,7 +42,7 @@ Individual color settings for line and labels take priority. Any valid CSS color
 
 ### majorUnit `float`
 
-The interval between major divisions in base units.
+The interval between major divisions.
 
 #### Example
     <kendo:chart-xAxisItem majorUnit="majorUnit">
@@ -54,8 +50,7 @@ The interval between major divisions in base units.
 
 ### max `Object`
 
-The end date of the axis.
-This is often used in combination with the min configuration option.
+The maximum value of the axis.
 
 #### Example
     <kendo:chart-xAxisItem max="max">
@@ -63,8 +58,7 @@ This is often used in combination with the min configuration option.
 
 ### min `Object`
 
-The maximum value of the axis.
-This is often used in combination with the max configuration option.
+The minimum value of the axis.
 
 #### Example
     <kendo:chart-xAxisItem min="min">
@@ -72,8 +66,7 @@ This is often used in combination with the max configuration option.
 
 ### minorUnit `float`
 
-The interval between minor divisions in base units.
-It defaults to 1/5th of the majorUnit.
+The interval between minor divisions. It defaults to 1/5th of the xAxis.majorUnit.
 
 #### Example
     <kendo:chart-xAxisItem minorUnit="minorUnit">
@@ -81,7 +74,7 @@ It defaults to 1/5th of the majorUnit.
 
 ### name `Object`
 
-The unique axis name.
+The unique axis name. Used to associate a series with a x axis using the series.xAxis option.
 
 #### Example
     <kendo:chart-xAxisItem name="name">
@@ -89,7 +82,7 @@ The unique axis name.
 
 ### narrowRange `boolean`
 
-Prevents the automatic axis range from snapping to 0.
+If set to true the chart will prevent the automatic axis range from snapping to 0.
 
 #### Example
     <kendo:chart-xAxisItem narrowRange="narrowRange">
@@ -106,8 +99,7 @@ The axis will be rendered in the first (default) pane if not set.
 
 ### reverse `boolean`
 
-Reverses the axis direction -
-values increase from right to left and from top to bottom.
+If set to true the value axis direction will be reversed. By default values increase from left to right and from bottom to top.
 
 #### Example
     <kendo:chart-xAxisItem reverse="reverse">
@@ -115,8 +107,7 @@ values increase from right to left and from top to bottom.
 
 ### type `String`
 
-The axis type.Note: The Chart will automatically switch to a date axis if the series X value
-is of type Date. Specify type explicitly when such behavior is undesired.
+The axis type.The supported values are:
 
 #### Example
     <kendo:chart-xAxisItem type="type">
@@ -124,7 +115,7 @@ is of type Date. Specify type explicitly when such behavior is undesired.
 
 ### visible `boolean`
 
-The visibility of the axis.
+If set to true the chart will display the x axis. By default the x axis is visible.
 
 #### Example
     <kendo:chart-xAxisItem visible="visible">
@@ -147,7 +138,7 @@ More documentation is available at [kendo:chart-xAxisItem-crosshair](chart/xaxis
 
 ### kendo:chart-xAxisItem-labels
 
-Configures the axis labels.
+The axis labels configuration.
 
 More documentation is available at [kendo:chart-xAxisItem-labels](chart/xaxisitem-labels).
 
@@ -159,7 +150,7 @@ More documentation is available at [kendo:chart-xAxisItem-labels](chart/xaxisite
 
 ### kendo:chart-xAxisItem-line
 
-Configures the axis line. This will also affect the major and minor ticks, but not the grid lines.
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
 More documentation is available at [kendo:chart-xAxisItem-line](chart/xaxisitem-line).
 
@@ -171,7 +162,7 @@ More documentation is available at [kendo:chart-xAxisItem-line](chart/xaxisitem-
 
 ### kendo:chart-xAxisItem-majorGridLines
 
-Configures the major grid lines. These are the lines that are an extension of the major ticks through the
+The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
 More documentation is available at [kendo:chart-xAxisItem-majorGridLines](chart/xaxisitem-majorgridlines).
@@ -184,7 +175,7 @@ More documentation is available at [kendo:chart-xAxisItem-majorGridLines](chart/
 
 ### kendo:chart-xAxisItem-majorTicks
 
-The major ticks of the axis.
+The configuration of the scatter chart x axis major ticks.
 
 More documentation is available at [kendo:chart-xAxisItem-majorTicks](chart/xaxisitem-majorticks).
 
@@ -196,7 +187,7 @@ More documentation is available at [kendo:chart-xAxisItem-majorTicks](chart/xaxi
 
 ### kendo:chart-xAxisItem-plotBands
 
-The plot bands of the xAxis.
+The plot bands of the x axis.
 
 More documentation is available at [kendo:chart-xAxisItem-plotBands](chart/xaxisitem-plotbands).
 
@@ -208,7 +199,7 @@ More documentation is available at [kendo:chart-xAxisItem-plotBands](chart/xaxis
 
 ### kendo:chart-xAxisItem-title
 
-The title of the value axis.
+The title configuration of the scatter chart x axis.
 
 More documentation is available at [kendo:chart-xAxisItem-title](chart/xaxisitem-title).
 

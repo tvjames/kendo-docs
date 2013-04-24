@@ -13,7 +13,7 @@ A PHP class representing the connectors setting of ChartSeriesItem.
 ## Methods
 
 ### color
-The color of the connector line.
+The color of the connector. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemConnectors`

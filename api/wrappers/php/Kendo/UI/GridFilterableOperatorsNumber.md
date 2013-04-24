@@ -13,7 +13,7 @@ A PHP class representing the number setting of GridFilterableOperators.
 ## Methods
 
 ### eq
-Enable/Disable and set the text of the "Is equal to" filter option for columns with number values.
+The text of the "equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsNumber`
@@ -31,7 +31,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for columns w
     ?>
 
 ### gt
-Enable/Disable and set the text of the "Is greater than" filter option for columns with number values.
+The text of the "greater than" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsNumber`
@@ -49,7 +49,7 @@ Enable/Disable and set the text of the "Is greater than" filter option for colum
     ?>
 
 ### gte
-Enable/Disable and set the text of the "Is greater than or equal to" filter option for columns with number values.
+The text of the "greater than or equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsNumber`
@@ -67,7 +67,7 @@ Enable/Disable and set the text of the "Is greater than or equal to" filter opti
     ?>
 
 ### lt
-Enable/Disable and set the text of the "Is less than" filter option for columns with number values.
+The text of the "less than" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsNumber`
@@ -85,7 +85,7 @@ Enable/Disable and set the text of the "Is less than" filter option for columns 
     ?>
 
 ### lte
-Enable/Disable and set the text of the "Is less than or equal to" filter option for columns with number values.
+The text of the "less than or equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsNumber`
@@ -103,7 +103,7 @@ Enable/Disable and set the text of the "Is less than or equal to" filter option 
     ?>
 
 ### neq
-Enable/Disable and set the text of the "Is not equal to" filter option for columns with number values.
+The text of the "not equal" filter operator.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperatorsNumber`

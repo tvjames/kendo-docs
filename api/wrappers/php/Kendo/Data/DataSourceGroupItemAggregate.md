@@ -13,7 +13,7 @@ A PHP class representing the aggregate setting of DataSourceGroupItemAggregates.
 ## Methods
 
 ### aggregate
-Specifies the aggregate function. Possible values are: "min", "max", "count", "sum", "average"
+The name of the aggregate function. Specifies the aggregate function. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Returns
 `\Kendo\Data\DataSourceGroupItemAggregate`
@@ -31,7 +31,7 @@ Specifies the aggregate function. Possible values are: "min", "max", "count", "s
     ?>
 
 ### field
-Specifies the field on which the aggregate will be calculated.
+The data item field which will be used to calculate the aggregates.
 
 #### Returns
 `\Kendo\Data\DataSourceGroupItemAggregate`

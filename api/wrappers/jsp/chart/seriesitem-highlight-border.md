@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-highlight-border\>
 
-The border of highlighted points. The color is computed automatically from the base point color.** Applicable to bubble, pie, candlestick and ohlc series. **
+The border of the highlighted chart series. The color is computed automatically from the base point color.
 
 #### Example
     <kendo:chart-seriesItem-highlight>
@@ -18,7 +18,7 @@ The border of highlighted points. The color is computed automatically from the b
 
 ### color `String`
 
-The border color.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-highlight-border color="color">
@@ -26,7 +26,7 @@ The border color.
 
 ### opacity `float`
 
-The border opacity.
+The opacity of the border. By default the border is opaque.
 
 #### Example
     <kendo:chart-seriesItem-highlight-border opacity="opacity">
@@ -34,7 +34,7 @@ The border opacity.
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Example
     <kendo:chart-seriesItem-highlight-border width="width">

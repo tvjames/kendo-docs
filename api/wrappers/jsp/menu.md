@@ -97,6 +97,9 @@ More documentation is available at [kendo:menu-items](menu/items).
 
 Fires after a sub menu gets closed.
 
+
+For additional information check the [close](/api/web/menu#events-close) event documentation.
+
 #### Example
     <kendo:menu close="handle_close">
     </kendo:menu>
@@ -109,6 +112,9 @@ Fires after a sub menu gets closed.
 ### open `String`
 
 Fires before a sub menu gets opened.
+
+
+For additional information check the [open](/api/web/menu#events-open) event documentation.
 
 #### Example
     <kendo:menu open="handle_open">
@@ -123,6 +129,9 @@ Fires before a sub menu gets opened.
 
 Fires when a sub menu gets opened and its animation finished.
 
+
+For additional information check the [activate](/api/web/menu#events-activate) event documentation.
+
 #### Example
     <kendo:menu activate="handle_activate">
     </kendo:menu>
@@ -136,6 +145,9 @@ Fires when a sub menu gets opened and its animation finished.
 
 Fires when a sub menu gets closed and its animation finished.
 
+
+For additional information check the [deactivate](/api/web/menu#events-deactivate) event documentation.
+
 #### Example
     <kendo:menu deactivate="handle_deactivate">
     </kendo:menu>
@@ -148,6 +160,9 @@ Fires when a sub menu gets closed and its animation finished.
 ### select `String`
 
 Fires when a menu item gets selected.
+
+
+For additional information check the [select](/api/web/menu#events-select) event documentation.
 
 #### Example
     <kendo:menu select="handle_select">
@@ -164,6 +179,9 @@ Fires when a menu item gets selected.
 
 Fires after a sub menu gets closed.
 
+
+For additional information check the [close](/api/web/menu#events-close) event documentation.
+
 #### Example
     <kendo:menu>
         <kendo:menu-close>
@@ -178,6 +196,9 @@ Fires after a sub menu gets closed.
 ### kendo:menu-open
 
 Fires before a sub menu gets opened.
+
+
+For additional information check the [open](/api/web/menu#events-open) event documentation.
 
 #### Example
     <kendo:menu>
@@ -194,6 +215,9 @@ Fires before a sub menu gets opened.
 
 Fires when a sub menu gets opened and its animation finished.
 
+
+For additional information check the [activate](/api/web/menu#events-activate) event documentation.
+
 #### Example
     <kendo:menu>
         <kendo:menu-activate>
@@ -209,6 +233,9 @@ Fires when a sub menu gets opened and its animation finished.
 
 Fires when a sub menu gets closed and its animation finished.
 
+
+For additional information check the [deactivate](/api/web/menu#events-deactivate) event documentation.
+
 #### Example
     <kendo:menu>
         <kendo:menu-deactivate>
@@ -223,6 +250,9 @@ Fires when a sub menu gets closed and its animation finished.
 ### kendo:menu-select
 
 Fires when a menu item gets selected.
+
+
+For additional information check the [select](/api/web/menu#events-select) event documentation.
 
 #### Example
     <kendo:menu>

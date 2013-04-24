@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when Editor is blurred and its content has changed.
+For additional information check the [change](/api/web/editor#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Editor`
@@ -121,6 +122,7 @@ Stops output bufferring and sets the preceding markup as the content of the Edit
 
 ### execute
 Fires when an Editor command is executed.
+For additional information check the [execute](/api/web/editor#events-execute) event documentation.
 
 #### Returns
 `\Kendo\UI\Editor`
@@ -185,6 +187,7 @@ Configuration for image browser dialog.
 
 ### keydown
 Fires when the user depresses a keyboard key. Triggered multiple times if the user holds the key down.
+For additional information check the [keydown](/api/web/editor#events-keydown) event documentation.
 
 #### Returns
 `\Kendo\UI\Editor`
@@ -220,6 +223,7 @@ Fires when the user depresses a keyboard key. Triggered multiple times if the us
 
 ### keyup
 Fires when the user releases a keyboard key.
+For additional information check the [keyup](/api/web/editor#events-keyup) event documentation.
 
 #### Returns
 `\Kendo\UI\Editor`
@@ -267,6 +271,7 @@ Defines the text of the labels that are shown within the editor. Used primarily 
 
 ### paste
 Fires before when content is pasted in the Editor.
+For additional information check the [paste](/api/web/editor#events-paste) event documentation.
 
 #### Returns
 `\Kendo\UI\Editor`
@@ -302,6 +307,7 @@ Fires before when content is pasted in the Editor.
 
 ### select
 Fires when the Editor selection has changed.
+For additional information check the [select](/api/web/editor#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\Editor`

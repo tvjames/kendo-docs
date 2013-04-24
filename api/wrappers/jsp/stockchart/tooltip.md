@@ -113,6 +113,7 @@ More documentation is available at [kendo:stockChart-tooltip-border](stockchart/
 The tooltip template.
 Template variables:
 
+
 #### Example
     <kendo:stockChart-tooltip template="handle_template">
     </kendo:stockChart-tooltip>
@@ -128,6 +129,7 @@ Template variables:
 
 The tooltip template.
 Template variables:
+
 
 #### Example
     <kendo:stockChart-tooltip>

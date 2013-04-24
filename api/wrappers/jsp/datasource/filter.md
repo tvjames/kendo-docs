@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-filter\>
 
-Sets the initial filter.
+The filter(s) which is (are) applied over the data items. By default no filter is applied.
 
 #### Example
     <kendo:dataSource>
@@ -21,7 +21,7 @@ Sets the initial filter.
 
 ### kendo:dataSource-filterItem
 
-Sets the initial filter.
+The filter(s) which is (are) applied over the data items. By default no filter is applied.
 
 More documentation is available at [kendo:dataSource-filterItem](datasource/filteritem).
 

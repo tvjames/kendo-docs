@@ -49,6 +49,7 @@ The visibility of the hint.
 The hint template.
 Template variables:
 
+
 #### Example
     <kendo:stockChart-navigator-hint template="handle_template">
     </kendo:stockChart-navigator-hint>
@@ -64,6 +65,7 @@ Template variables:
 
 The hint template.
 Template variables:
+
 
 #### Example
     <kendo:stockChart-navigator-hint>

@@ -219,6 +219,14 @@ The type of the series. Available types:
     <kendo:stockChart-seriesItem type="type">
     </kendo:stockChart-seriesItem>
 
+### visibleInLegend `boolean`
+
+A value indicating whether to show the series name in the legend.
+
+#### Example
+    <kendo:stockChart-seriesItem visibleInLegend="visibleInLegend">
+    </kendo:stockChart-seriesItem>
+
 ### width `float`
 
 The line width.** Applicable for area and line series. **

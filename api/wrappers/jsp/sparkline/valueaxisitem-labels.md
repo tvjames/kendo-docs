@@ -141,6 +141,7 @@ More documentation is available at [kendo:sparkline-valueAxisItem-labels-border]
 The label template.
 Template variables:
 
+
 #### Example
     <kendo:sparkline-valueAxisItem-labels template="handle_template">
     </kendo:sparkline-valueAxisItem-labels>
@@ -156,6 +157,7 @@ Template variables:
 
 The label template.
 Template variables:
+
 
 #### Example
     <kendo:sparkline-valueAxisItem-labels>

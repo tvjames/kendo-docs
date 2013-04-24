@@ -13,7 +13,7 @@ A PHP class representing the sortable setting of Grid.
 ## Methods
 
 ### allowUnsort
-Defines whether column can have unsorted state.
+If set to true the user can get the grid in unsorted state by clicking the sorted column header.
 
 #### Returns
 `\Kendo\UI\GridSortable`
@@ -31,7 +31,7 @@ Defines whether column can have unsorted state.
     ?>
 
 ### mode
-Defines sorting mode. Possible values:
+The sorting mode. If set to "single" the user can sort by one column. If set to "multiple" the user can sort by one column.
 
 #### Returns
 `\Kendo\UI\GridSortable`

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-sortItem\>
 
-Sets initial sort order
+The sort order which will be applied over the data items. By default the data items are not sorted.
 
 #### Example
     <kendo:dataSource-sort>
@@ -18,7 +18,7 @@ Sets initial sort order
 
 ### dir `String`
 
-Sets the sort direction. Possible values are: "asc", "desc", null. If null is set, the sort expression is removed.
+The sort order (direction). The supported values are "asc" (ascending order) and "desc" (descending order).
 
 #### Example
     <kendo:dataSource-sortItem dir="dir">
@@ -26,7 +26,7 @@ Sets the sort direction. Possible values are: "asc", "desc", null. If null is se
 
 ### field `String`
 
-Sets the field to sort on.
+The field by which the data items are sorted.
 
 #### Example
     <kendo:dataSource-sortItem field="field">

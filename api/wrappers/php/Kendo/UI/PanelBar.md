@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### activate
 Triggered when an item of a PanelBar is activated.
+For additional information check the [activate](/api/web/panelbar#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\PanelBar`
@@ -109,6 +110,7 @@ user interactions. Setting this option to false will disable all animations.
 
 ### collapse
 Triggered when an item of a PanelBar is collapsed.
+For additional information check the [collapse](/api/web/panelbar#events-collapse) event documentation.
 
 #### Returns
 `\Kendo\UI\PanelBar`
@@ -144,6 +146,7 @@ Triggered when an item of a PanelBar is collapsed.
 
 ### contentLoad
 Fires when content is fetched from an AJAX request.
+For additional information check the [contentLoad](/api/web/panelbar#events-contentLoad) event documentation.
 
 #### Returns
 `\Kendo\UI\PanelBar`
@@ -179,6 +182,7 @@ Fires when content is fetched from an AJAX request.
 
 ### error
 Fires when AJAX request results in an error.
+For additional information check the [error](/api/web/panelbar#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\PanelBar`
@@ -214,6 +218,7 @@ Fires when AJAX request results in an error.
 
 ### expand
 Triggered when an item of a PanelBar is expanded.
+For additional information check the [expand](/api/web/panelbar#events-expand) event documentation.
 
 #### Returns
 `\Kendo\UI\PanelBar`
@@ -306,6 +311,7 @@ Adds one or more PanelBarItem to the PanelBar.
 
 ### select
 Triggered when an item of a PanelBar is selected.
+For additional information check the [select](/api/web/panelbar#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\PanelBar`

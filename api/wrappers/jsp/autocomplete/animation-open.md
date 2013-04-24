@@ -26,7 +26,7 @@ The duration of the open animation in milliseconds.
 
 ### effects `String`
 
-The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Example
     <kendo:autoComplete-animation-open effects="effects">

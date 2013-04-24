@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-yAxisItem-labels\>
 
-Configures the axis labels.
+The axis labels configuration.
 
 #### Example
     <kendo:chart-yAxisItem>
@@ -18,8 +18,7 @@ Configures the axis labels.
 
 ### background `String`
 
-The background color of the labels. Any valid CSS color string will work here, including
-hex and rgb
+The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-yAxisItem-labels background="background">
@@ -27,7 +26,7 @@ hex and rgb
 
 ### color `String`
 
-The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-yAxisItem-labels color="color">
@@ -35,18 +34,10 @@ The text color of the labels. Any valid CSS color string will work here, includi
 
 ### culture `String`
 
-Culture to use for formatting the dates. See Globalization for more information.
+The culture to use when formatting date values. See the globalization overview for more information.
 
 #### Example
     <kendo:chart-yAxisItem-labels culture="culture">
-    </kendo:chart-yAxisItem-labels>
-
-### dateFormats `Object`
-
-Date format strings
-
-#### Example
-    <kendo:chart-yAxisItem-labels dateFormats="dateFormats">
     </kendo:chart-yAxisItem-labels>
 
 ### font `String`
@@ -59,15 +50,15 @@ The font style of the labels.
 
 ### format `String`
 
-The format of the labels.
+The format used to display the labels. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
 #### Example
     <kendo:chart-yAxisItem-labels format="format">
     </kendo:chart-yAxisItem-labels>
 
-### margin `Object`
+### margin `float`
 
-The margin of the labels.
+The margin of the labels. A numeric value will set all margins. Further configuration is available via [kendo:chart-yAxisItem-labels-margin](#kendo-chart-yAxisItem-labels-margin). 
 
 #### Example
     <kendo:chart-yAxisItem-labels margin="margin">
@@ -75,17 +66,15 @@ The margin of the labels.
 
 ### mirror `boolean`
 
-Mirrors the axis labels and ticks.
-If the labels are normally on the left side of the axis,
-mirroring the axis will render them to the right.
+If set to true the chart will mirror the axis labels and ticks. If the labels are normally on the left side of the axis, mirroring the axis will render them to the right.
 
 #### Example
     <kendo:chart-yAxisItem-labels mirror="mirror">
     </kendo:chart-yAxisItem-labels>
 
-### padding `Object`
+### padding `float`
 
-The padding of the labels.
+The padding of the labels. A numeric value will set all paddings. Further configuration is available via [kendo:chart-yAxisItem-labels-padding](#kendo-chart-yAxisItem-labels-padding). 
 
 #### Example
     <kendo:chart-yAxisItem-labels padding="padding">
@@ -93,7 +82,7 @@ The padding of the labels.
 
 ### rotation `float`
 
-The rotation angle of the labels.
+The rotation angle of the labels. By default the labels are not rotated.
 
 #### Example
     <kendo:chart-yAxisItem-labels rotation="rotation">
@@ -101,8 +90,7 @@ The rotation angle of the labels.
 
 ### skip `float`
 
-Number of labels to skip.
-Skips rendering the first n labels.
+The number of labels to skip.
 
 #### Example
     <kendo:chart-yAxisItem-labels skip="skip">
@@ -110,8 +98,7 @@ Skips rendering the first n labels.
 
 ### step `float`
 
-Label rendering step.
-Every n-th label is rendered where n is the step
+The label rendering step - render every n-th label. By default every label is rendered.
 
 #### Example
     <kendo:chart-yAxisItem-labels step="step">
@@ -119,7 +106,7 @@ Every n-th label is rendered where n is the step
 
 ### template `String`
 
-The label template.
+The template which renders the labels.The fields which can be used in the template are:
 
 #### Example
     <kendo:chart-yAxisItem-labels template="template">
@@ -127,7 +114,7 @@ The label template.
 
 ### visible `boolean`
 
-The visibility of the labels.
+If set to true the chart will display the y axis labels. By default the y axis labels are visible.
 
 #### Example
     <kendo:chart-yAxisItem-labels visible="visible">
@@ -148,12 +135,49 @@ More documentation is available at [kendo:chart-yAxisItem-labels-border](chart/y
         <kendo:chart-yAxisItem-labels-border></kendo:chart-yAxisItem-labels-border>
     </kendo:chart-yAxisItem-labels>
 
+### kendo:chart-yAxisItem-labels-dateFormats
+
+The format used to display the labels when the x values are dates. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
+
+More documentation is available at [kendo:chart-yAxisItem-labels-dateFormats](chart/yaxisitem-labels-dateformats).
+
+#### Example
+
+    <kendo:chart-yAxisItem-labels>
+        <kendo:chart-yAxisItem-labels-dateFormats></kendo:chart-yAxisItem-labels-dateFormats>
+    </kendo:chart-yAxisItem-labels>
+
+### kendo:chart-yAxisItem-labels-margin
+
+The margin of the labels. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-yAxisItem-labels-margin](chart/yaxisitem-labels-margin).
+
+#### Example
+
+    <kendo:chart-yAxisItem-labels>
+        <kendo:chart-yAxisItem-labels-margin></kendo:chart-yAxisItem-labels-margin>
+    </kendo:chart-yAxisItem-labels>
+
+### kendo:chart-yAxisItem-labels-padding
+
+The padding of the labels. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-yAxisItem-labels-padding](chart/yaxisitem-labels-padding).
+
+#### Example
+
+    <kendo:chart-yAxisItem-labels>
+        <kendo:chart-yAxisItem-labels-padding></kendo:chart-yAxisItem-labels-padding>
+    </kendo:chart-yAxisItem-labels>
+
 
 ## Event Attributes
 
 ### template `String`
 
-The label template.
+The template which renders the labels.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-yAxisItem-labels template="handle_template">
@@ -168,7 +192,8 @@ The label template.
 
 ### kendo:chart-yAxisItem-labels-template
 
-The label template.
+The template which renders the labels.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-yAxisItem-labels>

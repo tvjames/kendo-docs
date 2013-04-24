@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable-operators-date\>
 
-Enable/Disable and set the text of filter operators for fields of type date.
+The texts of the filter operators displayed for columns bound to date fields.
 
 #### Example
     <kendo:grid-filterable-operators>
@@ -18,7 +18,7 @@ Enable/Disable and set the text of filter operators for fields of type date.
 
 ### eq `String`
 
-Enable/Disable and set the text of the "Is equal to" filter option for columns with date values.
+The text of the "equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-date eq="eq">
@@ -26,7 +26,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for columns w
 
 ### gt `String`
 
-Enable/Disable and set the text of the "Is after" filter option for columns with date values.
+The text of the "greater than" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-date gt="gt">
@@ -34,7 +34,7 @@ Enable/Disable and set the text of the "Is after" filter option for columns with
 
 ### gte `String`
 
-Enable/Disable and set the text of the "Is after or equal to" filter option for columns with date values.
+The text of the "greater than or equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-date gte="gte">
@@ -42,7 +42,7 @@ Enable/Disable and set the text of the "Is after or equal to" filter option for 
 
 ### lt `String`
 
-Enable/Disable and set the text of the "Is before" filter option for columns with date values.
+The text of the "less than" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-date lt="lt">
@@ -50,7 +50,7 @@ Enable/Disable and set the text of the "Is before" filter option for columns wit
 
 ### lte `String`
 
-Enable/Disable and set the text of the "Is before or equal to" filter option for columns with date values.
+The text of the "less than or equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-date lte="lte">
@@ -58,7 +58,7 @@ Enable/Disable and set the text of the "Is before or equal to" filter option for
 
 ### neq `String`
 
-Enable/Disable and set the text of the "Is not equal to" filter option for columns with date values.
+The text of the "not equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-date neq="neq">

@@ -16,19 +16,9 @@ The category axis configuration options.
 
 ## Configuration Attributes
 
-### autoBaseUnitSteps `Object`
-
-Specifies the discrete baseUnitStep values when
-either baseUnit is set to "fit" or baseUnitStep is set to "auto".The default configuration is as follows:Each setting can be overriden individually.
-
-#### Example
-    <kendo:chart-categoryAxisItem autoBaseUnitSteps="autoBaseUnitSteps">
-    </kendo:chart-categoryAxisItem>
-
 ### axisCrossingValue `Object`
 
-Category index at which the first value axis crosses this axis. (Only for object)Category indicies at which the value axes cross the category axis. (Only for array)Note: Specify an index greater than or equal to the number
-of categories to denote the far end of the axis.
+Category index at which the first value axis crosses this axis (when set as an object).Category indices at which the value axes cross the category axis (when set as an array).
 
 #### Example
     <kendo:chart-categoryAxisItem axisCrossingValue="axisCrossingValue">
@@ -36,11 +26,9 @@ of categories to denote the far end of the axis.
 
 ### baseUnit `String`
 
-The base time interval for the axis.
-The default baseUnit is determined automatically from the minimum difference
-between subsequent categories. Available options:Setting baseUnit to "fit" will set such base unit and baseUnitStep
-that the total number of categories does not exceed maxDateGroups.Series data is aggregated for the specified base unit by using the
-series.aggregate function.
+The base time interval for the date axis. The default base unit is determined automatically from the minimum difference
+between subsequent categories.The supported values are:Setting baseUnit to "fit" will set such base unit and categoryAxis.baseUnitStep
+that the total number of categories does not exceed categoryAxis.maxDateGroups.Series data is aggregated for the specified base unit using the series.aggregate function.
 
 #### Example
     <kendo:chart-categoryAxisItem baseUnit="baseUnit">
@@ -48,8 +36,8 @@ series.aggregate function.
 
 ### baseUnitStep `Object`
 
-Sets the step (interval) between categories in base units.
-Specifiying "auto" will set the step to such value that the total number of categories does not exceed maxDateGroups.This option is ignored if baseUnit is set to "fit".
+The step (interval) between categories in base units. Setting it to "auto" will set the step to such value
+that the total number of categories does not exceed categoryAxis.maxDateGroups.This option is ignored if categoryAxis.baseUnit is set to "fit".
 
 #### Example
     <kendo:chart-categoryAxisItem baseUnitStep="baseUnitStep">
@@ -57,7 +45,7 @@ Specifiying "auto" will set the step to such value that the total number of cate
 
 ### categories `Object`
 
-Array of category names.
+The category names. The chart will create a category for every item of the array.
 
 #### Example
     <kendo:chart-categoryAxisItem categories="categories">
@@ -65,8 +53,8 @@ Array of category names.
 
 ### color `String`
 
-Color to apply to all axis elements. Any valid CSS color string will work here, including hex and rgb.
-Individual color settings for line and labels take priority.
+The color to apply to all axis elements. Accepts a valid CSS color string, including hex and rgb. Can be overridden by categoryAxis.labels.color and
+categoryAxis.line.color.
 
 #### Example
     <kendo:chart-categoryAxisItem color="color">
@@ -74,7 +62,7 @@ Individual color settings for line and labels take priority.
 
 ### field `String`
 
-The data field containing the category name.
+The data item field which contains the category name. Requires the dataSource option to be set.
 
 #### Example
     <kendo:chart-categoryAxisItem field="field">
@@ -82,7 +70,7 @@ The data field containing the category name.
 
 ### justified `boolean`
 
-Positions categories and series points on major ticks. This removes the empty space before and after the series.This option is ignored if either bar, column, ohlc or candlestick series are plotted on the axis.
+If set to true the chart will position categories and series points on major ticks. This removes the empty space before and after the series.
 
 #### Example
     <kendo:chart-categoryAxisItem justified="justified">
@@ -90,9 +78,8 @@ Positions categories and series points on major ticks. This removes the empty sp
 
 ### max `Object`
 
-The last date displayed on the axis.
-By default, the minimum date is the same as the last category.
-This is often used in combination with the min and roundToBaseUnit configuration options to
+The last date displayed on the category date axis. By default, the minimum date is the same as the last category.
+This is often used in combination with the categoryAxis.min and categoryAxis.roundToBaseUnit options to
 set up a fixed date range.
 
 #### Example
@@ -101,8 +88,9 @@ set up a fixed date range.
 
 ### maxDateGroups `float`
 
-Specifies the maximum number of groups (categories) to produce when
-either baseUnit is set to "fit" or baseUnitStep is set to "auto".This option is ignored in all other cases.
+The maximum number of groups (categories) to display when
+categoryAxis.baseUnit is set to "fit" or
+categoryAxis.baseUnitStep is set to "auto".
 
 #### Example
     <kendo:chart-categoryAxisItem maxDateGroups="maxDateGroups">
@@ -110,9 +98,8 @@ either baseUnit is set to "fit" or baseUnitStep is set to "auto".This option is 
 
 ### min `Object`
 
-The first date displayed on the axis.
-By default, the minimum date is the same as the first category.
-This is often used in combination with the max and roundToBaseUnit configuration options to
+The first date displayed on the category date axis. By default, the minimum date is the same as the first category.
+This is often used in combination with the categoryAxis.min and categoryAxis.roundToBaseUnit options to
 set up a fixed date range.
 
 #### Example
@@ -121,7 +108,7 @@ set up a fixed date range.
 
 ### name `String`
 
-The unique axis name.
+The unique axis name. Used to associate a series with a category axis using the series.categoryAxis option.
 
 #### Example
     <kendo:chart-categoryAxisItem name="name">
@@ -129,7 +116,7 @@ The unique axis name.
 
 ### pane `String`
 
-The name of the pane that the axis should be rendered in.
+The name of the pane that the category axis should be rendered in.
 The axis will be rendered in the first (default) pane if not set.
 
 #### Example
@@ -138,8 +125,7 @@ The axis will be rendered in the first (default) pane if not set.
 
 ### reverse `boolean`
 
-Reverses the axis direction -
-categories are listed from right to left and from top to bottom.
+If set to true the category axis direction will be reversed. By default categories are listed from left to right and from bottom to top.
 
 #### Example
     <kendo:chart-categoryAxisItem reverse="reverse">
@@ -147,8 +133,7 @@ categories are listed from right to left and from top to bottom.
 
 ### roundToBaseUnit `boolean`
 
-By default, the first and last dates will be rounded off to the nearest base unit.
-Specifying false for this option will disable this behavior.This option is most useful in combination with explicit min and max dates.It will be ignored if either bar, column, ohlc or candlestick series are plotted on the axis.
+If set to true the chart will round the first and last date to the nearest base unit.The roundToBaseUnit option will be ignored if series.type is set to "bar", "column", "ohlc" or "candlestick".
 
 #### Example
     <kendo:chart-categoryAxisItem roundToBaseUnit="roundToBaseUnit">
@@ -156,7 +141,7 @@ Specifying false for this option will disable this behavior.This option is most 
 
 ### type `String`
 
-The axis type.
+The category axis type.The supported values are:
 
 #### Example
     <kendo:chart-categoryAxisItem type="type">
@@ -164,7 +149,7 @@ The axis type.
 
 ### visible `boolean`
 
-The visibility of the axis.
+If set to true the chart will display the category axis. By default the category axis is visible.
 
 #### Example
     <kendo:chart-categoryAxisItem visible="visible">
@@ -172,8 +157,7 @@ The visibility of the axis.
 
 ### weekStartDay `float`
 
-Specifies the week start day when baseUnit is set to "weeks".
-Use the kendo.days constants to specify the day by name.
+The week start day when categoryAxis.baseUnit is set to "weeks".The supported values are:
 
 #### Example
     <kendo:chart-categoryAxisItem weekStartDay="weekStartDay">
@@ -181,6 +165,20 @@ Use the kendo.days constants to specify the day by name.
 
 
 ##  Configuration JSP Tags
+
+### kendo:chart-categoryAxisItem-autoBaseUnitSteps
+
+The discrete categoryAxis.baseUnitStep values when
+either categoryAxis.baseUnit is set to "fit" or
+categoryAxis.baseUnitStep is set to "auto".
+
+More documentation is available at [kendo:chart-categoryAxisItem-autoBaseUnitSteps](chart/categoryaxisitem-autobaseunitsteps).
+
+#### Example
+
+    <kendo:chart-categoryAxisItem>
+        <kendo:chart-categoryAxisItem-autoBaseUnitSteps></kendo:chart-categoryAxisItem-autoBaseUnitSteps>
+    </kendo:chart-categoryAxisItem>
 
 ### kendo:chart-categoryAxisItem-crosshair
 
@@ -196,7 +194,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-crosshair](char
 
 ### kendo:chart-categoryAxisItem-labels
 
-Configures the axis labels.
+The axis labels configuration.
 
 More documentation is available at [kendo:chart-categoryAxisItem-labels](chart/categoryaxisitem-labels).
 
@@ -208,7 +206,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-labels](chart/c
 
 ### kendo:chart-categoryAxisItem-line
 
-Configures the axis line. This will also effect major and minor ticks, but not gridlines.
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
 More documentation is available at [kendo:chart-categoryAxisItem-line](chart/categoryaxisitem-line).
 
@@ -220,7 +218,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-line](chart/cat
 
 ### kendo:chart-categoryAxisItem-majorGridLines
 
-Configures the major grid lines. These are the lines that are an extension of the major ticks through the
+The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
 More documentation is available at [kendo:chart-categoryAxisItem-majorGridLines](chart/categoryaxisitem-majorgridlines).
@@ -233,7 +231,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-majorGridLines]
 
 ### kendo:chart-categoryAxisItem-majorTicks
 
-The major ticks of the axis.
+The configuration of the category axis major ticks.
 
 More documentation is available at [kendo:chart-categoryAxisItem-majorTicks](chart/categoryaxisitem-majorticks).
 
@@ -245,8 +243,8 @@ More documentation is available at [kendo:chart-categoryAxisItem-majorTicks](cha
 
 ### kendo:chart-categoryAxisItem-minorGridLines
 
-Configures the minor grid lines.  These are the lines that are an extension of the minor ticks through
-the body of the chart.Note that minor grid lines are not visible by default, therefore none of these settings will take effect with the minor grid lines visibility being set to true.
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
 
 More documentation is available at [kendo:chart-categoryAxisItem-minorGridLines](chart/categoryaxisitem-minorgridlines).
 
@@ -258,7 +256,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-minorGridLines]
 
 ### kendo:chart-categoryAxisItem-minorTicks
 
-The minor ticks of the axis.
+The configuration of the category axis minor ticks.
 
 More documentation is available at [kendo:chart-categoryAxisItem-minorTicks](chart/categoryaxisitem-minorticks).
 
@@ -282,7 +280,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-plotBands](char
 
 ### kendo:chart-categoryAxisItem-select
 
-The selected axis range. If configured, axis selection will be enabled.** Available only for vertical axes **The range units are:
+The selected axis range. If set, axis selection will be enabled.The range units are:
 
 More documentation is available at [kendo:chart-categoryAxisItem-select](chart/categoryaxisitem-select).
 
@@ -294,7 +292,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-select](chart/c
 
 ### kendo:chart-categoryAxisItem-title
 
-The title of the category axis.
+The title configuration of the category axis.
 
 More documentation is available at [kendo:chart-categoryAxisItem-title](chart/categoryaxisitem-title).
 

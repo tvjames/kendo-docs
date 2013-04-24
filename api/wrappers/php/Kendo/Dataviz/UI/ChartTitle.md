@@ -31,7 +31,7 @@ The alignment of the title.
     ?>
 
 ### background
-The background color of the title.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTitle`
@@ -50,7 +50,7 @@ The background color of the title.
 
 ### border
 
-The border of the title.
+The border of the series.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTitle`
@@ -96,14 +96,16 @@ The font of the title.
     ?>
 
 ### margin
-The margin of the title.
+
+The margin of the title. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTitle`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartTitleMargin|array`
+
 
 
 
@@ -113,15 +115,35 @@ The margin of the title.
     $title->margin(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartTitleMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartTitleMargin)
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartTitle();
+    $margin = new \Kendo\Dataviz\UI\ChartTitleMargin();
+    $bottom = 1;
+    $margin->bottom($bottom);
+    $title->margin($margin);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartTitle();
+    $bottom = 1;
+    $title->margin(array('bottom' => $bottom));
+    ?>
+
 ### padding
-The padding of the title.
+
+The padding of the title. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTitle`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartTitlePadding|array`
+
 
 
 
@@ -129,6 +151,24 @@ The padding of the title.
     <?php
     $title = new \Kendo\Dataviz\UI\ChartTitle();
     $title->padding(1);
+    ?>
+
+
+#### Example - using [\Kendo\Dataviz\UI\ChartTitlePadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartTitlePadding)
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartTitle();
+    $padding = new \Kendo\Dataviz\UI\ChartTitlePadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $title->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartTitle();
+    $bottom = 1;
+    $title->padding(array('bottom' => $bottom));
     ?>
 
 ### position
@@ -150,7 +190,7 @@ The position of the title.
     ?>
 
 ### text
-The title of the chart. You can also set the text directly for a title with default options.
+The text of the chart title. You can also set the text directly for a title with default options.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTitle`
@@ -168,7 +208,7 @@ The title of the chart. You can also set the text directly for a title with defa
     ?>
 
 ### visible
-The visibility of the title.
+If set to true the chart will display the title. By default the title is not displayed.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTitle`

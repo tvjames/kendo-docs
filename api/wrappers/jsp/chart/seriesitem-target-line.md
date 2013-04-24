@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-target-line\>
 
-The target line.
+The target line options.
 
 #### Example
     <kendo:chart-seriesItem-target>

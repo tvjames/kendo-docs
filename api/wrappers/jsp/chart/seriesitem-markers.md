@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-markers\>
 
-Marker options.** Applicable to area, line, scatter and scatterLine series **
+The chart series marker configuration.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ Marker options.** Applicable to area, line, scatter and scatterLine series **
 
 ### background `String`
 
-The background color of the current series markers.
+The background color of the series markers.
 
 #### Example
     <kendo:chart-seriesItem-markers background="background">
@@ -26,7 +26,7 @@ The background color of the current series markers.
 
 ### size `float`
 
-The marker size.
+The marker size in pixels.
 
 #### Example
     <kendo:chart-seriesItem-markers size="size">
@@ -34,7 +34,10 @@ The marker size.
 
 ### type `String`
 
-Configures the markers shape type.
+The markers shape.The supported values are:
+* "circle" - the marker shape is circle.
+* "square" - the marker shape is square.
+* "triangle" - the marker shape is triangle.
 
 #### Example
     <kendo:chart-seriesItem-markers type="type">
@@ -42,7 +45,7 @@ Configures the markers shape type.
 
 ### visible `boolean`
 
-The markers visibility.
+If set to true the chart will display the series markers. By default chart series markers are not displayed.
 
 #### Example
     <kendo:chart-seriesItem-markers visible="visible">

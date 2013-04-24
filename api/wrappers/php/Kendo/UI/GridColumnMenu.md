@@ -13,7 +13,7 @@ A PHP class representing the columnMenu setting of Grid.
 ## Methods
 
 ### columns
-Enable/disable columns section in column header menu.
+If set to true the column menu would allow the user to select (show and hide) grid columns. By default the column menu allows column selection.
 
 #### Returns
 `\Kendo\UI\GridColumnMenu`
@@ -31,7 +31,7 @@ Enable/disable columns section in column header menu.
     ?>
 
 ### filterable
-Enable/disable filter section in column header menu.
+If set to true the column menu would allow the user to filter the grid. By default the column menu allows the user to filter if filtering is enabled via the filterable.
 
 #### Returns
 `\Kendo\UI\GridColumnMenu`
@@ -50,7 +50,7 @@ Enable/disable filter section in column header menu.
 
 ### messages
 
-Sets the columnMenu messages.
+The text messages displayed in the column menu. Use it to customize or localize the column menu messages.
 
 #### Returns
 `\Kendo\UI\GridColumnMenu`
@@ -78,7 +78,7 @@ Sets the columnMenu messages.
     ?>
 
 ### sortable
-Enable/disable sorting section in column header menu.
+If set to true the column menu would allow the user to sort the grid by the column field. By default the column menu allows the user to sort if sorting is enabled via the sortable option.
 
 #### Returns
 `\Kendo\UI\GridColumnMenu`

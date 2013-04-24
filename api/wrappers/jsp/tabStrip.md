@@ -106,6 +106,9 @@ More documentation is available at [kendo:tabStrip-items](tabstrip/items).
 
 Triggered just after a tab is being made visible, but before the end of the animation
 
+
+For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
+
 #### Example
     <kendo:tabStrip activate="handle_activate">
     </kendo:tabStrip>
@@ -118,6 +121,9 @@ Triggered just after a tab is being made visible, but before the end of the anim
 ### contentLoad `String`
 
 Triggered when content is fetched from an AJAX request.
+
+
+For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
 
 #### Example
     <kendo:tabStrip contentLoad="handle_contentLoad">
@@ -132,6 +138,9 @@ Triggered when content is fetched from an AJAX request.
 
 Triggered when an AJAX request results in an error.
 
+
+For additional information check the [error](/api/web/tabstrip#events-error) event documentation.
+
 #### Example
     <kendo:tabStrip error="handle_error">
     </kendo:tabStrip>
@@ -144,6 +153,9 @@ Triggered when an AJAX request results in an error.
 ### select `String`
 
 Triggered before a tab is selected.
+
+
+For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
 
 #### Example
     <kendo:tabStrip select="handle_select">
@@ -160,6 +172,9 @@ Triggered before a tab is selected.
 
 Triggered just after a tab is being made visible, but before the end of the animation
 
+
+For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
+
 #### Example
     <kendo:tabStrip>
         <kendo:tabStrip-activate>
@@ -174,6 +189,9 @@ Triggered just after a tab is being made visible, but before the end of the anim
 ### kendo:tabStrip-contentLoad
 
 Triggered when content is fetched from an AJAX request.
+
+
+For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
 
 #### Example
     <kendo:tabStrip>
@@ -190,6 +208,9 @@ Triggered when content is fetched from an AJAX request.
 
 Triggered when an AJAX request results in an error.
 
+
+For additional information check the [error](/api/web/tabstrip#events-error) event documentation.
+
 #### Example
     <kendo:tabStrip>
         <kendo:tabStrip-error>
@@ -204,6 +225,9 @@ Triggered when an AJAX request results in an error.
 ### kendo:tabStrip-select
 
 Triggered before a tab is selected.
+
+
+For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
 
 #### Example
     <kendo:tabStrip>

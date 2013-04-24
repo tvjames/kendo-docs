@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-labels\>
 
-Configures the series data labels.
+The chart series label configuration.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ Configures the series data labels.
 
 ### align `String`
 
-Defines the alignment of the labels.** Available for donut and pie series. **
+The label alignment when series.type is set to "donut" or "pie".The supported values are:
 
 #### Example
     <kendo:chart-seriesItem-labels align="align">
@@ -26,7 +26,7 @@ Defines the alignment of the labels.** Available for donut and pie series. **
 
 ### background `String`
 
-The background color of the labels.
+The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-labels background="background">
@@ -34,7 +34,7 @@ The background color of the labels.
 
 ### color `String`
 
-The text color of the labels.
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-labels color="color">
@@ -42,7 +42,7 @@ The text color of the labels.
 
 ### distance `float`
 
-The distance of the labels.** Available for donut and pie series. **
+The distance of the labels when series.type is set to "donut" or "pie".
 
 #### Example
     <kendo:chart-seriesItem-labels distance="distance">
@@ -58,23 +58,23 @@ The font style of the labels.
 
 ### format `String`
 
-The format of the labels.
+The format of the labels. Uses kendo.format.
 
 #### Example
     <kendo:chart-seriesItem-labels format="format">
     </kendo:chart-seriesItem-labels>
 
-### margin `Object`
+### margin `float`
 
-The margin of the labels.
+The margin of the labels. A numeric value will set all margins. Further configuration is available via [kendo:chart-seriesItem-labels-margin](#kendo-chart-seriesItem-labels-margin). 
 
 #### Example
     <kendo:chart-seriesItem-labels margin="margin">
     </kendo:chart-seriesItem-labels>
 
-### padding `Object`
+### padding `float`
 
-The padding of the labels.
+The padding of the labels. A numeric value will set all paddings. Further configuration is available via [kendo:chart-seriesItem-labels-padding](#kendo-chart-seriesItem-labels-padding). 
 
 #### Example
     <kendo:chart-seriesItem-labels padding="padding">
@@ -82,7 +82,7 @@ The padding of the labels.
 
 ### position `String`
 
-Defines the position of the labels.
+The position of the labels.
 
 #### Example
     <kendo:chart-seriesItem-labels position="position">
@@ -90,7 +90,7 @@ Defines the position of the labels.
 
 ### template `String`
 
-The label template. Template variables:
+The template which renders the chart series label.The fields which can be used in the template are:
 
 #### Example
     <kendo:chart-seriesItem-labels template="template">
@@ -98,7 +98,7 @@ The label template. Template variables:
 
 ### visible `boolean`
 
-The visibility of the labels.
+If set to true the chart will display the series labels. By default chart series labels are not displayed.
 
 #### Example
     <kendo:chart-seriesItem-labels visible="visible">
@@ -119,12 +119,37 @@ More documentation is available at [kendo:chart-seriesItem-labels-border](chart/
         <kendo:chart-seriesItem-labels-border></kendo:chart-seriesItem-labels-border>
     </kendo:chart-seriesItem-labels>
 
+### kendo:chart-seriesItem-labels-margin
+
+The margin of the labels. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-seriesItem-labels-margin](chart/seriesitem-labels-margin).
+
+#### Example
+
+    <kendo:chart-seriesItem-labels>
+        <kendo:chart-seriesItem-labels-margin></kendo:chart-seriesItem-labels-margin>
+    </kendo:chart-seriesItem-labels>
+
+### kendo:chart-seriesItem-labels-padding
+
+The padding of the labels. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-seriesItem-labels-padding](chart/seriesitem-labels-padding).
+
+#### Example
+
+    <kendo:chart-seriesItem-labels>
+        <kendo:chart-seriesItem-labels-padding></kendo:chart-seriesItem-labels-padding>
+    </kendo:chart-seriesItem-labels>
+
 
 ## Event Attributes
 
 ### template `String`
 
-The label template. Template variables:
+The template which renders the chart series label.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-seriesItem-labels template="handle_template">
@@ -139,7 +164,8 @@ The label template. Template variables:
 
 ### kendo:chart-seriesItem-labels-template
 
-The label template. Template variables:
+The template which renders the chart series label.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-seriesItem-labels>

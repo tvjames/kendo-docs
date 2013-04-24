@@ -119,6 +119,7 @@ Sets the HTML content of the Tooltip.
 
 ### contentLoad
 Triggered when an AJAX request for content completes.
+For additional information check the [contentLoad](/api/web/tooltip#events-contentLoad) event documentation.
 
 #### Returns
 `\Kendo\UI\Tooltip`
@@ -169,6 +170,7 @@ Stops output bufferring and sets the preceding markup as the content of the Tool
 
 ### error
 Triggered when an AJAX request for content fails.
+For additional information check the [error](/api/web/tooltip#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\Tooltip`
@@ -240,6 +242,7 @@ The height (in pixels) of the tooltip.
 
 ### hide
 Triggered when a Tooltip is hidden
+For additional information check the [hide](/api/web/tooltip#events-hide) event documentation.
 
 #### Returns
 `\Kendo\UI\Tooltip`
@@ -311,6 +314,7 @@ The position relative to the target element, at which the tooltip will be shown.
 
 ### requestStart
 Triggered before an AJAX request started.
+For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.
 
 #### Returns
 `\Kendo\UI\Tooltip`
@@ -346,6 +350,7 @@ Triggered before an AJAX request started.
 
 ### show
 Triggered when a Tooltip is shown.
+For additional information check the [show](/api/web/tooltip#events-show) event documentation.
 
 #### Returns
 `\Kendo\UI\Tooltip`

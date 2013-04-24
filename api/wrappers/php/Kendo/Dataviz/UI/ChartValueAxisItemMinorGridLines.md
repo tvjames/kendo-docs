@@ -13,7 +13,7 @@ A PHP class representing the minorGridLines setting of ChartValueAxisItem.
 ## Methods
 
 ### color
-The color of the lines.Note that this has no effect if the visibility of the minor grid lines is not set to true.
+The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMinorGridLines`
@@ -31,7 +31,7 @@ The color of the lines.Note that this has no effect if the visibility of the min
     ?>
 
 ### dashType
-The dash type of the minor grid lines.
+The dash type of the minor grid lines.The following dash types are supported:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMinorGridLines`
@@ -49,7 +49,7 @@ The dash type of the minor grid lines.
     ?>
 
 ### visible
-The visibility of the lines.
+If set to true the chart will display the minor grid lines. By default the minor grid lines are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMinorGridLines`
@@ -67,7 +67,7 @@ The visibility of the lines.
     ?>
 
 ### width
-The width of the lines.Note that this settings has no effect if the visibility of the minor grid lines is not set to true.
+The width of the value axis minor grid lines in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMinorGridLines`

@@ -35,8 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### animation
 
-Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the
-suggestion popup will open and close instantly.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -65,6 +64,7 @@ suggestion popup will open and close instantly.
 
 ### change
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [change](/api/web/autocomplete#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -100,6 +100,7 @@ Fired when the value of the widget is changed by the user.The event handler func
 
 ### close
 Fired when the suggestion popup of the widget is closed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [close](/api/web/autocomplete#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -135,6 +136,7 @@ Fired when the suggestion popup of the widget is closed by the user.The event ha
 
 ### dataBound
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [dataBound](/api/web/autocomplete#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -196,7 +198,7 @@ Sets the data source of the dataSource.
     ?>
 
 ### dataTextField
-The field of the data item used when searching for suggestions.
+The field of the data item used when searching for suggestions.  This is the text that will be displayed in the list of matched results.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -342,6 +344,7 @@ The minimum number of characters the user must type before a search is performed
 
 ### open
 Fired when the suggestion popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [open](/api/web/autocomplete#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -395,6 +398,7 @@ The hint displayed by the widget when it is empty. Not set by default.
 
 ### select
 Fired when an item from the suggestion popup is selected by the user.
+For additional information check the [select](/api/web/autocomplete#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`

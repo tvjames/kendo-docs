@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### activate
 Fires when a sub menu gets opened and its animation finished.
+For additional information check the [activate](/api/web/menu#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\Menu`
@@ -100,6 +101,7 @@ by setting the close animation.  Each animation also has a direction which can b
 
 ### close
 Fires after a sub menu gets closed.
+For additional information check the [close](/api/web/menu#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\Menu`
@@ -153,6 +155,7 @@ Specifies that sub menus should close after item selection (provided they won't 
 
 ### deactivate
 Fires when a sub menu gets closed and its animation finished.
+For additional information check the [deactivate](/api/web/menu#events-deactivate) event documentation.
 
 #### Returns
 `\Kendo\UI\Menu`
@@ -264,6 +267,7 @@ Adds one or more MenuItem to the Menu.
 
 ### open
 Fires before a sub menu gets opened.
+For additional information check the [open](/api/web/menu#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\Menu`
@@ -355,6 +359,7 @@ its parent horizontally. You can also switch off the screen boundary detection c
 
 ### select
 Fires when a menu item gets selected.
+For additional information check the [select](/api/web/menu#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\Menu`

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable-operators\>
 
-Enable/Disable and set the text of filter operators.
+The text of the filter operators displayed in the filter menu.
 
 #### Example
     <kendo:grid-filterable>
@@ -21,7 +21,7 @@ Enable/Disable and set the text of filter operators.
 
 ### kendo:grid-filterable-operators-date
 
-Enable/Disable and set the text of filter operators for fields of type date.
+The texts of the filter operators displayed for columns bound to date fields.
 
 More documentation is available at [kendo:grid-filterable-operators-date](grid/filterable-operators-date).
 
@@ -33,7 +33,7 @@ More documentation is available at [kendo:grid-filterable-operators-date](grid/f
 
 ### kendo:grid-filterable-operators-enums
 
-Enable/Disable and set the text of filter operators for foreign key columns.
+The texts of the filter operators displayed for columns which have their values option set.
 
 More documentation is available at [kendo:grid-filterable-operators-enums](grid/filterable-operators-enums).
 
@@ -45,7 +45,7 @@ More documentation is available at [kendo:grid-filterable-operators-enums](grid/
 
 ### kendo:grid-filterable-operators-number
 
-Enable/Disable and set the text of filter operators for fields of type number.
+The texts of the filter operators displayed for columns bound to number fields.
 
 More documentation is available at [kendo:grid-filterable-operators-number](grid/filterable-operators-number).
 
@@ -57,7 +57,7 @@ More documentation is available at [kendo:grid-filterable-operators-number](grid
 
 ### kendo:grid-filterable-operators-string
 
-Enable/Disable and set the text of filter operators for fields of type string.
+The texts of the filter operators displayed for columns bound to string fields.
 
 More documentation is available at [kendo:grid-filterable-operators-string](grid/filterable-operators-string).
 

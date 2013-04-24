@@ -114,6 +114,7 @@ More documentation is available at [kendo:radialGauge-scale-labels-border](radia
 The label template.
 Template variables:
 
+
 #### Example
     <kendo:radialGauge-scale-labels template="handle_template">
     </kendo:radialGauge-scale-labels>
@@ -129,6 +130,7 @@ Template variables:
 
 The label template.
 Template variables:
+
 
 #### Example
     <kendo:radialGauge-scale-labels>

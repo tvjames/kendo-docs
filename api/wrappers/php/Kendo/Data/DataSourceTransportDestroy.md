@@ -13,7 +13,8 @@ A PHP class representing the destroy setting of DataSourceTransport.
 ## Methods
 
 ### cache
-If set to false, it will force requested pages not to be cached by the browser. Setting cache to false also appends a query string parameter, "_=[TIMESTAMP]", to the URL.
+If set to false the request result will not be cached by the browser. Setting cache to false will only work correctly with HEAD and GET requests. It works by appending "_={timestamp}" to the GET parameters.
+By default "jsonp" requests are not cached.
 Refer to the jQuery.ajax documentation for further info.
 
 #### Returns
@@ -51,7 +52,7 @@ Refer to the jQuery.ajax documentation for further info.
     ?>
 
 ### data
-Data to be send to the server.
+Additional parameters which are sent to the remote service.
 Refer to the jQuery.ajax documentation for further info.
 
 #### Returns
@@ -82,7 +83,7 @@ Refer to the jQuery.ajax documentation for further info.
     ?>
 
 ### dataType
-The type of data that you're expecting back from the server. Commonly used values are "json" and "jsonp".
+The type of result expected from the server. Commonly used values are "json" and "jsonp".
 Refer to the jQuery.ajax documentation for further info.
 
 #### Returns
@@ -102,7 +103,6 @@ Refer to the jQuery.ajax documentation for further info.
 
 ### type
 The type of request to make ("POST", "GET", "PUT" or "DELETE"), default is "GET".
-Refer to the jQuery.ajax documentation for further info.
 
 #### Returns
 `\Kendo\Data\DataSourceTransportDestroy`
@@ -120,7 +120,7 @@ Refer to the jQuery.ajax documentation for further info.
     ?>
 
 ### url
-The remote url to call when creating a new record.
+The URL to which the request is sent.If set to function the data source will invoke it and use the result as the URL.
 
 #### Returns
 `\Kendo\Data\DataSourceTransportDestroy`

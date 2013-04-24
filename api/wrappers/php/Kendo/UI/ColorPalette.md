@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Triggers when a new color has been changed.
+For additional information check the [change](/api/web/colorpalette#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ColorPalette`

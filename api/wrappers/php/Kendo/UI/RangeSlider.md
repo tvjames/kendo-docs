@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
+For additional information check the [change](/api/web/rangeslider#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\RangeSlider`
@@ -181,6 +182,7 @@ The selection start value of the RangeSlider.
 
 ### slide
 Fires when the user drags the drag handle to a new position.
+For additional information check the [slide](/api/web/rangeslider#events-slide) event documentation.
 
 #### Returns
 `\Kendo\UI\RangeSlider`

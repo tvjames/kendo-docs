@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the slider value changes as a result of selecting a new value with the drag handle, buttons or keyboard.
+For additional information check the [change](/api/web/slider#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Slider`
@@ -198,6 +199,7 @@ increase and decrease buttons of a Slider.
 
 ### slide
 Fires when the user drags the drag handle to a new position.
+For additional information check the [slide](/api/web/slider#events-slide) event documentation.
 
 #### Returns
 `\Kendo\UI\Slider`

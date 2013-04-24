@@ -101,6 +101,9 @@ More documentation is available at [kendo:rangeSlider-tooltip](rangeslider/toolt
 
 Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
 
+
+For additional information check the [change](/api/web/rangeslider#events-change) event documentation.
+
 #### Example
     <kendo:rangeSlider change="handle_change">
     </kendo:rangeSlider>
@@ -113,6 +116,9 @@ Fires when the rangeSlider value changes as a result of selecting a new value wi
 ### slide `String`
 
 Fires when the user drags the drag handle to a new position.
+
+
+For additional information check the [slide](/api/web/rangeslider#events-slide) event documentation.
 
 #### Example
     <kendo:rangeSlider slide="handle_slide">
@@ -129,6 +135,9 @@ Fires when the user drags the drag handle to a new position.
 
 Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
 
+
+For additional information check the [change](/api/web/rangeslider#events-change) event documentation.
+
 #### Example
     <kendo:rangeSlider>
         <kendo:rangeSlider-change>
@@ -143,6 +152,9 @@ Fires when the rangeSlider value changes as a result of selecting a new value wi
 ### kendo:rangeSlider-slide
 
 Fires when the user drags the drag handle to a new position.
+
+
+For additional information check the [slide](/api/web/rangeslider#events-slide) event documentation.
 
 #### Example
     <kendo:rangeSlider>

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-pane-title\>
 
-The pane title text or configuration.
+The title configuration of the chart pane.
 
 #### Example
     <kendo:chart-pane>
@@ -18,8 +18,7 @@ The pane title text or configuration.
 
 ### background `String`
 
-The background color of the title. Any valid CSS color string will work here, including
-hex and rgb.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-pane-title background="background">
@@ -27,7 +26,7 @@ hex and rgb.
 
 ### color `String`
 
-The text color of the title. Any valid CSS color string will work here, including hex and rgb.
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-pane-title color="color">
@@ -41,9 +40,9 @@ The font style of the title.
     <kendo:chart-pane-title font="font">
     </kendo:chart-pane-title>
 
-### margin `Object`
+### margin `float`
 
-The margin of the title.
+The margin of the title. A numeric value will set all margins. Further configuration is available via [kendo:chart-pane-title-margin](#kendo-chart-pane-title-margin). 
 
 #### Example
     <kendo:chart-pane-title margin="margin">
@@ -51,7 +50,7 @@ The margin of the title.
 
 ### position `String`
 
-The position of the title.
+The position of the title.The supported values are:
 
 #### Example
     <kendo:chart-pane-title position="position">
@@ -67,7 +66,7 @@ The text of the title.
 
 ### visible `boolean`
 
-The visibility of the title.
+If set to true the chart will display the pane title. By default the pane title is visible.
 
 #### Example
     <kendo:chart-pane-title visible="visible">
@@ -86,5 +85,17 @@ More documentation is available at [kendo:chart-pane-title-border](chart/pane-ti
 
     <kendo:chart-pane-title>
         <kendo:chart-pane-title-border></kendo:chart-pane-title-border>
+    </kendo:chart-pane-title>
+
+### kendo:chart-pane-title-margin
+
+The margin of the title. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-pane-title-margin](chart/pane-title-margin).
+
+#### Example
+
+    <kendo:chart-pane-title>
+        <kendo:chart-pane-title-margin></kendo:chart-pane-title-margin>
     </kendo:chart-pane-title>
 

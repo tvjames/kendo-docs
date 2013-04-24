@@ -13,7 +13,7 @@ A PHP class representing the border setting of ChartCategoryAxisItemLabels.
 ## Methods
 
 ### color
-The color of the border. Any valid CSS color string will work here, including hex and rgb.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder`
@@ -31,7 +31,7 @@ The color of the border. Any valid CSS color string will work here, including he
     ?>
 
 ### dashType
-The dash type of the border.
+The dash type of the border.The following dash types are supported:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder`
@@ -49,7 +49,7 @@ The dash type of the border.
     ?>
 
 ### width
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder`

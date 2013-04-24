@@ -82,6 +82,7 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 ### change
 Fires when the value has been changed.
+For additional information check the [change](/api/web/multiselect#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -117,6 +118,7 @@ Fires when the value has been changed.
 
 ### close
 Fires when the drop-down list is closed
+For additional information check the [close](/api/web/multiselect#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -152,6 +154,7 @@ Fires when the drop-down list is closed
 
 ### dataBound
 Fires when the multiselect has received data from the data source.
+For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -412,6 +415,7 @@ Specifies the minimum characters that should be typed before the multiselect act
 
 ### open
 Fires when the drop-down list is opened
+For additional information check the [open](/api/web/multiselect#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -465,6 +469,7 @@ A string that appears in the textbox when the multiselect has no value.
 
 ### select
 Triggered when a Li element is selected.
+For additional information check the [select](/api/web/multiselect#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\MultiSelect`

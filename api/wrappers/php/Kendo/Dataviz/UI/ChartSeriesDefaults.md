@@ -13,8 +13,7 @@ A PHP class representing the seriesDefaults setting of Chart.
 ## Methods
 
 ### area
-The area configuration options.
-The default options for all area series. For more details see the series options.
+The area chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -26,7 +25,7 @@ The default options for all area series. For more details see the series options
 
 
 ### bar
-The default options for all bar series. For more details see the series options.
+The bar chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -67,8 +66,7 @@ The border of the series.
     ?>
 
 ### bubble
-The bubble configuration options.
-The default options for all bubble series. For more details see the series options.
+The bubble chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -80,8 +78,7 @@ The default options for all bubble series. For more details see the series optio
 
 
 ### candlestick
-The candlestick configuration options.
-The default options for all candlestick series. For more details see the series options.
+The candlestick chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -93,8 +90,7 @@ The default options for all candlestick series. For more details see the series 
 
 
 ### column
-The column configuration options.
-The default options for all column series. For more details see the series options.
+The column chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -106,8 +102,7 @@ The default options for all column series. For more details see the series optio
 
 
 ### donut
-The donut configuration options.
-The default options for all donut series. For more details see the series options.
+The donut chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -138,7 +133,7 @@ The distance between category clusters.
 
 ### labels
 
-Configures the series data labels.
+The chart series label configuration.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -166,8 +161,7 @@ Configures the series data labels.
     ?>
 
 ### line
-The line configuration options.
-The default options for all line series. For more details see the series options.
+The line chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -179,8 +173,7 @@ The default options for all line series. For more details see the series options
 
 
 ### ohlc
-The ohlc configuration options.
-The default options for all ohlc series. For more details see the series options.
+The ohlc chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -192,20 +185,36 @@ The default options for all ohlc series. For more details see the series options
 
 
 ### overlay
-The effects overlay.
+
+The chart series overlay options.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
 
 #### Parameters
 
-##### $value ``
+##### $value `\Kendo\Dataviz\UI\ChartSeriesDefaultsOverlay|array`
 
 
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsOverlay](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsOverlay)
+    <?php
+    $seriesDefaults = new \Kendo\Dataviz\UI\ChartSeriesDefaults();
+    $overlay = new \Kendo\Dataviz\UI\ChartSeriesDefaultsOverlay();
+    $gradient = 'value';
+    $overlay->gradient($gradient);
+    $seriesDefaults->overlay($overlay);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $seriesDefaults = new \Kendo\Dataviz\UI\ChartSeriesDefaults();
+    $gradient = 'value';
+    $seriesDefaults->overlay(array('gradient' => $gradient));
+    ?>
 
 ### pie
-The pie configuration options.
-The default options for all pie series. For more details see the series options.
+The pie chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -217,8 +226,7 @@ The default options for all pie series. For more details see the series options.
 
 
 ### scatter
-The scatter configuration options.
-The default options for all scatter series. For more details see the series options.
+The scatter chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -230,8 +238,7 @@ The default options for all scatter series. For more details see the series opti
 
 
 ### scatterLine
-The scatterLine configuration options.
-The default options for all scatterLine series. For more details see the series options.
+The scatterLine chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -243,7 +250,7 @@ The default options for all scatterLine series. For more details see the series 
 
 
 ### spacing
-Space between bars.
+The space between the chart series as proportion of the series width.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -261,7 +268,7 @@ Space between bars.
     ?>
 
 ### stack
-A value indicating if the series should be stacked.
+A value indicating if the series should be stacked. String value indicates that the series should be stacked in a group with the specified name.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -280,7 +287,7 @@ A value indicating if the series should be stacked.
 
 ### tooltip
 
-The data point tooltip configuration options.
+The chart series tooltip configuration options.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -308,8 +315,7 @@ The data point tooltip configuration options.
     ?>
 
 ### verticalArea
-The vertical area configuration options.
-The default options for all vertical area series. For more details see the series options.
+The verticalArea chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`
@@ -321,8 +327,7 @@ The default options for all vertical area series. For more details see the serie
 
 
 ### verticalLine
-The vertical line configuration options.
-The default options for all vertical line series. For more details see the series options.
+The verticalLine chart series options. Accepts all values supported by the series option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaults`

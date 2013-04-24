@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-sortable\>
 
-Defines whether grid columns are sortable.
+If set to true the user could sort the grid by clicking the column header cells. By default sorting is disabled.Can be set to a JavaScript object which represents the sorting configuration.
 
 #### Example
     <kendo:grid>
@@ -18,7 +18,7 @@ Defines whether grid columns are sortable.
 
 ### allowUnsort `boolean`
 
-Defines whether column can have unsorted state.
+If set to true the user can get the grid in unsorted state by clicking the sorted column header.
 
 #### Example
     <kendo:grid-sortable allowUnsort="allowUnsort">
@@ -26,7 +26,7 @@ Defines whether column can have unsorted state.
 
 ### mode `String`
 
-Defines sorting mode. Possible values:
+The sorting mode. If set to "single" the user can sort by one column. If set to "multiple" the user can sort by one column.
 
 #### Example
     <kendo:grid-sortable mode="mode">

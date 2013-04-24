@@ -13,7 +13,7 @@ A PHP class representing the border setting of ChartSeriesItemHighlight.
 ## Methods
 
 ### color
-The border color.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder`
@@ -31,7 +31,7 @@ The border color.
     ?>
 
 ### opacity
-The border opacity.
+The opacity of the border. By default the border is opaque.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder`
@@ -49,7 +49,7 @@ The border opacity.
     ?>
 
 ### width
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder`

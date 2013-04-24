@@ -51,7 +51,7 @@ Adds one or more DataSourceGroupItemAggregate to the DataSourceGroupItem.
     ?>
 
 ### dir
-Specifies the order of the groupped items.
+The sort order of the group. The supported values are "asc" (ascending order) and "desc" (descending order). The default sort order is ascending.
 
 #### Returns
 `\Kendo\Data\DataSourceGroupItem`
@@ -69,7 +69,7 @@ Specifies the order of the groupped items.
     ?>
 
 ### field
-Specifies the field to group by.
+The data item field to group by.
 
 #### Returns
 `\Kendo\Data\DataSourceGroupItem`

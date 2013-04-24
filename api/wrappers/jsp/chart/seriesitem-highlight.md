@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-highlight\>
 
-Configures the appearance of highlighted points.
+The chart series highlighting configuration options.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ Configures the appearance of highlighted points.
 
 ### color `String`
 
-The highlight color.** Available only for pie series **
+The highlight color. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-highlight color="color">
@@ -26,7 +26,7 @@ The highlight color.** Available only for pie series **
 
 ### opacity `float`
 
-The opacity of the highlighted points.** Applicable to bubble, pie, candlestick and ohlc series. **
+The opacity of the highlighted points.
 
 #### Example
     <kendo:chart-seriesItem-highlight opacity="opacity">
@@ -34,7 +34,8 @@ The opacity of the highlighted points.** Applicable to bubble, pie, candlestick 
 
 ### visible `boolean`
 
-A value indicating if the series points should be highlighted.
+If set to true the chart will highlight the series when the user hovers it with the mouse.
+By default chart series highlighting is enabled.
 
 #### Example
     <kendo:chart-seriesItem-highlight visible="visible">
@@ -45,7 +46,7 @@ A value indicating if the series points should be highlighted.
 
 ### kendo:chart-seriesItem-highlight-border
 
-The border of highlighted points. The color is computed automatically from the base point color.** Applicable to bubble, pie, candlestick and ohlc series. **
+The border of the highlighted chart series. The color is computed automatically from the base point color.
 
 More documentation is available at [kendo:chart-seriesItem-highlight-border](chart/seriesitem-highlight-border).
 
@@ -57,7 +58,7 @@ More documentation is available at [kendo:chart-seriesItem-highlight-border](cha
 
 ### kendo:chart-seriesItem-highlight-line
 
-Line options for highlighted points. The color is computed automatically from the base point color.** Available only for candlestick series **
+The line of the highlighted chart series. The color is computed automatically from the base point color.
 
 More documentation is available at [kendo:chart-seriesItem-highlight-line](chart/seriesitem-highlight-line).
 

@@ -35,6 +35,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
 ### culture `String`
 
 Culture to use for formatting the dates. See Globalization for more information.
+It uses the global culture by default.
 
 #### Example
     <kendo:sparkline-categoryAxisItem-labels culture="culture">
@@ -156,6 +157,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-labels-bord
 The label template.
 Template variables:
 
+
 #### Example
     <kendo:sparkline-categoryAxisItem-labels template="handle_template">
     </kendo:sparkline-categoryAxisItem-labels>
@@ -171,6 +173,7 @@ Template variables:
 
 The label template.
 Template variables:
+
 
 #### Example
     <kendo:sparkline-categoryAxisItem-labels>

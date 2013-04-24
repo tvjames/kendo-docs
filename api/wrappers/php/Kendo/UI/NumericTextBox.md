@@ -35,6 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the value is changed
+For additional information check the [change](/api/web/numerictextbox#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`
@@ -196,6 +197,7 @@ Specifies the text displayed when the input is empty.
 
 ### spin
 Fires when the value is changed from the spin buttons
+For additional information check the [spin](/api/web/numerictextbox#events-spin) event documentation.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`

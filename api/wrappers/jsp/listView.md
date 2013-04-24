@@ -50,7 +50,7 @@ Indicates whether paging is enabled/disabled. Further configuration is available
     <kendo:listView pageable="pageable">
     </kendo:listView>
 
-### selectable `String`
+### selectable `Object`
 
 Indicates whether selection is enabled/disabled. Possible values:
 
@@ -96,6 +96,9 @@ More documentation is available at [kendo:listView-pageable](listview/pageable).
 
 Raised when the user clicks the "cancel" button.
 
+
+For additional information check the [cancel](/api/web/listview#events-cancel) event documentation.
+
 #### Example
     <kendo:listView cancel="handle_cancel">
     </kendo:listView>
@@ -108,6 +111,9 @@ Raised when the user clicks the "cancel" button.
 ### change `String`
 
 Fires when the list view selection has changed.
+
+
+For additional information check the [change](/api/web/listview#events-change) event documentation.
 
 #### Example
     <kendo:listView change="handle_change">
@@ -123,6 +129,9 @@ Fires when the list view selection has changed.
 Fires when the list view has received data from the data source.
 and is about to render it.
 
+
+For additional information check the [dataBound](/api/web/listview#events-dataBound) event documentation.
+
 #### Example
     <kendo:listView dataBound="handle_dataBound">
     </kendo:listView>
@@ -135,6 +144,9 @@ and is about to render it.
 ### dataBinding `String`
 
 Fires when the grid is about to be rendered.
+
+
+For additional information check the [dataBinding](/api/web/listview#events-dataBinding) event documentation.
 
 #### Example
     <kendo:listView dataBinding="handle_dataBinding">
@@ -149,6 +161,9 @@ Fires when the grid is about to be rendered.
 
 Fires when the list view enters edit mode.
 
+
+For additional information check the [edit](/api/web/listview#events-edit) event documentation.
+
 #### Example
     <kendo:listView edit="handle_edit">
     </kendo:listView>
@@ -161,6 +176,9 @@ Fires when the list view enters edit mode.
 ### remove `String`
 
 Fires before the list view item is removed.
+
+
+For additional information check the [remove](/api/web/listview#events-remove) event documentation.
 
 #### Example
     <kendo:listView remove="handle_remove">
@@ -177,6 +195,9 @@ Fires before the list view item is removed.
 
 Raised when the user clicks the "cancel" button.
 
+
+For additional information check the [cancel](/api/web/listview#events-cancel) event documentation.
+
 #### Example
     <kendo:listView>
         <kendo:listView-cancel>
@@ -191,6 +212,9 @@ Raised when the user clicks the "cancel" button.
 ### kendo:listView-change
 
 Fires when the list view selection has changed.
+
+
+For additional information check the [change](/api/web/listview#events-change) event documentation.
 
 #### Example
     <kendo:listView>
@@ -208,6 +232,9 @@ Fires when the list view selection has changed.
 Fires when the list view has received data from the data source.
 and is about to render it.
 
+
+For additional information check the [dataBound](/api/web/listview#events-dataBound) event documentation.
+
 #### Example
     <kendo:listView>
         <kendo:listView-dataBound>
@@ -222,6 +249,9 @@ and is about to render it.
 ### kendo:listView-dataBinding
 
 Fires when the grid is about to be rendered.
+
+
+For additional information check the [dataBinding](/api/web/listview#events-dataBinding) event documentation.
 
 #### Example
     <kendo:listView>
@@ -238,6 +268,9 @@ Fires when the grid is about to be rendered.
 
 Fires when the list view enters edit mode.
 
+
+For additional information check the [edit](/api/web/listview#events-edit) event documentation.
+
 #### Example
     <kendo:listView>
         <kendo:listView-edit>
@@ -252,6 +285,9 @@ Fires when the list view enters edit mode.
 ### kendo:listView-remove
 
 Fires before the list view item is removed.
+
+
+For additional information check the [remove](/api/web/listview#events-remove) event documentation.
 
 #### Example
     <kendo:listView>

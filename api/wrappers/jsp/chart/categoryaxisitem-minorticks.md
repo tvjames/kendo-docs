@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-categoryAxisItem-minorTicks\>
 
-The minor ticks of the axis.
+The configuration of the category axis minor ticks.
 
 #### Example
     <kendo:chart-categoryAxisItem>
@@ -16,10 +16,17 @@ The minor ticks of the axis.
 
 ## Configuration Attributes
 
+### color `String`
+
+The color of the category axis minor ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example
+    <kendo:chart-categoryAxisItem-minorTicks color="color">
+    </kendo:chart-categoryAxisItem-minorTicks>
+
 ### size `float`
 
-The axis minor tick size. This is the length of the line in pixels that is drawn to indicate the tick
-on the chart.
+The length of the tick line in pixels.
 
 #### Example
     <kendo:chart-categoryAxisItem-minorTicks size="size">
@@ -27,9 +34,17 @@ on the chart.
 
 ### visible `boolean`
 
-The visibility of the minor ticks.
+If set to true the chart will display the category axis minor ticks. By default the category axis minor ticks are visible.
 
 #### Example
     <kendo:chart-categoryAxisItem-minorTicks visible="visible">
+    </kendo:chart-categoryAxisItem-minorTicks>
+
+### width `float`
+
+The width of the minor ticks in pixels.
+
+#### Example
+    <kendo:chart-categoryAxisItem-minorTicks width="width">
     </kendo:chart-categoryAxisItem-minorTicks>
 

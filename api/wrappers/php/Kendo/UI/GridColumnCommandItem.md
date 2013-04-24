@@ -13,7 +13,7 @@ A PHP class representing the commandItem setting of GridColumnCommand.
 ## Methods
 
 ### className
-The CSS class of the command.
+The CSS class applied to the command button.
 
 #### Returns
 `\Kendo\UI\GridColumnCommandItem`
@@ -31,7 +31,7 @@ The CSS class of the command.
     ?>
 
 ### click
-The JavaScript function executed when the user clicks the command button.
+The JavaScript function executed when the user clicks the command button. The function receives a jQuery Event as an argument.The function context (available via the this keyword) will be set to the grid instance.
 
 #### Returns
 `\Kendo\UI\GridColumnCommandItem`
@@ -49,7 +49,7 @@ The JavaScript function executed when the user clicks the command button.
     ?>
 
 ### name
-The unique name of the command. The supported built-in commands are: "create", "cancel", "save", "destroy".
+The name of the command. The built-in commands are "edit" and "destroy". Can be set to a custom value.
 
 #### Returns
 `\Kendo\UI\GridColumnCommandItem`
@@ -67,7 +67,7 @@ The unique name of the command. The supported built-in commands are: "create", "
     ?>
 
 ### text
-The text displayed by the command.
+The text displayed by the command button. If not set the name option is used as the button text.
 
 #### Returns
 `\Kendo\UI\GridColumnCommandItem`

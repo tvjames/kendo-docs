@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-tooltip\>
 
-The data point tooltip configuration options.
+The chart series tooltip configuration options.
 
 #### Example
     <kendo:chart>
@@ -18,7 +18,7 @@ The data point tooltip configuration options.
 
 ### background `String`
 
-The background color of the tooltip. The default is determined from the series color.
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-tooltip background="background">
@@ -26,7 +26,7 @@ The background color of the tooltip. The default is determined from the series c
 
 ### color `String`
 
-The text color of the tooltip. The default is the same as the series labels color.
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-tooltip color="color">
@@ -42,15 +42,15 @@ The tooltip font.
 
 ### format `String`
 
-The tooltip format.
+The format of the labels. Uses kendo.format.Format placeholders:
 
 #### Example
     <kendo:chart-tooltip format="format">
     </kendo:chart-tooltip>
 
-### padding `Object`
+### padding `float`
 
-The padding of the tooltip.
+The padding of the tooltip. A numeric value will set all paddings. Further configuration is available via [kendo:chart-tooltip-padding](#kendo-chart-tooltip-padding). 
 
 #### Example
     <kendo:chart-tooltip padding="padding">
@@ -58,7 +58,7 @@ The padding of the tooltip.
 
 ### shared `boolean`
 
-A value indicating if the tooltip should be shared.
+If set to true the chart will display a single tooltip for every category.
 
 #### Example
     <kendo:chart-tooltip shared="shared">
@@ -66,8 +66,7 @@ A value indicating if the tooltip should be shared.
 
 ### sharedTemplate `String`
 
-The shared tooltip template.
-Template variables:
+The template which renders the shared tooltip.The fields which can be used in the template are:
 
 #### Example
     <kendo:chart-tooltip sharedTemplate="sharedTemplate">
@@ -75,8 +74,7 @@ Template variables:
 
 ### template `String`
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
 
 #### Example
     <kendo:chart-tooltip template="template">
@@ -84,7 +82,7 @@ Template variables:
 
 ### visible `boolean`
 
-A value indicating if the tooltip should be displayed.
+If set to true the chart will display the series tooltip. By default the series tooltip is not displayed.
 
 #### Example
     <kendo:chart-tooltip visible="visible">
@@ -105,13 +103,39 @@ More documentation is available at [kendo:chart-tooltip-border](chart/tooltip-bo
         <kendo:chart-tooltip-border></kendo:chart-tooltip-border>
     </kendo:chart-tooltip>
 
+### kendo:chart-tooltip-padding
+
+The padding of the tooltip. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-tooltip-padding](chart/tooltip-padding).
+
+#### Example
+
+    <kendo:chart-tooltip>
+        <kendo:chart-tooltip-padding></kendo:chart-tooltip-padding>
+    </kendo:chart-tooltip>
+
 
 ## Event Attributes
 
+### sharedTemplate `String`
+
+The template which renders the shared tooltip.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:chart-tooltip sharedTemplate="handle_sharedTemplate">
+    </kendo:chart-tooltip>
+    <script>
+        function handle_sharedTemplate(e) {
+            // Code to handle the sharedTemplate event.
+        }
+    </script>
+
 ### template `String`
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-tooltip template="handle_template">
@@ -124,10 +148,26 @@ Template variables:
 
 ## Event Tags
 
+### kendo:chart-tooltip-sharedTemplate
+
+The template which renders the shared tooltip.The fields which can be used in the template are:
+
+
+#### Example
+    <kendo:chart-tooltip>
+        <kendo:chart-tooltip-sharedTemplate>
+            <script>
+                function(e) {
+                    // Code to handle the sharedTemplate event.
+                }
+            </script>
+        </kendo:chart-tooltip-sharedTemplate>
+    </kendo:chart-tooltip>
+
 ### kendo:chart-tooltip-template
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-tooltip>

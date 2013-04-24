@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-yAxisItem-line\>
 
-Configures the axis line. This will also affect the major and minor ticks, but not the grid lines.
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
 #### Example
     <kendo:chart-yAxisItem>
@@ -18,8 +18,7 @@ Configures the axis line. This will also affect the major and minor ticks, but n
 
 ### color `String`
 
-The color of the line. This will also effect the major and minor ticks, but
-not the grid lines.
+The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-yAxisItem-line color="color">
@@ -27,7 +26,7 @@ not the grid lines.
 
 ### dashType `String`
 
-The dash type of the line.
+The dash type of the line.The following dash types are supported:
 
 #### Example
     <kendo:chart-yAxisItem-line dashType="dashType">
@@ -35,7 +34,7 @@ The dash type of the line.
 
 ### visible `boolean`
 
-The visibility of the line.
+If set to true the chart will display the y axis lines. By default the y axis lines are visible.
 
 #### Example
     <kendo:chart-yAxisItem-line visible="visible">
@@ -43,8 +42,8 @@ The visibility of the line.
 
 ### width `float`
 
-The width of the line. This will also effect the major and minor ticks, but
-not the grid lines.
+The width of the line in pixels. Also affects the major and minor ticks, but not the grid lines.
+#### Example - set the scatter chart y axis line width
 
 #### Example
     <kendo:chart-yAxisItem-line width="width">

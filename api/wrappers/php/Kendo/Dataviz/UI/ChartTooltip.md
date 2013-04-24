@@ -13,7 +13,7 @@ A PHP class representing the tooltip setting of Chart.
 ## Methods
 
 ### background
-The background color of the tooltip. The default is determined from the series color.
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
@@ -60,7 +60,7 @@ The border configuration options.
     ?>
 
 ### color
-The text color of the tooltip. The default is the same as the series labels color.
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
@@ -96,7 +96,7 @@ The tooltip font.
     ?>
 
 ### format
-The tooltip format.
+The format of the labels. Uses kendo.format.Format placeholders:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
@@ -114,14 +114,16 @@ The tooltip format.
     ?>
 
 ### padding
-The padding of the tooltip.
+
+The padding of the tooltip. A numeric value will set all paddings.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartTooltipPadding|array`
+
 
 
 
@@ -131,8 +133,26 @@ The padding of the tooltip.
     $tooltip->padding(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartTooltipPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartTooltipPadding)
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartTooltip();
+    $padding = new \Kendo\Dataviz\UI\ChartTooltipPadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $tooltip->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartTooltip();
+    $bottom = 1;
+    $tooltip->padding(array('bottom' => $bottom));
+    ?>
+
 ### shared
-A value indicating if the tooltip should be shared.
+If set to true the chart will display a single tooltip for every category.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
@@ -150,27 +170,31 @@ A value indicating if the tooltip should be shared.
     ?>
 
 ### sharedTemplate
-The shared tooltip template.
-Template variables:
+The template which renders the shared tooltip.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $tooltip = new \Kendo\Dataviz\UI\ChartTooltip();
     $tooltip->sharedTemplate('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $tooltip = new \Kendo\Dataviz\UI\ChartTooltip();
+    $tooltip->sharedTemplate(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### template
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`
@@ -194,7 +218,7 @@ Template variables:
     ?>
 
 ### visible
-A value indicating if the tooltip should be displayed.
+If set to true the chart will display the series tooltip. By default the series tooltip is not displayed.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartTooltip`

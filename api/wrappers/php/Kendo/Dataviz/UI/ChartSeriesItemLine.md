@@ -13,7 +13,7 @@ A PHP class representing the line setting of ChartSeriesItem.
 ## Methods
 
 ### color
-The line color.
+The line color. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemLine`
@@ -31,7 +31,7 @@ The line color.
     ?>
 
 ### opacity
-The line opacity.
+The line opacity. By default the line is opaque.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemLine`
@@ -49,7 +49,7 @@ The line opacity.
     ?>
 
 ### width
-The line width.
+The line width in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemLine`

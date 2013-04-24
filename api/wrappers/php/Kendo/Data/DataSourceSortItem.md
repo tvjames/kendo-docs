@@ -13,7 +13,7 @@ A PHP class representing the sortItem setting of DataSourceSort.
 ## Methods
 
 ### dir
-Sets the sort direction. Possible values are: "asc", "desc", null. If null is set, the sort expression is removed.
+The sort order (direction). The supported values are "asc" (ascending order) and "desc" (descending order).
 
 #### Returns
 `\Kendo\Data\DataSourceSortItem`
@@ -31,7 +31,7 @@ Sets the sort direction. Possible values are: "asc", "desc", null. If null is se
     ?>
 
 ### field
-Sets the field to sort on.
+The field by which the data items are sorted.
 
 #### Returns
 `\Kendo\Data\DataSourceSortItem`

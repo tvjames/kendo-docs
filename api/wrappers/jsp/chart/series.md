@@ -7,8 +7,8 @@ publish: true
 
 # \<kendo:chart-series\>
 
-Array of series definitions.The series type is determined by the value of the type field.
-If a type value is missing, the type is assumed to be the one specified in seriesDefaults.Each series type has a different set of options.
+The configuration of the chart series.The series type is determined by the value of the type field.
+If a type value is missing, the type is assumed to be the one specified in seriesDefaults.
 
 #### Example
     <kendo:chart>
@@ -22,8 +22,8 @@ If a type value is missing, the type is assumed to be the one specified in serie
 
 ### kendo:chart-seriesItem
 
-Array of series definitions.The series type is determined by the value of the type field.
-If a type value is missing, the type is assumed to be the one specified in seriesDefaults.Each series type has a different set of options.
+The configuration of the chart series.The series type is determined by the value of the type field.
+If a type value is missing, the type is assumed to be the one specified in seriesDefaults.
 
 More documentation is available at [kendo:chart-seriesItem](chart/seriesitem).
 

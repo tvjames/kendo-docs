@@ -105,6 +105,9 @@ Specifies the value of the NumericTextBox widget.
 
 Fires when the value is changed
 
+
+For additional information check the [change](/api/web/numerictextbox#events-change) event documentation.
+
 #### Example
     <kendo:numericTextBox change="handle_change">
     </kendo:numericTextBox>
@@ -117,6 +120,9 @@ Fires when the value is changed
 ### spin `String`
 
 Fires when the value is changed from the spin buttons
+
+
+For additional information check the [spin](/api/web/numerictextbox#events-spin) event documentation.
 
 #### Example
     <kendo:numericTextBox spin="handle_spin">
@@ -133,6 +139,9 @@ Fires when the value is changed from the spin buttons
 
 Fires when the value is changed
 
+
+For additional information check the [change](/api/web/numerictextbox#events-change) event documentation.
+
 #### Example
     <kendo:numericTextBox>
         <kendo:numericTextBox-change>
@@ -147,6 +156,9 @@ Fires when the value is changed
 ### kendo:numericTextBox-spin
 
 Fires when the value is changed from the spin buttons
+
+
+For additional information check the [spin](/api/web/numerictextbox#events-spin) event documentation.
 
 #### Example
     <kendo:numericTextBox>

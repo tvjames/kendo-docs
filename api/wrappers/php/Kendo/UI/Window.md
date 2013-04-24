@@ -54,6 +54,7 @@ and "Maximize".
 
 ### activate
 Triggered when a Window has finished its opening animation.
+For additional information check the [activate](/api/web/window#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -144,6 +145,7 @@ Note that this does not constrain the window dragging within the given element.
 
 ### close
 Triggered when a Window is closed (by a user or through the close() method).
+For additional information check the [close](/api/web/window#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -197,6 +199,7 @@ Sets the HTML content of the Window.
 
 ### deactivate
 Triggered when a Window has finished its closing animation.
+For additional information check the [deactivate](/api/web/window#events-deactivate) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -232,6 +235,7 @@ Triggered when a Window has finished its closing animation.
 
 ### dragend
 Triggered when a Window has been moved by a user.
+For additional information check the [dragend](/api/web/window#events-dragend) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -286,6 +290,7 @@ Window.
 
 ### dragstart
 Triggered when the user starts to move the window.
+For additional information check the [dragstart](/api/web/window#events-dragstart) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -336,6 +341,7 @@ Stops output bufferring and sets the preceding markup as the content of the Wind
 
 ### error
 Triggered when an AJAX request for content fails.
+For additional information check the [error](/api/web/window#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -497,6 +503,7 @@ Specifies whether the window should show a modal overlay over the page.
 
 ### open
 Triggered when a Window is opened (i.e. the open() method is called).
+For additional information check the [open](/api/web/window#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -534,6 +541,7 @@ Triggered when a Window is opened (i.e. the open() method is called).
 Triggered when the content of a Window has finished loading via AJAX,
 when the window iframe has finished loading, or when the refresh button
 has been clicked on a window with static content.
+For additional information check the [refresh](/api/web/window#events-refresh) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -588,6 +596,7 @@ Window.
 
 ### resize
 Triggered when a Window has been resized by a user.
+For additional information check the [resize](/api/web/window#events-resize) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`

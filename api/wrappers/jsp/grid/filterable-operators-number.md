@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable-operators-number\>
 
-Enable/Disable and set the text of filter operators for fields of type number.
+The texts of the filter operators displayed for columns bound to number fields.
 
 #### Example
     <kendo:grid-filterable-operators>
@@ -18,7 +18,7 @@ Enable/Disable and set the text of filter operators for fields of type number.
 
 ### eq `String`
 
-Enable/Disable and set the text of the "Is equal to" filter option for columns with number values.
+The text of the "equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-number eq="eq">
@@ -26,7 +26,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for columns w
 
 ### gt `String`
 
-Enable/Disable and set the text of the "Is greater than" filter option for columns with number values.
+The text of the "greater than" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-number gt="gt">
@@ -34,7 +34,7 @@ Enable/Disable and set the text of the "Is greater than" filter option for colum
 
 ### gte `String`
 
-Enable/Disable and set the text of the "Is greater than or equal to" filter option for columns with number values.
+The text of the "greater than or equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-number gte="gte">
@@ -42,7 +42,7 @@ Enable/Disable and set the text of the "Is greater than or equal to" filter opti
 
 ### lt `String`
 
-Enable/Disable and set the text of the "Is less than" filter option for columns with number values.
+The text of the "less than" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-number lt="lt">
@@ -50,7 +50,7 @@ Enable/Disable and set the text of the "Is less than" filter option for columns 
 
 ### lte `String`
 
-Enable/Disable and set the text of the "Is less than or equal to" filter option for columns with number values.
+The text of the "less than or equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-number lte="lte">
@@ -58,7 +58,7 @@ Enable/Disable and set the text of the "Is less than or equal to" filter option 
 
 ### neq `String`
 
-Enable/Disable and set the text of the "Is not equal to" filter option for columns with number values.
+The text of the "not equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-number neq="neq">

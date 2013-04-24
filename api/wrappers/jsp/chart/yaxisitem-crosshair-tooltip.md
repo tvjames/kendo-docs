@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-yAxisItem-crosshair-tooltip\>
 
-The crosshar tooltip configuration options.
+The crosshar tooltip options.
 
 #### Example
     <kendo:chart-yAxisItem-crosshair>
@@ -18,7 +18,7 @@ The crosshar tooltip configuration options.
 
 ### background `String`
 
-The background color of the tooltip.
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip background="background">
@@ -26,7 +26,7 @@ The background color of the tooltip.
 
 ### color `String`
 
-The text color of the tooltip.
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip color="color">
@@ -42,15 +42,15 @@ The tooltip font.
 
 ### format `String`
 
-The tooltip format.
+The format used to display the tooltip. Uses kendo.format. Contains one placeholder ("{0}") which represents the value value.
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip format="format">
     </kendo:chart-yAxisItem-crosshair-tooltip>
 
-### padding `Object`
+### padding `float`
 
-The padding of the tooltip.
+The padding of the crosshair tooltip. A numeric value will set all paddings. Further configuration is available via [kendo:chart-yAxisItem-crosshair-tooltip-padding](#kendo-chart-yAxisItem-crosshair-tooltip-padding). 
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip padding="padding">
@@ -58,8 +58,7 @@ The padding of the tooltip.
 
 ### template `String`
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip template="template">
@@ -67,7 +66,7 @@ Template variables:
 
 ### visible `boolean`
 
-A value indicating if the tooltip should be displayed.
+If set to true the chart will display the scatter chart y axis crosshair tooltip. By default the scatter chart y axis crosshair tooltip is not visible.
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip visible="visible">
@@ -78,7 +77,7 @@ A value indicating if the tooltip should be displayed.
 
 ### kendo:chart-yAxisItem-crosshair-tooltip-border
 
-The border configuration options.
+The border options.
 
 More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-border](chart/yaxisitem-crosshair-tooltip-border).
 
@@ -88,13 +87,25 @@ More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-bord
         <kendo:chart-yAxisItem-crosshair-tooltip-border></kendo:chart-yAxisItem-crosshair-tooltip-border>
     </kendo:chart-yAxisItem-crosshair-tooltip>
 
+### kendo:chart-yAxisItem-crosshair-tooltip-padding
+
+The padding of the crosshair tooltip. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-padding](chart/yaxisitem-crosshair-tooltip-padding).
+
+#### Example
+
+    <kendo:chart-yAxisItem-crosshair-tooltip>
+        <kendo:chart-yAxisItem-crosshair-tooltip-padding></kendo:chart-yAxisItem-crosshair-tooltip-padding>
+    </kendo:chart-yAxisItem-crosshair-tooltip>
+
 
 ## Event Attributes
 
 ### template `String`
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip template="handle_template">
@@ -109,8 +120,8 @@ Template variables:
 
 ### kendo:chart-yAxisItem-crosshair-tooltip-template
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-yAxisItem-crosshair-tooltip>

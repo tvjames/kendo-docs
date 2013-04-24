@@ -13,8 +13,7 @@ A PHP class representing the labels setting of ChartSeriesDefaults.
 ## Methods
 
 ### background
-The background color of the labels. Any valid CSS color string will work here,
-including hex and rgb.
+The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
@@ -61,8 +60,7 @@ The border of the labels.
     ?>
 
 ### color
-The text color of the labels. Any valid CSS color string will work here, inlcuding hex
-and rgb.
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
@@ -81,7 +79,6 @@ and rgb.
 
 ### font
 The font style of the labels.
-labels
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
@@ -99,7 +96,7 @@ labels
     ?>
 
 ### format
-The format of the labels.
+The format of the labels. Uses kendo.format.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
@@ -117,14 +114,16 @@ The format of the labels.
     ?>
 
 ### margin
-The margin of the labels.
+
+The margin of the labels. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsMargin|array`
+
 
 
 
@@ -134,15 +133,35 @@ The margin of the labels.
     $labels->margin(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsMargin)
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
+    $margin = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsMargin();
+    $bottom = 1;
+    $margin->bottom($bottom);
+    $labels->margin($margin);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
+    $bottom = 1;
+    $labels->margin(array('bottom' => $bottom));
+    ?>
+
 ### padding
-The padding of the labels.
+
+The padding of the labels. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsPadding|array`
+
 
 
 
@@ -152,9 +171,26 @@ The padding of the labels.
     $labels->padding(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsPadding)
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
+    $padding = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsPadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $labels->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
+    $bottom = 1;
+    $labels->padding(array('bottom' => $bottom));
+    ?>
+
 ### template
-The label template.
-Template variables:
+The template which renders the chart series label.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`
@@ -178,7 +214,7 @@ Template variables:
     ?>
 
 ### visible
-The visibility of the labels.
+If set to true the chart will display the series labels. By default chart series labels are not displayed.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabels`

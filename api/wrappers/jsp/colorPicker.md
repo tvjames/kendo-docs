@@ -49,7 +49,7 @@ type="color"> does not support opacity.
     <kendo:colorPicker opacity="opacity">
     </kendo:colorPicker>
 
-### palette `String`
+### palette `Object`
 
 When a non-null palette argument is supplied, the drop-down will be
 a simple color picker.  The following are supported:If palette is missing or null, the widget will display the HSV
@@ -121,6 +121,9 @@ Fires when a color was selected, either by clicking on it (in the
 simple picker), by clicking ENTER or by pressing "Apply" in the HSV
 picker.
 
+
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
+
 #### Example
     <kendo:colorPicker change="handle_change">
     </kendo:colorPicker>
@@ -138,6 +141,9 @@ when the sliders in the HSV selector are dragged, but then pressing
 ESC would cancel the selection and the color will revert to the
 original value.
 
+
+For additional information check the [select](/api/web/colorpicker#events-select) event documentation.
+
 #### Example
     <kendo:colorPicker select="handle_select">
     </kendo:colorPicker>
@@ -151,6 +157,9 @@ original value.
 
 Fires when the picker popup is opening.
 
+
+For additional information check the [open](/api/web/colorpicker#events-open) event documentation.
+
 #### Example
     <kendo:colorPicker open="handle_open">
     </kendo:colorPicker>
@@ -163,6 +172,9 @@ Fires when the picker popup is opening.
 ### close `String`
 
 Fires when the picker popup is closing.
+
+
+For additional information check the [close](/api/web/colorpicker#events-close) event documentation.
 
 #### Example
     <kendo:colorPicker close="handle_close">
@@ -180,6 +192,9 @@ Fires when the picker popup is closing.
 Fires when a color was selected, either by clicking on it (in the
 simple picker), by clicking ENTER or by pressing "Apply" in the HSV
 picker.
+
+
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
 
 #### Example
     <kendo:colorPicker>
@@ -200,6 +215,9 @@ when the sliders in the HSV selector are dragged, but then pressing
 ESC would cancel the selection and the color will revert to the
 original value.
 
+
+For additional information check the [select](/api/web/colorpicker#events-select) event documentation.
+
 #### Example
     <kendo:colorPicker>
         <kendo:colorPicker-select>
@@ -215,6 +233,9 @@ original value.
 
 Fires when the picker popup is opening.
 
+
+For additional information check the [open](/api/web/colorpicker#events-open) event documentation.
+
 #### Example
     <kendo:colorPicker>
         <kendo:colorPicker-open>
@@ -229,6 +250,9 @@ Fires when the picker popup is opening.
 ### kendo:colorPicker-close
 
 Fires when the picker popup is closing.
+
+
+For additional information check the [close](/api/web/colorpicker#events-close) event documentation.
 
 #### Example
     <kendo:colorPicker>

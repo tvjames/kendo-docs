@@ -82,6 +82,7 @@ Controls whether to bind the widget on initialization.
 
 ### cascade
 Triggered when value of the widget is changed via API or user interaction.
+For additional information check the [cascade](/api/web/dropdownlist#events-cascade) event documentation.
 
 #### Returns
 `\Kendo\UI\DropDownList`
@@ -135,6 +136,7 @@ Use it to set the Id of the parent DropDownList.
 
 ### change
 Fires when the value has been changed.
+For additional information check the [change](/api/web/dropdownlist#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\DropDownList`
@@ -170,6 +172,7 @@ Fires when the value has been changed.
 
 ### close
 Fires when the drop-down list is closed
+For additional information check the [close](/api/web/dropdownlist#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\DropDownList`
@@ -205,6 +208,7 @@ Fires when the drop-down list is closed
 
 ### dataBound
 Fires when the drop-down list has received data from the data source.
+For additional information check the [dataBound](/api/web/dropdownlist#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\DropDownList`
@@ -393,6 +397,7 @@ Defines the initial selected item.
 
 ### open
 Fires when the drop-down list is opened
+For additional information check the [open](/api/web/dropdownlist#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\DropDownList`
@@ -447,6 +452,7 @@ Define the text of the default empty item. If the value is an object, then the w
 
 ### select
 Triggered when a Li element is selected.
+For additional information check the [select](/api/web/dropdownlist#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\DropDownList`

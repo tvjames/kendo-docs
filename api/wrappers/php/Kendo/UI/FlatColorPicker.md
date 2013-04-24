@@ -53,6 +53,7 @@ Specifies whether we should display the Apply / Cancel buttons.
 
 ### change
 Triggers when a new color has been selected.
+For additional information check the [change](/api/web/flatcolorpicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\FlatColorPicker`

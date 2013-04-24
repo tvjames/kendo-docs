@@ -80,6 +80,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
 
 ### culture
 Culture to use for formatting the dates. See Globalization for more information.
+By default it uses the global culture.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChartXAxisItemLabels`

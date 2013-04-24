@@ -13,8 +13,8 @@ A PHP class representing the schema setting of DataSource.
 ## Methods
 
 ### aggregates
-Specifies the field from the response which contains the aggregate results. If set to a function - the function will be called to
-return the aggregate results for the current response.Result should have the following format:i.e.
+The field from the response which contains the aggregate results. Can be set to a function which is called to
+return the aggregate results from the response.The result of the function should be a JavaScript object which contains the aggregate results for every fields in the following format:For example if the data source is configured like this:The aggregate results should have the following format:
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`
@@ -38,8 +38,8 @@ return the aggregate results for the current response.Result should have the fol
     ?>
 
 ### data
-Specifies the field from the response which contains the data items. If set to a function - the function will be called to
-return the data items for the current response.
+The field from the server response which contains the data items. Can be set to a functin which is called to
+return the data items for the response.
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`
@@ -63,8 +63,8 @@ return the data items for the current response.
     ?>
 
 ### errors
-Specifies the field from the response which contains any errors. If set to a function - the function will be called to
-return the errors for the current response (if present). If there are any errors the error event of the DataSource will be raised.
+The field from the server response which contains server-side errors. Can be set to a function which is called to
+return the errors for response. If there are any errors the error event will be fired.
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`
@@ -88,8 +88,8 @@ return the errors for the current response (if present). If there are any errors
     ?>
 
 ### groups
-Specifies the field from the response which contains the groups. If set to a function - the function will be called to
-return the groups for the current response.Used instead of the schema.data setting if remote grouping operation is executed.The result should have the following format:
+The field from the server response which contains the groups. Can be set to a function which is called to
+return the groups from the response.The result should have the following format:
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`
@@ -113,7 +113,7 @@ return the groups for the current response.Used instead of the schema.data setti
     ?>
 
 ### parse
-Executed before the server response is used. Appropriate for preprocessing or parsing of the server response.
+Executed before the server response is used. Use it to preprocess or parse the server response.
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`
@@ -131,8 +131,8 @@ Executed before the server response is used. Appropriate for preprocessing or pa
     ?>
 
 ### total
-Specifies the field from the response which contains the total number of data items. If set to a function - the function will be called to
-return the total number of data items for the current response.
+The field from the server response which contains the total number of data items. Can be set to a function which is called to
+return the total number of data items for the response.
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`
@@ -156,7 +156,7 @@ return the total number of data items for the current response.
     ?>
 
 ### type
-Specify the type of the response - XML or JSON. The only supported values are "xml" and "json".
+The type of the response. The supported values are "xml" and "json". By default the schema interprets the server response as JSON.
 
 #### Returns
 `\Kendo\Data\DataSourceSchema`

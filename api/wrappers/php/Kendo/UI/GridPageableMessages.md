@@ -13,7 +13,10 @@ A PHP class representing the messages setting of GridPageable.
 ## Methods
 
 ### display
-Defines the info text.
+The pager info text. Uses kendo.format.Contains three placeholders:
+- {0} - the first data item index
+- {1} - the last data item index
+- {2} - the total number of data items
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -31,7 +34,7 @@ Defines the info text.
     ?>
 
 ### _empty
-Defines the info text shown when there are no records to be displayed.
+The text displayed when the grid is empty.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -49,7 +52,7 @@ Defines the info text shown when there are no records to be displayed.
     ?>
 
 ### first
-Defines the text of the first page button tooltip.
+The tooltip of the button which goes to the first page.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -67,7 +70,7 @@ Defines the text of the first page button tooltip.
     ?>
 
 ### itemsPerPage
-Defines the text displayed after the select element of the pageSizes mode.
+The label displayed after the page size dropdown list.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -85,7 +88,7 @@ Defines the text displayed after the select element of the pageSizes mode.
     ?>
 
 ### last
-Defines the text of the last page button tooltip.
+The tooltip of the button which goes to the last page.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -103,7 +106,7 @@ Defines the text of the last page button tooltip.
     ?>
 
 ### next
-Defines the text of the next page button tooltip.
+The tooltip of the button which goes to the next page.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -121,7 +124,7 @@ Defines the text of the next page button tooltip.
     ?>
 
 ### of
-Defines the last part of the text of the input option.
+The label displayed before the pager input. Uses kendo.format. Contains one optional placeholder {0} which represents the total number of pages.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -139,7 +142,7 @@ Defines the last part of the text of the input option.
     ?>
 
 ### page
-Defines the first part of the text of the input option.
+The label displayed before the pager input.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -157,7 +160,7 @@ Defines the first part of the text of the input option.
     ?>
 
 ### previous
-Defines the text of the previous page button tooltip.
+The tooltip of the button which goes to the previous page.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`
@@ -175,7 +178,7 @@ Defines the text of the previous page button tooltip.
     ?>
 
 ### refresh
-Defines the text of the refresh button tooltip.
+The tooltip of the refresh button.
 
 #### Returns
 `\Kendo\UI\GridPageableMessages`

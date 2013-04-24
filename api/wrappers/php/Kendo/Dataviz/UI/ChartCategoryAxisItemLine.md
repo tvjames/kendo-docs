@@ -13,7 +13,7 @@ A PHP class representing the line setting of ChartCategoryAxisItem.
 ## Methods
 
 ### color
-The color of the lines. Any valid CSS color string will work here, including hex and rgb.Note: This will also effect the major and minor ticks, but not the grid lines.
+The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLine`
@@ -31,7 +31,7 @@ The color of the lines. Any valid CSS color string will work here, including hex
     ?>
 
 ### dashType
-The dash type of the line.
+The dash type of the line.The following dash types are supported:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLine`
@@ -49,7 +49,7 @@ The dash type of the line.
     ?>
 
 ### visible
-The visibility of the lines.
+If set to true the chart will display the category axis lines. By default the category axis lines are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLine`
@@ -67,8 +67,7 @@ The visibility of the lines.
     ?>
 
 ### width
-The width of the line. This will also effect the major and minor ticks, but
-not the grid lines.
+The width of the line in pixels. Also affects the major and minor ticks, but not the grid lines.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemLine`

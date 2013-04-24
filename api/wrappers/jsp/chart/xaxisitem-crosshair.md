@@ -18,23 +18,15 @@ The crosshair configuration options.
 
 ### color `String`
 
-The color of the crosshair.
+The color of the crosshair. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-xAxisItem-crosshair color="color">
     </kendo:chart-xAxisItem-crosshair>
 
-### dashType `float`
-
-The dash type of the crosshair.
-
-#### Example
-    <kendo:chart-xAxisItem-crosshair dashType="dashType">
-    </kendo:chart-xAxisItem-crosshair>
-
 ### opacity `float`
 
-The opacity of the crosshair.
+The opacity of the crosshair. By default the crosshair is opaque.
 
 #### Example
     <kendo:chart-xAxisItem-crosshair opacity="opacity">
@@ -42,7 +34,7 @@ The opacity of the crosshair.
 
 ### visible `boolean`
 
-The dash type of the crosshair.
+If set to true the chart will display the scatter chart x axis crosshair. By default the scatter chart x axis crosshair is not visible.
 
 #### Example
     <kendo:chart-xAxisItem-crosshair visible="visible">
@@ -50,7 +42,7 @@ The dash type of the crosshair.
 
 ### width `float`
 
-The width of the crosshair.
+The width of the crosshair in pixels.
 
 #### Example
     <kendo:chart-xAxisItem-crosshair width="width">
@@ -61,7 +53,7 @@ The width of the crosshair.
 
 ### kendo:chart-xAxisItem-crosshair-tooltip
 
-The crosshar tooltip configuration options.
+The crosshar tooltip options.
 
 More documentation is available at [kendo:chart-xAxisItem-crosshair-tooltip](chart/xaxisitem-crosshair-tooltip).
 

@@ -31,7 +31,7 @@ The duration of the open animation in milliseconds.
     ?>
 
 ### effects
-The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Returns
 `\Kendo\UI\AutoCompleteAnimationOpen`

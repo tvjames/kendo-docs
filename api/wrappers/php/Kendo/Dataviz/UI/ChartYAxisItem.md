@@ -13,8 +13,7 @@ A PHP class representing the yAxisItem setting of ChartYAxis.
 ## Methods
 
 ### axisCrossingValue
-Value at which the Y axis crosses this axis. (Only for object)Value indicies at which the Y axes cross the value axis. (Only for array)Date at which the Y axis crosses this axis. (Only for date)Note: Specify a value greater than or equal to the
-axis maximum value to denote the far end of the axis.
+Value at which the Y axis crosses this axis. (Only for object)Value indices at which the Y axes cross the value axis. (Only for array)Date at which the Y axis crosses this axis. (Only for date)
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -44,8 +43,7 @@ axis maximum value to denote the far end of the axis.
     ?>
 
 ### baseUnit
-The base time interval for the axis labels.
-The default baseUnit is determined automatically from the value range. Available options:
+The base time interval for the axis labels. The default baseUnit is determined automatically from the value range. Available options:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -63,8 +61,7 @@ The default baseUnit is determined automatically from the value range. Available
     ?>
 
 ### color
-Color to apply to all axis elements.
-Individual color settings for line and labels take priority. Any valid CSS color string will work here, including hex and rgb.
+The color of the axis. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -112,7 +109,7 @@ The crosshair configuration options.
 
 ### labels
 
-Configures the axis labels.
+The axis labels configuration.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -141,7 +138,7 @@ Configures the axis labels.
 
 ### line
 
-Configures the axis line. This will also affect the major and minor ticks, but not the grid lines.
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -170,7 +167,7 @@ Configures the axis line. This will also affect the major and minor ticks, but n
 
 ### majorGridLines
 
-Configures the major grid lines. These are the lines that are an extension of the major ticks through the
+The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
 #### Returns
@@ -200,7 +197,7 @@ body of the chart.
 
 ### majorTicks
 
-The major ticks of the axis.
+The configuration of the scatter chart y axis major ticks.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -214,8 +211,8 @@ The major ticks of the axis.
     <?php
     $yAxisItem = new \Kendo\Dataviz\UI\ChartYAxisItem();
     $majorTicks = new \Kendo\Dataviz\UI\ChartYAxisItemMajorTicks();
-    $size = 1;
-    $majorTicks->size($size);
+    $color = 'value';
+    $majorTicks->color($color);
     $yAxisItem->majorTicks($majorTicks);
     ?>
 
@@ -223,12 +220,12 @@ The major ticks of the axis.
 
     <?php
     $yAxisItem = new \Kendo\Dataviz\UI\ChartYAxisItem();
-    $size = 1;
-    $yAxisItem->majorTicks(array('size' => $size));
+    $color = 'value';
+    $yAxisItem->majorTicks(array('color' => $color));
     ?>
 
 ### majorUnit
-The interval between major divisions in base units.
+The interval between major divisions.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -246,8 +243,7 @@ The interval between major divisions in base units.
     ?>
 
 ### max
-The end date of the axis.
-This is often used in combination with the min configuration option.
+The maximum value of the axis.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -259,8 +255,7 @@ This is often used in combination with the min configuration option.
 
 
 ### min
-The maximum value of the axis.
-This is often used in combination with the max configuration option.
+The minimum value of the axis.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -272,8 +267,7 @@ This is often used in combination with the max configuration option.
 
 
 ### minorUnit
-The interval between minor divisions in base units.
-It defaults to 1/5th of the majorUnit.
+The interval between minor divisions. It defaults to 1/5th of the yAxis.majorUnit.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -291,7 +285,7 @@ It defaults to 1/5th of the majorUnit.
     ?>
 
 ### name
-The unique axis name.
+The unique axis name. Used to associate a series with a y axis using the series.yAxis option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -303,7 +297,7 @@ The unique axis name.
 
 
 ### narrowRange
-Prevents the automatic axis range from snapping to 0.
+If set to true the chart will prevent the automatic axis range from snapping to 0.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -378,8 +372,7 @@ Adds one or more ChartYAxisItemPlotBand to the ChartYAxisItem.
     ?>
 
 ### reverse
-Reverses the axis direction -
-values increase from right to left and from top to bottom.
+If set to true the value axis direction will be reversed. By default values increase from left to right and from bottom to top.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -398,7 +391,7 @@ values increase from right to left and from top to bottom.
 
 ### title
 
-The title of the value axis.
+The title configuration of the scatter chart y axis.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -426,8 +419,7 @@ The title of the value axis.
     ?>
 
 ### type
-The axis type.Note: The Chart will automatically switch to a date axis if the series X value
-is of type Date. Specify type explicitly when such behavior is undesired.
+The axis type.The supported values are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`
@@ -445,7 +437,7 @@ is of type Date. Specify type explicitly when such behavior is undesired.
     ?>
 
 ### visible
-The visibility of the axis.
+If set to true the chart will display the y axis. By default the y axis is visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartYAxisItem`

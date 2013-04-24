@@ -96,6 +96,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-crosshair-t
 The tooltip template.
 Template variables:
 
+
 #### Example
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip template="handle_template">
     </kendo:sparkline-categoryAxisItem-crosshair-tooltip>
@@ -111,6 +112,7 @@ Template variables:
 
 The tooltip template.
 Template variables:
+
 
 #### Example
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip>

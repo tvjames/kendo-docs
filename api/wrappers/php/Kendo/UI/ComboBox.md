@@ -82,6 +82,7 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 ### cascade
 Triggered when value of the widget is changed via API or user interaction.
+For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -135,6 +136,7 @@ Use it to set the Id of the parent DropDownList.
 
 ### change
 Fires when the value has been changed.
+For additional information check the [change](/api/web/combobox#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -170,6 +172,7 @@ Fires when the value has been changed.
 
 ### close
 Fires when the drop-down list is closed
+For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -205,6 +208,7 @@ Fires when the drop-down list is closed
 
 ### dataBound
 Fires when the ComboBox has received data from the data source.
+For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -447,6 +451,7 @@ Specifies the minimum characters that should be typed before the ComboBox activa
 
 ### open
 Fires when the drop-down list is opened
+For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -500,6 +505,7 @@ A string that appears in the textbox when the combobox has no value.
 
 ### select
 Triggered when a Li element is selected.
+For additional information check the [select](/api/web/combobox#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`

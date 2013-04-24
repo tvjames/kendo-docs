@@ -31,7 +31,7 @@ The color of the border.
     ?>
 
 ### width
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipBorder`

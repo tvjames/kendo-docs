@@ -13,21 +13,38 @@ A PHP class representing the categoryAxisItem setting of ChartCategoryAxis.
 ## Methods
 
 ### autoBaseUnitSteps
-Specifies the discrete baseUnitStep values when
-either baseUnit is set to "fit" or baseUnitStep is set to "auto".The default configuration is as follows:Each setting can be overriden individually.
+
+The discrete categoryAxis.baseUnitStep values when
+either categoryAxis.baseUnit is set to "fit" or
+categoryAxis.baseUnitStep is set to "auto".
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
 
 #### Parameters
 
-##### $value ``
+##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemAutoBaseUnitSteps|array`
 
 
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemAutoBaseUnitSteps](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemAutoBaseUnitSteps)
+    <?php
+    $categoryAxisItem = new \Kendo\Dataviz\UI\ChartCategoryAxisItem();
+    $autoBaseUnitSteps = new \Kendo\Dataviz\UI\ChartCategoryAxisItemAutoBaseUnitSteps();
+    $days = new array();
+    $autoBaseUnitSteps->days($days);
+    $categoryAxisItem->autoBaseUnitSteps($autoBaseUnitSteps);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $categoryAxisItem = new \Kendo\Dataviz\UI\ChartCategoryAxisItem();
+    $days = new array();
+    $categoryAxisItem->autoBaseUnitSteps(array('days' => $days));
+    ?>
 
 ### axisCrossingValue
-Category index at which the first value axis crosses this axis. (Only for object)Category indicies at which the value axes cross the category axis. (Only for array)Note: Specify an index greater than or equal to the number
-of categories to denote the far end of the axis.
+Category index at which the first value axis crosses this axis (when set as an object).Category indices at which the value axes cross the category axis (when set as an array).
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -57,11 +74,9 @@ of categories to denote the far end of the axis.
     ?>
 
 ### baseUnit
-The base time interval for the axis.
-The default baseUnit is determined automatically from the minimum difference
-between subsequent categories. Available options:Setting baseUnit to "fit" will set such base unit and baseUnitStep
-that the total number of categories does not exceed maxDateGroups.Series data is aggregated for the specified base unit by using the
-series.aggregate function.
+The base time interval for the date axis. The default base unit is determined automatically from the minimum difference
+between subsequent categories.The supported values are:Setting baseUnit to "fit" will set such base unit and categoryAxis.baseUnitStep
+that the total number of categories does not exceed categoryAxis.maxDateGroups.Series data is aggregated for the specified base unit using the series.aggregate function.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -79,8 +94,8 @@ series.aggregate function.
     ?>
 
 ### baseUnitStep
-Sets the step (interval) between categories in base units.
-Specifiying "auto" will set the step to such value that the total number of categories does not exceed maxDateGroups.This option is ignored if baseUnit is set to "fit".
+The step (interval) between categories in base units. Setting it to "auto" will set the step to such value
+that the total number of categories does not exceed categoryAxis.maxDateGroups.This option is ignored if categoryAxis.baseUnit is set to "fit".
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -92,7 +107,7 @@ Specifiying "auto" will set the step to such value that the total number of cate
 
 
 ### categories
-Array of category names.
+The category names. The chart will create a category for every item of the array.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -110,8 +125,8 @@ Array of category names.
     ?>
 
 ### color
-Color to apply to all axis elements. Any valid CSS color string will work here, including hex and rgb.
-Individual color settings for line and labels take priority.
+The color to apply to all axis elements. Accepts a valid CSS color string, including hex and rgb. Can be overridden by categoryAxis.labels.color and
+categoryAxis.line.color.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -158,7 +173,7 @@ The crosshair configuration options.
     ?>
 
 ### field
-The data field containing the category name.
+The data item field which contains the category name. Requires the dataSource option to be set.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -176,7 +191,7 @@ The data field containing the category name.
     ?>
 
 ### justified
-Positions categories and series points on major ticks. This removes the empty space before and after the series.This option is ignored if either bar, column, ohlc or candlestick series are plotted on the axis.
+If set to true the chart will position categories and series points on major ticks. This removes the empty space before and after the series.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -195,7 +210,7 @@ Positions categories and series points on major ticks. This removes the empty sp
 
 ### labels
 
-Configures the axis labels.
+The axis labels configuration.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -224,7 +239,7 @@ Configures the axis labels.
 
 ### line
 
-Configures the axis line. This will also effect major and minor ticks, but not gridlines.
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -253,7 +268,7 @@ Configures the axis line. This will also effect major and minor ticks, but not g
 
 ### majorGridLines
 
-Configures the major grid lines. These are the lines that are an extension of the major ticks through the
+The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
 #### Returns
@@ -283,7 +298,7 @@ body of the chart.
 
 ### majorTicks
 
-The major ticks of the axis.
+The configuration of the category axis major ticks.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -297,8 +312,8 @@ The major ticks of the axis.
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\ChartCategoryAxisItem();
     $majorTicks = new \Kendo\Dataviz\UI\ChartCategoryAxisItemMajorTicks();
-    $size = 1;
-    $majorTicks->size($size);
+    $color = 'value';
+    $majorTicks->color($color);
     $categoryAxisItem->majorTicks($majorTicks);
     ?>
 
@@ -306,14 +321,13 @@ The major ticks of the axis.
 
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\ChartCategoryAxisItem();
-    $size = 1;
-    $categoryAxisItem->majorTicks(array('size' => $size));
+    $color = 'value';
+    $categoryAxisItem->majorTicks(array('color' => $color));
     ?>
 
 ### max
-The last date displayed on the axis.
-By default, the minimum date is the same as the last category.
-This is often used in combination with the min and roundToBaseUnit configuration options to
+The last date displayed on the category date axis. By default, the minimum date is the same as the last category.
+This is often used in combination with the categoryAxis.min and categoryAxis.roundToBaseUnit options to
 set up a fixed date range.
 
 #### Returns
@@ -326,8 +340,9 @@ set up a fixed date range.
 
 
 ### maxDateGroups
-Specifies the maximum number of groups (categories) to produce when
-either baseUnit is set to "fit" or baseUnitStep is set to "auto".This option is ignored in all other cases.
+The maximum number of groups (categories) to display when
+categoryAxis.baseUnit is set to "fit" or
+categoryAxis.baseUnitStep is set to "auto".
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -345,9 +360,8 @@ either baseUnit is set to "fit" or baseUnitStep is set to "auto".This option is 
     ?>
 
 ### min
-The first date displayed on the axis.
-By default, the minimum date is the same as the first category.
-This is often used in combination with the max and roundToBaseUnit configuration options to
+The first date displayed on the category date axis. By default, the minimum date is the same as the first category.
+This is often used in combination with the categoryAxis.min and categoryAxis.roundToBaseUnit options to
 set up a fixed date range.
 
 #### Returns
@@ -361,8 +375,8 @@ set up a fixed date range.
 
 ### minorGridLines
 
-Configures the minor grid lines.  These are the lines that are an extension of the minor ticks through
-the body of the chart.Note that minor grid lines are not visible by default, therefore none of these settings will take effect with the minor grid lines visibility being set to true.
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -391,7 +405,7 @@ the body of the chart.Note that minor grid lines are not visible by default, the
 
 ### minorTicks
 
-The minor ticks of the axis.
+The configuration of the category axis minor ticks.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -405,8 +419,8 @@ The minor ticks of the axis.
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\ChartCategoryAxisItem();
     $minorTicks = new \Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks();
-    $size = 1;
-    $minorTicks->size($size);
+    $color = 'value';
+    $minorTicks->color($color);
     $categoryAxisItem->minorTicks($minorTicks);
     ?>
 
@@ -414,12 +428,12 @@ The minor ticks of the axis.
 
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\ChartCategoryAxisItem();
-    $size = 1;
-    $categoryAxisItem->minorTicks(array('size' => $size));
+    $color = 'value';
+    $categoryAxisItem->minorTicks(array('color' => $color));
     ?>
 
 ### name
-The unique axis name.
+The unique axis name. Used to associate a series with a category axis using the series.categoryAxis option.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -437,7 +451,7 @@ The unique axis name.
     ?>
 
 ### pane
-The name of the pane that the axis should be rendered in.
+The name of the pane that the category axis should be rendered in.
 The axis will be rendered in the first (default) pane if not set.
 
 #### Returns
@@ -494,8 +508,7 @@ Adds one or more ChartCategoryAxisItemPlotBand to the ChartCategoryAxisItem.
     ?>
 
 ### reverse
-Reverses the axis direction -
-categories are listed from right to left and from top to bottom.
+If set to true the category axis direction will be reversed. By default categories are listed from left to right and from bottom to top.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -513,8 +526,7 @@ categories are listed from right to left and from top to bottom.
     ?>
 
 ### roundToBaseUnit
-By default, the first and last dates will be rounded off to the nearest base unit.
-Specifying false for this option will disable this behavior.This option is most useful in combination with explicit min and max dates.It will be ignored if either bar, column, ohlc or candlestick series are plotted on the axis.
+If set to true the chart will round the first and last date to the nearest base unit.The roundToBaseUnit option will be ignored if series.type is set to "bar", "column", "ohlc" or "candlestick".
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -533,7 +545,7 @@ Specifying false for this option will disable this behavior.This option is most 
 
 ### select
 
-The selected axis range. If configured, axis selection will be enabled.** Available only for vertical axes **The range units are:
+The selected axis range. If set, axis selection will be enabled.The range units are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -562,7 +574,7 @@ The selected axis range. If configured, axis selection will be enabled.** Availa
 
 ### title
 
-The title of the category axis.
+The title configuration of the category axis.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -590,7 +602,7 @@ The title of the category axis.
     ?>
 
 ### type
-The axis type.
+The category axis type.The supported values are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -608,7 +620,7 @@ The axis type.
     ?>
 
 ### visible
-The visibility of the axis.
+If set to true the chart will display the category axis. By default the category axis is visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`
@@ -626,8 +638,7 @@ The visibility of the axis.
     ?>
 
 ### weekStartDay
-Specifies the week start day when baseUnit is set to "weeks".
-Use the kendo.days constants to specify the day by name.
+The week start day when categoryAxis.baseUnit is set to "weeks".The supported values are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItem`

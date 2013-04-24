@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable-operators-enums\>
 
-Enable/Disable and set the text of filter operators for foreign key columns.
+The texts of the filter operators displayed for columns which have their values option set.
 
 #### Example
     <kendo:grid-filterable-operators>
@@ -18,7 +18,7 @@ Enable/Disable and set the text of filter operators for foreign key columns.
 
 ### eq `String`
 
-Enable/Disable and set the text of the "Is equal to" filter option for foreign key columns.
+The text of the "equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-enums eq="eq">
@@ -26,7 +26,7 @@ Enable/Disable and set the text of the "Is equal to" filter option for foreign k
 
 ### neq `String`
 
-Enable/Disable and set the text of the "Is not equal to" filter option for foreign key columns.
+The text of the "not equal" filter operator.
 
 #### Example
     <kendo:grid-filterable-operators-enums neq="neq">

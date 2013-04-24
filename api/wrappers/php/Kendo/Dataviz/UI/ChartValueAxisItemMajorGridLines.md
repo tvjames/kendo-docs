@@ -13,7 +13,7 @@ A PHP class representing the majorGridLines setting of ChartValueAxisItem.
 ## Methods
 
 ### color
-The color of the lines.
+The color of the major grid lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMajorGridLines`
@@ -30,8 +30,26 @@ The color of the lines.
     $majorGridLines->color('value');
     ?>
 
+### dashType
+The dash type of the major grid lines.The following dash types are supported:
+
+#### Returns
+`\Kendo\Dataviz\UI\ChartValueAxisItemMajorGridLines`
+
+#### Parameters
+
+##### $value `string`
+
+
+
+#### Example 
+    <?php
+    $majorGridLines = new \Kendo\Dataviz\UI\ChartValueAxisItemMajorGridLines();
+    $majorGridLines->dashType('value');
+    ?>
+
 ### visible
-The visibility of the lines.
+If set to true the chart will display the major grid lines. By default the major grid lines are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMajorGridLines`
@@ -49,7 +67,7 @@ The visibility of the lines.
     ?>
 
 ### width
-The width of the lines.
+The width of the value axis major grid lines in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemMajorGridLines`

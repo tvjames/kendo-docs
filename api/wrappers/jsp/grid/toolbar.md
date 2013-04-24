@@ -7,9 +7,7 @@ publish: true
 
 # \<kendo:grid-toolbar\>
 
-This is a list of commands for which the corresponding buttons will be rendered.
-The supported built-in commands are: "create", "cancel", "save", "destroy".
-Or template to be used for rendering the toolbar content.
+The list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").The "cancel" built-in command reverts any data changes done by the end user.The "create" command adds an empty data item to the grid.The "save" command persists any data changes done by the end user.
 
 #### Example
     <kendo:grid>
@@ -23,9 +21,7 @@ Or template to be used for rendering the toolbar content.
 
 ### kendo:grid-toolbarItem
 
-This is a list of commands for which the corresponding buttons will be rendered.
-The supported built-in commands are: "create", "cancel", "save", "destroy".
-Or template to be used for rendering the toolbar content.
+The list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").The "cancel" built-in command reverts any data changes done by the end user.The "create" command adds an empty data item to the grid.The "save" command persists any data changes done by the end user.
 
 More documentation is available at [kendo:grid-toolbarItem](grid/toolbaritem).
 

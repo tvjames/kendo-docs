@@ -112,6 +112,7 @@ More documentation is available at [kendo:editor-imageBrowser-transport-read](ed
 The URL for retrieving the thumbnail version of the image. If not specified a default image icon will be shown.
 If function is assign, the current path and image name will be provided.
 
+
 #### Example
     <kendo:editor-imageBrowser-transport thumbnailUrl="handle_thumbnailUrl">
     </kendo:editor-imageBrowser-transport>
@@ -124,6 +125,7 @@ If function is assign, the current path and image name will be provided.
 ### imageUrl `String`
 
 The URL responsible for serving the original image. A file name placeholder should be specifed.
+
 
 #### Example
     <kendo:editor-imageBrowser-transport imageUrl="handle_imageUrl">
@@ -141,6 +143,7 @@ The URL responsible for serving the original image. A file name placeholder shou
 The URL for retrieving the thumbnail version of the image. If not specified a default image icon will be shown.
 If function is assign, the current path and image name will be provided.
 
+
 #### Example
     <kendo:editor-imageBrowser-transport>
         <kendo:editor-imageBrowser-transport-thumbnailUrl>
@@ -155,6 +158,7 @@ If function is assign, the current path and image name will be provided.
 ### kendo:editor-imageBrowser-transport-imageUrl
 
 The URL responsible for serving the original image. A file name placeholder should be specifed.
+
 
 #### Example
     <kendo:editor-imageBrowser-transport>

@@ -40,6 +40,9 @@ More documentation is available at [kendo:splitter-panes](splitter/panes).
 
 Triggered when a pane of a Splitter is collapsed.
 
+
+For additional information check the [collapse](/api/web/splitter#events-collapse) event documentation.
+
 #### Example
     <kendo:splitter collapse="handle_collapse">
     </kendo:splitter>
@@ -52,6 +55,9 @@ Triggered when a pane of a Splitter is collapsed.
 ### contentLoad `String`
 
 Triggered when the content for a pane has finished loading.
+
+
+For additional information check the [contentLoad](/api/web/splitter#events-contentLoad) event documentation.
 
 #### Example
     <kendo:splitter contentLoad="handle_contentLoad">
@@ -66,6 +72,9 @@ Triggered when the content for a pane has finished loading.
 
 Triggered when a pane of a Splitter is expanded.
 
+
+For additional information check the [expand](/api/web/splitter#events-expand) event documentation.
+
 #### Example
     <kendo:splitter expand="handle_expand">
     </kendo:splitter>
@@ -79,6 +88,9 @@ Triggered when a pane of a Splitter is expanded.
 
 Fires when the splitter layout has changed
 
+
+For additional information check the [layoutChange](/api/web/splitter#events-layoutChange) event documentation.
+
 #### Example
     <kendo:splitter layoutChange="handle_layoutChange">
     </kendo:splitter>
@@ -91,6 +103,9 @@ Fires when the splitter layout has changed
 ### resize `String`
 
 Triggered when a pane is resized.
+
+
+For additional information check the [resize](/api/web/splitter#events-resize) event documentation.
 
 #### Example
     <kendo:splitter resize="handle_resize">
@@ -107,6 +122,9 @@ Triggered when a pane is resized.
 
 Triggered when a pane of a Splitter is collapsed.
 
+
+For additional information check the [collapse](/api/web/splitter#events-collapse) event documentation.
+
 #### Example
     <kendo:splitter>
         <kendo:splitter-collapse>
@@ -121,6 +139,9 @@ Triggered when a pane of a Splitter is collapsed.
 ### kendo:splitter-contentLoad
 
 Triggered when the content for a pane has finished loading.
+
+
+For additional information check the [contentLoad](/api/web/splitter#events-contentLoad) event documentation.
 
 #### Example
     <kendo:splitter>
@@ -137,6 +158,9 @@ Triggered when the content for a pane has finished loading.
 
 Triggered when a pane of a Splitter is expanded.
 
+
+For additional information check the [expand](/api/web/splitter#events-expand) event documentation.
+
 #### Example
     <kendo:splitter>
         <kendo:splitter-expand>
@@ -152,6 +176,9 @@ Triggered when a pane of a Splitter is expanded.
 
 Fires when the splitter layout has changed
 
+
+For additional information check the [layoutChange](/api/web/splitter#events-layoutChange) event documentation.
+
 #### Example
     <kendo:splitter>
         <kendo:splitter-layoutChange>
@@ -166,6 +193,9 @@ Fires when the splitter layout has changed
 ### kendo:splitter-resize
 
 Triggered when a pane is resized.
+
+
+For additional information check the [resize](/api/web/splitter#events-resize) event documentation.
 
 #### Example
     <kendo:splitter>

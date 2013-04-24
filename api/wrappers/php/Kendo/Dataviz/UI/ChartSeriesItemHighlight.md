@@ -14,7 +14,7 @@ A PHP class representing the highlight setting of ChartSeriesItem.
 
 ### border
 
-The border of highlighted points. The color is computed automatically from the base point color.** Applicable to bubble, pie, candlestick and ohlc series. **
+The border of the highlighted chart series. The color is computed automatically from the base point color.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlight`
@@ -42,7 +42,7 @@ The border of highlighted points. The color is computed automatically from the b
     ?>
 
 ### color
-The highlight color.** Available only for pie series **
+The highlight color. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlight`
@@ -61,7 +61,7 @@ The highlight color.** Available only for pie series **
 
 ### line
 
-Line options for highlighted points. The color is computed automatically from the base point color.** Available only for candlestick series **
+The line of the highlighted chart series. The color is computed automatically from the base point color.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlight`
@@ -89,7 +89,7 @@ Line options for highlighted points. The color is computed automatically from th
     ?>
 
 ### opacity
-The opacity of the highlighted points.** Applicable to bubble, pie, candlestick and ohlc series. **
+The opacity of the highlighted points.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlight`
@@ -107,7 +107,8 @@ The opacity of the highlighted points.** Applicable to bubble, pie, candlestick 
     ?>
 
 ### visible
-A value indicating if the series points should be highlighted.
+If set to true the chart will highlight the series when the user hovers it with the mouse.
+By default chart series highlighting is enabled.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlight`

@@ -55,7 +55,8 @@ The border of the gauge area.
     ?>
 
 ### height
-The height of the gauge area.
+The height of the gauge area.  By default, the vertical gauge is 200px and
+the horizontal one is 60px.
 
 #### Returns
 `\Kendo\Dataviz\UI\LinearGaugeGaugeArea`
@@ -91,7 +92,8 @@ The margin of the gauge area.
     ?>
 
 ### width
-The width of the gauge area.
+The width of the gauge area.  By default the vertical gauge is 60px and
+horizontal gauge is 200px.
 
 #### Returns
 `\Kendo\Dataviz\UI\LinearGaugeGaugeArea`

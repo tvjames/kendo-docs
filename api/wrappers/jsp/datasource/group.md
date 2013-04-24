@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-group\>
 
-Sets initial grouping
+The grouping configuration of the data source. If set the data items will be grouped when the data source is populated. By default grouping is not applied.
 
 #### Example
     <kendo:dataSource>
@@ -21,7 +21,7 @@ Sets initial grouping
 
 ### kendo:dataSource-groupItem
 
-Sets initial grouping
+The grouping configuration of the data source. If set the data items will be grouped when the data source is populated. By default grouping is not applied.
 
 More documentation is available at [kendo:dataSource-groupItem](datasource/groupitem).
 

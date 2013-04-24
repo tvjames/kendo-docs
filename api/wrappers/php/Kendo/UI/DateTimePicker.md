@@ -65,6 +65,7 @@ will disable the animation(s).
 
 ### change
 Triggered when the underlying value of a DateTimePicker is changed.
+For additional information check the [change](/api/web/datetimepicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -100,6 +101,7 @@ Triggered when the underlying value of a DateTimePicker is changed.
 
 ### close
 Fires when the calendar or the time drop-down list is closed
+For additional information check the [close](/api/web/datetimepicker#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -309,6 +311,7 @@ Templates for the cells rendered in the calendar "month" view.
 
 ### open
 Fires when the calendar or the time drop-down list is opened
+For additional information check the [open](/api/web/datetimepicker#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`

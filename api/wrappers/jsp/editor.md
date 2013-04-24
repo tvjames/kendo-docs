@@ -77,6 +77,9 @@ More documentation is available at [kendo:editor-tools](editor/tools).
 
 Fires when Editor is blurred and its content has changed.
 
+
+For additional information check the [change](/api/web/editor#events-change) event documentation.
+
 #### Example
     <kendo:editor change="handle_change">
     </kendo:editor>
@@ -89,6 +92,9 @@ Fires when Editor is blurred and its content has changed.
 ### execute `String`
 
 Fires when an Editor command is executed.
+
+
+For additional information check the [execute](/api/web/editor#events-execute) event documentation.
 
 #### Example
     <kendo:editor execute="handle_execute">
@@ -103,6 +109,9 @@ Fires when an Editor command is executed.
 
 Fires when the user depresses a keyboard key. Triggered multiple times if the user holds the key down.
 
+
+For additional information check the [keydown](/api/web/editor#events-keydown) event documentation.
+
 #### Example
     <kendo:editor keydown="handle_keydown">
     </kendo:editor>
@@ -115,6 +124,9 @@ Fires when the user depresses a keyboard key. Triggered multiple times if the us
 ### keyup `String`
 
 Fires when the user releases a keyboard key.
+
+
+For additional information check the [keyup](/api/web/editor#events-keyup) event documentation.
 
 #### Example
     <kendo:editor keyup="handle_keyup">
@@ -129,6 +141,9 @@ Fires when the user releases a keyboard key.
 
 Fires before when content is pasted in the Editor.
 
+
+For additional information check the [paste](/api/web/editor#events-paste) event documentation.
+
 #### Example
     <kendo:editor paste="handle_paste">
     </kendo:editor>
@@ -141,6 +156,9 @@ Fires before when content is pasted in the Editor.
 ### select `String`
 
 Fires when the Editor selection has changed.
+
+
+For additional information check the [select](/api/web/editor#events-select) event documentation.
 
 #### Example
     <kendo:editor select="handle_select">
@@ -157,6 +175,9 @@ Fires when the Editor selection has changed.
 
 Fires when Editor is blurred and its content has changed.
 
+
+For additional information check the [change](/api/web/editor#events-change) event documentation.
+
 #### Example
     <kendo:editor>
         <kendo:editor-change>
@@ -171,6 +192,9 @@ Fires when Editor is blurred and its content has changed.
 ### kendo:editor-execute
 
 Fires when an Editor command is executed.
+
+
+For additional information check the [execute](/api/web/editor#events-execute) event documentation.
 
 #### Example
     <kendo:editor>
@@ -187,6 +211,9 @@ Fires when an Editor command is executed.
 
 Fires when the user depresses a keyboard key. Triggered multiple times if the user holds the key down.
 
+
+For additional information check the [keydown](/api/web/editor#events-keydown) event documentation.
+
 #### Example
     <kendo:editor>
         <kendo:editor-keydown>
@@ -201,6 +228,9 @@ Fires when the user depresses a keyboard key. Triggered multiple times if the us
 ### kendo:editor-keyup
 
 Fires when the user releases a keyboard key.
+
+
+For additional information check the [keyup](/api/web/editor#events-keyup) event documentation.
 
 #### Example
     <kendo:editor>
@@ -217,6 +247,9 @@ Fires when the user releases a keyboard key.
 
 Fires before when content is pasted in the Editor.
 
+
+For additional information check the [paste](/api/web/editor#events-paste) event documentation.
+
 #### Example
     <kendo:editor>
         <kendo:editor-paste>
@@ -231,6 +264,9 @@ Fires before when content is pasted in the Editor.
 ### kendo:editor-select
 
 Fires when the Editor selection has changed.
+
+
+For additional information check the [select](/api/web/editor#events-select) event documentation.
 
 #### Example
     <kendo:editor>

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-yAxisItem-majorGridLines\>
 
-Configures the major grid lines. These are the lines that are an extension of the major ticks through the
+The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
 #### Example
@@ -19,15 +19,23 @@ body of the chart.
 
 ### color `String`
 
-The color of the lines.
+The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-yAxisItem-majorGridLines color="color">
     </kendo:chart-yAxisItem-majorGridLines>
 
+### dashType `String`
+
+The dash type of the line.The following dash types are supported:
+
+#### Example
+    <kendo:chart-yAxisItem-majorGridLines dashType="dashType">
+    </kendo:chart-yAxisItem-majorGridLines>
+
 ### visible `boolean`
 
-The visibility of the lines.
+If set to true the chart will display the x major grid liness. By default the x major grid liness are visible.
 
 #### Example
     <kendo:chart-yAxisItem-majorGridLines visible="visible">
@@ -35,7 +43,8 @@ The visibility of the lines.
 
 ### width `float`
 
-The width of the lines.
+The width of the line in pixels. Also affects the major and minor ticks, but not the grid lines.
+#### Example - set the scatter chart x major grid lines width
 
 #### Example
     <kendo:chart-yAxisItem-majorGridLines width="width">

@@ -14,7 +14,7 @@ A PHP class representing the groupable setting of Grid.
 
 ### messages
 
-Sets the messages displayed during grouping.
+The text messages displayed during grouping.
 
 #### Returns
 `\Kendo\UI\GridGroupable`

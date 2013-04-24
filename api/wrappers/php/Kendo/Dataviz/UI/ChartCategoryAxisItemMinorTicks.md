@@ -12,9 +12,26 @@ A PHP class representing the minorTicks setting of ChartCategoryAxisItem.
 
 ## Methods
 
+### color
+The color of the category axis minor ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Returns
+`\Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks`
+
+#### Parameters
+
+##### $value `string`
+
+
+
+#### Example 
+    <?php
+    $minorTicks = new \Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks();
+    $minorTicks->color('value');
+    ?>
+
 ### size
-The axis minor tick size. This is the length of the line in pixels that is drawn to indicate the tick
-on the chart.
+The length of the tick line in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks`
@@ -32,7 +49,7 @@ on the chart.
     ?>
 
 ### visible
-The visibility of the minor ticks.
+If set to true the chart will display the category axis minor ticks. By default the category axis minor ticks are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks`
@@ -47,5 +64,23 @@ The visibility of the minor ticks.
     <?php
     $minorTicks = new \Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks();
     $minorTicks->visible(true);
+    ?>
+
+### width
+The width of the minor ticks in pixels.
+
+#### Returns
+`\Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks`
+
+#### Parameters
+
+##### $value `float`
+
+
+
+#### Example 
+    <?php
+    $minorTicks = new \Kendo\Dataviz\UI\ChartCategoryAxisItemMinorTicks();
+    $minorTicks->width(1);
     ?>
 

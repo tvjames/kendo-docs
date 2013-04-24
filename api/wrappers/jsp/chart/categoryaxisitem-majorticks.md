@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-categoryAxisItem-majorTicks\>
 
-The major ticks of the axis.
+The configuration of the category axis major ticks.
 
 #### Example
     <kendo:chart-categoryAxisItem>
@@ -16,10 +16,17 @@ The major ticks of the axis.
 
 ## Configuration Attributes
 
+### color `String`
+
+The color of the category axis major ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example
+    <kendo:chart-categoryAxisItem-majorTicks color="color">
+    </kendo:chart-categoryAxisItem-majorTicks>
+
 ### size `float`
 
-The axis major tick size. This is the length of the line in pixels that is drawn to indicate the tick
-on the chart.
+The length of the tick line in pixels.
 
 #### Example
     <kendo:chart-categoryAxisItem-majorTicks size="size">
@@ -27,9 +34,17 @@ on the chart.
 
 ### visible `boolean`
 
-The visibility of the major ticks.
+If set to true the chart will display the category axis major ticks. By default the category axis major ticks are visible.
 
 #### Example
     <kendo:chart-categoryAxisItem-majorTicks visible="visible">
+    </kendo:chart-categoryAxisItem-majorTicks>
+
+### width `float`
+
+The width of the major ticks in pixels.
+
+#### Example
+    <kendo:chart-categoryAxisItem-majorTicks width="width">
     </kendo:chart-categoryAxisItem-majorTicks>
 

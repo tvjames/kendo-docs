@@ -13,8 +13,7 @@ A PHP class representing the title setting of ChartXAxisItem.
 ## Methods
 
 ### background
-The background color of the title. Any valid CSS color string will work here, including
-hex and rgb.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`
@@ -61,7 +60,7 @@ The border of the title.
     ?>
 
 ### color
-The text color of the title. Any valid CSS color string will work here, including hex and rgb.
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`
@@ -97,14 +96,16 @@ The font style of the title.
     ?>
 
 ### margin
-The margin of the title.
+
+The margin of the title. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartXAxisItemTitleMargin|array`
+
 
 
 
@@ -114,15 +115,35 @@ The margin of the title.
     $title->margin(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemTitleMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemTitleMargin)
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartXAxisItemTitle();
+    $margin = new \Kendo\Dataviz\UI\ChartXAxisItemTitleMargin();
+    $bottom = 1;
+    $margin->bottom($bottom);
+    $title->margin($margin);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartXAxisItemTitle();
+    $bottom = 1;
+    $title->margin(array('bottom' => $bottom));
+    ?>
+
 ### padding
-The padding of the title.
+
+The padding of the title. A numeric value will set all paddings.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartXAxisItemTitlePadding|array`
+
 
 
 
@@ -132,8 +153,26 @@ The padding of the title.
     $title->padding(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemTitlePadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemTitlePadding)
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartXAxisItemTitle();
+    $padding = new \Kendo\Dataviz\UI\ChartXAxisItemTitlePadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $title->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $title = new \Kendo\Dataviz\UI\ChartXAxisItemTitle();
+    $bottom = 1;
+    $title->padding(array('bottom' => $bottom));
+    ?>
+
 ### position
-The position of the title.
+The position of the title.The supported values are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`
@@ -151,7 +190,7 @@ The position of the title.
     ?>
 
 ### rotation
-The rotation angle of the title.
+The rotation angle of the title. By default the title is not rotated.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`
@@ -187,7 +226,7 @@ The text of the title.
     ?>
 
 ### visible
-The visibility of the title.
+If set to true the chart will display the scatter chart x axis title. By default the scatter chart x axis title is visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemTitle`

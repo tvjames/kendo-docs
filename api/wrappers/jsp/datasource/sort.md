@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-sort\>
 
-Sets initial sort order
+The sort order which will be applied over the data items. By default the data items are not sorted.
 
 #### Example
     <kendo:dataSource>
@@ -21,7 +21,7 @@ Sets initial sort order
 
 ### kendo:dataSource-sortItem
 
-Sets initial sort order
+The sort order which will be applied over the data items. By default the data items are not sorted.
 
 More documentation is available at [kendo:dataSource-sortItem](datasource/sortitem).
 

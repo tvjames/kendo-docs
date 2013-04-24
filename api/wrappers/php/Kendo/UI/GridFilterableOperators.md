@@ -14,7 +14,7 @@ A PHP class representing the operators setting of GridFilterable.
 
 ### date
 
-Enable/Disable and set the text of filter operators for fields of type date.
+The texts of the filter operators displayed for columns bound to date fields.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperators`
@@ -43,7 +43,7 @@ Enable/Disable and set the text of filter operators for fields of type date.
 
 ### enums
 
-Enable/Disable and set the text of filter operators for foreign key columns.
+The texts of the filter operators displayed for columns which have their values option set.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperators`
@@ -72,7 +72,7 @@ Enable/Disable and set the text of filter operators for foreign key columns.
 
 ### number
 
-Enable/Disable and set the text of filter operators for fields of type number.
+The texts of the filter operators displayed for columns bound to number fields.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperators`
@@ -101,7 +101,7 @@ Enable/Disable and set the text of filter operators for fields of type number.
 
 ### string
 
-Enable/Disable and set the text of filter operators for fields of type string.
+The texts of the filter operators displayed for columns bound to string fields.
 
 #### Returns
 `\Kendo\UI\GridFilterableOperators`

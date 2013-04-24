@@ -13,7 +13,7 @@ A PHP class representing the negativeValues setting of ChartSeriesItem.
 ## Methods
 
 ### color
-The color of the negative values.
+The color of the chart negative bubble values.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemNegativeValues`
@@ -31,7 +31,7 @@ The color of the negative values.
     ?>
 
 ### visible
-The visibility of the negative values.
+If set to true the chart will display the negative bubbles. By default the negative bubbles are not displayed.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemNegativeValues`

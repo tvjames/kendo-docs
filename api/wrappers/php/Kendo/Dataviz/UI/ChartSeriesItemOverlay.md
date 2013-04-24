@@ -13,7 +13,7 @@ A PHP class representing the overlay setting of ChartSeriesItem.
 ## Methods
 
 ### gradient
-The gradient name.Available options:
+The chart series gradient.The supported values are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemOverlay`

@@ -59,6 +59,9 @@ Specifies the initially selected color.
 
 Triggers when a new color has been selected.
 
+
+For additional information check the [change](/api/web/flatcolorpicker#events-change) event documentation.
+
 #### Example
     <kendo:flatColorPicker change="handle_change">
     </kendo:flatColorPicker>
@@ -73,6 +76,9 @@ Triggers when a new color has been selected.
 ### kendo:flatColorPicker-change
 
 Triggers when a new color has been selected.
+
+
+For additional information check the [change](/api/web/flatcolorpicker#events-change) event documentation.
 
 #### Example
     <kendo:flatColorPicker>

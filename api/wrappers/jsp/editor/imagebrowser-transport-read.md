@@ -68,6 +68,7 @@ The remote url to call when creating a new record.
 Data to be send to the server.
 Refer to the jQuery.ajax documentation for further info.
 
+
 #### Example
     <kendo:editor-imageBrowser-transport-read data="handle_data">
     </kendo:editor-imageBrowser-transport-read>
@@ -80,6 +81,7 @@ Refer to the jQuery.ajax documentation for further info.
 ### url `String`
 
 The remote url to call when creating a new record.
+
 
 #### Example
     <kendo:editor-imageBrowser-transport-read url="handle_url">
@@ -97,6 +99,7 @@ The remote url to call when creating a new record.
 Data to be send to the server.
 Refer to the jQuery.ajax documentation for further info.
 
+
 #### Example
     <kendo:editor-imageBrowser-transport-read>
         <kendo:editor-imageBrowser-transport-read-data>
@@ -111,6 +114,7 @@ Refer to the jQuery.ajax documentation for further info.
 ### kendo:editor-imageBrowser-transport-read-url
 
 The remote url to call when creating a new record.
+
 
 #### Example
     <kendo:editor-imageBrowser-transport-read>

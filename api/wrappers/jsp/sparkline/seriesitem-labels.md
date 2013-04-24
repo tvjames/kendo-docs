@@ -126,6 +126,7 @@ More documentation is available at [kendo:sparkline-seriesItem-labels-border](sp
 
 The label template. Template variables:
 
+
 #### Example
     <kendo:sparkline-seriesItem-labels template="handle_template">
     </kendo:sparkline-seriesItem-labels>
@@ -140,6 +141,7 @@ The label template. Template variables:
 ### kendo:sparkline-seriesItem-labels-template
 
 The label template. Template variables:
+
 
 #### Example
     <kendo:sparkline-seriesItem-labels>

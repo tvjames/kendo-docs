@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-categoryAxisItem-title\>
 
-The title of the category axis.
+The title configuration of the category axis.
 
 #### Example
     <kendo:chart-categoryAxisItem>
@@ -18,8 +18,7 @@ The title of the category axis.
 
 ### background `String`
 
-The background color of the title. Any valid CSS color string will work here, including
-hex and rgb.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-categoryAxisItem-title background="background">
@@ -27,7 +26,7 @@ hex and rgb.
 
 ### color `String`
 
-The text color of the title. Any valid CSS color string will work here, including hex and rgb.
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-categoryAxisItem-title color="color">
@@ -41,17 +40,25 @@ The font style of the title.
     <kendo:chart-categoryAxisItem-title font="font">
     </kendo:chart-categoryAxisItem-title>
 
-### margin `Object`
+### margin `float`
 
-The margin of the title.
+The margin of the title. A numeric value will set all margins. Further configuration is available via [kendo:chart-categoryAxisItem-title-margin](#kendo-chart-categoryAxisItem-title-margin). 
 
 #### Example
     <kendo:chart-categoryAxisItem-title margin="margin">
     </kendo:chart-categoryAxisItem-title>
 
+### padding `float`
+
+The padding of the title. A numeric value will set all paddings. Further configuration is available via [kendo:chart-categoryAxisItem-title-padding](#kendo-chart-categoryAxisItem-title-padding). 
+
+#### Example
+    <kendo:chart-categoryAxisItem-title padding="padding">
+    </kendo:chart-categoryAxisItem-title>
+
 ### position `String`
 
-The position of the title.
+The position of the title.The supported values are:
 
 #### Example
     <kendo:chart-categoryAxisItem-title position="position">
@@ -59,7 +66,7 @@ The position of the title.
 
 ### rotation `float`
 
-The rotation angle of the title.
+The rotation angle of the title. By default the title is not rotated.
 
 #### Example
     <kendo:chart-categoryAxisItem-title rotation="rotation">
@@ -75,7 +82,7 @@ The text of the title.
 
 ### visible `boolean`
 
-The visibility of the title.
+If set to true the chart will display the category axis title. By default the category axis title is visible.
 
 #### Example
     <kendo:chart-categoryAxisItem-title visible="visible">
@@ -94,5 +101,29 @@ More documentation is available at [kendo:chart-categoryAxisItem-title-border](c
 
     <kendo:chart-categoryAxisItem-title>
         <kendo:chart-categoryAxisItem-title-border></kendo:chart-categoryAxisItem-title-border>
+    </kendo:chart-categoryAxisItem-title>
+
+### kendo:chart-categoryAxisItem-title-margin
+
+The margin of the title. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-categoryAxisItem-title-margin](chart/categoryaxisitem-title-margin).
+
+#### Example
+
+    <kendo:chart-categoryAxisItem-title>
+        <kendo:chart-categoryAxisItem-title-margin></kendo:chart-categoryAxisItem-title-margin>
+    </kendo:chart-categoryAxisItem-title>
+
+### kendo:chart-categoryAxisItem-title-padding
+
+The padding of the title. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-categoryAxisItem-title-padding](chart/categoryaxisitem-title-padding).
+
+#### Example
+
+    <kendo:chart-categoryAxisItem-title>
+        <kendo:chart-categoryAxisItem-title-padding></kendo:chart-categoryAxisItem-title-padding>
     </kendo:chart-categoryAxisItem-title>
 

@@ -71,6 +71,7 @@ Defines the number of buttons displayed in the numeric pager.
 
 ### change
 Fires when the current page has changed.
+For additional information check the [change](/api/web/pager#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Pager`

@@ -13,8 +13,7 @@ A PHP class representing the mousewheel setting of ChartCategoryAxisItemSelect.
 ## Methods
 
 ### reverse
-Reverses the mousewheel zoom direction.
-Normal direction is down for "zoom out", up for "zoom in".
+If set to true will reverse the mouse wheel direction. The normal direction is down for "zoom out", up for "zoom in".
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemSelectMousewheel`
@@ -32,7 +31,7 @@ Normal direction is down for "zoom out", up for "zoom in".
     ?>
 
 ### zoom
-The zoom direction. Possible values:
+The zoom direction.The supported values are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartCategoryAxisItemSelectMousewheel`

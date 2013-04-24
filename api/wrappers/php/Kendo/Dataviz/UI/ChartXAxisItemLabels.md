@@ -13,8 +13,7 @@ A PHP class representing the labels setting of ChartXAxisItem.
 ## Methods
 
 ### background
-The background color of the labels. Any valid CSS color string will work here, including
-hex and rgb
+The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -61,7 +60,7 @@ The border of the labels.
     ?>
 
 ### color
-The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -79,7 +78,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
     ?>
 
 ### culture
-Culture to use for formatting the dates. See Globalization for more information.
+The culture to use when formatting date values. See the globalization overview for more information.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -97,16 +96,33 @@ Culture to use for formatting the dates. See Globalization for more information.
     ?>
 
 ### dateFormats
-Date format strings
+
+The format used to display the labels when the x values are dates. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
 
 #### Parameters
 
-##### $value ``
+##### $value `\Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats|array`
 
 
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsDateFormats)
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
+    $dateFormats = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats();
+    $days = 'value';
+    $dateFormats->days($days);
+    $labels->dateFormats($dateFormats);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
+    $days = 'value';
+    $labels->dateFormats(array('days' => $days));
+    ?>
 
 ### font
 The font style of the labels.
@@ -127,7 +143,7 @@ The font style of the labels.
     ?>
 
 ### format
-The format of the labels.
+The format used to display the labels. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -145,14 +161,16 @@ The format of the labels.
     ?>
 
 ### margin
-The margin of the labels.
+
+The margin of the labels. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartXAxisItemLabelsMargin|array`
+
 
 
 
@@ -162,10 +180,26 @@ The margin of the labels.
     $labels->margin(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsMargin)
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
+    $margin = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsMargin();
+    $bottom = 1;
+    $margin->bottom($bottom);
+    $labels->margin($margin);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
+    $bottom = 1;
+    $labels->margin(array('bottom' => $bottom));
+    ?>
+
 ### mirror
-Mirrors the axis labels and ticks.
-If the labels are normally on the left side of the axis,
-mirroring the axis will render them to the right.
+If set to true the chart will mirror the axis labels and ticks. If the labels are normally on the left side of the axis, mirroring the axis will render them to the right.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -183,14 +217,16 @@ mirroring the axis will render them to the right.
     ?>
 
 ### padding
-The padding of the labels.
+
+The padding of the labels. A numeric value will set all paddings.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartXAxisItemLabelsPadding|array`
+
 
 
 
@@ -200,8 +236,26 @@ The padding of the labels.
     $labels->padding(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsPadding)
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
+    $padding = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsPadding();
+    $bottom = 1;
+    $padding->bottom($bottom);
+    $labels->padding($padding);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
+    $bottom = 1;
+    $labels->padding(array('bottom' => $bottom));
+    ?>
+
 ### rotation
-The rotation angle of the labels.
+The rotation angle of the labels. By default the labels are not rotated.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -219,8 +273,7 @@ The rotation angle of the labels.
     ?>
 
 ### skip
-Number of labels to skip.
-Skips rendering the first n labels.
+The number of labels to skip.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -238,8 +291,7 @@ Skips rendering the first n labels.
     ?>
 
 ### step
-Label rendering step.
-Every n-th label is rendered where n is the step
+The label rendering step - render every n-th label. By default every label is rendered.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -257,7 +309,7 @@ Every n-th label is rendered where n is the step
     ?>
 
 ### template
-The label template.
+The template which renders the labels.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`
@@ -281,7 +333,7 @@ The label template.
     ?>
 
 ### visible
-The visibility of the labels.
+If set to true the chart will display the x axis labels. By default the x axis labels are visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItemLabels`

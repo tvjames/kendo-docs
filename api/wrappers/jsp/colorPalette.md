@@ -69,6 +69,9 @@ More documentation is available at [kendo:colorPalette-tileSize](colorpalette/ti
 
 Triggers when a new color has been changed.
 
+
+For additional information check the [change](/api/web/colorpalette#events-change) event documentation.
+
 #### Example
     <kendo:colorPalette change="handle_change">
     </kendo:colorPalette>
@@ -83,6 +86,9 @@ Triggers when a new color has been changed.
 ### kendo:colorPalette-change
 
 Triggers when a new color has been changed.
+
+
+For additional information check the [change](/api/web/colorpalette#events-change) event documentation.
 
 #### Example
     <kendo:colorPalette>

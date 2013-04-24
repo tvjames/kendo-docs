@@ -57,6 +57,7 @@ be displayed in the drop-down HSV picker.
 Fires when a color was selected, either by clicking on it (in the
 simple picker), by clicking ENTER or by pressing "Apply" in the HSV
 picker.
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -92,6 +93,7 @@ picker.
 
 ### close
 Fires when the picker popup is closing.
+For additional information check the [close](/api/web/colorpicker#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -180,6 +182,7 @@ type="color"> does not support opacity.
 
 ### open
 Fires when the picker popup is opening.
+For additional information check the [open](/api/web/colorpicker#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -223,14 +226,20 @@ selector.
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|array`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $colorPicker = new \Kendo\UI\ColorPicker('ColorPicker');
     $colorPicker->palette('value');
+    ?>
+
+#### Example  - using array
+    <?php
+    $colorPicker = new \Kendo\UI\ColorPicker('ColorPicker');
+    $colorPicker->palette(new array());
     ?>
 
 ### preview
@@ -259,6 +268,7 @@ not necessarily the "final" value; for example this event triggers
 when the sliders in the HSV selector are dragged, but then pressing
 ESC would cancel the selection and the color will revert to the
 original value.
+For additional information check the [select](/api/web/colorpicker#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\ColorPicker`

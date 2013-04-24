@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-yAxisItem-plotBands\>
 
-The plot bands of the yAxis.
+The plot bands of the y axis.
 
 #### Example
     <kendo:chart-yAxisItem>
@@ -21,7 +21,7 @@ The plot bands of the yAxis.
 
 ### kendo:chart-yAxisItem-plotBand
 
-The plot bands of the yAxis.
+The plot bands of the y axis.
 
 More documentation is available at [kendo:chart-yAxisItem-plotBand](chart/yaxisitem-plotband).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-xAxisItem-plotBand\>
 
-The plot bands of the xAxis.
+The plot bands of the x axis.
 
 #### Example
     <kendo:chart-xAxisItem-plotBands>

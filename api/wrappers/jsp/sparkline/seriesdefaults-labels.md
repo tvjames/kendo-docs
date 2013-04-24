@@ -107,6 +107,7 @@ More documentation is available at [kendo:sparkline-seriesDefaults-labels-border
 The label template.
 Template variables:
 
+
 #### Example
     <kendo:sparkline-seriesDefaults-labels template="handle_template">
     </kendo:sparkline-seriesDefaults-labels>
@@ -122,6 +123,7 @@ Template variables:
 
 The label template.
 Template variables:
+
 
 #### Example
     <kendo:sparkline-seriesDefaults-labels>

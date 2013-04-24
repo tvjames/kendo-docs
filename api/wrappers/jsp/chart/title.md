@@ -26,7 +26,7 @@ The alignment of the title.
 
 ### background `String`
 
-The background color of the title.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-title background="background">
@@ -40,17 +40,17 @@ The font of the title.
     <kendo:chart-title font="font">
     </kendo:chart-title>
 
-### margin `Object`
+### margin `float`
 
-The margin of the title.
+The margin of the title. A numeric value will set all margins. Further configuration is available via [kendo:chart-title-margin](#kendo-chart-title-margin). 
 
 #### Example
     <kendo:chart-title margin="margin">
     </kendo:chart-title>
 
-### padding `Object`
+### padding `float`
 
-The padding of the title.
+The padding of the title. A numeric value will set all margins. Further configuration is available via [kendo:chart-title-padding](#kendo-chart-title-padding). 
 
 #### Example
     <kendo:chart-title padding="padding">
@@ -66,7 +66,7 @@ The position of the title.
 
 ### text `String`
 
-The title of the chart. You can also set the text directly for a title with default options.
+The text of the chart title. You can also set the text directly for a title with default options.
 
 #### Example
     <kendo:chart-title text="text">
@@ -74,7 +74,7 @@ The title of the chart. You can also set the text directly for a title with defa
 
 ### visible `boolean`
 
-The visibility of the title.
+If set to true the chart will display the title. By default the title is not displayed.
 
 #### Example
     <kendo:chart-title visible="visible">
@@ -85,7 +85,7 @@ The visibility of the title.
 
 ### kendo:chart-title-border
 
-The border of the title.
+The border of the series.
 
 More documentation is available at [kendo:chart-title-border](chart/title-border).
 
@@ -93,5 +93,29 @@ More documentation is available at [kendo:chart-title-border](chart/title-border
 
     <kendo:chart-title>
         <kendo:chart-title-border></kendo:chart-title-border>
+    </kendo:chart-title>
+
+### kendo:chart-title-margin
+
+The margin of the title. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-title-margin](chart/title-margin).
+
+#### Example
+
+    <kendo:chart-title>
+        <kendo:chart-title-margin></kendo:chart-title-margin>
+    </kendo:chart-title>
+
+### kendo:chart-title-padding
+
+The padding of the title. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-title-padding](chart/title-padding).
+
+#### Example
+
+    <kendo:chart-title>
+        <kendo:chart-title-padding></kendo:chart-title-padding>
     </kendo:chart-title>
 

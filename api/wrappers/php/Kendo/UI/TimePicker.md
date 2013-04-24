@@ -64,6 +64,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
 
 ### change
 Triggered when the underlying value of a TimePicker is changed.
+For additional information check the [change](/api/web/timepicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\TimePicker`
@@ -99,6 +100,7 @@ Triggered when the underlying value of a TimePicker is changed.
 
 ### close
 Fires when the time drop-down list is closed
+For additional information check the [close](/api/web/timepicker#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\TimePicker`
@@ -242,6 +244,7 @@ Specifies the start value in the popup list.
 
 ### open
 Fires when the time drop-down list is opened
+For additional information check the [open](/api/web/timepicker#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\TimePicker`

@@ -13,7 +13,7 @@ A PHP class representing the border setting of SparklineSeriesItem.
 ## Methods
 
 ### color
-The color of the border.
+The color of the border.  It defaults to the color of the current series.
 
 #### Returns
 `\Kendo\Dataviz\UI\SparklineSeriesItemBorder`

@@ -13,7 +13,7 @@ A PHP class representing the line setting of ChartSeriesItemHighlight.
 ## Methods
 
 ### color
-The line color.
+The line color. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlightLine`
@@ -31,7 +31,7 @@ The line color.
     ?>
 
 ### opacity
-The opacity of the line.
+The opacity of the line. By default the border is opaque.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemHighlightLine`

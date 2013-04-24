@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-tooltip\>
 
-The data point tooltip configuration options.
+The chart series tooltip configuration options.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ The data point tooltip configuration options.
 
 ### background `String`
 
-The background color of the tooltip. The default is determined from the series color.
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-tooltip background="background">
@@ -26,7 +26,7 @@ The background color of the tooltip. The default is determined from the series c
 
 ### color `String`
 
-The text color of the tooltip. The default is the same as the series labels color.
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-tooltip color="color">
@@ -42,15 +42,15 @@ The tooltip font.
 
 ### format `String`
 
-The tooltip format. Format variables depend on the series type:
+The format of the labels. Uses kendo.format.Format placeholders:
 
 #### Example
     <kendo:chart-seriesItem-tooltip format="format">
     </kendo:chart-seriesItem-tooltip>
 
-### padding `Object`
+### padding `float`
 
-The padding of the tooltip.
+The padding of the tooltip. A numeric value will set all paddings. Further configuration is available via [kendo:chart-seriesItem-tooltip-padding](#kendo-chart-seriesItem-tooltip-padding). 
 
 #### Example
     <kendo:chart-seriesItem-tooltip padding="padding">
@@ -58,8 +58,7 @@ The padding of the tooltip.
 
 ### template `String`
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
 
 #### Example
     <kendo:chart-seriesItem-tooltip template="template">
@@ -67,7 +66,7 @@ Template variables:
 
 ### visible `boolean`
 
-A value indicating if the tooltip should be displayed.
+If set to true the chart will display the series tooltip. By default the series tooltip is not displayed.
 
 #### Example
     <kendo:chart-seriesItem-tooltip visible="visible">
@@ -88,13 +87,25 @@ More documentation is available at [kendo:chart-seriesItem-tooltip-border](chart
         <kendo:chart-seriesItem-tooltip-border></kendo:chart-seriesItem-tooltip-border>
     </kendo:chart-seriesItem-tooltip>
 
+### kendo:chart-seriesItem-tooltip-padding
+
+The padding of the tooltip. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-seriesItem-tooltip-padding](chart/seriesitem-tooltip-padding).
+
+#### Example
+
+    <kendo:chart-seriesItem-tooltip>
+        <kendo:chart-seriesItem-tooltip-padding></kendo:chart-seriesItem-tooltip-padding>
+    </kendo:chart-seriesItem-tooltip>
+
 
 ## Event Attributes
 
 ### template `String`
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-seriesItem-tooltip template="handle_template">
@@ -109,8 +120,8 @@ Template variables:
 
 ### kendo:chart-seriesItem-tooltip-template
 
-The tooltip template.
-Template variables:
+The template which renders the tooltip.The fields which can be used in the template are:
+
 
 #### Example
     <kendo:chart-seriesItem-tooltip>

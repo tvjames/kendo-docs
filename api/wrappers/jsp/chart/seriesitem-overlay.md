@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-overlay\>
 
-The effects overlay.
+The chart series overlay options.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ The effects overlay.
 
 ### gradient `String`
 
-The gradient name.Available options:
+The chart series gradient.The supported values are:
 
 #### Example
     <kendo:chart-seriesItem-overlay gradient="gradient">

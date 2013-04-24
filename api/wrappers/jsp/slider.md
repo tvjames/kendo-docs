@@ -116,6 +116,9 @@ More documentation is available at [kendo:slider-tooltip](slider/tooltip).
 
 Fires when the slider value changes as a result of selecting a new value with the drag handle, buttons or keyboard.
 
+
+For additional information check the [change](/api/web/slider#events-change) event documentation.
+
 #### Example
     <kendo:slider change="handle_change">
     </kendo:slider>
@@ -128,6 +131,9 @@ Fires when the slider value changes as a result of selecting a new value with th
 ### slide `String`
 
 Fires when the user drags the drag handle to a new position.
+
+
+For additional information check the [slide](/api/web/slider#events-slide) event documentation.
 
 #### Example
     <kendo:slider slide="handle_slide">
@@ -144,6 +150,9 @@ Fires when the user drags the drag handle to a new position.
 
 Fires when the slider value changes as a result of selecting a new value with the drag handle, buttons or keyboard.
 
+
+For additional information check the [change](/api/web/slider#events-change) event documentation.
+
 #### Example
     <kendo:slider>
         <kendo:slider-change>
@@ -158,6 +167,9 @@ Fires when the slider value changes as a result of selecting a new value with th
 ### kendo:slider-slide
 
 Fires when the user drags the drag handle to a new position.
+
+
+For additional information check the [slide](/api/web/slider#events-slide) event documentation.
 
 #### Example
     <kendo:slider>

@@ -96,6 +96,7 @@ More documentation is available at [kendo:stockChart-categoryAxisItem-crosshair-
 The tooltip template.
 Template variables:
 
+
 #### Example
     <kendo:stockChart-categoryAxisItem-crosshair-tooltip template="handle_template">
     </kendo:stockChart-categoryAxisItem-crosshair-tooltip>
@@ -111,6 +112,7 @@ Template variables:
 
 The tooltip template.
 Template variables:
+
 
 #### Example
     <kendo:stockChart-categoryAxisItem-crosshair-tooltip>

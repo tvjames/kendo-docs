@@ -13,7 +13,7 @@ A PHP class representing the crosshair setting of ChartValueAxisItem.
 ## Methods
 
 ### color
-The color of the crosshair.
+The color of the crosshair. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemCrosshair`
@@ -30,26 +30,8 @@ The color of the crosshair.
     $crosshair->color('value');
     ?>
 
-### dashType
-The dash type of the crosshair.
-
-#### Returns
-`\Kendo\Dataviz\UI\ChartValueAxisItemCrosshair`
-
-#### Parameters
-
-##### $value `float`
-
-
-
-#### Example 
-    <?php
-    $crosshair = new \Kendo\Dataviz\UI\ChartValueAxisItemCrosshair();
-    $crosshair->dashType(1);
-    ?>
-
 ### opacity
-The opacity of the crosshair.
+The opacity of the crosshair. By default the crosshair is opaque.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemCrosshair`
@@ -68,7 +50,7 @@ The opacity of the crosshair.
 
 ### tooltip
 
-The crosshar tooltip configuration options.
+The crosshar tooltip options.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemCrosshair`
@@ -96,7 +78,7 @@ The crosshar tooltip configuration options.
     ?>
 
 ### visible
-The dash type of the crosshair.
+If set to true the chart will display the value axis crosshair. By default the value axis crosshair is not visible.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemCrosshair`
@@ -114,7 +96,7 @@ The dash type of the crosshair.
     ?>
 
 ### width
-The width of the crosshair.
+The width of the crosshair in pixels.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartValueAxisItemCrosshair`

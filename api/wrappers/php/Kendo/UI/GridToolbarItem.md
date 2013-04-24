@@ -13,7 +13,7 @@ A PHP class representing the toolbarItem setting of GridToolbar.
 ## Methods
 
 ### name
-The name of the command. One of the predefined or a custom.
+The name of the toolbar command. Either a built-in ("cancel", "create" and "save") or custom.
 
 #### Returns
 `\Kendo\UI\GridToolbarItem`
@@ -31,25 +31,31 @@ The name of the command. One of the predefined or a custom.
     ?>
 
 ### template
-The template for the command button.
+The template which renders the command. Be default renders a button.
 
 #### Returns
 `\Kendo\UI\GridToolbarItem`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $toolbarItem = new \Kendo\UI\GridToolbarItem();
     $toolbarItem->template('value');
     ?>
 
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $toolbarItem = new \Kendo\UI\GridToolbarItem();
+    $toolbarItem->template(new \Kendo\JavaScriptFunction('function() { }'));
+    ?>
+
 ### text
-The text of the command that will be set on the button.
+The text displayed by the command button. If not set the name` option would be used as the button text instead.
 
 #### Returns
 `\Kendo\UI\GridToolbarItem`

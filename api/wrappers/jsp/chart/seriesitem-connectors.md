@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-seriesItem-connectors\>
 
-The label connectors options.** Applicable to donut and pie series. **
+The label connectors options.
 
 #### Example
     <kendo:chart-seriesItem>
@@ -18,7 +18,7 @@ The label connectors options.** Applicable to donut and pie series. **
 
 ### color `String`
 
-The color of the connector line.
+The color of the connector. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-seriesItem-connectors color="color">

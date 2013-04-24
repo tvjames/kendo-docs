@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-categoryAxisItem-line\>
 
-Configures the axis line. This will also effect major and minor ticks, but not gridlines.
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
 #### Example
     <kendo:chart-categoryAxisItem>
@@ -18,7 +18,7 @@ Configures the axis line. This will also effect major and minor ticks, but not g
 
 ### color `String`
 
-The color of the lines. Any valid CSS color string will work here, including hex and rgb.Note: This will also effect the major and minor ticks, but not the grid lines.
+The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-categoryAxisItem-line color="color">
@@ -26,7 +26,7 @@ The color of the lines. Any valid CSS color string will work here, including hex
 
 ### dashType `String`
 
-The dash type of the line.
+The dash type of the line.The following dash types are supported:
 
 #### Example
     <kendo:chart-categoryAxisItem-line dashType="dashType">
@@ -34,7 +34,7 @@ The dash type of the line.
 
 ### visible `boolean`
 
-The visibility of the lines.
+If set to true the chart will display the category axis lines. By default the category axis lines are visible.
 
 #### Example
     <kendo:chart-categoryAxisItem-line visible="visible">
@@ -42,8 +42,7 @@ The visibility of the lines.
 
 ### width `float`
 
-The width of the line. This will also effect the major and minor ticks, but
-not the grid lines.
+The width of the line in pixels. Also affects the major and minor ticks, but not the grid lines.
 
 #### Example
     <kendo:chart-categoryAxisItem-line width="width">

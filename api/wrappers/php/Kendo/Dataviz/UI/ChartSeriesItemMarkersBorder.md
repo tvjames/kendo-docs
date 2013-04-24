@@ -13,7 +13,7 @@ A PHP class representing the border setting of ChartSeriesItemMarkers.
 ## Methods
 
 ### color
-The color of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemMarkersBorder`
@@ -31,7 +31,7 @@ The color of the border.
     ?>
 
 ### width
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartSeriesItemMarkersBorder`

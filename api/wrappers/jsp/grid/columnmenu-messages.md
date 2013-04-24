@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-columnMenu-messages\>
 
-Sets the columnMenu messages.
+The text messages displayed in the column menu. Use it to customize or localize the column menu messages.
 
 #### Example
     <kendo:grid-columnMenu>
@@ -18,7 +18,7 @@ Sets the columnMenu messages.
 
 ### columns `String`
 
-Set the text of the columns section in column header menu.
+The text message displayed for the column selection menu item.
 
 #### Example
     <kendo:grid-columnMenu-messages columns="columns">
@@ -26,7 +26,7 @@ Set the text of the columns section in column header menu.
 
 ### filter `String`
 
-Set the text of the filter section in column header menu.
+The text message displayed for the filter menu item.
 
 #### Example
     <kendo:grid-columnMenu-messages filter="filter">
@@ -34,7 +34,7 @@ Set the text of the filter section in column header menu.
 
 ### sortAscending `String`
 
-Set the text of the sortAscending section in column header menu.
+The text message displayed for the menu item which performs ascending sort.
 
 #### Example
     <kendo:grid-columnMenu-messages sortAscending="sortAscending">
@@ -42,7 +42,7 @@ Set the text of the sortAscending section in column header menu.
 
 ### sortDescending `String`
 
-Set the text of the sortDescending section in column header menu.
+The text message displayed for the menu item which performs descending sort.
 
 #### Example
     <kendo:grid-columnMenu-messages sortDescending="sortDescending">

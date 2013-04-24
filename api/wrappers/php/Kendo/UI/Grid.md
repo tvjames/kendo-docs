@@ -52,7 +52,8 @@ The id of the template used for rendering the alternate rows in the grid.
     ?>
 
 ### autoBind
-Indicates whether the grid will call read on the DataSource initially.
+If set to false the widget will not bind to the data source during initialization. In this case data binding will occur when the change event of the
+data source is fired. By default the widget will bind to the data source specified in the configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -70,7 +71,8 @@ Indicates whether the grid will call read on the DataSource initially.
     ?>
 
 ### cancel
-Raised when the user clicks the "cancel" button (in inline or popup editing mode) or closes the popup window (popup editing mode).
+Fired when the user clicks the "cancel" button (in inline or popup editing mode) or closes the popup window.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [cancel](/api/web/grid#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -105,7 +107,8 @@ Raised when the user clicks the "cancel" button (in inline or popup editing mode
     ?>
 
 ### change
-Fires when the grid selection has changed.
+Fired when the user selects a table row or cell in the grid.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [change](/api/web/grid#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -140,7 +143,8 @@ Fires when the grid selection has changed.
     ?>
 
 ### columnHide
-Fires when the user hides a column.
+Fired when the user hides a column.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [columnHide](/api/web/grid#events-columnHide) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -176,7 +180,8 @@ Fires when the user hides a column.
 
 ### columnMenu
 
-Enables column header menu
+If set to true the grid will display the column menu when the user clicks the chevron icon in the column headers. The column menu allows the user to show and hide columns, filter and sort (if filtering and sorting are enabled).
+By default the column menu is not enabled.Can be set to a JavaScript object which represents the column menu configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -213,7 +218,8 @@ Enables column header menu
     ?>
 
 ### columnMenuInit
-Fires when the grid column menu is initialized.
+Fired when the column menu is initialized.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [columnMenuInit](/api/web/grid#events-columnMenuInit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -248,7 +254,8 @@ Fires when the grid column menu is initialized.
     ?>
 
 ### columnReorder
-Fires when the user changes the order of a column.
+Fired when the user changes the order of a column.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [columnReorder](/api/web/grid#events-columnReorder) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -283,7 +290,8 @@ Fires when the user changes the order of a column.
     ?>
 
 ### columnResize
-Fires when the user resizes a column.
+Fired when the user resizes a column.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [columnResize](/api/web/grid#events-columnResize) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -318,7 +326,8 @@ Fires when the user resizes a column.
     ?>
 
 ### columnShow
-Fires when a column is shown.
+Fired when the user shows a column.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [columnShow](/api/web/grid#events-columnShow) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -391,7 +400,8 @@ Adds one or more GridColumn to the Grid.
     ?>
 
 ### dataBinding
-Fires when the grid is about to be rendered.
+Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [dataBinding](/api/web/grid#events-dataBinding) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -426,7 +436,8 @@ Fires when the grid is about to be rendered.
     ?>
 
 ### dataBound
-Fires when the grid has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [dataBound](/api/web/grid#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -488,7 +499,8 @@ Sets the data source of the dataSource.
     ?>
 
 ### detailCollapse
-Fires when the grid detail row is collapsed.
+Fired when the user collapses a detail table row.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [detailCollapse](/api/web/grid#events-detailCollapse) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -523,7 +535,8 @@ Fires when the grid detail row is collapsed.
     ?>
 
 ### detailExpand
-Fires when the grid detail row is expanded.
+Fired when the user expands a detail table row.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [detailExpand](/api/web/grid#events-detailExpand) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -558,7 +571,8 @@ Fires when the grid detail row is expanded.
     ?>
 
 ### detailInit
-Fires when the grid detail is initialized.
+Fired when a detail table row is initialized.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [detailInit](/api/web/grid#events-detailInit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -611,7 +625,8 @@ The id of the template used for rendering the detail rows in the grid.
     ?>
 
 ### edit
-Fires when the grid enters edit mode.
+Fired when the user edits or creates a data item.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [edit](/api/web/grid#events-edit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -647,7 +662,7 @@ Fires when the grid enters edit mode.
 
 ### editable
 
-Indicates whether editing is enabled/disabled.
+If set to true the user would be able to edit the data to which the grid is bound to. By default editing is disabled.Can be set to a string ("inline", "incell" or "popup") to specify the editing mode. The default editing mode is "incell".Can be set to a JavaScript object which represents the editing configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -684,7 +699,8 @@ Indicates whether editing is enabled/disabled.
     ?>
 
 ### filterMenuInit
-Fires when the grid column filter menu is initialized.
+Fired when the grid filter menu is initialized.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [filterMenuInit](/api/web/grid#events-filterMenuInit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -720,7 +736,7 @@ Fires when the grid column filter menu is initialized.
 
 ### filterable
 
-Indicates whether filtering is enabled/disabled.
+If set to true the user can filter the data source using the grid filter menu. Filtering is disabled by default.Can be set to a JavaScript object which represents the filter menu configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -758,7 +774,7 @@ Indicates whether filtering is enabled/disabled.
 
 ### groupable
 
-Indicates whether grouping is enabled/disabled.
+If set to true the user could group the grid by dragging the column header cells. By default grouping is disabled.Can be set to a JavaScript object which represents the grouping configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -795,7 +811,7 @@ Indicates whether grouping is enabled/disabled.
     ?>
 
 ### height
-Sets the height of the grid.
+The height of the grid. Numeric values are treated as pixels.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -819,7 +835,7 @@ Sets the height of the grid.
     ?>
 
 ### navigatable
-Indicates whether keyboard navigation is enabled/disabled.
+If set to true the use could navigate the widget using the keyboard navigation. By default keyboard navigation is disabled.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -838,7 +854,7 @@ Indicates whether keyboard navigation is enabled/disabled.
 
 ### pageable
 
-Indicates whether paging is enabled/disabled.
+If set to true the grid will display a pager. By default paging is disabled.Can be set to a JavaScript object which represents the pager configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -875,7 +891,8 @@ Indicates whether paging is enabled/disabled.
     ?>
 
 ### remove
-Fires before the grid item is removed.
+Fired when the user clicks the "destroy" command button.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [remove](/api/web/grid#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -910,7 +927,7 @@ Fires before the grid item is removed.
     ?>
 
 ### reorderable
-Indicates whether column reordering is enabled/disable.
+If set to true the user could reorder the columns by dragging their header cells. By default reordering is disabled.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -928,7 +945,7 @@ Indicates whether column reordering is enabled/disable.
     ?>
 
 ### resizable
-Indicates whether column resizing is enabled/disable.
+If set to true the user could resize the columns by dragging the edges of their header cells. By default resizing is disabled.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -964,7 +981,8 @@ The id of the template used for rendering the rows in the grid.
     ?>
 
 ### save
-Fires before the grid item is changed.
+Fired when a data item is saved.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [save](/api/web/grid#events-save) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -999,7 +1017,8 @@ Fires before the grid item is changed.
     ?>
 
 ### saveChanges
-Fires before the grid calls DataSource sync.
+Fired when the user clicks the "save" command button.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [saveChanges](/api/web/grid#events-saveChanges) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -1035,7 +1054,7 @@ Fires before the grid calls DataSource sync.
 
 ### scrollable
 
-Enable/disable grid scrolling.
+If set to true the grid will display a scrollbar when the total row height (or width) exceeds the grid height (or width). By default scrolling is enabled.Can be set to a JavaScript object which represents the scrolling configuration.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -1072,18 +1091,24 @@ Enable/disable grid scrolling.
     ?>
 
 ### selectable
-Indicates whether selection is enabled/disabled. Possible values:
+If set to true the user would be able to select grid rows. By default selection is disabled.Can also be set to the following string values:
 
 #### Returns
 `\Kendo\UI\Grid`
 
 #### Parameters
 
-##### $value `string`
+##### $value `boolean|string`
 
 
 
-#### Example 
+#### Example  - using boolean
+    <?php
+    $grid = new \Kendo\UI\Grid('Grid');
+    $grid->selectable(true);
+    ?>
+
+#### Example  - using string
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $grid->selectable('value');
@@ -1091,7 +1116,7 @@ Indicates whether selection is enabled/disabled. Possible values:
 
 ### sortable
 
-Defines whether grid columns are sortable.
+If set to true the user could sort the grid by clicking the column header cells. By default sorting is disabled.Can be set to a JavaScript object which represents the sorting configuration.
 
 #### Returns
 `\Kendo\UI\Grid`

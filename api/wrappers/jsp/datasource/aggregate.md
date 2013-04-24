@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-aggregate\>
 
-Sets fields on which initial aggregates should be calculated
+The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
     <kendo:dataSource>
@@ -21,7 +21,7 @@ Sets fields on which initial aggregates should be calculated
 
 ### kendo:dataSource-aggregateItem
 
-Sets fields on which initial aggregates should be calculated
+The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 More documentation is available at [kendo:dataSource-aggregateItem](datasource/aggregateitem).
 

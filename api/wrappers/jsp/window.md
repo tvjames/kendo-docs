@@ -157,6 +157,9 @@ More documentation is available at [kendo:window-animation](window/animation).
 
 Triggered when a Window has finished its opening animation.
 
+
+For additional information check the [activate](/api/web/window#events-activate) event documentation.
+
 #### Example
     <kendo:window activate="handle_activate">
     </kendo:window>
@@ -169,6 +172,9 @@ Triggered when a Window has finished its opening animation.
 ### close `String`
 
 Triggered when a Window is closed (by a user or through the close() method).
+
+
+For additional information check the [close](/api/web/window#events-close) event documentation.
 
 #### Example
     <kendo:window close="handle_close">
@@ -183,6 +189,9 @@ Triggered when a Window is closed (by a user or through the close() method).
 
 Triggered when a Window has finished its closing animation.
 
+
+For additional information check the [deactivate](/api/web/window#events-deactivate) event documentation.
+
 #### Example
     <kendo:window deactivate="handle_deactivate">
     </kendo:window>
@@ -195,6 +204,9 @@ Triggered when a Window has finished its closing animation.
 ### dragend `String`
 
 Triggered when a Window has been moved by a user.
+
+
+For additional information check the [dragend](/api/web/window#events-dragend) event documentation.
 
 #### Example
     <kendo:window dragend="handle_dragend">
@@ -209,6 +221,9 @@ Triggered when a Window has been moved by a user.
 
 Triggered when the user starts to move the window.
 
+
+For additional information check the [dragstart](/api/web/window#events-dragstart) event documentation.
+
 #### Example
     <kendo:window dragstart="handle_dragstart">
     </kendo:window>
@@ -222,6 +237,9 @@ Triggered when the user starts to move the window.
 
 Triggered when an AJAX request for content fails.
 
+
+For additional information check the [error](/api/web/window#events-error) event documentation.
+
 #### Example
     <kendo:window error="handle_error">
     </kendo:window>
@@ -234,6 +252,9 @@ Triggered when an AJAX request for content fails.
 ### open `String`
 
 Triggered when a Window is opened (i.e. the open() method is called).
+
+
+For additional information check the [open](/api/web/window#events-open) event documentation.
 
 #### Example
     <kendo:window open="handle_open">
@@ -250,6 +271,9 @@ Triggered when the content of a Window has finished loading via AJAX,
 when the window iframe has finished loading, or when the refresh button
 has been clicked on a window with static content.
 
+
+For additional information check the [refresh](/api/web/window#events-refresh) event documentation.
+
 #### Example
     <kendo:window refresh="handle_refresh">
     </kendo:window>
@@ -262,6 +286,9 @@ has been clicked on a window with static content.
 ### resize `String`
 
 Triggered when a Window has been resized by a user.
+
+
+For additional information check the [resize](/api/web/window#events-resize) event documentation.
 
 #### Example
     <kendo:window resize="handle_resize">
@@ -278,6 +305,9 @@ Triggered when a Window has been resized by a user.
 
 Triggered when a Window has finished its opening animation.
 
+
+For additional information check the [activate](/api/web/window#events-activate) event documentation.
+
 #### Example
     <kendo:window>
         <kendo:window-activate>
@@ -292,6 +322,9 @@ Triggered when a Window has finished its opening animation.
 ### kendo:window-close
 
 Triggered when a Window is closed (by a user or through the close() method).
+
+
+For additional information check the [close](/api/web/window#events-close) event documentation.
 
 #### Example
     <kendo:window>
@@ -308,6 +341,9 @@ Triggered when a Window is closed (by a user or through the close() method).
 
 Triggered when a Window has finished its closing animation.
 
+
+For additional information check the [deactivate](/api/web/window#events-deactivate) event documentation.
+
 #### Example
     <kendo:window>
         <kendo:window-deactivate>
@@ -322,6 +358,9 @@ Triggered when a Window has finished its closing animation.
 ### kendo:window-dragend
 
 Triggered when a Window has been moved by a user.
+
+
+For additional information check the [dragend](/api/web/window#events-dragend) event documentation.
 
 #### Example
     <kendo:window>
@@ -338,6 +377,9 @@ Triggered when a Window has been moved by a user.
 
 Triggered when the user starts to move the window.
 
+
+For additional information check the [dragstart](/api/web/window#events-dragstart) event documentation.
+
 #### Example
     <kendo:window>
         <kendo:window-dragstart>
@@ -353,6 +395,9 @@ Triggered when the user starts to move the window.
 
 Triggered when an AJAX request for content fails.
 
+
+For additional information check the [error](/api/web/window#events-error) event documentation.
+
 #### Example
     <kendo:window>
         <kendo:window-error>
@@ -367,6 +412,9 @@ Triggered when an AJAX request for content fails.
 ### kendo:window-open
 
 Triggered when a Window is opened (i.e. the open() method is called).
+
+
+For additional information check the [open](/api/web/window#events-open) event documentation.
 
 #### Example
     <kendo:window>
@@ -385,6 +433,9 @@ Triggered when the content of a Window has finished loading via AJAX,
 when the window iframe has finished loading, or when the refresh button
 has been clicked on a window with static content.
 
+
+For additional information check the [refresh](/api/web/window#events-refresh) event documentation.
+
 #### Example
     <kendo:window>
         <kendo:window-refresh>
@@ -399,6 +450,9 @@ has been clicked on a window with static content.
 ### kendo:window-resize
 
 Triggered when a Window has been resized by a user.
+
+
+For additional information check the [resize](/api/web/window#events-resize) event documentation.
 
 #### Example
     <kendo:window>

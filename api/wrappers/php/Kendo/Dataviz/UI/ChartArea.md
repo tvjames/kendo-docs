@@ -13,7 +13,7 @@ A PHP class representing the chartArea setting of Chart.
 ## Methods
 
 ### background
-The background color of the chart area.
+The background color of the chart area. Accepts a valid CSS color string, including hex and rgb.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartArea`
@@ -78,14 +78,16 @@ The height of the chart area.
     ?>
 
 ### margin
-The margin of the chart area.
+
+The margin of the chart area. A numeric value will set all margins.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartArea`
 
 #### Parameters
 
-##### $value `float|`
+##### $value `float|\Kendo\Dataviz\UI\ChartAreaMargin|array`
+
 
 
 
@@ -95,8 +97,26 @@ The margin of the chart area.
     $chartArea->margin(1);
     ?>
 
+
+#### Example - using [\Kendo\Dataviz\UI\ChartAreaMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartAreaMargin)
+    <?php
+    $chartArea = new \Kendo\Dataviz\UI\ChartArea();
+    $margin = new \Kendo\Dataviz\UI\ChartAreaMargin();
+    $bottom = 1;
+    $margin->bottom($bottom);
+    $chartArea->margin($margin);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $chartArea = new \Kendo\Dataviz\UI\ChartArea();
+    $bottom = 1;
+    $chartArea->margin(array('bottom' => $bottom));
+    ?>
+
 ### opacity
-The background opacity of the chart area.
+The background opacity of the chart area. By default the background is opaque.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartArea`

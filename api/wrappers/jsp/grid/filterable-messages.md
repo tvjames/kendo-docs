@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:grid-filterable-messages\>
 
-Sets the filter menu messages.
+The text messages displayed in the filter menu. Use it to customize or localize the filter menu messages.
 
 #### Example
     <kendo:grid-filterable>
@@ -18,7 +18,7 @@ Sets the filter menu messages.
 
 ### and `String`
 
-Set the text of the "and" option from logic drop down list.
+The text of the option which represents the "and" logical operation.
 
 #### Example
     <kendo:grid-filterable-messages and="and">
@@ -26,7 +26,7 @@ Set the text of the "and" option from logic drop down list.
 
 ### clear `String`
 
-Set the text of the clear button of the filter menu.
+The text of the button which clears the filter.
 
 #### Example
     <kendo:grid-filterable-messages clear="clear">
@@ -34,7 +34,7 @@ Set the text of the clear button of the filter menu.
 
 ### filter `String`
 
-Set the text of the filter button of the filter menu.
+The text of the button which applies the filter.
 
 #### Example
     <kendo:grid-filterable-messages filter="filter">
@@ -42,7 +42,7 @@ Set the text of the filter button of the filter menu.
 
 ### info `String`
 
-Set the text of the information message on top of the filter menu.
+The text of the information message on the top of the filter menu.
 
 #### Example
     <kendo:grid-filterable-messages info="info">
@@ -50,7 +50,7 @@ Set the text of the information message on top of the filter menu.
 
 ### isFalse `String`
 
-Set the text of the isFalse radio button of the filter menu for boolean values.
+The text of the radio button for false values. Displayed when filtering Boolean fields.
 
 #### Example
     <kendo:grid-filterable-messages isFalse="isFalse">
@@ -58,7 +58,7 @@ Set the text of the isFalse radio button of the filter menu for boolean values.
 
 ### isTrue `String`
 
-Set the text of the isTrue radio button of the filter menu for boolean values.
+The text of the radio button for true values. Displayed when filtering Boolean fields.
 
 #### Example
     <kendo:grid-filterable-messages isTrue="isTrue">
@@ -66,7 +66,7 @@ Set the text of the isTrue radio button of the filter menu for boolean values.
 
 ### or `String`
 
-Set the text of the "or" option from logic drop down list.
+The text of the option which represents the "or" logical operation.
 
 #### Example
     <kendo:grid-filterable-messages or="or">
@@ -74,7 +74,7 @@ Set the text of the "or" option from logic drop down list.
 
 ### selectValue `String`
 
-Set the text of the option label for foreign key drop down list.
+The text of the dropdownlist displayed in the filter menu for columns whose values option is set.
 
 #### Example
     <kendo:grid-filterable-messages selectValue="selectValue">

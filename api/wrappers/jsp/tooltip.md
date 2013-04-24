@@ -105,6 +105,9 @@ More documentation is available at [kendo:tooltip-animation](tooltip/animation).
 
 Triggered when an AJAX request for content completes.
 
+
+For additional information check the [contentLoad](/api/web/tooltip#events-contentLoad) event documentation.
+
 #### Example
     <kendo:tooltip contentLoad="handle_contentLoad">
     </kendo:tooltip>
@@ -117,6 +120,9 @@ Triggered when an AJAX request for content completes.
 ### show `String`
 
 Triggered when a Tooltip is shown.
+
+
+For additional information check the [show](/api/web/tooltip#events-show) event documentation.
 
 #### Example
     <kendo:tooltip show="handle_show">
@@ -131,6 +137,9 @@ Triggered when a Tooltip is shown.
 
 Triggered when a Tooltip is hidden
 
+
+For additional information check the [hide](/api/web/tooltip#events-hide) event documentation.
+
 #### Example
     <kendo:tooltip hide="handle_hide">
     </kendo:tooltip>
@@ -144,6 +153,9 @@ Triggered when a Tooltip is hidden
 
 Triggered before an AJAX request started.
 
+
+For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.
+
 #### Example
     <kendo:tooltip requestStart="handle_requestStart">
     </kendo:tooltip>
@@ -156,6 +168,9 @@ Triggered before an AJAX request started.
 ### error `String`
 
 Triggered when an AJAX request for content fails.
+
+
+For additional information check the [error](/api/web/tooltip#events-error) event documentation.
 
 #### Example
     <kendo:tooltip error="handle_error">
@@ -172,6 +187,9 @@ Triggered when an AJAX request for content fails.
 
 Triggered when an AJAX request for content completes.
 
+
+For additional information check the [contentLoad](/api/web/tooltip#events-contentLoad) event documentation.
+
 #### Example
     <kendo:tooltip>
         <kendo:tooltip-contentLoad>
@@ -186,6 +204,9 @@ Triggered when an AJAX request for content completes.
 ### kendo:tooltip-show
 
 Triggered when a Tooltip is shown.
+
+
+For additional information check the [show](/api/web/tooltip#events-show) event documentation.
 
 #### Example
     <kendo:tooltip>
@@ -202,6 +223,9 @@ Triggered when a Tooltip is shown.
 
 Triggered when a Tooltip is hidden
 
+
+For additional information check the [hide](/api/web/tooltip#events-hide) event documentation.
+
 #### Example
     <kendo:tooltip>
         <kendo:tooltip-hide>
@@ -217,6 +241,9 @@ Triggered when a Tooltip is hidden
 
 Triggered before an AJAX request started.
 
+
+For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.
+
 #### Example
     <kendo:tooltip>
         <kendo:tooltip-requestStart>
@@ -231,6 +258,9 @@ Triggered before an AJAX request started.
 ### kendo:tooltip-error
 
 Triggered when an AJAX request for content fails.
+
+
+For additional information check the [error](/api/web/tooltip#events-error) event documentation.
 
 #### Example
     <kendo:tooltip>

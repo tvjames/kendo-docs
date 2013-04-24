@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-xAxisItem-title\>
 
-The title of the value axis.
+The title configuration of the scatter chart x axis.
 
 #### Example
     <kendo:chart-xAxisItem>
@@ -18,8 +18,7 @@ The title of the value axis.
 
 ### background `String`
 
-The background color of the title. Any valid CSS color string will work here, including
-hex and rgb.
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-xAxisItem-title background="background">
@@ -27,7 +26,7 @@ hex and rgb.
 
 ### color `String`
 
-The text color of the title. Any valid CSS color string will work here, including hex and rgb.
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-xAxisItem-title color="color">
@@ -41,17 +40,17 @@ The font style of the title.
     <kendo:chart-xAxisItem-title font="font">
     </kendo:chart-xAxisItem-title>
 
-### margin `Object`
+### margin `float`
 
-The margin of the title.
+The margin of the title. A numeric value will set all margins. Further configuration is available via [kendo:chart-xAxisItem-title-margin](#kendo-chart-xAxisItem-title-margin). 
 
 #### Example
     <kendo:chart-xAxisItem-title margin="margin">
     </kendo:chart-xAxisItem-title>
 
-### padding `Object`
+### padding `float`
 
-The padding of the title.
+The padding of the title. A numeric value will set all paddings. Further configuration is available via [kendo:chart-xAxisItem-title-padding](#kendo-chart-xAxisItem-title-padding). 
 
 #### Example
     <kendo:chart-xAxisItem-title padding="padding">
@@ -59,7 +58,7 @@ The padding of the title.
 
 ### position `String`
 
-The position of the title.
+The position of the title.The supported values are:
 
 #### Example
     <kendo:chart-xAxisItem-title position="position">
@@ -67,7 +66,7 @@ The position of the title.
 
 ### rotation `float`
 
-The rotation angle of the title.
+The rotation angle of the title. By default the title is not rotated.
 
 #### Example
     <kendo:chart-xAxisItem-title rotation="rotation">
@@ -83,7 +82,7 @@ The text of the title.
 
 ### visible `boolean`
 
-The visibility of the title.
+If set to true the chart will display the scatter chart x axis title. By default the scatter chart x axis title is visible.
 
 #### Example
     <kendo:chart-xAxisItem-title visible="visible">
@@ -102,5 +101,29 @@ More documentation is available at [kendo:chart-xAxisItem-title-border](chart/xa
 
     <kendo:chart-xAxisItem-title>
         <kendo:chart-xAxisItem-title-border></kendo:chart-xAxisItem-title-border>
+    </kendo:chart-xAxisItem-title>
+
+### kendo:chart-xAxisItem-title-margin
+
+The margin of the title. A numeric value will set all margins.
+
+More documentation is available at [kendo:chart-xAxisItem-title-margin](chart/xaxisitem-title-margin).
+
+#### Example
+
+    <kendo:chart-xAxisItem-title>
+        <kendo:chart-xAxisItem-title-margin></kendo:chart-xAxisItem-title-margin>
+    </kendo:chart-xAxisItem-title>
+
+### kendo:chart-xAxisItem-title-padding
+
+The padding of the title. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-xAxisItem-title-padding](chart/xaxisitem-title-padding).
+
+#### Example
+
+    <kendo:chart-xAxisItem-title>
+        <kendo:chart-xAxisItem-title-padding></kendo:chart-xAxisItem-title-padding>
     </kendo:chart-xAxisItem-title>
 

@@ -13,7 +13,7 @@ A PHP class representing the filterable setting of Grid.
 ## Methods
 
 ### extra
-Indicates whether second filter input is enabled/disabled.
+If set to true the filter menu allows the user to input a second criteria.
 
 #### Returns
 `\Kendo\UI\GridFilterable`
@@ -32,7 +32,7 @@ Indicates whether second filter input is enabled/disabled.
 
 ### messages
 
-Sets the filter menu messages.
+The text messages displayed in the filter menu. Use it to customize or localize the filter menu messages.
 
 #### Returns
 `\Kendo\UI\GridFilterable`
@@ -61,7 +61,7 @@ Sets the filter menu messages.
 
 ### operators
 
-Enable/Disable and set the text of filter operators.
+The text of the filter operators displayed in the filter menu.
 
 #### Returns
 `\Kendo\UI\GridFilterable`

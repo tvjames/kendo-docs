@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:chart-plotArea-border\>
 
-The border of the plot area.
+The border of the chart plot area.
 
 #### Example
     <kendo:chart-plotArea>
@@ -18,7 +18,7 @@ The border of the plot area.
 
 ### color `String`
 
-The color of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
     <kendo:chart-plotArea-border color="color">
@@ -26,7 +26,7 @@ The color of the border.
 
 ### dashType `String`
 
-The dash type of the border.
+The dash type of the border.The following dash types are supported:
 
 #### Example
     <kendo:chart-plotArea-border dashType="dashType">
@@ -34,7 +34,7 @@ The dash type of the border.
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Example
     <kendo:chart-plotArea-border width="width">

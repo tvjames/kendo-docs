@@ -7,7 +7,8 @@ publish: true
 
 # \<kendo:grid-columns\>
 
-A collection of column objects or collection of strings that represents the name of the fields.
+The configuration of the grid columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
+field to which the column is bound. The grid will create a column for every item of the array.
 
 #### Example
     <kendo:grid>
@@ -21,7 +22,8 @@ A collection of column objects or collection of strings that represents the name
 
 ### kendo:grid-column
 
-A collection of column objects or collection of strings that represents the name of the fields.
+The configuration of the grid columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
+field to which the column is bound. The grid will create a column for every item of the array.
 
 More documentation is available at [kendo:grid-column](grid/column).
 
