@@ -11,7 +11,6 @@ publish: true
 # kendo.data.DataSource
 
 ## Configuration
-
 ### aggregate `Array`
 
 The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
@@ -381,55 +380,6 @@ The grouping configuration of the data source. If set the data items will be gro
     });
     </script>
 
-### group.dir `String` *(default: "asc")*
-
-The sort order of the group. The supported values are "asc" (ascending order) and "desc" (descending order). The default sort order is ascending.
-
-#### Example - sort the groups in descending order
-    <script>
-    var dataSource = new kendo.data.DataSource({
-      data: [
-        { name: "Tea", category: "Beverages"},
-        { name: "Ham", category: "Food"},
-      ],
-      // group by "category" in descending order
-      group: { field: "category", dir: "desc" }
-    });
-    dataSource.fetch(function(){
-      var view = dataSource.view();
-      var food = view[0];
-      console.log(food.value); // displays "Food"
-      var beverages = view[1];
-      console.log(beverages.value); // displays "Beverages"
-    });
-    </script>
-
-### group.field `String`
-
-The data item field to group by.
-
-#### Example - set the field
-
-    <script>
-    var dataSource = new kendo.data.DataSource({
-      data: [
-        { name: "Tea", category: "Beverages" },
-        { name: "Coffee", category: "Beverages" },
-        { name: "Ham", category: "Food" }
-      ],
-      // group by the "category" field
-      group: { field: "category" }
-    });
-    dataSource.fetch(function(){
-      var view = dataSource.view();
-      var beverages = view[0];
-      console.log(beverages.items[0].name); // displays "Tea"
-      console.log(beverages.items[1].name); // displays "Coffee"
-      var food = view[1];
-      console.log(food.items[0].name); // displays "Ham"
-    });
-    </script>
-
 ### group.aggregates `Array`
 
 The aggregate(s) which are calculated during grouping. The supported aggregates are "average", "count", "max", "min" and "sum".
@@ -513,6 +463,55 @@ The data item field which will be used to calculate the aggregates.
       var view = dataSource.view();
       var beverages = view[0];
       console.log(beverages.aggregates.price.max); // displays "2"
+    });
+    </script>
+
+### group.dir `String` *(default: "asc")*
+
+The sort order of the group. The supported values are "asc" (ascending order) and "desc" (descending order). The default sort order is ascending.
+
+#### Example - sort the groups in descending order
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "Tea", category: "Beverages"},
+        { name: "Ham", category: "Food"},
+      ],
+      // group by "category" in descending order
+      group: { field: "category", dir: "desc" }
+    });
+    dataSource.fetch(function(){
+      var view = dataSource.view();
+      var food = view[0];
+      console.log(food.value); // displays "Food"
+      var beverages = view[1];
+      console.log(beverages.value); // displays "Beverages"
+    });
+    </script>
+
+### group.field `String`
+
+The data item field to group by.
+
+#### Example - set the field
+
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "Tea", category: "Beverages" },
+        { name: "Coffee", category: "Beverages" },
+        { name: "Ham", category: "Food" }
+      ],
+      // group by the "category" field
+      group: { field: "category" }
+    });
+    dataSource.fetch(function(){
+      var view = dataSource.view();
+      var beverages = view[0];
+      console.log(beverages.items[0].name); // displays "Tea"
+      console.log(beverages.items[1].name); // displays "Coffee"
+      var food = view[1];
+      console.log(food.items[0].name); // displays "Ham"
     });
     </script>
 
@@ -1197,11 +1196,11 @@ The sort order which will be applied over the data items. By default the data it
     });
     </script>
 
-### sort.field `String`
+### sort.dir `String`
 
-The field by which the data items are sorted.
+The sort order (direction). The supported values are "asc" (ascending order) and "desc" (descending order).
 
-#### Example - specify the sort field
+#### Example - specify the sort order (direction)
 
     <script>
     var dataSource = new kendo.data.DataSource({
@@ -1218,11 +1217,11 @@ The field by which the data items are sorted.
     });
     </script>
 
-### sort.dir `String`
+### sort.field `String`
 
-The sort order (direction). The supported values are "asc" (ascending order) and "desc" (descending order).
+The field by which the data items are sorted.
 
-#### Example - specify the sort order (direction)
+#### Example - specify the sort field
 
     <script>
     var dataSource = new kendo.data.DataSource({
@@ -2398,9 +2397,7 @@ If set the data source will use a predefined [transport](#configuration-transpor
       console.log(dataSource.view().length); // displays "20"
     });
     </script>
-
 ## Methods
-
 ### add
 
 Appends a data item to the data source.
@@ -3353,9 +3350,7 @@ To ensure that data is available this method should be used within the [change](
       console.log(beverages.items[1].name); // displays "Tea"
     });
     </script>
-
 ## Events
-
 ### change
 
 Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.
@@ -3616,9 +3611,7 @@ The data source instance which fired the event.
     dataSource.add( { ProductName: "Ham" } );
     dataSource.sync();
     </script>
-
 ## Class methods
-
 ### create
 
 Creates a data source instance using the specified configuration. If the configuration is a data source instance the same instance will be returned.
@@ -3642,4 +3635,3 @@ The data source [configuration](#configuration).
       ]
     });
     </script>
-
