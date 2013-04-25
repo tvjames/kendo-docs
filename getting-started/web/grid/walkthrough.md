@@ -136,6 +136,13 @@ Note that elements with percentage height require a parent element with an expli
 
 Scrolling is enabled by default on the grid, but can be turned off by setting the `scrollable` option to `false`.
 
+Enabling scrolling does not guarantee that scrollbars will appear. This is because scrolling makes sense and works together with set dimensions.
+
+1. To achieve vertical scrolling, the Grid must have a set height. Otherwise, it will expand vertically to show all rows.
+1. To achieve horizontal scrolling, all columns must have set widths and their sum must exceed the Grid width. Otherwise widthless columns will shrink to fit in the space determined by the Grid's width.
+
+Scenarios 1. and 2. can be controlled independently.
+
 #### Disable scrolling in the grid
 
     $("#grid").kendoGrid({
