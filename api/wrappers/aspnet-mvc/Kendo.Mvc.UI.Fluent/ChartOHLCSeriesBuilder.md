@@ -15,6 +15,7 @@ Defines the fluent interface for configuring bar series.
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -48,6 +49,7 @@ Set distance between category clusters.
             The distance is distributed evenly on each side.
             The default value is 1
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -61,6 +63,7 @@ Set distance between category clusters.
 
 ### Spacing(System.Double)
 Sets a value indicating the distance between points in the same category.
+
 
 #### Example
 
@@ -82,6 +85,7 @@ Value of 1 means that the distance between points in the same category.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the points border
+
 
 #### Example
 
@@ -109,6 +113,7 @@ The points border dash type.
 
 ### Line(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Configures the ohlc chart lines.
+
 
 #### Example
 
@@ -141,6 +146,7 @@ The lines dashType.
 Configures the ohlc line width.
 
 
+
 #### Parameters
 
 ##### width `System.Int32`
@@ -151,6 +157,7 @@ The lines width.
 
 ### Line(System.Int32,System.String)
 Configures the ohlc lines.
+
 
 
 #### Parameters
@@ -166,6 +173,7 @@ The lines color.
 
 ### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder\>)
 Configures the ohlc chart lines.
+
 
 #### Example
 
@@ -190,6 +198,7 @@ The configuration action.
 
 ### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartOHLCSeriesHighlightBuilder\>)
 Configures the series highlight
+
 
 
 #### Parameters

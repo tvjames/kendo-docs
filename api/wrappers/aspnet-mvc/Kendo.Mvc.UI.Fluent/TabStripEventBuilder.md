@@ -14,6 +14,9 @@ Defines the fluent interface for configuring the TabStrip events.
 ### Activate(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Activate client-side event
 
+For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
+
+
 #### Example
 
     <% Html.Kendo().TabStrip()
@@ -41,6 +44,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Activate(System.String)
 Defines the name of the JavaScript function that will handle the the Activate client-side event.
 
+For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -60,6 +66,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Select(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Select client-side event
+
+For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
+
 
 #### Example
 
@@ -88,6 +97,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Select(System.String)
 Defines the name of the JavaScript function that will handle the the Select client-side event.
 
+For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -107,6 +119,9 @@ The name of the JavaScript function that will handle the event.
 
 ### ContentLoad(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the ContentLoad client-side event
+
+For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
+
 
 #### Example
 
@@ -135,6 +150,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### ContentLoad(System.String)
 Defines the name of the JavaScript function that will handle the the ContentLoad client-side event.
 
+For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -154,6 +172,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Error(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Error client-side event
+
+For additional information check the [error](/api/web/tabstrip#events-error) event documentation.
+
 
 #### Example
 
@@ -181,6 +202,9 @@ The handler code wrapped in a text tag (Razor syntax).
 
 ### Error(System.String)
 Defines the name of the JavaScript function that will handle the the Error client-side event.
+
+For additional information check the [error](/api/web/tabstrip#events-error) event documentation.
+
 
 #### Example
 

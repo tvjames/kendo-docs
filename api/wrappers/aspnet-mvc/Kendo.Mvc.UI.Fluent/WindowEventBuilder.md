@@ -14,6 +14,9 @@ Defines the fluent interface for configuring the Window events.
 ### Open(System.String)
 Defines the name of the JavaScript function that will handle the the Open client-side event.
 
+For additional information check the [open](/api/web/window#events-open) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -33,6 +36,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Open(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Open client-side event.
+
+For additional information check the [open](/api/web/window#events-open) event documentation.
+
 
 #### Example
 
@@ -54,6 +60,9 @@ The name of the JavaScript function that will handle the event.
 ### Activate(System.String)
 Defines the name of the JavaScript function that will handle the the Activate client-side event.
 
+For additional information check the [activate](/api/web/window#events-activate) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -73,6 +82,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Activate(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Activate client-side event.
+
+For additional information check the [activate](/api/web/window#events-activate) event documentation.
+
 
 #### Example
 
@@ -94,6 +106,9 @@ The name of the JavaScript function that will handle the event.
 ### Deactivate(System.String)
 Defines the name of the JavaScript function that will handle the the Deactivate client-side event.
 
+For additional information check the [deactivate](/api/web/window#events-deactivate) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -113,6 +128,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Deactivate(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Deactivate client-side event.
+
+For additional information check the [deactivate](/api/web/window#events-deactivate) event documentation.
+
 
 #### Example
 
@@ -134,6 +152,9 @@ The name of the JavaScript function that will handle the event.
 ### Close(System.String)
 Defines the name of the JavaScript function that will handle the the Close client-side event.
 
+For additional information check the [close](/api/web/window#events-close) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -153,6 +174,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Close(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Close client-side event.
+
+For additional information check the [close](/api/web/window#events-close) event documentation.
+
 
 #### Example
 
@@ -174,6 +198,9 @@ The name of the JavaScript function that will handle the event.
 ### DragStart(System.String)
 Defines the name of the JavaScript function that will handle the the DragStart client-side event.
 
+For additional information check the [dragStart](/api/web/window#events-dragStart) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -193,6 +220,9 @@ The name of the JavaScript function that will handle the event.
 
 ### DragStart(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the DragStart client-side event.
+
+For additional information check the [dragStart](/api/web/window#events-dragStart) event documentation.
+
 
 #### Example
 
@@ -214,6 +244,9 @@ The name of the JavaScript function that will handle the event.
 ### DragEnd(System.String)
 Defines the name of the JavaScript function that will handle the the DragEnd client-side event.
 
+For additional information check the [dragEnd](/api/web/window#events-dragEnd) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -233,6 +266,9 @@ The name of the JavaScript function that will handle the event.
 
 ### DragEnd(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the DragEnd client-side event.
+
+For additional information check the [dragEnd](/api/web/window#events-dragEnd) event documentation.
+
 
 #### Example
 
@@ -254,6 +290,9 @@ The name of the JavaScript function that will handle the event.
 ### Resize(System.String)
 Defines the name of the JavaScript function that will handle the the Resize client-side event.
 
+For additional information check the [resize](/api/web/window#events-resize) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -273,6 +312,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Resize(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Resize client-side event.
+
+For additional information check the [resize](/api/web/window#events-resize) event documentation.
+
 
 #### Example
 
@@ -294,6 +336,9 @@ The name of the JavaScript function that will handle the event.
 ### Refresh(System.String)
 Defines the name of the JavaScript function that will handle the the Refresh client-side event.
 
+For additional information check the [refresh](/api/web/window#events-refresh) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -313,6 +358,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Refresh(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Refresh client-side event.
+
+For additional information check the [refresh](/api/web/window#events-refresh) event documentation.
+
 
 #### Example
 
@@ -334,6 +382,9 @@ The name of the JavaScript function that will handle the event.
 ### Error(System.String)
 Defines the name of the JavaScript function that will handle the the Error client-side event.
 
+For additional information check the [error](/api/web/window#events-error) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -353,6 +404,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Error(System.Func\<System.Object,System.Object\>)
 Defines the name of the JavaScript function that will handle the the Error client-side event.
+
+For additional information check the [error](/api/web/window#events-error) event documentation.
+
 
 #### Example
 

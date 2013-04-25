@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the DatePickerBase component.
 ### Animation(System.Boolean)
 Use to enable or disable animation of the popup element.
 
+
 #### Example
 
     <%= Html.Kendo().DatePicker()
@@ -33,6 +34,7 @@ The boolean value.
 
 ### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
 Configures the animation effects of the widget.
+
 
 #### Example
 
@@ -60,6 +62,7 @@ The action which configures the animation effects.
 ### Culture(System.String)
 Specifies the culture info used by the widget.
 
+
 #### Example
 
     <%= Html.Kendo().DatePicker()
@@ -73,6 +76,7 @@ Specifies the culture info used by the widget.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -99,8 +103,10 @@ Sets the date format, which will be used to parse and format the machine date.
 
 
 
+
 ### ParseFormats(System.Collections.Generic.IEnumerable\<System.String\>)
 Specifies the formats, which are used to parse the value set with value() method or by direct input.
+
 
 
 
@@ -111,8 +117,10 @@ Enables or disables the picker.
 
 
 
+
 ### Min(System.DateTime)
 Sets the minimal date, which can be selected in picker.
+
 
 
 
@@ -123,14 +131,17 @@ Sets the maximal date, which can be selected in picker.
 
 
 
+
 ### Value(System.Nullable\<System.DateTime\>)
 Sets the value of the picker input
 
 
 
 
+
 ### Value(System.String)
 Sets the value of the picker input
+
 
 
 

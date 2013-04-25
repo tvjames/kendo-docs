@@ -19,6 +19,7 @@ The parent Guage
 ### EndAngle(System.Double)
 Sets the end angle of the gauge
 
+
 #### Example
 
     <%= Html.Kendo().RadialGauge()
@@ -41,6 +42,7 @@ The end angle.
 ### StartAngle(System.Double)
 Sets the start angle of the gauge
 
+
 #### Example
 
     <%= Html.Kendo().RadialGauge()
@@ -62,6 +64,7 @@ The start Angle.
 
 ### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialScaleLabelsBuilder\>)
 Configures the labels.
+
 
 #### Example
 

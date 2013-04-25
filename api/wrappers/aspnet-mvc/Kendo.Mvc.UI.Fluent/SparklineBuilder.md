@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the !:Sparkline{T} component.
 ### Data(System.Collections.IEnumerable)
 Sets the Sparkline data.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -33,6 +34,7 @@ The data for the default Sparkline series.
 
 ### Data(System.Double)
 Sets the Sparkline data.
+
 
 #### Example
 
@@ -54,6 +56,7 @@ The data for the default Sparkline series.
 ### Type(Kendo.Mvc.UI.SparklineType)
 Sets the type of the sparkline.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -74,6 +77,7 @@ The Sparkline type.
 ### PointWidth(System.Double)
 Sets the per-point width of the sparkline.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -93,6 +97,7 @@ The Sparkline per-point width.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -116,6 +121,7 @@ The client events configuration action.
 ### Theme(System.String)
 Sets the theme of the chart.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -135,6 +141,7 @@ The Sparkline theme.
 
 ### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder\>)
 Sets the Chart area.
+
 
 #### Example
 
@@ -156,6 +163,7 @@ The Chart area.
 ### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder\>)
 Sets the Plot area.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -175,6 +183,7 @@ The Plot area.
 
 ### Series(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesFactory\<T\>\>)
 Defines the chart series.
+
 
 #### Example
 
@@ -199,6 +208,7 @@ The add action.
 ### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesDefaultsBuilder\<T\>\>)
 Defines the options for all chart series of the specified type.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline(Model)
@@ -219,6 +229,7 @@ The configurator.
 ### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder\<T\>\>)
 Defines the options for all chart axes of the specified type.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline(Model)
@@ -238,6 +249,7 @@ The configurator.
 
 ### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder\<T\>\>)
 Configures the category axis
+
 
 #### Example
 
@@ -261,6 +273,7 @@ The configurator
 ### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
 Defines value axis options
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline(Model)
@@ -280,6 +293,7 @@ The configurator
 
 ### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder\<T\>\>)
 Data Source configuration
+
 
 #### Example
 
@@ -303,6 +317,7 @@ Use the configurator to set different data binding options.
 
 ### AutoBind(System.Boolean)
 Enables or disables automatic binding.
+
 
 #### Example
 
@@ -330,6 +345,7 @@ Gets or sets a value indicating if the chart
 ### SeriesColors(System.Collections.Generic.IEnumerable\<System.String\>)
 Sets the series colors.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -350,6 +366,7 @@ A list of the series colors.
 ### SeriesColors(System.String[])
 Sets the series colors.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -369,6 +386,7 @@ The series colors.
 
 ### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
 Use it to configure the data point tooltip.
+
 
 #### Example
 
@@ -393,6 +411,7 @@ Use the configurator to set data tooltip options.
 ### Tooltip(System.Boolean)
 Sets the data point tooltip visibility.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -413,6 +432,7 @@ A value indicating if the data point tooltip should be displayed.
 
 ### Transitions(System.Boolean)
 Enables or disabled animated transitions on initial load and refresh.
+
 
 #### Example
 

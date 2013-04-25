@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the chart data labels.
 ### Type(Kendo.Mvc.UI.ChartMarkerShape)
 Sets the markers shape type.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -39,6 +40,7 @@ The markers shape type.
 
 ### Size(System.Int32)
 Sets the markers size.
+
 
 #### Example
 
@@ -66,6 +68,7 @@ The markers size.
 ### Visible(System.Boolean)
 Sets the markers visibility
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -91,6 +94,7 @@ The markers visibility.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the markers border
+
 
 #### Example
 
@@ -125,6 +129,7 @@ The markers border dash type.
 Configures the markers border
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
@@ -135,6 +140,7 @@ The border configuration action
 
 ### Background(System.String)
 The background color of the current series markers.
+
 
 #### Example
 

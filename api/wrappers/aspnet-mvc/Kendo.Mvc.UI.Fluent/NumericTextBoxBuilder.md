@@ -17,8 +17,10 @@ Sets the initial value of the NumericTextBox.
 
 
 
+
 ### Step(T)
 Sets the step, used ti increment/decrement the value of the textbox.
+
 
 
 
@@ -29,8 +31,10 @@ Sets the minimal possible value allowed to the user.
 
 
 
+
 ### Max(System.Nullable\<T\>)
 Sets the maximal possible value allowed to the user.
+
 
 
 
@@ -41,8 +45,10 @@ Sets the text which will be displayed if the textbox is empty.
 
 
 
+
 ### Spinners(System.Boolean)
 Enables or disables the spin buttons.
+
 
 
 #### Parameters
@@ -58,6 +64,7 @@ Enables or disables the spin buttons.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.NumericTextBoxEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -82,6 +89,7 @@ The client events action.
 Enables or disables the textbox.
 
 
+
 #### Parameters
 
 ##### allowSpinner `System.Boolean`
@@ -95,6 +103,7 @@ Enables or disables the textbox.
 
 ### Format(System.String)
 Stes the format of the NumericTextBox.
+
 
 #### Example
 
@@ -110,6 +119,7 @@ Stes the format of the NumericTextBox.
 ### Culture(System.String)
 Specifies the culture info used by the NumericTextBox widget.
 
+
 #### Example
 
     <%= Html.Kendo().NumericTextBox()
@@ -123,6 +133,7 @@ Specifies the culture info used by the NumericTextBox widget.
 
 ### Decimals(System.Int32)
 Specifies the number precision. If not set precision defined by current culture is used.
+
 
 #### Example
 
@@ -141,8 +152,10 @@ Sets the title of the NumericTextBox increase button.
 
 
 
+
 ### DecreaseButtonTitle(System.String)
 Sets the title of the NumericTextBox decrease button.
+
 
 
 

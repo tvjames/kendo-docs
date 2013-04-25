@@ -17,8 +17,10 @@ Applies the Min aggregate function.
 
 
 
+
 ### Max
 Applies the Max aggregate function.
+
 
 
 
@@ -29,14 +31,17 @@ Applies the Count aggregate function.
 
 
 
+
 ### Average
 Applies the Average aggregate function.
 
 
 
 
+
 ### Sum
 Applies the Sum aggregate function.
+
 
 
 

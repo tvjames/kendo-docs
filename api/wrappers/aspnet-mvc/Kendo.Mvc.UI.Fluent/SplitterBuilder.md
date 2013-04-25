@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the Splitter component.
 ### Orientation(Kendo.Mvc.UI.SplitterOrientation)
 Sets the splitter orientation.
 
+
 #### Example
 
     <%= Html.Kendo().Splitter()
@@ -33,6 +34,7 @@ The desired orientation.
 
 ### Panes(System.Action\<Kendo.Mvc.UI.Fluent.SplitterPaneFactory\>)
 Defines the panes in the splitter.
+
 
 #### Example
 
@@ -56,6 +58,7 @@ The action that configures the panes.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.SplitterEventBuilder\>)
 Configures the client events for the splitter.
+
 
 #### Example
 

@@ -15,6 +15,7 @@ Defines the fluent interface for configuring numeric axis.
 Sets the date axis base unit.
 
 
+
 #### Parameters
 
 ##### baseUnit [Kendo.Mvc.UI.ChartAxisBaseUnit](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartAxisBaseUnit)
@@ -25,6 +26,7 @@ The date axis base unit
 
 ### Min(System.DateTime)
 Sets the start date of the axis.
+
 
 #### Example
 
@@ -46,6 +48,7 @@ The start date of the axis.
 ### Max(System.DateTime)
 Sets the end date of the axis.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -65,6 +68,7 @@ The end date of the axis.
 
 ### MajorUnit(System.Double)
 Sets the interval between major divisions in base units.
+
 
 #### Example
 
@@ -87,6 +91,7 @@ The interval between major divisions in base units.
 Sets the interval between minor divisions in base units.
             It defaults to 1/5th of the majorUnit
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -107,6 +112,7 @@ The interval between minor divisions in base units.
 ### AxisCrossingValue(System.DateTime)
 Sets value at which the first perpendicular axis crosses this axis.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -126,6 +132,7 @@ The value at which the first perpendicular axis crosses this axis.
 
 ### AxisCrossingValue(System.DateTime[])
 Sets value at which perpendicular axes cross this axis.
+
 
 #### Example
 
@@ -148,6 +155,7 @@ The values at which perpendicular axes cross this axis.
 
 ### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.DateTime\>)
 Sets value at which perpendicular axes cross this axis.
+
 
 #### Example
 
@@ -172,6 +180,7 @@ The values at which perpendicular axes cross this axis.
 
 ### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder\>)
 Configures the axis labels.
+
 
 #### Example
 

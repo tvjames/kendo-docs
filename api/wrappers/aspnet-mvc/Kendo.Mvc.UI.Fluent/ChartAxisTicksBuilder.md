@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartAxisTicks.
 ### Size(System.Int32)
 Sets the ticks size
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -34,6 +35,7 @@ The ticks size.
 
 ### Visible(System.Boolean)
 Sets the ticks visibility
+
 
 #### Example
 

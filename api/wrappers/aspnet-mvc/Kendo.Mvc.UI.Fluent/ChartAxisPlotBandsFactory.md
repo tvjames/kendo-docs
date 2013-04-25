@@ -21,12 +21,14 @@ Adds a plot band.
 
 
 
+
 #### Returns
 
 
 
 ### Add(T,T,System.String)
 Defines a item.
+
 
 
 

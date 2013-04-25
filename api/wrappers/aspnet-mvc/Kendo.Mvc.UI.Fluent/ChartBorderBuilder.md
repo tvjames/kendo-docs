@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartElementBorder.
 ### Color(System.String)
 Sets the border color.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -34,6 +35,7 @@ The border color (CSS format).
 
 ### Opacity(System.Double)
 Sets the border opacity
+
 
 #### Example
 
@@ -56,6 +58,7 @@ The border opacity (CSS format).
 ### Width(System.Int32)
 Sets the border width.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -76,6 +79,7 @@ The border width.
 
 ### DashType(Kendo.Mvc.UI.ChartDashType)
 Sets the border dashType.
+
 
 #### Example
 

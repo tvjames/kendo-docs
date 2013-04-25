@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartNegativeValueSettings.
 ### Color(System.String)
 Sets the color for bubbles representing negative values
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -40,6 +41,7 @@ The bubble color (CSS format).
 
 ### Visible(System.Boolean)
 Sets the visibility for bubbles representing negative values
+
 
 #### Example
 

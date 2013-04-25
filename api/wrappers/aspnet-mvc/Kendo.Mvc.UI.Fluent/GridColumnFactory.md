@@ -15,6 +15,7 @@ Creates columns for the !:Grid{TModel}.
 Defines a bound column.
 
 
+
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -32,14 +33,17 @@ Defines a bound column.
 
 
 
+
 ### Bound(System.Type,System.String)
 Defines a bound column.
 
 
 
 
+
 ### ForeignKeyT1(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>,System.Collections.IEnumerable,System.String,System.String)
 Defines a foreign key column.
+
 
 
 #### Parameters
@@ -66,6 +70,7 @@ The data text field
 Defines a foreign key column.
 
 
+
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -84,6 +89,7 @@ The foreign data
 Determines if columns should be automatically generated.
 
 
+
 #### Parameters
 
 ##### shouldGenerate `System.Boolean`
@@ -96,6 +102,7 @@ If true columns should be generated, otherwise false.
 Determines if columns should be automatically generated.
 
 
+
 #### Parameters
 
 ##### columnAction System.Action<[Kendo.Mvc.UI.GridColumnBase](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/GridColumnBase)<T>>
@@ -106,6 +113,7 @@ Action which will be executed for each generated column.
 
 ### Template(System.Action\<T\>)
 Defines a template column.
+
 
 
 #### Parameters
@@ -121,6 +129,7 @@ Defines a template column.
 
 ### Command(System.Action\<Kendo.Mvc.UI.Fluent.GridActionCommandFactory\<T\>\>)
 Defines a command column.
+
 
 
 #### Parameters

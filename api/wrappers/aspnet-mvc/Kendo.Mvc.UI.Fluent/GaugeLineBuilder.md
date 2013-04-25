@@ -14,6 +14,7 @@ Defines the fluent interface for configuring GaugeLine.
 ### Visible(System.Boolean)
 Sets the line visibility
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()

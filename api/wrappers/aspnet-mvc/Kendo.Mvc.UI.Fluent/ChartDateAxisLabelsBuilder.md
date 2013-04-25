@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the chart labels.
 ### Culture(System.Globalization.CultureInfo)
 Culture to use for formatting the dates.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -39,6 +40,7 @@ Culture to use for formatting the dates.
 Culture to use for formatting the dates.
             See Globalization
             for more information.
+
 
 #### Example
 

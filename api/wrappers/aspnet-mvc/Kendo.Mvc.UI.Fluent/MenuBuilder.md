@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the Menu component.
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.MenuItemFactory\>)
 Defines the items in the menu
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -38,6 +39,7 @@ The add action.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.MenuEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -60,6 +62,7 @@ The client events action.
 ### Direction(Kendo.Mvc.UI.MenuDirection)
 Specifies Menu opening direction.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -79,6 +82,7 @@ The desired direction.
 
 ### Direction(System.String)
 Specifies Menu opening direction.
+
 
 #### Example
 
@@ -100,6 +104,7 @@ The desired direction.
 ### Orientation(Kendo.Mvc.UI.MenuOrientation)
 Sets the menu orientation.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -120,6 +125,7 @@ The desired orientation.
 ### OpenOnClick(System.Boolean)
 Enables or disables the "open-on-click" feature.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -133,6 +139,7 @@ Enables or disables the "open-on-click" feature.
 
 ### CloseOnClick(System.Boolean)
 Specifies that sub menus should close after item selection (provided they won't navigate).
+
 
 #### Example
 
@@ -148,6 +155,7 @@ Specifies that sub menus should close after item selection (provided they won't 
 ### HoverDelay(System.Int32)
 Specifies the delay in ms before the menu is opened/closed - used to avoid accidental closure on leaving.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -161,6 +169,7 @@ Specifies the delay in ms before the menu is opened/closed - used to avoid accid
 
 ### BindTo(System.String,System.Action\<Kendo.Mvc.UI.MenuItem,Kendo.Mvc.SiteMapNode\>)
 Binds the menu to a sitemap
+
 
 #### Example
 
@@ -187,6 +196,7 @@ The action to configure the item.
 ### BindTo(System.String)
 Binds the menu to a sitemap.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -207,6 +217,7 @@ The view data key.
 ### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.MenuItem,T1\>)
 Binds the menu to a list of objects. The menu will be "flat" which means a menu item will be created for
             every item in the data source.
+
 
 #### Example
 
@@ -233,6 +244,7 @@ The action executed for every data bound item.
 
 ### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory\<Kendo.Mvc.UI.MenuItem\>\>)
 Binds the menu to a list of objects. The menu will create a hierarchy of items using the specified mappings.
+
 
 #### Example
 
@@ -266,6 +278,7 @@ The action which will configure the mappings
 ### ItemAction(System.Action\<Kendo.Mvc.UI.MenuItem\>)
 Callback for each item.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -291,6 +304,7 @@ Action, which will be executed for each item.
 ### HighlightPath(System.Boolean)
 Select item depending on the current URL.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -311,6 +325,7 @@ If true the item will be highlighted.
 ### SecurityTrimming(System.Boolean)
 Enable/disable security trimming functionality of the component.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -330,6 +345,7 @@ If true security trimming is enabled.
 
 ### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder\>)
 Defines the security trimming functionality of the component
+
 
 #### Example
 

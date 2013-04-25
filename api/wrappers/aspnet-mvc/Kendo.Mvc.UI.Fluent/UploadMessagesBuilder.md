@@ -14,6 +14,7 @@ A builder class for UploadMessages
 ### Cancel(System.String)
 Sets the Cancel button text
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -35,6 +36,7 @@ New cancel button text.
 
 ### DropFilesHere(System.String)
 Sets the Drag and Drop hint text
+
 
 #### Example
 
@@ -58,6 +60,7 @@ New Drag and Drop hint text.
 ### Remove(System.String)
 Sets the Remove button text
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -79,6 +82,7 @@ New Remove button text.
 
 ### Retry(System.String)
 Sets the Retry button text
+
 
 #### Example
 
@@ -102,6 +106,7 @@ New Retry button text.
 ### Select(System.String)
 Sets the Select button text
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -123,6 +128,7 @@ New Select button text.
 
 ### StatusFailed(System.String)
 Sets the "failed" status text accessible by screen readers
+
 
 #### Example
 
@@ -146,6 +152,7 @@ New "failed" status text accessible by screen readers.
 ### StatusUploaded(System.String)
 Sets the "uploaded" status text accessible by screen readers
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -168,6 +175,7 @@ New "uploaded" status text accessible by screen readers.
 ### StatusUploading(System.String)
 Sets the "uploading" status text accessible by screen readers
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -189,6 +197,7 @@ New "uploading" status text accessible by screen readers.
 
 ### UploadSelectedFiles(System.String)
 Sets Upload button (visible when AutoUpload is set to false) text
+
 
 #### Example
 

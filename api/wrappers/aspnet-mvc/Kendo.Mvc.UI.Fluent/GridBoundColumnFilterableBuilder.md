@@ -14,6 +14,7 @@ Defines the fluent interface for configuring bound columns filterable options
 ### UI(Kendo.Mvc.UI.GridFilterUIRole)
 Sets the type of the input element of the filter menu
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -26,13 +27,14 @@ Sets the type of the input element of the filter menu
 
 
 ### UI(System.Func\<System.Object,System.Object\>)
-Sets JavaScript function which to return additional parameters which to be sent the server.
+Sets JavaScript function which to modify the UI of the filter input.
+
 
 #### Example
 
     <%= Html.Kendo().Grid(Model)
         .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Filterable(filterable => filterable.UI(GridFilterUIRole.DatePicker))
+        .Columns(columns => columns.Bound(o => o.OrderDate).Filterable(filterable => filterable.UI(@<text> JavaScript function goes here </text>))
     %>
         
 
@@ -40,7 +42,8 @@ Sets JavaScript function which to return additional parameters which to be sent 
 
 
 ### UI(System.String)
-Sets JavaScript function which to return additional parameters which to be sent the server.
+Sets JavaScript function which to modify the UI of the filter input.
+
 
 
 #### Parameters

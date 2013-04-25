@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the GaugeRadialCapBuilder.
 ### Color(System.String)
 Sets the cap color.
 
+
 #### Example
 
     <% Html.Kendo().RadialGauge()
@@ -36,6 +37,7 @@ The cap color.
 
 ### Opacity(System.Double)
 Sets the cap opacity.
+
 
 #### Example
 
@@ -60,6 +62,7 @@ The cap opacity in the range from 0 (transparent) to 1 (opaque).
 
 ### Size(System.Double)
 Sets the cap size in percents.
+
 
 #### Example
 

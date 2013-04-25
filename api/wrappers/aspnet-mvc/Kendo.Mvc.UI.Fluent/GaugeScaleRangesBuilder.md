@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ranges.
 ### From(System.Double)
 Sets the ranges start position.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -38,6 +39,7 @@ The ranges start position.
 
 ### To(System.Double)
 Sets the ranges end position.
+
 
 #### Example
 
@@ -64,6 +66,7 @@ The ranges end position.
 ### Color(System.String)
 Sets the ranges color
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -88,6 +91,7 @@ The ranges color.
 
 ### Opacity(System.Double)
 Sets the ranges opacity
+
 
 #### Example
 

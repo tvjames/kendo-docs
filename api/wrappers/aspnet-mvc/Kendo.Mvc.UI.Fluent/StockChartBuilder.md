@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the !:Chart{T} component.
 ### DateField(System.String)
 Sets the field used by all date axes (including the navigator).
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -33,6 +34,7 @@ The date field.
 
 ### AutoBind(System.Boolean)
 Enables or disables automatic binding.
+
 
 #### Example
 
@@ -60,6 +62,7 @@ Gets or sets a value indicating if the chart
 ### Navigator(System.Action\<Kendo.Mvc.UI.Fluent.ChartNavigatorBuilder\<T\>\>)
 Configures the stock chart navigator.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -85,6 +88,7 @@ The navigator configuration action.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -107,6 +111,7 @@ The client events configuration action.
 ### Theme(System.String)
 Sets the theme of the chart.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -126,6 +131,7 @@ The Chart theme.
 
 ### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder\>)
 Sets the Chart area.
+
 
 #### Example
 
@@ -147,6 +153,7 @@ The Chart area.
 ### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder\>)
 Sets the Plot area.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -166,6 +173,7 @@ The Plot area.
 
 ### Title(System.String)
 Sets the title of the chart.
+
 
 #### Example
 
@@ -187,6 +195,7 @@ The Chart title.
 ### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartTitleBuilder\>)
 Defines the title of the chart.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -206,6 +215,7 @@ The configuration action.
 
 ### Legend(System.Boolean)
 Sets the legend visibility.
+
 
 #### Example
 
@@ -227,6 +237,7 @@ A value indicating whether to show the legend.
 ### Legend(System.Action\<Kendo.Mvc.UI.Fluent.ChartLegendBuilder\>)
 Configures the legend.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -246,6 +257,7 @@ The configuration action.
 
 ### Series(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesFactory\<T\>\>)
 Defines the chart series.
+
 
 #### Example
 
@@ -270,6 +282,7 @@ The add action.
 ### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesDefaultsBuilder\<T\>\>)
 Defines the options for all chart series of the specified type.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -289,6 +302,7 @@ The configurator.
 
 ### Panes(System.Action\<Kendo.Mvc.UI.Fluent.ChartPanesFactory\>)
 Defines the chart panes.
+
 
 #### Example
 
@@ -313,6 +327,7 @@ The add action.
 ### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder\<T\>\>)
 Defines the options for all chart axes of the specified type.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -332,6 +347,7 @@ The configurator.
 
 ### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder\<T\>\>)
 Configures the category axis
+
 
 #### Example
 
@@ -355,6 +371,7 @@ The configurator
 ### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
 Defines value axis options
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -374,6 +391,7 @@ The configurator
 
 ### XAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
 Defines X-axis options for scatter charts
+
 
 #### Example
 
@@ -395,6 +413,7 @@ The configurator
 ### YAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
 Configures Y-axis options for scatter charts.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -414,6 +433,7 @@ The configurator
 
 ### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder\<T\>\>)
 Data Source configuration
+
 
 #### Example
 
@@ -438,6 +458,7 @@ Use the configurator to set different data binding options.
 ### SeriesColors(System.Collections.Generic.IEnumerable\<System.String\>)
 Sets the series colors.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -458,6 +479,7 @@ A list of the series colors.
 ### SeriesColors(System.String[])
 Sets the series colors.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -477,6 +499,7 @@ The series colors.
 
 ### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
 Use it to configure the data point tooltip.
+
 
 #### Example
 
@@ -501,6 +524,7 @@ Use the configurator to set data tooltip options.
 ### Tooltip(System.Boolean)
 Sets the data point tooltip visibility.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -521,6 +545,7 @@ A value indicating if the data point tooltip should be displayed.
 
 ### Transitions(System.Boolean)
 Enables or disabled animated transitions on initial load and refresh.
+
 
 #### Example
 

@@ -17,8 +17,10 @@ Configures the URL for Update operation.
 
 
 
+
 ### Update(System.String,System.String)
 Sets controller and action for Update operation.
+
 
 
 #### Parameters
@@ -34,6 +36,7 @@ Controller Name
 
 ### Update(System.String,System.String,System.Object)
 Sets controller, action and routeValues for Update operation.
+
 
 
 #### Parameters
@@ -56,8 +59,10 @@ Configures the URL for Create operation.
 
 
 
+
 ### Create(System.String,System.String)
 Sets controller and action for Create operation.
+
 
 
 #### Parameters
@@ -73,6 +78,7 @@ Controller Name
 
 ### Create(System.String,System.String,System.Object)
 Sets controller, action and routeValues for Create operation.
+
 
 
 #### Parameters
@@ -95,8 +101,10 @@ Configures the URL for Destroy operation.
 
 
 
+
 ### Destroy(System.String,System.String)
 Sets controller and action for Destroy operation.
+
 
 
 #### Parameters
@@ -112,6 +120,7 @@ Controller Name
 
 ### Destroy(System.String,System.String,System.Object)
 Sets controller, action and routeValues for Destroy operation.
+
 
 
 #### Parameters
@@ -132,10 +141,24 @@ Route values
 Determines if modifications will be sent to the server in batches or as individually requests.
 
 
+
 #### Parameters
 
 ##### enabled `System.Boolean`
 If true changes will be batched, otherwise false.
+
+
+
+
+### AutoSync(System.Boolean)
+Determines if data source would automatically sync any changes to its data items. By default changes are not automatically sync-ed.
+
+
+
+#### Parameters
+
+##### enabled `System.Boolean`
+If true changes will be automatically synced, otherwise false.
 
 
 

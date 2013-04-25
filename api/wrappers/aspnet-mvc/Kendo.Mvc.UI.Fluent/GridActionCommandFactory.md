@@ -16,12 +16,14 @@ Defines a edit command.
 
 
 
+
 #### Returns
 
 
 
 ### Destroy
 Defines a delete command.
+
 
 
 
@@ -34,12 +36,14 @@ Defines a select command.
 
 
 
+
 #### Returns
 
 
 
 ### Custom(System.String)
 Defines a custom command.
+
 
 
 

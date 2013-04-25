@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartNavigatorhintBuilder.
 ### Format(System.String)
 Sets the border color.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -42,6 +43,7 @@ The border color (CSS format).
 ### Template(System.String)
 Sets the border opacity
 
+
 #### Example
 
     <%= Html.Kendo().StockChart(Model)
@@ -69,6 +71,7 @@ The border opacity (CSS format).
 
 ### Visible(System.Boolean)
 Sets the hint visibility.
+
 
 #### Example
 

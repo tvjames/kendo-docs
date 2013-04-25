@@ -15,6 +15,7 @@ Defines the fluent interface for configuring ChartLine.
 Configures the crosshair tooltip
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartAxisCrosshairTooltipBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartAxisCrosshairTooltipBuilder)>
@@ -25,6 +26,7 @@ The tooltip configuration action
 
 ### Visible(System.Boolean)
 Sets the crosshair visible
+
 
 #### Example
 

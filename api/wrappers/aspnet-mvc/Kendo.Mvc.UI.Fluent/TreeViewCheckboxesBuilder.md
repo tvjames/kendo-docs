@@ -14,6 +14,7 @@ Defines the fluent interface for configuring child TreeView items.
 ### Enabled(System.Boolean)
 Enable/disable rendering of checkboxes in the treeview.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -35,6 +36,7 @@ Whether checkboxes should be rendered.
 
 ### CheckChildren(System.Boolean)
 Enable/disable checking of child checkboxes in the treeview.
+
 
 #### Example
 
@@ -58,6 +60,7 @@ Whether checking of parent checkboxes should check child checkboxes.
 ### Template(System.String)
 Client-side template to be used for rendering the items in the treeview.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -73,6 +76,7 @@ Client-side template to be used for rendering the items in the treeview.
 
 ### TemplateId(System.String)
 Id of the element that holds the client-side template to be used for rendering the items in the treeview.
+
 
 #### Example
 

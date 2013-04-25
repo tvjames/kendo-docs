@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the ComboBox component.
 ### AutoBind(System.Boolean)
 Controls whether to bind the widget to the DataSource on initialization.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -27,6 +28,7 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 ### DataValueField(System.String)
 Sets the field of the data item that provides the value content of the list items.
+
 
 #### Example
 
@@ -42,6 +44,7 @@ Sets the field of the data item that provides the value content of the list item
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.ComboBoxEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -65,6 +68,7 @@ The client events action.
 ### Filter(System.String)
 Use it to enable filtering of items.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -79,6 +83,7 @@ Use it to enable filtering of items.
 ### Filter(Kendo.Mvc.UI.FilterType)
 Use it to enable filtering of items.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -92,6 +97,7 @@ Use it to enable filtering of items.
 
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory\>)
 Defines the items in the ComboBox
+
 
 #### Example
 
@@ -117,6 +123,7 @@ The add action.
 ### HighlightFirst(System.Boolean)
 Use it to enable highlighting of first matched item.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -131,6 +138,7 @@ Use it to enable highlighting of first matched item.
 ### MinLength(System.Int32)
 Specifies the minimum number of characters that should be typed before the widget queries the dataSource.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -144,6 +152,7 @@ Specifies the minimum number of characters that should be typed before the widge
 
 ### SelectedIndex(System.Int32)
 Use it to set selected item index
+
 
 #### Example
 
@@ -165,6 +174,7 @@ Item index.
 ### Suggest(System.Boolean)
 Controls whether the ComboBox should automatically auto-type the rest of text.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -178,6 +188,7 @@ Controls whether the ComboBox should automatically auto-type the rest of text.
 
 ### Placeholder(System.String)
 A string that appears in the textbox when it has no value.
+
 
 #### Example
 
@@ -193,6 +204,7 @@ A string that appears in the textbox when it has no value.
 ### CascadeFrom(System.String)
 Use it to set the Id of the parent ComboBox.
 
+
 #### Example
 
     <%= Html.Telerik().ComboBox()
@@ -206,6 +218,7 @@ Use it to set the Id of the parent ComboBox.
 
 ### Text(System.String)
 Define the text of the widget, when the autoBind is set to false.
+
 
 #### Example
 

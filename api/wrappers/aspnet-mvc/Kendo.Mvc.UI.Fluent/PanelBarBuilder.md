@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the PanelBar component.
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.PanelBarItemFactory\>)
 Defines the items in the panelbar
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -38,6 +39,7 @@ The add action.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.PanelBarEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -59,6 +61,7 @@ The client events action.
 
 ### BindTo(System.String,System.Action\<Kendo.Mvc.UI.PanelBarItem,Kendo.Mvc.SiteMapNode\>)
 Binds the panelbar to a sitemap
+
 
 #### Example
 
@@ -85,6 +88,7 @@ The action to configure the item.
 ### BindTo(System.String)
 Binds the panelbar to a sitemap.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -104,6 +108,7 @@ The view data key.
 
 ### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.PanelBarItem,T1\>)
 Binds the panelbar to a list of objects
+
 
 #### Example
 
@@ -130,6 +135,7 @@ The action executed for every data bound item.
 
 ### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory\<Kendo.Mvc.UI.PanelBarItem\>\>)
 Binds the panelbar to a list of objects. The panelbar will create a hierarchy of items using the specified mappings.
+
 
 #### Example
 
@@ -163,6 +169,7 @@ The action which will configure the mappings
 ### Animation(System.Boolean)
 Configures the animation effects of the panelbar.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -182,6 +189,7 @@ Whether the component animation is enabled.
 ### Animation(System.Action\<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder\>)
 Configures the animation effects of the panelbar.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -200,6 +208,7 @@ The action that configures the animation.
 
 ### ItemAction(System.Action\<Kendo.Mvc.UI.PanelBarItem\>)
 Callback for each item.
+
 
 #### Example
 
@@ -226,6 +235,7 @@ Action, which will be executed for each item.
 ### HighlightPath(System.Boolean)
 Select item depending on the current URL.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -245,6 +255,7 @@ If true the item will be highlighted.
 
 ### ExpandAll(System.Boolean)
 Renders the panelbar with expanded items.
+
 
 #### Example
 
@@ -266,6 +277,7 @@ If true the panelbar will be expanded.
 ### ExpandMode(Kendo.Mvc.UI.PanelBarExpandMode)
 Sets the expand mode of the panelbar.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -285,6 +297,7 @@ The desired expand mode.
 
 ### SelectedIndex(System.Int32)
 Selects the item at the specified index.
+
 
 #### Example
 
@@ -311,6 +324,7 @@ The index.
 ### SecurityTrimming(System.Boolean)
 Enable/disable security trimming functionality of the component.
 
+
 #### Example
 
     <%= Html.Kendo().PanelBar()
@@ -330,6 +344,7 @@ If true security trimming is enabled.
 
 ### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder\>)
 Defines the security trimming functionality of the component
+
 
 #### Example
 

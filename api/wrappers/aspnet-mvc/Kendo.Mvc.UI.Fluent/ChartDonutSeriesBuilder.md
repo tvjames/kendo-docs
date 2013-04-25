@@ -19,6 +19,7 @@ Gets or sets the series.
 ### Margin(System.Int32)
 Sets the margin of the donut series.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -34,6 +35,7 @@ Sets the margin of the donut series.
 ### HoleSize(System.Int32)
 Sets the the size of the donut hole.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -48,6 +50,7 @@ Sets the the size of the donut hole.
 
 ### Size(System.Int32)
 Sets the size of the donut series.
+
 
 #### Example
 

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the GaugeRadialPointerBuilder.
 ### Color(System.String)
 Sets the pointer color.
 
+
 #### Example
 
     <% Html.Kendo().RadialGauge()
@@ -36,6 +37,7 @@ The pointer color.
 
 ### Opacity(System.Double)
 Sets the pointer opacity.
+
 
 #### Example
 
@@ -61,6 +63,7 @@ The pointer opacity in the range from 0 (transparent) to 1 (opaque).
 ### Value(System.Double)
 Sets the pointer value.
 
+
 #### Example
 
     <% Html.Kendo().RadialGauge()
@@ -83,6 +86,7 @@ The pointer value.
 
 ### Cap(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialCapBuilder\>)
 Configures the pointer cap.
+
 
 #### Example
 

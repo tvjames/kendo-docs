@@ -17,8 +17,10 @@ Sets the value of the timepicker input
 
 
 
+
 ### Min(System.TimeSpan)
 Sets the minimum time, which can be selected in timepicker
+
 
 
 
@@ -29,8 +31,10 @@ Sets the minimum time, which can be selected in timepicker
 
 
 
+
 ### Max(System.TimeSpan)
 Sets the maximum time, which can be selected in timepicker
+
 
 
 
@@ -41,8 +45,10 @@ Sets the maximum time, which can be selected in timepicker
 
 
 
+
 ### Interval(System.Int32)
 Sets the interval between hours.
+
 
 
 

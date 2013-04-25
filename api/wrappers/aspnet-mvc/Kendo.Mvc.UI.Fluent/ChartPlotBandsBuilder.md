@@ -14,6 +14,7 @@ Defines the fluent interface for configuring plot band.
 ### From(T)
 Sets the plot band start position.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -38,6 +39,7 @@ The plot band start position.
 
 ### To(T)
 Sets the plot band end position.
+
 
 #### Example
 
@@ -64,6 +66,7 @@ The plot band end position.
 ### Color(System.String)
 Sets the plot band background color
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -88,6 +91,7 @@ The plot band background color.
 
 ### Opacity(System.Double)
 Sets the plot band opacity
+
 
 #### Example
 

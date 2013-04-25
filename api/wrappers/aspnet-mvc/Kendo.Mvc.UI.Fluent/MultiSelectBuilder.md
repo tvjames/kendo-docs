@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the MultiSelect component.
 ### AutoBind(System.Boolean)
 Controls whether to bind the widget to the DataSource on initialization.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -27,6 +28,7 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 ### DataValueField(System.String)
 Sets the field of the data item that provides the value content of the list items.
+
 
 #### Example
 
@@ -42,6 +44,7 @@ Sets the field of the data item that provides the value content of the list item
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.MultiSelectEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -65,6 +68,7 @@ The client events action.
 ### Filter(System.String)
 Use it to enable filtering of items.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -79,6 +83,7 @@ Use it to enable filtering of items.
 ### Filter(Kendo.Mvc.UI.FilterType)
 Use it to enable filtering of items.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -92,6 +97,7 @@ Use it to enable filtering of items.
 
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory\>)
 Defines the items in the MultiSelect
+
 
 #### Example
 
@@ -117,6 +123,7 @@ The add action.
 ### HighlightFirst(System.Boolean)
 Use it to enable highlighting of first matched item.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -130,6 +137,7 @@ Use it to enable highlighting of first matched item.
 
 ### MinLength(System.Int32)
 Specifies the minimum number of characters that should be typed before the widget queries the dataSource.
+
 
 #### Example
 
@@ -145,6 +153,7 @@ Specifies the minimum number of characters that should be typed before the widge
 ### Placeholder(System.String)
 A string that appears in the textbox when it has no value.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -158,6 +167,7 @@ A string that appears in the textbox when it has no value.
 
 ### ItemTemplate(System.String)
 Template to be used for rendering the items in the list.
+
 
 #### Example
 
@@ -173,6 +183,7 @@ Template to be used for rendering the items in the list.
 ### ItemTemplateId(System.String)
 TemplateId to be used for rendering the items in the list.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -186,6 +197,7 @@ TemplateId to be used for rendering the items in the list.
 
 ### TagTemplate(System.String)
 Template to be used for rendering the tags of the selected items.
+
 
 #### Example
 
@@ -201,6 +213,7 @@ Template to be used for rendering the tags of the selected items.
 ### TagTemplateId(System.String)
 TemplateId to be used for rendering the tags of the selected items.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -212,8 +225,9 @@ TemplateId to be used for rendering the tags of the selected items.
 
 
 
-### Value(System.Collections.Generic.IEnumerable\<System.String\>)
+### Value(System.Collections.IEnumerable)
 Sets the value of the widget.
+
 
 #### Example
 

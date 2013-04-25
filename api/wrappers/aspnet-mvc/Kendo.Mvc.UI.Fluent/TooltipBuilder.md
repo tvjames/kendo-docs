@@ -15,6 +15,7 @@ Defines the fluent interface for configuring the Tooltip component.
 The selector which to match the DOM element to which the Tooltip widget will be instantiated
 
 
+
 #### Parameters
 
 ##### selector `System.String`
@@ -28,6 +29,7 @@ jQuery selector
 
 ### Filter(System.String)
 The selector which to match target child elements for which the Tooltip will be shown
+
 
 
 #### Parameters
@@ -45,6 +47,7 @@ jQuery selector
 The position (relative to the target) at which the Tooltip will be shown
 
 
+
 #### Parameters
 
 ##### position [Kendo.Mvc.UI.TooltipPosition](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TooltipPosition)
@@ -58,6 +61,7 @@ The position
 
 ### ShowAfter(System.Int32)
 The inverval in milliseconds, after which the Tooltip will be shown
+
 
 
 #### Parameters
@@ -75,6 +79,7 @@ The inverval in milliseconds, after which the Tooltip will be shown
 Determines if callout should be visible
 
 
+
 #### Parameters
 
 ##### show `System.Boolean`
@@ -90,6 +95,7 @@ Determines if callout should be visible
 Determines if tooltip should be automatically hidden, or a close button should be present
 
 
+
 #### Parameters
 
 ##### value `System.Boolean`
@@ -103,6 +109,7 @@ Determines if tooltip should be automatically hidden, or a close button should b
 
 ### LoadContentFrom(System.Web.Routing.RouteValueDictionary)
 Sets the Url, which will be requested to return the content.
+
 
 #### Example
 
@@ -123,6 +130,7 @@ The route values of the Action method.
 
 ### LoadContentFrom(System.String,System.String)
 Sets the Url, which will be requested to return the content.
+
 
 #### Example
 
@@ -146,6 +154,7 @@ The controller name.
 
 ### LoadContentFrom(System.String,System.String,System.Object)
 Sets the Url, which will be requested to return the content.
+
 
 #### Example
 
@@ -173,6 +182,7 @@ Route values.
 ### LoadContentFrom(System.String)
 Sets the Url, which will be requested to return the content.
 
+
 #### Example
 
     <%= Html.Kendo().Tooltip()
@@ -194,6 +204,7 @@ The url.
 Sets the HTML content which the tooltip should display as a string.
 
 
+
 #### Parameters
 
 ##### value `System.String`
@@ -204,6 +215,7 @@ The action which renders the content.
 
 ### ContentTemplateId(System.String)
 Sets the id of kendo template which will be used as tooltip content.
+
 
 
 #### Parameters
@@ -220,8 +232,10 @@ Sets JavaScript function which to return the content for the tooltip.
 
 
 
+
 ### ContentHandler(System.String)
 Sets JavaScript function which to return the content for the tooltip.
+
 
 
 #### Parameters
@@ -234,6 +248,7 @@ JavaScript function name
 
 ### Animation(System.Boolean)
 Configures the animation effects of the window.
+
 
 #### Example
 
@@ -253,6 +268,7 @@ Whether the component animation is enabled.
 
 ### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
 Configures the animation effects of the panelbar.
+
 
 #### Example
 
@@ -276,14 +292,17 @@ Sets the width of the tooltip.
 
 
 
+
 ### Height(System.Int32)
 Sets the height of the tooltip.
 
 
 
 
+
 ### Deferred
 Suppress initialization script rendering. Note that this options should be used in conjunction with M:Kendo.Mvc.UI.Fluent.WidgetFactory.DeferredScripts(System.Boolean)
+
 
 
 
@@ -296,12 +315,14 @@ Returns the internal view component.
 
 
 
+
 #### Returns
 
 
 
 ### Render
 Renders the component.
+
 
 
 

@@ -18,6 +18,7 @@ Creates a filter expression by delegating its creation to
              is ParameterExpression, otherwise throws ArgumentException
 
 
+
 #### Parameters
 
 ##### instance `System.Linq.Expressions.Expression`
@@ -31,6 +32,7 @@ A predicate filter expression.
 
 ### CreateFilterExpression(System.Linq.Expressions.ParameterExpression)
 Creates a predicate filter expression used for collection filtering.
+
 
 
 #### Parameters

@@ -16,12 +16,14 @@ Returns the inner navigation item
 
 
 
+
 #### Returns
 
 
 
 ### HtmlAttributes(System.Object)
 Sets the HTML attributes applied to the outer HTML element rendered for the item
+
 
 #### Example
 
@@ -44,6 +46,7 @@ The attributes.
 Sets the HTML attributes applied to the outer HTML element rendered for the item
 
 
+
 #### Parameters
 
 ##### attributes `System.Collections.Generic.IDictionary<System.String,System.Object>`
@@ -54,6 +57,7 @@ The attributes.
 
 ### Text(System.String)
 Sets the text displayed by the item.
+
 
 #### Example
 
@@ -75,6 +79,7 @@ The value.
 ### Visible(System.Boolean)
 Makes the item visible or not. Invisible items are not rendered in the output HTML.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -95,6 +100,7 @@ The value.
 ### Enabled(System.Boolean)
 Enables or disables the item. Disabled item cannot be clicked, expanded or open (depending on the item type - menu, tabstrip, panelbar).
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -109,6 +115,7 @@ Enables or disables the item. Disabled item cannot be clicked, expanded or open 
 ### Selected(System.Boolean)
 Selects or unselects the item. By default items are not selected.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -122,6 +129,7 @@ Selects or unselects the item. By default items are not selected.
 
 ### Route(System.String,System.Web.Routing.RouteValueDictionary)
 Sets the route to which the item should navigate.
+
 
 #### Example
 
@@ -146,6 +154,7 @@ The route values.
 ### Route(System.String,System.Object)
 Sets the route to which the item should navigate.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -169,6 +178,7 @@ The route values.
 ### Route(System.String)
 Sets the route to which the item should navigate.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -189,6 +199,7 @@ Name of the route.
 ### Action(System.Web.Routing.RouteValueDictionary)
 Sets the action to which the item should navigate
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -208,6 +219,7 @@ The route values of the Action method.
 
 ### Action(System.String,System.String,System.Web.Routing.RouteValueDictionary)
 Sets the action to which the item should navigate
+
 
 #### Example
 
@@ -235,6 +247,7 @@ The route values.
 ### Action(System.String,System.String,System.Object)
 Sets the action to which the item should navigate
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -261,6 +274,7 @@ The route values.
 ### Action(System.String,System.String)
 Sets the action to which the item should navigate
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -284,6 +298,7 @@ Name of the controller.
 ### Url(System.String)
 Sets the URL to which the item should navigate
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -304,6 +319,7 @@ The value.
 ### ImageUrl(System.String)
 Sets the URL of the image that should be displayed by the item.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -323,6 +339,7 @@ The value.
 
 ### ImageHtmlAttributes(System.Object)
 Sets the HTML attributes for the item image.
+
 
 #### Example
 
@@ -348,6 +365,7 @@ The attributes.
 Sets the HTML attributes for the item image.
 
 
+
 #### Parameters
 
 ##### attributes `System.Collections.Generic.IDictionary<System.String,System.Object>`
@@ -358,6 +376,7 @@ The attributes.
 
 ### SpriteCssClasses(System.String[])
 Sets the sprite CSS class names.
+
 
 #### Example
 
@@ -382,6 +401,7 @@ The CSS classes.
 Sets the HTML content which the item should display.
 
 
+
 #### Parameters
 
 ##### value `System.Action`
@@ -392,6 +412,7 @@ The action which renders the content.
 
 ### Content(System.Func\<System.Object,System.Object\>)
 Sets the HTML content which the item should display.
+
 
 
 #### Parameters
@@ -406,6 +427,7 @@ The content wrapped in a regular HTML tag or text tag (Razor syntax).
 Sets the HTML content which the item should display as a string.
 
 
+
 #### Parameters
 
 ##### value `System.String`
@@ -416,6 +438,7 @@ The action which renders the content.
 
 ### ContentHtmlAttributes(System.Object)
 Sets the HTML attributes of the content element of the item.
+
 
 #### Example
 
@@ -441,6 +464,7 @@ The attributes.
 Sets the HTML attributes of the content element of the item.
 
 
+
 #### Parameters
 
 ##### attributes `System.Collections.Generic.IDictionary<System.String,System.Object>`
@@ -451,6 +475,7 @@ The attributes.
 
 ### ActionT1(System.Linq.Expressions.Expression\<System.Action\<T1\>\>)
 Makes the item navigate to the specified controllerAction method.
+
 
 #### Example
 
@@ -473,6 +498,7 @@ The action.
 
 ### Encoded(System.Boolean)
 Sets whether the Text property should be encoded when the item is rendered.
+
 
 #### Example
 

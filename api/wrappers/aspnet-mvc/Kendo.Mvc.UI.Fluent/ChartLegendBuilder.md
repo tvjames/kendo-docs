@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the ChartLegend.
 ### Font(System.String)
 Sets the legend labels font
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -34,6 +35,7 @@ The legend labels font (CSS format).
 
 ### Color(System.String)
 Sets the legend labels color
+
 
 #### Example
 
@@ -56,6 +58,7 @@ The labels color (CSS format).
 ### Background(System.String)
 Sets the legend background color
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -76,6 +79,7 @@ The background color.
 
 ### Position(Kendo.Mvc.UI.ChartLegendPosition)
 Sets the legend position
+
 
 #### Example
 
@@ -98,6 +102,7 @@ The legend position.
 ### Visible(System.Boolean)
 Sets the legend visibility
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -118,6 +123,7 @@ The legend visibility.
 
 ### Offset(System.Int32,System.Int32)
 Sets the legend X and Y offset from its position
+
 
 #### Example
 
@@ -142,6 +148,7 @@ The legend Y offset from its position.
 
 ### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the legend margin
+
 
 #### Example
 
@@ -173,6 +180,7 @@ The legend top margin.
 ### Margin(System.Int32)
 Sets the legend margin
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -193,6 +201,7 @@ The legend margin.
 
 ### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the legend padding
+
 
 #### Example
 
@@ -224,6 +233,7 @@ The legend left padding.
 ### Padding(System.Int32)
 Sets the legend padding
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -244,6 +254,7 @@ The legend padding.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the legend border
+
 
 #### Example
 
@@ -271,6 +282,7 @@ The legend border dash type.
 
 ### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
 Configures the legend border
+
 
 
 #### Parameters

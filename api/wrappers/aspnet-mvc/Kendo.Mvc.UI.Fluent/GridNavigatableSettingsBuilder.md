@@ -14,6 +14,7 @@ Defines the fluent interface for configuring Navigatable
 ### Enabled(System.Boolean)
 Enables or disables keyboard navigation.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)

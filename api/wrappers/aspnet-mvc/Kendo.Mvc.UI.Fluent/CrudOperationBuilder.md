@@ -15,6 +15,7 @@ Defines the fluent interface for configuring the CrudOperation options.
 Sets the route values for the operation.
 
 
+
 #### Parameters
 
 ##### routeValues `System.Web.Routing.RouteValueDictionary`
@@ -25,6 +26,7 @@ Route values
 
 ### Action(System.String,System.String,System.Object)
 Sets the action, contoller and route values for the operation.
+
 
 
 #### Parameters
@@ -45,6 +47,7 @@ Route values
 Sets the action, contoller and route values for the operation.
 
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -63,6 +66,7 @@ Route values
 Sets the action and contoller values for the operation.
 
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -76,6 +80,7 @@ Controller name
 
 ### Route(System.String,System.Web.Routing.RouteValueDictionary)
 Sets the route name and values for the operation.
+
 
 
 #### Parameters
@@ -93,6 +98,7 @@ Route values
 Sets the route name and values for the operation.
 
 
+
 #### Parameters
 
 ##### routeName `System.String`
@@ -106,6 +112,7 @@ Route values
 
 ### Route(System.String)
 Sets the route name for the operation.
+
 
 
 #### Parameters
@@ -122,8 +129,10 @@ Sets JavaScript function which to return additional parameters which to be sent 
 
 
 
+
 ### Data(System.String)
 Sets JavaScript function which to return additional parameters which to be sent the server.
+
 
 
 #### Parameters
@@ -138,6 +147,7 @@ JavaScript function name
 Specifies an absolute or relative URL for the operation.
 
 
+
 #### Parameters
 
 ##### url `System.String`
@@ -148,6 +158,7 @@ Absolute or relative URL for the operation
 
 ### Type(System.Web.Mvc.HttpVerbs)
 Specifies the HTTP verb of the request.
+
 
 
 #### Parameters

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the chart labels.
 ### Mirror(System.Boolean)
 Renders the axis labels on the other side.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -41,6 +42,7 @@ A value indicating whether to render the axis labels on the other side.
 ### Step(System.Int32)
 Label rendering step.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -64,6 +66,7 @@ A value indicating the step at which labels are rendered.
 
 ### Skip(System.Int32)
 Label rendering skip.
+
 
 #### Example
 

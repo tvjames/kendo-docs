@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the AutoComplete component.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.AutoCompleteEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().AutoComplete()
@@ -36,6 +37,7 @@ The client events action.
 ### Filter(System.String)
 Use it to enable filtering of items.
 
+
 #### Example
 
     <%= Html.Kendo().AutoComplete()
@@ -49,6 +51,7 @@ Use it to enable filtering of items.
 
 ### Filter(Kendo.Mvc.UI.FilterType)
 Use it to enable filtering of items.
+
 
 #### Example
 
@@ -64,6 +67,7 @@ Use it to enable filtering of items.
 ### HighlightFirst(System.Boolean)
 Use it to enable highlighting of first matched item.
 
+
 #### Example
 
     <%= Html.Kendo().AutoComplete()
@@ -77,6 +81,7 @@ Use it to enable highlighting of first matched item.
 
 ### MinLength(System.Int32)
 Specifies the minimum number of characters that should be typed before the widget queries the dataSource.
+
 
 #### Example
 
@@ -92,6 +97,7 @@ Specifies the minimum number of characters that should be typed before the widge
 ### Placeholder(System.String)
 A string that appears in the textbox when it has no value.
 
+
 #### Example
 
     <%= Html.Kendo().AutoComplete()
@@ -106,6 +112,7 @@ A string that appears in the textbox when it has no value.
 ### Separator(System.String)
 Sets the separator for completion. Empty by default, allowing for only one completion.
 
+
 #### Example
 
     <%= Html.Kendo().AutoComplete()
@@ -119,6 +126,7 @@ Sets the separator for completion. Empty by default, allowing for only one compl
 
 ### Suggest(System.Boolean)
 Controls whether the AutoComplete should automatically auto-type the rest of text.
+
 
 #### Example
 

@@ -20,6 +20,7 @@ The parent Chart
 Defines bound categories.
 
 
+
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -30,6 +31,7 @@ The expression used to extract the categories value from the chart model
 
 ### Categories(System.Collections.IEnumerable)
 Defines categories.
+
 
 
 #### Parameters
@@ -44,6 +46,7 @@ The list of categories
 Defines categories.
 
 
+
 #### Parameters
 
 ##### categories `System.String[]`
@@ -54,6 +57,7 @@ The list of categories
 
 ### AxisCrossingValue(System.Double)
 Sets value at which the first perpendicular axis crosses this axis.
+
 
 #### Example
 
@@ -77,6 +81,7 @@ The value at which the first perpendicular axis crosses this axis.
 ### AxisCrossingValue(System.Double[])
 Sets value at which perpendicular axes cross this axis.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -98,6 +103,7 @@ The values at which perpendicular axes cross this axis.
 
 ### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.Double\>)
 Sets value at which perpendicular axes cross this axis.
+
 
 #### Example
 
@@ -123,6 +129,7 @@ Positions categories and series points on major ticks. This removes the empty sp
             This option will be ignored if either Bar, Column, OHLC or Candlestick series are plotted on the axis.
 
 
+
 #### Parameters
 
 ##### justified `System.Boolean`
@@ -135,6 +142,57 @@ A boolean value that indicates if the empty space before and after the series sh
 ### Justify
 Positions categories and series points on major ticks. This removes the empty space before and after the series.
             This option will be ignored if either Bar, Column, OHLC or Candlestick series are plotted on the axis.
+
+
+
+
+
+### Select(System.Double,System.Double)
+Sets the selection range
+
+
+#### Example
+
+    <%= Html.Kendo().StockChart(Model)
+        .Name("StockChart")
+        .CategoryAxis(axis => axis.Select(0, 3))
+    %>
+        
+
+
+#### Parameters
+
+##### from `System.Double`
+The selection range start.
+
+##### to `System.Double`
+The selection range end.
+            *Note*: The category with the specified index is not included in the selected range
+            unless the axis is justified. In order to select all categories specify
+            a value larger than the last category index.
+
+
+
+
+### Select(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisSelectionBuilder\>)
+Configures the selection
+
+
+#### Example
+
+    <%= Html.Kendo().StockChart(Model)
+        .Name("StockChart")
+        .CategoryAxis(axis => axis.Select(select =>
+        select.Mousewheel(mw => mw.Reverse())
+        )
+    %>
+        
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartAxisSelectionBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartAxisSelectionBuilder)>
+The configuration action.
 
 
 

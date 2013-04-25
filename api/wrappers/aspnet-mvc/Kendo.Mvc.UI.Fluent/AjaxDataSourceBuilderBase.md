@@ -17,14 +17,17 @@ Configures the client-side events
 
 
 
+
 ### Read(System.Action\<Kendo.Mvc.UI.Fluent.CrudOperationBuilder\>)
 Configures the URL for Read operation.
 
 
 
 
+
 ### Read(System.String,System.String,System.Object)
 Sets controller and action for Read operation.
+
 
 
 #### Parameters
@@ -45,6 +48,7 @@ Route values
 Sets controller, action and routeValues for Read operation.
 
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -60,6 +64,7 @@ Controller Name
 Sets the total number of records in the data source. Required during Custom binding.
 
 
+
 #### Parameters
 
 ##### total `System.Int32`
@@ -70,6 +75,7 @@ Number of records
 
 ### PageSize(System.Int32)
 Sets the number of records displayed on a single page.
+
 
 
 #### Parameters
@@ -87,6 +93,7 @@ Sets the operation mode of the DataSource.
             Any other paging, sorting, filtering or grouping will be performed client-side.
 
 
+
 #### Parameters
 
 ##### enabled `System.Boolean`
@@ -101,8 +108,10 @@ Configures the initial sorting.
 
 
 
+
 ### Group(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceGroupDescriptorFactory\<T\>\>)
 Configures the initial grouping.
+
 
 
 
@@ -113,14 +122,17 @@ Configures the initial aggregates.
 
 
 
+
 ### Filter(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceFilterDescriptorFactory\<T\>\>)
 Configures the initial filter.
 
 
 
 
+
 ### Model(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceModelDescriptorFactory\<T\>\>)
 Configures Model properties
+
 
 
 

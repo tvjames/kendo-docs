@@ -15,6 +15,7 @@ Defines the fluent interface for configuring the Window component.
 Allows title to be shown / hidden
 
 
+
 #### Parameters
 
 ##### show `System.Boolean`
@@ -29,8 +30,10 @@ Sets title, which appears in the header of the window.
 
 
 
+
 ### Content(System.Action)
 Sets the HTML content which the window should display.
+
 
 #### Example
 
@@ -57,6 +60,7 @@ The action which renders the content.
 ### Content(System.Func\<System.Object,System.Object\>)
 Sets the HTML content which the window should display
 
+
 #### Example
 
     @(Html.Kendo().Window()
@@ -80,6 +84,7 @@ The Razor inline template
 Sets the HTML content which the item should display as a string.
 
 
+
 #### Parameters
 
 ##### value `System.String`
@@ -90,6 +95,7 @@ The action which renders the content.
 
 ### LoadContentFrom(System.Web.Routing.RouteValueDictionary)
 Sets the Url, which will be requested to return the content.
+
 
 #### Example
 
@@ -110,6 +116,7 @@ The route values of the Action method.
 
 ### LoadContentFrom(System.String,System.String)
 Sets the Url, which will be requested to return the content.
+
 
 #### Example
 
@@ -133,6 +140,7 @@ The controller name.
 
 ### LoadContentFrom(System.String,System.String,System.Object)
 Sets the Url, which will be requested to return the content.
+
 
 #### Example
 
@@ -160,6 +168,7 @@ Route values.
 ### LoadContentFrom(System.String)
 Sets the Url, which will be requested to return the content.
 
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -179,6 +188,7 @@ The url.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.WindowEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -202,6 +212,7 @@ The client events action.
 ### Resizable
 Enables windows resizing.
 
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -215,6 +226,7 @@ Enables windows resizing.
 
 ### Resizable(System.Action\<Kendo.Mvc.UI.Fluent.WindowResizingSettingsBuilder\>)
 Configures the resizing ability of the window.
+
 
 #### Example
 
@@ -237,6 +249,7 @@ Resizing settings action.
 
 ### Actions(System.Action\<Kendo.Mvc.UI.Fluent.WindowActionsBuilder\>)
 Configures the window buttons.
+
 
 #### Example
 
@@ -263,8 +276,10 @@ Sets the width of the window.
 
 
 
+
 ### Height(System.Int32)
 Sets the height of the window.
+
 
 
 
@@ -275,14 +290,17 @@ Sets whether the window should be rendered visible.
 
 
 
+
 ### Scrollable(System.Boolean)
 Sets whether the window should have scrollbars.
 
 
 
 
+
 ### Animation(System.Boolean)
 Configures the animation effects of the window.
+
 
 #### Example
 
@@ -302,6 +320,7 @@ Whether the component animation is enabled.
 
 ### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
 Configures the animation effects of the panelbar.
+
 
 #### Example
 
@@ -325,8 +344,10 @@ Sets whether the window should be modal or not.
 
 
 
+
 ### Draggable
 Sets whether the window can be moved.
+
 
 
 
@@ -337,8 +358,10 @@ Sets whether the window can be moved.
 
 
 
+
 ### Iframe(System.Boolean)
 Explicitly specifies whether the loaded window content will be rendered as an iframe or in-line
+
 
 
 

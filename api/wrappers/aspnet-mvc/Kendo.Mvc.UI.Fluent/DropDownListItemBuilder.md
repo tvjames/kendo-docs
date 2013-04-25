@@ -14,6 +14,7 @@ Defines the fluent interface for configuring child DropDonwList items.
 ### Text(System.String)
 Sets the value for the item.
 
+
 #### Example
 
     <%= Html.Kendo().DropDownList()
@@ -34,6 +35,7 @@ The value.
 ### Value(System.String)
 Sets the value for the item.
 
+
 #### Example
 
     <%= Html.Kendo().DropDownList()
@@ -53,6 +55,7 @@ The value.
 
 ### Selected(System.Boolean)
 Define when the item will be expanded on intial render.
+
 
 #### Example
 

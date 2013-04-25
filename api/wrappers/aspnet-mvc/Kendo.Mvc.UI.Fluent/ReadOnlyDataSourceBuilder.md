@@ -17,8 +17,10 @@ Configures the URL for Read operation.
 
 
 
+
 ### Read(System.String,System.String,System.Object)
 Sets controller and action for Read operation.
+
 
 
 #### Parameters
@@ -39,6 +41,7 @@ Route values
 Sets controller, action and routeValues for Read operation.
 
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -56,14 +59,17 @@ Specifies if filtering should be handled by the server.
 
 
 
+
 ### ServerFiltering(System.Boolean)
 Specifies if filtering should be handled by the server.
 
 
 
 
+
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceEventBuilder\>)
 Configures the client-side events
+
 
 
 

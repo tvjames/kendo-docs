@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the !:ListView{T}.
 ### BindTo(System.Collections.Generic.IEnumerable\<T\>)
 Binds the ListView to a list of objects
 
+
 #### Example
 
     <%= Html.Kendo().ListView<Order>()
@@ -33,6 +34,7 @@ The data source.
 
 ### BindTo(System.Collections.IEnumerable)
 Binds the ListView to a list of objects
+
 
 #### Example
 
@@ -54,6 +56,7 @@ The data source.
 ### ClientTemplateId(System.String)
 Specifies ListView item template.
 
+
 #### Example
 
     <%= Html.Kendo().ListView<Order>()
@@ -74,6 +77,7 @@ The Id of the element which contains the template.
 ### Pageable
 Allows paging of the data.
 
+
 #### Example
 
     <%= Html.Kendo().ListView()
@@ -88,6 +92,7 @@ Allows paging of the data.
 
 ### Pageable(System.Action\<Kendo.Mvc.UI.Fluent.PageableBuilder\>)
 Allows paging of the data.
+
 
 #### Example
 
@@ -110,6 +115,7 @@ Use builder to define paging settings.
 ### Navigatable
 Enables keyboard navigation.
 
+
 #### Example
 
     <%= Html.Kendo().ListView()
@@ -125,6 +131,7 @@ Enables keyboard navigation.
 ### Selectable
 Enables single item selection.
 
+
 #### Example
 
     <%= Html.Kendo().ListView()
@@ -138,6 +145,7 @@ Enables single item selection.
 
 ### Selectable(System.Action\<Kendo.Mvc.UI.Fluent.ListViewSelectionSettingsBuilder\>)
 Enables item selection.
+
 
 #### Example
 
@@ -164,6 +172,7 @@ Specifies if the ListView should be automatically bound on initial load.
             This is only possible if AJAX binding is used, and widget is not initialy populated on the server.
 
 
+
 #### Parameters
 
 ##### value `System.Boolean`
@@ -174,6 +183,7 @@ If true ListView will be automatically data bound, otherwise false
 
 ### TagName(System.String)
 Specifies ListView wrapper element tag name.
+
 
 #### Example
 
@@ -189,6 +199,7 @@ Specifies ListView wrapper element tag name.
 ### Editable(System.Action\<Kendo.Mvc.UI.Fluent.ListViewEditingSettingsBuilder\<T\>\>)
 Configures the ListView editing settings.
 
+
 #### Example
 
     <%= Html.Kendo().ListView()
@@ -203,6 +214,7 @@ Configures the ListView editing settings.
 ### Editable
 Enables ListView editing.
 
+
 #### Example
 
     <%= Html.Kendo().ListView()
@@ -216,6 +228,7 @@ Enables ListView editing.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.ListViewEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 

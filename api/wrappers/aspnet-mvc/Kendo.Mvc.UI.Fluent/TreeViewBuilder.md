@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the TreeView component.
 ### AutoBind(System.Boolean)
 Controls whether to bind the widget to the DataSource on initialization.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -27,6 +28,7 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 ### CheckboxTemplate(System.String)
 Template to be used for rendering the item checkboxes in the treeview.
+
 
 #### Example
 
@@ -42,6 +44,7 @@ Template to be used for rendering the item checkboxes in the treeview.
 ### CheckboxTemplateId(System.String)
 Id of the template element to be used for rendering the item checkboxes in the treeview.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -55,6 +58,7 @@ Id of the template element to be used for rendering the item checkboxes in the t
 
 ### Template(System.String)
 Template to be used for rendering the items in the treeview.
+
 
 #### Example
 
@@ -70,6 +74,7 @@ Template to be used for rendering the items in the treeview.
 ### TemplateId(System.String)
 Id of the template element to be used for rendering the items in the treeview.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -83,6 +88,7 @@ Id of the template element to be used for rendering the items in the treeview.
 
 ### Checkboxes(System.Boolean)
 Enable/disable rendering of checkboxes in the treeview.
+
 
 #### Example
 
@@ -103,6 +109,7 @@ Whether checkboxes should be rendered.
 
 ### Checkboxes(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewCheckboxesBuilder\>)
 Configures rendering of checkboxes in the treeview.
+
 
 #### Example
 
@@ -125,6 +132,7 @@ Builder of the treeview checkboxes configuration.
 
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory\>)
 Defines the items in the TreeView
+
 
 #### Example
 
@@ -150,6 +158,7 @@ The add action.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -172,6 +181,7 @@ The client events action.
 
 ### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TreeViewItem,Kendo.Mvc.SiteMapNode\>)
 Binds the TreeView to a sitemap
+
 
 #### Example
 
@@ -198,6 +208,7 @@ The action to configure the item.
 ### BindTo(System.String)
 Binds the TreeView to a sitemap.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -219,6 +230,7 @@ The view data key.
 Binds the TreeView to a list of items.
             Use if a hierarchy of items is being sent from the controller; to bind the TreeView declaratively, use the Items() method.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -239,6 +251,7 @@ The list of items
 ### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.TreeViewItem,T1\>)
 Binds the TreeView to a list of objects. The TreeView will be "flat" which means a TreeView item will be created for
             every item in the data source.
+
 
 #### Example
 
@@ -265,6 +278,7 @@ The action executed for every data bound item.
 
 ### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory\<Kendo.Mvc.UI.TreeViewItem\>\>)
 Binds the TreeView to a list of objects. The TreeView will create a hierarchy of items using the specified mappings.
+
 
 #### Example
 
@@ -298,6 +312,7 @@ The action which will configure the mappings
 ### ItemAction(System.Action\<Kendo.Mvc.UI.TreeViewItem\>)
 Callback for each item.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -323,6 +338,7 @@ Action, which will be executed for each item.
 ### HighlightPath(System.Boolean)
 Select item depending on the current URL.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -343,6 +359,7 @@ If true the item will be highlighted.
 ### Animation(System.Boolean)
 Use to enable or disable animation of the TreeView.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -362,6 +379,7 @@ The boolean value.
 
 ### Animation(System.Action\<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder\>)
 Configures the animation effects of the widget.
+
 
 #### Example
 
@@ -389,6 +407,7 @@ The action which configures the animation effects.
 ### ExpandAll(System.Boolean)
 Expand all the items.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -408,6 +427,7 @@ If true all the items will be expanded.
 
 ### DragAndDrop(System.Boolean)
 Enables drag & drop between treeview nodes.
+
 
 #### Example
 
@@ -434,6 +454,7 @@ If true, drag & drop is enabled.
 ### SecurityTrimming(System.Boolean)
 Enable/disable security trimming functionality of the component.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -453,6 +474,7 @@ If true security trimming is enabled.
 
 ### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder\>)
 Defines the security trimming functionality of the component
+
 
 #### Example
 
@@ -477,6 +499,7 @@ The securityTrimming action.
 ### DataTextField(System.String)
 Sets the name of the field that will supply the item text.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -496,6 +519,7 @@ The field name.
 
 ### DataUrlField(System.String)
 Sets the name of the field that will supply the item URL.
+
 
 #### Example
 
@@ -517,6 +541,7 @@ The field name.
 ### DataSpriteCssClassField(System.String)
 Sets the name of the field that will supply the CSS class for the item sprite image.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -537,6 +562,7 @@ The field name.
 ### DataImageUrlField(System.String)
 Sets the name of the field that will supply the URL for the item image.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -556,6 +582,7 @@ The field name.
 
 ### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyDataSourceBuilder\>)
 Configure the DataSource of the component
+
 
 #### Example
 
@@ -580,6 +607,7 @@ The action that configures the DataSource.
 
 ### LoadOnDemand(System.Boolean)
 Allows the treeview to fetch the entire datasource at initialization time.
+
 
 #### Example
 

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the Actions.
 ### Close
 Configures the window to show a close button.
 
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -27,6 +28,7 @@ Configures the window to show a close button.
 
 ### Maximize
 Configures the window to show a maximize button.
+
 
 #### Example
 
@@ -42,6 +44,7 @@ Configures the window to show a maximize button.
 ### Minimize
 Configures the window to show a minimize button.
 
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -55,6 +58,7 @@ Configures the window to show a minimize button.
 
 ### Refresh
 Configures the window to show a refresh button.
+
 
 #### Example
 
@@ -70,6 +74,7 @@ Configures the window to show a refresh button.
 ### Custom(System.String)
 Configures the window to show a refresh button.
 
+
 #### Example
 
     <%= Html.Kendo().Window()
@@ -83,6 +88,7 @@ Configures the window to show a refresh button.
 
 ### Clear
 Configures the window to show no buttons in its titlebar.
+
 
 #### Example
 

@@ -19,6 +19,7 @@ Gets or sets the scale.
 ### MinorTicks(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder\>)
 Configures the minor ticks.
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -42,6 +43,7 @@ The configuration action.
 
 ### MajorTicks(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder\>)
 Configures the major ticks.
+
 
 #### Example
 
@@ -67,6 +69,7 @@ The configuration action.
 ### Ranges(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleRangesFactory\<T\>\>)
 Defines the ranges items.
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -91,6 +94,7 @@ The add action.
 ### MajorUnit(System.Double)
 Sets the scale major unit.
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -110,6 +114,7 @@ The major unit.
 
 ### MinorUnit(System.Double)
 Sets the scale minor unit.
+
 
 #### Example
 
@@ -131,6 +136,7 @@ The minor unit.
 ### Min(System.Double)
 Sets the scale min value.
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -150,6 +156,7 @@ The min.
 
 ### Max(System.Double)
 Sets the scale max value.
+
 
 #### Example
 
@@ -171,6 +178,7 @@ The max.
 ### Reverse(System.Boolean)
 Sets the scale reverse.
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -190,6 +198,7 @@ The scale reverse.
 
 ### Line(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLineBuilder\>)
 Configures the major ticks.
+
 
 #### Example
 

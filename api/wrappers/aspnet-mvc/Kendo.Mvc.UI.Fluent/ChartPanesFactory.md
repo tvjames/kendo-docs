@@ -22,8 +22,10 @@ Defines a chart pane.
 
 
 
+
 ### Add(System.String)
 Defines a named chart pane.
+
 
 
 #### Parameters

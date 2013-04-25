@@ -14,6 +14,7 @@ Creates the fluent API builders of the Kendo UI widgets
 ### Menu
 Creates a Menu
 
+
 #### Example
 
     <%= Html.Kendo().Menu()
@@ -28,6 +29,7 @@ Creates a Menu
 ### Editor
 Creates a Editor
 
+
 #### Example
 
     <%= Html.Kendo().Editor()
@@ -40,6 +42,7 @@ Creates a Editor
 
 ### GridT1
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data item type.
+
 
 #### Example
 
@@ -54,6 +57,7 @@ Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data item type.
 
 ### GridT1(System.Collections.Generic.IEnumerable\<T1\>)
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data source.
+
 
 #### Example
 
@@ -75,6 +79,7 @@ The data source.
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound to a DataTable.
 
 
+
 #### Parameters
 
 ##### dataSource `System.Data.DataTable`
@@ -87,6 +92,7 @@ DataTable from which the grid instance will be bound
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound to a DataView.
 
 
+
 #### Parameters
 
 ##### dataSource `System.Data.DataView`
@@ -97,6 +103,7 @@ DataView from which the grid instance will be bound
 
 ### GridT1(System.String)
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound an item in ViewData.
+
 
 #### Example
 
@@ -117,6 +124,7 @@ The data source view data key.
 ### ListViewT1
 Creates a new !:UI.ListView{T} bound to the specified data item type.
 
+
 #### Example
 
     <%= Html.Kendo().ListView<Order>()
@@ -130,6 +138,7 @@ Creates a new !:UI.ListView{T} bound to the specified data item type.
 
 ### ListViewT1(System.Collections.Generic.IEnumerable\<T1\>)
 Creates a new !:ListView{T} bound to the specified data source.
+
 
 #### Example
 
@@ -150,6 +159,7 @@ The data source.
 ### ListViewT1(System.String)
 Creates a new !:ListView{T} bound an item in ViewData.
 
+
 #### Example
 
     <%= Html.Kendo().ListView<Order>("orders")
@@ -169,6 +179,7 @@ The data source view data key.
 ### Splitter
 Creates a Splitter
 
+
 #### Example
 
     <%= Html.Kendo().Splitter()
@@ -181,6 +192,7 @@ Creates a Splitter
 
 ### TabStrip
 Creates a new TabStrip.
+
 
 #### Example
 
@@ -200,6 +212,7 @@ Creates a new TabStrip.
 ### DateTimePicker
 Creates a new DateTimePicker.
 
+
 #### Example
 
     <%= Html.Kendo().DateTimePicker()
@@ -212,6 +225,7 @@ Creates a new DateTimePicker.
 
 ### DatePicker
 Creates a new DatePicker.
+
 
 #### Example
 
@@ -226,6 +240,7 @@ Creates a new DatePicker.
 ### TimePicker
 Creates a new TimePicker.
 
+
 #### Example
 
     <%= Html.Kendo().TimePicker()
@@ -238,6 +253,7 @@ Creates a new TimePicker.
 
 ### Tooltip
 Creates a new Tooltip.
+
 
 #### Example
 
@@ -252,6 +268,7 @@ Creates a new Tooltip.
 ### ColorPicker
 Creates a new ColorPicker.
 
+
 #### Example
 
     <%= Html.Kendo().ColorPicker()
@@ -264,6 +281,7 @@ Creates a new ColorPicker.
 
 ### ColorPalette
 Creates a new ColorPalette.
+
 
 #### Example
 
@@ -278,6 +296,7 @@ Creates a new ColorPalette.
 ### FlatColorPicker
 Creates a new FlatColorPicker.
 
+
 #### Example
 
     <%= Html.Kendo().FlatColorPicker()
@@ -291,6 +310,7 @@ Creates a new FlatColorPicker.
 ### Calendar
 Creates a new Calendar.
 
+
 #### Example
 
     <%= Html.Kendo().Calendar()
@@ -303,6 +323,7 @@ Creates a new Calendar.
 
 ### PanelBar
 Creates a new PanelBar.
+
 
 #### Example
 
@@ -322,6 +343,7 @@ Creates a new PanelBar.
 ### TreeView
 Creates a TreeView
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -336,6 +358,7 @@ Creates a TreeView
 ### NumericTextBox
 Creates a new NumericTextBox.
 
+
 #### Example
 
     <%= Html.Kendo().NumericTextBox()
@@ -348,6 +371,7 @@ Creates a new NumericTextBox.
 
 ### NumericTextBoxT1
 Creates a new !:NumericTextBox{T}.
+
 
 #### Example
 
@@ -362,6 +386,7 @@ Creates a new !:NumericTextBox{T}.
 ### CurrencyTextBox
 Creates a new CurrencyTextBox.
 
+
 #### Example
 
     <%= Html.Kendo().CurrencyTextBox()
@@ -374,6 +399,7 @@ Creates a new CurrencyTextBox.
 
 ### PercentTextBox
 Creates a new PercentTextBox.
+
 
 #### Example
 
@@ -388,6 +414,7 @@ Creates a new PercentTextBox.
 ### IntegerTextBox
 Creates a new IntegerTextBox.
 
+
 #### Example
 
     <%= Html.Kendo().IntegerTextBox()
@@ -400,6 +427,7 @@ Creates a new IntegerTextBox.
 
 ### Window
 Creates a new Window.
+
 
 #### Example
 
@@ -414,6 +442,7 @@ Creates a new Window.
 ### LinearGauge
 Creates a new LinearGauge.
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -427,6 +456,7 @@ Creates a new LinearGauge.
 ### RadialGauge
 Creates a new RadialGauge.
 
+
 #### Example
 
     <%= Html.Kendo().RadialGauge()
@@ -439,6 +469,7 @@ Creates a new RadialGauge.
 
 ### DropDownList
 Creates a new DropDownList.
+
 
 #### Example
 
@@ -458,6 +489,7 @@ Creates a new DropDownList.
 ### ComboBox
 Creates a new ComboBox.
 
+
 #### Example
 
     <%= Html.Kendo().ComboBox()
@@ -475,6 +507,7 @@ Creates a new ComboBox.
 
 ### AutoComplete
 Creates a new AutoComplete.
+
 
 #### Example
 
@@ -494,6 +527,7 @@ Creates a new AutoComplete.
 ### MultiSelect
 Creates a new MultiSelect.
 
+
 #### Example
 
     <%= Html.Kendo().MultiSelect()
@@ -512,6 +546,7 @@ Creates a new MultiSelect.
 ### SliderT1
 Creates a new Slider.
 
+
 #### Example
 
     <%= Html.Kendo().Slider()
@@ -524,6 +559,7 @@ Creates a new Slider.
 
 ### Slider
 Creates a new Slider.
+
 
 #### Example
 
@@ -538,6 +574,7 @@ Creates a new Slider.
 ### RangeSliderT1
 Creates a new RangeSlider.
 
+
 #### Example
 
     <%= Html.Kendo().RangeSlider()
@@ -551,6 +588,7 @@ Creates a new RangeSlider.
 ### RangeSlider
 Creates a new RangeSlider.
 
+
 #### Example
 
     <%= Html.Kendo().RangeSlider()
@@ -563,6 +601,7 @@ Creates a new RangeSlider.
 
 ### Upload
 Creates a Upload
+
 
 #### Example
 
@@ -581,6 +620,7 @@ Creates a Upload
 ### ChartT1
 Creates a !:Kendo.Mvc.UI.Chart{T}
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -593,6 +633,7 @@ Creates a !:Kendo.Mvc.UI.Chart{T}
 
 ### ChartT1(System.Collections.Generic.IEnumerable\<T1\>)
 Creates a new !:Kendo.Mvc.UI.Chart{T} bound to the specified data source.
+
 
 #### Example
 
@@ -613,6 +654,7 @@ The data source.
 ### ChartT1(System.String)
 Creates a new !:Kendo.Mvc.UI.Chart{T} bound an item in ViewData.
 
+
 #### Example
 
     <%= Html.Kendo().Chart<SalesData>("sales")
@@ -632,6 +674,7 @@ The data source view data key.
 ### Chart
 Creates a new unbound Chart.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -648,6 +691,7 @@ Creates a new unbound Chart.
 ### StockChartT1
 Creates a !:Kendo.Mvc.UI.StockChart{T}
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -660,6 +704,7 @@ Creates a !:Kendo.Mvc.UI.StockChart{T}
 
 ### StockChartT1(System.Collections.Generic.IEnumerable\<T1\>)
 Creates a new !:Kendo.Mvc.UI.StockChart{T} bound to the specified data source.
+
 
 #### Example
 
@@ -680,6 +725,7 @@ The data source.
 ### StockChartT1(System.String)
 Creates a new !:Kendo.Mvc.UI.StockChart{T} bound an item in ViewData.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart<SalesData>("sales")
@@ -699,6 +745,7 @@ The data source view data key.
 ### StockChart
 Creates a new unbound StockChart.
 
+
 #### Example
 
     <%= Html.Kendo().StockChart()
@@ -715,6 +762,7 @@ Creates a new unbound StockChart.
 ### SparklineT1
 Creates a !:Kendo.Mvc.UI.Sparkline{T}
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -727,6 +775,7 @@ Creates a !:Kendo.Mvc.UI.Sparkline{T}
 
 ### SparklineT1(System.Collections.Generic.IEnumerable\<T1\>)
 Creates a new !:Kendo.Mvc.UI.Sparkline{T} bound to the specified data source.
+
 
 #### Example
 
@@ -747,6 +796,7 @@ The data source.
 ### SparklineT1(System.String)
 Creates a new !:Kendo.Mvc.UI.Sparkline{T} bound an item in ViewData.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline<SalesData>("sales")
@@ -766,6 +816,7 @@ The data source view data key.
 ### Sparkline
 Creates a new unbound Sparkline.
 
+
 #### Example
 
     <%= Html.Kendo().Sparkline()
@@ -781,6 +832,7 @@ Creates a new unbound Sparkline.
 
 ### DeferredScripts(System.Boolean)
 Returns the initialization scripts for widgets set as deferred
+
 
 
 #### Parameters

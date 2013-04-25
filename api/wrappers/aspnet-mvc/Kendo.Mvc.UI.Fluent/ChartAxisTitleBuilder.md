@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the ChartAxisTitle.
 ### Text(System.String)
 Sets the axis title text.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -38,6 +39,7 @@ The text of the axis title.
 
 ### Font(System.String)
 Sets the axis title font.
+
 
 #### Example
 
@@ -64,6 +66,7 @@ The axis title font (CSS format).
 ### Background(System.String)
 Sets the axis title background color.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -88,6 +91,7 @@ The axis background color.
 
 ### Color(System.String)
 Sets the axis title text color.
+
 
 #### Example
 
@@ -114,6 +118,7 @@ The axis text color.
 ### Position(Kendo.Mvc.UI.ChartAxisTitlePosition)
 Sets the axis title position.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -138,6 +143,7 @@ The axis title position.
 
 ### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the axis title margin.
+
 
 #### Example
 
@@ -173,6 +179,7 @@ The axis title left margin.
 ### Margin(System.Int32)
 Sets the axis title margin.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -197,6 +204,7 @@ The axis title margin.
 
 ### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the axis title padding.
+
 
 #### Example
 
@@ -232,6 +240,7 @@ The axis title left padding.
 ### Padding(System.Int32)
 Sets the axis title padding
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -256,6 +265,7 @@ The axis title padding.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the axis title border
+
 
 #### Example
 
@@ -289,6 +299,7 @@ The axis title dash type.
 Configures the title border
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
@@ -299,6 +310,7 @@ The border configuration action
 
 ### Opacity(System.Double)
 Sets the axis title opacity.
+
 
 #### Example
 

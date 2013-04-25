@@ -17,8 +17,10 @@ Defines the default settings for bar series.
 
 
 
+
 ### Column
 Defines the default settings for column series.
+
 
 
 
@@ -29,8 +31,10 @@ Defines the default settings for line series.
 
 
 
+
 ### VerticalLine
 Defines the default settings for vertical line series.
+
 
 
 
@@ -41,8 +45,10 @@ Defines the default settings for area series.
 
 
 
+
 ### VerticalArea
 Defines the default settings for vertical area series.
+
 
 
 
@@ -53,8 +59,10 @@ Defines the default settings for pie series.
 
 
 
+
 ### Donut
 Defines the default settings for donut series.
+
 
 
 
@@ -65,14 +73,17 @@ Defines the default settings for scatter series.
 
 
 
+
 ### ScatterLine
 Defines the default settings for scatter line series.
 
 
 
 
+
 ### OHLC
 Defines the default settings for ohlc series.
+
 
 
 

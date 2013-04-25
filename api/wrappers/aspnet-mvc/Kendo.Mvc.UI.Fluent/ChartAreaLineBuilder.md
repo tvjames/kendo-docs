@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartLine.
 ### Color(System.String)
 Sets the line color
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -37,6 +38,7 @@ The line color (CSS format).
 
 ### Width(System.Int32)
 Sets the line width
+
 
 #### Example
 
@@ -62,6 +64,7 @@ The line width.
 ### DashType(Kendo.Mvc.UI.ChartDashType)
 Sets the line dashType.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -85,6 +88,7 @@ The line dashType.
 
 ### Opacity(System.Double)
 Sets the line opacity.
+
 
 #### Example
 

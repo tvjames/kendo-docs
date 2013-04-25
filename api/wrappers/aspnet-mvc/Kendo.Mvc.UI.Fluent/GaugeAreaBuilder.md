@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the GaugeArea.
 ### Background(System.String)
 Sets the chart area background color.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -34,6 +35,7 @@ The background color.
 
 ### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the gauge area margin.
+
 
 #### Example
 
@@ -65,6 +67,7 @@ The gauge area left margin.
 ### Margin(System.Int32)
 Sets the gauge area margin.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -85,6 +88,7 @@ The gauge area margin.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the gauge area border.
+
 
 #### Example
 
@@ -112,6 +116,7 @@ The border dash type.
 
 ### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
 Configures the gauge area border
+
 
 
 #### Parameters

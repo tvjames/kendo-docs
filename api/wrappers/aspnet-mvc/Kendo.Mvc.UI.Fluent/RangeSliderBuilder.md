@@ -17,8 +17,10 @@ Sets the value of the range slider.
 
 
 
+
 ### Values(T[])
 Sets the value of the range slider.
+
 
 
 
@@ -29,8 +31,10 @@ Sets orientation of the range slider.
 
 
 
+
 ### TickPlacement(Kendo.Mvc.UI.SliderTickPlacement)
 Sets a value indicating how to display the tick marks on the range slider.
+
 
 
 
@@ -41,8 +45,10 @@ Sets the minimum value of the range slider.
 
 
 
+
 ### Max(T)
 Sets the maximum value of the range slider.
+
 
 
 
@@ -53,8 +59,10 @@ Sets the step with which the range slider value will change.
 
 
 
+
 ### LargeStep(T)
 Sets the delta with which the value will change when user click on the track.
+
 
 
 
@@ -65,8 +73,10 @@ Display tooltip while drag.
 
 
 
+
 ### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.SliderTooltipBuilder\>)
 Use it to configure tooltip while drag.
+
 
 #### Example
 
@@ -90,6 +100,7 @@ Use builder to set different tooltip options.
 
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.RangeSliderEventBuilder\>)
 Configures the client-side events.
+
 
 #### Example
 
@@ -115,8 +126,10 @@ Sets the title of the slider draghandle.
 
 
 
+
 ### RightDragHandleTitle(System.String)
 Sets the title of the slider draghandle.
+
 
 
 

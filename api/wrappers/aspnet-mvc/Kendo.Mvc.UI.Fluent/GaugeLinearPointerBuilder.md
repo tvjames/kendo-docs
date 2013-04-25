@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the GaugeLinearPointerBuilder.
 ### Color(System.String)
 Sets the pointer color.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -37,6 +38,7 @@ The pointer color.
 ### Shape(Kendo.Mvc.UI.GaugeLinearPointerShape)
 Sets the pointer shape.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -59,6 +61,7 @@ The pointer shape.
 
 ### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the pointer margin.
+
 
 #### Example
 
@@ -92,6 +95,7 @@ The pointer left margin.
 ### Margin(System.Int32)
 Sets the pointer margin.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -114,6 +118,7 @@ The pointer margin.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the pointer border
+
 
 #### Example
 
@@ -145,6 +150,7 @@ The pointer dash type.
 Configures the pointer border
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
@@ -155,6 +161,7 @@ The border configuration action
 
 ### Opacity(System.Double)
 Sets the pointer opacity.
+
 
 #### Example
 
@@ -180,6 +187,7 @@ The pointer opacity in the range from 0 (transparent) to 1 (opaque).
 ### Size(System.Double)
 Sets the pointer size.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -203,6 +211,7 @@ The pointer size.
 ### Value(System.Double)
 Sets the pointer value.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -225,6 +234,7 @@ The pointer value.
 
 ### Track(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearTrackBuilder\>)
 Configures the pointer track.
+
 
 #### Example
 

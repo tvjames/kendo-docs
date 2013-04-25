@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the DatePickerBase component.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.SimpleColorPickerEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().ColorPalette()
@@ -36,6 +37,7 @@ The client events action.
 ### Value(System.String)
 Sets the value of the picker input
 
+
 #### Example
 
     <%= Html.Kendo().ColorPalette()
@@ -55,6 +57,7 @@ The initially selected color
 
 ### Columns(System.Int32)
 Sets the amount of columns that should be shown
+
 
 #### Example
 
@@ -76,6 +79,7 @@ The initially selected color
 ### TileSize(System.Int32)
 Sets the size of the palette tiles
 
+
 #### Example
 
     <%= Html.Kendo().ColorPalette()
@@ -95,6 +99,7 @@ The tile size (for square tiles)
 
 ### TileSize(System.Action\<Kendo.Mvc.UI.Fluent.PaletteSizeBuilder\>)
 Sets the size of the palette tiles
+
 
 #### Example
 
@@ -116,6 +121,7 @@ The tile size (for square tiles)
 ### Palette(System.Collections.Generic.IEnumerable\<System.String\>)
 Sets the range of colors that the user can pick from.
 
+
 #### Example
 
     <%= Html.Kendo().ColorPalette()
@@ -135,6 +141,7 @@ A list of colors.
 
 ### Palette(Kendo.Mvc.UI.ColorPickerPalette)
 Sets the range of colors that the user can pick from.
+
 
 #### Example
 

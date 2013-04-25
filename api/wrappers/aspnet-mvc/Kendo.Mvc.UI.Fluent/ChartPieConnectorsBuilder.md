@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the chart connectors.
 ### Width(System.Int32)
 Sets the connectors width
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -40,6 +41,7 @@ The connectors width.
 ### Color(System.String)
 Sets the connectors color
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -65,6 +67,7 @@ The connectors color.
 
 ### Padding(System.Int32)
 Sets the connectors padding
+
 
 #### Example
 

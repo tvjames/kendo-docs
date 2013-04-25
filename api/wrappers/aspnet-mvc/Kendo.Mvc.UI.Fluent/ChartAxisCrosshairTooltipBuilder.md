@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartAxisCrosshairTooltipBuilder.
 ### Font(System.String)
 Sets the tooltip font
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -48,6 +49,7 @@ The tooltip font (CSS format).
 ### Visible(System.Boolean)
 Sets the tooltip visible
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -80,6 +82,7 @@ The tooltip visible.
 
 ### Background(System.String)
 Sets the tooltip background
+
 
 #### Example
 
@@ -115,6 +118,7 @@ The tooltip background.
 ### Color(System.String)
 Sets the tooltip text color
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -148,6 +152,7 @@ The tooltip text color.
 
 ### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
 Sets the tooltip padding
+
 
 #### Example
 
@@ -192,6 +197,7 @@ The tooltip left padding.
 ### Padding(System.Int32)
 Sets the tooltip padding
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -225,6 +231,7 @@ The tooltip padding.
 
 ### Border(System.Int32,System.String)
 Sets the tooltip border
+
 
 #### Example
 
@@ -264,6 +271,7 @@ The tooltip border color (CSS syntax).
 Configures the tooltip border
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
@@ -274,6 +282,7 @@ The border configuration action
 
 ### Format(System.String)
 Sets the tooltip format
+
 
 #### Example
 
@@ -309,6 +318,7 @@ The tooltip format.
 ### Template(System.String)
 Sets the tooltip template
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -342,6 +352,7 @@ The tooltip template.
 
 ### Opacity(System.Double)
 Sets the tooltip opacity.
+
 
 #### Example
 

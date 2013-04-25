@@ -14,6 +14,7 @@ Defines the fluent interface for configuring Selectable
 ### Enabled(System.Boolean)
 Enables or disables selection.
 
+
 #### Example
 
     <%= Html.Kendo().ListView(Model)
@@ -27,6 +28,7 @@ Enables or disables selection.
 
 ### Mode(Kendo.Mvc.UI.ListViewSelectionMode)
 Specifies whether multiple or single selection is allowed.
+
 
 #### Example
 

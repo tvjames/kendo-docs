@@ -17,8 +17,10 @@ Configures messages for string operators.
 
 
 
+
 ### ForNumber(System.Action\<Kendo.Mvc.UI.Fluent.NumberOperatorsBuilder\>)
 Configures messages for number operators.
+
 
 
 
@@ -29,8 +31,10 @@ Configures messages for date operators.
 
 
 
+
 ### ForEnums(System.Action\<Kendo.Mvc.UI.Fluent.EnumOperatorsBuilder\>)
 Configures messages for enums operators.
+
 
 
 

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the linear gauge track.
 ### Color(System.String)
 Sets the track color.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -36,6 +37,7 @@ The track color.
 
 ### Size(System.Double)
 Sets the track size.
+
 
 #### Example
 
@@ -60,6 +62,7 @@ The track size.
 ### Visible(System.Boolean)
 Sets the track visibility.
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -82,6 +85,7 @@ The track visibility.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the track border.
+
 
 #### Example
 
@@ -111,6 +115,7 @@ The pointer dash type.
 
 ### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
 Configures the track border
+
 
 
 #### Parameters

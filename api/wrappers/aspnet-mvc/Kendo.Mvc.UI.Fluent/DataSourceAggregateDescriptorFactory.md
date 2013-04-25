@@ -17,8 +17,10 @@ Specifies member on which aggregates to be calculated.
 
 
 
+
 ### Add(System.String,System.Type)
 Specifies member on which aggregates to be calculated.
+
 
 
 

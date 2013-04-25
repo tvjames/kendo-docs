@@ -14,6 +14,7 @@ Defines the fluent interface for configuring numeric axis.
 ### Min(System.Double)
 Sets the axis minimum value.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -33,6 +34,7 @@ The axis minimum value.
 
 ### Max(System.Double)
 Sets the axis maximum value.
+
 
 #### Example
 
@@ -54,6 +56,7 @@ The axis maximum value.
 ### MajorUnit(System.Double)
 Sets the interval between major divisions.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -74,6 +77,7 @@ The interval between major divisions.
 ### MinorUnit(System.Double)
 Sets the interval between minor divisions.
             It defaults to MajorUnit / 5.
+
 
 #### Example
 
@@ -99,6 +103,7 @@ The interval between minor divisions.
 ### AxisCrossingValue(System.Double)
 Sets value at which the first perpendicular axis crosses this axis.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -118,6 +123,7 @@ The value at which the first perpendicular axis crosses this axis.
 
 ### AxisCrossingValue(System.Double[])
 Sets value at which perpendicular axes cross this axis.
+
 
 #### Example
 
@@ -140,6 +146,7 @@ The values at which perpendicular axes cross this axis.
 
 ### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.Double\>)
 Sets value at which perpendicular axes cross this axis.
+
 
 #### Example
 

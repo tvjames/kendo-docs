@@ -15,6 +15,7 @@ Defines the fluent interface for configuring toolbar command.
 Sets the HTML attributes.
 
 
+
 #### Parameters
 
 ##### attributes `System.Object`
@@ -28,6 +29,7 @@ The HTML attributes.
 
 ### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
 Sets the HTML attributes.
+
 
 
 #### Parameters

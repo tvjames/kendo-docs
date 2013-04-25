@@ -15,6 +15,7 @@ Provides extension methods to process DataSourceRequest.
 Sorts the elements of a sequence using the specified sort descriptors.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -32,6 +33,7 @@ An IQueryable whose elements are sorted according to a .
 ### Page(System.Linq.IQueryable,System.Int32,System.Int32)
 Pages through the elements of a sequence until the specified
              using .
+
 
 
 #### Parameters
@@ -55,6 +57,7 @@ An IQueryable whose elements are at the specified .
 Projects each element of a sequence into a new form.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -72,6 +75,7 @@ An IQueryable whose elements are the result of invoking a
 
 ### GroupBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
 Groups the elements of a sequence according to a specified key selector function.
+
 
 
 #### Parameters
@@ -93,6 +97,7 @@ An IQueryable with !:IGrouping{TKey,TElement} items,
 Sorts the elements of a sequence in ascending order according to a key.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -109,6 +114,7 @@ An IQueryable whose elements are sorted according to a key.
 
 ### OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
 Sorts the elements of a sequence in descending order according to a key.
+
 
 
 #### Parameters
@@ -128,6 +134,7 @@ An IQueryable whose elements are sorted in descending order according to a key.
 ### OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression,System.Nullable\<System.ComponentModel.ListSortDirection\>)
 Calls M:Kendo.Mvc.Extensions.QueryableExtensions.OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
             or M:Kendo.Mvc.Extensions.QueryableExtensions.OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression) depending on the .
+
 
 
 #### Parameters
@@ -151,6 +158,7 @@ An IQueryable whose elements are sorted according to a key.
 Groups the elements of a sequence according to a specified .
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -168,6 +176,7 @@ An IQueryable with IGroup items,
 
 ### Aggregate(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.AggregateFunction\>)
 Calculates the results of given aggregates functions on a sequence of elements.
+
 
 
 #### Parameters
@@ -189,6 +198,7 @@ Collection of AggregateResults calculated for each function.
 Filters a sequence of values based on a predicate.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -208,6 +218,7 @@ An IQueryable that contains elements from the input sequence
 Filters a sequence of values based on a collection of IFilterDescriptor.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -225,6 +236,7 @@ An IQueryable that contains elements from the input sequence
 
 ### Take(System.Linq.IQueryable,System.Int32)
 Returns a specified number of contiguous elements from the start of a sequence.
+
 
 
 #### Parameters
@@ -247,6 +259,7 @@ Bypasses a specified number of elements in a sequence
             and then returns the remaining elements.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -266,6 +279,7 @@ An IQueryable that contains elements that occur
 Returns the number of elements in a sequence.
 
 
+
 #### Parameters
 
 ##### source `System.Linq.IQueryable`
@@ -279,6 +293,7 @@ The number of elements in the input sequence.
 
 ### ElementAt(System.Linq.IQueryable,System.Int32)
 Returns the element at a specified index in a sequence.
+
 
 
 #### Parameters

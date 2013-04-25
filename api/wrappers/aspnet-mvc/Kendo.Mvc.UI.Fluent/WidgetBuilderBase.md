@@ -21,12 +21,14 @@ Returns the internal view component.
 
 
 
+
 #### Returns
 
 
 
 ### Name(System.String)
 Sets the name of the component.
+
 
 
 #### Parameters
@@ -45,12 +47,14 @@ Suppress initialization script rendering. Note that this options should be used 
 
 
 
+
 #### Returns
 
 
 
 ### HtmlAttributes(System.Object)
 Sets the HTML attributes.
+
 
 
 #### Parameters
@@ -68,6 +72,7 @@ The HTML attributes.
 Sets the HTML attributes.
 
 
+
 #### Parameters
 
 ##### attributes `System.Collections.Generic.IDictionary<System.String,System.Object>`
@@ -81,6 +86,7 @@ The HTML attributes.
 
 ### Render
 Renders the component.
+
 
 
 

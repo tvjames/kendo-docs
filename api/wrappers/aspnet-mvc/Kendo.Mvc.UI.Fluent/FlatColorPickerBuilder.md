@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the DatePickerBase component.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.SimpleColorPickerEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().FlatColorPicker()
@@ -36,6 +37,7 @@ The client events action.
 ### Value(System.String)
 Sets the value of the picker input
 
+
 #### Example
 
     <%= Html.Kendo().FlatColorPicker()
@@ -55,6 +57,7 @@ The initially selected color
 
 ### Opacity(System.Boolean)
 Indicates whether the picker will allow transparent colors to be picked.
+
 
 #### Example
 
@@ -76,6 +79,7 @@ Whether the user is allowed to change the color opacity.
 ### Input(System.Boolean)
 Indicates whether the picker will show an input for entering colors.
 
+
 #### Example
 
     <%= Html.Kendo().FlatColorPicker()
@@ -96,6 +100,7 @@ Whether the input field should be shown.
 ### Preview(System.Boolean)
 Indicates whether the picker will show a preview of the selected color.
 
+
 #### Example
 
     <%= Html.Kendo().FlatColorPicker()
@@ -115,6 +120,7 @@ Whether the preview area should be shown.
 
 ### Buttons(System.Boolean)
 Indicates whether the picker will show apply / cancel buttons.
+
 
 #### Example
 

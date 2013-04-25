@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the LinearGauge component.
 ### Theme(System.String)
 Sets the theme of the linear gauge.
 
+
 #### Example
 
     <%= Html.Kendo().RadialGauge()
@@ -34,6 +35,7 @@ The linear gauge theme.
 ### GaugeArea(System.Action\<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder\>)
 Sets the linear gauge area.
 
+
 #### Example
 
     <%= Html.Kendo().RadialGauge()
@@ -53,6 +55,7 @@ The linear gauge area.
 
 ### Scale(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder\>)
 Configures the scale
+
 
 #### Example
 
@@ -76,6 +79,7 @@ The configurator
 ### Pointer(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder\>)
 Configures the pointer
 
+
 #### Example
 
     <%= Html.Kendo().RadialGauge()
@@ -97,6 +101,7 @@ The configurator
 
 ### Transitions(System.Boolean)
 Enables or disabled animated transitions on initial load and refresh.
+
 
 #### Example
 

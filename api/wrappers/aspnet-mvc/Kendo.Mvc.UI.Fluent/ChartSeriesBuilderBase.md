@@ -19,6 +19,7 @@ Gets or sets the series.
 ### Name(System.String)
 Sets the series title displayed in the legend.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -38,6 +39,7 @@ The title.
 
 ### GroupNameTemplate(System.String)
 Sets the name template for auto-generated series when binding to grouped data.
+
 
 #### Example
 
@@ -67,6 +69,7 @@ The name template for auto-generated series when binding to grouped data.
 ### Opacity(System.Double)
 Sets the series opacity.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -88,6 +91,7 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 ### Color(System.String)
 Sets the bar fill color
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -108,6 +112,7 @@ The bar fill color (CSS syntax).
 
 ### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
 Configure the data point tooltip for the series.
+
 
 #### Example
 
@@ -134,6 +139,7 @@ Use the configurator to set data tooltip options.
 ### Tooltip(System.Boolean)
 Sets the data point tooltip visibility.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -154,6 +160,7 @@ A value indicating if the data point tooltip should be displayed.
 
 ### Axis(System.String)
 Sets the axis name to use for this series.
+
 
 #### Example
 
@@ -179,6 +186,7 @@ The axis name for this series.
 Configures the series highlight
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartSeriesHighlightBuilder)>
@@ -189,6 +197,7 @@ The configuration action.
 
 ### Highlight(System.Boolean)
 Configures the highlight visibility
+
 
 
 #### Parameters

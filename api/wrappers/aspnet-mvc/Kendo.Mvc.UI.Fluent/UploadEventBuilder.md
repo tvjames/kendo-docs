@@ -14,6 +14,9 @@ Defines the fluent interface for configuring the Upload events.
 ### Select(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Select client-side event
 
+For additional information check the [select](/api/web/upload#events-select) event documentation.
+
+
 #### Example
 
     <% Html.Kendo().Upload()
@@ -41,6 +44,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Select(System.String)
 Defines the name of the JavaScript function that will handle the the Select client-side event.
 
+For additional information check the [select](/api/web/upload#events-select) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -60,6 +66,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Upload(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Upload client-side event
+
+For additional information check the [upload](/api/web/upload#events-upload) event documentation.
+
 
 #### Example
 
@@ -88,6 +97,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Upload(System.String)
 Defines the name of the JavaScript function that will handle the the Upload client-side event.
 
+For additional information check the [upload](/api/web/upload#events-upload) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -107,6 +119,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Success(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Success client-side event
+
+For additional information check the [success](/api/web/upload#events-success) event documentation.
+
 
 #### Example
 
@@ -135,6 +150,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Success(System.String)
 Defines the name of the JavaScript function that will handle the the Success client-side event.
 
+For additional information check the [success](/api/web/upload#events-success) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -154,6 +172,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Error(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Error client-side event
+
+For additional information check the [error](/api/web/upload#events-error) event documentation.
+
 
 #### Example
 
@@ -182,6 +203,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Error(System.String)
 Defines the name of the JavaScript function that will handle the the Error client-side event.
 
+For additional information check the [error](/api/web/upload#events-error) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -201,6 +225,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Complete(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Complete client-side event
+
+For additional information check the [complete](/api/web/upload#events-complete) event documentation.
+
 
 #### Example
 
@@ -229,6 +256,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Complete(System.String)
 Defines the name of the JavaScript function that will handle the the Complete client-side event.
 
+For additional information check the [complete](/api/web/upload#events-complete) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -248,6 +278,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Cancel(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Cancel client-side event
+
+For additional information check the [cancel](/api/web/upload#events-cancel) event documentation.
+
 
 #### Example
 
@@ -276,6 +309,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Cancel(System.String)
 Defines the name of the JavaScript function that will handle the the Cancel client-side event.
 
+For additional information check the [cancel](/api/web/upload#events-cancel) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -295,6 +331,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Remove(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Remove client-side event
+
+For additional information check the [remove](/api/web/upload#events-remove) event documentation.
+
 
 #### Example
 
@@ -323,6 +362,9 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Remove(System.String)
 Defines the name of the JavaScript function that will handle the the Remove client-side event.
 
+For additional information check the [remove](/api/web/upload#events-remove) event documentation.
+
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -342,6 +384,9 @@ The name of the JavaScript function that will handle the event.
 
 ### Progress(System.Func\<System.Object,System.Object\>)
 Defines the inline handler of the Progress client-side event
+
+For additional information check the [progress](/api/web/upload#events-progress) event documentation.
+
 
 #### Example
 
@@ -369,6 +414,9 @@ The handler code wrapped in a text tag (Razor syntax).
 
 ### Progress(System.String)
 Defines the name of the JavaScript function that will handle the the Progress client-side event.
+
+For additional information check the [progress](/api/web/upload#events-progress) event documentation.
+
 
 #### Example
 

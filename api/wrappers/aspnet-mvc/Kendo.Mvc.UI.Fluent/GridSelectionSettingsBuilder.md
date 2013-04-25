@@ -14,6 +14,7 @@ Defines the fluent interface for configuring Selectable
 ### Enabled(System.Boolean)
 Enables or disables selection.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -28,6 +29,7 @@ Enables or disables selection.
 ### Mode(Kendo.Mvc.UI.GridSelectionMode)
 Specifies whether multiple or single selection is allowed.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -41,6 +43,7 @@ Specifies whether multiple or single selection is allowed.
 
 ### Type(Kendo.Mvc.UI.GridSelectionType)
 Specifies whether row or cell selection is allowed.
+
 
 #### Example
 

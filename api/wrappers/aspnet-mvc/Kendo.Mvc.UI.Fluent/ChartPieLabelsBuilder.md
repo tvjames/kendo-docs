@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the chart data labels.
 ### Align(Kendo.Mvc.UI.ChartPieLabelsAlign)
 Sets the labels align
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -41,6 +42,7 @@ The labels align.
 ### Distance(System.Int32)
 Sets the labels distance
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -67,6 +69,7 @@ The labels distance.
 
 ### Position(Kendo.Mvc.UI.ChartPieLabelsPosition)
 Sets the labels position
+
 
 #### Example
 

@@ -17,8 +17,10 @@ Defines the default settings for bar series.
 
 
 
+
 ### Column
 Defines the default settings for column series.
+
 
 
 
@@ -29,14 +31,17 @@ Defines the default settings for line series.
 
 
 
+
 ### Area
 Defines the default settings for area series.
 
 
 
 
+
 ### Pie
 Defines the default settings for pie series.
+
 
 
 

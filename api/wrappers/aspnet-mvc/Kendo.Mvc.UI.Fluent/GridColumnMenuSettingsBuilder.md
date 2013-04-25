@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ColumnMenu.
 ### Enabled(System.Boolean)
 Enables/disables header column menu.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -27,6 +28,7 @@ Enables/disables header column menu.
 
 ### Sortable(System.Boolean)
 Enables/disables sort section in header column menu.
+
 
 #### Example
 
@@ -42,6 +44,7 @@ Enables/disables sort section in header column menu.
 ### Filterable(System.Boolean)
 Enables/disables filter section in header column menu.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -56,6 +59,7 @@ Enables/disables filter section in header column menu.
 ### Columns(System.Boolean)
 Enables/disables columns section in header column menu.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -69,6 +73,7 @@ Enables/disables columns section in header column menu.
 
 ### Messages(System.Action\<Kendo.Mvc.UI.Fluent.ColumnMenuMessagesBuilder\>)
 Enables you to define custom messages in grid column menu.
+
 
 #### Example
 

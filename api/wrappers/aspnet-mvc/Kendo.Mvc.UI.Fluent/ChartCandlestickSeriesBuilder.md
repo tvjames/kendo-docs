@@ -19,6 +19,7 @@ Gets or sets the series.
 ### Overlay(Kendo.Mvc.UI.ChartBarSeriesOverlay)
 Sets the bar effects overlay
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -39,6 +40,7 @@ The candlestick effects overlay. The default is ChartBarSeriesOverlay.Glass
 
 ### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartCandlestickSeriesHighlightBuilder\>)
 Configures the series highlight
+
 
 
 #### Parameters

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring GaugeScaleTicks.
 ### Color(System.String)
 Sets the ticks color
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -34,6 +35,7 @@ The ticks color (CSS format).
 
 ### Width(System.Int32)
 Sets the ticks width
+
 
 #### Example
 
@@ -56,6 +58,7 @@ The ticks width.
 ### Size(System.Int32)
 Sets the ticks size
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -77,6 +80,7 @@ The ticks size.
 ### DashType(Kendo.Mvc.UI.ChartDashType)
 Sets the ticks dashType
 
+
 #### Example
 
     <% Html.Kendo().LinearGauge()
@@ -97,6 +101,7 @@ The ticks dashType.
 
 ### Visible(System.Boolean)
 Sets the ticks visibility
+
 
 #### Example
 

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the chart data labels.
 ### Position(Kendo.Mvc.UI.ChartPointLabelsPosition)
 Sets the labels position
 
+
 #### Example
 
     <% Html.Kendo().Chart()

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring area series.
 ### Stack(System.Boolean)
 Sets a value indicating if the areas should be stacked.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -35,6 +36,7 @@ A value indicating if the areas should be stacked.
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -54,6 +56,7 @@ Aggregate function name.
 
 ### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder\>)
 Configures the area chart labels.
+
 
 #### Example
 
@@ -81,6 +84,7 @@ The configuration action.
 ### Labels(System.Boolean)
 Sets the visibility of area chart labels.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -103,6 +107,7 @@ The visibility. The default value is false.
 
 ### Line(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Configures the area chart line.
+
 
 #### Example
 
@@ -134,6 +139,7 @@ The line dashType.
 ### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder\>)
 Configures the area chart line.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -157,6 +163,7 @@ The configuration action.
 
 ### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder\>)
 Configures the area chart markers.
+
 
 #### Example
 
@@ -183,6 +190,7 @@ The configuration action.
 ### Markers(System.Boolean)
 Sets the visibility of area chart markers.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -205,6 +213,7 @@ The visibility. The default value is true.
 
 ### MissingValues(Kendo.Mvc.UI.ChartAreaMissingValues)
 Configures the behavior for handling missing values in area series.
+
 
 #### Example
 

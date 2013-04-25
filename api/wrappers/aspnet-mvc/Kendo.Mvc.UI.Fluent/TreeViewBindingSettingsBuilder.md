@@ -14,6 +14,7 @@ Defines the fluent interface for building TreeViewBindingSettingsBuilder
 ### Enabled(System.Boolean)
 Enables or disables binding.
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -30,6 +31,7 @@ Enables or disables binding.
 
 ### Select(System.Web.Routing.RouteValueDictionary)
 Sets the action, controller and route values
+
 
 #### Example
 
@@ -53,6 +55,7 @@ The route values of the Action method.
 
 ### Select(System.String,System.String,System.Web.Routing.RouteValueDictionary)
 Sets the action, controller and route values for the select operation
+
 
 #### Example
 
@@ -83,6 +86,7 @@ The route values.
 ### Select(System.String,System.String,System.Object)
 Sets the action, controller and route values for the select operation
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -112,6 +116,7 @@ The route values.
 ### Select(System.String,System.String)
 Sets the action, controller and route values for the select operation
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -137,6 +142,7 @@ Name of the controller.
 
 ### Select(System.String,System.Web.Routing.RouteValueDictionary)
 Sets the route and values for the select operation
+
 
 #### Example
 
@@ -164,6 +170,7 @@ The route values.
 ### Select(System.String,System.Object)
 Sets the route and values for the select operation
 
+
 #### Example
 
     <%= Html.Kendo().TreeView()
@@ -189,6 +196,7 @@ The route values.
 
 ### Select(System.String)
 Sets the route name for the select operation
+
 
 #### Example
 

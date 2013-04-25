@@ -15,6 +15,7 @@ Defines the fluent interface for configuring bubble series.
 Configures the bubble chart behavior for negative values.
             By default negative values are not visible.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -39,6 +40,7 @@ The configuration action.
 
 ### Border(System.Int32,System.String)
 Sets the bubble border
+
 
 #### Example
 
@@ -70,14 +72,17 @@ Not applicable to bubble series
 
 
 
+
 ### Markers(System.Boolean)
 Not applicable to bubble series
 
 
 
 
+
 ### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartBubbleSeriesHighlightBuilder\>)
 Configures the bubble highlight
+
 
 
 #### Parameters

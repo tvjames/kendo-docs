@@ -14,6 +14,7 @@ Defines the fluent interface for configuring bar series.
 ### Stack(System.Boolean)
 Sets a value indicating if the bars should be stacked.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -33,6 +34,7 @@ A value indicating if the bars should be stacked.
 
 ### Stack(System.String)
 Sets the name of the stack that this series belongs to. Each unique name creates a new stack.
+
 
 #### Example
 
@@ -54,6 +56,7 @@ The name of the stack.
 ### Aggregate(Kendo.Mvc.UI.ChartSeriesAggregate)
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
+
 
 #### Example
 
@@ -79,6 +82,7 @@ Set distance between category clusters.
             The distance is distributed evenly on each side.
             The default value is 1.5
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -92,6 +96,7 @@ Set distance between category clusters.
 
 ### Spacing(System.Double)
 Sets a value indicating the distance between bars / categories.
+
 
 #### Example
 
@@ -113,6 +118,7 @@ Value of 1 means that the distance between bars is equal to their width.
 
 ### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartBarLabelsBuilder\>)
 Configures the bar chart labels.
+
 
 #### Example
 
@@ -140,6 +146,7 @@ The configuration action.
 ### Labels(System.Boolean)
 Sets the visibility of bar chart labels.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -162,6 +169,7 @@ The visibility. The default value is false.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the bars border
+
 
 #### Example
 
@@ -191,6 +199,7 @@ The bars border dash type.
 Configures the bar border
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
@@ -201,6 +210,7 @@ The border configuration action
 
 ### Overlay(Kendo.Mvc.UI.ChartBarSeriesOverlay)
 Sets the bar effects overlay
+
 
 #### Example
 
@@ -222,6 +232,7 @@ The bar effects overlay. The default is ChartBarSeriesOverlay.Glass
 
 ### NegativeColor(System.String)
 Sets the bar color for negative values
+
 
 #### Example
 

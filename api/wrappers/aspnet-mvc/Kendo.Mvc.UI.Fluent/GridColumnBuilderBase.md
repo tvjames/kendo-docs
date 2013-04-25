@@ -19,6 +19,7 @@ Gets or sets the column.
 ### Title(System.String)
 Sets the title displayed in the header of the column.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -38,6 +39,7 @@ The text.
 
 ### HeaderHtmlAttributes(System.Object)
 Sets the HTML attributes applied to the header cell of the column.
+
 
 #### Example
 
@@ -59,6 +61,7 @@ The attributes.
 ### HeaderHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
 Sets the HTML attributes applied to the header cell of the column.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -78,6 +81,7 @@ The attributes.
 
 ### FooterHtmlAttributes(System.Object)
 Sets the HTML attributes applied to the footer cell of the column.
+
 
 #### Example
 
@@ -99,6 +103,7 @@ The attributes.
 ### FooterHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
 Sets the HTML attributes applied to the footer cell of the column.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -118,6 +123,7 @@ The attributes.
 
 ### HtmlAttributes(System.Object)
 Sets the HTML attributes applied to the content cell of the column.
+
 
 #### Example
 
@@ -139,6 +145,7 @@ The attributes.
 ### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
 Sets the HTML attributes applied to the content cell of the column.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -159,6 +166,7 @@ The attributes.
 ### Width(System.Int32)
 Sets the width of the column in pixels.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -178,6 +186,7 @@ The width in pixels.
 
 ### Width(System.String)
 Sets the width of the column using CSS syntax.
+
 
 #### Example
 
@@ -206,6 +215,7 @@ The width to set.
 ### Visible(System.Boolean)
 Makes the column visible or not. By default all columns are visible. Invisible columns are not rendered in the output HTML.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -220,6 +230,7 @@ Makes the column visible or not. By default all columns are visible. Invisible c
 ### Hidden(System.Boolean)
 Makes the column hidden or not. By default all columns are not hidden. Hidden columns are rendered in the output HTML but are hidden.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -233,6 +244,7 @@ Makes the column hidden or not. By default all columns are not hidden. Hidden co
 
 ### Hidden
 Hides a column. By default all columns are not hidden. Hidden columns are rendered in the output HTML but are hidden.
+
 
 #### Example
 
@@ -249,6 +261,7 @@ Hides a column. By default all columns are not hidden. Hidden columns are render
 Specifys whether the columns should be included in column header menu. By default all columns are included.
             The column also need to have a Title set in order to be included in the menu.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -264,6 +277,7 @@ Specifys whether the columns should be included in column header menu. By defaul
 Sets the header template for the column.
 
 
+
 #### Parameters
 
 ##### template `System.Action`
@@ -274,6 +288,7 @@ The action defining the template.
 
 ### HeaderTemplate(System.String)
 Sets the header template for the column.
+
 
 
 #### Parameters
@@ -288,6 +303,7 @@ The string defining the template.
 Sets the header template for the column.
 
 
+
 #### Parameters
 
 ##### template `System.Func<System.Object,System.Object>`
@@ -298,6 +314,7 @@ The action defining the template.
 
 ### FooterTemplate(System.Action)
 Sets the footer template for the column.
+
 
 
 #### Parameters
@@ -312,6 +329,7 @@ The action defining the template.
 Sets the footer template for the column.
 
 
+
 #### Parameters
 
 ##### template `System.String`
@@ -322,6 +340,7 @@ The string defining the template.
 
 ### FooterTemplate(System.Func\<System.Object,System.Object\>)
 Sets the footer template for the column.
+
 
 
 #### Parameters

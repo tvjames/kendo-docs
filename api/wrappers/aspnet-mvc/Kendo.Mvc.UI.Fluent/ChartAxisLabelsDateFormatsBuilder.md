@@ -14,6 +14,7 @@ Defines the fluent interface for configuring ChartLine.
 ### Hours(System.String)
 Sets the date format when the base date unit is Hours
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -40,6 +41,7 @@ The date format.
 
 ### Days(System.String)
 Sets the date format when the base date unit is Days
+
 
 #### Example
 
@@ -68,6 +70,7 @@ The date format.
 ### Minutes(System.String)
 Sets the date format when the base date unit is Minutes
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -94,6 +97,7 @@ The date format.
 
 ### Months(System.String)
 Sets the date format when the base date unit is Months
+
 
 #### Example
 
@@ -122,6 +126,7 @@ The date format.
 ### Weeks(System.String)
 Sets the date format when the base date unit is Months
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -148,6 +153,7 @@ The date format.
 
 ### Years(System.String)
 Sets the date format when the base date unit is Years
+
 
 #### Example
 

@@ -15,6 +15,7 @@ Defines the fluent interface for configuring Reorderable
 Enables or disables column reordering.
 
 
+
 #### Parameters
 
 ##### value `System.Boolean`

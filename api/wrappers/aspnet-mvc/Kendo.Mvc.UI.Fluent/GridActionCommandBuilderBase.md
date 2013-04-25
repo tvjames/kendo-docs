@@ -15,6 +15,7 @@ Defines the fluent interface for configuring command.
 Sets the text displayed by the command. If not set a default value is used.
 
 
+
 #### Parameters
 
 ##### text `System.String`
@@ -30,6 +31,7 @@ The text which should be displayed
 Sets the HTML attributes.
 
 
+
 #### Parameters
 
 ##### attributes `System.Object`
@@ -43,6 +45,7 @@ The HTML attributes.
 
 ### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
 Sets the HTML attributes.
+
 
 
 #### Parameters

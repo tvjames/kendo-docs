@@ -15,6 +15,7 @@ Defines the fluent interface for configuring the ModelFieldDescriptor.
 Sets the value which will be used to populate the field when new non-existing model is created.
 
 
+
 #### Parameters
 
 ##### value `T`
@@ -25,6 +26,7 @@ The value
 
 ### DefaultValue(System.Object)
 Sets the value which will be used to populate the field when new non-existing model is created.
+
 
 
 #### Parameters
@@ -41,8 +43,10 @@ Specifies if the field should be editable.
 
 
 
+
 ### Editable(System.Boolean)
 Specifies if the field should be editable.
+
 
 
 #### Parameters

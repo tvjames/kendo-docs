@@ -29,6 +29,7 @@ Gets or sets the target filter value.
 Creates a predicate filter expression.
 
 
+
 #### Parameters
 
 ##### parameterExpression `System.Linq.Expressions.ParameterExpression`
@@ -43,6 +44,7 @@ A predicate filter expression.
 ### Equals(Kendo.Mvc.FilterDescriptor)
 Determines whether the specified  descriptor
             is equal to the current one.
+
 
 
 #### Parameters
@@ -64,8 +66,10 @@ Determines whether the specified
 
 
 
+
 ### GetHashCode
 Serves as a hash function for a particular type.
+
 
 
 

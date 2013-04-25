@@ -19,6 +19,7 @@ The parent Guage
 ### Mirror(System.Boolean)
 Sets the mirror of the gauge
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -41,6 +42,7 @@ The mirror.
 ### Vertical(System.Boolean)
 Sets the orientation of the gauge
 
+
 #### Example
 
     <%= Html.Kendo().LinearGauge()
@@ -62,6 +64,7 @@ The vertical.
 
 ### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearScaleLabelsBuilder\>)
 Configures the labels.
+
 
 #### Example
 

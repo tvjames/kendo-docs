@@ -14,6 +14,7 @@ Defines the fluent interface for configuring child menu items.
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.MenuItemFactory\>)
 Configures the child items of a MenuItem.
 
+
 #### Example
 
     <%= Html.Kendo().Menu()

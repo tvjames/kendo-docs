@@ -15,6 +15,7 @@ A builder class for IUploadAsyncSettings
 Sets a value indicating whether to start the upload immediately after selecting a file
 
 
+
 #### Parameters
 
 ##### value `System.Boolean`
@@ -27,6 +28,7 @@ true if the upload should start immediately after selecting a file, false otherw
 Sets a value indicating whether to upload selected files in one batch (request)
 
 
+
 #### Parameters
 
 ##### value `System.Boolean`
@@ -37,6 +39,7 @@ true if the files should be uploaded in a single request, false otherwise; false
 
 ### Save(System.String,System.String,System.Web.Routing.RouteValueDictionary)
 Sets the action, controller and route values for the save operation
+
 
 #### Example
 
@@ -66,6 +69,7 @@ The route values.
 ### Save(System.String,System.String,System.Object)
 Sets the action, controller and route values for the save operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -94,6 +98,7 @@ The route values.
 ### Save(System.String,System.String)
 Sets the action and controller for the save operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -119,6 +124,7 @@ Name of the controller.
 ### Save(System.String)
 Sets the route name for the save operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -141,6 +147,7 @@ Name of the route.
 ### Save(System.Web.Routing.RouteValueDictionary)
 Sets the route values for the save operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -162,6 +169,7 @@ The route values of the action method.
 
 ### Save(System.String,System.Web.Routing.RouteValueDictionary)
 Sets the route and values for the save operation
+
 
 #### Example
 
@@ -188,6 +196,7 @@ The route values.
 ### Save(System.String,System.Object)
 Sets the route and values for the save operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -213,6 +222,7 @@ The route values.
 ### SaveT1(System.Linq.Expressions.Expression\<System.Action\<T1\>\>)
 Sets the action for the save operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -234,6 +244,7 @@ The action.
 
 ### SaveField(System.String)
 Sets the field name for the save operation
+
 
 #### Example
 
@@ -259,6 +270,7 @@ The form field name to use for submiting the files.
 Sets an absolute or relative Save action URL.
             Note that the URL must be in the same domain for the upload to succeed.
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -280,6 +292,7 @@ The Save action URL.
 
 ### Remove(System.String,System.String,System.Web.Routing.RouteValueDictionary)
 Sets the action, controller and route values for the remove operation
+
 
 #### Example
 
@@ -309,6 +322,7 @@ The route values.
 ### Remove(System.String,System.String,System.Object)
 Sets the action, controller and route values for the remove operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -337,6 +351,7 @@ The route values.
 ### Remove(System.String,System.String)
 Sets the action and controller for the remove operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -362,6 +377,7 @@ Name of the controller.
 ### Remove(System.String)
 Sets the route name for the remove operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -384,6 +400,7 @@ Name of the route.
 ### Remove(System.Web.Routing.RouteValueDictionary)
 Sets the route values for the remove operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -405,6 +422,7 @@ The route values of the action method.
 
 ### Remove(System.String,System.Web.Routing.RouteValueDictionary)
 Sets the route and values for the remove operation
+
 
 #### Example
 
@@ -431,6 +449,7 @@ The route values.
 ### Remove(System.String,System.Object)
 Sets the route and values for the remove operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -456,6 +475,7 @@ The route values.
 ### RemoveT1(System.Linq.Expressions.Expression\<System.Action\<T1\>\>)
 Sets the action for the remove operation
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -479,6 +499,7 @@ The action.
 Sets an absolute or relative Remove action URL.
             Note that the URL must be in the same domain for the operation to succeed.
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -500,6 +521,7 @@ The Remove action URL.
 
 ### RemoveField(System.String)
 Sets the field name for the remove operation
+
 
 #### Example
 

@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the Sortable.
 ### Enabled(System.Boolean)
 Enables or disables sorting.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -27,6 +28,7 @@ Enables or disables sorting.
 
 ### SortMode(Kendo.Mvc.UI.GridSortMode)
 Sets the sort mode of the grid.
+
 
 #### Example
 
@@ -47,6 +49,7 @@ The value.
 
 ### AllowUnsort(System.Boolean)
 Enables or disables unsorted mode.
+
 
 #### Example
 

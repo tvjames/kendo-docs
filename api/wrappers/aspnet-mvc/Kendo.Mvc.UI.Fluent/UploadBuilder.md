@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the Upload component.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.UploadEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -37,6 +38,7 @@ The client events configuration action.
 ### Enable(System.Boolean)
 Enables or disables the component.
 
+
 #### Example
 
     <%= Html.Kendo().Upload()
@@ -56,6 +58,7 @@ true if the component should be enabled, false otherwise; the default is true.
 
 ### Multiple(System.Boolean)
 Enables or disables multiple file selection.
+
 
 #### Example
 
@@ -78,6 +81,7 @@ true if multiple file selection should be enabled, false otherwise; the default 
 Sets a value indicating whether to show the list of uploaded files
 
 
+
 #### Parameters
 
 ##### value `System.Boolean`
@@ -88,6 +92,7 @@ true if the list of uploaded files should be visible, false otherwise; true by d
 
 ### Async(System.Action\<Kendo.Mvc.UI.Fluent.UploadAsyncSettingsBuilder\>)
 Use it to configure asynchronous uploading.
+
 
 #### Example
 
@@ -111,6 +116,7 @@ Use builder to set different asynchronous uploading options.
 
 ### Messages(System.Action\<Kendo.Mvc.UI.Fluent.UploadMessagesBuilder\>)
 Use it to configure asynchronous uploading.
+
 
 #### Example
 

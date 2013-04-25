@@ -14,6 +14,7 @@ Defines the fluent interface for configuring the TabStrip component.
 ### Items(System.Action\<Kendo.Mvc.UI.Fluent.TabStripItemFactory\>)
 Defines the items in the tabstrip
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -38,6 +39,7 @@ The add action.
 ### Events(System.Action\<Kendo.Mvc.UI.Fluent.TabStripEventBuilder\>)
 Configures the client-side events.
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -60,6 +62,7 @@ The client events action.
 ### Animation(System.Boolean)
 Configures the animation effects of the tabstrip.
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -79,6 +82,7 @@ Whether the component animation is enabled.
 ### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
 Configures the animation effects of the tabstrip.
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -97,6 +101,7 @@ The action that configures the animation.
 
 ### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TabStripItem,Kendo.Mvc.SiteMapNode\>)
 Binds the tabstrip to a sitemap
+
 
 #### Example
 
@@ -123,6 +128,7 @@ The action to configure the item.
 ### BindTo(System.String)
 Binds the tabstrip to a sitemap.
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -142,6 +148,7 @@ The view data key.
 
 ### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.TabStripItem,T1\>)
 Binds the tabstrip to a list of objects
+
 
 #### Example
 
@@ -169,6 +176,7 @@ The action executed for every data bound item.
 ### SelectedIndex(System.Int32)
 Selects the item at the specified index.
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -193,6 +201,7 @@ The index.
 
 ### ItemAction(System.Action\<Kendo.Mvc.UI.TabStripItem\>)
 Callback for each item.
+
 
 #### Example
 
@@ -219,6 +228,7 @@ Action, which will be executed for each item.
 ### HighlightPath(System.Boolean)
 Select item depending on the current URL.
 
+
 #### Example
 
     <%= Html.Kendo().TabStrip()
@@ -238,6 +248,7 @@ If true the item will be highlighted.
 
 ### SecurityTrimming(System.Boolean)
 Enable/disable security trimming functionality of the component.
+
 
 #### Example
 

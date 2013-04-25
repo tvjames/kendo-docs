@@ -14,6 +14,7 @@ Defines the fluent interface for configuring Scrollable
 ### Enabled(System.Boolean)
 Enables or disables scrolling.
 
+
 #### Example
 
     <%= Html.Kendo().Grid(Model)
@@ -27,6 +28,7 @@ Enables or disables scrolling.
 
 ### Height(System.Int32)
 Sets the height of the scrollable area in pixels.
+
 
 #### Example
 
@@ -47,6 +49,7 @@ The height in pixels.
 
 ### Height(System.String)
 Sets the height of the scrollable.
+
 
 #### Example
 

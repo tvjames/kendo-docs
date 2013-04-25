@@ -19,6 +19,7 @@ Gets or sets the series.
 ### Name(System.String)
 Sets the name of the series.
 
+
 #### Example
 
     <%= Html.Kendo().Chart(Model)
@@ -32,6 +33,7 @@ Sets the name of the series.
 
 ### Opacity(System.Double)
 Sets the series opacity.
+
 
 #### Example
 
@@ -54,6 +56,7 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 ### Padding(System.Int32)
 Sets the padding of the chart.
 
+
 #### Example
 
     <% Html.Kendo().Chart()
@@ -68,6 +71,7 @@ Sets the padding of the chart.
 
 ### StartAngle(System.Int32)
 Sets the start angle of the first pie segment.
+
 
 #### Example
 
@@ -89,6 +93,7 @@ The pie start angle(in degrees).
 
 ### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieLabelsBuilder\>)
 Configures the pie chart labels.
+
 
 #### Example
 
@@ -116,6 +121,7 @@ The configuration action.
 ### Labels(System.Boolean)
 Sets the visibility of pie chart labels.
 
+
 #### Example
 
     <%= Html.Kendo().Chart()
@@ -138,6 +144,7 @@ The visibility. The default value is false.
 
 ### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
 Sets the pie segments border
+
 
 #### Example
 
@@ -167,6 +174,7 @@ The pie segments border dash type.
 Configures the pie border
 
 
+
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
@@ -177,6 +185,7 @@ The border configuration action
 
 ### Overlay(Kendo.Mvc.UI.ChartPieSeriesOverlay)
 Sets the pie segments effects overlay
+
 
 #### Example
 
@@ -199,6 +208,7 @@ The pie segment effects overlay.
 
 ### Connectors(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieConnectorsBuilder\>)
 Configures the pie chart connectors.
+
 
 #### Example
 
@@ -224,6 +234,7 @@ The configuration action.
 
 ### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieSeriesHighlightBuilder\>)
 Configures the pie highlight
+
 
 
 #### Parameters
