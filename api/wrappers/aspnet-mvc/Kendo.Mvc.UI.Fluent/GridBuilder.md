@@ -11,14 +11,14 @@ Defines the fluent interface for configuring the !:Grid{T} component.
 
 ## Methods
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceBuilder<T>>)
+### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceBuilder<T>\>)
 Configures the grid DataSource
 
 
 
 
 
-### DetailTemplate(System.Action\<T\>)
+### DetailTemplate(System.Action\<T\>) ###
 Sets the detail template of the grid
 
 
@@ -31,7 +31,7 @@ The template
 
 
 
-### DetailTemplate(System.Func\<T,System.Object>)
+### DetailTemplate(`System.Func<T,System.Object>`)
 Sets the detail template of the grid using Razor syntax
 
 
