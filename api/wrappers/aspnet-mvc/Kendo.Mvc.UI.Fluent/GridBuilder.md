@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:Grid{T} component.
 
 ## Methods
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceBuilder\<T\>\>)
+### DataSource(System.Action<Kendo.Mvc.UI.Fluent.DataSourceBuilder<T>>)
 Configures the grid DataSource
 
 
@@ -59,7 +59,7 @@ Sets the row template of the grid
         <%
         })
         %>
-        
+
 
 
 #### Parameters
@@ -85,7 +85,7 @@ Sets the row template of the grid
         <%
         })
         %>
-        
+
 
 
 #### Parameters
@@ -108,7 +108,7 @@ Sets the row template of the grid using Razor syntax
         @item.Age
         </text>)
     %>
-        
+
 
 
 #### Parameters
@@ -169,7 +169,7 @@ Configures the grid resizing settings
         .Name("Grid")
         .Resizable(resizing => resizing.Columns(true))
     %>
-        
+
 
 
 #### Parameters
@@ -190,7 +190,7 @@ Configures the grid reordering settings
         .Name("Grid")
         .Reorderable(reordering => reordering.Columns(true))
     %>
-        
+
 
 
 #### Parameters
@@ -211,7 +211,7 @@ Configures the grid editing settings.
         .Name("Orders")
         .Editable(settings => settings.Enabled(true))
     %>
-        
+
 
 
 #### Parameters
@@ -239,7 +239,7 @@ Configures the toolbar of the grid.
         .Name("Orders")
         .ToolBar(commands => commands.Create())
     %>
-        
+
 
 
 #### Parameters
@@ -267,7 +267,7 @@ Binds the grid to a list of objects
         })
         .BindTo((IEnumerable<Order>)ViewData["Orders"]);
     %>
-        
+
 
 
 #### Parameters
@@ -296,7 +296,7 @@ Callback for each row.
         }
         });
     %>
-        
+
 
 
 #### Parameters
@@ -328,7 +328,7 @@ Callback for each cell.
         }
         });
     %>
-        
+
 
 
 #### Parameters
@@ -373,7 +373,7 @@ Defines the columns of the grid.
         })
         .BindTo((IEnumerable<Order>)ViewData["Orders"]);
     %>
-        
+
 
 
 #### Parameters
@@ -402,7 +402,7 @@ Allows sorting of the columns.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Sortable();
     %>
-        
+
 
 
 
@@ -425,7 +425,7 @@ Allows sorting of the columns.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn)
     %>
-        
+
 
 
 #### Parameters
@@ -446,7 +446,7 @@ Enables row selection.
         .Name("Grid")
         .Selectable()
     %>
-        
+
 
 
 
@@ -461,7 +461,7 @@ Enables row selection.
         .Name("Grid")
         .Selectable(selection => selection.Enabled(true))
     %>
-        
+
 
 
 #### Parameters
@@ -497,7 +497,7 @@ Allows paging of the data.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Pageable();
     %>
-        
+
 
 
 
@@ -522,7 +522,7 @@ Allows paging of the data.
         paging.Refresh(true)
         )
     %>
-        
+
 
 
 #### Parameters
@@ -551,7 +551,7 @@ Allows filtering of the columns.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Filterable();
     %>
-        
+
 
 
 
@@ -574,7 +574,7 @@ Allows filtering of the columns.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Filterable(filtering => filtering.Enabled(true);
     %>
-        
+
 
 
 #### Parameters
@@ -603,7 +603,7 @@ Enables/disables header column menu.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .ColumnMenu();
     %>
-        
+
 
 
 
@@ -626,7 +626,7 @@ Enables/disables header column menu.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .ColumnMenu(menu => menu.Enabled(true);
     %>
-        
+
 
 
 #### Parameters
@@ -655,7 +655,7 @@ Show scrollbar if there are many items.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Scrollable();
     %>
-        
+
 
 
 
@@ -678,7 +678,7 @@ Show scrollbar if there are many items.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Scrollable(scrolling => scrolling.Enabled(true);
     %>
-        
+
 
 
 #### Parameters
@@ -707,7 +707,7 @@ Enables keyboard navigation.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Navigatable();
     %>
-        
+
 
 
 
@@ -730,7 +730,7 @@ Enables keyboard navigation.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Navigatable(navigation => navigation.Enabled(true));
     %>
-        
+
 
 
 #### Parameters
@@ -753,7 +753,7 @@ Configures the client-side events.
         .DataBinding("onDataBinding")
         )
     %>
-        
+
 
 
 #### Parameters
@@ -782,7 +782,7 @@ Use it to configure grouping.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Groupable(grouping => grouping.Enabled(true);
     %>
-        
+
 
 
 
@@ -805,7 +805,7 @@ Allows grouping.
         .BindTo((IEnumerable<Order>)ViewData["Orders"])
         .Groupable();
     %>
-        
+
 
 
 
