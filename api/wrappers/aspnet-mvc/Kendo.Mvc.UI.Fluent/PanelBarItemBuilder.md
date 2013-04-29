@@ -11,7 +11,7 @@ Defines the fluent interface for configuring child panelbar items.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.PanelBarItemFactory>)
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.PanelBarItemFactory>`)
 Configures the child items of a PanelBarItem.
 
 
@@ -39,7 +39,7 @@ The add action.
 
 
 
-### Expanded(System.Boolean)
+### Expanded(`System.Boolean`)
 Define when the item will be expanded on intial render.
 
 

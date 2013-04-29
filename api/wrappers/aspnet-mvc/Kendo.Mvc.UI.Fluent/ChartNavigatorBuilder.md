@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:ChartNavigator{T}.
 
 ## Methods
 
-### Select(System.Nullable\<System.DateTime>,System.Nullable<System.DateTime>)
+### Select(`System.Nullable<System.DateTime>,System.Nullable<System.DateTime>`)
 Sets the selection range
 
 
@@ -35,7 +35,7 @@ The selection range end.
 
 
 
-### Series(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesFactory<T>>)
+### Series(`System.Action<Kendo.Mvc.UI.Fluent.ChartSeriesFactory<T>>`)
 Defines the navigator series. At least one series should be configured.
 
 
@@ -61,7 +61,7 @@ The add action.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the navigator visibility
 
 
@@ -88,7 +88,7 @@ The navigator visibility.
 
 
 
-### Hint(System.Action\<Kendo.Mvc.UI.Fluent.ChartNavigatorHintBuilder>)
+### Hint(`System.Action<Kendo.Mvc.UI.Fluent.ChartNavigatorHintBuilder>`)
 Defines the navigator hint.
 
 
@@ -114,7 +114,7 @@ The add action.
 
 
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder<T>>)
+### DataSource(`System.Action<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder<T>>`)
 Data Source configuration for the Navigator.
             When configured, the Navigator will filter the main StockChart data source to the selected range.
 
@@ -141,7 +141,7 @@ Use the configurator to set different data binding options.
 
 
 
-### DateField(System.String)
+### DateField(`System.String`)
 Sets the field used by the navigator date axes.
 
 
@@ -164,7 +164,7 @@ The date field.
 
 
 
-### AutoBind(System.Boolean)
+### AutoBind(`System.Boolean`)
 Enables or disables automatic binding.
 
 

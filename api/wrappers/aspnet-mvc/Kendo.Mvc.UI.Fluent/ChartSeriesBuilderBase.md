@@ -16,7 +16,7 @@ Gets or sets the series.
 
 ## Methods
 
-### Name(System.String)
+### Name(`System.String`)
 Sets the series title displayed in the legend.
 
 
@@ -37,7 +37,7 @@ The title.
 
 
 
-### GroupNameTemplate(System.String)
+### GroupNameTemplate(`System.String`)
 Sets the name template for auto-generated series when binding to grouped data.
 
 
@@ -66,7 +66,7 @@ The name template for auto-generated series when binding to grouped data.
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the series opacity.
 
 
@@ -88,7 +88,7 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the bar fill color
 
 
@@ -110,7 +110,7 @@ The bar fill color (CSS syntax).
 
 
 
-### Color(System.Func\<System.Object,System.Object>)
+### Color(`System.Func<System.Object,System.Object>`)
 Sets the function used to retrieve point color.
 
 
@@ -142,7 +142,7 @@ The JavaScript function that will be executed
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
+### Tooltip(`System.Action<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>`)
 Configure the data point tooltip for the series.
 
 
@@ -168,7 +168,7 @@ Use the configurator to set data tooltip options.
 
 
 
-### Tooltip(System.Boolean)
+### Tooltip(`System.Boolean`)
 Sets the data point tooltip visibility.
 
 
@@ -190,7 +190,7 @@ A value indicating if the data point tooltip should be displayed.
 
 
 
-### Axis(System.String)
+### Axis(`System.String`)
 Sets the axis name to use for this series.
 
 
@@ -214,7 +214,7 @@ The axis name for this series.
 
 
 
-### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder>)
+### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder>`)
 Configures the series highlight
 
 
@@ -227,7 +227,7 @@ The configuration action.
 
 
 
-### Highlight(System.Boolean)
+### Highlight(`System.Boolean`)
 Configures the highlight visibility
 
 

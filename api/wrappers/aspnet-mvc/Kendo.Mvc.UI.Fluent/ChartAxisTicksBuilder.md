@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartAxisTicks.
 
 ## Methods
 
-### Size(System.Int32)
+### Size(`System.Int32`)
 Sets the ticks size
 
 
@@ -33,7 +33,7 @@ The ticks size.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the ticks visibility
 
 

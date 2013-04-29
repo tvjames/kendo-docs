@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the AutoComplete component.
 
 ## Methods
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.AutoCompleteEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.AutoCompleteEventBuilder>`)
 Configures the client-side events.
 
 
@@ -34,7 +34,7 @@ The client events action.
 
 
 
-### Filter(System.String)
+### Filter(`System.String`)
 Use it to enable filtering of items.
 
 
@@ -49,7 +49,7 @@ Use it to enable filtering of items.
 
 
 
-### Filter(Kendo.Mvc.UI.FilterType)
+### Filter(`Kendo.Mvc.UI.FilterType`)
 Use it to enable filtering of items.
 
 
@@ -64,7 +64,7 @@ Use it to enable filtering of items.
 
 
 
-### HighlightFirst(System.Boolean)
+### HighlightFirst(`System.Boolean`)
 Use it to enable highlighting of first matched item.
 
 
@@ -79,7 +79,7 @@ Use it to enable highlighting of first matched item.
 
 
 
-### MinLength(System.Int32)
+### MinLength(`System.Int32`)
 Specifies the minimum number of characters that should be typed before the widget queries the dataSource.
 
 
@@ -94,7 +94,7 @@ Specifies the minimum number of characters that should be typed before the widge
 
 
 
-### Placeholder(System.String)
+### Placeholder(`System.String`)
 A string that appears in the textbox when it has no value.
 
 
@@ -109,7 +109,7 @@ A string that appears in the textbox when it has no value.
 
 
 
-### Separator(System.String)
+### Separator(`System.String`)
 Sets the separator for completion. Empty by default, allowing for only one completion.
 
 
@@ -124,7 +124,7 @@ Sets the separator for completion. Empty by default, allowing for only one compl
 
 
 
-### Suggest(System.Boolean)
+### Suggest(`System.Boolean`)
 Controls whether the AutoComplete should automatically auto-type the rest of text.
 
 

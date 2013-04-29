@@ -11,14 +11,14 @@ Defines the fluent interface for configuring the TimePicker component.
 
 ## Methods
 
-### Interval(System.Int32)
+### Interval(`System.Int32`)
 Sets the interval between hours.
 
 
 
 
 
-### Footer(System.String)
+### Footer(`System.String`)
 Footer template to be used for rendering the footer of the Calendar.
 
 
@@ -33,7 +33,7 @@ Footer template to be used for rendering the footer of the Calendar.
 
 
 
-### FooterId(System.String)
+### FooterId(`System.String`)
 FooterId to be used for rendering the footer of the Calendar.
 
 
@@ -48,7 +48,7 @@ FooterId to be used for rendering the footer of the Calendar.
 
 
 
-### Depth(Kendo.Mvc.UI.CalendarView)
+### Depth(`Kendo.Mvc.UI.CalendarView`)
 Specifies the navigation depth.
 
 
@@ -63,7 +63,7 @@ Specifies the navigation depth.
 
 
 
-### Start(Kendo.Mvc.UI.CalendarView)
+### Start(`Kendo.Mvc.UI.CalendarView`)
 Specifies the start view.
 
 
@@ -78,7 +78,7 @@ Specifies the start view.
 
 
 
-### MonthTemplateId(System.String)
+### MonthTemplateId(`System.String`)
 MonthTemplateId to be used for rendering the cells of the Calendar.
 
 
@@ -93,7 +93,7 @@ MonthTemplateId to be used for rendering the cells of the Calendar.
 
 
 
-### MonthTemplate(System.String)
+### MonthTemplate(`System.String`)
 Templates for the cells rendered in the "month" view.
 
 
@@ -108,7 +108,7 @@ Templates for the cells rendered in the "month" view.
 
 
 
-### MonthTemplate(System.Action\<Kendo.Mvc.UI.Fluent.MonthTemplateBuilder>)
+### MonthTemplate(`System.Action<Kendo.Mvc.UI.Fluent.MonthTemplateBuilder>`)
 Configures the content of cells of the Calendar.
 
 
@@ -123,21 +123,21 @@ Configures the content of cells of the Calendar.
 
 
 
-### Min(System.String)
+### Min(`System.String`)
 Sets the minimal date, which can be selected in DatePicker.
 
 
 
 
 
-### Max(System.String)
+### Max(`System.String`)
 Sets the maximal date, which can be selected in DatePicker.
 
 
 
 
 
-### TimeFormat(System.String)
+### TimeFormat(`System.String`)
 Specifies the format, which is used to format the values in the time drop-down list.
 
 

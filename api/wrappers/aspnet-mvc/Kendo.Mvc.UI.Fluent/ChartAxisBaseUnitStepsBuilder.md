@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartAxisBaseUnitStepsBuilder.
 
 ## Methods
 
-### Minutes(System.Int32[])
+### Minutes(`System.Int32[]`)
 The discrete BaseUnitStep values when BaseUnit is set to Minutes and
             BaseUnitStep is set to 0 (auto).
 
@@ -42,7 +42,7 @@ The discrete steps when BaseUnit is set to Minutes.
 
 
 
-### Hours(System.Int32[])
+### Hours(`System.Int32[]`)
 The discrete BaseUnitStep values when BaseUnit is set to Hours and
             BaseUnitStep is set to 0 (auto).
 
@@ -73,7 +73,7 @@ The discrete steps when BaseUnit is set to Hours.
 
 
 
-### Days(System.Int32[])
+### Days(`System.Int32[]`)
 The discrete BaseUnitStep values when BaseUnit is set to Days and
             BaseUnitStep is set to 0 (auto).
 
@@ -104,7 +104,7 @@ The discrete steps when BaseUnit is set to Days.
 
 
 
-### Weeks(System.Int32[])
+### Weeks(`System.Int32[]`)
 The discrete BaseUnitStep values when BaseUnit is set to Weeks and
             BaseUnitStep is set to 0 (auto).
 
@@ -135,7 +135,7 @@ The discrete steps when BaseUnit is set to Weeks.
 
 
 
-### Months(System.Int32[])
+### Months(`System.Int32[]`)
 The discrete BaseUnitStep values when BaseUnit is set to Months and
             BaseUnitStep is set to 0 (auto).
 
@@ -166,7 +166,7 @@ The discrete steps when BaseUnit is set to Months.
 
 
 
-### Years(System.Int32[])
+### Years(`System.Int32[]`)
 The discrete BaseUnitStep values when BaseUnit is set to Years and
             BaseUnitStep is set to 0 (auto).
 

@@ -11,7 +11,7 @@ Defines the fluent API for configuring the Kendo Slider for ASP.NET MVC tooltip
 
 ## Methods
 
-### Format(System.String)
+### Format(`System.String`)
 Gets or sets the format for displaying the value in the tooltip.
 
 
@@ -32,7 +32,7 @@ The value.
 
 
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Display tooltip while drag.
 
 
@@ -53,7 +53,7 @@ The value.
 
 
 
-### Tempalte(System.String)
+### Tempalte(`System.String`)
 Gets or sets the template for displaying the value in the tooltip.
 
 

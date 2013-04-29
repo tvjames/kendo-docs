@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the SelectionSettings.
 
 ## Methods
 
-### Dates(System.Collections.Generic.IList\<System.DateTime>)
+### Dates(`System.Collections.Generic.IList<System.DateTime>`)
 Defines list of dates. This list determines which dates to be rendered with action link.
 
 
@@ -24,7 +24,7 @@ List of DateTime objects
 
 
 
-### Action(System.Web.Routing.RouteValueDictionary)
+### Action(`System.Web.Routing.RouteValueDictionary`)
 Sets the action to which the date should navigate
 
 
@@ -37,7 +37,7 @@ The route values of the Action method.
 
 
 
-### Action(System.String,System.String,System.Object)
+### Action(`System.String,System.String,System.Object`)
 Sets the action to which the item should navigate
 
 

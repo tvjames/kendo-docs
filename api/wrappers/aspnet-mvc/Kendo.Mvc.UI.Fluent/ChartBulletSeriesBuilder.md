@@ -16,7 +16,7 @@ Gets or sets the series.
 
 ## Methods
 
-### Gap(System.Double)
+### Gap(`System.Double`)
 Set distance between category clusters.
             
             A value of 1 means that there is a total of 1 bullet width / vertical bullet height between categories.
@@ -35,7 +35,7 @@ Set distance between category clusters.
 
 
 
-### Spacing(System.Double)
+### Spacing(`System.Double`)
 Sets a value indicating the distance between bullets / categories.
 
 
@@ -57,7 +57,7 @@ Value of 1 means that the distance between bullets is equal to their width.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the bullets border.
 
 
@@ -85,7 +85,7 @@ The bullets border dash type.
 
 
 
-### Overlay(Kendo.Mvc.UI.ChartBarSeriesOverlay)
+### Overlay(`Kendo.Mvc.UI.ChartBarSeriesOverlay`)
 Sets the bullet effects overlay
 
 
@@ -107,7 +107,7 @@ The bullet effects overlay. The default is ChartBarSeriesOverlay.Glass
 
 
 
-### Name(System.String)
+### Name(`System.String`)
 Sets the series title displayed in the legend.
 
 
@@ -128,7 +128,7 @@ The title.
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the series opacity.
 
 
@@ -150,7 +150,7 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the bullet fill color
 
 
@@ -172,7 +172,7 @@ The bar bullet color (CSS syntax).
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
+### Tooltip(`System.Action<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>`)
 Configure the data point tooltip for the series.
 
 
@@ -198,7 +198,7 @@ Use the configurator to set data tooltip options.
 
 
 
-### Tooltip(System.Boolean)
+### Tooltip(`System.Boolean`)
 Sets the data point tooltip visibility.
 
 
@@ -220,7 +220,7 @@ A value indicating if the data point tooltip should be displayed.
 
 
 
-### Axis(System.String)
+### Axis(`System.String`)
 Sets the axis name to use for this series.
 
 
@@ -244,7 +244,7 @@ The axis name for this series.
 
 
 
-### Target(System.Action\<Kendo.Mvc.UI.Fluent.ChartBulletTargetBuilder>)
+### Target(`System.Action<Kendo.Mvc.UI.Fluent.ChartBulletTargetBuilder>`)
 Configure the data point tooltip for the series.
 
 

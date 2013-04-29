@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the ChartTitle.
 
 ## Methods
 
-### Text(System.String)
+### Text(`System.String`)
 Sets the title text
 
 
@@ -33,7 +33,7 @@ The text title.
 
 
 
-### Font(System.String)
+### Font(`System.String`)
 Sets the title font
 
 
@@ -55,7 +55,7 @@ The title font (CSS format).
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the title color
 
 
@@ -77,7 +77,7 @@ The title color (CSS format).
 
 
 
-### Background(System.String)
+### Background(`System.String`)
 Sets the title background color
 
 
@@ -99,7 +99,7 @@ The background color.
 
 
 
-### Position(Kendo.Mvc.UI.ChartTitlePosition)
+### Position(`Kendo.Mvc.UI.ChartTitlePosition`)
 Sets the title position
 
 
@@ -121,7 +121,7 @@ The title position.
 
 
 
-### Align(Kendo.Mvc.UI.ChartTextAlignment)
+### Align(`Kendo.Mvc.UI.ChartTextAlignment`)
 Sets the title alignment
 
 
@@ -143,7 +143,7 @@ The title alignment.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the title visibility
 
 
@@ -165,7 +165,7 @@ The title visibility.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the title margin
 
 
@@ -196,7 +196,7 @@ The title left margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the title margin
 
 
@@ -218,7 +218,7 @@ The title margin.
 
 
 
-### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the title padding
 
 
@@ -249,7 +249,7 @@ The title left padding.
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the title padding
 
 
@@ -271,7 +271,7 @@ The title padding.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the title border
 
 
@@ -299,7 +299,7 @@ The title dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the plot area border
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring toolbar save command.
 
 ## Methods
 
-### SaveText(System.String)
+### SaveText(`System.String`)
 Sets the text displayed by the "save changes" button. If not set a default value is used.
 
 
@@ -27,7 +27,7 @@ The text which should be displayed
 
 
 
-### CancelText(System.String)
+### CancelText(`System.String`)
 Sets the text displayed by the "cancel changes" button. If not set a default value is used.
 
 

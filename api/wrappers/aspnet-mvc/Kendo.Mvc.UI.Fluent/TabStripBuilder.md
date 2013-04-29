@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the TabStrip component.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.TabStripItemFactory>)
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.TabStripItemFactory>`)
 Defines the items in the tabstrip
 
 
@@ -36,7 +36,7 @@ The add action.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.TabStripEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.TabStripEventBuilder>`)
 Configures the client-side events.
 
 
@@ -59,7 +59,7 @@ The client events action.
 
 
 
-### Animation(System.Boolean)
+### Animation(`System.Boolean`)
 Configures the animation effects of the tabstrip.
 
 
@@ -79,7 +79,7 @@ Whether the component animation is enabled.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
 Configures the animation effects of the tabstrip.
 
 
@@ -99,7 +99,7 @@ The action that configures the animation.
 
 
 
-### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TabStripItem,Kendo.Mvc.SiteMapNode>)
+### BindTo(`System.String,System.Action<Kendo.Mvc.UI.TabStripItem,Kendo.Mvc.SiteMapNode>`)
 Binds the tabstrip to a sitemap
 
 
@@ -125,7 +125,7 @@ The action to configure the item.
 
 
 
-### BindTo(System.String)
+### BindTo(`System.String`)
 Binds the tabstrip to a sitemap.
 
 
@@ -146,7 +146,7 @@ The view data key.
 
 
 
-### BindToT1(System.Collections.Generic.IEnumerable\<T1>,System.Action<Kendo.Mvc.UI.TabStripItem,T1>)
+### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.TabStripItem,T1>`)
 Binds the tabstrip to a list of objects
 
 
@@ -173,7 +173,7 @@ The action executed for every data bound item.
 
 
 
-### SelectedIndex(System.Int32)
+### SelectedIndex(`System.Int32`)
 Selects the item at the specified index.
 
 
@@ -199,7 +199,7 @@ The index.
 
 
 
-### ItemAction(System.Action\<Kendo.Mvc.UI.TabStripItem>)
+### ItemAction(`System.Action<Kendo.Mvc.UI.TabStripItem>`)
 Callback for each item.
 
 
@@ -225,7 +225,7 @@ Action, which will be executed for each item.
 
 
 
-### HighlightPath(System.Boolean)
+### HighlightPath(`System.Boolean`)
 Select item depending on the current URL.
 
 
@@ -246,7 +246,7 @@ If true the item will be highlighted.
 
 
 
-### SecurityTrimming(System.Boolean)
+### SecurityTrimming(`System.Boolean`)
 Enable/disable security trimming functionality of the component.
 
 

@@ -16,7 +16,7 @@ The parent Sparkline
 
 ## Methods
 
-### BarT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>)
+### BarT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bar series.
 
 
@@ -32,7 +32,7 @@ The expression used to extract the point color from the chart model
 
 
 
-### Bar(System.String,System.String)
+### Bar(`System.String,System.String`)
 Defines bound bar series.
 
 
@@ -48,7 +48,7 @@ The name of the color member.
 
 
 
-### Bar(System.Type,System.String,System.String)
+### Bar(`System.Type,System.String,System.String`)
 Defines bound bar series.
 
 
@@ -67,7 +67,7 @@ The name of the color member.
 
 
 
-### Bar(System.Collections.IEnumerable)
+### Bar(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
 
 
@@ -80,7 +80,7 @@ The data to bind to.
 
 
 
-### ColumnT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>)
+### ColumnT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound column series.
 
 
@@ -96,7 +96,7 @@ The expression used to extract the point color from the chart model
 
 
 
-### Column(System.String,System.String)
+### Column(`System.String,System.String`)
 Defines bound bar series.
 
 
@@ -112,7 +112,7 @@ The name of the color member.
 
 
 
-### Column(System.Type,System.String,System.String)
+### Column(`System.Type,System.String,System.String`)
 Defines bound bar series.
 
 
@@ -131,7 +131,7 @@ The name of the color member.
 
 
 
-### Column(System.Collections.IEnumerable)
+### Column(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
 
 
@@ -144,7 +144,7 @@ The data to bind to
 
 
 
-### LineT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
+### LineT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound line series.
 
 
@@ -157,7 +157,7 @@ The expression used to extract the series value from the chart model
 
 
 
-### Line(System.String)
+### Line(`System.String`)
 Defines bound line series.
 
 
@@ -170,7 +170,7 @@ The name of the value member.
 
 
 
-### Line(System.Type,System.String)
+### Line(`System.Type,System.String`)
 Defines bound line series.
 
 
@@ -186,7 +186,7 @@ The name of the value member.
 
 
 
-### Line(System.Collections.IEnumerable)
+### Line(`System.Collections.IEnumerable`)
 Defines line series bound to inline data.
 
 
@@ -199,7 +199,7 @@ The data to bind to
 
 
 
-### AreaT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
+### AreaT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound area series.
 
 
@@ -212,7 +212,7 @@ The expression used to extract the series value from the chart model.
 
 
 
-### Area(System.String)
+### Area(`System.String`)
 Defines bound area series.
 
 
@@ -225,7 +225,7 @@ The name of the value member.
 
 
 
-### Area(System.Type,System.String)
+### Area(`System.Type,System.String`)
 Defines bound area series.
 
 
@@ -241,7 +241,7 @@ The name of the value member.
 
 
 
-### Area(System.Collections.IEnumerable)
+### Area(`System.Collections.IEnumerable`)
 Defines area series bound to inline data.
 
 
@@ -254,28 +254,28 @@ The data to bind to
 
 
 
-### PieT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>)
+### PieT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
 Defines bound pie series.
 
 
 
 
 
-### Pie(System.String,System.String,System.String,System.String,System.String)
+### Pie(`System.String,System.String,System.String,System.String,System.String`)
 Defines bound pie series.
 
 
 
 
 
-### Pie(System.Type,System.String,System.String,System.String,System.String,System.String)
+### Pie(`System.Type,System.String,System.String,System.String,System.String,System.String`)
 Defines bound pie series.
 
 
 
 
 
-### Pie(System.Collections.IEnumerable)
+### Pie(`System.Collections.IEnumerable`)
 Defines pie series bound to inline data.
 
 
@@ -288,7 +288,7 @@ The data to bind to
 
 
 
-### BulletT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>)
+### BulletT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bullet series.
 
 
@@ -307,7 +307,7 @@ The expression used to extract the point color from the chart model
 
 
 
-### Bullet(System.String,System.String,System.String)
+### Bullet(`System.String,System.String,System.String`)
 Defines bound bar series.
 
 
@@ -326,7 +326,7 @@ The name of the color member.
 
 
 
-### Bullet(System.Type,System.String,System.String,System.String)
+### Bullet(`System.Type,System.String,System.String,System.String`)
 Defines bound bullet series.
 
 
@@ -345,7 +345,7 @@ The name of the color member.
 
 
 
-### Bullet(System.Collections.IEnumerable)
+### Bullet(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
 
 

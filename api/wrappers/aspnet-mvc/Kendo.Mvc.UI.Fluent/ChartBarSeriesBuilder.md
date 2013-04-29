@@ -11,7 +11,7 @@ Defines the fluent interface for configuring bar series.
 
 ## Methods
 
-### Stack(System.Boolean)
+### Stack(`System.Boolean`)
 Sets a value indicating if the bars should be stacked.
 
 
@@ -32,7 +32,7 @@ A value indicating if the bars should be stacked.
 
 
 
-### Stack(System.String)
+### Stack(`System.String`)
 Sets the name of the stack that this series belongs to. Each unique name creates a new stack.
 
 
@@ -53,7 +53,7 @@ The name of the stack.
 
 
 
-### Aggregate(Kendo.Mvc.UI.ChartSeriesAggregate)
+### Aggregate(`Kendo.Mvc.UI.ChartSeriesAggregate`)
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
@@ -75,7 +75,7 @@ Aggregate function name.
 
 
 
-### Gap(System.Double)
+### Gap(`System.Double`)
 Set distance between category clusters.
             
             A value of 1 means that there is a total of 1 column width / bar height between categories.
@@ -94,7 +94,7 @@ Set distance between category clusters.
 
 
 
-### Spacing(System.Double)
+### Spacing(`System.Double`)
 Sets a value indicating the distance between bars / categories.
 
 
@@ -116,7 +116,7 @@ Value of 1 means that the distance between bars is equal to their width.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartBarLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartBarLabelsBuilder>`)
 Configures the bar chart labels.
 
 
@@ -143,7 +143,7 @@ The configuration action.
 
 
 
-### Labels(System.Boolean)
+### Labels(`System.Boolean`)
 Sets the visibility of bar chart labels.
 
 
@@ -167,7 +167,7 @@ The visibility. The default value is false.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the bars border
 
 
@@ -195,7 +195,7 @@ The bars border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the bar border
 
 
@@ -208,7 +208,7 @@ The border configuration action
 
 
 
-### Overlay(Kendo.Mvc.UI.ChartBarSeriesOverlay)
+### Overlay(`Kendo.Mvc.UI.ChartBarSeriesOverlay`)
 Sets the bar effects overlay
 
 
@@ -230,7 +230,7 @@ The bar effects overlay. The default is ChartBarSeriesOverlay.Glass
 
 
 
-### NegativeColor(System.String)
+### NegativeColor(`System.String`)
 Sets the bar color for negative values
 
 

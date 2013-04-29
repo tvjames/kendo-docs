@@ -11,7 +11,7 @@ Defines the fluent interface for configuring Navigatable
 
 ## Methods
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Enables or disables keyboard navigation.
 
 

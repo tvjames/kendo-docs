@@ -11,7 +11,7 @@ Defines the fluent interface for configuring scatter series.
 
 ## Methods
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>`)
 Configures the scatter chart labels.
 
 
@@ -38,7 +38,7 @@ The configuration action.
 
 
 
-### Labels(System.Boolean)
+### Labels(`System.Boolean`)
 Sets the visibility of scatter chart labels.
 
 
@@ -62,7 +62,7 @@ The visibility. The default value is false.
 
 
 
-### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>)
+### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
 Configures the scatter chart markers.
 
 
@@ -88,7 +88,7 @@ The configuration action.
 
 
 
-### Markers(System.Boolean)
+### Markers(`System.Boolean`)
 Sets the visibility of scatter chart markers.
 
 
@@ -112,7 +112,7 @@ The visibility. The default value is true.
 
 
 
-### XAxis(System.String)
+### XAxis(`System.String`)
 Sets the axis name to use for this series.
 
 
@@ -135,7 +135,7 @@ The axis name for this series.
 
 
 
-### YAxis(System.String)
+### YAxis(`System.String`)
 Sets the axis name to use for this series.
 
 
@@ -158,7 +158,7 @@ The axis name for this series.
 
 
 
-### Axis(System.String)
+### Axis(`System.String`)
 Not applicable to scatter series
 
 

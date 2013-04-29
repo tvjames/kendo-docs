@@ -11,7 +11,7 @@ Provides extension methods to process DataSourceRequest.
 
 ## Methods
 
-### Sort(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.SortDescriptor>)
+### Sort(`System.Linq.IQueryable,System.Collections.Generic.IEnumerable<Kendo.Mvc.SortDescriptor>`)
 Sorts the elements of a sequence using the specified sort descriptors.
 
 
@@ -30,7 +30,7 @@ The sort descriptors used for sorting.
 An IQueryable whose elements are sorted according to a .
 
 
-### Page(System.Linq.IQueryable,System.Int32,System.Int32)
+### Page(`System.Linq.IQueryable,System.Int32,System.Int32`)
 Pages through the elements of a sequence until the specified
              using .
 
@@ -53,7 +53,7 @@ Size of the page.
 An IQueryable whose elements are at the specified .
 
 
-### Select(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
+### Select(`System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression`)
 Projects each element of a sequence into a new form.
 
 
@@ -73,7 +73,7 @@ An IQueryable whose elements are the result of invoking a
             projection selector on each element of .
 
 
-### GroupBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
+### GroupBy(`System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression`)
 Groups the elements of a sequence according to a specified key selector function.
 
 
@@ -93,7 +93,7 @@ An IQueryable with !:IGrouping{TKey,TElement} items,
             whose elements contains a sequence of objects and a key.
 
 
-### OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
+### OrderBy(`System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression`)
 Sorts the elements of a sequence in ascending order according to a key.
 
 
@@ -112,7 +112,7 @@ A function to extract a key from an element.
 An IQueryable whose elements are sorted according to a key.
 
 
-### OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
+### OrderByDescending(`System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression`)
 Sorts the elements of a sequence in descending order according to a key.
 
 
@@ -131,7 +131,7 @@ A function to extract a key from an element.
 An IQueryable whose elements are sorted in descending order according to a key.
 
 
-### OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression,System.Nullable\<System.ComponentModel.ListSortDirection>)
+### OrderBy(`System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression,System.Nullable<System.ComponentModel.ListSortDirection>`)
 Calls M:Kendo.Mvc.Extensions.QueryableExtensions.OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
             or M:Kendo.Mvc.Extensions.QueryableExtensions.OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression) depending on the .
 
@@ -154,7 +154,7 @@ The sort direction.
 An IQueryable whose elements are sorted according to a key.
 
 
-### GroupBy(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.GroupDescriptor>)
+### GroupBy(`System.Linq.IQueryable,System.Collections.Generic.IEnumerable<Kendo.Mvc.GroupDescriptor>`)
 Groups the elements of a sequence according to a specified .
 
 
@@ -174,7 +174,7 @@ An IQueryable with IGroup items,
             whose elements contains a sequence of objects and a key.
 
 
-### Aggregate(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.AggregateFunction>)
+### Aggregate(`System.Linq.IQueryable,System.Collections.Generic.IEnumerable<Kendo.Mvc.AggregateFunction>`)
 Calculates the results of given aggregates functions on a sequence of elements.
 
 
@@ -194,7 +194,7 @@ The aggregate functions.
 Collection of AggregateResults calculated for each function.
 
 
-### Where(System.Linq.IQueryable,System.Linq.Expressions.Expression)
+### Where(`System.Linq.IQueryable,System.Linq.Expressions.Expression`)
 Filters a sequence of values based on a predicate.
 
 
@@ -214,7 +214,7 @@ An IQueryable that contains elements from the input sequence
             that satisfy the condition specified by .
 
 
-### Where(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.IFilterDescriptor>)
+### Where(`System.Linq.IQueryable,System.Collections.Generic.IEnumerable<Kendo.Mvc.IFilterDescriptor>`)
 Filters a sequence of values based on a collection of IFilterDescriptor.
 
 
@@ -234,7 +234,7 @@ An IQueryable that contains elements from the input sequence
             that satisfy the conditions specified by each filter descriptor in .
 
 
-### Take(System.Linq.IQueryable,System.Int32)
+### Take(`System.Linq.IQueryable,System.Int32`)
 Returns a specified number of contiguous elements from the start of a sequence.
 
 
@@ -254,7 +254,7 @@ An IQueryable that contains the specified number
             of elements from the start of .
 
 
-### Skip(System.Linq.IQueryable,System.Int32)
+### Skip(`System.Linq.IQueryable,System.Int32`)
 Bypasses a specified number of elements in a sequence
             and then returns the remaining elements.
 
@@ -275,7 +275,7 @@ An IQueryable that contains elements that occur
             after the specified index in the input sequence.
 
 
-### Count(System.Linq.IQueryable)
+### Count(`System.Linq.IQueryable`)
 Returns the number of elements in a sequence.
 
 
@@ -291,7 +291,7 @@ The IQueryable that contains the elements to be counted.
 The number of elements in the input sequence.
 
 
-### ElementAt(System.Linq.IQueryable,System.Int32)
+### ElementAt(`System.Linq.IQueryable,System.Int32`)
 Returns the element at a specified index in a sequence.
 
 

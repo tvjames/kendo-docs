@@ -11,7 +11,7 @@ Defines the fluent interface for configuring GaugeScaleTicks.
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the ticks color
 
 
@@ -33,7 +33,7 @@ The ticks color (CSS format).
 
 
 
-### Width(System.Int32)
+### Width(`System.Int32`)
 Sets the ticks width
 
 
@@ -55,7 +55,7 @@ The ticks width.
 
 
 
-### Size(System.Int32)
+### Size(`System.Int32`)
 Sets the ticks size
 
 
@@ -77,7 +77,7 @@ The ticks size.
 
 
 
-### DashType(Kendo.Mvc.UI.ChartDashType)
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
 Sets the ticks dashType
 
 
@@ -99,7 +99,7 @@ The ticks dashType.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the ticks visibility
 
 

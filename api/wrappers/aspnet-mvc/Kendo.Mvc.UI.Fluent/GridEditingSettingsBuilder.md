@@ -11,7 +11,7 @@ Defines the fluent interface for configuring grid editing.
 
 ## Methods
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Enables or disables grid editing.
 
 
@@ -26,7 +26,7 @@ Enables or disables grid editing.
 
 
 
-### TemplateName(System.String)
+### TemplateName(`System.String`)
 Specify an editor template which to be used for InForm or PopUp modes
 
 
@@ -39,7 +39,7 @@ name of the editor template
 
 
 
-### AdditionalViewData(System.Object)
+### AdditionalViewData(`System.Object`)
 Provides additional view data in the editor template.
 
 
@@ -60,7 +60,7 @@ An anonymous object which contains the additional data
 
 
 
-### DisplayDeleteConfirmation(System.Boolean)
+### DisplayDeleteConfirmation(`System.Boolean`)
 Enables or disables delete confirmation.
 
 
@@ -75,7 +75,7 @@ Enables or disables delete confirmation.
 
 
 
-### CreateAt(Kendo.Mvc.UI.GridInsertRowPosition)
+### CreateAt(`Kendo.Mvc.UI.GridInsertRowPosition`)
 Sets insert row position.
 
 

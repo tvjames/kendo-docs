@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:ListView{T}.
 
 ## Methods
 
-### BindTo(System.Collections.Generic.IEnumerable\<T>)
+### BindTo(`System.Collections.Generic.IEnumerable<T>`)
 Binds the ListView to a list of objects
 
 
@@ -32,7 +32,7 @@ The data source.
 
 
 
-### BindTo(System.Collections.IEnumerable)
+### BindTo(`System.Collections.IEnumerable`)
 Binds the ListView to a list of objects
 
 
@@ -53,7 +53,7 @@ The data source.
 
 
 
-### ClientTemplateId(System.String)
+### ClientTemplateId(`System.String`)
 Specifies ListView item template.
 
 
@@ -90,7 +90,7 @@ Allows paging of the data.
 
 
 
-### Pageable(System.Action\<Kendo.Mvc.UI.Fluent.PageableBuilder>)
+### Pageable(`System.Action<Kendo.Mvc.UI.Fluent.PageableBuilder>`)
 Allows paging of the data.
 
 
@@ -143,7 +143,7 @@ Enables single item selection.
 
 
 
-### Selectable(System.Action\<Kendo.Mvc.UI.Fluent.ListViewSelectionSettingsBuilder>)
+### Selectable(`System.Action<Kendo.Mvc.UI.Fluent.ListViewSelectionSettingsBuilder>`)
 Enables item selection.
 
 
@@ -167,7 +167,7 @@ Use builder to define the selection mode.
 
 
 
-### AutoBind(System.Boolean)
+### AutoBind(`System.Boolean`)
 Specifies if the ListView should be automatically bound on initial load.
             This is only possible if AJAX binding is used, and widget is not initialy populated on the server.
 
@@ -181,7 +181,7 @@ If true ListView will be automatically data bound, otherwise false
 
 
 
-### TagName(System.String)
+### TagName(`System.String`)
 Specifies ListView wrapper element tag name.
 
 
@@ -196,7 +196,7 @@ Specifies ListView wrapper element tag name.
 
 
 
-### Editable(System.Action\<Kendo.Mvc.UI.Fluent.ListViewEditingSettingsBuilder<T>>)
+### Editable(`System.Action<Kendo.Mvc.UI.Fluent.ListViewEditingSettingsBuilder<T>>`)
 Configures the ListView editing settings.
 
 
@@ -226,7 +226,7 @@ Enables ListView editing.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.ListViewEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.ListViewEventBuilder>`)
 Configures the client-side events.
 
 

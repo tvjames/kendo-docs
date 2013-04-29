@@ -11,7 +11,7 @@ Defines the fluent interface for configuring child TreeView items.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory>)
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.TreeViewItemFactory>`)
 Configures the child items of a TreeViewItem.
 
 
@@ -39,7 +39,7 @@ The add action.
 
 
 
-### Id(System.String)
+### Id(`System.String`)
 Sets the id of the item.
 
 
@@ -60,7 +60,7 @@ The id.
 
 
 
-### Expanded(System.Boolean)
+### Expanded(`System.Boolean`)
 Define when the item will be expanded on intial render.
 
 
@@ -89,7 +89,7 @@ If true the item will be expanded.
 
 
 
-### Checked(System.Boolean)
+### Checked(`System.Boolean`)
 Specify whether the item should be initially checked.
 
 
@@ -114,7 +114,7 @@ If true, the item will be checked.
 
 
 
-### HasChildren(System.Boolean)
+### HasChildren(`System.Boolean`)
 Sets the expand mode of the treeview item.
 
 

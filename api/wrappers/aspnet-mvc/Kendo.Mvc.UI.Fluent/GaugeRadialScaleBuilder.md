@@ -16,7 +16,7 @@ The parent Guage
 
 ## Methods
 
-### EndAngle(System.Double)
+### EndAngle(`System.Double`)
 Sets the end angle of the gauge
 
 
@@ -39,7 +39,7 @@ The end angle.
 
 
 
-### StartAngle(System.Double)
+### StartAngle(`System.Double`)
 Sets the start angle of the gauge
 
 
@@ -62,7 +62,7 @@ The start Angle.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialScaleLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.GaugeRadialScaleLabelsBuilder>`)
 Configures the labels.
 
 

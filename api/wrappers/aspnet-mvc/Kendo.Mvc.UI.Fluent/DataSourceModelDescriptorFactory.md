@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the DataSource Model definition.
 
 ## Methods
 
-### IdT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
+### IdT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Specify the member used to identify an unique Model instance.
 
 
@@ -24,7 +24,7 @@ Member access expression which describes the member
 
 
 
-### Id(System.String)
+### Id(`System.String`)
 Specify the member used to identify an unique Model instance.
 
 
@@ -37,7 +37,7 @@ The member name.
 
 
 
-### FieldT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
+### FieldT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Describes a Model field
 
 
@@ -50,7 +50,7 @@ Member access expression which describes the field
 
 
 
-### Field(System.String,System.Type)
+### Field(`System.String,System.Type`)
 Describes a Model field
 
 
@@ -66,7 +66,7 @@ Field type
 
 
 
-### FieldT1(System.String)
+### FieldT1(`System.String`)
 Describes a Model field
 
 

@@ -18,7 +18,7 @@ Defines a numeric value axis.
 
 
 
-### Numeric(System.String)
+### Numeric(`System.String`)
 Defines a numeric value axis.
 
 
@@ -32,7 +32,7 @@ Defines a date value axis.
 
 
 
-### Date(System.String)
+### Date(`System.String`)
 Defines a date value axis.
 
 

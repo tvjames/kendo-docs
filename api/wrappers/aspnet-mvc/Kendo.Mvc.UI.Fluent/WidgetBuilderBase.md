@@ -26,7 +26,7 @@ Returns the internal view component.
 
 
 
-### Name(System.String)
+### Name(`System.String`)
 Sets the name of the component.
 
 
@@ -52,7 +52,7 @@ Suppress initialization script rendering. Note that this options should be used 
 
 
 
-### HtmlAttributes(System.Object)
+### HtmlAttributes(`System.Object`)
 Sets the HTML attributes.
 
 
@@ -68,7 +68,7 @@ The HTML attributes.
 
 
 
-### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
+### HtmlAttributes(`System.Collections.Generic.IDictionary<System.String,System.Object>`)
 Sets the HTML attributes.
 
 

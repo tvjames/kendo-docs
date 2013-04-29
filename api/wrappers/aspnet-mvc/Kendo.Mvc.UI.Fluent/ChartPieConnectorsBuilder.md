@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the chart connectors.
 
 ## Methods
 
-### Width(System.Int32)
+### Width(`System.Int32`)
 Sets the connectors width
 
 
@@ -38,7 +38,7 @@ The connectors width.
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the connectors color
 
 
@@ -65,7 +65,7 @@ The connectors color.
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the connectors padding
 
 

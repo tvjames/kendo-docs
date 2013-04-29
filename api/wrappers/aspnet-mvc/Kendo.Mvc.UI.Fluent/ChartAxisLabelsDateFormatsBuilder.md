@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartLine.
 
 ## Methods
 
-### Hours(System.String)
+### Hours(`System.String`)
 Sets the date format when the base date unit is Hours
 
 
@@ -39,7 +39,7 @@ The date format.
 
 
 
-### Days(System.String)
+### Days(`System.String`)
 Sets the date format when the base date unit is Days
 
 
@@ -67,7 +67,7 @@ The date format.
 
 
 
-### Minutes(System.String)
+### Minutes(`System.String`)
 Sets the date format when the base date unit is Minutes
 
 
@@ -95,7 +95,7 @@ The date format.
 
 
 
-### Months(System.String)
+### Months(`System.String`)
 Sets the date format when the base date unit is Months
 
 
@@ -123,7 +123,7 @@ The date format.
 
 
 
-### Weeks(System.String)
+### Weeks(`System.String`)
 Sets the date format when the base date unit is Months
 
 
@@ -151,7 +151,7 @@ The date format.
 
 
 
-### Years(System.String)
+### Years(`System.String`)
 Sets the date format when the base date unit is Years
 
 

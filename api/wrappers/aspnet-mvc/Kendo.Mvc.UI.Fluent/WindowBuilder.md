@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the Window component.
 
 ## Methods
 
-### Title(System.Boolean)
+### Title(`System.Boolean`)
 Allows title to be shown / hidden
 
 
@@ -24,14 +24,14 @@ Whether the window title will be visible
 
 
 
-### Title(System.String)
+### Title(`System.String`)
 Sets title, which appears in the header of the window.
 
 
 
 
 
-### Content(System.Action)
+### Content(`System.Action`)
 Sets the HTML content which the window should display.
 
 
@@ -57,7 +57,7 @@ The action which renders the content.
 
 
 
-### Content(System.Func\<System.Object,System.Object>)
+### Content(`System.Func<System.Object,System.Object>`)
 Sets the HTML content which the window should display
 
 
@@ -80,7 +80,7 @@ The Razor inline template
 
 
 
-### Content(System.String)
+### Content(`System.String`)
 Sets the HTML content which the item should display as a string.
 
 
@@ -93,7 +93,7 @@ The action which renders the content.
 
 
 
-### LoadContentFrom(System.Web.Routing.RouteValueDictionary)
+### LoadContentFrom(`System.Web.Routing.RouteValueDictionary`)
 Sets the Url, which will be requested to return the content.
 
 
@@ -114,7 +114,7 @@ The route values of the Action method.
 
 
 
-### LoadContentFrom(System.String,System.String)
+### LoadContentFrom(`System.String,System.String`)
 Sets the Url, which will be requested to return the content.
 
 
@@ -138,7 +138,7 @@ The controller name.
 
 
 
-### LoadContentFrom(System.String,System.String,System.Object)
+### LoadContentFrom(`System.String,System.String,System.Object`)
 Sets the Url, which will be requested to return the content.
 
 
@@ -165,7 +165,7 @@ Route values.
 
 
 
-### LoadContentFrom(System.String)
+### LoadContentFrom(`System.String`)
 Sets the Url, which will be requested to return the content.
 
 
@@ -186,7 +186,7 @@ The url.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.WindowEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.WindowEventBuilder>`)
 Configures the client-side events.
 
 
@@ -224,7 +224,7 @@ Enables windows resizing.
 
 
 
-### Resizable(System.Action\<Kendo.Mvc.UI.Fluent.WindowResizingSettingsBuilder>)
+### Resizable(`System.Action<Kendo.Mvc.UI.Fluent.WindowResizingSettingsBuilder>`)
 Configures the resizing ability of the window.
 
 
@@ -247,7 +247,7 @@ Resizing settings action.
 
 
 
-### Actions(System.Action\<Kendo.Mvc.UI.Fluent.WindowActionsBuilder>)
+### Actions(`System.Action<Kendo.Mvc.UI.Fluent.WindowActionsBuilder>`)
 Configures the window buttons.
 
 
@@ -270,21 +270,21 @@ The buttons configuration action.
 
 
 
-### Width(System.Int32)
+### Width(`System.Int32`)
 Sets the width of the window.
 
 
 
 
 
-### Height(System.Int32)
+### Height(`System.Int32`)
 Sets the height of the window.
 
 
 
 
 
-### Position(System.Action\<Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder>)
+### Position(`System.Action<Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder>`)
 Configures the position of the window.
 
 
@@ -307,21 +307,21 @@ Position settings action.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets whether the window should be rendered visible.
 
 
 
 
 
-### Scrollable(System.Boolean)
+### Scrollable(`System.Boolean`)
 Sets whether the window should have scrollbars.
 
 
 
 
 
-### Animation(System.Boolean)
+### Animation(`System.Boolean`)
 Configures the animation effects of the window.
 
 
@@ -341,7 +341,7 @@ Whether the component animation is enabled.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
 Configures the animation effects of the panelbar.
 
 
@@ -361,7 +361,7 @@ The action that configures the animation.
 
 
 
-### Modal(System.Boolean)
+### Modal(`System.Boolean`)
 Sets whether the window should be modal or not.
 
 
@@ -375,7 +375,7 @@ Sets whether the window can be moved.
 
 
 
-### Draggable(System.Boolean)
+### Draggable(`System.Boolean`)
 Sets whether the window can be moved.
 
 
@@ -389,14 +389,14 @@ Sets whether the window is pinned.
 
 
 
-### Pinned(System.Boolean)
+### Pinned(`System.Boolean`)
 Sets whether the window is pinned.
 
 
 
 
 
-### Iframe(System.Boolean)
+### Iframe(`System.Boolean`)
 Explicitly specifies whether the loaded window content will be rendered as an iframe or in-line
 
 

@@ -11,42 +11,42 @@ Defines the fluent interface for configuring the !:NumericTextBox{T} component.
 
 ## Methods
 
-### Value(System.Nullable\<T>)
+### Value(`System.Nullable<T>`)
 Sets the initial value of the NumericTextBox.
 
 
 
 
 
-### Step(T)
+### Step(`T`)
 Sets the step, used ti increment/decrement the value of the textbox.
 
 
 
 
 
-### Min(System.Nullable\<T>)
+### Min(`System.Nullable<T>`)
 Sets the minimal possible value allowed to the user.
 
 
 
 
 
-### Max(System.Nullable\<T>)
+### Max(`System.Nullable<T>`)
 Sets the maximal possible value allowed to the user.
 
 
 
 
 
-### Placeholder(System.String)
+### Placeholder(`System.String`)
 Sets the text which will be displayed if the textbox is empty.
 
 
 
 
 
-### Spinners(System.Boolean)
+### Spinners(`System.Boolean`)
 Enables or disables the spin buttons.
 
 
@@ -62,7 +62,7 @@ Enables or disables the spin buttons.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.NumericTextBoxEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.NumericTextBoxEventBuilder>`)
 Configures the client-side events.
 
 
@@ -85,7 +85,7 @@ The client events action.
 
 
 
-### Enable(System.Boolean)
+### Enable(`System.Boolean`)
 Enables or disables the textbox.
 
 
@@ -101,7 +101,7 @@ Enables or disables the textbox.
 
 
 
-### Format(System.String)
+### Format(`System.String`)
 Stes the format of the NumericTextBox.
 
 
@@ -116,7 +116,7 @@ Stes the format of the NumericTextBox.
 
 
 
-### Culture(System.String)
+### Culture(`System.String`)
 Specifies the culture info used by the NumericTextBox widget.
 
 
@@ -131,7 +131,7 @@ Specifies the culture info used by the NumericTextBox widget.
 
 
 
-### Decimals(System.Int32)
+### Decimals(`System.Int32`)
 Specifies the number precision. If not set precision defined by current culture is used.
 
 
@@ -146,14 +146,14 @@ Specifies the number precision. If not set precision defined by current culture 
 
 
 
-### IncreaseButtonTitle(System.String)
+### IncreaseButtonTitle(`System.String`)
 Sets the title of the NumericTextBox increase button.
 
 
 
 
 
-### DecreaseButtonTitle(System.String)
+### DecreaseButtonTitle(`System.String`)
 Sets the title of the NumericTextBox decrease button.
 
 

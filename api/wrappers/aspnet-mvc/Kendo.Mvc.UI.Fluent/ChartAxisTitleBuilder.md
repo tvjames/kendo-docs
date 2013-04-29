@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the ChartAxisTitle.
 
 ## Methods
 
-### Text(System.String)
+### Text(`System.String`)
 Sets the axis title text.
 
 
@@ -37,7 +37,7 @@ The text of the axis title.
 
 
 
-### Font(System.String)
+### Font(`System.String`)
 Sets the axis title font.
 
 
@@ -63,7 +63,7 @@ The axis title font (CSS format).
 
 
 
-### Background(System.String)
+### Background(`System.String`)
 Sets the axis title background color.
 
 
@@ -89,7 +89,7 @@ The axis background color.
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the axis title text color.
 
 
@@ -115,7 +115,7 @@ The axis text color.
 
 
 
-### Position(Kendo.Mvc.UI.ChartAxisTitlePosition)
+### Position(`Kendo.Mvc.UI.ChartAxisTitlePosition`)
 Sets the axis title position.
 
 
@@ -141,7 +141,7 @@ The axis title position.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the axis title margin.
 
 
@@ -176,7 +176,7 @@ The axis title left margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the axis title margin.
 
 
@@ -202,7 +202,7 @@ The axis title margin.
 
 
 
-### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the axis title padding.
 
 
@@ -237,7 +237,7 @@ The axis title left padding.
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the axis title padding
 
 
@@ -263,7 +263,7 @@ The axis title padding.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the axis title border
 
 
@@ -295,7 +295,7 @@ The axis title dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the title border
 
 
@@ -308,7 +308,7 @@ The border configuration action
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the axis title opacity.
 
 

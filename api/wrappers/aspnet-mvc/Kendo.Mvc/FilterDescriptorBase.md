@@ -12,7 +12,7 @@ Base class for all IFilterDescriptor used for
 
 ## Methods
 
-### CreateFilterExpression(System.Linq.Expressions.Expression)
+### CreateFilterExpression(`System.Linq.Expressions.Expression`)
 Creates a filter expression by delegating its creation to
             M:Kendo.Mvc.FilterDescriptorBase.CreateFilterExpression(System.Linq.Expressions.Expression), if
              is ParameterExpression, otherwise throws ArgumentException
@@ -30,7 +30,7 @@ The instance expression, which will be used for filtering.
 A predicate filter expression.
 
 
-### CreateFilterExpression(System.Linq.Expressions.ParameterExpression)
+### CreateFilterExpression(`System.Linq.Expressions.ParameterExpression`)
 Creates a predicate filter expression used for collection filtering.
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:Sparkline{T} component.
 
 ## Methods
 
-### Data(System.Collections.IEnumerable)
+### Data(`System.Collections.IEnumerable`)
 Sets the Sparkline data.
 
 
@@ -32,7 +32,7 @@ The data for the default Sparkline series.
 
 
 
-### Data(System.Double)
+### Data(`System.Double`)
 Sets the Sparkline data.
 
 
@@ -53,7 +53,7 @@ The data for the default Sparkline series.
 
 
 
-### Type(Kendo.Mvc.UI.SparklineType)
+### Type(`Kendo.Mvc.UI.SparklineType`)
 Sets the type of the sparkline.
 
 
@@ -74,7 +74,7 @@ The Sparkline type.
 
 
 
-### PointWidth(System.Double)
+### PointWidth(`System.Double`)
 Sets the per-point width of the sparkline.
 
 
@@ -95,7 +95,7 @@ The Sparkline per-point width.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.ChartEventBuilder>`)
 Configures the client-side events.
 
 
@@ -118,7 +118,7 @@ The client events configuration action.
 
 
 
-### Theme(System.String)
+### Theme(`System.String`)
 Sets the theme of the chart.
 
 
@@ -139,7 +139,7 @@ The Sparkline theme.
 
 
 
-### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder>)
+### ChartArea(`System.Action<Kendo.Mvc.UI.Fluent.ChartAreaBuilder>`)
 Sets the Chart area.
 
 
@@ -160,7 +160,7 @@ The Chart area.
 
 
 
-### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder>)
+### PlotArea(`System.Action<Kendo.Mvc.UI.Fluent.PlotAreaBuilder>`)
 Sets the Plot area.
 
 
@@ -181,7 +181,7 @@ The Plot area.
 
 
 
-### Series(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesFactory<T>>)
+### Series(`System.Action<Kendo.Mvc.UI.Fluent.SparklineSeriesFactory<T>>`)
 Defines the chart series.
 
 
@@ -205,7 +205,7 @@ The add action.
 
 
 
-### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesDefaultsBuilder<T>>)
+### SeriesDefaults(`System.Action<Kendo.Mvc.UI.Fluent.SparklineSeriesDefaultsBuilder<T>>`)
 Defines the options for all chart series of the specified type.
 
 
@@ -226,7 +226,7 @@ The configurator.
 
 
 
-### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder<T>>)
+### AxisDefaults(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder<T>>`)
 Defines the options for all chart axes of the specified type.
 
 
@@ -247,7 +247,7 @@ The configurator.
 
 
 
-### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder<T>>)
+### CategoryAxis(`System.Action<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder<T>>`)
 Configures the category axis
 
 
@@ -270,7 +270,7 @@ The configurator
 
 
 
-### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory<T>>)
+### ValueAxis(`System.Action<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory<T>>`)
 Defines value axis options
 
 
@@ -291,7 +291,7 @@ The configurator
 
 
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder<T>>)
+### DataSource(`System.Action<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder<T>>`)
 Data Source configuration
 
 
@@ -315,7 +315,7 @@ Use the configurator to set different data binding options.
 
 
 
-### AutoBind(System.Boolean)
+### AutoBind(`System.Boolean`)
 Enables or disables automatic binding.
 
 
@@ -342,7 +342,7 @@ Gets or sets a value indicating if the chart
 
 
 
-### SeriesColors(System.Collections.Generic.IEnumerable\<System.String>)
+### SeriesColors(`System.Collections.Generic.IEnumerable<System.String>`)
 Sets the series colors.
 
 
@@ -363,7 +363,7 @@ A list of the series colors.
 
 
 
-### SeriesColors(System.String[])
+### SeriesColors(`System.String[]`)
 Sets the series colors.
 
 
@@ -384,7 +384,7 @@ The series colors.
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
+### Tooltip(`System.Action<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>`)
 Use it to configure the data point tooltip.
 
 
@@ -408,7 +408,7 @@ Use the configurator to set data tooltip options.
 
 
 
-### Tooltip(System.Boolean)
+### Tooltip(`System.Boolean`)
 Sets the data point tooltip visibility.
 
 
@@ -430,7 +430,7 @@ A value indicating if the data point tooltip should be displayed.
 
 
 
-### Transitions(System.Boolean)
+### Transitions(`System.Boolean`)
 Enables or disabled animated transitions on initial load and refresh.
 
 

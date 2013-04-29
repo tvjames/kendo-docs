@@ -16,7 +16,7 @@ Gets or sets the series.
 
 ## Methods
 
-### Name(System.String)
+### Name(`System.String`)
 Sets the name of the series.
 
 
@@ -31,7 +31,7 @@ Sets the name of the series.
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the series opacity.
 
 
@@ -53,7 +53,7 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the padding of the chart.
 
 
@@ -69,7 +69,7 @@ Sets the padding of the chart.
 
 
 
-### StartAngle(System.Int32)
+### StartAngle(`System.Int32`)
 Sets the start angle of the first pie segment.
 
 
@@ -91,7 +91,7 @@ The pie start angle(in degrees).
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartPieLabelsBuilder>`)
 Configures the pie chart labels.
 
 
@@ -118,7 +118,7 @@ The configuration action.
 
 
 
-### Labels(System.Boolean)
+### Labels(`System.Boolean`)
 Sets the visibility of pie chart labels.
 
 
@@ -142,7 +142,7 @@ The visibility. The default value is false.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the pie segments border
 
 
@@ -170,7 +170,7 @@ The pie segments border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the pie border
 
 
@@ -183,7 +183,7 @@ The border configuration action
 
 
 
-### Overlay(Kendo.Mvc.UI.ChartPieSeriesOverlay)
+### Overlay(`Kendo.Mvc.UI.ChartPieSeriesOverlay`)
 Sets the pie segments effects overlay
 
 
@@ -206,7 +206,7 @@ The pie segment effects overlay.
 
 
 
-### Connectors(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieConnectorsBuilder>)
+### Connectors(`System.Action<Kendo.Mvc.UI.Fluent.ChartPieConnectorsBuilder>`)
 Configures the pie chart connectors.
 
 
@@ -232,7 +232,7 @@ The configuration action.
 
 
 
-### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieSeriesHighlightBuilder>)
+### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartPieSeriesHighlightBuilder>`)
 Configures the pie highlight
 
 

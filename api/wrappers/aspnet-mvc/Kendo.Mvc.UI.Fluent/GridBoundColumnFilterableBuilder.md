@@ -11,7 +11,7 @@ Defines the fluent interface for configuring bound columns filterable options
 
 ## Methods
 
-### UI(Kendo.Mvc.UI.GridFilterUIRole)
+### UI(`Kendo.Mvc.UI.GridFilterUIRole`)
 Sets the type of the input element of the filter menu
 
 
@@ -26,7 +26,7 @@ Sets the type of the input element of the filter menu
 
 
 
-### UI(System.Func\<System.Object,System.Object>)
+### UI(`System.Func<System.Object,System.Object>`)
 Sets JavaScript function which to modify the UI of the filter input.
 
 
@@ -41,7 +41,7 @@ Sets JavaScript function which to modify the UI of the filter input.
 
 
 
-### UI(System.String)
+### UI(`System.String`)
 Sets JavaScript function which to modify the UI of the filter input.
 
 

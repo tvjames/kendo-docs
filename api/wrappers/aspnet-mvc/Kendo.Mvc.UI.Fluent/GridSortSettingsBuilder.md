@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the Sortable.
 
 ## Methods
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Enables or disables sorting.
 
 
@@ -26,7 +26,7 @@ Enables or disables sorting.
 
 
 
-### SortMode(Kendo.Mvc.UI.GridSortMode)
+### SortMode(`Kendo.Mvc.UI.GridSortMode`)
 Sets the sort mode of the grid.
 
 
@@ -47,7 +47,7 @@ The value.
 
 
 
-### AllowUnsort(System.Boolean)
+### AllowUnsort(`System.Boolean`)
 Enables or disables unsorted mode.
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring datepicker client events.
 
 ## Methods
 
-### Change(System.Func\<System.Object,System.Object>)
+### Change(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the Change client-side event
 
 For additional information check the [change](/api/web/calendar#events-change) event documentation.
@@ -40,7 +40,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Change(System.String)
+### Change(`System.String`)
 Defines the name of the JavaScript function that will handle the the Change client-side event.
 
 For additional information check the [change](/api/web/calendar#events-change) event documentation.
@@ -63,7 +63,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Navigate(System.Func\<System.Object,System.Object>)
+### Navigate(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the Navigate client-side event
 
 For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.
@@ -93,7 +93,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Navigate(System.String)
+### Navigate(`System.String`)
 Defines the name of the JavaScript function that will handle the Navigate client-side event.
 
 For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring plot band.
 
 ## Methods
 
-### From(T)
+### From(`T`)
 Sets the plot band start position.
 
 
@@ -37,7 +37,7 @@ The plot band start position.
 
 
 
-### To(T)
+### To(`T`)
 Sets the plot band end position.
 
 
@@ -63,7 +63,7 @@ The plot band end position.
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the plot band background color
 
 
@@ -89,7 +89,7 @@ The plot band background color.
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the plot band opacity
 
 

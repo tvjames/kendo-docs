@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the PanelBar component.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.PanelBarItemFactory>)
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.PanelBarItemFactory>`)
 Defines the items in the panelbar
 
 
@@ -36,7 +36,7 @@ The add action.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.PanelBarEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.PanelBarEventBuilder>`)
 Configures the client-side events.
 
 
@@ -59,7 +59,7 @@ The client events action.
 
 
 
-### BindTo(System.String,System.Action\<Kendo.Mvc.UI.PanelBarItem,Kendo.Mvc.SiteMapNode>)
+### BindTo(`System.String,System.Action<Kendo.Mvc.UI.PanelBarItem,Kendo.Mvc.SiteMapNode>`)
 Binds the panelbar to a sitemap
 
 
@@ -85,7 +85,7 @@ The action to configure the item.
 
 
 
-### BindTo(System.String)
+### BindTo(`System.String`)
 Binds the panelbar to a sitemap.
 
 
@@ -106,7 +106,7 @@ The view data key.
 
 
 
-### BindToT1(System.Collections.Generic.IEnumerable\<T1>,System.Action<Kendo.Mvc.UI.PanelBarItem,T1>)
+### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.PanelBarItem,T1>`)
 Binds the panelbar to a list of objects
 
 
@@ -133,7 +133,7 @@ The action executed for every data bound item.
 
 
 
-### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory<Kendo.Mvc.UI.PanelBarItem>>)
+### BindTo(`System.Collections.IEnumerable,System.Action<Kendo.Mvc.UI.Fluent.NavigationBindingFactory<Kendo.Mvc.UI.PanelBarItem>>`)
 Binds the panelbar to a list of objects. The panelbar will create a hierarchy of items using the specified mappings.
 
 
@@ -166,7 +166,7 @@ The action which will configure the mappings
 
 
 
-### Animation(System.Boolean)
+### Animation(`System.Boolean`)
 Configures the animation effects of the panelbar.
 
 
@@ -186,7 +186,7 @@ Whether the component animation is enabled.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder>)
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder>`)
 Configures the animation effects of the panelbar.
 
 
@@ -206,7 +206,7 @@ The action that configures the animation.
 
 
 
-### ItemAction(System.Action\<Kendo.Mvc.UI.PanelBarItem>)
+### ItemAction(`System.Action<Kendo.Mvc.UI.PanelBarItem>`)
 Callback for each item.
 
 
@@ -232,7 +232,7 @@ Action, which will be executed for each item.
 
 
 
-### HighlightPath(System.Boolean)
+### HighlightPath(`System.Boolean`)
 Select item depending on the current URL.
 
 
@@ -253,7 +253,7 @@ If true the item will be highlighted.
 
 
 
-### ExpandAll(System.Boolean)
+### ExpandAll(`System.Boolean`)
 Renders the panelbar with expanded items.
 
 
@@ -274,7 +274,7 @@ If true the panelbar will be expanded.
 
 
 
-### ExpandMode(Kendo.Mvc.UI.PanelBarExpandMode)
+### ExpandMode(`Kendo.Mvc.UI.PanelBarExpandMode`)
 Sets the expand mode of the panelbar.
 
 
@@ -295,7 +295,7 @@ The desired expand mode.
 
 
 
-### SelectedIndex(System.Int32)
+### SelectedIndex(`System.Int32`)
 Selects the item at the specified index.
 
 
@@ -321,7 +321,7 @@ The index.
 
 
 
-### SecurityTrimming(System.Boolean)
+### SecurityTrimming(`System.Boolean`)
 Enable/disable security trimming functionality of the component.
 
 
@@ -342,7 +342,7 @@ If true security trimming is enabled.
 
 
 
-### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder>)
+### SecurityTrimming(`System.Action<Kendo.Mvc.UI.SecurityTrimmingBuilder>`)
 Defines the security trimming functionality of the component
 
 

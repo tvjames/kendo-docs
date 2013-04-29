@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the RadialGauge component.
 
 ## Methods
 
-### Theme(System.String)
+### Theme(`System.String`)
 Sets the theme of the radial gauge.
 
 
@@ -32,7 +32,7 @@ The radial gauge theme.
 
 
 
-### GaugeArea(System.Action\<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder>)
+### GaugeArea(`System.Action<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder>`)
 Sets the radial gauge area.
 
 
@@ -53,7 +53,7 @@ The radial gauge area.
 
 
 
-### Scale(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialScaleBuilder>)
+### Scale(`System.Action<Kendo.Mvc.UI.Fluent.GaugeRadialScaleBuilder>`)
 Configures the scale
 
 
@@ -76,7 +76,7 @@ The configurator
 
 
 
-### Pointer(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialPointerBuilder>)
+### Pointer(`System.Action<Kendo.Mvc.UI.Fluent.GaugeRadialPointerBuilder>`)
 Configures the pointer
 
 
@@ -99,7 +99,7 @@ The configurator
 
 
 
-### Transitions(System.Boolean)
+### Transitions(`System.Boolean`)
 Enables or disabled animated transitions on initial load and refresh.
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the radial gauge labels.
 
 ## Methods
 
-### Position(Kendo.Mvc.UI.GaugeRadialScaleLabelsPosition)
+### Position(`Kendo.Mvc.UI.GaugeRadialScaleLabelsPosition`)
 Sets the labels position
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartNegativeValueSettings.
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the color for bubbles representing negative values
 
 
@@ -39,7 +39,7 @@ The bubble color (CSS format).
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the visibility for bubbles representing negative values
 
 

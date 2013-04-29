@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the DatePickerBase component.
 
 ## Methods
 
-### Animation(System.Boolean)
+### Animation(`System.Boolean`)
 Use to enable or disable animation of the popup element.
 
 
@@ -32,7 +32,7 @@ The boolean value.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
 Configures the animation effects of the widget.
 
 
@@ -59,7 +59,7 @@ The action which configures the animation effects.
 
 
 
-### Culture(System.String)
+### Culture(`System.String`)
 Specifies the culture info used by the widget.
 
 
@@ -74,7 +74,7 @@ Specifies the culture info used by the widget.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase>`)
 Configures the client-side events.
 
 
@@ -97,49 +97,49 @@ The client events action.
 
 
 
-### Format(System.String)
+### Format(`System.String`)
 Sets the date format, which will be used to parse and format the machine date.
 
 
 
 
 
-### ParseFormats(System.Collections.Generic.IEnumerable\<System.String>)
+### ParseFormats(`System.Collections.Generic.IEnumerable<System.String>`)
 Specifies the formats, which are used to parse the value set with value() method or by direct input.
 
 
 
 
 
-### Enable(System.Boolean)
+### Enable(`System.Boolean`)
 Enables or disables the picker.
 
 
 
 
 
-### Min(System.DateTime)
+### Min(`System.DateTime`)
 Sets the minimal date, which can be selected in picker.
 
 
 
 
 
-### Max(System.DateTime)
+### Max(`System.DateTime`)
 Sets the maximal date, which can be selected in picker.
 
 
 
 
 
-### Value(System.Nullable\<System.DateTime>)
+### Value(`System.Nullable<System.DateTime>`)
 Sets the value of the picker input
 
 
 
 
 
-### Value(System.String)
+### Value(`System.String`)
 Sets the value of the picker input
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring Scrollable
 
 ## Methods
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Enables or disables scrolling.
 
 
@@ -26,7 +26,7 @@ Enables or disables scrolling.
 
 
 
-### Height(System.Int32)
+### Height(`System.Int32`)
 Sets the height of the scrollable area in pixels.
 
 
@@ -47,7 +47,7 @@ The height in pixels.
 
 
 
-### Height(System.String)
+### Height(`System.String`)
 Sets the height of the scrollable.
 
 

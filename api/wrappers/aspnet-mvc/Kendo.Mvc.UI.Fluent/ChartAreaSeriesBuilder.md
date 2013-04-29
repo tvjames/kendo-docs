@@ -11,7 +11,7 @@ Defines the fluent interface for configuring area series.
 
 ## Methods
 
-### Stack(System.Boolean)
+### Stack(`System.Boolean`)
 Sets a value indicating if the areas should be stacked.
 
 
@@ -32,7 +32,7 @@ A value indicating if the areas should be stacked.
 
 
 
-### Aggregate(Kendo.Mvc.UI.ChartSeriesAggregate)
+### Aggregate(`Kendo.Mvc.UI.ChartSeriesAggregate`)
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
@@ -54,7 +54,7 @@ Aggregate function name.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>`)
 Configures the area chart labels.
 
 
@@ -81,7 +81,7 @@ The configuration action.
 
 
 
-### Labels(System.Boolean)
+### Labels(`System.Boolean`)
 Sets the visibility of area chart labels.
 
 
@@ -105,7 +105,7 @@ The visibility. The default value is false.
 
 
 
-### Line(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Configures the area chart line.
 
 
@@ -136,7 +136,7 @@ The line dashType.
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>)
+### Line(`System.Action<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>`)
 Configures the area chart line.
 
 
@@ -161,7 +161,7 @@ The configuration action.
 
 
 
-### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>)
+### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
 Configures the area chart markers.
 
 
@@ -187,7 +187,7 @@ The configuration action.
 
 
 
-### Markers(System.Boolean)
+### Markers(`System.Boolean`)
 Sets the visibility of area chart markers.
 
 
@@ -211,7 +211,7 @@ The visibility. The default value is true.
 
 
 
-### MissingValues(Kendo.Mvc.UI.ChartAreaMissingValues)
+### MissingValues(`Kendo.Mvc.UI.ChartAreaMissingValues`)
 Configures the behavior for handling missing values in area series.
 
 

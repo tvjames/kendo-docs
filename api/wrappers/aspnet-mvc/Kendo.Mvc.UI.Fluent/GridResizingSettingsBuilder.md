@@ -11,7 +11,7 @@ Defines the fluent interface for configuring Resizable
 
 ## Methods
 
-### Columns(System.Boolean)
+### Columns(`System.Boolean`)
 Enables or disables column resizing.
 
 

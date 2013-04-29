@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the ChartArea.
 
 ## Methods
 
-### Background(System.String)
+### Background(`System.String`)
 Sets the chart area background color.
 
 
@@ -33,7 +33,7 @@ The background color.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the chart area margin.
 
 
@@ -64,7 +64,7 @@ The chart area left margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the chart area margin.
 
 
@@ -86,7 +86,7 @@ The chart area margin.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the chart area border.
 
 
@@ -114,7 +114,7 @@ The border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the plot area border
 
 

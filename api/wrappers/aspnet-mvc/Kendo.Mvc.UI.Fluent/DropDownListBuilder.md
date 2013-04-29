@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the DropDownList component.
 
 ## Methods
 
-### DataValueField(System.String)
+### DataValueField(`System.String`)
 Sets the field of the data item that provides the value content of the list items.
 
 
@@ -27,7 +27,7 @@ Sets the field of the data item that provides the value content of the list item
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListEventBuilder>)
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.DropDownListEventBuilder>`)
 Configures the client-side events.
 
 
@@ -50,7 +50,7 @@ The client events action.
 
 
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory>)
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.DropDownListItemFactory>`)
 Defines the items in the DropDownList
 
 
@@ -75,7 +75,7 @@ The add action.
 
 
 
-### OptionLabel(System.String)
+### OptionLabel(`System.String`)
 Define the text of the default empty item. If the value is an object, then the widget will use it directly.
 
 
@@ -90,7 +90,7 @@ Define the text of the default empty item. If the value is an object, then the w
 
 
 
-### SelectedIndex(System.Int32)
+### SelectedIndex(`System.Int32`)
 Use it to set selected item index
 
 
@@ -111,7 +111,7 @@ Item index.
 
 
 
-### CascadeFrom(System.String)
+### CascadeFrom(`System.String`)
 Use it to set the Id of the parent DropDownList.
 
 
@@ -126,7 +126,7 @@ Use it to set the Id of the parent DropDownList.
 
 
 
-### Text(System.String)
+### Text(`System.String`)
 Define the text of the widget, when the autoBind is set to false.
 
 

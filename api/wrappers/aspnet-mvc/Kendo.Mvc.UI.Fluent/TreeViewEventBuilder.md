@@ -11,7 +11,7 @@ Defines the fluent API for configuring the events of the Kendo TreeView for ASP.
 
 ## Methods
 
-### Collapse(System.Func\<System.Object,System.Object>)
+### Collapse(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the collapse client-side event
 
 For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
@@ -41,7 +41,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Collapse(System.String)
+### Collapse(`System.String`)
 Defines the name of the JavaScript function that will handle the the collapse client-side event.
 
 For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
@@ -64,7 +64,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### DataBound(System.Func\<System.Object,System.Object>)
+### DataBound(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the dataBound client-side event
 
 For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
@@ -94,7 +94,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### DataBound(System.String)
+### DataBound(`System.String`)
 Defines the name of the JavaScript function that will handle the the dataBound client-side event.
 
 For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
@@ -117,7 +117,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Drag(System.Func\<System.Object,System.Object>)
+### Drag(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the drag client-side event
 
 For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
@@ -147,7 +147,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Drag(System.String)
+### Drag(`System.String`)
 Defines the name of the JavaScript function that will handle the the drag client-side event.
 
 For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
@@ -170,7 +170,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### DragEnd(System.Func\<System.Object,System.Object>)
+### DragEnd(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the dragend client-side event
 
 For additional information check the [dragEnd](/api/web/treeview#events-dragEnd) event documentation.
@@ -200,7 +200,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### DragEnd(System.String)
+### DragEnd(`System.String`)
 Defines the name of the JavaScript function that will handle the the dragend client-side event.
 
 For additional information check the [dragEnd](/api/web/treeview#events-dragEnd) event documentation.
@@ -223,7 +223,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### DragStart(System.Func\<System.Object,System.Object>)
+### DragStart(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the dragstart client-side event
 
 For additional information check the [dragStart](/api/web/treeview#events-dragStart) event documentation.
@@ -253,7 +253,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### DragStart(System.String)
+### DragStart(`System.String`)
 Defines the name of the JavaScript function that will handle the the dragstart client-side event.
 
 For additional information check the [dragStart](/api/web/treeview#events-dragStart) event documentation.
@@ -276,7 +276,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Drop(System.Func\<System.Object,System.Object>)
+### Drop(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the drop client-side event
 
 For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
@@ -306,7 +306,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Drop(System.String)
+### Drop(`System.String`)
 Defines the name of the JavaScript function that will handle the the drop client-side event.
 
 For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
@@ -329,7 +329,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Expand(System.Func\<System.Object,System.Object>)
+### Expand(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the expand client-side event
 
 For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
@@ -359,7 +359,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Expand(System.String)
+### Expand(`System.String`)
 Defines the name of the JavaScript function that will handle the the expand client-side event.
 
 For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
@@ -382,7 +382,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Select(System.Func\<System.Object,System.Object>)
+### Select(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the select client-side event
 
 For additional information check the [select](/api/web/treeview#events-select) event documentation.
@@ -412,7 +412,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Select(System.String)
+### Select(`System.String`)
 Defines the name of the JavaScript function that will handle the the select client-side event.
 
 For additional information check the [select](/api/web/treeview#events-select) event documentation.
@@ -435,7 +435,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Change(System.Func\<System.Object,System.Object>)
+### Change(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the change client-side event
 
 For additional information check the [change](/api/web/treeview#events-change) event documentation.
@@ -465,7 +465,7 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
-### Change(System.String)
+### Change(`System.String`)
 Defines the name of the JavaScript function that will handle the the change client-side event.
 
 For additional information check the [change](/api/web/treeview#events-change) event documentation.

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring scatter line series.
 
 ## Methods
 
-### Width(System.Double)
+### Width(`System.Double`)
 Sets the chart line width.
 
 
@@ -33,7 +33,7 @@ The line width.
 
 
 
-### DashType(Kendo.Mvc.UI.ChartDashType)
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
 Sets the chart line dash type.
 
 
@@ -55,7 +55,7 @@ The line dash type.
 
 
 
-### MissingValues(Kendo.Mvc.UI.ChartScatterLineMissingValues)
+### MissingValues(`Kendo.Mvc.UI.ChartScatterLineMissingValues`)
 Configures the behavior for handling missing values in scatter line series.
 
 

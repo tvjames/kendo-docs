@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartLine.
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the line color
 
 
@@ -33,7 +33,7 @@ The line color (CSS format).
 
 
 
-### Width(System.Int32)
+### Width(`System.Int32`)
 Sets the line width
 
 
@@ -55,7 +55,7 @@ The line width.
 
 
 
-### DashType(Kendo.Mvc.UI.ChartDashType)
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
 Sets the line dashType.
 
 

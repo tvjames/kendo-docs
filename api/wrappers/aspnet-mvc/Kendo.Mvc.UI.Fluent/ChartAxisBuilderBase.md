@@ -16,7 +16,7 @@ Gets or sets the axis.
 
 ## Methods
 
-### MajorTicks(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder>)
+### MajorTicks(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder>`)
 Configures the major ticks.
 
 
@@ -41,7 +41,7 @@ The configuration action.
 
 
 
-### Crosshair(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisCrosshairBuilder>)
+### Crosshair(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisCrosshairBuilder>`)
 Configures the major ticks.
 
 
@@ -66,7 +66,7 @@ The configuration action.
 
 
 
-### Name(System.String)
+### Name(`System.String`)
 Sets the axis name.
 
 
@@ -89,7 +89,7 @@ The axis name.
 
 
 
-### MinorTicks(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder>)
+### MinorTicks(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder>`)
 Configures the minor ticks.
 
 
@@ -114,7 +114,7 @@ The configuration action.
 
 
 
-### MajorGridLines(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder>)
+### MajorGridLines(`System.Action<Kendo.Mvc.UI.Fluent.ChartLineBuilder>`)
 Configures the major grid lines.
 
 
@@ -138,7 +138,7 @@ The configuration action.
 
 
 
-### MajorGridLines(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### MajorGridLines(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets color and width of the major grid lines and enables them.
 
 
@@ -168,7 +168,7 @@ The major gridlines line dashType.
 
 
 
-### MinorGridLines(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder>)
+### MinorGridLines(`System.Action<Kendo.Mvc.UI.Fluent.ChartLineBuilder>`)
 Configures the minor grid lines.
 
 
@@ -192,7 +192,7 @@ The configuration action.
 
 
 
-### MinorGridLines(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### MinorGridLines(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets color and width of the minor grid lines and enables them.
 
 
@@ -222,7 +222,7 @@ The minor grid lines dash type
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder>)
+### Line(`System.Action<Kendo.Mvc.UI.Fluent.ChartLineBuilder>`)
 Configures the axis line.
 
 
@@ -246,7 +246,7 @@ The configuration action.
 
 
 
-### Line(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets color and width of the lines and enables them.
 
 
@@ -276,7 +276,7 @@ The axis line dashType.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisLabelsBuilder>`)
 Configures the axis labels.
 
 
@@ -302,7 +302,7 @@ The configuration action.
 
 
 
-### Labels(System.Boolean)
+### Labels(`System.Boolean`)
 Sets the visibility of numeric axis chart labels.
 
 
@@ -323,7 +323,7 @@ The visibility. The default value is false.
 
 
 
-### PlotBands(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisPlotBandsFactory<T,T>>)
+### PlotBands(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisPlotBandsFactory<T,T>>`)
 Defines the plot bands items.
 
 
@@ -348,7 +348,7 @@ The add action.
 
 
 
-### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTitleBuilder>)
+### Title(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisTitleBuilder>`)
 Configures the chart axis title.
 
 
@@ -372,7 +372,7 @@ The configuration action.
 
 
 
-### Title(System.String)
+### Title(`System.String`)
 Sets the axis title.
 
 
@@ -396,7 +396,7 @@ The axis title.
 
 
 
-### Pane(System.String)
+### Pane(`System.String`)
 Renders the axis in the pane with the specified name.
 
 
@@ -424,7 +424,7 @@ The pane name.
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the color for all axis elements. Can be overriden by individual settings.
 
 
@@ -448,7 +448,7 @@ The axis color.
 
 
 
-### Reverse(System.Boolean)
+### Reverse(`System.Boolean`)
 Sets the axis reverse option.
 
 
@@ -490,7 +490,7 @@ Reverse the axis.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the axis visibility
 
 
@@ -503,7 +503,7 @@ The axis visibility.
 
 
 
-### NarrowRange(System.Boolean)
+### NarrowRange(`System.Boolean`)
 A value indicating if the automatic axis range should snap to 0.
 
 

@@ -18,7 +18,7 @@ Clears the options.
 
 
 
-### IsEqualTo(System.String)
+### IsEqualTo(`System.String`)
 Sets the text for IsEqualTo operator filter menu item.
 
 
@@ -31,7 +31,7 @@ The message
 
 
 
-### IsNotEqualTo(System.String)
+### IsNotEqualTo(`System.String`)
 Sets the text for IsNotEqualTo operator filter menu item.
 
 
@@ -44,7 +44,7 @@ The message
 
 
 
-### StartsWith(System.String)
+### StartsWith(`System.String`)
 Sets the text for StartsWith operator filter menu item.
 
 
@@ -57,7 +57,7 @@ The message
 
 
 
-### EndsWith(System.String)
+### EndsWith(`System.String`)
 Sets the text for EndsWith operator filter menu item.
 
 
@@ -70,7 +70,7 @@ The message
 
 
 
-### Contains(System.String)
+### Contains(`System.String`)
 Sets the text for Contains operator filter menu item.
 
 
@@ -83,7 +83,7 @@ The message
 
 
 
-### DoesNotContain(System.String)
+### DoesNotContain(`System.String`)
 Sets the text for DoesNotContain operator filter menu item.
 
 

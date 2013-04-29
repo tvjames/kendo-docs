@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the ChartLegend.
 
 ## Methods
 
-### Font(System.String)
+### Font(`System.String`)
 Sets the legend labels font
 
 
@@ -33,7 +33,7 @@ The legend labels font (CSS format).
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the legend labels color
 
 
@@ -55,7 +55,7 @@ The labels color (CSS format).
 
 
 
-### Background(System.String)
+### Background(`System.String`)
 Sets the legend background color
 
 
@@ -77,7 +77,7 @@ The background color.
 
 
 
-### Position(Kendo.Mvc.UI.ChartLegendPosition)
+### Position(`Kendo.Mvc.UI.ChartLegendPosition`)
 Sets the legend position
 
 
@@ -99,7 +99,7 @@ The legend position.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the legend visibility
 
 
@@ -121,7 +121,7 @@ The legend visibility.
 
 
 
-### Offset(System.Int32,System.Int32)
+### Offset(`System.Int32,System.Int32`)
 Sets the legend X and Y offset from its position
 
 
@@ -146,7 +146,7 @@ The legend Y offset from its position.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the legend margin
 
 
@@ -177,7 +177,7 @@ The legend top margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the legend margin
 
 
@@ -199,7 +199,7 @@ The legend margin.
 
 
 
-### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the legend padding
 
 
@@ -230,7 +230,7 @@ The legend left padding.
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the legend padding
 
 
@@ -252,7 +252,7 @@ The legend padding.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the legend border
 
 
@@ -280,7 +280,7 @@ The legend border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the legend border
 
 
@@ -293,7 +293,7 @@ The border configuration action
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartLegendLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartLegendLabelsBuilder>`)
 Configures the legend labels
 
 

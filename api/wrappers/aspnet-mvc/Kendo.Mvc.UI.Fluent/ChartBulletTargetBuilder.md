@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the chart target.
 
 ## Methods
 
-### Width(System.Int32)
+### Width(`System.Int32`)
 Sets the target width.
 
 
@@ -38,7 +38,7 @@ The target width.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the target border
 
 
@@ -71,7 +71,7 @@ The target border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the markers border
 
 
@@ -84,7 +84,7 @@ The border configuration action
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the color of the bullet chart target.
 
 

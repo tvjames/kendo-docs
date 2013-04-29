@@ -11,7 +11,7 @@ Defines the fluent interface for configuring numeric axis.
 
 ## Methods
 
-### BaseUnit(Kendo.Mvc.UI.ChartAxisBaseUnit)
+### BaseUnit(`Kendo.Mvc.UI.ChartAxisBaseUnit`)
 Sets the date axis base unit.
 
 
@@ -24,7 +24,7 @@ The date axis base unit
 
 
 
-### Min(System.DateTime)
+### Min(`System.DateTime`)
 Sets the start date of the axis.
 
 
@@ -45,7 +45,7 @@ The start date of the axis.
 
 
 
-### Max(System.DateTime)
+### Max(`System.DateTime`)
 Sets the end date of the axis.
 
 
@@ -66,7 +66,7 @@ The end date of the axis.
 
 
 
-### MajorUnit(System.Double)
+### MajorUnit(`System.Double`)
 Sets the interval between major divisions in base units.
 
 
@@ -87,7 +87,7 @@ The interval between major divisions in base units.
 
 
 
-### MinorUnit(System.Double)
+### MinorUnit(`System.Double`)
 Sets the interval between minor divisions in base units.
             It defaults to 1/5th of the majorUnit
 
@@ -109,7 +109,7 @@ The interval between minor divisions in base units.
 
 
 
-### AxisCrossingValue(System.DateTime)
+### AxisCrossingValue(`System.DateTime`)
 Sets value at which the first perpendicular axis crosses this axis.
 
 
@@ -130,7 +130,7 @@ The value at which the first perpendicular axis crosses this axis.
 
 
 
-### AxisCrossingValue(System.DateTime[])
+### AxisCrossingValue(`System.DateTime[]`)
 Sets value at which perpendicular axes cross this axis.
 
 
@@ -153,7 +153,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.DateTime>)
+### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.DateTime>`)
 Sets value at which perpendicular axes cross this axis.
 
 
@@ -178,7 +178,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>`)
 Configures the axis labels.
 
 

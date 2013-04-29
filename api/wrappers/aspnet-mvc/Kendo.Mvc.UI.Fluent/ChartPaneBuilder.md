@@ -16,7 +16,7 @@ Gets or sets the Pane.
 
 ## Methods
 
-### Title(System.String)
+### Title(`System.String`)
 Sets the title of the pane.
 
 
@@ -29,7 +29,7 @@ The pane title.
 
 
 
-### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartTitleBuilder>)
+### Title(`System.Action<Kendo.Mvc.UI.Fluent.ChartTitleBuilder>`)
 Defines the title of the pane.
 
 
@@ -42,7 +42,7 @@ The configuration action.
 
 
 
-### Height(System.Int32)
+### Height(`System.Int32`)
 Sets the height of the pane.
 
 
@@ -55,7 +55,7 @@ The pane height.
 
 
 
-### Background(System.String)
+### Background(`System.String`)
 Sets the pane background color
 
 
@@ -68,7 +68,7 @@ The background color.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the pane margin
 
 
@@ -90,7 +90,7 @@ The pane left margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the pane margin
 
 
@@ -103,7 +103,7 @@ The pane margin.
 
 
 
-### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the pane padding
 
 
@@ -125,7 +125,7 @@ The pane left padding.
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the pane padding
 
 
@@ -138,7 +138,7 @@ The pane padding.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the pane border
 
 
@@ -157,7 +157,7 @@ The pane dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the pane border
 
 

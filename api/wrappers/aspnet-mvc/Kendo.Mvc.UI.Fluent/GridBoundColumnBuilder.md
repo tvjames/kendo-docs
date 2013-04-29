@@ -11,7 +11,7 @@ Defines the fluent interface for configuring bound columns
 
 ## Methods
 
-### Format(System.String)
+### Format(`System.String`)
 Gets or sets the format for displaying the data.
 
 
@@ -32,7 +32,7 @@ The value.
 
 
 
-### EditorViewData(System.Object)
+### EditorViewData(`System.Object`)
 Provides additional view data in the editor template for that column (if any).
 
 
@@ -55,7 +55,7 @@ An anonymous object which contains the additional data
 
 
 
-### EditorTemplateName(System.String)
+### EditorTemplateName(`System.String`)
 Specify which editor template should be used for the column
 
 
@@ -68,7 +68,7 @@ name of the editor template
 
 
 
-### Sortable(System.Boolean)
+### Sortable(`System.Boolean`)
 Enables or disables sorting the column. All bound columns are sortable by default.
 
 
@@ -83,7 +83,7 @@ Enables or disables sorting the column. All bound columns are sortable by defaul
 
 
 
-### Groupable(System.Boolean)
+### Groupable(`System.Boolean`)
 Enables or disables grouping by that column. All bound columns are groupable by default.
 
 
@@ -98,7 +98,7 @@ Enables or disables grouping by that column. All bound columns are groupable by 
 
 
 
-### Filterable(System.Boolean)
+### Filterable(`System.Boolean`)
 Enables or disables filtering the column. All bound columns are filterable by default.
 
 
@@ -113,7 +113,7 @@ Enables or disables filtering the column. All bound columns are filterable by de
 
 
 
-### Encoded(System.Boolean)
+### Encoded(`System.Boolean`)
 Enables or disables HTML encoding the data of the column. All bound columns are encoded by default.
 
 
@@ -128,7 +128,7 @@ Enables or disables HTML encoding the data of the column. All bound columns are 
 
 
 
-### Template(System.Action\<T>)
+### Template(`System.Action<T>`)
 Sets the template for the column.
 
 
@@ -160,7 +160,7 @@ The action defining the template.
 
 
 
-### Template(System.Func\<T,System.Object>)
+### Template(`System.Func<T,System.Object>`)
 Sets the template for the column.
 
 
@@ -176,7 +176,7 @@ The action defining the template.
 
 
 
-### ClientTemplate(System.String)
+### ClientTemplate(`System.String`)
 Sets the client template for the column.
 
 
@@ -192,7 +192,7 @@ The template
 
 
 
-### ClientGroupHeaderTemplate(System.String)
+### ClientGroupHeaderTemplate(`System.String`)
 Sets the client group template for the column.
 
 
@@ -208,7 +208,7 @@ The template
 
 
 
-### ClientGroupFooterTemplate(System.String)
+### ClientGroupFooterTemplate(`System.String`)
 Sets the client group footer template for the column.
 
 
@@ -224,7 +224,7 @@ The template
 
 
 
-### FooterTemplate(System.Action\<Kendo.Mvc.UI.GridAggregateResult>)
+### FooterTemplate(`System.Action<Kendo.Mvc.UI.GridAggregateResult>`)
 Sets the footer template for the column.
 
 
@@ -237,7 +237,7 @@ The action defining the template.
 
 
 
-### FooterTemplate(System.Func\<Kendo.Mvc.UI.GridAggregateResult,System.Object>)
+### FooterTemplate(`System.Func<Kendo.Mvc.UI.GridAggregateResult,System.Object>`)
 Sets the footer template for the column.
 
 
@@ -250,7 +250,7 @@ The action defining the template.
 
 
 
-### GroupFooterTemplate(System.Action\<Kendo.Mvc.UI.GridAggregateResult>)
+### GroupFooterTemplate(`System.Action<Kendo.Mvc.UI.GridAggregateResult>`)
 Sets the group footer template for the column.
 
 
@@ -263,7 +263,7 @@ The action defining the template.
 
 
 
-### GroupFooterTemplate(System.Func\<Kendo.Mvc.UI.GridAggregateResult,System.Object>)
+### GroupFooterTemplate(`System.Func<Kendo.Mvc.UI.GridAggregateResult,System.Object>`)
 Sets the group footer template for the column.
 
 
@@ -276,7 +276,7 @@ The action defining the template.
 
 
 
-### GroupHeaderTemplate(System.Action\<Kendo.Mvc.UI.GridGroupAggregateResult>)
+### GroupHeaderTemplate(`System.Action<Kendo.Mvc.UI.GridGroupAggregateResult>`)
 Sets the group footer template for the column.
 
 
@@ -289,7 +289,7 @@ The action defining the template.
 
 
 
-### GroupHeaderTemplate(System.Func\<Kendo.Mvc.UI.GridGroupAggregateResult,System.Object>)
+### GroupHeaderTemplate(`System.Func<Kendo.Mvc.UI.GridGroupAggregateResult,System.Object>`)
 Sets the group footer template for the column.
 
 

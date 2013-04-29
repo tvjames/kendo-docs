@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the gauge labels.
 
 ## Methods
 
-### Font(System.String)
+### Font(`System.String`)
 Sets the labels font
 
 
@@ -36,7 +36,7 @@ The labels font (CSS format).
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the labels visibility
 
 
@@ -61,7 +61,7 @@ The labels visibility.
 
 
 
-### Background(System.String)
+### Background(`System.String`)
 Sets the labels background color
 
 
@@ -86,7 +86,7 @@ The labels background color.
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the labels text color
 
 
@@ -111,7 +111,7 @@ The labels text color.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the labels margin
 
 
@@ -145,7 +145,7 @@ The labels left margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the labels margin
 
 
@@ -170,7 +170,7 @@ The labels margin.
 
 
 
-### Padding(System.Int32,System.Int32,System.Int32,System.Int32)
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the labels padding
 
 
@@ -204,7 +204,7 @@ The labels left padding.
 
 
 
-### Padding(System.Int32)
+### Padding(`System.Int32`)
 Sets the labels padding
 
 
@@ -229,7 +229,7 @@ The labels padding.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the labels border
 
 
@@ -260,7 +260,7 @@ The labels border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the label border
 
 
@@ -273,7 +273,7 @@ The border configuration action
 
 
 
-### Format(System.String)
+### Format(`System.String`)
 Sets the labels format.
 
 
@@ -298,7 +298,7 @@ The labels format.
 
 
 
-### Template(System.String)
+### Template(`System.String`)
 Sets the labels template.
 
 
@@ -323,7 +323,7 @@ The labels template.
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the labels opacity.
 
 

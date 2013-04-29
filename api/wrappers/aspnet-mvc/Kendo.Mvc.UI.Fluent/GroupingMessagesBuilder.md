@@ -11,7 +11,7 @@ Defines the fluent interface for configuring GridGroupableSettings messages.
 
 ## Methods
 
-### Empty(System.String)
+### Empty(`System.String`)
 Sets the text of the group panel when grid is not grouped.
 
 

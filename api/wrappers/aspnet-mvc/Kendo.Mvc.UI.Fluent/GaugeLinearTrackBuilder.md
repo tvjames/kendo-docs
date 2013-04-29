@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the linear gauge track.
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the track color.
 
 
@@ -35,7 +35,7 @@ The track color.
 
 
 
-### Size(System.Double)
+### Size(`System.Double`)
 Sets the track size.
 
 
@@ -59,7 +59,7 @@ The track size.
 
 
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the track visibility.
 
 
@@ -83,7 +83,7 @@ The track visibility.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the track border.
 
 
@@ -113,7 +113,7 @@ The pointer dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the track border
 
 

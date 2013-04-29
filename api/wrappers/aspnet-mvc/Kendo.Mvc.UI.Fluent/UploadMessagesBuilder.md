@@ -11,7 +11,7 @@ A builder class for UploadMessages
 
 ## Methods
 
-### Cancel(System.String)
+### Cancel(`System.String`)
 Sets the Cancel button text
 
 
@@ -34,7 +34,7 @@ New cancel button text.
 
 
 
-### DropFilesHere(System.String)
+### DropFilesHere(`System.String`)
 Sets the Drag and Drop hint text
 
 
@@ -57,7 +57,7 @@ New Drag and Drop hint text.
 
 
 
-### Remove(System.String)
+### Remove(`System.String`)
 Sets the Remove button text
 
 
@@ -80,7 +80,7 @@ New Remove button text.
 
 
 
-### Retry(System.String)
+### Retry(`System.String`)
 Sets the Retry button text
 
 
@@ -103,7 +103,7 @@ New Retry button text.
 
 
 
-### Select(System.String)
+### Select(`System.String`)
 Sets the Select button text
 
 
@@ -126,7 +126,7 @@ New Select button text.
 
 
 
-### StatusFailed(System.String)
+### StatusFailed(`System.String`)
 Sets the "failed" status text accessible by screen readers
 
 
@@ -149,7 +149,7 @@ New "failed" status text accessible by screen readers.
 
 
 
-### StatusUploaded(System.String)
+### StatusUploaded(`System.String`)
 Sets the "uploaded" status text accessible by screen readers
 
 
@@ -172,7 +172,7 @@ New "uploaded" status text accessible by screen readers.
 
 
 
-### StatusUploading(System.String)
+### StatusUploading(`System.String`)
 Sets the "uploading" status text accessible by screen readers
 
 
@@ -195,7 +195,7 @@ New "uploading" status text accessible by screen readers.
 
 
 
-### UploadSelectedFiles(System.String)
+### UploadSelectedFiles(`System.String`)
 Sets Upload button (visible when AutoUpload is set to false) text
 
 

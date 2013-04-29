@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartLine.
 
 ## Methods
 
-### Visible(System.Boolean)
+### Visible(`System.Boolean`)
 Sets the line visibility
 
 

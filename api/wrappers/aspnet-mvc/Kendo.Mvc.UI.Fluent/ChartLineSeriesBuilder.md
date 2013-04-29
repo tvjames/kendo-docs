@@ -11,7 +11,7 @@ Defines the fluent interface for configuring line series.
 
 ## Methods
 
-### Stack(System.Boolean)
+### Stack(`System.Boolean`)
 Sets a value indicating if the lines should be stacked.
 
 
@@ -32,7 +32,7 @@ A value indicating if the lines should be stacked.
 
 
 
-### Aggregate(Kendo.Mvc.UI.ChartSeriesAggregate)
+### Aggregate(`Kendo.Mvc.UI.ChartSeriesAggregate`)
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
@@ -54,7 +54,7 @@ Aggregate function name.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>)
+### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>`)
 Configures the line chart labels.
 
 
@@ -81,7 +81,7 @@ The configuration action.
 
 
 
-### Labels(System.Boolean)
+### Labels(`System.Boolean`)
 Sets the visibility of line chart labels.
 
 
@@ -105,7 +105,7 @@ The visibility. The default value is false.
 
 
 
-### Width(System.Double)
+### Width(`System.Double`)
 Sets the line chart line width.
 
 
@@ -127,7 +127,7 @@ The line width.
 
 
 
-### DashType(Kendo.Mvc.UI.ChartDashType)
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
 Sets the line chart line dash type.
 
 
@@ -149,7 +149,7 @@ The line dash type.
 
 
 
-### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>)
+### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
 Configures the line chart markers.
 
 
@@ -175,7 +175,7 @@ The configuration action.
 
 
 
-### Markers(System.Boolean)
+### Markers(`System.Boolean`)
 Sets the visibility of line chart markers.
 
 
@@ -199,7 +199,7 @@ The visibility. The default value is true.
 
 
 
-### MissingValues(Kendo.Mvc.UI.ChartLineMissingValues)
+### MissingValues(`Kendo.Mvc.UI.ChartLineMissingValues`)
 Configures the behavior for handling missing values in line series.
 
 

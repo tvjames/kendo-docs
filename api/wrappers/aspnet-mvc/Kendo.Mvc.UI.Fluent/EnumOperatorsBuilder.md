@@ -18,7 +18,7 @@ Clears the options. Supported only in conjunction with custom messages.
 
 
 
-### IsEqualTo(System.String)
+### IsEqualTo(`System.String`)
 Sets the text for IsEqualTo operator filter menu item.
 
 
@@ -31,7 +31,7 @@ The message
 
 
 
-### IsNotEqualTo(System.String)
+### IsNotEqualTo(`System.String`)
 Sets the text for IsNotEqualTo operator filter menu item.
 
 

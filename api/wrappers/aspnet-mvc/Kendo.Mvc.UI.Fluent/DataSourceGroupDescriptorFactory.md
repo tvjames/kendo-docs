@@ -11,7 +11,7 @@ Defines the fluent interface for configuring group.
 
 ## Methods
 
-### AddT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
+### AddT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Specifies the member by which the data should be grouped.
 
 
@@ -24,7 +24,7 @@ Member access expression which describes the member
 
 
 
-### AddT1(System.String)
+### AddT1(`System.String`)
 Specifies the member by which the data should be grouped.
 
 
@@ -37,7 +37,7 @@ Member name
 
 
 
-### Add(System.String,System.Type)
+### Add(`System.String,System.Type`)
 Specifies the member by which the data should be grouped.
 
 
@@ -53,7 +53,7 @@ Member type
 
 
 
-### Add(System.String,System.Type,System.ComponentModel.ListSortDirection)
+### Add(`System.String,System.Type,System.ComponentModel.ListSortDirection`)
 Specifies the member by which the data should be grouped.
 
 
@@ -72,7 +72,7 @@ Sort order
 
 
 
-### AddT1(System.String,System.ComponentModel.ListSortDirection)
+### AddT1(`System.String,System.ComponentModel.ListSortDirection`)
 Specifies the member by which the data should be grouped.
 
 
@@ -91,7 +91,7 @@ Sort order
 
 
 
-### AddDescendingT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
+### AddDescendingT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Specifies the member by which the data should be sorted in descending order and grouped.
 
 
@@ -104,7 +104,7 @@ Member access expression which describes the member
 
 
 
-### AddDescendingT1(System.String)
+### AddDescendingT1(`System.String`)
 Specifies the member by which the data should be sorted in descending order and grouped.
 
 
@@ -117,7 +117,7 @@ Member name
 
 
 
-### AddDescending(System.String,System.Type)
+### AddDescending(`System.String,System.Type`)
 Specifies the member by which the data should be sorted in descending order and grouped.
 
 

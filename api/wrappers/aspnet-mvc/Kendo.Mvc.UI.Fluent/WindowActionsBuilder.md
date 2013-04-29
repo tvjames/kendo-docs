@@ -86,7 +86,7 @@ Configures the window to show a pin button.
 
 
 
-### Custom(System.String)
+### Custom(`System.String`)
 Configures the window to show a refresh button.
 
 

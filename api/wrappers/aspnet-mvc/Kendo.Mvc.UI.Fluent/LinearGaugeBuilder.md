@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the LinearGauge component.
 
 ## Methods
 
-### Theme(System.String)
+### Theme(`System.String`)
 Sets the theme of the linear gauge.
 
 
@@ -32,7 +32,7 @@ The linear gauge theme.
 
 
 
-### GaugeArea(System.Action\<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder>)
+### GaugeArea(`System.Action<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder>`)
 Sets the linear gauge area.
 
 
@@ -53,7 +53,7 @@ The linear gauge area.
 
 
 
-### Scale(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder>)
+### Scale(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder>`)
 Configures the scale
 
 
@@ -76,7 +76,7 @@ The configurator
 
 
 
-### Pointer(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder>)
+### Pointer(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder>`)
 Configures the pointer
 
 
@@ -99,7 +99,7 @@ The configurator
 
 
 
-### Transitions(System.Boolean)
+### Transitions(`System.Boolean`)
 Enables or disabled animated transitions on initial load and refresh.
 
 

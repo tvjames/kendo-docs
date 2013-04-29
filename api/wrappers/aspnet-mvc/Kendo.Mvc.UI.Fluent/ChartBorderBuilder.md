@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ChartElementBorder.
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the border color.
 
 
@@ -33,7 +33,7 @@ The border color (CSS format).
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the border opacity
 
 
@@ -55,7 +55,7 @@ The border opacity (CSS format).
 
 
 
-### Width(System.Int32)
+### Width(`System.Int32`)
 Sets the border width.
 
 
@@ -77,7 +77,7 @@ The border width.
 
 
 
-### DashType(Kendo.Mvc.UI.ChartDashType)
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
 Sets the border dashType.
 
 

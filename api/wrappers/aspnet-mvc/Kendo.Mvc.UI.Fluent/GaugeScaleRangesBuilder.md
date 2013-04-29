@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ranges.
 
 ## Methods
 
-### From(System.Double)
+### From(`System.Double`)
 Sets the ranges start position.
 
 
@@ -37,7 +37,7 @@ The ranges start position.
 
 
 
-### To(System.Double)
+### To(`System.Double`)
 Sets the ranges end position.
 
 
@@ -63,7 +63,7 @@ The ranges end position.
 
 
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the ranges color
 
 
@@ -89,7 +89,7 @@ The ranges color.
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the ranges opacity
 
 

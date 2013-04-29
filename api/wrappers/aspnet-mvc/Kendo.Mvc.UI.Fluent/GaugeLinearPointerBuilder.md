@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the GaugeLinearPointerBuilder.
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the pointer color.
 
 
@@ -35,7 +35,7 @@ The pointer color.
 
 
 
-### Shape(Kendo.Mvc.UI.GaugeLinearPointerShape)
+### Shape(`Kendo.Mvc.UI.GaugeLinearPointerShape`)
 Sets the pointer shape.
 
 
@@ -59,7 +59,7 @@ The pointer shape.
 
 
 
-### Margin(System.Int32,System.Int32,System.Int32,System.Int32)
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the pointer margin.
 
 
@@ -92,7 +92,7 @@ The pointer left margin.
 
 
 
-### Margin(System.Int32)
+### Margin(`System.Int32`)
 Sets the pointer margin.
 
 
@@ -116,7 +116,7 @@ The pointer margin.
 
 
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the pointer border
 
 
@@ -146,7 +146,7 @@ The pointer dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the pointer border
 
 
@@ -159,7 +159,7 @@ The border configuration action
 
 
 
-### Opacity(System.Double)
+### Opacity(`System.Double`)
 Sets the pointer opacity.
 
 
@@ -184,7 +184,7 @@ The pointer opacity in the range from 0 (transparent) to 1 (opaque).
 
 
 
-### Size(System.Double)
+### Size(`System.Double`)
 Sets the pointer size.
 
 
@@ -208,7 +208,7 @@ The pointer size.
 
 
 
-### Value(System.Double)
+### Value(`System.Double`)
 Sets the pointer value.
 
 
@@ -232,7 +232,7 @@ The pointer value.
 
 
 
-### Track(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearTrackBuilder>)
+### Track(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLinearTrackBuilder>`)
 Configures the pointer track.
 
 
