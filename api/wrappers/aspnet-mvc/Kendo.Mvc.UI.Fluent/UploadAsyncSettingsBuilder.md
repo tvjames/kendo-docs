@@ -219,7 +219,7 @@ The route values.
 
 
 
-### SaveT1(`System.Linq.Expressions.Expression<System.Action<T1>>`)
+### Save(`System.Linq.Expressions.Expression<System.Action<T1>>`)
 Sets the action for the save operation
 
 
@@ -472,7 +472,7 @@ The route values.
 
 
 
-### RemoveT1(`System.Linq.Expressions.Expression<System.Action<T1>>`)
+### Remove(`System.Linq.Expressions.Expression<System.Action<T1>>`)
 Sets the action for the remove operation
 
 

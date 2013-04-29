@@ -214,7 +214,7 @@ The view data key.
 
 
 
-### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.MenuItem,T1>`)
+### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.MenuItem,T1>`)
 Binds the menu to a list of objects. The menu will be "flat" which means a menu item will be created for
             every item in the data source.
 

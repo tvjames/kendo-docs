@@ -473,7 +473,7 @@ The attributes.
 
 
 
-### ActionT1(`System.Linq.Expressions.Expression<System.Action<T1>>`)
+### Action(`System.Linq.Expressions.Expression<System.Action<T1>>`)
 Makes the item navigate to the specified controllerAction method.
 
 

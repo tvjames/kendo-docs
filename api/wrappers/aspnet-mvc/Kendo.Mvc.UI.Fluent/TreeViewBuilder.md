@@ -248,7 +248,7 @@ The list of items
 
 
 
-### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.TreeViewItem,T1>`)
+### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.TreeViewItem,T1>`)
 Binds the TreeView to a list of objects. The TreeView will be "flat" which means a TreeView item will be created for
             every item in the data source.
 

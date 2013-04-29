@@ -16,7 +16,7 @@ The parent Chart
 
 ## Methods
 
-### BarT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### Bar(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bar series.
 
 
@@ -80,7 +80,7 @@ The data to bind to.
 
 
 
-### ColumnT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### Column(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound column series.
 
 
@@ -144,7 +144,7 @@ The data to bind to
 
 
 
-### LineT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### Line(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound line series.
 
 
@@ -199,7 +199,7 @@ The data to bind to
 
 
 
-### VerticalLineT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### VerticalLine(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound vertical line series.
 
 
@@ -254,7 +254,7 @@ The data to bind to
 
 
 
-### AreaT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### Area(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound area series.
 
 
@@ -309,7 +309,7 @@ The data to bind to
 
 
 
-### VerticalAreaT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### VerticalArea(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound vertical area series.
 
 
@@ -364,7 +364,7 @@ The data to bind to
 
 
 
-### ScatterT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### Scatter(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound scatter series.
 
 
@@ -428,7 +428,7 @@ The data to bind to
 
 
 
-### ScatterLineT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### ScatterLine(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound scatter line series.
 
 
@@ -492,7 +492,7 @@ The data to bind to
 
 
 
-### BubbleT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
+### Bubble(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
 Defines bound bubble series.
 
 
@@ -526,7 +526,7 @@ The data to bind to
 
 
 
-### PieT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
+### Pie(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
 Defines bound pie series.
 
 
@@ -560,7 +560,7 @@ The data to bind to
 
 
 
-### DonutT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
+### Donut(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
 Defines bound pie series.
 
 
@@ -594,28 +594,28 @@ The data to bind to
 
 
 
-### OHLCT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### OHLC(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound ohlc series.
 
 
 
 
 
-### OHLCT1(`System.String,System.String,System.String,System.String,System.String`)
+### OHLC(`System.String,System.String,System.String,System.String,System.String`)
 Defines bound ohlc series.
 
 
 
 
 
-### OHLCT1(`System.Type,System.String,System.String,System.String,System.String,System.String`)
+### OHLC(`System.Type,System.String,System.String,System.String,System.String,System.String`)
 Defines bound ohlc series.
 
 
 
 
 
-### OHLCT1(`System.Collections.IEnumerable`)
+### OHLC(`System.Collections.IEnumerable`)
 Defines ohlc series bound to inline data.
 
 
@@ -628,28 +628,28 @@ The data to bind to
 
 
 
-### CandlestickT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### Candlestick(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound candlestick series.
 
 
 
 
 
-### CandlestickT1(`System.String,System.String,System.String,System.String,System.String,System.String`)
+### Candlestick(`System.String,System.String,System.String,System.String,System.String,System.String`)
 Defines bound candlestick series.
 
 
 
 
 
-### CandlestickT1(`System.Type,System.String,System.String,System.String,System.String,System.String,System.String`)
+### Candlestick(`System.Type,System.String,System.String,System.String,System.String,System.String,System.String`)
 Defines bound candlestick series.
 
 
 
 
 
-### CandlestickT1(`System.Collections.IEnumerable`)
+### Candlestick(`System.Collections.IEnumerable`)
 Defines candlestick series bound to inline data.
 
 
@@ -662,7 +662,7 @@ The data to bind to
 
 
 
-### BulletT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### Bullet(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bullet series.
 
 
@@ -732,7 +732,7 @@ The data to bind to.
 
 
 
-### VerticalBulletT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### VerticalBullet(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound verticalBullet series.
 
 

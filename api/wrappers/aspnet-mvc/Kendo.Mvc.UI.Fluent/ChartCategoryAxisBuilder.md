@@ -16,7 +16,7 @@ The parent Chart
 
 ## Methods
 
-### CategoriesT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### Categories(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound categories.
 
 

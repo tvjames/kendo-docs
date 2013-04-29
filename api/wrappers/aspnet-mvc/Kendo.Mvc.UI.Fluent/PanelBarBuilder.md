@@ -106,7 +106,7 @@ The view data key.
 
 
 
-### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.PanelBarItem,T1>`)
+### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.PanelBarItem,T1>`)
 Binds the panelbar to a list of objects
 
 
