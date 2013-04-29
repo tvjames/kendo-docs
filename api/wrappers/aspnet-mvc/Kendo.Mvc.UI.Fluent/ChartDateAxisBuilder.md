@@ -153,7 +153,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.DateTime\>)
+### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.DateTime>)
 Sets value at which perpendicular axes cross this axis.
 
 
@@ -178,7 +178,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>)
 Configures the axis labels.
 
 

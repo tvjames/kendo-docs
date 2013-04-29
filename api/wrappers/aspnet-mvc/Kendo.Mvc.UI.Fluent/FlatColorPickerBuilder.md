@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the DatePickerBase component.
 
 ## Methods
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.SimpleColorPickerEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.SimpleColorPickerEventBuilder>)
 Configures the client-side events.
 
 

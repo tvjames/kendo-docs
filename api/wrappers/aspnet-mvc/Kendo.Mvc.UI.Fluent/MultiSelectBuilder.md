@@ -42,7 +42,7 @@ Sets the field of the data item that provides the value content of the list item
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.MultiSelectEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.MultiSelectEventBuilder>)
 Configures the client-side events.
 
 
@@ -95,7 +95,7 @@ Use it to enable filtering of items.
 
 
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory\>)
+### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory>)
 Defines the items in the MultiSelect
 
 

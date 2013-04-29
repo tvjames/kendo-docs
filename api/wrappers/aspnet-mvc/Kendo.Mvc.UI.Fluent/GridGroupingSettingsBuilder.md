@@ -11,7 +11,7 @@ Defines the fluent interface for configuring GridGroupableSettings.
 
 ## Methods
 
-### Messages(System.Action\<Kendo.Mvc.UI.Fluent.GroupingMessagesBuilder\>)
+### Messages(System.Action\<Kendo.Mvc.UI.Fluent.GroupingMessagesBuilder>)
 Configures messages.
 
 

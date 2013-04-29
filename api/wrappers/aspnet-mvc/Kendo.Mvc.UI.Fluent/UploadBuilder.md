@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the Upload component.
 
 ## Methods
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.UploadEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.UploadEventBuilder>)
 Configures the client-side events.
 
 
@@ -90,7 +90,7 @@ true if the list of uploaded files should be visible, false otherwise; true by d
 
 
 
-### Async(System.Action\<Kendo.Mvc.UI.Fluent.UploadAsyncSettingsBuilder\>)
+### Async(System.Action\<Kendo.Mvc.UI.Fluent.UploadAsyncSettingsBuilder>)
 Use it to configure asynchronous uploading.
 
 
@@ -114,7 +114,7 @@ Use builder to set different asynchronous uploading options.
 
 
 
-### Messages(System.Action\<Kendo.Mvc.UI.Fluent.UploadMessagesBuilder\>)
+### Messages(System.Action\<Kendo.Mvc.UI.Fluent.UploadMessagesBuilder>)
 Use it to configure asynchronous uploading.
 
 

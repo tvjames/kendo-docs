@@ -26,7 +26,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Change(System.Func\<System.Object,System.Object\>)
+### Change(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Change client-side event.
 
 For additional information check the [change](/api/framework/datasource#events-change) event documentation.
@@ -56,7 +56,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Sync(System.Func\<System.Object,System.Object\>)
+### Sync(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Sync client-side event.
 
 For additional information check the [sync](/api/framework/datasource#events-sync) event documentation.
@@ -86,7 +86,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### RequestStart(System.Func\<System.Object,System.Object\>)
+### RequestStart(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the RequestStart client-side event.
 
 For additional information check the [requestStart](/api/framework/datasource#events-requestStart) event documentation.
@@ -116,7 +116,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### RequestEnd(System.Func\<System.Object,System.Object\>)
+### RequestEnd(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the RequestEnd client-side event.
 
 For additional information check the [requestEnd](/api/framework/datasource#events-requestEnd) event documentation.
@@ -146,7 +146,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Error(System.Func\<System.Object,System.Object\>)
+### Error(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Error client-side event.
 
 For additional information check the [error](/api/framework/datasource#events-error) event documentation.

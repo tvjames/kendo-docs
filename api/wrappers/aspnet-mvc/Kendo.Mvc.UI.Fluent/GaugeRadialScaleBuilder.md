@@ -62,7 +62,7 @@ The start Angle.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialScaleLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialScaleLabelsBuilder>)
 Configures the labels.
 
 

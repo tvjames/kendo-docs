@@ -95,7 +95,7 @@ The Sparkline per-point width.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder>)
 Configures the client-side events.
 
 
@@ -139,7 +139,7 @@ The Sparkline theme.
 
 
 
-### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder\>)
+### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder>)
 Sets the Chart area.
 
 
@@ -160,7 +160,7 @@ The Chart area.
 
 
 
-### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder\>)
+### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder>)
 Sets the Plot area.
 
 
@@ -181,7 +181,7 @@ The Plot area.
 
 
 
-### Series(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesFactory\<T\>\>)
+### Series(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesFactory<T>>)
 Defines the chart series.
 
 
@@ -205,7 +205,7 @@ The add action.
 
 
 
-### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesDefaultsBuilder\<T\>\>)
+### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.SparklineSeriesDefaultsBuilder<T>>)
 Defines the options for all chart series of the specified type.
 
 
@@ -226,7 +226,7 @@ The configurator.
 
 
 
-### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder\<T\>\>)
+### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder<T>>)
 Defines the options for all chart axes of the specified type.
 
 
@@ -247,7 +247,7 @@ The configurator.
 
 
 
-### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder\<T\>\>)
+### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder<T>>)
 Configures the category axis
 
 
@@ -270,7 +270,7 @@ The configurator
 
 
 
-### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
+### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory<T>>)
 Defines value axis options
 
 
@@ -291,7 +291,7 @@ The configurator
 
 
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder\<T\>\>)
+### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder<T>>)
 Data Source configuration
 
 
@@ -342,7 +342,7 @@ Gets or sets a value indicating if the chart
 
 
 
-### SeriesColors(System.Collections.Generic.IEnumerable\<System.String\>)
+### SeriesColors(System.Collections.Generic.IEnumerable\<System.String>)
 Sets the series colors.
 
 
@@ -384,7 +384,7 @@ The series colors.
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
+### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
 Use it to configure the data point tooltip.
 
 

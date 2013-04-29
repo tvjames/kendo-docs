@@ -172,7 +172,7 @@ The bar bullet color (CSS syntax).
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
+### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
 Configure the data point tooltip for the series.
 
 
@@ -244,7 +244,7 @@ The axis name for this series.
 
 
 
-### Target(System.Action\<Kendo.Mvc.UI.Fluent.ChartBulletTargetBuilder\>)
+### Target(System.Action\<Kendo.Mvc.UI.Fluent.ChartBulletTargetBuilder>)
 Configure the data point tooltip for the series.
 
 

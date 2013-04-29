@@ -55,7 +55,7 @@ Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data item type.
 
 
 
-### GridT1(System.Collections.Generic.IEnumerable\<T1\>)
+### GridT1(System.Collections.Generic.IEnumerable\<T1>)
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data source.
 
 
@@ -136,7 +136,7 @@ Creates a new !:UI.ListView{T} bound to the specified data item type.
 
 
 
-### ListViewT1(System.Collections.Generic.IEnumerable\<T1\>)
+### ListViewT1(System.Collections.Generic.IEnumerable\<T1>)
 Creates a new !:ListView{T} bound to the specified data source.
 
 
@@ -631,7 +631,7 @@ Creates a !:Kendo.Mvc.UI.Chart{T}
 
 
 
-### ChartT1(System.Collections.Generic.IEnumerable\<T1\>)
+### ChartT1(System.Collections.Generic.IEnumerable\<T1>)
 Creates a new !:Kendo.Mvc.UI.Chart{T} bound to the specified data source.
 
 
@@ -702,7 +702,7 @@ Creates a !:Kendo.Mvc.UI.StockChart{T}
 
 
 
-### StockChartT1(System.Collections.Generic.IEnumerable\<T1\>)
+### StockChartT1(System.Collections.Generic.IEnumerable\<T1>)
 Creates a new !:Kendo.Mvc.UI.StockChart{T} bound to the specified data source.
 
 
@@ -773,7 +773,7 @@ Creates a !:Kendo.Mvc.UI.Sparkline{T}
 
 
 
-### SparklineT1(System.Collections.Generic.IEnumerable\<T1\>)
+### SparklineT1(System.Collections.Generic.IEnumerable\<T1>)
 Creates a new !:Kendo.Mvc.UI.Sparkline{T} bound to the specified data source.
 
 

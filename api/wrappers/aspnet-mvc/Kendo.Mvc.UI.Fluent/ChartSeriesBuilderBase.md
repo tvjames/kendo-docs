@@ -110,7 +110,39 @@ The bar fill color (CSS syntax).
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
+### Color(System.Func\<System.Object,System.Object>)
+Sets the function used to retrieve point color.
+
+
+#### Example
+
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+        .Bar(s => s.Sales)
+        .Color(
+        @<text>
+        function(point) {
+        return point.value > 5 ? "red" : "green";
+        }
+        </text>
+        )
+        )
+        .Render();
+    %>
+        
+
+
+#### Parameters
+
+##### colorFunction `System.Func<System.Object,System.Object>`
+The JavaScript function that will be executed
+            to retrieve the color of each point.
+
+
+
+
+### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
 Configure the data point tooltip for the series.
 
 
@@ -182,7 +214,7 @@ The axis name for this series.
 
 
 
-### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder\>)
+### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder>)
 Configures the series highlight
 
 

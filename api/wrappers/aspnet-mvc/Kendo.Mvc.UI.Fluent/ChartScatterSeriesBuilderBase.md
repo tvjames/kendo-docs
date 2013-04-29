@@ -11,7 +11,7 @@ Defines the fluent interface for configuring scatter series.
 
 ## Methods
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>)
 Configures the scatter chart labels.
 
 
@@ -62,7 +62,7 @@ The visibility. The default value is false.
 
 
 
-### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder\>)
+### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>)
 Configures the scatter chart markers.
 
 

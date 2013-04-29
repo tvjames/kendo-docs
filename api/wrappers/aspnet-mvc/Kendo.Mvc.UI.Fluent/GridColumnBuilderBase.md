@@ -58,7 +58,7 @@ The attributes.
 
 
 
-### HeaderHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### HeaderHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes applied to the header cell of the column.
 
 
@@ -100,7 +100,7 @@ The attributes.
 
 
 
-### FooterHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### FooterHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes applied to the footer cell of the column.
 
 
@@ -142,7 +142,7 @@ The attributes.
 
 
 
-### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes applied to the content cell of the column.
 
 
@@ -299,7 +299,7 @@ The string defining the template.
 
 
 
-### HeaderTemplate(System.Func\<System.Object,System.Object\>)
+### HeaderTemplate(System.Func\<System.Object,System.Object>)
 Sets the header template for the column.
 
 
@@ -338,7 +338,7 @@ The string defining the template.
 
 
 
-### FooterTemplate(System.Func\<System.Object,System.Object\>)
+### FooterTemplate(System.Func\<System.Object,System.Object>)
 Sets the footer template for the column.
 
 

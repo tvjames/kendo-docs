@@ -29,7 +29,7 @@ The pane title.
 
 
 
-### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartTitleBuilder\>)
+### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartTitleBuilder>)
 Defines the title of the pane.
 
 
@@ -157,7 +157,7 @@ The pane dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the pane border
 
 

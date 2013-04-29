@@ -26,7 +26,7 @@ Specifies the culture info used by the Calendar widget.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.CalendarEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.CalendarEventBuilder>)
 Configures the client-side events.
 
 
@@ -146,7 +146,7 @@ Templates for the cells rendered in the "month" view.
 
 
 
-### MonthTemplate(System.Action\<Kendo.Mvc.UI.Fluent.MonthTemplateBuilder\>)
+### MonthTemplate(System.Action\<Kendo.Mvc.UI.Fluent.MonthTemplateBuilder>)
 Configures the content of cells of the Calendar.
 
 
@@ -189,7 +189,7 @@ Sets the maximal date, which can be selected in the calendar
 
 
 
-### Value(System.Nullable\<System.DateTime\>)
+### Value(System.Nullable\<System.DateTime>)
 Sets the value of the calendar
 
 
@@ -203,7 +203,7 @@ Sets the value of the calendar
 
 
 
-### Selection(System.Action\<Kendo.Mvc.UI.Fluent.CalendarSelectionSettingsBuilder\>)
+### Selection(System.Action\<Kendo.Mvc.UI.Fluent.CalendarSelectionSettingsBuilder>)
 Configures the selection settings of the calendar.
 
 

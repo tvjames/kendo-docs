@@ -42,7 +42,7 @@ The attributes.
 
 
 
-### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes applied to the outer HTML element rendered for the item
 
 
@@ -361,7 +361,7 @@ The attributes.
 
 
 
-### ImageHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### ImageHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes for the item image.
 
 
@@ -410,7 +410,7 @@ The action which renders the content.
 
 
 
-### Content(System.Func\<System.Object,System.Object\>)
+### Content(System.Func\<System.Object,System.Object>)
 Sets the HTML content which the item should display.
 
 
@@ -460,7 +460,7 @@ The attributes.
 
 
 
-### ContentHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### ContentHtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes of the content element of the item.
 
 
@@ -473,7 +473,7 @@ The attributes.
 
 
 
-### ActionT1(System.Linq.Expressions.Expression\<System.Action\<T1\>\>)
+### ActionT1(System.Linq.Expressions.Expression\<System.Action<T1>>)
 Makes the item navigate to the specified controllerAction method.
 
 

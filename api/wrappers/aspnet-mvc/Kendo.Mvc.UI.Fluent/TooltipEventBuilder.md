@@ -11,7 +11,7 @@ Defines the fluent interface for configuring tooltip client events.
 
 ## Methods
 
-### Show(System.Func\<System.Object,System.Object\>)
+### Show(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Show client-side event
 
 For additional information check the [show](/api/web/tooltip#events-show) event documentation.
@@ -63,7 +63,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Hide(System.Func\<System.Object,System.Object\>)
+### Hide(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Hide client-side event
 
 For additional information check the [hide](/api/web/tooltip#events-hide) event documentation.
@@ -115,7 +115,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### ContentLoad(System.Func\<System.Object,System.Object\>)
+### ContentLoad(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the ContentLoad client-side event
 
 For additional information check the [contentLoad](/api/web/tooltip#events-contentLoad) event documentation.
@@ -167,7 +167,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Error(System.Func\<System.Object,System.Object\>)
+### Error(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Error client-side event
 
 For additional information check the [error](/api/web/tooltip#events-error) event documentation.
@@ -219,7 +219,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### RequestStart(System.Func\<System.Object,System.Object\>)
+### RequestStart(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the RequestStart client-side event
 
 For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.

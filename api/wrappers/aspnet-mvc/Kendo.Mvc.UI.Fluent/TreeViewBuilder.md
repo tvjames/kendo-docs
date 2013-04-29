@@ -107,7 +107,7 @@ Whether checkboxes should be rendered.
 
 
 
-### Checkboxes(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewCheckboxesBuilder\>)
+### Checkboxes(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewCheckboxesBuilder>)
 Configures rendering of checkboxes in the treeview.
 
 
@@ -130,7 +130,7 @@ Builder of the treeview checkboxes configuration.
 
 
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory\>)
+### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory>)
 Defines the items in the TreeView
 
 
@@ -155,7 +155,7 @@ The add action.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewEventBuilder>)
 Configures the client-side events.
 
 
@@ -179,7 +179,7 @@ The client events action.
 
 
 
-### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TreeViewItem,Kendo.Mvc.SiteMapNode\>)
+### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TreeViewItem,Kendo.Mvc.SiteMapNode>)
 Binds the TreeView to a sitemap
 
 
@@ -226,7 +226,7 @@ The view data key.
 
 
 
-### BindTo(System.Collections.Generic.IEnumerable\<Kendo.Mvc.UI.TreeViewItemModel\>)
+### BindTo(System.Collections.Generic.IEnumerable\<Kendo.Mvc.UI.TreeViewItemModel>)
 Binds the TreeView to a list of items.
             Use if a hierarchy of items is being sent from the controller; to bind the TreeView declaratively, use the Items() method.
 
@@ -248,7 +248,7 @@ The list of items
 
 
 
-### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.TreeViewItem,T1\>)
+### BindToT1(System.Collections.Generic.IEnumerable\<T1>,System.Action<Kendo.Mvc.UI.TreeViewItem,T1>)
 Binds the TreeView to a list of objects. The TreeView will be "flat" which means a TreeView item will be created for
             every item in the data source.
 
@@ -276,7 +276,7 @@ The action executed for every data bound item.
 
 
 
-### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory\<Kendo.Mvc.UI.TreeViewItem\>\>)
+### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory<Kendo.Mvc.UI.TreeViewItem>>)
 Binds the TreeView to a list of objects. The TreeView will create a hierarchy of items using the specified mappings.
 
 
@@ -309,7 +309,7 @@ The action which will configure the mappings
 
 
 
-### ItemAction(System.Action\<Kendo.Mvc.UI.TreeViewItem\>)
+### ItemAction(System.Action\<Kendo.Mvc.UI.TreeViewItem>)
 Callback for each item.
 
 
@@ -377,7 +377,7 @@ The boolean value.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder\>)
+### Animation(System.Action\<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder>)
 Configures the animation effects of the widget.
 
 
@@ -472,7 +472,7 @@ If true security trimming is enabled.
 
 
 
-### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder\>)
+### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder>)
 Defines the security trimming functionality of the component
 
 
@@ -580,7 +580,7 @@ The field name.
 
 
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyDataSourceBuilder\>)
+### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyDataSourceBuilder>)
 Configure the DataSource of the component
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the Menu events.
 
 ## Methods
 
-### Open(System.Func\<System.Object,System.Object\>)
+### Open(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Open client-side event
 
 For additional information check the [open](/api/web/menu#events-open) event documentation.
@@ -64,7 +64,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Close(System.Func\<System.Object,System.Object\>)
+### Close(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Close client-side event
 
 For additional information check the [close](/api/web/menu#events-close) event documentation.
@@ -117,7 +117,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Activate(System.Func\<System.Object,System.Object\>)
+### Activate(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Activate client-side event
 
 For additional information check the [activate](/api/web/menu#events-activate) event documentation.
@@ -170,7 +170,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Deactivate(System.Func\<System.Object,System.Object\>)
+### Deactivate(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Deactivate client-side event
 
 For additional information check the [deactivate](/api/web/menu#events-deactivate) event documentation.
@@ -223,7 +223,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Select(System.Func\<System.Object,System.Object\>)
+### Select(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Select client-side event
 
 For additional information check the [select](/api/web/menu#events-select) event documentation.

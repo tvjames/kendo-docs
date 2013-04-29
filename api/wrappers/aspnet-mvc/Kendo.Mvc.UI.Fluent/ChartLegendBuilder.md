@@ -280,7 +280,7 @@ The legend border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the legend border
 
 
@@ -289,6 +289,19 @@ Configures the legend border
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
 The border configuration action
+
+
+
+
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartLegendLabelsBuilder>)
+Configures the legend labels
+
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartLegendLabelsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartLegendLabelsBuilder)>
+The labels configuration action
 
 
 

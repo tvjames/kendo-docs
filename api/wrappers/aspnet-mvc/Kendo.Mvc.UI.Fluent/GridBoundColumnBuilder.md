@@ -128,7 +128,7 @@ Enables or disables HTML encoding the data of the column. All bound columns are 
 
 
 
-### Template(System.Action\<T\>)
+### Template(System.Action\<T>)
 Sets the template for the column.
 
 
@@ -160,7 +160,7 @@ The action defining the template.
 
 
 
-### Template(System.Func\<T,System.Object\>)
+### Template(System.Func\<T,System.Object>)
 Sets the template for the column.
 
 
@@ -224,7 +224,7 @@ The template
 
 
 
-### FooterTemplate(System.Action\<Kendo.Mvc.UI.GridAggregateResult\>)
+### FooterTemplate(System.Action\<Kendo.Mvc.UI.GridAggregateResult>)
 Sets the footer template for the column.
 
 
@@ -237,7 +237,7 @@ The action defining the template.
 
 
 
-### FooterTemplate(System.Func\<Kendo.Mvc.UI.GridAggregateResult,System.Object\>)
+### FooterTemplate(System.Func\<Kendo.Mvc.UI.GridAggregateResult,System.Object>)
 Sets the footer template for the column.
 
 
@@ -250,7 +250,7 @@ The action defining the template.
 
 
 
-### GroupFooterTemplate(System.Action\<Kendo.Mvc.UI.GridAggregateResult\>)
+### GroupFooterTemplate(System.Action\<Kendo.Mvc.UI.GridAggregateResult>)
 Sets the group footer template for the column.
 
 
@@ -263,7 +263,7 @@ The action defining the template.
 
 
 
-### GroupFooterTemplate(System.Func\<Kendo.Mvc.UI.GridAggregateResult,System.Object\>)
+### GroupFooterTemplate(System.Func\<Kendo.Mvc.UI.GridAggregateResult,System.Object>)
 Sets the group footer template for the column.
 
 
@@ -276,7 +276,7 @@ The action defining the template.
 
 
 
-### GroupHeaderTemplate(System.Action\<Kendo.Mvc.UI.GridGroupAggregateResult\>)
+### GroupHeaderTemplate(System.Action\<Kendo.Mvc.UI.GridGroupAggregateResult>)
 Sets the group footer template for the column.
 
 
@@ -289,7 +289,7 @@ The action defining the template.
 
 
 
-### GroupHeaderTemplate(System.Func\<Kendo.Mvc.UI.GridGroupAggregateResult,System.Object\>)
+### GroupHeaderTemplate(System.Func\<Kendo.Mvc.UI.GridGroupAggregateResult,System.Object>)
 Sets the group footer template for the column.
 
 

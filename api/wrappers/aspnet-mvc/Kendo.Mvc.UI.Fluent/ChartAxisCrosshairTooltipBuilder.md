@@ -267,7 +267,7 @@ The tooltip border color (CSS syntax).
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the tooltip border
 
 

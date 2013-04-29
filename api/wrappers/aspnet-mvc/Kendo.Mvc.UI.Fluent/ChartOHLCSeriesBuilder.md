@@ -11,7 +11,7 @@ Defines the fluent interface for configuring bar series.
 
 ## Methods
 
-### Aggregate(System.Nullable\<Kendo.Mvc.UI.ChartSeriesAggregate\>,System.Nullable\<Kendo.Mvc.UI.ChartSeriesAggregate\>,System.Nullable\<Kendo.Mvc.UI.ChartSeriesAggregate\>,System.Nullable\<Kendo.Mvc.UI.ChartSeriesAggregate\>)
+### Aggregate(System.Nullable\<Kendo.Mvc.UI.ChartSeriesAggregate>,System.Nullable<Kendo.Mvc.UI.ChartSeriesAggregate>,System.Nullable<Kendo.Mvc.UI.ChartSeriesAggregate>,System.Nullable<Kendo.Mvc.UI.ChartSeriesAggregate>)
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
@@ -171,7 +171,7 @@ The lines color.
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder\>)
+### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>)
 Configures the ohlc chart lines.
 
 
@@ -196,7 +196,7 @@ The configuration action.
 
 
 
-### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartOHLCSeriesHighlightBuilder\>)
+### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartOHLCSeriesHighlightBuilder>)
 Configures the series highlight
 
 

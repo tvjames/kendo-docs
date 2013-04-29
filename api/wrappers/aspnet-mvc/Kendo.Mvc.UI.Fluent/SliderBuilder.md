@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:Slider{T}component.
 
 ## Methods
 
-### Value(System.Nullable\<T\>)
+### Value(System.Nullable\<T>)
 Sets the value of the slider.
 
 
@@ -32,7 +32,7 @@ Sets the title of the slider increase button.
 
 
 
-### ShowButtons(System.Nullable\<System.Boolean\>)
+### ShowButtons(System.Nullable\<System.Boolean>)
 Sets whether slider to be rendered with increase/decrease button.
 
 
@@ -95,7 +95,7 @@ Display tooltip while drag.
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.SliderTooltipBuilder\>)
+### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.SliderTooltipBuilder>)
 Use it to configure tooltip.
 
 
@@ -119,7 +119,7 @@ Use builder to set different tooltip options.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.SliderEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.SliderEventBuilder>)
 Configures the client-side events.
 
 

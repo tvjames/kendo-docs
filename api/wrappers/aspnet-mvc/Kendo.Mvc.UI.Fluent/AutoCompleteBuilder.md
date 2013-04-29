@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the AutoComplete component.
 
 ## Methods
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.AutoCompleteEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.AutoCompleteEventBuilder>)
 Configures the client-side events.
 
 

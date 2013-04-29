@@ -45,7 +45,7 @@ The lines color.
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder\>)
+### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>)
 Configures the OHLC highlight chart lines.
 
 

@@ -16,7 +16,7 @@ The parent Chart
 
 ## Methods
 
-### Categories(System.Linq.Expressions.Expression\<System.Func\<T,System.DateTime\>\>)
+### Categories(System.Linq.Expressions.Expression\<System.Func<T,System.DateTime>>)
 Defines bound categories.
 
 
@@ -29,7 +29,7 @@ The expression used to extract the categories value from the chart model
 
 
 
-### Categories(System.Collections.Generic.IEnumerable\<System.DateTime\>)
+### Categories(System.Collections.Generic.IEnumerable\<System.DateTime>)
 Defines categories.
 
 
@@ -140,7 +140,7 @@ Positions categories and series points on major ticks. This removes the empty sp
 
 
 
-### AutoBaseUnitSteps(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisBaseUnitStepsBuilder\>)
+### AutoBaseUnitSteps(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisBaseUnitStepsBuilder>)
 Specifies the discrete baseUnitStep values when
             either BaseUnit is set to Fit or BaseUnitStep is set to 0 (auto).
 
@@ -226,7 +226,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.Double\>)
+### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.Double>)
 Sets value at which perpendicular axes cross this axis.
 
 
@@ -249,7 +249,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>)
 Configures the axis labels.
 
 
@@ -276,7 +276,7 @@ The configuration action.
 
 
 
-### Select(System.Nullable\<System.DateTime\>,System.Nullable\<System.DateTime\>)
+### Select(System.Nullable\<System.DateTime>,System.Nullable<System.DateTime>)
 Sets the selection range
 
 
@@ -303,7 +303,7 @@ The selection range end.
 
 
 
-### Select(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisSelectionBuilder\>)
+### Select(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisSelectionBuilder>)
 Configures the selection
 
 

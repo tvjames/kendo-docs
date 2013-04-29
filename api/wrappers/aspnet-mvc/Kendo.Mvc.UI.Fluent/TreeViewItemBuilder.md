@@ -11,7 +11,7 @@ Defines the fluent interface for configuring child TreeView items.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory\>)
+### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory>)
 Configures the child items of a TreeViewItem.
 
 

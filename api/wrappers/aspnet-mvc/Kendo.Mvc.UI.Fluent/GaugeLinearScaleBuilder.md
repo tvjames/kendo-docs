@@ -62,7 +62,7 @@ The vertical.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearScaleLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearScaleLabelsBuilder>)
 Configures the labels.
 
 

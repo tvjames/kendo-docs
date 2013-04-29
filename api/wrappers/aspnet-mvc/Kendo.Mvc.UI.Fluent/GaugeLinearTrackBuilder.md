@@ -113,7 +113,7 @@ The pointer dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the track border
 
 

@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:RangeSlider{T}component.
 
 ## Methods
 
-### Values(System.Nullable\<T\>,System.Nullable\<T\>)
+### Values(System.Nullable\<T>,System.Nullable<T>)
 Sets the value of the range slider.
 
 
@@ -74,7 +74,7 @@ Display tooltip while drag.
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.SliderTooltipBuilder\>)
+### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.SliderTooltipBuilder>)
 Use it to configure tooltip while drag.
 
 
@@ -98,7 +98,7 @@ Use builder to set different tooltip options.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.RangeSliderEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.RangeSliderEventBuilder>)
 Configures the client-side events.
 
 

@@ -11,7 +11,7 @@ Provides extension methods to process DataSourceRequest.
 
 ## Methods
 
-### Sort(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.SortDescriptor\>)
+### Sort(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.SortDescriptor>)
 Sorts the elements of a sequence using the specified sort descriptors.
 
 
@@ -131,7 +131,7 @@ A function to extract a key from an element.
 An IQueryable whose elements are sorted in descending order according to a key.
 
 
-### OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression,System.Nullable\<System.ComponentModel.ListSortDirection\>)
+### OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression,System.Nullable\<System.ComponentModel.ListSortDirection>)
 Calls M:Kendo.Mvc.Extensions.QueryableExtensions.OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)
             or M:Kendo.Mvc.Extensions.QueryableExtensions.OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression) depending on the .
 
@@ -154,7 +154,7 @@ The sort direction.
 An IQueryable whose elements are sorted according to a key.
 
 
-### GroupBy(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.GroupDescriptor\>)
+### GroupBy(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.GroupDescriptor>)
 Groups the elements of a sequence according to a specified .
 
 
@@ -174,7 +174,7 @@ An IQueryable with IGroup items,
             whose elements contains a sequence of objects and a key.
 
 
-### Aggregate(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.AggregateFunction\>)
+### Aggregate(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.AggregateFunction>)
 Calculates the results of given aggregates functions on a sequence of elements.
 
 
@@ -214,7 +214,7 @@ An IQueryable that contains elements from the input sequence
             that satisfy the condition specified by .
 
 
-### Where(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.IFilterDescriptor\>)
+### Where(System.Linq.IQueryable,System.Collections.Generic.IEnumerable\<Kendo.Mvc.IFilterDescriptor>)
 Filters a sequence of values based on a collection of IFilterDescriptor.
 
 

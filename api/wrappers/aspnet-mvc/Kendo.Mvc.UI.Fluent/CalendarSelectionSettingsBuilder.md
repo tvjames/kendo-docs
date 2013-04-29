@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the SelectionSettings.
 
 ## Methods
 
-### Dates(System.Collections.Generic.IList\<System.DateTime\>)
+### Dates(System.Collections.Generic.IList\<System.DateTime>)
 Defines list of dates. This list determines which dates to be rendered with action link.
 
 

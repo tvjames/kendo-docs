@@ -38,7 +38,7 @@ The candlestick effects overlay. The default is ChartBarSeriesOverlay.Glass
 
 
 
-### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartCandlestickSeriesHighlightBuilder\>)
+### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartCandlestickSeriesHighlightBuilder>)
 Configures the series highlight
 
 

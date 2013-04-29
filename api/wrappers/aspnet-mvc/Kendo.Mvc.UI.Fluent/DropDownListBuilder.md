@@ -27,7 +27,7 @@ Sets the field of the data item that provides the value content of the list item
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListEventBuilder>)
 Configures the client-side events.
 
 
@@ -50,7 +50,7 @@ The client events action.
 
 
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory\>)
+### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory>)
 Defines the items in the DropDownList
 
 

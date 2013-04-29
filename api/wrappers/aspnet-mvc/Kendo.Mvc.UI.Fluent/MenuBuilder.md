@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the Menu component.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.MenuItemFactory\>)
+### Items(System.Action\<Kendo.Mvc.UI.Fluent.MenuItemFactory>)
 Defines the items in the menu
 
 
@@ -36,7 +36,7 @@ The add action.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.MenuEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.MenuEventBuilder>)
 Configures the client-side events.
 
 
@@ -167,7 +167,7 @@ Specifies the delay in ms before the menu is opened/closed - used to avoid accid
 
 
 
-### BindTo(System.String,System.Action\<Kendo.Mvc.UI.MenuItem,Kendo.Mvc.SiteMapNode\>)
+### BindTo(System.String,System.Action\<Kendo.Mvc.UI.MenuItem,Kendo.Mvc.SiteMapNode>)
 Binds the menu to a sitemap
 
 
@@ -214,7 +214,7 @@ The view data key.
 
 
 
-### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.MenuItem,T1\>)
+### BindToT1(System.Collections.Generic.IEnumerable\<T1>,System.Action<Kendo.Mvc.UI.MenuItem,T1>)
 Binds the menu to a list of objects. The menu will be "flat" which means a menu item will be created for
             every item in the data source.
 
@@ -242,7 +242,7 @@ The action executed for every data bound item.
 
 
 
-### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory\<Kendo.Mvc.UI.MenuItem\>\>)
+### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory<Kendo.Mvc.UI.MenuItem>>)
 Binds the menu to a list of objects. The menu will create a hierarchy of items using the specified mappings.
 
 
@@ -275,7 +275,7 @@ The action which will configure the mappings
 
 
 
-### ItemAction(System.Action\<Kendo.Mvc.UI.MenuItem\>)
+### ItemAction(System.Action\<Kendo.Mvc.UI.MenuItem>)
 Callback for each item.
 
 
@@ -343,7 +343,7 @@ If true security trimming is enabled.
 
 
 
-### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder\>)
+### SecurityTrimming(System.Action\<Kendo.Mvc.UI.SecurityTrimmingBuilder>)
 Defines the security trimming functionality of the component
 
 

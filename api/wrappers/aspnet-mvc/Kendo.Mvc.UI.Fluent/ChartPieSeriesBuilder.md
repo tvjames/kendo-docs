@@ -91,7 +91,7 @@ The pie start angle(in degrees).
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieLabelsBuilder>)
 Configures the pie chart labels.
 
 
@@ -170,7 +170,7 @@ The pie segments border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the pie border
 
 
@@ -206,7 +206,7 @@ The pie segment effects overlay.
 
 
 
-### Connectors(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieConnectorsBuilder\>)
+### Connectors(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieConnectorsBuilder>)
 Configures the pie chart connectors.
 
 
@@ -232,7 +232,7 @@ The configuration action.
 
 
 
-### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieSeriesHighlightBuilder\>)
+### Highlight(System.Action\<Kendo.Mvc.UI.Fluent.ChartPieSeriesHighlightBuilder>)
 Configures the pie highlight
 
 

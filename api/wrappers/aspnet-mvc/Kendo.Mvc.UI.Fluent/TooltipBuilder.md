@@ -226,7 +226,7 @@ The id of the template
 
 
 
-### ContentHandler(System.Func\<System.Object,System.Object\>)
+### ContentHandler(System.Func\<System.Object,System.Object>)
 Sets JavaScript function which to return the content for the tooltip.
 
 
@@ -266,7 +266,7 @@ Whether the component animation is enabled.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
+### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
 Configures the animation effects of the panelbar.
 
 

@@ -26,7 +26,7 @@ Sets the type of the input element of the filter menu
 
 
 
-### UI(System.Func\<System.Object,System.Object\>)
+### UI(System.Func\<System.Object,System.Object>)
 Sets JavaScript function which to modify the UI of the filter input.
 
 

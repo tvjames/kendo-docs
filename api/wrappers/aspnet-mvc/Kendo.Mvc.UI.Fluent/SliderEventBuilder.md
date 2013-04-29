@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the Events.
 
 ## Methods
 
-### Change(System.Func\<System.Object,System.Object\>)
+### Change(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Change client-side event
 
 For additional information check the [change](/api/web/slider#events-change) event documentation.
@@ -65,7 +65,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Slide(System.Func\<System.Object,System.Object\>)
+### Slide(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Slide client-side event.
 
 For additional information check the [slide](/api/web/slider#events-slide) event documentation.

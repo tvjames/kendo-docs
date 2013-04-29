@@ -32,7 +32,7 @@ The boolean value.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
+### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
 Configures the animation effects of the widget.
 
 
@@ -74,7 +74,7 @@ Specifies the culture info used by the widget.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase>)
 Configures the client-side events.
 
 
@@ -104,7 +104,7 @@ Sets the date format, which will be used to parse and format the machine date.
 
 
 
-### ParseFormats(System.Collections.Generic.IEnumerable\<System.String\>)
+### ParseFormats(System.Collections.Generic.IEnumerable\<System.String>)
 Specifies the formats, which are used to parse the value set with value() method or by direct input.
 
 
@@ -132,7 +132,7 @@ Sets the maximal date, which can be selected in picker.
 
 
 
-### Value(System.Nullable\<System.DateTime\>)
+### Value(System.Nullable\<System.DateTime>)
 Sets the value of the picker input
 
 

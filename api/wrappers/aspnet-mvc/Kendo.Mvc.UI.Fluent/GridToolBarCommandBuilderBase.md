@@ -27,7 +27,7 @@ The HTML attributes.
 
 
 
-### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object\>)
+### HtmlAttributes(System.Collections.Generic.IDictionary\<System.String,System.Object>)
 Sets the HTML attributes.
 
 

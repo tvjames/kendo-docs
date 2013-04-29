@@ -11,7 +11,7 @@ Defines the fluent interface for configuring group.
 
 ## Methods
 
-### AddT1(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+### AddT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
 Specifies the member by which the data should be grouped.
 
 
@@ -91,7 +91,7 @@ Sort order
 
 
 
-### AddDescendingT1(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+### AddDescendingT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
 Specifies the member by which the data should be sorted in descending order and grouped.
 
 

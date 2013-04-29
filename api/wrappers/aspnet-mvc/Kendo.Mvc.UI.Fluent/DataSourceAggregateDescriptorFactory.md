@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the AggregateDescriptor.
 
 ## Methods
 
-### AddT1(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+### AddT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
 Specifies member on which aggregates to be calculated.
 
 

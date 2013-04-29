@@ -11,7 +11,7 @@ Defines the fluent interface for configuring ColorPicker client events.
 
 ## Methods
 
-### Change(System.Func\<System.Object,System.Object\>)
+### Change(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Change client-side event
 
 For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
@@ -63,7 +63,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Select(System.Func\<System.Object,System.Object\>)
+### Select(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Select client-side event
 
 For additional information check the [select](/api/web/colorpicker#events-select) event documentation.
@@ -115,7 +115,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Open(System.Func\<System.Object,System.Object\>)
+### Open(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Open client-side event
 
 For additional information check the [open](/api/web/colorpicker#events-open) event documentation.
@@ -167,7 +167,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Close(System.Func\<System.Object,System.Object\>)
+### Close(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Close client-side event
 
 For additional information check the [close](/api/web/colorpicker#events-close) event documentation.

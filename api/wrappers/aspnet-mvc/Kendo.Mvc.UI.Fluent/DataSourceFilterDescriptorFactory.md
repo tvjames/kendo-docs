@@ -11,7 +11,7 @@ Defines the fluent interface for configuring filter.
 
 ## Methods
 
-### Add(System.Linq.Expressions.Expression\<System.Func\<T,System.Boolean\>\>)
+### Add(System.Linq.Expressions.Expression\<System.Func<T,System.Boolean>>)
 Specifies the member on which the filter should be applied.
 
 
@@ -24,7 +24,7 @@ Member access expression which describes the member
 
 
 
-### Add(System.Linq.Expressions.Expression\<System.Func\<T,System.Nullable\<System.Boolean\>\>\>)
+### Add(System.Linq.Expressions.Expression\<System.Func<T,System.Nullable<System.Boolean>>>)
 Specifies the member on which the filter should be applied.
 
 
@@ -37,7 +37,7 @@ Member access expression which describes the member
 
 
 
-### AddT1(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+### AddT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
 Specifies the member on which the filter should be applied.
 
 
@@ -50,7 +50,7 @@ Member access expression which describes the member
 
 
 
-### Add(System.Linq.Expressions.Expression\<System.Func\<T,System.String\>\>)
+### Add(System.Linq.Expressions.Expression\<System.Func<T,System.String>>)
 Specifies the member on which the filter should be applied.
 
 

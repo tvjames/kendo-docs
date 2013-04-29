@@ -57,7 +57,7 @@ The action which renders the content.
 
 
 
-### Content(System.Func\<System.Object,System.Object\>)
+### Content(System.Func\<System.Object,System.Object>)
 Sets the HTML content which the window should display
 
 
@@ -186,7 +186,7 @@ The url.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.WindowEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.WindowEventBuilder>)
 Configures the client-side events.
 
 
@@ -224,7 +224,7 @@ Enables windows resizing.
 
 
 
-### Resizable(System.Action\<Kendo.Mvc.UI.Fluent.WindowResizingSettingsBuilder\>)
+### Resizable(System.Action\<Kendo.Mvc.UI.Fluent.WindowResizingSettingsBuilder>)
 Configures the resizing ability of the window.
 
 
@@ -247,7 +247,7 @@ Resizing settings action.
 
 
 
-### Actions(System.Action\<Kendo.Mvc.UI.Fluent.WindowActionsBuilder\>)
+### Actions(System.Action\<Kendo.Mvc.UI.Fluent.WindowActionsBuilder>)
 Configures the window buttons.
 
 
@@ -280,6 +280,29 @@ Sets the width of the window.
 ### Height(System.Int32)
 Sets the height of the window.
 
+
+
+
+
+### Position(System.Action\<Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder>)
+Configures the position of the window.
+
+
+#### Example
+
+    <%= Html.Kendo().Window()
+        .Name("Window")
+        .Position(settings =>
+        settings.Top(100).Left(100)
+        )
+    %>
+        
+
+
+#### Parameters
+
+##### positionSettingsAction System.Action<[Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/WindowPositionSettingsBuilder)>
+Position settings action.
 
 
 
@@ -318,7 +341,7 @@ Whether the component animation is enabled.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
+### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
 Configures the animation effects of the panelbar.
 
 
@@ -354,6 +377,20 @@ Sets whether the window can be moved.
 
 ### Draggable(System.Boolean)
 Sets whether the window can be moved.
+
+
+
+
+
+### Pinned
+Sets whether the window is pinned.
+
+
+
+
+
+### Pinned(System.Boolean)
+Sets whether the window is pinned.
 
 
 

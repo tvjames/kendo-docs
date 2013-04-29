@@ -16,7 +16,7 @@ The parent Chart
 
 ## Methods
 
-### CategoriesT1(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+### CategoriesT1(System.Linq.Expressions.Expression\<System.Func<T,T1>>)
 Defines bound categories.
 
 
@@ -101,7 +101,7 @@ The values at which perpendicular axes cross this axis.
 
 
 
-### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.Double\>)
+### AxisCrossingValue(System.Collections.Generic.IEnumerable\<System.Double>)
 Sets value at which perpendicular axes cross this axis.
 
 
@@ -174,7 +174,7 @@ The selection range end.
 
 
 
-### Select(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisSelectionBuilder\>)
+### Select(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisSelectionBuilder>)
 Configures the selection
 
 

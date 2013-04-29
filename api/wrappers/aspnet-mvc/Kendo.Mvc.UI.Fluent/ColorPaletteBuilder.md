@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the DatePickerBase component.
 
 ## Methods
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.SimpleColorPickerEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.SimpleColorPickerEventBuilder>)
 Configures the client-side events.
 
 
@@ -97,7 +97,7 @@ The tile size (for square tiles)
 
 
 
-### TileSize(System.Action\<Kendo.Mvc.UI.Fluent.PaletteSizeBuilder\>)
+### TileSize(System.Action\<Kendo.Mvc.UI.Fluent.PaletteSizeBuilder>)
 Sets the size of the palette tiles
 
 
@@ -118,7 +118,7 @@ The tile size (for square tiles)
 
 
 
-### Palette(System.Collections.Generic.IEnumerable\<System.String\>)
+### Palette(System.Collections.Generic.IEnumerable\<System.String>)
 Sets the range of colors that the user can pick from.
 
 

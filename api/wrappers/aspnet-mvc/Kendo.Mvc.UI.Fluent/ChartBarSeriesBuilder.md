@@ -116,7 +116,7 @@ Value of 1 means that the distance between bars is equal to their width.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartBarLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartBarLabelsBuilder>)
 Configures the bar chart labels.
 
 
@@ -195,7 +195,7 @@ The bars border dash type.
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the bar border
 
 

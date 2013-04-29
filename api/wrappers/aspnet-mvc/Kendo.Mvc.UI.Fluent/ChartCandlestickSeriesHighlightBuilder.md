@@ -41,7 +41,7 @@ The border color
 
 
 
-### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder\>)
+### Border(System.Action\<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>)
 Configures the highlight border
 
 
@@ -99,7 +99,7 @@ The lines color.
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder\>)
+### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>)
 Configures the candlestick highlight chart lines.
 
 

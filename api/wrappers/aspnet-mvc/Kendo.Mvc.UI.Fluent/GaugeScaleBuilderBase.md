@@ -16,7 +16,7 @@ Gets or sets the scale.
 
 ## Methods
 
-### MinorTicks(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder\>)
+### MinorTicks(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder>)
 Configures the minor ticks.
 
 
@@ -41,7 +41,7 @@ The configuration action.
 
 
 
-### MajorTicks(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder\>)
+### MajorTicks(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder>)
 Configures the major ticks.
 
 
@@ -66,7 +66,7 @@ The configuration action.
 
 
 
-### Ranges(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleRangesFactory\<T\>\>)
+### Ranges(System.Action\<Kendo.Mvc.UI.Fluent.GaugeScaleRangesFactory<T>>)
 Defines the ranges items.
 
 
@@ -196,7 +196,7 @@ The scale reverse.
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLineBuilder\>)
+### Line(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLineBuilder>)
 Configures the major ticks.
 
 

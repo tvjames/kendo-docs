@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the !:NumericTextBox{T} component.
 
 ## Methods
 
-### Value(System.Nullable\<T\>)
+### Value(System.Nullable\<T>)
 Sets the initial value of the NumericTextBox.
 
 
@@ -25,14 +25,14 @@ Sets the step, used ti increment/decrement the value of the textbox.
 
 
 
-### Min(System.Nullable\<T\>)
+### Min(System.Nullable\<T>)
 Sets the minimal possible value allowed to the user.
 
 
 
 
 
-### Max(System.Nullable\<T\>)
+### Max(System.Nullable\<T>)
 Sets the maximal possible value allowed to the user.
 
 
@@ -62,7 +62,7 @@ Enables or disables the spin buttons.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.NumericTextBoxEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.NumericTextBoxEventBuilder>)
 Configures the client-side events.
 
 

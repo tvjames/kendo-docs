@@ -54,7 +54,7 @@ Aggregate function name.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>)
 Configures the line chart labels.
 
 
@@ -149,7 +149,7 @@ The line dash type.
 
 
 
-### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder\>)
+### Markers(System.Action\<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>)
 Configures the line chart markers.
 
 

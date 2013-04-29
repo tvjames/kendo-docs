@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the TabStrip events.
 
 ## Methods
 
-### Activate(System.Func\<System.Object,System.Object\>)
+### Activate(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Activate client-side event
 
 For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
@@ -64,7 +64,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Select(System.Func\<System.Object,System.Object\>)
+### Select(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Select client-side event
 
 For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
@@ -117,7 +117,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### ContentLoad(System.Func\<System.Object,System.Object\>)
+### ContentLoad(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the ContentLoad client-side event
 
 For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
@@ -170,7 +170,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Error(System.Func\<System.Object,System.Object\>)
+### Error(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Error client-side event
 
 For additional information check the [error](/api/web/tabstrip#events-error) event documentation.

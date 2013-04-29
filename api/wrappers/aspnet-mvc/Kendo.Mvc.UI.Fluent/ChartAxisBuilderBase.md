@@ -16,7 +16,7 @@ Gets or sets the axis.
 
 ## Methods
 
-### MajorTicks(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder\>)
+### MajorTicks(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder>)
 Configures the major ticks.
 
 
@@ -41,7 +41,7 @@ The configuration action.
 
 
 
-### Crosshair(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisCrosshairBuilder\>)
+### Crosshair(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisCrosshairBuilder>)
 Configures the major ticks.
 
 
@@ -89,7 +89,7 @@ The axis name.
 
 
 
-### MinorTicks(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder\>)
+### MinorTicks(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTicksBuilder>)
 Configures the minor ticks.
 
 
@@ -114,7 +114,7 @@ The configuration action.
 
 
 
-### MajorGridLines(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder\>)
+### MajorGridLines(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder>)
 Configures the major grid lines.
 
 
@@ -168,7 +168,7 @@ The major gridlines line dashType.
 
 
 
-### MinorGridLines(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder\>)
+### MinorGridLines(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder>)
 Configures the minor grid lines.
 
 
@@ -222,7 +222,7 @@ The minor grid lines dash type
 
 
 
-### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder\>)
+### Line(System.Action\<Kendo.Mvc.UI.Fluent.ChartLineBuilder>)
 Configures the axis line.
 
 
@@ -276,7 +276,7 @@ The axis line dashType.
 
 
 
-### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisLabelsBuilder\>)
+### Labels(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisLabelsBuilder>)
 Configures the axis labels.
 
 
@@ -323,7 +323,7 @@ The visibility. The default value is false.
 
 
 
-### PlotBands(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisPlotBandsFactory\<T,T\>\>)
+### PlotBands(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisPlotBandsFactory<T,T>>)
 Defines the plot bands items.
 
 
@@ -348,7 +348,7 @@ The add action.
 
 
 
-### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTitleBuilder\>)
+### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisTitleBuilder>)
 Configures the chart axis title.
 
 

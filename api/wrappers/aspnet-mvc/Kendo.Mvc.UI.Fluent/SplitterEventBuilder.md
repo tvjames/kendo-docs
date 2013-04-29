@@ -11,7 +11,7 @@ Defines the fluent API for configuring the Kendo Splitter for ASP.NET MVC events
 
 ## Methods
 
-### Resize(System.Func\<System.Object,System.Object\>)
+### Resize(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Resize client-side event
 
 For additional information check the [resize](/api/web/splitter#events-resize) event documentation.
@@ -64,7 +64,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Expand(System.Func\<System.Object,System.Object\>)
+### Expand(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Expand client-side event
 
 For additional information check the [expand](/api/web/splitter#events-expand) event documentation.
@@ -117,7 +117,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### Collapse(System.Func\<System.Object,System.Object\>)
+### Collapse(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the Collapse client-side event
 
 For additional information check the [collapse](/api/web/splitter#events-collapse) event documentation.
@@ -170,7 +170,7 @@ The name of the JavaScript function that will handle the event.
 
 
 
-### ContentLoad(System.Func\<System.Object,System.Object\>)
+### ContentLoad(System.Func\<System.Object,System.Object>)
 Defines the inline handler of the ContentLoad client-side event
 
 For additional information check the [contentLoad](/api/web/splitter#events-contentLoad) event documentation.

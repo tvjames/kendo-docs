@@ -11,7 +11,7 @@ Defines the fluent interface for configuring the TabStrip component.
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.TabStripItemFactory\>)
+### Items(System.Action\<Kendo.Mvc.UI.Fluent.TabStripItemFactory>)
 Defines the items in the tabstrip
 
 
@@ -36,7 +36,7 @@ The add action.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.TabStripEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.TabStripEventBuilder>)
 Configures the client-side events.
 
 
@@ -79,7 +79,7 @@ Whether the component animation is enabled.
 
 
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
+### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>)
 Configures the animation effects of the tabstrip.
 
 
@@ -99,7 +99,7 @@ The action that configures the animation.
 
 
 
-### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TabStripItem,Kendo.Mvc.SiteMapNode\>)
+### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TabStripItem,Kendo.Mvc.SiteMapNode>)
 Binds the tabstrip to a sitemap
 
 
@@ -146,7 +146,7 @@ The view data key.
 
 
 
-### BindToT1(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.TabStripItem,T1\>)
+### BindToT1(System.Collections.Generic.IEnumerable\<T1>,System.Action<Kendo.Mvc.UI.TabStripItem,T1>)
 Binds the tabstrip to a list of objects
 
 
@@ -199,7 +199,7 @@ The index.
 
 
 
-### ItemAction(System.Action\<Kendo.Mvc.UI.TabStripItem\>)
+### ItemAction(System.Action\<Kendo.Mvc.UI.TabStripItem>)
 Callback for each item.
 
 

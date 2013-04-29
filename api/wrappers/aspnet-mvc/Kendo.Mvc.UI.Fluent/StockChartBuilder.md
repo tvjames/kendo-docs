@@ -59,7 +59,7 @@ Gets or sets a value indicating if the chart
 
 
 
-### Navigator(System.Action\<Kendo.Mvc.UI.Fluent.ChartNavigatorBuilder\<T\>\>)
+### Navigator(System.Action\<Kendo.Mvc.UI.Fluent.ChartNavigatorBuilder<T>>)
 Configures the stock chart navigator.
 
 
@@ -85,7 +85,7 @@ The navigator configuration action.
 
 
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder\>)
+### Events(System.Action\<Kendo.Mvc.UI.Fluent.ChartEventBuilder>)
 Configures the client-side events.
 
 
@@ -129,7 +129,7 @@ The Chart theme.
 
 
 
-### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder\>)
+### ChartArea(System.Action\<Kendo.Mvc.UI.Fluent.ChartAreaBuilder>)
 Sets the Chart area.
 
 
@@ -150,7 +150,7 @@ The Chart area.
 
 
 
-### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder\>)
+### PlotArea(System.Action\<Kendo.Mvc.UI.Fluent.PlotAreaBuilder>)
 Sets the Plot area.
 
 
@@ -192,7 +192,7 @@ The Chart title.
 
 
 
-### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartTitleBuilder\>)
+### Title(System.Action\<Kendo.Mvc.UI.Fluent.ChartTitleBuilder>)
 Defines the title of the chart.
 
 
@@ -234,7 +234,7 @@ A value indicating whether to show the legend.
 
 
 
-### Legend(System.Action\<Kendo.Mvc.UI.Fluent.ChartLegendBuilder\>)
+### Legend(System.Action\<Kendo.Mvc.UI.Fluent.ChartLegendBuilder>)
 Configures the legend.
 
 
@@ -255,7 +255,7 @@ The configuration action.
 
 
 
-### Series(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesFactory\<T\>\>)
+### Series(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesFactory<T>>)
 Defines the chart series.
 
 
@@ -279,7 +279,7 @@ The add action.
 
 
 
-### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesDefaultsBuilder\<T\>\>)
+### SeriesDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartSeriesDefaultsBuilder<T>>)
 Defines the options for all chart series of the specified type.
 
 
@@ -300,7 +300,7 @@ The configurator.
 
 
 
-### Panes(System.Action\<Kendo.Mvc.UI.Fluent.ChartPanesFactory\>)
+### Panes(System.Action\<Kendo.Mvc.UI.Fluent.ChartPanesFactory>)
 Defines the chart panes.
 
 
@@ -324,7 +324,7 @@ The add action.
 
 
 
-### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder\<T\>\>)
+### AxisDefaults(System.Action\<Kendo.Mvc.UI.Fluent.ChartAxisDefaultsBuilder<T>>)
 Defines the options for all chart axes of the specified type.
 
 
@@ -345,7 +345,7 @@ The configurator.
 
 
 
-### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder\<T\>\>)
+### CategoryAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartCategoryAxisBuilder<T>>)
 Configures the category axis
 
 
@@ -368,7 +368,7 @@ The configurator
 
 
 
-### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
+### ValueAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory<T>>)
 Defines value axis options
 
 
@@ -389,7 +389,7 @@ The configurator
 
 
 
-### XAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
+### XAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory<T>>)
 Defines X-axis options for scatter charts
 
 
@@ -410,7 +410,7 @@ The configurator
 
 
 
-### YAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory\<T\>\>)
+### YAxis(System.Action\<Kendo.Mvc.UI.Fluent.ChartValueAxisFactory<T>>)
 Configures Y-axis options for scatter charts.
 
 
@@ -431,7 +431,7 @@ The configurator
 
 
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder\<T\>\>)
+### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyAjaxDataSourceBuilder<T>>)
 Data Source configuration
 
 
@@ -455,7 +455,7 @@ Use the configurator to set different data binding options.
 
 
 
-### SeriesColors(System.Collections.Generic.IEnumerable\<System.String\>)
+### SeriesColors(System.Collections.Generic.IEnumerable\<System.String>)
 Sets the series colors.
 
 
@@ -497,7 +497,7 @@ The series colors.
 
 
 
-### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder\>)
+### Tooltip(System.Action\<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>)
 Use it to configure the data point tooltip.
 
 
