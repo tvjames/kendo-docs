@@ -3564,6 +3564,28 @@ The text displayed by the command button. If not set the [name](#configuration-t
 
 ## Fields
 
+### columns `Array`
+
+The columns of the grid initialized from the [columns](#configuration-columns) option. Every item from the `columns` array has the same fields as the corresponding [columns](#configuration-columns) option.
+
+#### Example - iterate the grid columns
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    for (var i = 0; i < grid.columns.length; i++) {
+      console.log(grid.columns[i].field); // displays "name" and then "age"
+    }
+    </script>
 ### dataSource `kendo.data.DataSource`
 
 The [data source](/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
