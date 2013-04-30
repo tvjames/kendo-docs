@@ -40,6 +40,10 @@ through the Application [platform](./application#force-ios-5-look) option.
 A: This can happen when Kendo UI Mobile application is initialized multiple times - like for instance when the initialization occurs
 in the _Layout.cshtml page of an ASP.NET MVC project. Mobile application should be initialized only once to be able to function properly.
 
+### Q: Widget event fires multiple times, why is that?
+
+A: This can happen when the mobile widget is initialized multiple times. A common mistake that developers make is to build the widget at the show event of the View. Kendo UI Mobile widgets should be initialized **only once** - at the init event of their View **or** via data-attributes in the mark-up.
+
 ## iOS
 
 ### Q: My TabStrip looks different on different versions of the OS or even between iPad and iPhone, why?
