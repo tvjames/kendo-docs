@@ -1159,7 +1159,8 @@ The [template](/api/framework/kendo#methods-template) which renders the detail r
     });
     </script>
 
-> Check [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html) for a live demo.
+> The detail template content cannot be wider than the total width of all master columns, unless the detail template is scrollable.
+Check [Detail Template](http://demos.kendoui.com/web/grid/detailtemplate.html) for a live demo.
 
 ### editable `Boolean|Object` *(default: false)*
 

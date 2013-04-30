@@ -110,6 +110,8 @@ By default, the grid will expand to fit the width and height of its container an
 
 Setting CSS width properties for the grid itself, or the parent container of the grid controls the width of the grid.
 
+When using hierarchy, the detail template content cannot be wider than the total width of all master columns, unless the detail template is scrollable.
+
 ### Making the Grid 100% high and auto resizable
 
 In order to configure the Grid to be 100% high and resize together with its parent element on browser window resize, the following Javascript code must be used:
