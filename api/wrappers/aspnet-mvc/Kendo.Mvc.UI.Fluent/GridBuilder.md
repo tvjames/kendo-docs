@@ -764,21 +764,21 @@ The lambda which configures columns
         %>
 
 #### Example (Razor)
-    <%:Html.Kendo().Grid<Product>()
-    .Name("grid")
-    .Columns(columns =>
-    {
-        columns.Bound(product => product.ProductName).Title("Product Name");
-        columns.Command(command => command.Destroy());
-    })
-    .DataSource(dataSource =>
-        // configure the data source
-        dataSource
-        .Ajax()
-        .Destroy(destroy => destroy.Action("Products_Destroy", "Home")
-            .Read(read => read.Action("Products_Read", "Home"))
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(product => product.ProductName).Title("Product Name");
+            columns.Command(command => command.Destroy());
+        })
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Destroy(destroy => destroy.Action("Products_Destroy", "Home")
+                .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-        %>
 
 
 ### Sortable
