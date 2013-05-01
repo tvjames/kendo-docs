@@ -16,15 +16,6 @@ Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
 
 
-#### Example
-
-    <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.OHLC(s => s.Sales).Aggregate(ChartSeriesAggregate.Avg))
-    %>
-        
-
-
 #### Parameters
 
 ##### open System.Nullable<[Kendo.Mvc.UI.ChartSeriesAggregate](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartSeriesAggregate)>
@@ -42,6 +33,13 @@ Close aggregate name.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Chart(Model)
+        .Name("Chart")
+        .Series(series => series.OHLC(s => s.Sales).Aggregate(ChartSeriesAggregate.Avg))
+    %>
+
+
 ### Gap(`System.Double`)
 Set distance between category clusters.
             
@@ -50,28 +48,17 @@ Set distance between category clusters.
             The default value is 1
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
         .Name("Chart")
         .Series(series => series.OHLC(s => s.Sales).Gap(1.5))
     %>
-        
-
-
 
 
 ### Spacing(`System.Double`)
 Sets a value indicating the distance between points in the same category.
-
-
-#### Example
-
-    <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Spacing(s => s.Sales).Spacing(1))
-    %>
-        
 
 
 #### Parameters
@@ -83,18 +70,15 @@ Value of 1 means that the distance between points in the same category.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Chart(Model)
+        .Name("Chart")
+        .Series(series => series.Spacing(s => s.Sales).Spacing(1))
+    %>
+
+
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the points border
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series.OHLC(s => s.Sales).Border("1", "#000", ChartDashType.Dot))
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -111,21 +95,16 @@ The points border dash type.
 
 
 
-### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
-Configures the ohlc chart lines.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
-        .Series(series => series
-        .OHLC(s => s.Sales)
-        .Line(2, "red", ChartDashType.Dot)
-        )
+        .Series(series => series.OHLC(s => s.Sales).Border("1", "#000", ChartDashType.Dot))
         .Render();
     %>
-        
+
+
+### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
+Configures the ohlc chart lines.
 
 
 #### Parameters
@@ -142,9 +121,19 @@ The lines dashType.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .OHLC(s => s.Sales)
+            .Line(2, "red", ChartDashType.Dot)
+        )
+        .Render();
+    %>
+
+
 ### Line(`System.Int32`)
 Configures the ohlc line width.
-
 
 
 #### Parameters
@@ -155,9 +144,9 @@ The lines width.
 
 
 
+
 ### Line(`System.Int32,System.String`)
 Configures the ohlc lines.
-
 
 
 #### Parameters
@@ -171,21 +160,9 @@ The lines color.
 
 
 
+
 ### Line(`System.Action<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>`)
 Configures the ohlc chart lines.
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Area(s => s.Sales)
-        .Line(line => line.Opacity(0.2))
-        )
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -196,15 +173,26 @@ The configuration action.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Area(s => s.Sales)
+            .Line(line => line.Opacity(0.2))
+        )
+        .Render();
+    %>
+
+
 ### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartOHLCSeriesHighlightBuilder>`)
 Configures the series highlight
-
 
 
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartOHLCSeriesHighlightBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartOHLCSeriesHighlightBuilder)>
 The configuration action.
+
 
 
 

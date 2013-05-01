@@ -15,30 +15,26 @@ Defines the fluent interface for configuring Selectable
 Enables or disables selection.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView(Model)
         .Name("ListView")
         .Selectable(selection => selection.Enabled((bool)ViewData["enableSelection"]))
     %>
-        
-
-
 
 
 ### Mode(`Kendo.Mvc.UI.ListViewSelectionMode`)
 Specifies whether multiple or single selection is allowed.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView(Model)
         .Name("ListView")
         .Selectable(selection => selection.Mode((bool)ViewData["selectionMode"]))
     %>
-        
-
-
 
 
 

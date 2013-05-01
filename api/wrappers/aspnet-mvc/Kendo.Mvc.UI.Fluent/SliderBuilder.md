@@ -99,18 +99,6 @@ Display tooltip while drag.
 Use it to configure tooltip.
 
 
-#### Example
-
-    <%= Html.Kendo().Slider()
-        .Name("Slider")
-        .Tooltip(tooltip => tooltip
-        .Enable(true)
-        .Format("{0:P}")
-        );
-    %>
-        
-
-
 #### Parameters
 
 ##### action System.Action<[Kendo.Mvc.UI.Fluent.SliderTooltipBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/SliderTooltipBuilder)>
@@ -119,18 +107,18 @@ Use builder to set different tooltip options.
 
 
 
-### Events(`System.Action<Kendo.Mvc.UI.Fluent.SliderEventBuilder>`)
-Configures the client-side events.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Slider()
         .Name("Slider")
-        .Events(events =>
-        events.OnChange("onChange"))
+        .Tooltip(tooltip => tooltip
+            .Enable(true)
+            .Format("{0:P}")
+        );
     %>
-        
+
+
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.SliderEventBuilder>`)
+Configures the client-side events.
 
 
 #### Parameters
@@ -139,6 +127,14 @@ Configures the client-side events.
 The client events action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Slider()
+        .Name("Slider")
+        .Events(events =>
+            events.OnChange("onChange"))
+    %>
 
 
 

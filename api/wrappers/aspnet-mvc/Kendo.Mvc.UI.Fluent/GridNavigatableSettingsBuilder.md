@@ -15,15 +15,13 @@ Defines the fluent interface for configuring Navigatable
 Enables or disables keyboard navigation.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
         .Name("Grid")
         .Navigatable(setting => setting.Enabled((bool)ViewData["enableKeyBoardNavigation"]))
     %>
-        
-
-
 
 
 

@@ -15,7 +15,6 @@ Defines the fluent interface for configuring ChartLine.
 Configures the crosshair tooltip
 
 
-
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartAxisCrosshairTooltipBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartAxisCrosshairTooltipBuilder)>
@@ -24,27 +23,9 @@ The tooltip configuration action
 
 
 
+
 ### Visible(`System.Boolean`)
 Sets the crosshair visible
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => {
-        .series.Bar(new double[] { 15.7, 16.7, 20, 23.5, 26.6 }).Name("World");
-        .series.Bar(new double[] { 67.96, 68.93, 75, 74, 78 }).Name("United States");
-        })
-        .CategoryAxis(axis => axis
-        .Categories("2005", "2006", "2007", "2008", "2009")
-        .Crosshair(crosshair => crosshair
-        .Visible(true)
-        )
-        )
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -53,6 +34,23 @@ Sets the crosshair visible
 The crosshair visible.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => {
+            .series.Bar(new double[] { 15.7, 16.7, 20, 23.5, 26.6 }).Name("World");
+            .series.Bar(new double[] { 67.96, 68.93, 75, 74, 78 }).Name("United States");
+        })
+        .CategoryAxis(axis => axis
+            .Categories("2005", "2006", "2007", "2008", "2009")
+            .Crosshair(crosshair => crosshair
+                .Visible(true)
+            )
+        )
+        .Render();
+    %>
 
 
 

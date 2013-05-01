@@ -15,28 +15,17 @@ Defines the fluent interface for configuring the Sortable.
 Enables or disables sorting.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
         .Name("Grid")
         .Sorting(sorting => sorting.Enabled((bool)ViewData["enableSorting"]))
     %>
-        
-
-
 
 
 ### SortMode(`Kendo.Mvc.UI.GridSortMode`)
 Sets the sort mode of the grid.
-
-
-#### Example
-
-    <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Sorting(sorting => sorting.SortMode(GridSortMode.MultipleColumns))
-    %>
-        
 
 
 #### Parameters
@@ -47,17 +36,15 @@ The value.
 
 
 
-### AllowUnsort(`System.Boolean`)
-Enables or disables unsorted mode.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
         .Name("Grid")
-        .Sorting(sorting => sorting.AllowUnsort(true))
+        .Sorting(sorting => sorting.SortMode(GridSortMode.MultipleColumns))
     %>
-        
+
+
+### AllowUnsort(`System.Boolean`)
+Enables or disables unsorted mode.
 
 
 #### Parameters
@@ -66,6 +53,13 @@ Enables or disables unsorted mode.
 The value.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid(Model)
+        .Name("Grid")
+        .Sorting(sorting => sorting.AllowUnsort(true))
+    %>
 
 
 

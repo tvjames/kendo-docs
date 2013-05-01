@@ -17,27 +17,25 @@ Defines the name of the JavaScript function that will handle the the Change clie
 For additional information check the [change](/api/web/grid#events-change) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Change(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Change(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### Change(`System.String`)
@@ -46,21 +44,19 @@ Defines the name of the JavaScript function that will handle the the Change clie
 For additional information check the [change](/api/web/grid#events-change) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Change("gridChange"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Change("gridChange"))
+    )
 
 
 ### Cancel(`System.Func<System.Object,System.Object>`)
@@ -69,27 +65,25 @@ Defines the name of the JavaScript function that will handle the the Cancel clie
 For additional information check the [cancel](/api/web/grid#events-cancel) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Cancel(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Cancel(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### Cancel(`System.String`)
@@ -98,21 +92,19 @@ Defines the name of the JavaScript function that will handle the the Cancel clie
 For additional information check the [cancel](/api/web/grid#events-cancel) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Cancel("gridCancel"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Cancel("gridCancel"))
+    )
 
 
 ### Edit(`System.Func<System.Object,System.Object>`)
@@ -121,27 +113,25 @@ Defines the name of the JavaScript function that will handle the the Edit client
 For additional information check the [edit](/api/web/grid#events-edit) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Edit(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Edit(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### Edit(`System.String`)
@@ -150,21 +140,19 @@ Defines the name of the JavaScript function that will handle the the Edit client
 For additional information check the [edit](/api/web/grid#events-edit) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Edit("gridEdit"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Edit("gridEdit"))
+    )
 
 
 ### Save(`System.Func<System.Object,System.Object>`)
@@ -173,27 +161,25 @@ Defines the name of the JavaScript function that will handle the the Save client
 For additional information check the [save](/api/web/grid#events-save) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Save(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Save(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### Save(`System.String`)
@@ -202,21 +188,19 @@ Defines the name of the JavaScript function that will handle the the Save client
 For additional information check the [save](/api/web/grid#events-save) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Save("gridSave"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Save("gridSave"))
+    )
 
 
 ### SaveChanges(`System.Func<System.Object,System.Object>`)
@@ -225,27 +209,25 @@ Defines the name of the JavaScript function that will handle the the SaveChanges
 For additional information check the [saveChanges](/api/web/grid#events-saveChanges) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.SaveChanges(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.SaveChanges(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### SaveChanges(`System.String`)
@@ -254,21 +236,19 @@ Defines the name of the JavaScript function that will handle the the SaveChanges
 For additional information check the [saveChanges](/api/web/grid#events-saveChanges) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.SaveChanges("gridSaveChanges"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.SaveChanges("gridSaveChanges"))
+    )
 
 
 ### DetailExpand(`System.Func<System.Object,System.Object>`)
@@ -277,27 +257,25 @@ Defines the name of the JavaScript function that will handle the the DetailExpan
 For additional information check the [detailExpand](/api/web/grid#events-detailExpand) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DetailExpand(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DetailExpand(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### DetailExpand(`System.String`)
@@ -306,21 +284,19 @@ Defines the name of the JavaScript function that will handle the the DetailExpan
 For additional information check the [detailExpand](/api/web/grid#events-detailExpand) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DetailExpand("gridDetailExpand"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DetailExpand("gridDetailExpand"))
+    )
 
 
 ### DetailInit(`System.Func<System.Object,System.Object>`)
@@ -329,27 +305,25 @@ Defines the name of the JavaScript function that will handle the the DetailInit 
 For additional information check the [detailInit](/api/web/grid#events-detailInit) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DetailInit(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DetailInit(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### DetailInit(`System.String`)
@@ -358,21 +332,19 @@ Defines the name of the JavaScript function that will handle the the DetailInit 
 For additional information check the [detailInit](/api/web/grid#events-detailInit) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DetailInit("gridDetailInit"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DetailInit("gridDetailInit"))
+    )
 
 
 ### DetailCollapse(`System.Func<System.Object,System.Object>`)
@@ -381,27 +353,25 @@ Defines the name of the JavaScript function that will handle the the DetailColla
 For additional information check the [detailCollapse](/api/web/grid#events-detailCollapse) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DetailCollapse(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DetailCollapse(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### DetailCollapse(`System.String`)
@@ -410,21 +380,19 @@ Defines the name of the JavaScript function that will handle the the DetailColla
 For additional information check the [detailCollapse](/api/web/grid#events-detailCollapse) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DetailCollapse("gridDetailCollapse"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DetailCollapse("gridDetailCollapse"))
+    )
 
 
 ### Remove(`System.Func<System.Object,System.Object>`)
@@ -433,27 +401,25 @@ Defines the name of the JavaScript function that will handle the the Remove clie
 For additional information check the [remove](/api/web/grid#events-remove) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Remove(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Remove(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### Remove(`System.String`)
@@ -462,21 +428,19 @@ Defines the name of the JavaScript function that will handle the the Remove clie
 For additional information check the [remove](/api/web/grid#events-remove) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.Remove("gridRemove"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.Remove("gridRemove"))
+    )
 
 
 ### DataBound(`System.Func<System.Object,System.Object>`)
@@ -485,27 +449,25 @@ Defines the name of the JavaScript function that will handle the the DataBound c
 For additional information check the [dataBound](/api/web/grid#events-dataBound) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DataBound(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DataBound(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### DataBound(`System.String`)
@@ -514,21 +476,19 @@ Defines the name of the JavaScript function that will handle the the DataBound c
 For additional information check the [dataBound](/api/web/grid#events-dataBound) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DataBound("gridDataBound"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DataBound("gridDataBound"))
+    )
 
 
 ### DataBinding(`System.Func<System.Object,System.Object>`)
@@ -537,27 +497,25 @@ Defines the name of the JavaScript function that will handle the the DataBinding
 For additional information check the [dataBinding](/api/web/grid#events-dataBinding) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DataBinding(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DataBinding(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### DataBinding(`System.String`)
@@ -566,21 +524,19 @@ Defines the name of the JavaScript function that will handle the the DataBinding
 For additional information check the [dataBinding](/api/web/grid#events-dataBinding) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.DataBinding("gridDataBinding"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.DataBinding("gridDataBinding"))
+    )
 
 
 ### ColumnResize(`System.Func<System.Object,System.Object>`)
@@ -589,27 +545,25 @@ Defines the name of the JavaScript function that will handle the the ColumnResiz
 For additional information check the [columnResize](/api/web/grid#events-columnResize) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnResize(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnResize(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### ColumnResize(`System.String`)
@@ -618,21 +572,19 @@ Defines the name of the JavaScript function that will handle the the ColumnResiz
 For additional information check the [columnResize](/api/web/grid#events-columnResize) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnResize("gridColumnResize"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnResize("gridColumnResize"))
+    )
 
 
 ### ColumnReorder(`System.Func<System.Object,System.Object>`)
@@ -641,27 +593,25 @@ Defines the name of the JavaScript function that will handle the the ColumnReord
 For additional information check the [columnReorder](/api/web/grid#events-columnReorder) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnReorder(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnReorder(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### ColumnReorder(`System.String`)
@@ -670,21 +620,19 @@ Defines the name of the JavaScript function that will handle the the ColumnReord
 For additional information check the [columnReorder](/api/web/grid#events-columnReorder) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnReorder("gridColumnReorder"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnReorder("gridColumnReorder"))
+    )
 
 
 ### ColumnHide(`System.Func<System.Object,System.Object>`)
@@ -693,27 +641,25 @@ Defines the name of the JavaScript function that will handle the the ColumnHide 
 For additional information check the [columnHide](/api/web/grid#events-columnHide) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnHide(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnHide(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### ColumnHide(`System.String`)
@@ -722,21 +668,19 @@ Defines the name of the JavaScript function that will handle the the ColumnHide 
 For additional information check the [columnHide](/api/web/grid#events-columnHide) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnHide("gridColumnHide"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnHide("gridColumnHide"))
+    )
 
 
 ### ColumnShow(`System.Func<System.Object,System.Object>`)
@@ -745,27 +689,25 @@ Defines the name of the JavaScript function that will handle the the ColumnShow 
 For additional information check the [columnShow](/api/web/grid#events-columnShow) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnShow(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnShow(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### ColumnShow(`System.String`)
@@ -774,21 +716,19 @@ Defines the name of the JavaScript function that will handle the the ColumnShow 
 For additional information check the [columnShow](/api/web/grid#events-columnShow) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnShow("gridColumnShow"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnShow("gridColumnShow"))
+    )
 
 
 ### ColumnMenuInit(`System.Func<System.Object,System.Object>`)
@@ -797,27 +737,25 @@ Defines the name of the JavaScript function that will handle the ColumnMenuInit 
 For additional information check the [columnMenuInit](/api/web/grid#events-columnMenuInit) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnMenuInit(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.Func<System.Object,System.Object>`
 The handler code wrapped in a text tag (Razor syntax).
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnMenuInit(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
 
 
 ### ColumnMenuInit(`System.String`)
@@ -826,15 +764,6 @@ Defines the name of the JavaScript function that will handle the ColumnMenuInit 
 For additional information check the [columnMenuInit](/api/web/grid#events-columnMenuInit) event documentation.
 
 
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.ColumnMenuInit("gridColumnMenuInit"))
-        )
-        
-
-
 #### Parameters
 
 ##### handler `System.String`
@@ -843,25 +772,17 @@ The name of the JavaScript function that will handle the event.
 
 
 
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.ColumnMenuInit("gridColumnMenuInit"))
+    )
+
+
 ### FilterMenuInit(`System.Func<System.Object,System.Object>`)
 Defines the name of the JavaScript function that will handle the FilterMenuInit client-side event.
 
 For additional information check the [filterMenuInit](/api/web/grid#events-filterMenuInit) event documentation.
-
-
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.FilterMenuInit(
-        @<text>
-        function(e) {
-        //event handling code
-        }
-        </text>
-        ))
-        )
-        
 
 
 #### Parameters
@@ -872,19 +793,23 @@ The handler code wrapped in a text tag (Razor syntax).
 
 
 
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.FilterMenuInit(
+                    @<text>
+                    function(e) {
+                    //event handling code
+                }
+                </text>
+                ))
+    )
+
+
 ### FilterMenuInit(`System.String`)
 Defines the name of the JavaScript function that will handle the FilterMenuInit client-side event.
 
 For additional information check the [filterMenuInit](/api/web/grid#events-filterMenuInit) event documentation.
-
-
-#### Example
-
-    @(Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events.FilterMenuInit("gridFilterMenuInit"))
-        )
-        
 
 
 #### Parameters
@@ -893,6 +818,13 @@ For additional information check the [filterMenuInit](/api/web/grid#events-filte
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    @(Html.Kendo().Grid()
+            .Name("Grid")
+            .Events(events => events.FilterMenuInit("gridFilterMenuInit"))
+    )
 
 
 

@@ -20,7 +20,6 @@ Gets or sets the Pane.
 Sets the title of the pane.
 
 
-
 #### Parameters
 
 ##### title `System.String`
@@ -29,9 +28,9 @@ The pane title.
 
 
 
+
 ### Title(`System.Action<Kendo.Mvc.UI.Fluent.ChartTitleBuilder>`)
 Defines the title of the pane.
-
 
 
 #### Parameters
@@ -42,9 +41,9 @@ The configuration action.
 
 
 
+
 ### Height(`System.Int32`)
 Sets the height of the pane.
-
 
 
 #### Parameters
@@ -55,9 +54,9 @@ The pane height.
 
 
 
+
 ### Background(`System.String`)
 Sets the pane background color
-
 
 
 #### Parameters
@@ -68,9 +67,9 @@ The background color.
 
 
 
+
 ### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the pane margin
-
 
 
 #### Parameters
@@ -90,9 +89,9 @@ The pane left margin.
 
 
 
+
 ### Margin(`System.Int32`)
 Sets the pane margin
-
 
 
 #### Parameters
@@ -103,9 +102,9 @@ The pane margin.
 
 
 
+
 ### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
 Sets the pane padding
-
 
 
 #### Parameters
@@ -125,9 +124,9 @@ The pane left padding.
 
 
 
+
 ### Padding(`System.Int32`)
 Sets the pane padding
-
 
 
 #### Parameters
@@ -138,9 +137,9 @@ The pane padding.
 
 
 
+
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
 Sets the pane border
-
 
 
 #### Parameters
@@ -157,15 +156,16 @@ The pane dash type.
 
 
 
+
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the pane border
-
 
 
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
 The border configuration action
+
 
 
 

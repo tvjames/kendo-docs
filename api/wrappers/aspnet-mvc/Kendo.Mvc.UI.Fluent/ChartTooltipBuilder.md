@@ -15,19 +15,6 @@ Defines the fluent interface for configuring the chart data points tooltip.
 Sets the tooltip font
 
 
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Tooltip(tooltip => tooltip
-        .Font("14px Arial,Helvetica,sans-serif")
-        .Visible(true)
-        )
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### font `System.String`
@@ -36,20 +23,19 @@ The tooltip font (CSS format).
 
 
 
-### Visible(`System.Boolean`)
-Sets the tooltip visibility
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Visible(true)
+            .Font("14px Arial,Helvetica,sans-serif")
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Visible(`System.Boolean`)
+Sets the tooltip visibility
 
 
 #### Parameters
@@ -60,21 +46,18 @@ The tooltip visibility. The tooltip is not visible by default.
 
 
 
-### Background(`System.String`)
-Sets the tooltip background color
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Background("Red")
-        .Visible(true)
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Background(`System.String`)
+Sets the tooltip background color
 
 
 #### Parameters
@@ -86,21 +69,19 @@ The tooltip background color.
 
 
 
-### Color(`System.String`)
-Sets the tooltip text color
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Color("Red")
-        .Visible(true)
+            .Background("Red")
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Color(`System.String`)
+Sets the tooltip text color
 
 
 #### Parameters
@@ -112,21 +93,19 @@ The tooltip text color.
 
 
 
-### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
-Sets the tooltip padding
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Padding(0, 5, 5, 0)
-        .Visible(true)
+            .Color("Red")
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
+Sets the tooltip padding
 
 
 #### Parameters
@@ -146,21 +125,19 @@ The tooltip left padding.
 
 
 
-### Padding(`System.Int32`)
-Sets the tooltip padding
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Padding(20)
-        .Visible(true)
+            .Padding(0, 5, 5, 0)
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Padding(`System.Int32`)
+Sets the tooltip padding
 
 
 #### Parameters
@@ -171,21 +148,19 @@ The tooltip padding.
 
 
 
-### Border(`System.Int32,System.String`)
-Sets the tooltip border
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Border(1, "Red")
-        .Visible(true)
+            .Padding(20)
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Border(`System.Int32,System.String`)
+Sets the tooltip border
 
 
 #### Parameters
@@ -199,9 +174,19 @@ The tooltip border color (CSS syntax).
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Tooltip(tooltip => tooltip
+            .Border(1, "Red")
+            .Visible(true)
+        )
+        .Render();
+    %>
+
+
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the tooltip border
-
 
 
 #### Parameters
@@ -212,21 +197,9 @@ The border configuration action
 
 
 
+
 ### Format(`System.String`)
 Sets the tooltip format
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Tooltip(tooltip => tooltip
-        .Format("{0:C}")
-        .Visible(true)
-        )
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -237,21 +210,19 @@ The tooltip format.
 
 
 
-### Template(`System.String`)
-Sets the tooltip template
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Template("<#= category #> - <#= value #>")
-        .Visible(true)
+            .Format("{0:C}")
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Template(`System.String`)
+Sets the tooltip template
 
 
 #### Parameters
@@ -262,21 +233,19 @@ The tooltip template.
 
 
 
-### Opacity(`System.Double`)
-Sets the tooltip opacity.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Opacity(0.5)
-        .Visible(true)
+            .Template("<#= category #> - <#= value #>")
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Opacity(`System.Double`)
+Sets the tooltip opacity.
 
 
 #### Parameters
@@ -288,21 +257,19 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 
 
-### Shared(`System.Boolean`)
-Sets the tooltip shared
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Tooltip(tooltip => tooltip
-        .Visible(true)
-        .Shared(true)
+            .Opacity(0.5)
+            .Visible(true)
         )
         .Render();
     %>
-        
+
+
+### Shared(`System.Boolean`)
+Sets the tooltip shared
 
 
 #### Parameters
@@ -311,6 +278,17 @@ Sets the tooltip shared
 The tooltip shared.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Tooltip(tooltip => tooltip
+            .Visible(true)
+            .Shared(true)
+        )
+        .Render();
+    %>
 
 
 

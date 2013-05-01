@@ -15,15 +15,6 @@ Defines the fluent interface for configuring the DatePickerBase component.
 Use to enable or disable animation of the popup element.
 
 
-#### Example
-
-    <%= Html.Kendo().DatePicker()
-        	           .Name("DatePicker")
-        	           .Animation(false) //toggle effect
-        	%>
-        
-
-
 #### Parameters
 
 ##### enable `System.Boolean`
@@ -32,23 +23,15 @@ The boolean value.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+        .Name("DatePicker")
+        .Animation(false) //toggle effect
+    %>
+
+
 ### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
 Configures the animation effects of the widget.
-
-
-#### Example
-
-    <%= Html.Kendo().DatePicker()
-        	           .Name("DatePicker")
-        	           .Animation(animation =>
-        	           {
-        		            animation.Open(open =>
-        		            {
-        		                open.SlideIn(SlideDirection.Down);
-        		            }
-        	           })
-        	%>
-        
 
 
 #### Parameters
@@ -59,34 +42,34 @@ The action which configures the animation effects.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+        .Name("DatePicker")
+        .Animation(animation =>
+        {
+            animation.Open(open =>
+            {
+                open.SlideIn(SlideDirection.Down);
+            }
+            })
+        %>
+
+
 ### Culture(`System.String`)
 Specifies the culture info used by the widget.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().DatePicker()
         .Name("DatePicker")
         .Culture("de-DE")
     %>
-        
-
-
 
 
 ### Events(`System.Action<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase>`)
 Configures the client-side events.
-
-
-#### Example
-
-    <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Events(events =>
-        events.Open("open").Change("change")
-        )
-    %>
-        
 
 
 #### Parameters
@@ -95,6 +78,15 @@ Configures the client-side events.
 The client events action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+        .Name("DatePicker")
+        .Events(events =>
+            events.Open("open").Change("change")
+        )
+    %>
 
 
 ### Format(`System.String`)

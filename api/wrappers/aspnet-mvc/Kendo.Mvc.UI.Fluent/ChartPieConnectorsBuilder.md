@@ -15,21 +15,6 @@ Defines the fluent interface for configuring the chart connectors.
 Sets the connectors width
 
 
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Pie(p => p.Sales)
-        .Connectors(c => c
-        .Width(3)
-        );
-        )
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### width `System.Int32`
@@ -38,23 +23,21 @@ The connectors width.
 
 
 
-### Color(`System.String`)
-Sets the connectors color
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Pie(p => p.Sales)
-        .Connectors(c => c
-        .Color(red)
-        );
+            .Pie(p => p.Sales)
+            .Connectors(c => c
+                .Width(3)
+            );
         )
         .Render();
     %>
-        
+
+
+### Color(`System.String`)
+Sets the connectors color
 
 
 #### Parameters
@@ -65,23 +48,21 @@ The connectors color.
 
 
 
-### Padding(`System.Int32`)
-Sets the connectors padding
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Pie(p => p.Sales)
-        .Connectors(c => c
-        .Padding(10)
-        );
+            .Pie(p => p.Sales)
+            .Connectors(c => c
+                .Color(red)
+            );
         )
         .Render();
     %>
-        
+
+
+### Padding(`System.Int32`)
+Sets the connectors padding
 
 
 #### Parameters
@@ -90,6 +71,19 @@ Sets the connectors padding
 The connectors padding.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Pie(p => p.Sales)
+            .Connectors(c => c
+                .Padding(10)
+            );
+        )
+        .Render();
+    %>
 
 
 

@@ -29,7 +29,6 @@ Configures the URL for Read operation.
 Sets controller and action for Read operation.
 
 
-
 #### Parameters
 
 ##### actionName `System.String`
@@ -44,9 +43,9 @@ Route values
 
 
 
+
 ### Read(`System.String,System.String`)
 Sets controller, action and routeValues for Read operation.
-
 
 
 #### Parameters
@@ -60,9 +59,9 @@ Controller Name
 
 
 
+
 ### Total(`System.Int32`)
 Sets the total number of records in the data source. Required during Custom binding.
-
 
 
 #### Parameters
@@ -73,14 +72,15 @@ Number of records
 
 
 
+
 ### PageSize(`System.Int32`)
 Sets the number of records displayed on a single page.
-
 
 
 #### Parameters
 
 ##### pageSize `System.Int32`
+
 
 
 
@@ -93,11 +93,11 @@ Sets the operation mode of the DataSource.
             Any other paging, sorting, filtering or grouping will be performed client-side.
 
 
-
 #### Parameters
 
 ##### enabled `System.Boolean`
 True(default) if server operation mode is enabled, otherwise false.
+
 
 
 

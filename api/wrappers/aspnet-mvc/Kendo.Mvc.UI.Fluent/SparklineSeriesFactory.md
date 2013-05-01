@@ -20,7 +20,6 @@ The parent Sparkline
 Defines bound bar series.
 
 
-
 #### Parameters
 
 ##### valueExpression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -32,9 +31,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### Bar(`System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -48,9 +47,9 @@ The name of the color member.
 
 
 
+
 ### Bar(`System.Type,System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -67,9 +66,9 @@ The name of the color member.
 
 
 
+
 ### Bar(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
@@ -80,9 +79,9 @@ The data to bind to.
 
 
 
+
 ### Column(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound column series.
-
 
 
 #### Parameters
@@ -96,9 +95,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### Column(`System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -112,9 +111,9 @@ The name of the color member.
 
 
 
+
 ### Column(`System.Type,System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -131,9 +130,9 @@ The name of the color member.
 
 
 
+
 ### Column(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
@@ -144,9 +143,9 @@ The data to bind to
 
 
 
+
 ### Line(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound line series.
-
 
 
 #### Parameters
@@ -157,9 +156,9 @@ The expression used to extract the series value from the chart model
 
 
 
+
 ### Line(`System.String`)
 Defines bound line series.
-
 
 
 #### Parameters
@@ -170,9 +169,9 @@ The name of the value member.
 
 
 
+
 ### Line(`System.Type,System.String`)
 Defines bound line series.
-
 
 
 #### Parameters
@@ -186,9 +185,9 @@ The name of the value member.
 
 
 
+
 ### Line(`System.Collections.IEnumerable`)
 Defines line series bound to inline data.
-
 
 
 #### Parameters
@@ -199,9 +198,9 @@ The data to bind to
 
 
 
+
 ### Area(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound area series.
-
 
 
 #### Parameters
@@ -212,9 +211,9 @@ The expression used to extract the series value from the chart model.
 
 
 
+
 ### Area(`System.String`)
 Defines bound area series.
-
 
 
 #### Parameters
@@ -225,9 +224,9 @@ The name of the value member.
 
 
 
+
 ### Area(`System.Type,System.String`)
 Defines bound area series.
-
 
 
 #### Parameters
@@ -241,15 +240,16 @@ The name of the value member.
 
 
 
+
 ### Area(`System.Collections.IEnumerable`)
 Defines area series bound to inline data.
-
 
 
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -279,7 +279,6 @@ Defines bound pie series.
 Defines pie series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
@@ -288,9 +287,9 @@ The data to bind to
 
 
 
+
 ### Bullet(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bullet series.
-
 
 
 #### Parameters
@@ -307,9 +306,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### Bullet(`System.String,System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -326,9 +325,9 @@ The name of the color member.
 
 
 
+
 ### Bullet(`System.Type,System.String,System.String,System.String`)
 Defines bound bullet series.
-
 
 
 #### Parameters
@@ -345,15 +344,16 @@ The name of the color member.
 
 
 
+
 ### Bullet(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to.
+
 
 
 

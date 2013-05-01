@@ -15,16 +15,6 @@ Defines the fluent interface for configuring ChartLine.
 Sets the line color
 
 
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Color("#f00")))
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### color `System.String`
@@ -33,18 +23,16 @@ The line color (CSS format).
 
 
 
-### Width(`System.Int32`)
-Sets the line width
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
-        .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Width(2)))
+        .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Color("#f00")))
         .Render();
     %>
-        
+
+
+### Width(`System.Int32`)
+Sets the line width
 
 
 #### Parameters
@@ -55,18 +43,16 @@ The line width.
 
 
 
-### DashType(`Kendo.Mvc.UI.ChartDashType`)
-Sets the line dashType.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
-        .CategoryAxis(axis => axis.MajorGridLines(lines => lines.DashType(ChartDashType.Dot)))
+        .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Width(2)))
         .Render();
     %>
-        
+
+
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
+Sets the line dashType.
 
 
 #### Parameters
@@ -75,6 +61,14 @@ Sets the line dashType.
 The line dashType.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .CategoryAxis(axis => axis.MajorGridLines(lines => lines.DashType(ChartDashType.Dot)))
+        .Render();
+    %>
 
 
 

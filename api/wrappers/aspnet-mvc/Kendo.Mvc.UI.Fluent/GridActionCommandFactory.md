@@ -16,8 +16,8 @@ Defines a edit command.
 
 
 
-
 #### Returns
+
 
 
 
@@ -26,8 +26,8 @@ Defines a delete command.
 
 
 
-
 #### Returns
+
 
 
 
@@ -36,8 +36,8 @@ Defines a select command.
 
 
 
-
 #### Returns
+
 
 
 
@@ -46,8 +46,8 @@ Defines a custom command.
 
 
 
-
 #### Returns
+
 
 
 

@@ -15,19 +15,6 @@ Defines the fluent interface for configuring the chart labels.
 Culture to use for formatting the dates.
 
 
-#### Example
-
-    <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-        .Date()
-        .Categories(sale => sale.Date)
-        .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
-        )
-    %>
-        
-
-
 #### Parameters
 
 ##### culture `System.Globalization.CultureInfo`
@@ -36,23 +23,21 @@ Culture to use for formatting the dates.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Chart()
+        .Name("Chart")
+        .CategoryAxis(axis => axis
+            .Date()
+            .Categories(sale => sale.Date)
+            .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
+        )
+    %>
+
+
 ### DateFormats(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisLabelsDateFormatsBuilder>`)
 Culture to use for formatting the dates.
             See Globalization
             for more information.
-
-
-#### Example
-
-    <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-        .Date()
-        .Categories(sale => sale.Date)
-        .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
-        )
-    %>
-        
 
 
 #### Parameters
@@ -61,6 +46,17 @@ Culture to use for formatting the dates.
 Culture to use for formatting the dates.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Chart()
+        .Name("Chart")
+        .CategoryAxis(axis => axis
+            .Date()
+            .Categories(sale => sale.Date)
+            .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
+        )
+    %>
 
 
 

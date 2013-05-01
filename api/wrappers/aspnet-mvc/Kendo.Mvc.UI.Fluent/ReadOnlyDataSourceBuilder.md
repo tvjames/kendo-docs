@@ -22,7 +22,6 @@ Configures the URL for Read operation.
 Sets controller and action for Read operation.
 
 
-
 #### Parameters
 
 ##### actionName `System.String`
@@ -37,9 +36,9 @@ Route values
 
 
 
+
 ### Read(`System.String,System.String`)
 Sets controller, action and routeValues for Read operation.
-
 
 
 #### Parameters
@@ -49,6 +48,7 @@ Action name
 
 ##### controllerName `System.String`
 Controller Name
+
 
 
 

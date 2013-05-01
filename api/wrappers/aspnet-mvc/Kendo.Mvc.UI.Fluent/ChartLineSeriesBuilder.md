@@ -15,15 +15,6 @@ Defines the fluent interface for configuring line series.
 Sets a value indicating if the lines should be stacked.
 
 
-#### Example
-
-    <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Line(s => s.Sales).Stack(true))
-    %>
-        
-
-
 #### Parameters
 
 ##### stacked `System.Boolean`
@@ -32,18 +23,16 @@ A value indicating if the lines should be stacked.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Chart(Model)
+        .Name("Chart")
+        .Series(series => series.Line(s => s.Sales).Stack(true))
+    %>
+
+
 ### Aggregate(`Kendo.Mvc.UI.ChartSeriesAggregate`)
 Sets the aggregate function for date series.
             This function is used when a category (an year, month, etc.) contains two or more points.
-
-
-#### Example
-
-    <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Line(s => s.Sales).Aggregate())
-    %>
-        
 
 
 #### Parameters
@@ -54,23 +43,15 @@ Aggregate function name.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Chart(Model)
+        .Name("Chart")
+        .Series(series => series.Line(s => s.Sales).Aggregate())
+    %>
+
+
 ### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartPointLabelsBuilder>`)
 Configures the line chart labels.
-
-
-#### Example
-
-    <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Line(s => s.Sales)
-        .Labels(labels => labels
-        .Position(ChartBarLabelsPosition.Above)
-        .Visible(true)
-        );
-        )
-    %>
-        
 
 
 #### Parameters
@@ -81,20 +62,21 @@ The configuration action.
 
 
 
-### Labels(`System.Boolean`)
-Sets the visibility of line chart labels.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .Labels(true);
+            .Line(s => s.Sales)
+            .Labels(labels => labels
+                .Position(ChartBarLabelsPosition.Above)
+                .Visible(true)
+            );
         )
     %>
-        
+
+
+### Labels(`System.Boolean`)
+Sets the visibility of line chart labels.
 
 
 #### Parameters
@@ -105,18 +87,18 @@ The visibility. The default value is false.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Line(s => s.Sales)
+            .Labels(true);
+        )
+    %>
+
+
 ### Width(`System.Double`)
 Sets the line chart line width.
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series.Line(s => s.Sales).Width(2))
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -127,18 +109,16 @@ The line width.
 
 
 
-### DashType(`Kendo.Mvc.UI.ChartDashType`)
-Sets the line chart line dash type.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
-        .Series(series => series.Line(s => s.Sales).DashType(ChartDashType.Dot))
+        .Series(series => series.Line(s => s.Sales).Width(2))
         .Render();
     %>
-        
+
+
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
+Sets the line chart line dash type.
 
 
 #### Parameters
@@ -149,22 +129,16 @@ The line dash type.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series.Line(s => s.Sales).DashType(ChartDashType.Dot))
+        .Render();
+    %>
+
+
 ### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
 Configures the line chart markers.
-
-
-#### Example
-
-    <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(markers => markers
-        .Type(ChartMarkerShape.Triangle)
-        );
-        )
-    %>
-        
 
 
 #### Parameters
@@ -175,20 +149,20 @@ The configuration action.
 
 
 
-### Markers(`System.Boolean`)
-Sets the visibility of line chart markers.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(true);
+            .Line(s => s.Sales)
+            .Markers(markers => markers
+                .Type(ChartMarkerShape.Triangle)
+            );
         )
     %>
-        
+
+
+### Markers(`System.Boolean`)
+Sets the visibility of line chart markers.
 
 
 #### Parameters
@@ -199,20 +173,18 @@ The visibility. The default value is true.
 
 
 
-### MissingValues(`Kendo.Mvc.UI.ChartLineMissingValues`)
-Configures the behavior for handling missing values in line series.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .MissingValues(ChartLineMissingValues.Interpolate);
+            .Line(s => s.Sales)
+            .Markers(true);
         )
     %>
-        
+
+
+### MissingValues(`Kendo.Mvc.UI.ChartLineMissingValues`)
+Configures the behavior for handling missing values in line series.
 
 
 #### Parameters
@@ -221,6 +193,16 @@ Configures the behavior for handling missing values in line series.
 The missing values behavior. The default is to leave gaps.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Line(s => s.Sales)
+            .MissingValues(ChartLineMissingValues.Interpolate);
+        )
+    %>
 
 
 

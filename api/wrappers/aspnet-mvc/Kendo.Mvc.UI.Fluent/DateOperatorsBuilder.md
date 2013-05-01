@@ -22,11 +22,11 @@ Clears the options.
 Sets the text for IsEqualTo operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -35,11 +35,11 @@ The message
 Sets the text for IsNotEqualTo operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -48,11 +48,11 @@ The message
 Sets the text for IsGreaterThanOrEqualTo operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -61,11 +61,11 @@ The message
 Sets the text for IsGreaterThan operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -74,11 +74,11 @@ The message
 Sets the text for IsLessThanOrEqualTo operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -87,11 +87,11 @@ The message
 Sets the text for IsLessThan operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 

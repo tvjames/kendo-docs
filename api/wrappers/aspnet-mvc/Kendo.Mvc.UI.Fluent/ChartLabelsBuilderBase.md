@@ -15,22 +15,6 @@ Defines the fluent interface for configuring the chart labels.
 Sets the labels font
 
 
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Font("14px Arial,Helvetica,sans-serif")
-        .Visible(true)
-        );
-        )
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### font `System.String`
@@ -39,23 +23,22 @@ The labels font (CSS format).
 
 
 
-### Visible(`System.Boolean`)
-Sets the labels visibility
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Visible(true)
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Font("14px Arial,Helvetica,sans-serif")
+                .Visible(true)
+            );
         )
         .Render();
     %>
-        
+
+
+### Visible(`System.Boolean`)
+Sets the labels visibility
 
 
 #### Parameters
@@ -66,24 +49,21 @@ The labels visibility.
 
 
 
-### Background(`System.String`)
-Sets the labels background color
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Background("Red")
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Visible(true)
+            );
         )
         .Render();
     %>
-        
+
+
+### Background(`System.String`)
+Sets the labels background color
 
 
 #### Parameters
@@ -94,24 +74,22 @@ The labels background color.
 
 
 
-### Color(`System.String`)
-Sets the labels text color
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Color("Red")
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Background("Red")
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Color(`System.String`)
+Sets the labels text color
 
 
 #### Parameters
@@ -122,24 +100,22 @@ The labels text color.
 
 
 
-### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
-Sets the labels margin
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Margin(0, 5, 5, 0)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Color("Red")
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
+Sets the labels margin
 
 
 #### Parameters
@@ -159,24 +135,22 @@ The labels left margin.
 
 
 
-### Margin(`System.Int32`)
-Sets the labels margin
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Margin(20)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Margin(0, 5, 5, 0)
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Margin(`System.Int32`)
+Sets the labels margin
 
 
 #### Parameters
@@ -187,24 +161,22 @@ The labels margin.
 
 
 
-### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
-Sets the labels padding
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Padding(0, 5, 5, 0)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Margin(20)
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
+Sets the labels padding
 
 
 #### Parameters
@@ -224,24 +196,22 @@ The labels left padding.
 
 
 
-### Padding(`System.Int32`)
-Sets the labels padding
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Padding(20)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Padding(0, 5, 5, 0)
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Padding(`System.Int32`)
+Sets the labels padding
 
 
 #### Parameters
@@ -252,24 +222,22 @@ The labels padding.
 
 
 
-### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
-Sets the labels border
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Border(1, "Red", ChartDashType.Dot)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Padding(20)
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
+Sets the labels border
 
 
 #### Parameters
@@ -286,9 +254,22 @@ The labels border dash type.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Border(1, "Red", ChartDashType.Dot)
+                .Visible(true);
+            );
+        )
+        .Render();
+    %>
+
+
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the labels border
-
 
 
 #### Parameters
@@ -299,24 +280,9 @@ The border configuration action
 
 
 
+
 ### Format(`System.String`)
 Sets the labels format.
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Format("{0:C}")
-        .Visible(true);
-        );
-        )
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -327,24 +293,22 @@ The labels format.
 
 
 
-### Template(`System.String`)
-Sets the labels template.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Template("${TotalSales}")
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Format("{0:C}")
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Template(`System.String`)
+Sets the labels template.
 
 
 #### Parameters
@@ -355,24 +319,22 @@ The labels template.
 
 
 
-### Opacity(`System.Double`)
-Sets the labels opacity.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Opacity(0.5)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Template("${TotalSales}")
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Opacity(`System.Double`)
+Sets the labels opacity.
 
 
 #### Parameters
@@ -384,24 +346,22 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 
 
-### Rotation(`System.Int32`)
-Sets the labels text rotation
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bar(s => s.Sales)
-        .Labels(labels => labels
-        .Rotation(45)
-        .Visible(true);
-        );
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Opacity(0.5)
+                .Visible(true);
+            );
         )
         .Render();
     %>
-        
+
+
+### Rotation(`System.Int32`)
+Sets the labels text rotation
 
 
 #### Parameters
@@ -410,6 +370,20 @@ Sets the labels text rotation
 The labels text rotation.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Bar(s => s.Sales)
+            .Labels(labels => labels
+                .Rotation(45)
+                .Visible(true);
+            );
+        )
+        .Render();
+    %>
 
 
 

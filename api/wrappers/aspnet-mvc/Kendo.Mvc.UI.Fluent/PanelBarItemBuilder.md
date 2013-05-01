@@ -15,22 +15,6 @@ Defines the fluent interface for configuring child panelbar items.
 Configures the child items of a PanelBarItem.
 
 
-#### Example
-
-    <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
-        {
-        items.Add().Text("First Item").Items(firstItemChildren =>
-        {
-        firstItemChildren.Add().Text("Child Item 1");
-        firstItemChildren.Add().Text("Child Item 2");
-        });
-        })
-    %>
-        
-
-
 #### Parameters
 
 ##### addAction System.Action<[Kendo.Mvc.UI.Fluent.PanelBarItemFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PanelBarItemFactory)>
@@ -39,25 +23,22 @@ The add action.
 
 
 
-### Expanded(`System.Boolean`)
-Define when the item will be expanded on intial render.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().PanelBar()
         .Name("PanelBar")
         .Items(items =>
         {
-        items.Add().Text("First Item").Items(firstItemChildren =>
-        {
-        firstItemChildren.Add().Text("Child Item 1");
-        firstItemChildren.Add().Text("Child Item 2");
-        })
-        .Expanded(true);
+            items.Add().Text("First Item").Items(firstItemChildren =>
+            {
+                firstItemChildren.Add().Text("Child Item 1");
+                firstItemChildren.Add().Text("Child Item 2");
+            });
         })
     %>
-        
+
+
+### Expanded(`System.Boolean`)
+Define when the item will be expanded on intial render.
 
 
 #### Parameters
@@ -66,6 +47,21 @@ Define when the item will be expanded on intial render.
 If true the item will be expanded.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().PanelBar()
+        .Name("PanelBar")
+        .Items(items =>
+        {
+            items.Add().Text("First Item").Items(firstItemChildren =>
+            {
+                firstItemChildren.Add().Text("Child Item 1");
+                firstItemChildren.Add().Text("Child Item 2");
+            })
+            .Expanded(true);
+        })
+    %>
 
 
 

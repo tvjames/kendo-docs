@@ -15,11 +15,11 @@ Defines the fluent interface for configuring the column menu messages.
 Sets the text displayed for filter menu option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -28,11 +28,11 @@ The message
 Sets the text displayed for columns menu option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -41,11 +41,11 @@ The message
 Sets the text displayed for sort ascending menu option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -54,11 +54,11 @@ The message
 Sets the text displayed for sort descending menu option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 

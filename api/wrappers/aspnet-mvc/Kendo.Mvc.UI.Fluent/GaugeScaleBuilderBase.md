@@ -20,44 +20,29 @@ Gets or sets the scale.
 Configures the minor ticks.
 
 
-#### Example
-
-    <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-        .MinorTicks(ticks => ticks
-        .Visible(false)
-        )
-        )
-    %>
-        
-
-
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeScaleTicksBuilder)>
 The configuration action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().LinearGauge()
+        .Name("linearGauge")
+        .Scale(scale => scale
+            .MinorTicks(ticks => ticks
+                .Visible(false)
+            )
+        )
+    %>
 
 
 ### MajorTicks(`System.Action<Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder>`)
 Configures the major ticks.
 
 
-#### Example
-
-    <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-        .MajorTicks(ticks => ticks
-        .Visible(false)
-        )
-        )
-    %>
-        
-
-
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GaugeScaleTicksBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeScaleTicksBuilder)>
@@ -66,21 +51,19 @@ The configuration action.
 
 
 
-### Ranges(`System.Action<Kendo.Mvc.UI.Fluent.GaugeScaleRangesFactory<T>>`)
-Defines the ranges items.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale
-        .Ranges.Add()
-        .From(1)
-        .To(2)
+            .MajorTicks(ticks => ticks
+                .Visible(false)
+            )
         )
     %>
-        
+
+
+### Ranges(`System.Action<Kendo.Mvc.UI.Fluent.GaugeScaleRangesFactory<T>>`)
+Defines the ranges items.
 
 
 #### Parameters
@@ -91,17 +74,19 @@ The add action.
 
 
 
-### MajorUnit(`System.Double`)
-Sets the scale major unit.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
-        .Scale(scale => sclae.MajorUnit(5))
+        .Scale(scale => scale
+            .Ranges.Add()
+            .From(1)
+            .To(2)
+        )
     %>
-        
+
+
+### MajorUnit(`System.Double`)
+Sets the scale major unit.
 
 
 #### Parameters
@@ -112,17 +97,15 @@ The major unit.
 
 
 
-### MinorUnit(`System.Double`)
-Sets the scale minor unit.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
-        .Scale(scale => sclae.MinorUnit(5))
+        .Scale(scale => sclae.MajorUnit(5))
     %>
-        
+
+
+### MinorUnit(`System.Double`)
+Sets the scale minor unit.
 
 
 #### Parameters
@@ -133,17 +116,15 @@ The minor unit.
 
 
 
-### Min(`System.Double`)
-Sets the scale min value.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
-        .Scale(scale => sclae.Min(-20))
+        .Scale(scale => sclae.MinorUnit(5))
     %>
-        
+
+
+### Min(`System.Double`)
+Sets the scale min value.
 
 
 #### Parameters
@@ -154,17 +135,15 @@ The min.
 
 
 
-### Max(`System.Double`)
-Sets the scale max value.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
-        .Scale(scale => sclae.Max(20))
+        .Scale(scale => sclae.Min(-20))
     %>
-        
+
+
+### Max(`System.Double`)
+Sets the scale max value.
 
 
 #### Parameters
@@ -175,17 +154,15 @@ The max.
 
 
 
-### Reverse(`System.Boolean`)
-Sets the scale reverse.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
-        .Scale(scale => sclae.reverse(true))
+        .Scale(scale => sclae.Max(20))
     %>
-        
+
+
+### Reverse(`System.Boolean`)
+Sets the scale reverse.
 
 
 #### Parameters
@@ -196,21 +173,15 @@ The scale reverse.
 
 
 
-### Line(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLineBuilder>`)
-Configures the major ticks.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
         .Name("linearGauge")
-        .Scale(scale => scale
-        .Line(line => line
-        .Visible(false)
-        )
-        )
+        .Scale(scale => sclae.reverse(true))
     %>
-        
+
+
+### Line(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLineBuilder>`)
+Configures the major ticks.
 
 
 #### Parameters
@@ -219,6 +190,17 @@ Configures the major ticks.
 The configuration action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().LinearGauge()
+        .Name("linearGauge")
+        .Scale(scale => scale
+            .Line(line => line
+                .Visible(false)
+            )
+        )
+    %>
 
 
 

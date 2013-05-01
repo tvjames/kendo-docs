@@ -15,11 +15,11 @@ Defines the fluent interface for configuring Resizable
 Enables or disables column resizing.
 
 
-
 #### Parameters
 
 ##### value `System.Boolean`
 True to enable column resizing, otherwise false
+
 
 
 

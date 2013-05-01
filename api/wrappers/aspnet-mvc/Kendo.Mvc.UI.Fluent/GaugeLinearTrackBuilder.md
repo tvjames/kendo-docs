@@ -15,18 +15,6 @@ Defines the fluent interface for configuring the linear gauge track.
 Sets the track color.
 
 
-#### Example
-
-    <% Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Pointer(pointer => pointer
-        .Track(track => track.Color("red"))
-        )
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### color `System.String`
@@ -35,20 +23,18 @@ The track color.
 
 
 
-### Size(`System.Double`)
-Sets the track size.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Pointer(pointer => pointer
-        .Track(track => track.Size(8))
+            .Track(track => track.Color("red"))
         )
         .Render();
     %>
-        
+
+
+### Size(`System.Double`)
+Sets the track size.
 
 
 #### Parameters
@@ -59,20 +45,18 @@ The track size.
 
 
 
-### Visible(`System.Boolean`)
-Sets the track visibility.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Pointer(pointer => pointer
-        .Track(track => track.Visible(true))
+            .Track(track => track.Size(8))
         )
         .Render();
     %>
-        
+
+
+### Visible(`System.Boolean`)
+Sets the track visibility.
 
 
 #### Parameters
@@ -83,20 +67,18 @@ The track visibility.
 
 
 
-### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
-Sets the track border.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Pointer(pointer => pointer
-        .Track(track => track.Border(1, "#000", ChartDashType.Dot))
+            .Track(track => track.Visible(true))
         )
         .Render();
     %>
-        
+
+
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
+Sets the track border.
 
 
 #### Parameters
@@ -113,15 +95,25 @@ The pointer dash type.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().LinearGauge()
+        .Name("linearGauge")
+        .Pointer(pointer => pointer
+            .Track(track => track.Border(1, "#000", ChartDashType.Dot))
+        )
+        .Render();
+    %>
+
+
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the track border
-
 
 
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
 The border configuration action
+
 
 
 

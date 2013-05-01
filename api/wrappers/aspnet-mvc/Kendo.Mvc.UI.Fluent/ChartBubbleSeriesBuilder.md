@@ -16,20 +16,6 @@ Configures the bubble chart behavior for negative values.
             By default negative values are not visible.
 
 
-#### Example
-
-    <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Bubble(s => s.x, s => s.y, s => s.size)
-        .NegativeValues(n => n
-        .Visible(true)
-        );
-        )
-    %>
-        
-
-
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartNegativeValueSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartNegativeValueSettingsBuilder)>
@@ -38,21 +24,20 @@ The configuration action.
 
 
 
-### Border(`System.Int32,System.String`)
-Sets the bubble border
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
+#### Example (ASPX)
+    <%= Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bubble(s => s.x, s => s.y, s => s.size)
-        .Border(1, "Red");
+            .Bubble(s => s.x, s => s.y, s => s.size)
+            .NegativeValues(n => n
+                .Visible(true)
+            );
         )
-        .Render();
     %>
-        
+
+
+### Border(`System.Int32,System.String`)
+Sets the bubble border
 
 
 #### Parameters
@@ -64,6 +49,17 @@ The bubble border width.
 The bubble border color (CSS syntax).
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Bubble(s => s.x, s => s.y, s => s.size)
+            .Border(1, "Red");
+        )
+        .Render();
+    %>
 
 
 ### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
@@ -84,11 +80,11 @@ Not applicable to bubble series
 Configures the bubble highlight
 
 
-
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBubbleSeriesHighlightBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBubbleSeriesHighlightBuilder)>
 The configuration action.
+
 
 
 

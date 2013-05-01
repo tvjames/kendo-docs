@@ -15,11 +15,11 @@ Defines the fluent interface for configuring the Filter menu options.
 Sets the info part of the filter menu
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -28,11 +28,11 @@ The message
 Sets the text for And option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The text
+
 
 
 
@@ -41,7 +41,6 @@ The text
 Sets the text for Or option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
@@ -50,15 +49,16 @@ The text
 
 
 
+
 ### IsTrue(`System.String`)
 Sets the text for Boolean IsTrue option value.
-
 
 
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -67,11 +67,11 @@ The message
 Sets the text for Boolean IsFalse option value.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -80,11 +80,11 @@ The message
 Sets the text for Filter button.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -93,11 +93,11 @@ The message
 Sets the text for SelectValue option.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 

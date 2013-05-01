@@ -22,11 +22,11 @@ Clears the options. Supported only in conjunction with custom messages.
 Sets the text for IsEqualTo operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 
@@ -35,11 +35,11 @@ The message
 Sets the text for IsNotEqualTo operator filter menu item.
 
 
-
 #### Parameters
 
 ##### message `System.String`
 The message
+
 
 
 

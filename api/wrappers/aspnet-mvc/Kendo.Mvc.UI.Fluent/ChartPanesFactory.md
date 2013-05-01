@@ -27,11 +27,11 @@ Defines a chart pane.
 Defines a named chart pane.
 
 
-
 #### Parameters
 
 ##### name `System.String`
 The unique pane name
+
 
 
 

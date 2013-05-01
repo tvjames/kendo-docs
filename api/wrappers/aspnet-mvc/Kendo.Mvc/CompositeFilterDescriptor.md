@@ -23,7 +23,6 @@ Creates a predicate filter expression combining FilterDescriptors
             expressions with LogicalOperator.
 
 
-
 #### Parameters
 
 ##### parameterExpression `System.Linq.Expressions.ParameterExpression`
@@ -33,6 +32,7 @@ The parameter expression, which will be used for filtering.
 
 #### Returns
 A predicate filter expression.
+
 
 
 

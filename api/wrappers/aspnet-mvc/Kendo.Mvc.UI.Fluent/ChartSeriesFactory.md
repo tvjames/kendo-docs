@@ -20,7 +20,6 @@ The parent Chart
 Defines bound bar series.
 
 
-
 #### Parameters
 
 ##### valueExpression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -32,9 +31,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### Bar(`System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -48,9 +47,9 @@ The name of the color member.
 
 
 
+
 ### Bar(`System.Type,System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -67,9 +66,9 @@ The name of the color member.
 
 
 
+
 ### Bar(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
@@ -80,9 +79,9 @@ The data to bind to.
 
 
 
+
 ### Column(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound column series.
-
 
 
 #### Parameters
@@ -96,9 +95,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### Column(`System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -108,6 +107,7 @@ The name of the value member.
 
 ##### colorMemberName `System.String`
 The name of the color member.
+
 
 
 
@@ -116,7 +116,6 @@ The name of the color member.
 Defines bound bar series.
 
 
-
 #### Parameters
 
 ##### memberType `System.Type`
@@ -131,15 +130,16 @@ The name of the color member.
 
 
 
+
 ### Column(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -148,11 +148,11 @@ The data to bind to
 Defines bound line series.
 
 
-
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
 The expression used to extract the series value from the chart model
+
 
 
 
@@ -161,7 +161,6 @@ The expression used to extract the series value from the chart model
 Defines bound line series.
 
 
-
 #### Parameters
 
 ##### memberName `System.String`
@@ -170,9 +169,9 @@ The name of the value member.
 
 
 
+
 ### Line(`System.Type,System.String`)
 Defines bound line series.
-
 
 
 #### Parameters
@@ -186,9 +185,9 @@ The name of the value member.
 
 
 
+
 ### Line(`System.Collections.IEnumerable`)
 Defines line series bound to inline data.
-
 
 
 #### Parameters
@@ -199,9 +198,9 @@ The data to bind to
 
 
 
+
 ### VerticalLine(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound vertical line series.
-
 
 
 #### Parameters
@@ -212,15 +211,16 @@ The expression used to extract the series value from the chart model
 
 
 
+
 ### VerticalLine(`System.String`)
 Defines bound vertical line series.
-
 
 
 #### Parameters
 
 ##### memberName `System.String`
 The name of the value member.
+
 
 
 
@@ -229,7 +229,6 @@ The name of the value member.
 Defines bound vertical line series.
 
 
-
 #### Parameters
 
 ##### memberType `System.Type`
@@ -237,6 +236,7 @@ The type of the value member.
 
 ##### memberName `System.String`
 The name of the value member.
+
 
 
 
@@ -245,11 +245,11 @@ The name of the value member.
 Defines vertical line series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -258,11 +258,11 @@ The data to bind to
 Defines bound area series.
 
 
-
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
 The expression used to extract the series value from the chart model.
+
 
 
 
@@ -271,7 +271,6 @@ The expression used to extract the series value from the chart model.
 Defines bound area series.
 
 
-
 #### Parameters
 
 ##### memberName `System.String`
@@ -280,9 +279,9 @@ The name of the value member.
 
 
 
+
 ### Area(`System.Type,System.String`)
 Defines bound area series.
-
 
 
 #### Parameters
@@ -296,9 +295,9 @@ The name of the value member.
 
 
 
+
 ### Area(`System.Collections.IEnumerable`)
 Defines area series bound to inline data.
-
 
 
 #### Parameters
@@ -309,9 +308,9 @@ The data to bind to
 
 
 
+
 ### VerticalArea(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound vertical area series.
-
 
 
 #### Parameters
@@ -322,9 +321,9 @@ The expression used to extract the series value from the chart model.
 
 
 
+
 ### VerticalArea(`System.String`)
 Defines bound vertical area series.
-
 
 
 #### Parameters
@@ -335,9 +334,9 @@ The name of the value member.
 
 
 
+
 ### VerticalArea(`System.Type,System.String`)
 Defines bound vertical area series.
-
 
 
 #### Parameters
@@ -351,15 +350,16 @@ The name of the value member.
 
 
 
+
 ### VerticalArea(`System.Collections.IEnumerable`)
 Defines vertical area series bound to inline data.
-
 
 
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -368,7 +368,6 @@ The data to bind to
 Defines bound scatter series.
 
 
-
 #### Parameters
 
 ##### xValueExpression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -376,6 +375,7 @@ The expression used to extract the X value from the chart model
 
 ##### yValueExpression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
 The expression used to extract the Y value from the chart model
+
 
 
 
@@ -384,7 +384,6 @@ The expression used to extract the Y value from the chart model
 Defines bound scatter series.
 
 
-
 #### Parameters
 
 ##### xMemberName `System.String`
@@ -396,9 +395,9 @@ The name of the Y value member.
 
 
 
+
 ### Scatter(`System.Type,System.String,System.String`)
 Defines bound scatter series.
-
 
 
 #### Parameters
@@ -415,9 +414,9 @@ The name of the Y value member.
 
 
 
+
 ### Scatter(`System.Collections.IEnumerable`)
 Defines scatter series bound to inline data.
-
 
 
 #### Parameters
@@ -428,9 +427,9 @@ The data to bind to
 
 
 
+
 ### ScatterLine(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound scatter line series.
-
 
 
 #### Parameters
@@ -444,9 +443,9 @@ The expression used to extract the Y value from the chart model
 
 
 
+
 ### ScatterLine(`System.String,System.String`)
 Defines bound scatter line series.
-
 
 
 #### Parameters
@@ -460,9 +459,9 @@ The name of the Y value member.
 
 
 
+
 ### ScatterLine(`System.Type,System.String,System.String`)
 Defines bound scatter line series.
-
 
 
 #### Parameters
@@ -479,15 +478,16 @@ The name of the Y value member.
 
 
 
+
 ### ScatterLine(`System.Collections.IEnumerable`)
 Defines scatter line series bound to inline data.
-
 
 
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -517,11 +517,11 @@ Defines bound bubble series.
 Defines bubble series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -551,11 +551,11 @@ Defines bound pie series.
 Defines pie series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -585,11 +585,11 @@ Defines bound donut series.
 Defines donut series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -619,11 +619,11 @@ Defines bound ohlc series.
 Defines ohlc series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 
@@ -653,7 +653,6 @@ Defines bound candlestick series.
 Defines candlestick series bound to inline data.
 
 
-
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
@@ -662,9 +661,9 @@ The data to bind to
 
 
 
+
 ### Bullet(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bullet series.
-
 
 
 #### Parameters
@@ -681,9 +680,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### Bullet(`System.String,System.String,System.String`)
 Defines bound bar series.
-
 
 
 #### Parameters
@@ -700,9 +699,9 @@ The name of the color member.
 
 
 
+
 ### Bullet(`System.Type,System.String,System.String,System.String`)
 Defines bound bullet series.
-
 
 
 #### Parameters
@@ -719,9 +718,9 @@ The name of the color member.
 
 
 
+
 ### Bullet(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
@@ -732,9 +731,9 @@ The data to bind to.
 
 
 
+
 ### VerticalBullet(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound verticalBullet series.
-
 
 
 #### Parameters
@@ -751,9 +750,9 @@ The expression used to extract the point color from the chart model
 
 
 
+
 ### VerticalBullet(`System.String,System.String,System.String`)
 Defines bound verticalBullet series.
-
 
 
 #### Parameters
@@ -770,9 +769,9 @@ The name of the color member.
 
 
 
+
 ### VerticalBullet(`System.Type,System.String,System.String,System.String`)
 Defines bound verticalBullet series.
-
 
 
 #### Parameters
@@ -789,15 +788,16 @@ The name of the color member.
 
 
 
+
 ### VerticalBullet(`System.Collections.IEnumerable`)
 Defines bar series bound to inline data.
-
 
 
 #### Parameters
 
 ##### data `System.Collections.IEnumerable`
 The data to bind to
+
 
 
 

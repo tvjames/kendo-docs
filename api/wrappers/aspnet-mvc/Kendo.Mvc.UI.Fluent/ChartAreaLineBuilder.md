@@ -15,19 +15,6 @@ Defines the fluent interface for configuring ChartLine.
 Sets the line color
 
 
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Area(s => s.Sales)
-        .Line(line => line.Color("#f00"))
-        )
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### color `System.String`
@@ -36,21 +23,19 @@ The line color (CSS format).
 
 
 
-### Width(`System.Int32`)
-Sets the line width
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Area(s => s.Sales)
-        .Line(line => line.Width(6))
+            .Area(s => s.Sales)
+            .Line(line => line.Color("#f00"))
         )
         .Render();
     %>
-        
+
+
+### Width(`System.Int32`)
+Sets the line width
 
 
 #### Parameters
@@ -61,21 +46,19 @@ The line width.
 
 
 
-### DashType(`Kendo.Mvc.UI.ChartDashType`)
-Sets the line dashType.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Area(s => s.Sales)
-        .Line(line => line.DashType(ChartDashType.Dot))
+            .Area(s => s.Sales)
+            .Line(line => line.Width(6))
         )
         .Render();
     %>
-        
+
+
+### DashType(`Kendo.Mvc.UI.ChartDashType`)
+Sets the line dashType.
 
 
 #### Parameters
@@ -86,21 +69,19 @@ The line dashType.
 
 
 
-### Opacity(`System.Double`)
-Sets the line opacity.
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Area(s => s.Sales)
-        .Line(line => line.Opacity(0.2))
+            .Area(s => s.Sales)
+            .Line(line => line.DashType(ChartDashType.Dot))
         )
         .Render();
     %>
-        
+
+
+### Opacity(`System.Double`)
+Sets the line opacity.
 
 
 #### Parameters
@@ -109,6 +90,17 @@ Sets the line opacity.
 The line opacity.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Area(s => s.Sales)
+            .Line(line => line.Opacity(0.2))
+        )
+        .Render();
+    %>
 
 
 

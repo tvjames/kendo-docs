@@ -21,8 +21,8 @@ Adds a plot band.
 
 
 
-
 #### Returns
+
 
 
 
@@ -31,8 +31,8 @@ Defines a item.
 
 
 
-
 #### Returns
+
 
 
 

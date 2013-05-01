@@ -17,29 +17,27 @@ Defines the inline handler of the Change client-side event
 For additional information check the [change](/api/web/rangeslider#events-change) event documentation.
 
 
-#### Example
-
-    <% Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events => events.Change(() =>
-        {
-    %>
-        function(e) {
-        //event handling code
-        }
-        <%
-        }))
-        .Render();
-        %>
-        
-
-
 #### Parameters
 
 ##### handlerName `System.Func<System.Object,System.Object>`
 The action defining the inline handler.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().RangeSlider()
+        .Name("RangeSlider")
+        .Events(events => events.Change(() =>
+            {
+                %>
+                function(e) {
+                //event handling code
+            }
+                <%
+            }))
+        .Render();
+    %>
 
 
 ### Change(`System.String`)
@@ -48,15 +46,6 @@ Defines the name of the JavaScript function that will handle the the Kendo clien
 For additional information check the [change](/api/web/rangeslider#events-change) event documentation.
 
 
-#### Example
-
-    <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events => events.Change("change"))
-    %>
-        
-
-
 #### Parameters
 
 ##### handlerName `System.String`
@@ -65,27 +54,17 @@ The name of the JavaScript function that will handle the event.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().RangeSlider()
+        .Name("RangeSlider")
+        .Events(events => events.Change("change"))
+    %>
+
+
 ### Slide(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the Slide client-side event.
 
 For additional information check the [slide](/api/web/rangeslider#events-slide) event documentation.
-
-
-#### Example
-
-    <% Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events => events.Slide(() =>
-        {
-    %>
-        function(e) {
-        //event handling code
-        }
-        <%
-        }))
-        .Render();
-        %>
-        
 
 
 #### Parameters
@@ -96,19 +75,25 @@ The action defining the inline handler.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().RangeSlider()
+        .Name("RangeSlider")
+        .Events(events => events.Slide(() =>
+            {
+                %>
+                function(e) {
+                //event handling code
+            }
+                <%
+            }))
+        .Render();
+    %>
+
+
 ### Slide(`System.String`)
 Defines the name of the JavaScript function that will handle the the Slide client-side event.
 
 For additional information check the [slide](/api/web/rangeslider#events-slide) event documentation.
-
-
-#### Example
-
-    <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events => events.Slide("slide"))
-    %>
-        
 
 
 #### Parameters
@@ -117,6 +102,13 @@ For additional information check the [slide](/api/web/rangeslider#events-slide) 
 The name of the JavaScript function that will handle the event.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().RangeSlider()
+        .Name("RangeSlider")
+        .Events(events => events.Slide("slide"))
+    %>
 
 
 

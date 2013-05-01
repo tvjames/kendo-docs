@@ -15,15 +15,6 @@ Defines the fluent interface for configuring the Splitter component.
 Sets the splitter orientation.
 
 
-#### Example
-
-    <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Orientation(SplitterOrientation.Vertical)
-    %>
-        
-
-
 #### Parameters
 
 ##### value [Kendo.Mvc.UI.SplitterOrientation](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/SplitterOrientation)
@@ -32,20 +23,15 @@ The desired orientation.
 
 
 
-### Panes(`System.Action<Kendo.Mvc.UI.Fluent.SplitterPaneFactory>`)
-Defines the panes in the splitter.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Splitter()
         .Name("Splitter")
-        .Panes(panes => {
-        panes.Add().LoadContentFrom("Navigation", "Shared");
-        panes.Add().LoadContentFrom("Index", "Home");
-        })
+        .Orientation(SplitterOrientation.Vertical)
     %>
-        
+
+
+### Panes(`System.Action<Kendo.Mvc.UI.Fluent.SplitterPaneFactory>`)
+Defines the panes in the splitter.
 
 
 #### Parameters
@@ -56,19 +42,18 @@ The action that configures the panes.
 
 
 
-### Events(`System.Action<Kendo.Mvc.UI.Fluent.SplitterEventBuilder>`)
-Configures the client events for the splitter.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Splitter()
         .Name("Splitter")
-        .Events(events => events
-        .OnLoad("onLoad")
-        )
+        .Panes(panes => {
+            panes.Add().LoadContentFrom("Navigation", "Shared");
+            panes.Add().LoadContentFrom("Index", "Home");
+        })
     %>
-        
+
+
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.SplitterEventBuilder>`)
+Configures the client events for the splitter.
 
 
 #### Parameters
@@ -77,6 +62,15 @@ Configures the client events for the splitter.
 The action that configures the client events.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Splitter()
+        .Name("Splitter")
+        .Events(events => events
+            .OnLoad("onLoad")
+        )
+    %>
 
 
 

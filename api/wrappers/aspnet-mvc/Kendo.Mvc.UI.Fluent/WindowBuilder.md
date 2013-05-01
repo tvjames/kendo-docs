@@ -15,11 +15,11 @@ Defines the fluent interface for configuring the Window component.
 Allows title to be shown / hidden
 
 
-
 #### Parameters
 
 ##### show `System.Boolean`
 Whether the window title will be visible
+
 
 
 
@@ -35,20 +35,6 @@ Sets title, which appears in the header of the window.
 Sets the HTML content which the window should display.
 
 
-#### Example
-
-    <% Html.Kendo().Window()
-        .Name("Window")
-        .Content(() =>
-        {
-    %>
-        <strong>Window content</strong>
-        <%
-        })
-        %>
-        
-
-
 #### Parameters
 
 ##### value `System.Action`
@@ -57,16 +43,20 @@ The action which renders the content.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Window()
+        .Name("Window")
+        .Content(() =>
+        {
+            %>
+            <strong>Window content</strong>
+            <%
+        })
+    %>
+
+
 ### Content(`System.Func<System.Object,System.Object>`)
 Sets the HTML content which the window should display
-
-
-#### Example
-
-    @(Html.Kendo().Window()
-        .Name("Window")
-        .Content(@<strong> Hello World!</strong>))
-        
 
 
 #### Parameters
@@ -80,9 +70,14 @@ The Razor inline template
 
 
 
+#### Example (ASPX)
+    @(Html.Kendo().Window()
+            .Name("Window")
+        .Content(@<strong> Hello World!</strong>))
+
+
 ### Content(`System.String`)
 Sets the HTML content which the item should display as a string.
-
 
 
 #### Parameters
@@ -93,17 +88,9 @@ The action which renders the content.
 
 
 
+
 ### LoadContentFrom(`System.Web.Routing.RouteValueDictionary`)
 Sets the Url, which will be requested to return the content.
-
-
-#### Example
-
-    <%= Html.Kendo().Window()
-        .Name("Window")
-        .LoadContentFrom(MVC.Home.Index().GetRouteValueDictionary());
-    %>
-        
 
 
 #### Parameters
@@ -114,17 +101,15 @@ The route values of the Action method.
 
 
 
-### LoadContentFrom(`System.String,System.String`)
-Sets the Url, which will be requested to return the content.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
-        .LoadContentFrom("AjaxView_OpenSource", "Window")
+        .LoadContentFrom(MVC.Home.Index().GetRouteValueDictionary());
     %>
-        
+
+
+### LoadContentFrom(`System.String,System.String`)
+Sets the Url, which will be requested to return the content.
 
 
 #### Parameters
@@ -138,17 +123,15 @@ The controller name.
 
 
 
-### LoadContentFrom(`System.String,System.String,System.Object`)
-Sets the Url, which will be requested to return the content.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
-        .LoadContentFrom("AjaxView_OpenSource", "Window", new { id = 10})
+        .LoadContentFrom("AjaxView_OpenSource", "Window")
     %>
-        
+
+
+### LoadContentFrom(`System.String,System.String,System.Object`)
+Sets the Url, which will be requested to return the content.
 
 
 #### Parameters
@@ -165,17 +148,15 @@ Route values.
 
 
 
-### LoadContentFrom(`System.String`)
-Sets the Url, which will be requested to return the content.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
-        .LoadContentFrom(Url.Action("AjaxView_OpenSource", "Window"))
+        .LoadContentFrom("AjaxView_OpenSource", "Window", new { id = 10})
     %>
-        
+
+
+### LoadContentFrom(`System.String`)
+Sets the Url, which will be requested to return the content.
 
 
 #### Parameters
@@ -186,19 +167,15 @@ The url.
 
 
 
-### Events(`System.Action<Kendo.Mvc.UI.Fluent.WindowEventBuilder>`)
-Configures the client-side events.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
-        .Events(events =>
-        events.Open("onOpen").Close("onClose")
-        )
+        .LoadContentFrom(Url.Action("AjaxView_OpenSource", "Window"))
     %>
-        
+
+
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.WindowEventBuilder>`)
+Configures the client-side events.
 
 
 #### Parameters
@@ -209,34 +186,30 @@ The client events action.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().Window()
+        .Name("Window")
+        .Events(events =>
+            events.Open("onOpen").Close("onClose")
+        )
+    %>
+
+
 ### Resizable
 Enables windows resizing.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
         .Resizable()
     %>
-        
-
-
 
 
 ### Resizable(`System.Action<Kendo.Mvc.UI.Fluent.WindowResizingSettingsBuilder>`)
 Configures the resizing ability of the window.
-
-
-#### Example
-
-    <%= Html.Kendo().Window()
-        .Name("Window")
-        .Resizable(settings =>
-        settings.Enabled(true).MaxHeight(500).MaxWidth(500)
-        )
-    %>
-        
 
 
 #### Parameters
@@ -247,19 +220,17 @@ Resizing settings action.
 
 
 
-### Actions(`System.Action<Kendo.Mvc.UI.Fluent.WindowActionsBuilder>`)
-Configures the window buttons.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
-        .Actions(actions =>
-        actions.
+        .Resizable(settings =>
+            settings.Enabled(true).MaxHeight(500).MaxWidth(500)
         )
     %>
-        
+
+
+### Actions(`System.Action<Kendo.Mvc.UI.Fluent.WindowActionsBuilder>`)
+Configures the window buttons.
 
 
 #### Parameters
@@ -268,6 +239,15 @@ Configures the window buttons.
 The buttons configuration action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Window()
+        .Name("Window")
+        .Actions(actions =>
+            actions.
+        )
+    %>
 
 
 ### Width(`System.Int32`)
@@ -288,23 +268,21 @@ Sets the height of the window.
 Configures the position of the window.
 
 
-#### Example
-
-    <%= Html.Kendo().Window()
-        .Name("Window")
-        .Position(settings =>
-        settings.Top(100).Left(100)
-        )
-    %>
-        
-
-
 #### Parameters
 
 ##### positionSettingsAction System.Action<[Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/WindowPositionSettingsBuilder)>
 Position settings action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Window()
+        .Name("Window")
+        .Position(settings =>
+            settings.Top(100).Left(100)
+        )
+    %>
 
 
 ### Visible(`System.Boolean`)
@@ -325,14 +303,6 @@ Sets whether the window should have scrollbars.
 Configures the animation effects of the window.
 
 
-#### Example
-
-    <%= Html.Kendo().Window()
-        .Name("Window")
-        .Animation(false)
-        
-
-
 #### Parameters
 
 ##### enable `System.Boolean`
@@ -341,16 +311,14 @@ Whether the component animation is enabled.
 
 
 
-### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
-Configures the animation effects of the panelbar.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().Window()
         .Name("Window")
-        .Animation(animation => animation.Expand)
-        
+    .Animation(false)
+
+
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
+Configures the animation effects of the panelbar.
 
 
 #### Parameters
@@ -359,6 +327,12 @@ Configures the animation effects of the panelbar.
 The action that configures the animation.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Window()
+        .Name("Window")
+    .Animation(animation => animation.Expand)
 
 
 ### Modal(`System.Boolean`)

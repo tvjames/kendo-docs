@@ -15,15 +15,6 @@ Defines the fluent interface for configuring the !:ListView{T}.
 Binds the ListView to a list of objects
 
 
-#### Example
-
-    <%= Html.Kendo().ListView<Order>()
-        .Name("Orders")
-        .BindTo((IEnumerable<Order>)ViewData["Orders"]);
-    %>
-        
-
-
 #### Parameters
 
 ##### dataSource `System.Collections.Generic.IEnumerable<T>`
@@ -32,17 +23,15 @@ The data source.
 
 
 
-### BindTo(`System.Collections.IEnumerable`)
-Binds the ListView to a list of objects
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().ListView<Order>()
         .Name("Orders")
-        .BindTo((IEnumerable)ViewData["Orders"]);
+        .BindTo((IEnumerable<Order>)ViewData["Orders"]);
     %>
-        
+
+
+### BindTo(`System.Collections.IEnumerable`)
+Binds the ListView to a list of objects
 
 
 #### Parameters
@@ -53,17 +42,15 @@ The data source.
 
 
 
-### ClientTemplateId(`System.String`)
-Specifies ListView item template.
-
-
-#### Example
-
+#### Example (ASPX)
     <%= Html.Kendo().ListView<Order>()
         .Name("Orders")
-        .ClientTemplateId("listViewTemplate");
+        .BindTo((IEnumerable)ViewData["Orders"]);
     %>
-        
+
+
+### ClientTemplateId(`System.String`)
+Specifies ListView item template.
 
 
 #### Parameters
@@ -74,34 +61,29 @@ The Id of the element which contains the template.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().ListView<Order>()
+        .Name("Orders")
+        .ClientTemplateId("listViewTemplate");
+    %>
+
+
 ### Pageable
 Allows paging of the data.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView()
         .Name("ListView")
         .Ajax(ajax => ajax.Action("Orders", "ListView"))
         .Pageable();
     %>
-        
-
-
 
 
 ### Pageable(`System.Action<Kendo.Mvc.UI.Fluent.PageableBuilder>`)
 Allows paging of the data.
-
-
-#### Example
-
-    <%= Html.Kendo().ListView()
-        .Name("Grid")
-        .Ajax(ajax => ajax.Action("Orders", "ListView"))
-        .Pageable(paging => paging.Enabled(true))
-    %>
-        
 
 
 #### Parameters
@@ -112,51 +94,43 @@ Use builder to define paging settings.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().ListView()
+        .Name("Grid")
+        .Ajax(ajax => ajax.Action("Orders", "ListView"))
+        .Pageable(paging => paging.Enabled(true))
+    %>
+
+
 ### Navigatable
 Enables keyboard navigation.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView()
         .Name("ListView")
         .Ajax(ajax => ajax.Action("Orders", "ListView"))
         .Navigatable();
     %>
-        
-
-
 
 
 ### Selectable
 Enables single item selection.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView()
         .Name("ListView")
         .Selectable()
     %>
-        
-
-
 
 
 ### Selectable(`System.Action<Kendo.Mvc.UI.Fluent.ListViewSelectionSettingsBuilder>`)
 Enables item selection.
-
-
-#### Example
-
-    <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Selectable(selection => {
-        selection.Enabled(true);
-        selection.Mode(ListViewSelectionMode.Multiple);
-        })
-    %>
-        
 
 
 #### Parameters
@@ -167,10 +141,19 @@ Use builder to define the selection mode.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().ListView()
+        .Name("ListView")
+        .Selectable(selection => {
+            selection.Enabled(true);
+            selection.Mode(ListViewSelectionMode.Multiple);
+        })
+    %>
+
+
 ### AutoBind(`System.Boolean`)
 Specifies if the ListView should be automatically bound on initial load.
             This is only possible if AJAX binding is used, and widget is not initialy populated on the server.
-
 
 
 #### Parameters
@@ -181,64 +164,48 @@ If true ListView will be automatically data bound, otherwise false
 
 
 
+
 ### TagName(`System.String`)
 Specifies ListView wrapper element tag name.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView()
         .Name("ListView")
         .TagName("div")
     %>
-        
-
-
 
 
 ### Editable(`System.Action<Kendo.Mvc.UI.Fluent.ListViewEditingSettingsBuilder<T>>`)
 Configures the ListView editing settings.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView()
         .Name("ListView")
         .Editable(settings => settings.Enabled(true))
     %>
-        
-
-
 
 
 ### Editable
 Enables ListView editing.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().ListView()
         .Name("ListView")
         .Editable()
     %>
-        
-
-
 
 
 ### Events(`System.Action<Kendo.Mvc.UI.Fluent.ListViewEventBuilder>`)
 Configures the client-side events.
-
-
-#### Example
-
-    <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Events(events => events
-        .DataBound("onDataBound")
-        )
-    %>
-        
 
 
 #### Parameters
@@ -247,6 +214,15 @@ Configures the client-side events.
 The client events action.
 
 
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ListView()
+        .Name("ListView")
+        .Events(events => events
+            .DataBound("onDataBound")
+        )
+    %>
 
 
 

@@ -15,7 +15,6 @@ Defines the fluent interface for configuring toolbar custom command.
 Sets command route.
 
 
-
 #### Parameters
 
 ##### routeName `System.String`
@@ -24,6 +23,7 @@ The route name
 
 
 #### Returns
+
 
 
 
@@ -31,7 +31,6 @@ The route name
 Sets command route and route values.
 
 
-
 #### Parameters
 
 ##### routeName `System.String`
@@ -43,6 +42,7 @@ The route values
 
 
 #### Returns
+
 
 
 
@@ -50,7 +50,6 @@ The route values
 Sets command route and route values.
 
 
-
 #### Parameters
 
 ##### routeName `System.String`
@@ -65,9 +64,9 @@ The route values
 
 
 
+
 ### Action(`System.Web.Routing.RouteValueDictionary`)
 Sets command action.
-
 
 
 #### Parameters
@@ -81,9 +80,9 @@ The route values
 
 
 
+
 ### Action(`System.String,System.String`)
 Sets command action and controller.
-
 
 
 #### Parameters
@@ -100,9 +99,9 @@ The controller name
 
 
 
+
 ### Action(`System.String,System.String,System.Object`)
 Sets command action and controller.
-
 
 
 #### Parameters
@@ -122,9 +121,9 @@ The route values
 
 
 
+
 ### Action(`System.String,System.String,System.Web.Routing.RouteValueDictionary`)
 Sets command action and controller.
-
 
 
 #### Parameters
@@ -144,9 +143,9 @@ The route values
 
 
 
+
 ### Url(`System.String`)
 Sets command absolute URL.
-
 
 
 #### Parameters
@@ -160,9 +159,9 @@ The URL
 
 
 
+
 ### Name(`System.String`)
 Sets the command name.
-
 
 
 #### Parameters
@@ -173,6 +172,7 @@ The name of the command
 
 
 #### Returns
+
 
 
 

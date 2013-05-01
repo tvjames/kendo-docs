@@ -15,21 +15,6 @@ Defines the fluent interface for configuring the chart target.
 Sets the target width.
 
 
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Bullet(s => s.Current, s => s.Target)
-        .Target(target => target
-        .Width(10)
-        );
-        )
-        .Render();
-    %>
-        
-
-
 #### Parameters
 
 ##### width `System.Int32`
@@ -38,23 +23,21 @@ The target width.
 
 
 
-### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
-Sets the target border
-
-
-#### Example
-
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Bullet(s => s.Current, s => s.Target)
-        .Target(target => target
-        .Border(1, "Red", ChartDashType.Dot)
-        );
+            .Bullet(s => s.Current, s => s.Target)
+            .Target(target => target
+                .Width(10)
+            );
         )
         .Render();
     %>
-        
+
+
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
+Sets the target border
 
 
 #### Parameters
@@ -71,9 +54,21 @@ The target border dash type.
 
 
 
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Bullet(s => s.Current, s => s.Target)
+            .Target(target => target
+                .Border(1, "Red", ChartDashType.Dot)
+            );
+        )
+        .Render();
+    %>
+
+
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the markers border
-
 
 
 #### Parameters
@@ -84,23 +79,9 @@ The border configuration action
 
 
 
+
 ### Color(`System.String`)
 Sets the color of the bullet chart target.
-
-
-#### Example
-
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Bullet(s => s.Current, s => s.Target)
-        .Target(target => target
-        .Color("Red");
-        );
-        )
-        .Render();
-    %>
-        
 
 
 #### Parameters
@@ -109,6 +90,19 @@ Sets the color of the bullet chart target.
 The color of the bullet chart target.
 
 
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Bullet(s => s.Current, s => s.Target)
+            .Target(target => target
+                .Color("Red");
+            );
+        )
+        .Render();
+    %>
 
 
 

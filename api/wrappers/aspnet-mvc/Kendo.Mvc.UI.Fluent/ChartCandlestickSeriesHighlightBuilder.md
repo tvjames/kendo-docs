@@ -16,7 +16,6 @@ Sets the bubble highlight border width.
             The color is computed automatically from the base point color.
 
 
-
 #### Parameters
 
 ##### width `System.Int32`
@@ -25,9 +24,9 @@ The bubble highlight border width.
 
 
 
+
 ### Border(`System.Int32,System.String`)
 Sets the bubble highlight border width.
-
 
 
 #### Parameters
@@ -41,9 +40,9 @@ The border color
 
 
 
+
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
 Configures the highlight border
-
 
 
 #### Parameters
@@ -57,9 +56,9 @@ Configures the highlight border
 
 
 
+
 ### Opacity(`System.Double`)
 Sets the bubble highlight opacity.
-
 
 
 #### Parameters
@@ -70,9 +69,9 @@ The bubble highlight opacity.
 
 
 
+
 ### Line(`System.Int32`)
 Configures the candlestick highlight line width.
-
 
 
 #### Parameters
@@ -83,9 +82,9 @@ The lines width.
 
 
 
+
 ### Line(`System.Int32,System.String`)
 Configures the candlestick highlight lines.
-
 
 
 #### Parameters
@@ -99,15 +98,16 @@ The lines color.
 
 
 
+
 ### Line(`System.Action<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>`)
 Configures the candlestick highlight chart lines.
-
 
 
 #### Parameters
 
 ##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartAreaLineBuilder)>
 The configuration action.
+
 
 
 

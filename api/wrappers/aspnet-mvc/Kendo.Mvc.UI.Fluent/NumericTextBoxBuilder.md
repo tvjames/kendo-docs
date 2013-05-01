@@ -50,7 +50,6 @@ Sets the text which will be displayed if the textbox is empty.
 Enables or disables the spin buttons.
 
 
-
 #### Parameters
 
 ##### allowSpinner `System.Boolean`
@@ -62,19 +61,9 @@ Enables or disables the spin buttons.
 
 
 
+
 ### Events(`System.Action<Kendo.Mvc.UI.Fluent.NumericTextBoxEventBuilder>`)
 Configures the client-side events.
-
-
-#### Example
-
-    <%= Html.Kendo().NumericTextBox()
-        .Name("NumericTextBox")
-        .Events(events =>
-        events.OnLoad("onLoad").OnChange("onChange")
-        )
-    %>
-        
 
 
 #### Parameters
@@ -85,9 +74,17 @@ The client events action.
 
 
 
+#### Example (ASPX)
+    <%= Html.Kendo().NumericTextBox()
+        .Name("NumericTextBox")
+        .Events(events =>
+            events.OnLoad("onLoad").OnChange("onChange")
+        )
+    %>
+
+
 ### Enable(`System.Boolean`)
 Enables or disables the textbox.
-
 
 
 #### Parameters
@@ -101,49 +98,44 @@ Enables or disables the textbox.
 
 
 
+
 ### Format(`System.String`)
 Stes the format of the NumericTextBox.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
         .Name("NumericTextBox")
         .Format("c3")
     %>
-        
-
-
 
 
 ### Culture(`System.String`)
 Specifies the culture info used by the NumericTextBox widget.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
         .Name("NumericTextBox")
         .Culture("de-DE")
     %>
-        
-
-
 
 
 ### Decimals(`System.Int32`)
 Specifies the number precision. If not set precision defined by current culture is used.
 
 
-#### Example
 
+
+#### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
         .Name("NumericTextBox")
         .Decimals(3)
     %>
-        
-
-
 
 
 ### IncreaseButtonTitle(`System.String`)

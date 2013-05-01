@@ -21,14 +21,13 @@ Returns the internal view component.
 
 
 
-
 #### Returns
+
 
 
 
 ### Name(`System.String`)
 Sets the name of the component.
-
 
 
 #### Parameters
@@ -42,9 +41,9 @@ The name.
 
 
 
+
 ### Deferred
 Suppress initialization script rendering. Note that this options should be used in conjunction with M:Kendo.Mvc.UI.Fluent.WidgetFactory.DeferredScripts(System.Boolean)
-
 
 
 
@@ -52,9 +51,9 @@ Suppress initialization script rendering. Note that this options should be used 
 
 
 
+
 ### HtmlAttributes(`System.Object`)
 Sets the HTML attributes.
-
 
 
 #### Parameters
@@ -68,9 +67,9 @@ The HTML attributes.
 
 
 
+
 ### HtmlAttributes(`System.Collections.Generic.IDictionary<System.String,System.Object>`)
 Sets the HTML attributes.
-
 
 
 #### Parameters
@@ -81,6 +80,7 @@ The HTML attributes.
 
 
 #### Returns
+
 
 
 

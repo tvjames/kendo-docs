@@ -15,11 +15,11 @@ Defines the fluent interface for configuring the CrudOperation options.
 Sets the route values for the operation.
 
 
-
 #### Parameters
 
 ##### routeValues `System.Web.Routing.RouteValueDictionary`
 Route values
+
 
 
 
@@ -28,7 +28,6 @@ Route values
 Sets the action, contoller and route values for the operation.
 
 
-
 #### Parameters
 
 ##### actionName `System.String`
@@ -39,6 +38,7 @@ Controller name
 
 ##### routeValues `System.Object`
 Route values
+
 
 
 
@@ -47,7 +47,6 @@ Route values
 Sets the action, contoller and route values for the operation.
 
 
-
 #### Parameters
 
 ##### actionName `System.String`
@@ -62,9 +61,9 @@ Route values
 
 
 
+
 ### Action(`System.String,System.String`)
 Sets the action and contoller values for the operation.
-
 
 
 #### Parameters
@@ -78,9 +77,9 @@ Controller name
 
 
 
+
 ### Route(`System.String,System.Web.Routing.RouteValueDictionary`)
 Sets the route name and values for the operation.
-
 
 
 #### Parameters
@@ -94,9 +93,9 @@ Route values
 
 
 
+
 ### Route(`System.String,System.Object`)
 Sets the route name and values for the operation.
-
 
 
 #### Parameters
@@ -110,14 +109,15 @@ Route values
 
 
 
+
 ### Route(`System.String`)
 Sets the route name for the operation.
-
 
 
 #### Parameters
 
 ##### routeName `System.String`
+
 
 
 
@@ -134,7 +134,6 @@ Sets JavaScript function which to return additional parameters which to be sent 
 Sets JavaScript function which to return additional parameters which to be sent the server.
 
 
-
 #### Parameters
 
 ##### handler `System.String`
@@ -143,9 +142,9 @@ JavaScript function name
 
 
 
+
 ### Url(`System.String`)
 Specifies an absolute or relative URL for the operation.
-
 
 
 #### Parameters
@@ -156,15 +155,16 @@ Absolute or relative URL for the operation
 
 
 
+
 ### Type(`System.Web.Mvc.HttpVerbs`)
 Specifies the HTTP verb of the request.
-
 
 
 #### Parameters
 
 ##### verb `System.Web.Mvc.HttpVerbs`
 The HTTP verb
+
 
 
 

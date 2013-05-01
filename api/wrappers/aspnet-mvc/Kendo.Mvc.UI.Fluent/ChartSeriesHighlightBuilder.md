@@ -20,11 +20,11 @@ Gets or sets the highlight
 Sets the highlight visibility
 
 
-
 #### Parameters
 
 ##### visible `System.Boolean`
 The highlight visibility.
+
 
 
 

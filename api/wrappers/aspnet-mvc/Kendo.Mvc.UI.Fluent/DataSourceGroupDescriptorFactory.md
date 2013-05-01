@@ -15,7 +15,6 @@ Defines the fluent interface for configuring group.
 Specifies the member by which the data should be grouped.
 
 
-
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
@@ -24,9 +23,9 @@ Member access expression which describes the member
 
 
 
+
 ### Add(`System.String`)
 Specifies the member by which the data should be grouped.
-
 
 
 #### Parameters
@@ -37,9 +36,9 @@ Member name
 
 
 
+
 ### Add(`System.String,System.Type`)
 Specifies the member by which the data should be grouped.
-
 
 
 #### Parameters
@@ -53,9 +52,9 @@ Member type
 
 
 
+
 ### Add(`System.String,System.Type,System.ComponentModel.ListSortDirection`)
 Specifies the member by which the data should be grouped.
-
 
 
 #### Parameters
@@ -72,9 +71,9 @@ Sort order
 
 
 
+
 ### Add(`System.String,System.ComponentModel.ListSortDirection`)
 Specifies the member by which the data should be grouped.
-
 
 
 #### Parameters
@@ -91,9 +90,9 @@ Sort order
 
 
 
+
 ### AddDescending(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Specifies the member by which the data should be sorted in descending order and grouped.
-
 
 
 #### Parameters
@@ -104,9 +103,9 @@ Member access expression which describes the member
 
 
 
+
 ### AddDescending(`System.String`)
 Specifies the member by which the data should be sorted in descending order and grouped.
-
 
 
 #### Parameters
@@ -117,9 +116,9 @@ Member name
 
 
 
+
 ### AddDescending(`System.String,System.Type`)
 Specifies the member by which the data should be sorted in descending order and grouped.
-
 
 
 #### Parameters
@@ -129,6 +128,7 @@ Member name
 
 ##### memberType `System.Type`
 Member type
+
 
 
 
