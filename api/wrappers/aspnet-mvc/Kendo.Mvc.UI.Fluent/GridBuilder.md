@@ -59,7 +59,7 @@ The template as a code block
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
         <% Html.Kendo().Grid(Model)
         .Name("grid")
         .DetailTemplate(product => {
@@ -120,7 +120,7 @@ The id
         )
         .ClientDetailTemplateId("detail-template")
     )
-    <script id="detail-template">
+    <script id="detail-template" type="text/x-kendo-template">
     Product Details:
     <div>Product Name: #: ProductName # </div>
     <div>Units In Stock: #: UnitsInStock #</div>
@@ -137,7 +137,7 @@ The id
         )
         .ClientDetailTemplateId("detail-template")
         %>
-        <script id="detail-template">
+        <script id="detail-template" type="text/x-kendo-template">
         Product Details:
         <div>Product Name: #: ProductName # </div>
         <div>Units In Stock: #: UnitsInStock #</div>
@@ -157,7 +157,7 @@ The template as a code block
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
         <%: Html.Kendo().Grid(Model)
         .Name("grid")
         .RowTemplate((product, grid) =>
@@ -183,7 +183,7 @@ The template as a code block
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
         <%: Html.Kendo().Grid(Model)
         .Name("grid")
         .RowTemplate(product =>
@@ -566,7 +566,7 @@ The data source.
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
         &lt;%: Html.Kendo().Grid<Product>()
         .Name("grid")
         .BindTo(Model)
@@ -593,7 +593,7 @@ The data source.
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
         &lt;%: Html.Kendo().Grid<Product>()
         .Name("grid")
         .BindTo(Model)
@@ -620,7 +620,7 @@ The lambda which will be executed for every table row
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
         &lt;%: Html.Kendo().Grid(Model)
         .Name("grid")
         .RowAction(row =>
@@ -663,7 +663,7 @@ The lambda which will be executed for every table cell
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
         &lt;%: Html.Kendo().Grid(Model)
         .Name("grid")
         .CellAction(cell =>
@@ -925,7 +925,7 @@ If set to true the grid will prefix the query string parameters with its name du
 
 
 #### Example (ASPX)
-    <@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
         <%: Html.Kendo().Grid(Model)
         .Name("grid")
         .PrefixUrlParameters(false)
