@@ -113,7 +113,7 @@ This service pack introduces a simplified checkboxes configuration, along with t
 
 #### 2012.2.710 release
 
-The checkbox support is limited to the functionality shown in the [templates demo](http://http://demos.kendoui.com/web/treeview/templates.html) (i.e. rendering only). Any data that needs to be passed to the server needs to be added in hidden fields with JavaScript, using the proper naming. The snippet below shows a possible approach for this:
+The checkbox support is limited to the functionality shown in the [templates demo](http://demos.kendoui.com/web/treeview/templates.html) (i.e. rendering only). Any data that needs to be passed to the server needs to be added in hidden fields with JavaScript, using the proper naming. The snippet below shows a possible approach for this:
 
     @(Html.Kendo().TreeView()
         .Name("treeview")
