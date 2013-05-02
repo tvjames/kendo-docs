@@ -63,8 +63,7 @@ The View-Model which the elements are bound to. Wraped as an instance of `kendo.
 
 ##### namespace `Object`
 
-Optional namespace too look in when instantiating Kendo UI widgets. The valid namespaces are `kendo.ui`, `kendo.dataviz.ui` and `kendo.mobile.ui`. If omitted
-`kendo.ui` will be used.
+Optional namespace to look in when instantiating Kendo UI widgets. The valid namespaces are `kendo.ui`, `kendo.dataviz.ui` and `kendo.mobile.ui`. If omitted, `kendo.ui` will be used.
 
 ### observableHierarchy
 
@@ -138,6 +137,34 @@ The string that needs to be HTML encoded.
 #### Returns
 
 `String` The encoded string.
+
+### init
+
+Initializes Kendo UI widgets in a given DOM element, based on data attributes.
+
+#### Example
+     <!-- View -->
+     <div id="view">
+        <select data-role="dropdownlist">
+            <option>Foo</option>
+            <option>Bar</option>
+        </select>
+     </div>
+
+     <script>
+       // Bind the View to the View-Model
+       kendo.init($("#view"));
+     </script>
+#### Parameters
+
+##### element `String|jQuery|Node`
+
+The root element(s) from which the initialization starts. Can be a valid jQuery string selector, a DOM element or a jQuery object.
+All child elements are traversed.
+
+##### namespace `Object`
+
+Optional namespace to look in when instantiating Kendo UI widgets. The valid namespaces are `kendo.ui`, `kendo.dataviz.ui` and `kendo.mobile.ui`. If omitted, `kendo.ui` will be used.
 
 ### parseDate
 Parses as a formatted string as a `Date`.
