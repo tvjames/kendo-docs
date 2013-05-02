@@ -152,7 +152,6 @@ Initializes Kendo UI widgets in a given DOM element, based on data attributes.
      </div>
 
      <script>
-       // Bind the View to the View-Model
        kendo.init($("#view"));
      </script>
 #### Parameters

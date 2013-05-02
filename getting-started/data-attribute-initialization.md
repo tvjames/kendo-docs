@@ -11,7 +11,7 @@ related: gs-widgets
 # Data Attribute Initialization
 
 In addition to the jQuery plugin initialization, each kendo widget can be initialized and configured via data attributes. You need to set the `role` data attribute
-of the target element and call [kendo.init](/api/framework/kendo#init).
+of the target element and call [kendo.init](/api/framework/kendo#methods-init).
 
 Data attribute initialization is convenient when there are a lot of Kendo UI widgets in the page. First the widget configuration stays with the target element. Second
 there is no need to find all elements to invoke the Kendo jQuery plugins - you only need to call `kendo.init` once.
