@@ -4232,7 +4232,8 @@ Changes the position of the specified column.
 
 ##### destIndex `Number`
 
-The new position of the column.
+The new position of the column. Hidden columns should be taken into account, i.e. the destination index should be incremented by one for each hidden column before that index and
+also if there is a hidden column at that exact index.
 
 ##### column `Object`
 
