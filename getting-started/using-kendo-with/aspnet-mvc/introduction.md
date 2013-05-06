@@ -18,6 +18,7 @@ Kendo UI Complete for ASP.NET MVC is a set of HTML helpers which help you config
 Kendo UI Complete for ASP.NET MVC provides the following benefits:
 
 *   Built on top of the Kendo UI HTML5 framework and jQuery
+*   Built-in support for server-side paging, sorting, filtering, grouping and aggregates
 *   Leverages ASP.NET MVC features - data annotation, editor and display templates, validation, authorization
 *   Supports the WebForms and Razor view engines
 
@@ -26,12 +27,11 @@ Kendo UI Complete for ASP.NET MVC provides the following benefits:
 You can choose to download either the MSI installer or the ZIP file. If you choose the former just run the MSI file to install it. If you choose to
 download the ZIP file simply extract it to your preferred location.
 
-The distribution files contain the following:
+The distribution files include the following directories:
 
 *   **\js** - Kendo UI minified JavaScript files.
-*   **\styles** - Kendo UI minified CSS files and background images used by the themes.
-*   **\src** - Complete JavaScript, CSS and C# source code.
-> **Note**: The source code is available only in the commercial distribution of Kendo UI Complete for ASP.NET MVC.
+*   **\styles** - Kendo UI minified CSS files and images used by the themes.
+*   **\src** - Complete JavaScript, CSS and C# source code. The source code is available **only** in the commercial distribution of Kendo UI Complete for ASP.NET MVC.
 *   **\wrappers\aspnetmvc\Binaries** - Kendo UI Complete for ASP.NET MVC assemblies.
 *   **\wrappers\aspnetmvc\Examples** - a sample ASP.NET MVC application.
 *   **\wrappers\aspnetmvc\EditorTemplates** - ready-to-use editor templates based on various Kendo UI widgets.
@@ -47,13 +47,15 @@ It contains the following:
 *   **Controllers** - controller classes
 *   **Models** - model classes
 
+> The sample ASP.NET MVC application is built with ASP.NET MVC 3.
+
 ## Kendo UI for ASP.NET MVC Visual Studio Extensions
 
 You can download the [Kendo UI for ASP.NET MVC Visual Studio Extensions package](http://visualstudiogallery.msdn.microsoft.com/65b78c2c-951e-43a8-bae7-f9039f59fb9b). It adds a
 few project templates and wizards that allow the following:
 
-* Create a new Kendo ASP.NET MVC 3/4 application
-* Add Kendo UI Complete for ASP.NET MVC to an existing application
+* Create a new Kendo UI ASP.NET MVC 3 or ASP.NET MVC 4 application
+* Add Kendo UI to an existing application
 * Configure a Kendo UI ASP.NET MVC application
 * Automatically check and update Kendo UI Complete for ASP.NET MVC
 
@@ -230,7 +232,7 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                 bundles.IgnoreList.Ignore("*-vsdoc.js");
                 bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
             }
-		
+
 7.  Register the bundles by executing the static method from the previous point in the `Application_Start()` method in **~/Global.asax.cs**:
 
         protected void Application_Start()
