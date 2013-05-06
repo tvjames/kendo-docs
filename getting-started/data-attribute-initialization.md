@@ -48,7 +48,7 @@ This behaviour can be overriden by specifying the full widget class name (with i
 
 Each widget configuration option can be set via a data attribute of the target element. Just add the "data-" prefix to the name of the configuration option and specify its value e.g. `data-delay="100"`.
 
-Camel-cased options are set via dash-separated attributes. For example, the [ignoreCase](/api/web/autocomplete#ignorecase-booleandefault) option of the AutoComplete is set via `data-ignore-text`.
+> Camel-cased options are set via dash-separated attributes. For example, the [ignoreCase](/api/web/autocomplete#configuration-ignoreCase) option of the AutoComplete is set via `data-ignore-case`.
 
 Options, which start with `data` do not require an additional "data" in the attribute name e.g. the `dataTextField` option is set via the `data-text-field` attribute and `dataSource` is set via the
 `data-source` attribute.
