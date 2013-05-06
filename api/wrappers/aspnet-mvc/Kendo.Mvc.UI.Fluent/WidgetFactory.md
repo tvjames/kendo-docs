@@ -19,8 +19,8 @@ Creates a Menu
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => { /* add items here */ });
+    .Name("Menu")
+    .Items(items => { /* add items here */ });
     %>
 
 
@@ -32,7 +32,7 @@ Creates a Editor
 
 #### Example (ASPX)
     <%= Html.Kendo().Editor()
-        .Name("Editor");
+    .Name("Editor");
     %>
 
 
@@ -44,8 +44,8 @@ Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data item type.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Order>()
-        .Name("Grid")
-        .BindTo(Model)
+    .Name("Grid")
+    .BindTo(Model)
     %>
 
 
@@ -63,7 +63,7 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
+    .Name("Grid")
     %>
 
 
@@ -107,7 +107,7 @@ The data source view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Order>("orders")
-        .Name("Grid")
+    .Name("Grid")
     %>
 
 
@@ -119,8 +119,8 @@ Creates a new !:UI.ListView{T} bound to the specified data item type.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView<Order>()
-        .Name("ListView")
-        .BindTo(Model)
+    .Name("ListView")
+    .BindTo(Model)
     %>
 
 
@@ -138,7 +138,7 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView(Model)
-        .Name("ListView")
+    .Name("ListView")
     %>
 
 
@@ -156,7 +156,7 @@ The data source view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView<Order>("orders")
-        .Name("ListView")
+    .Name("ListView")
     %>
 
 
@@ -168,7 +168,7 @@ Creates a Splitter
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter");
+    .Name("Splitter");
     %>
 
 
@@ -180,12 +180,12 @@ Creates a new TabStrip.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Items(items =>
-        {
-            items.Add().Text("First");
-            items.Add().Text("Second");
-        })
+    .Name("TabStrip")
+    .Items(items =>
+    {
+        items.Add().Text("First");
+        items.Add().Text("Second");
+    })
     %>
 
 
@@ -197,7 +197,7 @@ Creates a new DateTimePicker.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
+    .Name("DateTimePicker")
     %>
 
 
@@ -209,7 +209,7 @@ Creates a new DatePicker.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
+    .Name("DatePicker")
     %>
 
 
@@ -221,7 +221,7 @@ Creates a new TimePicker.
 
 #### Example (ASPX)
     <%= Html.Kendo().TimePicker()
-        .Name("TimePicker")
+    .Name("TimePicker")
     %>
 
 
@@ -233,7 +233,7 @@ Creates a new Tooltip.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("Container")
+    .For("Container")
     %>
 
 
@@ -245,7 +245,7 @@ Creates a new ColorPicker.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
+    .Name("ColorPicker")
     %>
 
 
@@ -257,7 +257,7 @@ Creates a new ColorPalette.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
+    .Name("ColorPalette")
     %>
 
 
@@ -269,7 +269,7 @@ Creates a new FlatColorPicker.
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
+    .Name("FlatColorPicker")
     %>
 
 
@@ -281,7 +281,7 @@ Creates a new Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
+    .Name("Calendar")
     %>
 
 
@@ -293,12 +293,12 @@ Creates a new PanelBar.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
-        {
-            items.Add().Text("First");
-            items.Add().Text("Second");
-        })
+    .Name("PanelBar")
+    .Items(items =>
+    {
+        items.Add().Text("First");
+        items.Add().Text("Second");
+    })
     %>
 
 
@@ -310,8 +310,8 @@ Creates a TreeView
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Items(items => { /* add items here */ });
+    .Name("TreeView")
+    .Items(items => { /* add items here */ });
     %>
 
 
@@ -323,7 +323,7 @@ Creates a new NumericTextBox.
 
 #### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
-        .Name("NumericTextBox")
+    .Name("NumericTextBox")
     %>
 
 
@@ -335,7 +335,7 @@ Creates a new !:NumericTextBox{T}.
 
 #### Example (ASPX)
     <%= Html.Kendo().NumericTextBox<double>()
-        .Name("NumericTextBox")
+    .Name("NumericTextBox")
     %>
 
 
@@ -347,7 +347,7 @@ Creates a new CurrencyTextBox.
 
 #### Example (ASPX)
     <%= Html.Kendo().CurrencyTextBox()
-        .Name("CurrencyTextBox")
+    .Name("CurrencyTextBox")
     %>
 
 
@@ -359,7 +359,7 @@ Creates a new PercentTextBox.
 
 #### Example (ASPX)
     <%= Html.Kendo().PercentTextBox()
-        .Name("PercentTextBox")
+    .Name("PercentTextBox")
     %>
 
 
@@ -371,7 +371,7 @@ Creates a new IntegerTextBox.
 
 #### Example (ASPX)
     <%= Html.Kendo().IntegerTextBox()
-        .Name("IntegerTextBox")
+    .Name("IntegerTextBox")
     %>
 
 
@@ -383,7 +383,7 @@ Creates a new Window.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
+    .Name("Window")
     %>
 
 
@@ -395,7 +395,7 @@ Creates a new LinearGauge.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
+    .Name("linearGauge")
     %>
 
 
@@ -407,7 +407,7 @@ Creates a new RadialGauge.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
+    .Name("radialGauge")
     %>
 
 
@@ -419,12 +419,12 @@ Creates a new DropDownList.
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("DropDownList")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -436,12 +436,12 @@ Creates a new ComboBox.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("ComboBox")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -453,12 +453,12 @@ Creates a new AutoComplete.
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("AutoComplete")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -470,12 +470,12 @@ Creates a new MultiSelect.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("MultiSelect")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -487,7 +487,7 @@ Creates a new Slider.
 
 #### Example (ASPX)
     <%= Html.Kendo().Slider()
-        .Name("Slider")
+    .Name("Slider")
     %>
 
 
@@ -499,7 +499,7 @@ Creates a new Slider.
 
 #### Example (ASPX)
     <%= Html.Kendo().Slider()
-        .Name("Slider")
+    .Name("Slider")
     %>
 
 
@@ -511,7 +511,7 @@ Creates a new RangeSlider.
 
 #### Example (ASPX)
     <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
+    .Name("RangeSlider")
     %>
 
 
@@ -523,7 +523,7 @@ Creates a new RangeSlider.
 
 #### Example (ASPX)
     <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
+    .Name("RangeSlider")
     %>
 
 
@@ -535,11 +535,11 @@ Creates a Upload
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("ProcessAttachments", "Home")
-            .Remove("RemoveAttachment", "Home")
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("ProcessAttachments", "Home")
+        .Remove("RemoveAttachment", "Home")
+    )
     %>
 
 
@@ -551,7 +551,7 @@ Creates a !:Kendo.Mvc.UI.Chart{T}
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
+    .Name("Chart")
     %>
 
 
@@ -569,7 +569,7 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
+    .Name("Chart")
     %>
 
 
@@ -587,7 +587,7 @@ The data source view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart<SalesData>("sales")
-        .Name("Chart")
+    .Name("Chart")
     %>
 
 
@@ -599,10 +599,10 @@ Creates a new unbound Chart.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => {
-            series.Bar(new int[] { 1, 2, 3 }).Name("Total Sales");
-        })
+    .Name("Chart")
+    .Series(series => {
+        series.Bar(new int[] { 1, 2, 3 }).Name("Total Sales");
+    })
     %>
 
 
@@ -614,7 +614,7 @@ Creates a !:Kendo.Mvc.UI.StockChart{T}
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("StockChart")
+    .Name("StockChart")
     %>
 
 
@@ -632,7 +632,7 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
+    .Name("StockChart")
     %>
 
 
@@ -650,7 +650,7 @@ The data source view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart<SalesData>("sales")
-        .Name("StockChart")
+    .Name("StockChart")
     %>
 
 
@@ -662,10 +662,10 @@ Creates a new unbound StockChart.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("StockChart")
-        .Series(series => {
-            series.Bar(new int[] { 1, 2, 3 }).Name("Total Sales");
-        })
+    .Name("StockChart")
+    .Series(series => {
+        series.Bar(new int[] { 1, 2, 3 }).Name("Total Sales");
+    })
     %>
 
 
@@ -677,7 +677,7 @@ Creates a !:Kendo.Mvc.UI.Sparkline{T}
 
 #### Example (ASPX)
     <%= Html.Kendo().Sparkline()
-        .Name("Sparkline")
+    .Name("Sparkline")
     %>
 
 
@@ -695,7 +695,7 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().Sparkline(Model)
-        .Name("Sparkline")
+    .Name("Sparkline")
     %>
 
 
@@ -713,7 +713,7 @@ The data source view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().Sparkline<SalesData>("sales")
-        .Name("Sparkline")
+    .Name("Sparkline")
     %>
 
 
@@ -725,10 +725,10 @@ Creates a new unbound Sparkline.
 
 #### Example (ASPX)
     <%= Html.Kendo().Sparkline()
-        .Name("Sparkline")
-        .Series(series => {
-            series.Bar(new int[] { 1, 2, 3 }).Name("Total Sales");
-        })
+    .Name("Sparkline")
+    .Series(series => {
+        series.Bar(new int[] { 1, 2, 3 }).Name("Total Sales");
+    })
     %>
 
 

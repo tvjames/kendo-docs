@@ -138,8 +138,9 @@ The tooltip text color.
                     .Visible(true)
                 )
             )
-            .Render();
-        %>
+        )
+        .Render();
+    %>
 
 
 ### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)

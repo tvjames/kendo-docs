@@ -19,8 +19,8 @@ Specifies the culture info used by the Calendar widget.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("calendar")
-        .Culture("de-DE")
+    .Name("calendar")
+    .Culture("de-DE")
     %>
 
 
@@ -38,10 +38,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Events(events =>
-            events.Select("onSelect")
-        )
+    .Name("Calendar")
+    .Events(events =>
+        events.Select("onSelect")
+    )
     %>
 
 
@@ -60,8 +60,8 @@ FooterId to be used for rendering the footer of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .FooterId("widgetFooterId")
+    .Name("Calendar")
+    .FooterId("widgetFooterId")
     %>
 
 
@@ -73,8 +73,8 @@ Footer template to be used for rendering the footer of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Footer("#= kendo.toString(data, "G") #")
+    .Name("Calendar")
+    .Footer("#= kendo.toString(data, "G") #")
     %>
 
 
@@ -86,8 +86,8 @@ Specifies the navigation depth.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Depth(CalendarView.Month)
+    .Name("Calendar")
+    .Depth(CalendarView.Month)
     %>
 
 
@@ -99,8 +99,8 @@ Specifies the start view.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Start(CalendarView.Month)
+    .Name("Calendar")
+    .Start(CalendarView.Month)
     %>
 
 
@@ -112,8 +112,8 @@ MonthTemplateId to be used for rendering the cells of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .MonthTemplateId("widgetMonthTemplateId")
+    .Name("Calendar")
+    .MonthTemplateId("widgetMonthTemplateId")
     %>
 
 
@@ -125,8 +125,8 @@ Templates for the cells rendered in the "month" view.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .MonthTemplate("#= data.value #")
+    .Name("Calendar")
+    .MonthTemplate("#= data.value #")
     %>
 
 
@@ -138,8 +138,8 @@ Configures the content of cells of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .MonthTemplate(month => month.Content("#= data.value #"))
+    .Name("Calendar")
+    .MonthTemplate(month => month.Content("#= data.value #"))
     %>
 
 

@@ -88,10 +88,10 @@ Use builder to set different tooltip options.
 
 #### Example (ASPX)
     <%= Html.Kendo().Slider()
-        .Name("Slider")
-        .Tooltip(tooltip => tooltip
-            .Enable(true)
-            .Format("{0:P}")
+    .Name("Slider")
+    .Tooltip(tooltip => tooltip
+        .Enable(true)
+        .Format("{0:P}")
         );
     %>
 
@@ -110,9 +110,9 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events =>
-            events.OnChange("onChange"))
+    .Name("RangeSlider")
+    .Events(events =>
+        events.OnChange("onChange"))
     %>
 
 

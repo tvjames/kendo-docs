@@ -19,8 +19,8 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .AutoBind(false)
+    .Name("TreeView")
+    .AutoBind(false)
     %>
 
 
@@ -32,8 +32,8 @@ Template to be used for rendering the item checkboxes in the treeview.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .CheckboxTemplate("#= data #")
+    .Name("TreeView")
+    .CheckboxTemplate("#= data #")
     %>
 
 
@@ -45,8 +45,8 @@ Id of the template element to be used for rendering the item checkboxes in the t
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .CheckboxTemplateId("widgetTemplateId")
+    .Name("TreeView")
+    .CheckboxTemplateId("widgetTemplateId")
     %>
 
 
@@ -58,8 +58,8 @@ Template to be used for rendering the items in the treeview.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Template("#= data #")
+    .Name("TreeView")
+    .Template("#= data #")
     %>
 
 
@@ -71,8 +71,8 @@ Id of the template element to be used for rendering the items in the treeview.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .TemplateId("widgetTemplateId")
+    .Name("TreeView")
+    .TemplateId("widgetTemplateId")
     %>
 
 
@@ -90,8 +90,8 @@ Whether checkboxes should be rendered.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Checkboxes(true)
+    .Name("TreeView")
+    .Checkboxes(true)
     %>
 
 
@@ -109,10 +109,10 @@ Builder of the treeview checkboxes configuration.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Checkboxes(config => config
-            .CheckChildren(true)
-        )
+    .Name("TreeView")
+    .Checkboxes(config => config
+        .CheckChildren(true)
+    )
     %>
 
 
@@ -130,12 +130,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -153,11 +153,11 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events =>
-            .OnDataBinding("onDataBinding")
-            .OnItemDataBound("onItemDataBound")
-        )
+    .Name("TreeView")
+    .Events(events =>
+        .OnDataBinding("onDataBinding")
+        .OnItemDataBound("onItemDataBound")
+    )
     %>
 
 
@@ -178,10 +178,10 @@ The action to configure the item.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo("examples", (item, siteMapNode) =>
-        {
-        })
+    .Name("TreeView")
+    .BindTo("examples", (item, siteMapNode) =>
+    {
+    })
     %>
 
 
@@ -199,8 +199,8 @@ The view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo("examples")
+    .Name("TreeView")
+    .BindTo("examples")
     %>
 
 
@@ -219,8 +219,8 @@ The list of items
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo(model)
+    .Name("TreeView")
+    .BindTo(model)
     %>
 
 
@@ -242,11 +242,11 @@ The action executed for every data bound item.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo(new []{"First", "Second"}, (item, value)
-        {
-            item.Text = value;
-        })
+    .Name("TreeView")
+    .BindTo(new []{"First", "Second"}, (item, value) =>
+    {
+        item.Text = value;
+    })
     %>
 
 
@@ -267,18 +267,18 @@ The action which will configure the mappings
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo(Model, mapping => mapping
-            .For<Customer>(binding => binding
-                .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
+    .Name("TreeView")
+    .BindTo(Model, mapping => mapping
+        .For<Customer>(binding => binding
+            .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
                 .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to TreeViewItem properties
-            )
-            .For<Order<(binding => binding
-                .Children(o => null) // "Orders" do not have child objects so return "null"
-                .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to TreeViewItem properties
-            )
-        )
-    %>
+                )
+                .For<Order<(binding => binding
+                    .Children(o => null) // "Orders" do not have child objects so return "null"
+                        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to TreeViewItem properties
+                        )
+                    )
+                    %>
 
 
 ### ItemAction(`System.Action<Kendo.Mvc.UI.TreeViewItem>`)
@@ -295,13 +295,13 @@ Action, which will be executed for each item.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .ItemAction(item =>
-        {
-            item
-            .Text(...)
-            .HtmlAttributes(...);
-        })
+    .Name("TreeView")
+    .ItemAction(item =>
+    {
+        item
+        .Text(...)
+        .HtmlAttributes(...);
+    })
     %>
 
 
@@ -319,8 +319,8 @@ If true the item will be highlighted.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .HighlightPath(true)
+    .Name("TreeView")
+    .HighlightPath(true)
     %>
 
 
@@ -338,8 +338,8 @@ The boolean value.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Animation(false) //toggle effect
+    .Name("TreeView")
+    .Animation(false) //toggle effect
     %>
 
 
@@ -357,15 +357,15 @@ The action which configures the animation effects.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Animation(animation =>
+    .Name("TreeView")
+    .Animation(animation =>
+    {
+        animation.Expand(open =>
         {
-            animation.Expand(open =>
-            {
-                open.SlideIn(SlideDirection.Down);
-            }
-            })
-        %>
+            open.SlideIn(SlideDirection.Down);
+            });
+        })
+    %>
 
 
 ### ExpandAll(`System.Boolean`)
@@ -382,8 +382,8 @@ If true all the items will be expanded.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .ExpandAll(true)
+    .Name("TreeView")
+    .ExpandAll(true)
     %>
 
 
@@ -401,13 +401,13 @@ If true, drag & drop is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
-        .DragAndDrop(true)
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
+    .DragAndDrop(true)
     %>
 
 
@@ -425,8 +425,8 @@ If true security trimming is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .SecurityTrimming(false)
+    .Name("TreeView")
+    .SecurityTrimming(false)
     %>
 
 
@@ -444,11 +444,11 @@ The securityTrimming action.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .SecurityTrimming(builder =>
-        {
-            builder.Enabled(true).HideParent(true);
-        })
+    .Name("TreeView")
+    .SecurityTrimming(builder =>
+    {
+        builder.Enabled(true).HideParent(true);
+    })
     %>
 
 
@@ -466,8 +466,8 @@ The field name.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataTextField("Name")
+    .Name("TreeView")
+    .DataTextField("Name")
     %>
 
 
@@ -485,8 +485,8 @@ The field name.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataUrlField("LinksTo")
+    .Name("TreeView")
+    .DataUrlField("LinksTo")
     %>
 
 
@@ -504,8 +504,8 @@ The field name.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataSpriteCssClassField("IconSprite")
+    .Name("TreeView")
+    .DataSpriteCssClassField("IconSprite")
     %>
 
 
@@ -523,8 +523,8 @@ The field name.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataImageUrlField("ImageURL")
+    .Name("TreeView")
+    .DataImageUrlField("ImageURL")
     %>
 
 
@@ -542,12 +542,12 @@ The action that configures the DataSource.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataSource(dataSource => dataSource
-            .Read(read => read
-                .Action("Employees", "TreeView")
-            )
+    .Name("TreeView")
+    .DataSource(dataSource => dataSource
+        .Read(read => read
+            .Action("Employees", "TreeView")
         )
+    )
     %>
 
 
@@ -565,8 +565,8 @@ Whether the datasource should be loaded on demand.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .LoadOnDemand(false)
+    .Name("TreeView")
+    .LoadOnDemand(false)
     %>
 
 

@@ -25,8 +25,8 @@ The axis minimum value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(a => a.Numeric().Min(4))
+    .Name("Chart")
+    .ValueAxis(a => a.Numeric().Min(4))
     %>
 
 
@@ -44,8 +44,8 @@ The axis maximum value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(a => a.Numeric().Max(4))
+    .Name("Chart")
+    .ValueAxis(a => a.Numeric().Max(4))
     %>
 
 
@@ -63,8 +63,8 @@ The interval between major divisions.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(a => a.Numeric().MajorUnit(4))
+    .Name("Chart")
+    .ValueAxis(a => a.Numeric().MajorUnit(4))
     %>
 
 
@@ -83,11 +83,11 @@ The interval between minor divisions.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(a => a.Numeric()
-            .MajorUnit(4)
-            .MinorUnit(2)
-            .MinorTicks(mt => mt.Visible(true))
+    .Name("Chart")
+    .ValueAxis(a => a.Numeric()
+        .MajorUnit(4)
+        .MinorUnit(2)
+        .MinorTicks(mt => mt.Visible(true))
         )
     %>
 
@@ -106,8 +106,8 @@ The value at which the first perpendicular axis crosses this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(axis => axis.AxisCrossingValue(4))
+    .Name("Chart")
+    .ValueAxis(axis => axis.AxisCrossingValue(4))
     %>
 
 
@@ -125,11 +125,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(axis => axis.Numeric().AxisCrossingValue(0, 10))
+    .Name("Chart")
+    .XAxis(axis => axis.Numeric().AxisCrossingValue(0, 10))
         .YAxis(axis => axis.Numeric().Title("Axis 1"))
-        .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.Double>`)
@@ -146,11 +146,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(axis => axis.Numeric().AxisCrossingValue(new double[] { 0, 10 }))
+    .Name("Chart")
+    .XAxis(axis => axis.Numeric().AxisCrossingValue(new double[] { 0, 10 }))
         .YAxis(axis => axis.Numeric().Title("Axis 1"))
-        .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 

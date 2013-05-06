@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.Resize(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Resize(`System.String`)
@@ -55,8 +55,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Events(events => events.Resize("onResize"))
+    .Name("Splitter")
+    .Events(events => events.Resize("onResize"))
     %>
 
 
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.Expand(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Expand(`System.String`)
@@ -104,8 +104,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Events(events => events.Expand("onExpand"))
+    .Name("Splitter")
+    .Events(events => events.Expand("onExpand"))
     %>
 
 
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.Collapse(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Collapse(`System.String`)
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Events(events => events.Collapse("onCollapse"))
+    .Name("Splitter")
+    .Events(events => events.Collapse("onCollapse"))
     %>
 
 
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.ContentLoad(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### ContentLoad(`System.String`)
@@ -202,8 +202,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Events(events => events.ContentLoad("onContentLoad"))
+    .Name("Splitter")
+    .Events(events => events.ContentLoad("onContentLoad"))
     %>
 
 

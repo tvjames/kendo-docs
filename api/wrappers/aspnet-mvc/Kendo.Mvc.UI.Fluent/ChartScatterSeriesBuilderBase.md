@@ -25,15 +25,15 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Scatter(s => s.x, s => s.y)
+    .Name("Chart")
+    .Series(series => series
+        .Scatter(s => s.x, s => s.y)
             .Labels(labels => labels
                 .Position(ChartBarLabelsPosition.Above)
                 .Visible(true)
-            );
-        )
-    %>
+                );
+            )
+            %>
 
 
 ### Labels(`System.Boolean`)
@@ -50,9 +50,9 @@ The visibility. The default value is false.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Scatter(s => s.x, s => s.y)
+    .Name("Chart")
+    .Series(series => series
+        .Scatter(s => s.x, s => s.y)
             .Labels(true);
         )
     %>
@@ -72,14 +72,14 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Scatter(s => s.x, s => s.y)
+    .Name("Chart")
+    .Series(series => series
+        .Scatter(s => s.x, s => s.y)
             .Markers(markers => markers
                 .Type(ChartMarkerShape.Triangle)
-            );
-        )
-    %>
+                );
+            )
+            %>
 
 
 ### Markers(`System.Boolean`)
@@ -96,9 +96,9 @@ The visibility. The default value is true.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Scatter(s => s.x, s => s.y)
+    .Name("Chart")
+    .Series(series => series
+        .Scatter(s => s.x, s => s.y)
             .Markers(true);
         )
     %>
@@ -118,11 +118,11 @@ The axis name for this series.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Scatter(s => s.X, s => s.Y).Name("Scatter").XAxis("secondary"))
+    .Name("Chart")
+    .Series(series => series.Scatter(s => s.X, s => s.Y).Name("Scatter").XAxis("secondary"))
         .XAxis(axis => axis.Numeric())
-        .XAxis(axis => axis.Numeric("secondary"))
-    %>
+            .XAxis(axis => axis.Numeric("secondary"))
+                %>
 
 
 ### YAxis(`System.String`)
@@ -139,11 +139,11 @@ The axis name for this series.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Scatter(s => s.Sales).Name("Sales").YAxis("secondary"))
+    .Name("Chart")
+    .Series(series => series.Scatter(s => s.Sales).Name("Sales").YAxis("secondary"))
         .YAxis(axis => axis.Numeric())
-        .YAxis(axis => axis.Numeric("secondary"))
-    %>
+            .YAxis(axis => axis.Numeric("secondary"))
+                %>
 
 
 ### Axis(`System.String`)

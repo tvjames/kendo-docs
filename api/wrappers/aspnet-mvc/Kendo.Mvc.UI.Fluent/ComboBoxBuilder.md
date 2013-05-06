@@ -19,8 +19,8 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .AutoBind(false)
+    .Name("ComboBox")
+    .AutoBind(false)
     %>
 
 
@@ -32,9 +32,9 @@ Sets the field of the data item that provides the value content of the list item
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .DataTextField("Text")
-        .DataValueField("Value")
+    .Name("DropDownList")
+    .DataTextField("Text")
+    .DataValueField("Value")
     %>
 
 
@@ -52,10 +52,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Events(events =>
-            events.Change("change")
-        )
+    .Name("ComboBox")
+    .Events(events =>
+        events.Change("change")
+    )
     %>
 
 
@@ -67,8 +67,8 @@ Use it to enable filtering of items.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Filter("startswith");
+    .Name("ComboBox")
+    .Filter("startswith");
     %>
 
 
@@ -80,8 +80,8 @@ Use it to enable filtering of items.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Filter(FilterType.Contains);
+    .Name("ComboBox")
+    .Filter(FilterType.Contains);
     %>
 
 
@@ -99,12 +99,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Telerik().ComboBox()
-        .Name("ComboBox")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("ComboBox")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -116,8 +116,8 @@ Use it to enable highlighting of first matched item.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .HighlightFirst(true)
+    .Name("ComboBox")
+    .HighlightFirst(true)
     %>
 
 
@@ -129,8 +129,8 @@ Specifies the minimum number of characters that should be typed before the widge
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .MinLength(3)
+    .Name("ComboBox")
+    .MinLength(3)
     %>
 
 
@@ -148,8 +148,8 @@ Item index.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .SelectedIndex(0);
+    .Name("ComboBox")
+    .SelectedIndex(0);
     %>
 
 
@@ -161,8 +161,8 @@ Controls whether the ComboBox should automatically auto-type the rest of text.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Suggest(true)
+    .Name("ComboBox")
+    .Suggest(true)
     %>
 
 
@@ -174,8 +174,8 @@ A string that appears in the textbox when it has no value.
 
 #### Example (ASPX)
     <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Placeholder("Select country...")
+    .Name("ComboBox")
+    .Placeholder("Select country...")
     %>
 
 
@@ -187,8 +187,8 @@ Use it to set the Id of the parent ComboBox.
 
 #### Example (ASPX)
     <%= Html.Telerik().ComboBox()
-        .Name("ComboBox2")
-        .CascadeFrom("ComboBox1")
+    .Name("ComboBox2")
+    .CascadeFrom("ComboBox1")
     %>
 
 
@@ -200,9 +200,9 @@ Define the text of the widget, when the autoBind is set to false.
 
 #### Example (ASPX)
     <%= Html.Telerik().ComboBox()
-        .Name("ComboBox")
-        .Text("Chai")
-        .AutoBind(false)
+    .Name("ComboBox")
+    .Text("Chai")
+    .AutoBind(false)
     %>
 
 

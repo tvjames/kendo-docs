@@ -25,8 +25,8 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView<Order>()
-        .Name("Orders")
-        .BindTo((IEnumerable<Order>)ViewData["Orders"]);
+    .Name("Orders")
+    .BindTo((IEnumerable<Order>)ViewData["Orders"]);
     %>
 
 
@@ -44,8 +44,8 @@ The data source.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView<Order>()
-        .Name("Orders")
-        .BindTo((IEnumerable)ViewData["Orders"]);
+    .Name("Orders")
+    .BindTo((IEnumerable)ViewData["Orders"]);
     %>
 
 
@@ -63,8 +63,8 @@ The Id of the element which contains the template.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView<Order>()
-        .Name("Orders")
-        .ClientTemplateId("listViewTemplate");
+    .Name("Orders")
+    .ClientTemplateId("listViewTemplate");
     %>
 
 
@@ -76,8 +76,8 @@ Allows paging of the data.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Ajax(ajax => ajax.Action("Orders", "ListView"))
+    .Name("ListView")
+    .Ajax(ajax => ajax.Action("Orders", "ListView"))
         .Pageable();
     %>
 
@@ -96,10 +96,10 @@ Use builder to define paging settings.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("Grid")
-        .Ajax(ajax => ajax.Action("Orders", "ListView"))
+    .Name("Grid")
+    .Ajax(ajax => ajax.Action("Orders", "ListView"))
         .Pageable(paging => paging.Enabled(true))
-    %>
+            %>
 
 
 ### Navigatable
@@ -110,8 +110,8 @@ Enables keyboard navigation.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Ajax(ajax => ajax.Action("Orders", "ListView"))
+    .Name("ListView")
+    .Ajax(ajax => ajax.Action("Orders", "ListView"))
         .Navigatable();
     %>
 
@@ -124,8 +124,8 @@ Enables single item selection.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Selectable()
+    .Name("ListView")
+    .Selectable()
     %>
 
 
@@ -143,11 +143,11 @@ Use builder to define the selection mode.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Selectable(selection => {
-            selection.Enabled(true);
-            selection.Mode(ListViewSelectionMode.Multiple);
-        })
+    .Name("ListView")
+    .Selectable(selection => {
+        selection.Enabled(true);
+        selection.Mode(ListViewSelectionMode.Multiple);
+    })
     %>
 
 
@@ -173,8 +173,8 @@ Specifies ListView wrapper element tag name.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .TagName("div")
+    .Name("ListView")
+    .TagName("div")
     %>
 
 
@@ -186,8 +186,8 @@ Configures the ListView editing settings.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Editable(settings => settings.Enabled(true))
+    .Name("ListView")
+    .Editable(settings => settings.Enabled(true))
     %>
 
 
@@ -199,8 +199,8 @@ Enables ListView editing.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Editable()
+    .Name("ListView")
+    .Editable()
     %>
 
 
@@ -218,10 +218,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView()
-        .Name("ListView")
-        .Events(events => events
-            .DataBound("onDataBound")
-        )
+    .Name("ListView")
+    .Events(events => events
+        .DataBound("onDataBound")
+    )
     %>
 
 

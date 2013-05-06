@@ -26,14 +26,14 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Bubble(s => s.x, s => s.y, s => s.size)
+    .Name("Chart")
+    .Series(series => series
+        .Bubble(s => s.x, s => s.y, s => s.size)
             .NegativeValues(n => n
                 .Visible(true)
-            );
-        )
-    %>
+                );
+            )
+            %>
 
 
 ### Border(`System.Int32,System.String`)
@@ -56,10 +56,10 @@ The bubble border color (CSS syntax).
         .Name("Chart")
         .Series(series => series
             .Bubble(s => s.x, s => s.y, s => s.size)
-            .Border(1, "Red");
-        )
-        .Render();
-    %>
+                .Border(1, "Red");
+            )
+            .Render();
+            %>
 
 
 ### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)

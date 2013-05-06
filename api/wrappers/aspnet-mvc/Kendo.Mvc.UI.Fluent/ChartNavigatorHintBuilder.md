@@ -25,11 +25,11 @@ The border color (CSS format).
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(nav => nav
-            .Series(series =>
-            {
-                series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Navigator(nav => nav
+        .Series(series =>
+        {
+            series.Bar(s => s.SalesAmount);
             })
             .Hint(hint => hint
                 .Format("{0:d} | {1:d}")
@@ -52,11 +52,11 @@ The border opacity (CSS format).
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(nav => nav
-            .Series(series =>
-            {
-                series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Navigator(nav => nav
+        .Series(series =>
+        {
+            series.Bar(s => s.SalesAmount);
             })
             .Hint(hint => hint
                 .Template("From: #= from # To: #= to #")
@@ -79,11 +79,11 @@ The hint visibility.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(nav => nav
-            .Series(series =>
-            {
-                series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Navigator(nav => nav
+        .Series(series =>
+        {
+            series.Bar(s => s.SalesAmount);
             })
             .Hint(hint => hint
                 .Visible(false)

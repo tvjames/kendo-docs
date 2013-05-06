@@ -25,10 +25,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .Events(events =>
-            events.Change("change")
-        )
+    .Name("AutoComplete")
+    .Events(events =>
+        events.Change("change")
+    )
     %>
 
 
@@ -40,8 +40,8 @@ Use it to enable filtering of items.
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .Filter("startswith");
+    .Name("AutoComplete")
+    .Filter("startswith");
     %>
 
 
@@ -53,8 +53,8 @@ Use it to enable filtering of items.
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .Filter(FilterType.Contains);
+    .Name("AutoComplete")
+    .Filter(FilterType.Contains);
     %>
 
 
@@ -66,8 +66,8 @@ Use it to enable highlighting of first matched item.
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .HighlightFirst(true)
+    .Name("AutoComplete")
+    .HighlightFirst(true)
     %>
 
 
@@ -79,8 +79,8 @@ Specifies the minimum number of characters that should be typed before the widge
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .MinLength(3)
+    .Name("AutoComplete")
+    .MinLength(3)
     %>
 
 
@@ -92,8 +92,8 @@ A string that appears in the textbox when it has no value.
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .MinLength(3)
+    .Name("AutoComplete")
+    .MinLength(3)
     %>
 
 
@@ -105,8 +105,8 @@ Sets the separator for completion. Empty by default, allowing for only one compl
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .Separator(", ")
+    .Name("AutoComplete")
+    .Separator(", ")
     %>
 
 
@@ -118,8 +118,8 @@ Controls whether the AutoComplete should automatically auto-type the rest of tex
 
 #### Example (ASPX)
     <%= Html.Kendo().AutoComplete()
-        .Name("AutoComplete")
-        .Suggest(true)
+    .Name("AutoComplete")
+    .Suggest(true)
     %>
 
 

@@ -25,12 +25,12 @@ The labels position.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Position(GaugeRadialScaleLabelsPosition.Inside)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Position(GaugeRadialScaleLabelsPosition.Inside)
         )
+    )
     %>
 
 

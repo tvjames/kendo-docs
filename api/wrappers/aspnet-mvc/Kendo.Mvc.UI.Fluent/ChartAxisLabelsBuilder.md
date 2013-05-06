@@ -25,16 +25,16 @@ A value indicating whether to render the axis labels on the other side.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .ValueAxis(axis => axis
-            .Numeric().Labels(labels => labels.Mirror(true))
+    .Name("Chart")
+    .ValueAxis(axis => axis
+        .Numeric().Labels(labels => labels.Mirror(true))
         )
         .CategoryAxis(axis => axis
             .Categories(s => s.DateString)
-            // Move the value axis to the right side
-            .AxisCrossingValue(5)
-        )
-    %>
+                // Move the value axis to the right side
+                .AxisCrossingValue(5)
+            )
+            %>
 
 
 ### Step(`System.Int32`)
@@ -52,12 +52,12 @@ A value indicating the step at which labels are rendered.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(product => product.Name)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(product => product.Name)
             .Labels(labels => labels.Step(2))
-        )
-    %>
+            )
+            %>
 
 
 ### Skip(`System.Int32`)
@@ -74,12 +74,12 @@ Skips rendering the first n labels.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(product => product.Name)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(product => product.Name)
             .Labels(labels => labels.Skip(2))
-        )
-    %>
+            )
+            %>
 
 
 

@@ -27,8 +27,8 @@ The line visibility.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Visible(true)))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 

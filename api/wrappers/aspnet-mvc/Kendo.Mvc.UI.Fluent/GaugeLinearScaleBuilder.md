@@ -30,10 +30,10 @@ The mirror.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("LinearGauge")
-        .Scale(scale => scale
-            .Mirror(true)
-        )
+    .Name("LinearGauge")
+    .Scale(scale => scale
+        .Mirror(true)
+    )
     %>
 
 
@@ -51,10 +51,10 @@ The vertical.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("LinearGauge")
-        .Scale(scale => scale
-            .Vertical(false)
-        )
+    .Name("LinearGauge")
+    .Scale(scale => scale
+        .Vertical(false)
+    )
     %>
 
 
@@ -72,12 +72,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Visible(false)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Visible(false)
         )
+    )
     %>
 
 

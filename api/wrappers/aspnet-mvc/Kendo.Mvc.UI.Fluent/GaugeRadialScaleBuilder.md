@@ -30,10 +30,10 @@ The end angle.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Scale(scale => scale
-            .EndAngle(10)
-        )
+    .Name("radialGauge")
+    .Scale(scale => scale
+        .EndAngle(10)
+    )
     %>
 
 
@@ -51,10 +51,10 @@ The start Angle.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Scale(scale => scale
-            .StartAngle(220)
-        )
+    .Name("radialGauge")
+    .Scale(scale => scale
+        .StartAngle(220)
+    )
     %>
 
 
@@ -72,12 +72,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Visible(false)
-            )
+    .Name("radialGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Visible(false)
         )
+    )
     %>
 
 

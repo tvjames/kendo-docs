@@ -30,12 +30,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .MinorTicks(ticks => ticks
-                .Visible(false)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .MinorTicks(ticks => ticks
+            .Visible(false)
         )
+    )
     %>
 
 
@@ -53,12 +53,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .MajorTicks(ticks => ticks
-                .Visible(false)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .MajorTicks(ticks => ticks
+            .Visible(false)
         )
+    )
     %>
 
 
@@ -76,12 +76,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Ranges.Add()
-            .From(1)
-            .To(2)
-        )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Ranges.Add()
+        .From(1)
+        .To(2)
+    )
     %>
 
 
@@ -99,8 +99,8 @@ The major unit.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => sclae.MajorUnit(5))
+    .Name("linearGauge")
+    .Scale(scale => sclae.MajorUnit(5))
     %>
 
 
@@ -118,8 +118,8 @@ The minor unit.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => sclae.MinorUnit(5))
+    .Name("linearGauge")
+    .Scale(scale => sclae.MinorUnit(5))
     %>
 
 
@@ -137,8 +137,8 @@ The min.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => sclae.Min(-20))
+    .Name("linearGauge")
+    .Scale(scale => sclae.Min(-20))
     %>
 
 
@@ -156,8 +156,8 @@ The max.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => sclae.Max(20))
+    .Name("linearGauge")
+    .Scale(scale => sclae.Max(20))
     %>
 
 
@@ -175,8 +175,8 @@ The scale reverse.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => sclae.reverse(true))
+    .Name("linearGauge")
+    .Scale(scale => sclae.reverse(true))
     %>
 
 
@@ -194,12 +194,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Line(line => line
-                .Visible(false)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Line(line => line
+            .Visible(false)
         )
+    )
     %>
 
 

@@ -25,14 +25,14 @@ The date format.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .DateFormats(formats => formats
-                    .Hours("HH:mm")
-                )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .DateFormats(formats => formats
+                .Hours("HH:mm")
             )
+        )
         );
     %>
 
@@ -51,14 +51,14 @@ The date format.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .DateFormats(formats => formats
-                    .Days("dddd dd")
-                )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .DateFormats(formats => formats
+                .Days("dddd dd")
             )
+        )
         );
     %>
 
@@ -77,14 +77,14 @@ The date format.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .DateFormats(formats => formats
-                    .Minutes("ss")
-                )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .DateFormats(formats => formats
+                .Minutes("ss")
             )
+        )
         );
     %>
 
@@ -103,14 +103,14 @@ The date format.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .DateFormats(formats => formats
-                    .Months("MMMM MM")
-                )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .DateFormats(formats => formats
+                .Months("MMMM MM")
             )
+        )
         );
     %>
 
@@ -129,14 +129,14 @@ The date format.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .DateFormats(formats => formats
-                    .Months("dddd")
-                )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .DateFormats(formats => formats
+                .Months("dddd")
             )
+        )
         );
     %>
 
@@ -155,14 +155,14 @@ The date format.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .DateFormats(formats => formats
-                    .Years("yyyy")
-                )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .DateFormats(formats => formats
+                .Years("yyyy")
             )
+        )
         );
     %>
 

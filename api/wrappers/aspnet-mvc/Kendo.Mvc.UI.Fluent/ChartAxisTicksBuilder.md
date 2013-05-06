@@ -27,8 +27,8 @@ The ticks size.
     <% Html.Kendo().Chart()
         .Name("chart")
         .ValueAxis(axis => axis.MajorTicks(ticks => ticks.Size(2)))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Visible(`System.Boolean`)
@@ -47,8 +47,8 @@ The ticks visibility.
     <% Html.Kendo().Chart()
         .Name("chart")
         .ValueAxis(axis => axis.MajorTicks(ticks => ticks.Visible(false)))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 

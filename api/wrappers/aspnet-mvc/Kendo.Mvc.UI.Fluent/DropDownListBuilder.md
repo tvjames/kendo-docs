@@ -19,9 +19,9 @@ Sets the field of the data item that provides the value content of the list item
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .DataTextField("Text")
-        .DataValueField("Value")
+    .Name("DropDownList")
+    .DataTextField("Text")
+    .DataValueField("Value")
     %>
 
 
@@ -39,10 +39,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .Events(events =>
-            events.Change("change")
-        )
+    .Name("DropDownList")
+    .Events(events =>
+        events.Change("change")
+    )
     %>
 
 
@@ -60,12 +60,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Telerik().DropDownList()
-        .Name("DropDownList")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("DropDownList")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -77,8 +77,8 @@ Define the text of the default empty item. If the value is an object, then the w
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .OptionLabel("Select country...")
+    .Name("DropDownList")
+    .OptionLabel("Select country...")
     %>
 
 
@@ -96,8 +96,8 @@ Item index.
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .SelectedIndex(0);
+    .Name("DropDownList")
+    .SelectedIndex(0);
     %>
 
 
@@ -109,8 +109,8 @@ Use it to set the Id of the parent DropDownList.
 
 #### Example (ASPX)
     <%= Html.Telerik().DropDownList()
-        .Name("DropDownList2")
-        .CascadeFrom("DropDownList1")
+    .Name("DropDownList2")
+    .CascadeFrom("DropDownList1")
     %>
 
 
@@ -122,9 +122,9 @@ Define the text of the widget, when the autoBind is set to false.
 
 #### Example (ASPX)
     <%= Html.Telerik().DropDownList()
-        .Name("DropDownList")
-        .Text("Chai")
-        .AutoBind(false)
+    .Name("DropDownList")
+    .Text("Chai")
+    .AutoBind(false)
     %>
 
 

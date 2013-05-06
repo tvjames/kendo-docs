@@ -25,10 +25,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .Events(events =>
-            events.Select("select").Change("change")
-        )
+    .Name("ColorPalette")
+    .Events(events =>
+        events.Select("select").Change("change")
+    )
     %>
 
 
@@ -46,8 +46,8 @@ The initially selected color
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .Value("#ff0000")
+    .Name("ColorPalette")
+    .Value("#ff0000")
     %>
 
 
@@ -65,8 +65,8 @@ The initially selected color
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .Columns(5)
+    .Name("ColorPalette")
+    .Columns(5)
     %>
 
 
@@ -84,8 +84,8 @@ The tile size (for square tiles)
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .TileSize(32)
+    .Name("ColorPalette")
+    .TileSize(32)
     %>
 
 
@@ -103,8 +103,8 @@ The tile size (for square tiles)
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .TileSize(s => s.Width(20).Height(10))
+    .Name("ColorPalette")
+    .TileSize(s => s.Width(20).Height(10))
     %>
 
 
@@ -122,8 +122,8 @@ A list of colors.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .Palette(new List<string> { "#ff0000", "#00ff00", "#0000ff" })
+    .Name("ColorPalette")
+    .Palette(new List<string> { "#ff0000", "#00ff00", "#0000ff" })
     %>
 
 
@@ -141,8 +141,8 @@ One of the preset palettes of colors
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .Palette(ColorPickerPalette.WebSafe)
+    .Name("ColorPalette")
+    .Palette(ColorPickerPalette.WebSafe)
     %>
 
 

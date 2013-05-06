@@ -25,8 +25,8 @@ The desired orientation.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Orientation(SplitterOrientation.Vertical)
+    .Name("Splitter")
+    .Orientation(SplitterOrientation.Vertical)
     %>
 
 
@@ -44,11 +44,11 @@ The action that configures the panes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Panes(panes => {
-            panes.Add().LoadContentFrom("Navigation", "Shared");
-            panes.Add().LoadContentFrom("Index", "Home");
-        })
+    .Name("Splitter")
+    .Panes(panes => {
+        panes.Add().LoadContentFrom("Navigation", "Shared");
+        panes.Add().LoadContentFrom("Index", "Home");
+    })
     %>
 
 
@@ -66,10 +66,10 @@ The action that configures the client events.
 
 #### Example (ASPX)
     <%= Html.Kendo().Splitter()
-        .Name("Splitter")
-        .Events(events => events
-            .OnLoad("onLoad")
-        )
+    .Name("Splitter")
+    .Events(events => events
+        .OnLoad("onLoad")
+    )
     %>
 
 

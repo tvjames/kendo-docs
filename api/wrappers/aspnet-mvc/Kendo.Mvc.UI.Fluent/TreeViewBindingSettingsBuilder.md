@@ -19,11 +19,11 @@ Enables or disables binding.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Index", "Home").Enabled((bool)ViewData["ajax"]);
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Index", "Home").Enabled((bool)ViewData["ajax"]);
+    })
     %>
 
 
@@ -41,11 +41,11 @@ The route values of the Action method.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select(MVC.Home.Index(1).GetRouteValueDictionary());
-        })
+    .Name("Grid")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select(MVC.Home.Index(1).GetRouteValueDictionary());
+    })
     %>
 
 
@@ -69,11 +69,11 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Index", "Home", new RouteValueDictionary{ {"id", 1} });
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Index", "Home", new RouteValueDictionary{ {"id", 1} });
+    })
     %>
 
 
@@ -97,11 +97,11 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Index", "Home", new { {"id", 1} });
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Index", "Home", new { {"id", 1} });
+    })
     %>
 
 
@@ -122,11 +122,11 @@ Name of the controller.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Index", "Home");
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Index", "Home");
+    })
     %>
 
 
@@ -147,11 +147,11 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Default", "Home", new RouteValueDictionary{ {"id", 1} });
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Default", "Home", new RouteValueDictionary{ {"id", 1} });
+    })
     %>
 
 
@@ -172,11 +172,11 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Default", new {id=1});
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Default", new {id=1});
+    })
     %>
 
 
@@ -194,11 +194,11 @@ Name of the route.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataBinding(dataBinding =>
-        {
-            dataBinding.Ajax().Select("Default");
-        })
+    .Name("TreeView")
+    .DataBinding(dataBinding =>
+    {
+        dataBinding.Ajax().Select("Default");
+    })
     %>
 
 

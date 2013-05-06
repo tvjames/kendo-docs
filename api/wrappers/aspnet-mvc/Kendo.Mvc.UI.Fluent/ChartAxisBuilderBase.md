@@ -30,12 +30,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(axis => axis
-            .MajorTicks(ticks => ticks
-                .Visible(false)
-            )
+    .Name("Chart")
+    .ValueAxis(axis => axis
+        .MajorTicks(ticks => ticks
+            .Visible(false)
         )
+    )
     %>
 
 
@@ -53,12 +53,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(axis => axis
-            .Crosshair(crosshair => crosshair
-                .Visible(false)
-            )
+    .Name("Chart")
+    .ValueAxis(axis => axis
+        .Crosshair(crosshair => crosshair
+            .Visible(false)
         )
+    )
     %>
 
 
@@ -76,10 +76,10 @@ The axis name.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(axis => axis
-            .Name("axisName")
-        )
+    .Name("Chart")
+    .ValueAxis(axis => axis
+        .Name("axisName")
+    )
     %>
 
 
@@ -97,12 +97,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .ValueAxis(axis => axis
-            .MinorTicks(ticks => ticks
-                .Visible(false)
-            )
+    .Name("Chart")
+    .ValueAxis(axis => axis
+        .MinorTicks(ticks => ticks
+            .Visible(false)
         )
+    )
     %>
 
 
@@ -120,12 +120,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .MajorGridLines(lines => lines.Visible(true))
-        )
-    %>
+            )
+            %>
 
 
 ### MajorGridLines(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -148,9 +148,9 @@ The major gridlines line dashType.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .MajorGridLines(2, "red", ChartDashType.Dot)
         )
     %>
@@ -170,12 +170,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .MinorGridLines(lines => lines.Visible(true))
-        )
-    %>
+            )
+            %>
 
 
 ### MinorGridLines(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -198,9 +198,9 @@ The minor grid lines dash type
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .MinorGridLines(2, "red", ChartDashType.Dot)
         )
     %>
@@ -220,12 +220,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Line(line => line.Color("#f00"))
-        )
-    %>
+            )
+            %>
 
 
 ### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -248,9 +248,9 @@ The axis line dashType.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Line(2, "#f00", ChartDashType.Dot)
         )
     %>
@@ -270,11 +270,11 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Labels(labels => labels
-                .Color("Red")
-                .Visible(true)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Labels(labels => labels
+            .Color("Red")
+            .Visible(true)
             );
         )
     %>
@@ -294,8 +294,8 @@ The visibility. The default value is false.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis.Labels(true))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.Labels(true))
     %>
 
 
@@ -313,12 +313,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .PlotBands.Add()
-            .From(1)
-            .To(2)
-        )
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .PlotBands.Add()
+        .From(1)
+        .To(2)
+    )
     %>
 
 
@@ -336,12 +336,12 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Title(title => title.Text("Axis"))
-        )
-    %>
+            )
+            %>
 
 
 ### Title(`System.String`)
@@ -358,9 +358,9 @@ The axis title.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Title("Axis")
         )
     %>
@@ -380,13 +380,13 @@ The pane name.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Panes(panes => {
-            panes.Add().Title("Value");
-            panes.Add("volumePane").Title("Volume");
-        })
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .Panes(panes => {
+        panes.Add().Title("Value");
+        panes.Add("volumePane").Title("Volume");
+    })
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Pane("volumePane")
         )
     %>
@@ -406,9 +406,9 @@ The axis color.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Color("#ff0000")
         )
     %>
@@ -428,9 +428,9 @@ A value indicating if the axis labels should be rendered in reverse.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Reverse(true)
         )
     %>
@@ -444,9 +444,9 @@ Reverse the axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
             .Reverse()
         )
     %>

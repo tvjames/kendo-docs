@@ -25,10 +25,10 @@ Whether checkboxes should be rendered.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Checkboxes(config => config
-            .Enabled(true)
-        )
+    .Name("TreeView")
+    .Checkboxes(config => config
+        .Enabled(true)
+    )
     %>
 
 
@@ -46,10 +46,10 @@ Whether checking of parent checkboxes should check child checkboxes.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Checkboxes(config => config
-            .CheckChildren(true)
-        )
+    .Name("TreeView")
+    .Checkboxes(config => config
+        .CheckChildren(true)
+    )
     %>
 
 
@@ -61,10 +61,10 @@ Client-side template to be used for rendering the items in the treeview.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Checkboxes(config => config
-            .Template("#= data #")
-        )
+    .Name("TreeView")
+    .Checkboxes(config => config
+        .Template("#= data #")
+    )
     %>
 
 
@@ -76,10 +76,10 @@ Id of the element that holds the client-side template to be used for rendering t
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Checkboxes(config => config
-            .TemplateId("widgetTemplateId")
-        )
+    .Name("TreeView")
+    .Checkboxes(config => config
+        .TemplateId("widgetTemplateId")
+    )
     %>
 
 

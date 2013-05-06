@@ -27,8 +27,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Open("onOpen"))
+    .Name("Window")
+    .Events(events => events.Open("onOpen"))
     %>
 
 
@@ -48,8 +48,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Open("onOpen"))
+    .Name("Window")
+    .Events(events => events.Open("onOpen"))
     %>
 
 
@@ -69,8 +69,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Activate("onActivate"))
+    .Name("Window")
+    .Events(events => events.Activate("onActivate"))
     %>
 
 
@@ -90,8 +90,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Activate("onActivate"))
+    .Name("Window")
+    .Events(events => events.Activate("onActivate"))
     %>
 
 
@@ -111,8 +111,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Deactivate("onDeactivate"))
+    .Name("Window")
+    .Events(events => events.Deactivate("onDeactivate"))
     %>
 
 
@@ -132,8 +132,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Deactivate("onDeactivate"))
+    .Name("Window")
+    .Events(events => events.Deactivate("onDeactivate"))
     %>
 
 
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Close("onClose"))
+    .Name("Window")
+    .Events(events => events.Close("onClose"))
     %>
 
 
@@ -174,8 +174,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Close("onClose"))
+    .Name("Window")
+    .Events(events => events.Close("onClose"))
     %>
 
 
@@ -195,8 +195,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.DragStart("onDragStart"))
+    .Name("Window")
+    .Events(events => events.DragStart("onDragStart"))
     %>
 
 
@@ -216,8 +216,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.DragStart("onDragStart"))
+    .Name("Window")
+    .Events(events => events.DragStart("onDragStart"))
     %>
 
 
@@ -237,8 +237,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.DragEnd("onDragEnd"))
+    .Name("Window")
+    .Events(events => events.DragEnd("onDragEnd"))
     %>
 
 
@@ -258,8 +258,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.DragEnd("onDragEnd"))
+    .Name("Window")
+    .Events(events => events.DragEnd("onDragEnd"))
     %>
 
 
@@ -279,8 +279,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Resize("onResize"))
+    .Name("Window")
+    .Events(events => events.Resize("onResize"))
     %>
 
 
@@ -300,8 +300,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Resize("onResize"))
+    .Name("Window")
+    .Events(events => events.Resize("onResize"))
     %>
 
 
@@ -321,8 +321,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Refresh("onRefresh"))
+    .Name("Window")
+    .Events(events => events.Refresh("onRefresh"))
     %>
 
 
@@ -342,8 +342,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Refresh("onRefresh"))
+    .Name("Window")
+    .Events(events => events.Refresh("onRefresh"))
     %>
 
 
@@ -363,8 +363,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Error("onError"))
+    .Name("Window")
+    .Events(events => events.Error("onError"))
     %>
 
 
@@ -384,8 +384,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events => events.Error("onError"))
+    .Name("Window")
+    .Events(events => events.Error("onError"))
     %>
 
 

@@ -58,8 +58,8 @@ Enables or disables paging.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Pageable(paging => paging.Enabled((bool)ViewData["enablePaging"]))
+    .Name("Grid")
+    .Pageable(paging => paging.Enabled((bool)ViewData["enablePaging"]))
     %>
 
 

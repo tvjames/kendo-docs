@@ -57,10 +57,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Save", "Home", new RouteValueDictionary{ {"id", 1} });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("Save", "Home", new RouteValueDictionary{ {"id", 1} });
+    )
     %>
 
 
@@ -84,10 +84,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Save", "Home", new { id = 1 });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("Save", "Home", new { id = 1 });
+    )
     %>
 
 
@@ -108,10 +108,10 @@ Name of the controller.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Save", "Home");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("Save", "Home");
+    )
     %>
 
 
@@ -129,10 +129,10 @@ Name of the route.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Default");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("Default");
+    )
     %>
 
 
@@ -150,10 +150,10 @@ The route values of the action method.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save(MVC.Home.Save(1).GetRouteValueDictionary());
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save(MVC.Home.Save(1).GetRouteValueDictionary());
+    )
     %>
 
 
@@ -174,10 +174,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Default", "Home", new RouteValueDictionary{ {"id", 1} });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("Default", "Home", new RouteValueDictionary{ {"id", 1} });
+    )
     %>
 
 
@@ -198,10 +198,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Default", new { id = 1 });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Save("Default", new { id = 1 });
+    )
     %>
 
 
@@ -219,11 +219,11 @@ The action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save<HomeController>(controller => controller.Save()));
-    )
-%>
+    .Name("Upload")
+    .Async(async => async
+        .Save<HomeController>(controller => controller.Save())
+        )
+    %>
 
 
 ### SaveField(`System.String`)
@@ -241,10 +241,10 @@ The form field name to use for submiting the files.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .SaveField("attachment");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .SaveField("attachment");
+    )
     %>
 
 
@@ -263,10 +263,10 @@ The Save action URL.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .SaveUrl("/save");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .SaveUrl("/save");
+    )
     %>
 
 
@@ -290,10 +290,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove("Remove", "Home", new RouteValueDictionary{ {"id", 1} });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove("Remove", "Home", new RouteValueDictionary{ {"id", 1} });
+    )
     %>
 
 
@@ -317,10 +317,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove("Remove", "Home", new { id = 1 });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove("Remove", "Home", new { id = 1 });
+    )
     %>
 
 
@@ -341,10 +341,10 @@ Name of the controller.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove("Remove", "Home");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove("Remove", "Home");
+    )
     %>
 
 
@@ -362,10 +362,10 @@ Name of the route.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove("Default");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove("Default");
+    )
     %>
 
 
@@ -383,10 +383,10 @@ The route values of the action method.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove(MVC.Home.Remove(1).GetRouteValueDictionary());
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove(MVC.Home.Remove(1).GetRouteValueDictionary());
+    )
     %>
 
 
@@ -407,10 +407,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove("Default", "Home", new RouteValueDictionary{ {"id", 1} });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove("Default", "Home", new RouteValueDictionary{ {"id", 1} });
+    )
     %>
 
 
@@ -431,10 +431,10 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove("Default", new { id = 1 });
-        )
+    .Name("Upload")
+    .Async(async => async
+        .Remove("Default", new { id = 1 });
+    )
     %>
 
 
@@ -452,11 +452,11 @@ The action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Remove<HomeController>(controller => controller.Remove()));
-    )
-%>
+    .Name("Upload")
+    .Async(async => async
+        .Remove<HomeController>(controller => controller.Remove())
+        )
+    %>
 
 
 ### RemoveUrl(`System.String`)
@@ -474,10 +474,10 @@ The Remove action URL.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .RemoveUrl("/remove");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .RemoveUrl("/remove");
+    )
     %>
 
 
@@ -496,10 +496,10 @@ The form field name to use for submiting the files.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .RemoveField("attachments");
-        )
+    .Name("Upload")
+    .Async(async => async
+        .RemoveField("attachments");
+    )
     %>
 
 

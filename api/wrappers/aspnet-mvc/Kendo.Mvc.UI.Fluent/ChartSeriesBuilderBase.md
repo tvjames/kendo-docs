@@ -30,8 +30,8 @@ The title.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Name("Sales"))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Name("Sales"))
     %>
 
 
@@ -52,14 +52,14 @@ The name template for auto-generated series when binding to grouped data.
         .Name("Chart")
         .DataSource(dataSource => dataSource
             .Read(read => read.Action("_StockData", "Scatter_Charts"))
-            .Group(group => group.Add(model => model.Symbol)))
-    )
-    .Series(series => series.Bar(s => s.Sales)
-        .Name("Sales")
-        .GroupNameTemplate("#= series.name # for #= group.field # #= group.value #")
-    )
-    .Render();
-%>
+                .Group(group => group.Add(model => model.Symbol))
+                )
+                .Series(series => series.Bar(s => s.Sales)
+                    .Name("Sales")
+                    .GroupNameTemplate("#= series.name # for #= group.field # #= group.value #")
+                )
+                .Render();
+                %>
 
 
 ### Opacity(`System.Double`)
@@ -77,8 +77,8 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Opacity(0.5))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Opacity(0.5))
     %>
 
 
@@ -98,8 +98,8 @@ The bar fill color (CSS syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Color("Red"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Color(`System.Func<System.Object,System.Object>`)
@@ -120,16 +120,16 @@ The JavaScript function that will be executed
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-            .Color(
-                @<text>
-                function(point) {
-                return point.value > 5 ? "red" : "green";
-            }
-            </text>
-            )
-        )
-        .Render();
-    %>
+                .Color(
+                    @<text>
+                        function(point) {
+                        return point.value > 5 ? "red" : "green";
+                        }
+                        </text>
+                    )
+                )
+                .Render();
+                %>
 
 
 ### Tooltip(`System.Action<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>`)
@@ -146,13 +146,13 @@ Use the configurator to set data tooltip options.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales)
-            .Tooltip(tooltip =>
-            {
-                tooltip.Visible(true).Format("{0:C}");
-            })
-        )
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales)
+        .Tooltip(tooltip =>
+        {
+            tooltip.Visible(true).Format("{0:C}");
+        })
+    )
     %>
 
 
@@ -171,8 +171,8 @@ A value indicating if the data point tooltip should be displayed.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Tooltip(true))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Tooltip(true))
     %>
 
 
@@ -190,12 +190,12 @@ The axis name for this series.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Name("Sales").Axis("secondary"))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Name("Sales").Axis("secondary"))
         .ValueAxis(axis => axis.Numeric())
-        .ValueAxis(axis => axis.Numeric("secondary"))
-        .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary"))
+                .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
+                    %>
 
 
 ### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder>`)

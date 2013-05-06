@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Open(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Open(`System.String`)
@@ -55,8 +55,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Events(events => events.Open("onOpen"))
+    .Name("Menu")
+    .Events(events => events.Open("onOpen"))
     %>
 
 
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Close(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Close(`System.String`)
@@ -104,8 +104,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Events(events => events.Close("onClose"))
+    .Name("Menu")
+    .Events(events => events.Close("onClose"))
     %>
 
 
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Activate(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Activate(`System.String`)
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Events(events => events.Activate("onActivate"))
+    .Name("Menu")
+    .Events(events => events.Activate("onActivate"))
     %>
 
 
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Deactivate(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Deactivate(`System.String`)
@@ -202,8 +202,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Events(events => events.Deactivate("onDeactivate"))
+    .Name("Menu")
+    .Events(events => events.Deactivate("onDeactivate"))
     %>
 
 
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Select(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -251,8 +251,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Events(events => events.Select("onSelect"))
+    .Name("Menu")
+    .Events(events => events.Select("onSelect"))
     %>
 
 

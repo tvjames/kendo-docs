@@ -19,8 +19,8 @@ FooterId to be used for rendering the footer of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .FooterId("widgetFooterId")
+    .Name("DatePicker")
+    .FooterId("widgetFooterId")
     %>
 
 
@@ -32,8 +32,8 @@ Footer template to be used for rendering the footer of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Footer("#= kendo.toString(data, "G") #")
+    .Name("DatePicker")
+    .Footer("#= kendo.toString(data, "G") #")
     %>
 
 
@@ -45,8 +45,8 @@ Specifies the navigation depth.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Depth(CalendarView.Month)
+    .Name("DatePicker")
+    .Depth(CalendarView.Month)
     %>
 
 
@@ -58,8 +58,8 @@ Specifies the start view.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Start(CalendarView.Month)
+    .Name("DatePicker")
+    .Start(CalendarView.Month)
     %>
 
 
@@ -71,8 +71,8 @@ MonthTemplateId to be used for rendering the cells of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .MonthTemplateId("widgetMonthTemplateId")
+    .Name("DatePicker")
+    .MonthTemplateId("widgetMonthTemplateId")
     %>
 
 
@@ -84,8 +84,8 @@ Templates for the cells rendered in the "month" view.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .MonthTemplate("#= data.value #")
+    .Name("DatePicker")
+    .MonthTemplate("#= data.value #")
     %>
 
 
@@ -97,8 +97,8 @@ Configures the content of cells of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .MonthTemplate(month => month.Content("#= data.value #"))
+    .Name("DatePicker")
+    .MonthTemplate(month => month.Content("#= data.value #"))
     %>
 
 

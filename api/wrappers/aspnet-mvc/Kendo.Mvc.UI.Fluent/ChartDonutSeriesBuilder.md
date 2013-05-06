@@ -26,8 +26,8 @@ Sets the margin of the donut series.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Donut(s => s.Sales, s => s.DateString).Margin(10))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### HoleSize(`System.Int32`)
@@ -40,8 +40,8 @@ Sets the the size of the donut hole.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Donut(s => s.Sales, s => s.DateString).HoleSize(40))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Size(`System.Int32`)
@@ -54,8 +54,8 @@ Sets the size of the donut series.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Donut(s => s.Sales, s => s.DateString).Size(20))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 

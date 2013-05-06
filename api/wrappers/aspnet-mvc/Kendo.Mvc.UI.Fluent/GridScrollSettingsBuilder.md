@@ -19,8 +19,8 @@ Enables or disables scrolling.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Scrolling(scrolling => scrolling.Enabled((bool)ViewData["enableScrolling"]))
+    .Name("Grid")
+    .Scrolling(scrolling => scrolling.Enabled((bool)ViewData["enableScrolling"]))
     %>
 
 
@@ -38,8 +38,8 @@ The height in pixels.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Scrolling(scrolling => scrolling.Height(400))
+    .Name("Grid")
+    .Scrolling(scrolling => scrolling.Height(400))
     %>
 
 
@@ -57,8 +57,8 @@ The height in pixels.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Scrolling(scrolling => scrolling.Height("20em"))
+    .Name("Grid")
+    .Scrolling(scrolling => scrolling.Height("20em"))
     %>
 
 

@@ -25,8 +25,8 @@ A value indicating if the bars should be stacked.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Stack(true))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Stack(true))
     %>
 
 
@@ -44,8 +44,8 @@ The name of the stack.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Stack("Female"))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Stack("Female"))
     %>
 
 
@@ -64,8 +64,8 @@ Aggregate function name.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Aggregate())
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Aggregate())
     %>
 
 
@@ -81,8 +81,8 @@ Set distance between category clusters.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Bar(s => s.Sales).Gap(1))
+    .Name("Chart")
+    .Series(series => series.Bar(s => s.Sales).Gap(1))
     %>
 
 
@@ -101,8 +101,8 @@ Value of 1 means that the distance between bars is equal to their width.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .Series(series => series.Spacing(s => s.Sales).Spacing(1))
+    .Name("Chart")
+    .Series(series => series.Spacing(s => s.Sales).Spacing(1))
     %>
 
 
@@ -120,15 +120,15 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Bar(s => s.Sales)
+    .Name("Chart")
+    .Series(series => series
+        .Bar(s => s.Sales)
             .Labels(labels => labels
                 .Position(ChartBarLabelsPosition.InsideEnd)
                 .Visible(true)
-            );
-        )
-    %>
+                );
+            )
+            %>
 
 
 ### Labels(`System.Boolean`)
@@ -145,9 +145,9 @@ The visibility. The default value is false.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-            .Bar(s => s.Sales)
+    .Name("Chart")
+    .Series(series => series
+        .Bar(s => s.Sales)
             .Labels(true);
         )
     %>
@@ -175,8 +175,8 @@ The bars border dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Border("1", "#000", ChartDashType.Dot))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -208,8 +208,8 @@ The bar effects overlay. The default is ChartBarSeriesOverlay.Glass
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Overlay(ChartBarSeriesOverlay.None))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### NegativeColor(`System.String`)
@@ -228,8 +228,8 @@ The bar color for negative values(CSS syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).NegativeColor("Red"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 

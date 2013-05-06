@@ -25,13 +25,13 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
+    .Name("PanelBar")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
         {
-            items.Add().Text("First Item").Items(firstItemChildren =>
-            {
-                firstItemChildren.Add().Text("Child Item 1");
-                firstItemChildren.Add().Text("Child Item 2");
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
             });
         })
     %>
@@ -51,16 +51,16 @@ If true the item will be expanded.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
+    .Name("PanelBar")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
         {
-            items.Add().Text("First Item").Items(firstItemChildren =>
-            {
-                firstItemChildren.Add().Text("Child Item 1");
-                firstItemChildren.Add().Text("Child Item 2");
-            })
-            .Expanded(true);
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
         })
+        .Expanded(true);
+    })
     %>
 
 

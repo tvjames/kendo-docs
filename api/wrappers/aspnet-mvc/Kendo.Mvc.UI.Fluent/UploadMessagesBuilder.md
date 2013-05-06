@@ -25,10 +25,10 @@ New cancel button text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .Cancel("cancel")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Cancel("cancel")
+    )
     %>
 
 
@@ -46,10 +46,10 @@ New Drag and Drop hint text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .DropFilesHere("drop files here")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .DropFilesHere("drop files here")
+    )
     %>
 
 
@@ -67,10 +67,10 @@ New Remove button text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .Remove("drop files here")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Remove("drop files here")
+    )
     %>
 
 
@@ -88,10 +88,10 @@ New Retry button text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .Retry("retry")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Retry("retry")
+    )
     %>
 
 
@@ -109,10 +109,10 @@ New Select button text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .Select("select")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Select("select")
+    )
     %>
 
 
@@ -130,10 +130,10 @@ New "failed" status text accessible by screen readers.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .StatusFailed("failed")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .StatusFailed("failed")
+    )
     %>
 
 
@@ -151,10 +151,10 @@ New "uploaded" status text accessible by screen readers.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .StatusUploaded("uploaded")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .StatusUploaded("uploaded")
+    )
     %>
 
 
@@ -172,10 +172,10 @@ New "uploading" status text accessible by screen readers.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .StatusUploading("uploading")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .StatusUploading("uploading")
+    )
     %>
 
 
@@ -193,10 +193,10 @@ New Upload button text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-            .UploadSelectedFiles("uploading")
-        )
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .UploadSelectedFiles("uploading")
+    )
     %>
 
 

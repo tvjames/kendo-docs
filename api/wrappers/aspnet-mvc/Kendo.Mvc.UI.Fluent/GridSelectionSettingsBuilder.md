@@ -19,8 +19,8 @@ Enables or disables selection.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Selectable(selection => selection.Enabled((bool)ViewData["enableSelection"]))
+    .Name("Grid")
+    .Selectable(selection => selection.Enabled((bool)ViewData["enableSelection"]))
     %>
 
 
@@ -32,8 +32,8 @@ Specifies whether multiple or single selection is allowed.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Selectable(selection => selection.Mode((bool)ViewData["selectionMode"]))
+    .Name("Grid")
+    .Selectable(selection => selection.Mode((bool)ViewData["selectionMode"]))
     %>
 
 
@@ -45,8 +45,8 @@ Specifies whether row or cell selection is allowed.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Selectable(selection => selection.Type((bool)ViewData["selectionType"]))
+    .Name("Grid")
+    .Selectable(selection => selection.Type((bool)ViewData["selectionType"]))
     %>
 
 

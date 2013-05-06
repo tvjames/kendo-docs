@@ -29,10 +29,10 @@ The text of the axis title.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Text("Axis")
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Font(`System.String`)
@@ -53,10 +53,10 @@ The axis title font (CSS format).
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Font("16px Arial,Helvetica,sans-serif")
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Background(`System.String`)
@@ -77,10 +77,10 @@ The axis background color.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Background("red")
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Color(`System.String`)
@@ -101,10 +101,10 @@ The axis text color.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Color("red")
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Position(`Kendo.Mvc.UI.ChartAxisTitlePosition`)
@@ -125,10 +125,10 @@ The axis title position.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Position(ChartTitlePosition.Center)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -158,10 +158,10 @@ The axis title left margin.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Margin(20, 20, 20, 20)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32`)
@@ -182,10 +182,10 @@ The axis title margin.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Margin(20)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -215,10 +215,10 @@ The axis title left padding.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Padding(20, 20, 20, 20)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Padding(`System.Int32`)
@@ -239,10 +239,10 @@ The axis title padding.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Padding(20)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -269,10 +269,10 @@ The axis title dash type.
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Border(1, "#000", ChartDashType.Dot)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -307,10 +307,10 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
         .CategoryAxis(axis => axis
             .Title(title => title
                 .Opacity(0.5)
-            );
-        )
-        .Render();
-    %>
+                );
+            )
+            .Render();
+            %>
 
 
 

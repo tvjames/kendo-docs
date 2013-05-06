@@ -27,15 +27,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("DatePicker")
-        .Events(events => events.Change(
-                @<text>
-                function(e) {
-                //event handling code
+    .Name("DatePicker")
+    .Events(events => events.Change(
+        @<text>
+            function(e) {
+            //event handling code
             }
             </text>
             ))
-    %>
+            %>
 
 
 ### Change(`System.String`)
@@ -54,8 +54,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Events(events => events.Change("change"))
+    .Name("Calendar")
+    .Events(events => events.Change("change"))
     %>
 
 
@@ -75,16 +75,16 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Events(events => events.Navigate(
-                @<text>
-                %>
-                function(e) {
-                //event handling code
+    .Name("Calendar")
+    .Events(events => events.Navigate(
+        @<text>
+            %>
+            function(e) {
+            //event handling code
             }
             </text>
             ))
-    %>
+            %>
 
 
 ### Navigate(`System.String`)
@@ -103,8 +103,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Calendar()
-        .Name("Calendar")
-        .Events(events => events.Navigate("navigate"))
+    .Name("Calendar")
+    .Events(events => events.Navigate("navigate"))
     %>
 
 

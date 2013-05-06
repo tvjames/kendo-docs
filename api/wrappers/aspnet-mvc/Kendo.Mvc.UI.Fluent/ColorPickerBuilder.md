@@ -25,10 +25,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .Events(events =>
-            events.Select("select").Change("change")
-        )
+    .Name("ColorPicker")
+    .Events(events =>
+        events.Select("select").Change("change")
+    )
     %>
 
 
@@ -53,8 +53,8 @@ Whether the user is allowed to change the color opacity.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .Opacity(true)
+    .Name("ColorPicker")
+    .Opacity(true)
     %>
 
 
@@ -72,8 +72,8 @@ A list of colors.
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .Palette(new List<string> { "#ff0000", "#00ff00", "#0000ff" })
+    .Name("ColorPicker")
+    .Palette(new List<string> { "#ff0000", "#00ff00", "#0000ff" })
     %>
 
 
@@ -91,8 +91,8 @@ One of the preset palettes of colors
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .Palette(ColorPickerPalette.WebSafe)
+    .Name("ColorPicker")
+    .Palette(ColorPickerPalette.WebSafe)
     %>
 
 
@@ -110,8 +110,8 @@ Whether the picker is enabled
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .Enable(false)
+    .Name("ColorPicker")
+    .Enable(false)
     %>
 
 
@@ -129,8 +129,8 @@ Whether the buttons should be shown
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .Buttons(false)
+    .Name("ColorPicker")
+    .Buttons(false)
     %>
 
 
@@ -148,8 +148,8 @@ The CSS class that will be used for styling
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPicker()
-        .Name("ColorPicker")
-        .ToolIcon("k-foreColor")
+    .Name("ColorPicker")
+    .ToolIcon("k-foreColor")
     %>
 
 
@@ -167,8 +167,8 @@ The tile size (for square tiles)
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .TileSize(32)
+    .Name("ColorPalette")
+    .TileSize(32)
     %>
 
 
@@ -186,8 +186,8 @@ The tile size (for square tiles)
 
 #### Example (ASPX)
     <%= Html.Kendo().ColorPalette()
-        .Name("ColorPalette")
-        .TileSize(s => s.Width(20).Height(10))
+    .Name("ColorPalette")
+    .TileSize(s => s.Width(20).Height(10))
     %>
 
 

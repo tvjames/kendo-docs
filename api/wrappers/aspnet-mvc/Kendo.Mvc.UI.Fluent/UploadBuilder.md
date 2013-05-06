@@ -25,11 +25,11 @@ The client events configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events
-            .OnLoad("onLoad")
-            .OnUpload("onUpload")
-        )
+    .Name("Upload")
+    .Events(events => events
+        .OnLoad("onLoad")
+        .OnUpload("onUpload")
+    )
     %>
 
 
@@ -47,8 +47,8 @@ true if the component should be enabled, false otherwise; the default is true.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Enable(false)
+    .Name("Upload")
+    .Enable(false)
     %>
 
 
@@ -66,8 +66,8 @@ true if multiple file selection should be enabled, false otherwise; the default 
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Multiple(false)
+    .Name("Upload")
+    .Multiple(false)
     %>
 
 
@@ -98,10 +98,10 @@ Use builder to set different asynchronous uploading options.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Save", "Compose")
-            .Remove("Remove", "Compose")
+    .Name("Upload")
+    .Async(async => async
+        .Save("Save", "Compose")
+        .Remove("Remove", "Compose")
         );
     %>
 
@@ -120,10 +120,10 @@ Use builder to set different asynchronous uploading options.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Async(async => async
-            .Save("Save", "Compose")
-            .Remove("Remove", "Compose")
+    .Name("Upload")
+    .Async(async => async
+        .Save("Save", "Compose")
+        .Remove("Remove", "Compose")
         );
     %>
 

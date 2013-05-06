@@ -28,8 +28,8 @@ The selection range end.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
-        .Navigator(nav => nav.Select(DateTime.Today.AddMonths(-1), DateTime.Today))
+    .Name("StockChart")
+    .Navigator(nav => nav.Select(DateTime.Today.AddMonths(-1), DateTime.Today))
     %>
 
 
@@ -47,11 +47,11 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(nav =>
-            nav.Series(series =>
-            {
-                series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Navigator(nav =>
+        nav.Series(series =>
+        {
+            series.Bar(s => s.SalesAmount);
             })
         )
     %>
@@ -71,11 +71,11 @@ The navigator visibility.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(nav => nav
-            .Series(series =>
-            {
-                series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Navigator(nav => nav
+        .Series(series =>
+        {
+            series.Bar(s => s.SalesAmount);
             })
             .Visible(false)
         )
@@ -96,11 +96,11 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(nav =>
-            nav.Series(series =>
-            {
-                series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Navigator(nav =>
+        nav.Series(series =>
+        {
+            series.Bar(s => s.SalesAmount);
             })
         )
     %>
@@ -121,11 +121,11 @@ Use the configurator to set different data binding options.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Navigator(navi => navi
-            .DataSource(ds =>
-            {
-                ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
+    .Name("Chart")
+    .Navigator(navi => navi
+        .DataSource(ds =>
+        {
+            ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
             })
         )
     %>
@@ -145,10 +145,10 @@ The date field.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Navigator(navi => navi
-            .DateField("Date")
-        )
+    .Name("Chart")
+    .Navigator(navi => navi
+        .DateField("Date")
+    )
     %>
 
 
@@ -168,11 +168,11 @@ Gets or sets a value indicating if the navigator
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Navigator(navi => navi
-            .DataSource(ds =>
-            {
-                ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
+    .Name("Chart")
+    .Navigator(navi => navi
+        .DataSource(ds =>
+        {
+            ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
             })
             .AutoBind(false)
         )

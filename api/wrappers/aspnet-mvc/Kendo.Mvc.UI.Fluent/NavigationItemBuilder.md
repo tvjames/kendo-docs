@@ -35,8 +35,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Attributes(new {@class="first-item"}))
+    .Name("Menu")
+    .Items(items => items.Add().Attributes(new {@class="first-item"}))
     %>
 
 
@@ -67,8 +67,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item"))
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item"))
     %>
 
 
@@ -86,9 +86,9 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").Visible((bool)ViewData["visible"])
-        %>
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").Visible((bool)ViewData["visible"]))
+    %>
 
 
 ### Enabled(`System.Boolean`)
@@ -99,9 +99,9 @@ Enables or disables the item. Disabled item cannot be clicked, expanded or open 
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").Enabled((bool)ViewData["enabled"])
-        %>
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").Enabled((bool)ViewData["enabled"]))
+    %>
 
 
 ### Selected(`System.Boolean`)
@@ -112,8 +112,8 @@ Selects or unselects the item. By default items are not selected.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").Selected(true))
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").Selected(true))
     %>
 
 
@@ -134,8 +134,8 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").Route("Default", new RouteValueDictionary{{"id", 1}}))
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").Route("Default", new RouteValueDictionary{{"id", 1}}))
     %>
 
 
@@ -156,8 +156,8 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").Route("Default", new {id, 1}))
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").Route("Default", new {id, 1}))
     %>
 
 
@@ -175,8 +175,8 @@ Name of the route.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").Route("Default"))
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").Route("Default"))
     %>
 
 
@@ -194,8 +194,8 @@ The route values of the Action method.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("Index").Action(MVC.Home.Index(3).GetRouteValueDictionary()))
+    .Name("Menu")
+    .Items(items => items.Add().Text("Index").Action(MVC.Home.Index(3).GetRouteValueDictionary()))
     %>
 
 
@@ -219,8 +219,8 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("Index").Action("Index", "Home", new RouteValueDictionary{{"id", 1}}))
+    .Name("Menu")
+    .Items(items => items.Add().Text("Index").Action("Index", "Home", new RouteValueDictionary{{"id", 1}}))
     %>
 
 
@@ -244,8 +244,8 @@ The route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("Index").Action("Index", "Home", new {id, 1}))
+    .Name("Menu")
+    .Items(items => items.Add().Text("Index").Action("Index", "Home", new {id, 1}))
     %>
 
 
@@ -266,8 +266,8 @@ Name of the controller.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("Index").Action("Index", "Home"))
+    .Name("Menu")
+    .Items(items => items.Add().Text("Index").Action("Index", "Home"))
     %>
 
 
@@ -285,8 +285,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("www.example.com").Url("http://www.example.com"))
+    .Name("Menu")
+    .Items(items => items.Add().Text("www.example.com").Url("http://www.example.com"))
     %>
 
 
@@ -304,8 +304,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("First Item").ImageUrl("~/Content/first.png"))
+    .Name("Menu")
+    .Items(items => items.Add().Text("First Item").ImageUrl("~/Content/first.png"))
     %>
 
 
@@ -323,11 +323,11 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items
-            .Add().Text("First Item")
-            .ImageUrl("~/Content/first.png")
-            .ImageHtmlAttributes(new {@class="first-item-image"}))
+    .Name("Menu")
+    .Items(items => items
+        .Add().Text("First Item")
+        .ImageUrl("~/Content/first.png")
+        .ImageHtmlAttributes(new {@class="first-item-image"}))
     %>
 
 
@@ -358,11 +358,11 @@ The CSS classes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items
-            .Add().Text("First Item")
-            .SpriteCssClasses("icon", "first-item")
-        %>
+    .Name("Menu")
+    .Items(items => items
+        .Add().Text("First Item")
+        .SpriteCssClasses("icon", "first-item"))
+    %>
 
 
 ### Content(`System.Action`)
@@ -418,12 +418,13 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items
-            .Add().Text("First Item")
-            .Content(() => { %> <strong>First Item Content</strong> <% })
+    .Name("Menu")
+    .Items(items => items
+        .Add().Text("First Item")
+        .Content(() => { %> <strong>First Item Content</strong> <% })
             .ContentHtmlAttributes(new {@class="first-item-content"})
-        %>
+        )
+    %>
 
 
 ### ContentHtmlAttributes(`System.Collections.Generic.IDictionary<System.String,System.Object>`)
@@ -453,11 +454,11 @@ The action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items
-            .Add().Text("First Item")
-            .Action<HomeController>(controller => controller.Index()))
-    %>
+    .Name("Menu")
+    .Items(items => items
+        .Add().Text("First Item")
+        .Action<HomeController>(controller => controller.Index()))
+            %>
 
 
 ### Encoded(`System.Boolean`)
@@ -474,8 +475,8 @@ Whether the property should be encoded. Default: true.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items => items.Add().Text("<strong>First Item</strong>").Encoded(false))
+    .Name("Menu")
+    .Items(items => items.Add().Text("<strong>First Item</strong>").Encoded(false))
     %>
 
 

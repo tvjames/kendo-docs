@@ -25,12 +25,12 @@ The labels font (CSS format).
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Font("14px Arial,Helvetica,sans-serif")
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Font("14px Arial,Helvetica,sans-serif")
         )
+    )
     %>
 
 
@@ -48,12 +48,12 @@ The labels visibility.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Visible(false)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Visible(false)
         )
+    )
     %>
 
 
@@ -71,12 +71,12 @@ The labels background color.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Background("Red")
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Background("Red")
         )
+    )
     %>
 
 
@@ -94,12 +94,12 @@ The labels text color.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Color("Red")
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Color("Red")
         )
+    )
     %>
 
 
@@ -126,12 +126,12 @@ The labels left margin.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Margin(0, 5, 5, 0)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Margin(0, 5, 5, 0)
         )
+    )
     %>els
 
 
@@ -149,12 +149,12 @@ The labels margin.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Margin(20)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Margin(20)
         )
+    )
     %>
 
 
@@ -181,12 +181,12 @@ The labels left padding.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Padding(0, 5, 5, 0)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Padding(0, 5, 5, 0)
         )
+    )
     %>
 
 
@@ -204,12 +204,12 @@ The labels padding.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Padding(20)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Padding(20)
         )
+    )
     %>
 
 
@@ -233,12 +233,12 @@ The labels border dash type.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Border(1, "Red", ChartDashType.Dot)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Border(1, "Red", ChartDashType.Dot)
         )
+    )
     %>
 
 
@@ -269,12 +269,12 @@ The labels format.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Format("{0:C}")
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Format("{0:C}")
         )
+    )
     %>
 
 
@@ -292,12 +292,12 @@ The labels template.
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Template("#= value #")
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Template("#= value #")
         )
+    )
     %>
 
 
@@ -316,12 +316,12 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
 
 #### Example (ASPX)
     <%= Html.Kendo().LinearGauge()
-        .Name("linearGauge")
-        .Scale(scale => scale
-            .Labels(labels => labels
-                .Opacity(0.5)
-            )
+    .Name("linearGauge")
+    .Scale(scale => scale
+        .Labels(labels => labels
+            .Opacity(0.5)
         )
+    )
     %>
 
 

@@ -19,8 +19,8 @@ Enables or disables grid editing.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.Enabled(true))
+    .Name("Orders")
+    .Editable(settings => settings.Enabled(true))
     %>
 
 
@@ -51,8 +51,8 @@ An anonymous object which contains the additional data
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Editable(editing => editing.AdditionalViewData(new { customers = Model.Customers }))
+    .Name("Grid")
+    .Editable(editing => editing.AdditionalViewData(new { customers = Model.Customers }))
     %>
 
 
@@ -64,8 +64,8 @@ Enables or disables delete confirmation.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.DisplayDeleteConfirmation(true))
+    .Name("Orders")
+    .Editable(settings => settings.DisplayDeleteConfirmation(true))
     %>
 
 
@@ -77,8 +77,8 @@ Sets insert row position.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.CreateAt(GridInsertRowPosition.Bottom))
+    .Name("Orders")
+    .Editable(settings => settings.CreateAt(GridInsertRowPosition.Bottom))
     %>
 
 

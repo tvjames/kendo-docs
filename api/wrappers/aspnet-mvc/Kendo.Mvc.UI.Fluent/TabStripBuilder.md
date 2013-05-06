@@ -25,12 +25,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("TabStrip")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -48,10 +48,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Events(events =>
-            events.Select("onSelect").OnLoad("onLoad")
-        )
+    .Name("TabStrip")
+    .Events(events =>
+        events.Select("onSelect").OnLoad("onLoad")
+    )
     %>
 
 
@@ -69,7 +69,7 @@ Whether the component animation is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("PanelBar")
+    .Name("PanelBar")
     .Animation(false)
 
 
@@ -87,7 +87,7 @@ The action that configures the animation.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("PanelBar")
+    .Name("PanelBar")
     .Animation(animation => animation.Open(config => config.Fade(FadeDirection.In)))
 
 
@@ -108,10 +108,10 @@ The action to configure the item.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .BindTo("examples", (item, siteMapNode) =>
-        {
-        })
+    .Name("TabStrip")
+    .BindTo("examples", (item, siteMapNode) =>
+    {
+    })
     %>
 
 
@@ -129,8 +129,8 @@ The view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .BindTo("examples")
+    .Name("TabStrip")
+    .BindTo("examples")
     %>
 
 
@@ -151,11 +151,11 @@ The action executed for every data bound item.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .BindTo(new []{"First", "Second"}, (item, value)
-        {
-            item.Text = value;
-        })
+    .Name("TabStrip")
+    .BindTo(new []{"First", "Second"}, (item, value) =>
+    {
+        item.Text = value;
+    })
     %>
 
 
@@ -173,13 +173,13 @@ The index.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
-        .SelectedIndex(1)
+    .Name("TabStrip")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
+    .SelectedIndex(1)
     %>
 
 
@@ -197,13 +197,13 @@ Action, which will be executed for each item.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .ItemAction(item =>
-        {
-            item
-            .Text(...)
-            .HtmlAttributes(...);
-        })
+    .Name("TabStrip")
+    .ItemAction(item =>
+    {
+        item
+        .Text(...)
+        .HtmlAttributes(...);
+    })
     %>
 
 
@@ -221,8 +221,8 @@ If true the item will be highlighted.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .HighlightPath(true)
+    .Name("TabStrip")
+    .HighlightPath(true)
     %>
 
 
@@ -240,8 +240,8 @@ If true security trimming is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .SecurityTrimming(false)
+    .Name("TabStrip")
+    .SecurityTrimming(false)
     %>
 
 

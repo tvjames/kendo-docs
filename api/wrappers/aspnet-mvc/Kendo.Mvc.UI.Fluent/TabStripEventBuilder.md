@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.Activate(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Activate(`System.String`)
@@ -55,8 +55,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Events(events => events.Activate("onActivate"))
+    .Name("TabStrip")
+    .Events(events => events.Activate("onActivate"))
     %>
 
 
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.Select(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -104,8 +104,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Events(events => events.Select("onSelect"))
+    .Name("TabStrip")
+    .Events(events => events.Select("onSelect"))
     %>
 
 
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.ContentLoad(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### ContentLoad(`System.String`)
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Events(events => events.ContentLoad("onContentLoad"))
+    .Name("TabStrip")
+    .Events(events => events.ContentLoad("onContentLoad"))
     %>
 
 
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.Error(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Error(`System.String`)
@@ -202,8 +202,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TabStrip()
-        .Name("TabStrip")
-        .Events(events => events.Error("onError"))
+    .Name("TabStrip")
+    .Events(events => events.Error("onError"))
     %>
 
 

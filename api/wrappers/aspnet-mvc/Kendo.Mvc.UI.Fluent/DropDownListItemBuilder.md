@@ -25,8 +25,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .Items(items => items.Add().Text("First item."))
+    .Name("DropDownList")
+    .Items(items => items.Add().Text("First item."))
     %>
 
 
@@ -44,8 +44,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .Items(items => items.Add().Value("1"))
+    .Name("DropDownList")
+    .Items(items => items.Add().Value("1"))
     %>
 
 
@@ -63,11 +63,11 @@ If true the item will be selected.
 
 #### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .Items(items =>
-        {
-            items.Add().Text("First Item").Selected(true);
-        })
+    .Name("DropDownList")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Selected(true);
+    })
     %>
 
 

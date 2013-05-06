@@ -27,15 +27,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Change(
-                    @<text>
-                    function(e) {
-                    // event handling code
+        .Name("ColorPicker")
+        .Events(events => events.Change(
+            @<text>
+                function(e) {
+                // event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Change(`System.String`)
@@ -54,9 +54,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Change("change"))
-    )
+        .Name("ColorPicker")
+        .Events(events => events.Change("change"))
+        )
 
 
 ### Select(`System.Func<System.Object,System.Object>`)
@@ -75,15 +75,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Select(
-                    @<text>
-                    function(e) {
-                    // event handling code
+        .Name("ColorPicker")
+        .Events(events => events.Select(
+            @<text>
+                function(e) {
+                // event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Select(`System.String`)
@@ -102,9 +102,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Select("change"))
-    )
+        .Name("ColorPicker")
+        .Events(events => events.Select("change"))
+        )
 
 
 ### Open(`System.Func<System.Object,System.Object>`)
@@ -123,15 +123,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Open(
-                    @<text>
-                    function(e) {
-                    // event handling code
+        .Name("ColorPicker")
+        .Events(events => events.Open(
+            @<text>
+                function(e) {
+                // event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Open(`System.String`)
@@ -150,9 +150,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Open("open"))
-    )
+        .Name("ColorPicker")
+        .Events(events => events.Open("open"))
+        )
 
 
 ### Close(`System.Func<System.Object,System.Object>`)
@@ -171,15 +171,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Close(
-                    @<text>
-                    function(e) {
-                    // event handling code
+        .Name("ColorPicker")
+        .Events(events => events.Close(
+            @<text>
+                function(e) {
+                // event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Close(`System.String`)
@@ -198,9 +198,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().ColorPicker()
-            .Name("ColorPicker")
-            .Events(events => events.Close("close"))
-    )
+        .Name("ColorPicker")
+        .Events(events => events.Close("close"))
+        )
 
 
 

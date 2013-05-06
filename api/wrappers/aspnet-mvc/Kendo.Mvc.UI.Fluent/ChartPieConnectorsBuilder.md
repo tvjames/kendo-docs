@@ -28,12 +28,12 @@ The connectors width.
         .Name("Chart")
         .Series(series => series
             .Pie(p => p.Sales)
-            .Connectors(c => c
-                .Width(3)
-            );
-        )
-        .Render();
-    %>
+                .Connectors(c => c
+                    .Width(3)
+                    );
+                )
+                .Render();
+                %>
 
 
 ### Color(`System.String`)
@@ -53,12 +53,12 @@ The connectors color.
         .Name("Chart")
         .Series(series => series
             .Pie(p => p.Sales)
-            .Connectors(c => c
-                .Color(red)
-            );
-        )
-        .Render();
-    %>
+                .Connectors(c => c
+                    .Color(red)
+                    );
+                )
+                .Render();
+                %>
 
 
 ### Padding(`System.Int32`)
@@ -78,12 +78,12 @@ The connectors padding.
         .Name("Chart")
         .Series(series => series
             .Pie(p => p.Sales)
-            .Connectors(c => c
-                .Padding(10)
-            );
-        )
-        .Render();
-    %>
+                .Connectors(c => c
+                    .Padding(10)
+                    );
+                )
+                .Render();
+                %>
 
 
 

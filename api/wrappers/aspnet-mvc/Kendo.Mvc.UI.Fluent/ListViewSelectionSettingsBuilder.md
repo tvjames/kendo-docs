@@ -19,8 +19,8 @@ Enables or disables selection.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView(Model)
-        .Name("ListView")
-        .Selectable(selection => selection.Enabled((bool)ViewData["enableSelection"]))
+    .Name("ListView")
+    .Selectable(selection => selection.Enabled((bool)ViewData["enableSelection"]))
     %>
 
 
@@ -32,8 +32,8 @@ Specifies whether multiple or single selection is allowed.
 
 #### Example (ASPX)
     <%= Html.Kendo().ListView(Model)
-        .Name("ListView")
-        .Selectable(selection => selection.Mode((bool)ViewData["selectionMode"]))
+    .Name("ListView")
+    .Selectable(selection => selection.Mode((bool)ViewData["selectionMode"]))
     %>
 
 

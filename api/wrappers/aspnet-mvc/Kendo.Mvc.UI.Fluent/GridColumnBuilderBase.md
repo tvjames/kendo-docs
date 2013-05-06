@@ -30,8 +30,8 @@ The text.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).Title("ID"))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).Title("ID"))
     %>
 
 
@@ -49,8 +49,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).HeaderHtmlAttributes(new {@class="order-header"}))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).HeaderHtmlAttributes(new {@class="order-header"}))
     %>
 
 
@@ -68,8 +68,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).HeaderHtmlAttributes(new {@class="order-header"}))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).HeaderHtmlAttributes(new {@class="order-header"}))
     %>
 
 
@@ -87,8 +87,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).FooterHtmlAttributes(new {@class="order-footer"}))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).FooterHtmlAttributes(new {@class="order-footer"}))
     %>
 
 
@@ -106,8 +106,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).FooterHtmlAttributes(new {@class="order-footer"}))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).FooterHtmlAttributes(new {@class="order-footer"}))
     %>
 
 
@@ -125,8 +125,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).HtmlAttributes(new {@class="order-cell"}))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).HtmlAttributes(new {@class="order-cell"}))
     %>
 
 
@@ -144,8 +144,8 @@ The attributes.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).HtmlAttributes(new {@class="order-cell"}))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).HtmlAttributes(new {@class="order-cell"}))
     %>
 
 
@@ -163,8 +163,8 @@ The width in pixels.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).Width(100))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).Width(100))
     %>
 
 
@@ -184,14 +184,14 @@ The width to set.
     <% Html.Kendo().Grid(Model)
         .Name("Grid")
         .Columns(columns => columns.Bound(o =>
-            {
-                %>
-                <%= Html.ActionLink("Edit", "Home", new { id = o.OrderID}) %>
-                <%
-            })
+        {
+            %>
+            <%= Html.ActionLink("Edit", "Home", new { id = o.OrderID}) %>
+            <%
+            }))
             .Width("30px")
             .Render();
-        %>
+            %>
 
 
 ### Visible(`System.Boolean`)
@@ -202,8 +202,8 @@ Makes the column visible or not. By default all columns are visible. Invisible c
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).Visible((bool)ViewData["visible"]))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).Visible((bool)ViewData["visible"]))
     %>
 
 
@@ -215,8 +215,8 @@ Makes the column hidden or not. By default all columns are not hidden. Hidden co
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).Hidden((bool)ViewData["hidden"]))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).Hidden((bool)ViewData["hidden"]))
     %>
 
 
@@ -228,8 +228,8 @@ Hides a column. By default all columns are not hidden. Hidden columns are render
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).Hidden())
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).Hidden())
     %>
 
 
@@ -242,8 +242,8 @@ Specifys whether the columns should be included in column header menu. By defaul
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderID).IncludeInMenu((bool)ViewData["hidden"]))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderID).IncludeInMenu((bool)ViewData["hidden"]))
     %>
 
 

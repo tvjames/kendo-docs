@@ -19,9 +19,14 @@ Sets the type of the input element of the filter menu
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Filterable(filterable => filterable.UI(GridFilterUIRole.DatePicker))
-        %>
+    .Name("Grid")
+    .Columns(columns =>
+        columns.Bound(o => o.OrderDate)
+            .Filterable(filterable =>
+                filterable.UI(GridFilterUIRole.DatePicker)
+            )
+        )
+    %>
 
 
 ### UI(`System.Func<System.Object,System.Object>`)
@@ -32,9 +37,16 @@ Sets JavaScript function which to modify the UI of the filter input.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Filterable(filterable => filterable.UI(@<text> JavaScript function goes here </text>))
-        %>
+    .Name("Grid")
+    .Columns(columns =>
+        columns.Bound(o => o.OrderDate)
+            .Filterable(filterable =>
+                filterable.UI(@<text>
+                    JavaScript function goes here
+                </text>)
+            )
+        )
+    %>
 
 
 ### UI(`System.String`)

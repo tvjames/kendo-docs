@@ -25,12 +25,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("Menu")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -48,10 +48,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Events(events =>
-            events.Open("onOpen").OnClose("onClose")
-        )
+    .Name("Menu")
+    .Events(events =>
+        events.Open("onOpen").OnClose("onClose")
+    )
     %>
 
 
@@ -69,8 +69,8 @@ The desired direction.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Direction(MenuDirection.Left)
+    .Name("Menu")
+    .Direction(MenuDirection.Left)
     %>
 
 
@@ -88,8 +88,8 @@ The desired direction.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Direction("top")
+    .Name("Menu")
+    .Direction("top")
     %>
 
 
@@ -107,8 +107,8 @@ The desired orientation.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Orientation(MenuOrientation.Vertical)
+    .Name("Menu")
+    .Orientation(MenuOrientation.Vertical)
     %>
 
 
@@ -120,8 +120,8 @@ Enables or disables the "open-on-click" feature.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .OpenOnClick(true)
+    .Name("Menu")
+    .OpenOnClick(true)
     %>
 
 
@@ -133,8 +133,8 @@ Specifies that sub menus should close after item selection (provided they won't 
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .CloseOnClick(false)
+    .Name("Menu")
+    .CloseOnClick(false)
     %>
 
 
@@ -146,8 +146,8 @@ Specifies the delay in ms before the menu is opened/closed - used to avoid accid
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .HoverDelay(300)
+    .Name("Menu")
+    .HoverDelay(300)
     %>
 
 
@@ -168,10 +168,10 @@ The action to configure the item.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .BindTo("examples", (item, siteMapNode) =>
-        {
-        })
+    .Name("Menu")
+    .BindTo("examples", (item, siteMapNode) =>
+    {
+    })
     %>
 
 
@@ -189,8 +189,8 @@ The view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .BindTo("examples")
+    .Name("Menu")
+    .BindTo("examples")
     %>
 
 
@@ -212,11 +212,11 @@ The action executed for every data bound item.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .BindTo(new []{"First", "Second"}, (item, value)
-        {
-            item.Text = value;
-        })
+    .Name("Menu")
+    .BindTo(new []{"First", "Second"}, (item, value) =>
+    {
+        item.Text = value;
+    })
     %>
 
 
@@ -237,18 +237,18 @@ The action which will configure the mappings
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .BindTo(Model, mapping => mapping
-            .For<Customer>(binding => binding
-                .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
+    .Name("Menu")
+    .BindTo(Model, mapping => mapping
+        .For<Customer>(binding => binding
+            .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
                 .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to MenuItem properties
-            )
-            .For<Order<(binding => binding
-                .Children(o => null) // "Orders" do not have child objects so return "null"
-                .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to MenuItem properties
-            )
-        )
-    %>
+                )
+                .For<Order<(binding => binding
+                    .Children(o => null) // "Orders" do not have child objects so return "null"
+                        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to MenuItem properties
+                        )
+                    )
+                    %>
 
 
 ### ItemAction(`System.Action<Kendo.Mvc.UI.MenuItem>`)
@@ -265,13 +265,13 @@ Action, which will be executed for each item.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .ItemAction(item =>
-        {
-            item
-            .Text(...)
-            .HtmlAttributes(...);
-        })
+    .Name("Menu")
+    .ItemAction(item =>
+    {
+        item
+        .Text(...)
+        .HtmlAttributes(...);
+    })
     %>
 
 
@@ -289,8 +289,8 @@ If true the item will be highlighted.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .HighlightPath(true)
+    .Name("Menu")
+    .HighlightPath(true)
     %>
 
 
@@ -308,8 +308,8 @@ If true security trimming is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .SecurityTrimming(false)
+    .Name("Menu")
+    .SecurityTrimming(false)
     %>
 
 
@@ -327,11 +327,11 @@ The securityTrimming action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .SecurityTrimming(builder =>
-        {
-            builder.Enabled(true).HideParent(true);
-        })
+    .Name("Menu")
+    .SecurityTrimming(builder =>
+    {
+        builder.Enabled(true).HideParent(true);
+    })
     %>
 
 

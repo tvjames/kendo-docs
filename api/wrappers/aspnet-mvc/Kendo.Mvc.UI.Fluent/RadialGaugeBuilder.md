@@ -25,8 +25,8 @@ The radial gauge theme.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Theme("Black")
+    .Name("radialGauge")
+    .Theme("Black")
     %>
 
 
@@ -44,8 +44,8 @@ The radial gauge area.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .ChartArea(chartArea => chartArea.margin(20))
+    .Name("radialGauge")
+    .ChartArea(chartArea => chartArea.margin(20))
     %>
 
 
@@ -63,10 +63,10 @@ The configurator
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Scale(scale => scale
-            .Min(10)
-        )
+    .Name("radialGauge")
+    .Scale(scale => scale
+        .Min(10)
+    )
     %>
 
 
@@ -84,10 +84,10 @@ The configurator
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Pointer(pointer => pointer
-            .Value(10)
-        )
+    .Name("radialGauge")
+    .Pointer(pointer => pointer
+        .Value(10)
+    )
     %>
 
 
@@ -105,8 +105,8 @@ A value indicating if transition animations should be played.
 
 #### Example (ASPX)
     <%= Html.Kendo().RadialGauge()
-        .Name("radialScale")
-        .Transitions(false)
+    .Name("radialScale")
+    .Transitions(false)
     %>
 
 

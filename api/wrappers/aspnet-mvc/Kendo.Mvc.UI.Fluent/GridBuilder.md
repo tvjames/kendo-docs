@@ -31,8 +31,8 @@ The lambda which configures the data source
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
@@ -42,8 +42,8 @@ The lambda which configures the data source
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 
 ### DetailTemplate(`System.Action<T>`)
@@ -60,7 +60,7 @@ The template as a code block
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
-        <% Html.Kendo().Grid(Model)
+    <% Html.Kendo().Grid(Model)
         .Name("grid")
         .DetailTemplate(product => {
             %>
@@ -117,14 +117,14 @@ The id
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
+            .ClientDetailTemplateId("detail-template")
         )
-        .ClientDetailTemplateId("detail-template")
-    )
-    <script id="detail-template" type="text/x-kendo-template">
-    Product Details:
-    <div>Product Name: #: ProductName # </div>
-    <div>Units In Stock: #: UnitsInStock #</div>
-    </script>
+        <script id="detail-template" type="text/x-kendo-template">
+        Product Details:
+        <div>Product Name: #: ProductName # </div>
+        <div>Units In Stock: #: UnitsInStock #</div>
+        </script>
 
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
@@ -134,14 +134,14 @@ The id
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ClientDetailTemplateId("detail-template")
-        %>
-        <script id="detail-template" type="text/x-kendo-template">
-        Product Details:
-        <div>Product Name: #: ProductName # </div>
-        <div>Units In Stock: #: UnitsInStock #</div>
-    </script>
+            )
+            .ClientDetailTemplateId("detail-template")
+            %>
+            <script id="detail-template" type="text/x-kendo-template">
+            Product Details:
+            <div>Product Name: #: ProductName # </div>
+            <div>Units In Stock: #: UnitsInStock #</div>
+            </script>
 
 
 ### RowTemplate(`System.Action<T,Kendo.Mvc.UI.Grid<T>>`)
@@ -158,7 +158,7 @@ The template as a code block
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
-        <%: Html.Kendo().Grid(Model)
+    <%: Html.Kendo().Grid(Model)
         .Name("grid")
         .RowTemplate((product, grid) =>
         {
@@ -184,7 +184,7 @@ The template as a code block
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
-        <%: Html.Kendo().Grid(Model)
+    <%: Html.Kendo().Grid(Model)
         .Name("grid")
         .RowTemplate(product =>
         {
@@ -262,14 +262,14 @@ The template
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
+            .ClientRowTemplate(
+                "<tr>" +
+                "<td>#: ProductName #</td>" +
+                "<td>#: UnitsInStock #</td>" +
+                "</tr>"
+            )
         )
-        .ClientRowTemplate(
-            "<tr>" +
-            "<td>#: ProductName #</td>" +
-            "<td>#: UnitsInStock #</td>" +
-            "</tr>"
-        )
-    )
 
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
@@ -279,14 +279,14 @@ The template
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ClientRowTemplate(
-            "<tr>" +
-            "<td>#: ProductName #</td>" +
-            "<td>#: UnitsInStock #</td>" +
-            "</tr>"
-        )
-    %>
+            )
+            .ClientRowTemplate(
+                "<tr>" +
+                "<td>#: ProductName #</td>" +
+                "<td>#: UnitsInStock #</td>" +
+                "</tr>"
+            )
+            %>
 
 
 ### ClientRowTemplate(`System.Func<Kendo.Mvc.UI.Grid<T>,System.String>`)
@@ -309,14 +309,14 @@ The template
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
+            .ClientRowTemplate(grid =>
+                "<tr>" +
+                "<td>#: ProductName #</td>" +
+                "<td>#: UnitsInStock #</td>" +
+                "</tr>"
+            )
         )
-        .ClientRowTemplate(grid =>
-            "<tr>" +
-            "<td>#: ProductName #</td>" +
-            "<td>#: UnitsInStock #</td>" +
-            "</tr>"
-        )
-    )
 
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
@@ -326,14 +326,14 @@ The template
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ClientRowTemplate(grid =>
-            "<tr>" +
-            "<td>#: ProductName #</td>" +
-            "<td>#: UnitsInStock #</td>" +
-            "</tr>"
-        )
-    %>
+            )
+            .ClientRowTemplate(grid =>
+                "<tr>" +
+                "<td>#: ProductName #</td>" +
+                "<td>#: UnitsInStock #</td>" +
+                "</tr>"
+            )
+            %>
 
 
 ### AutoBind(`System.Boolean`)
@@ -358,8 +358,8 @@ If true the grid will be automatically data bound, otherwise false
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
@@ -370,8 +370,8 @@ If true the grid will be automatically data bound, otherwise false
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 
 ### Resizable(`System.Action<Kendo.Mvc.UI.Fluent.GridResizingSettingsBuilder>`)
@@ -394,21 +394,21 @@ The lambda which configures the resizing
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .Resizable(resizing => resizing.Columns(true))
-    )
+            )
+            .Resizable(resizing => resizing.Columns(true))
+            )
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Product>()
-        .Name("Grid")
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
         )
         .Resizable(resizing => resizing.Columns(true))
-    %>
+            %>
 
 
 ### Reorderable(`System.Action<Kendo.Mvc.UI.Fluent.GridReorderingSettingsBuilder>`)
@@ -431,21 +431,21 @@ The lambda which configures the reordering
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .Reorderable(reordering => reordering.Columns(true))
-    )
+            )
+            .Reorderable(reordering => reordering.Columns(true))
+            )
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Product>()
-        .Name("Grid")
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
         )
         .Reorderable(reordering => reordering.Columns(true))
-    %>
+            %>
 
 
 ### Editable(`System.Action<Kendo.Mvc.UI.Fluent.GridEditingSettingsBuilder<T>>`)
@@ -468,21 +468,21 @@ The lambda which configures the editing
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .Editable(editing => editing.Mode(GridEditMode.PopUp))
-    )
+            )
+            .Editable(editing => editing.Mode(GridEditMode.PopUp))
+            )
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Product>()
-        .Name("Grid")
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
         )
         .Editable(editing => editing.Mode(GridEditMode.PopUp))
-    %>
+            %>
 
 
 ### Editable
@@ -499,18 +499,18 @@ Enables grid editing.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
+            .Editable()
         )
-        .Editable()
-    )
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Product>()
-        .Name("Grid")
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
         )
         .Editable()
     %>
@@ -536,21 +536,21 @@ The lambda which configures the toolbar
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ToolBar(commands => commands.Create())
-    )
+            )
+            .ToolBar(commands => commands.Create())
+            )
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid<Product>()
-        .Name("Grid")
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
         )
         .ToolBar(commands => commands.Create())
-    %>
+            %>
 
 
 ### BindTo(`System.Collections.Generic.IEnumerable<T>`)
@@ -567,9 +567,9 @@ The data source.
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
-        &lt;%: Html.Kendo().Grid<Product>()
-        .Name("grid")
-        .BindTo(Model)
+    &lt;%: Html.Kendo().Grid<Product>()
+    .Name("grid")
+    .BindTo(Model)
     %>
 
 #### Example (Razor)
@@ -594,9 +594,9 @@ The data source.
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
-        &lt;%: Html.Kendo().Grid<Product>()
-        .Name("grid")
-        .BindTo(Model)
+    &lt;%: Html.Kendo().Grid<Product>()
+    .Name("grid")
+    .BindTo(Model)
     %>
 
 #### Example (Razor)
@@ -621,15 +621,15 @@ The lambda which will be executed for every table row
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
-        &lt;%: Html.Kendo().Grid(Model)
-        .Name("grid")
-        .RowAction(row =>
-        {
-            // "DataItem" is the Product instance to which the current row is bound
-            if (row.DataItem.UnitsInStock > 10)
-        {
-            //Set the background of the entire row
-            row.HtmlAttributes["style"] = "background:red;";
+    &lt;%: Html.Kendo().Grid(Model)
+    .Name("grid")
+    .RowAction(row =>
+    {
+        // "DataItem" is the Product instance to which the current row is bound
+        if (row.DataItem.UnitsInStock > 10)
+    {
+        //Set the background of the entire row
+        row.HtmlAttributes["style"] = "background:red;";
         }
         });
     %>
@@ -645,9 +645,9 @@ The lambda which will be executed for every table row
         {
             //Set the background of the entire row
             row.HtmlAttributes["style"] = "background:red;";
-        }
-        });
-    )
+            }
+            });
+        )
 
 
 ### CellAction(`System.Action<Kendo.Mvc.UI.GridCell<T>>`)
@@ -664,19 +664,19 @@ The lambda which will be executed for every table cell
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
-        &lt;%: Html.Kendo().Grid(Model)
-        .Name("grid")
-        .CellAction(cell =>
-        {
-            if (cell.Column.Name == "UnitsInStock")
-        {
-            if (cell.DataItem.UnitsInStock > 10)
-        {
-            //Set the background of this cell only
-            cell.HtmlAttributes["style"] = "background:red;";
+    &lt;%: Html.Kendo().Grid(Model)
+    .Name("grid")
+    .CellAction(cell =>
+    {
+        if (cell.Column.Name == "UnitsInStock")
+    {
+        if (cell.DataItem.UnitsInStock > 10)
+    {
+        //Set the background of this cell only
+        cell.HtmlAttributes["style"] = "background:red;";
         }
         }
-        })
+    })
     %>
 
 #### Example (Razor)
@@ -691,8 +691,8 @@ The lambda which will be executed for every table cell
         {
             //Set the background of this cell only
             cell.HtmlAttributes["style"] = "background:red;";
-        }
-        }
+            }
+            }
         })
     )
 
@@ -718,8 +718,8 @@ If true enables custom binding.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
@@ -730,8 +730,8 @@ If true enables custom binding.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 
 ### Columns(`System.Action<Kendo.Mvc.UI.Fluent.GridColumnFactory<T>>`)
@@ -752,16 +752,16 @@ The lambda which configures columns
         .Columns(columns =>
         {
             columns.Bound(product => product.ProductName).Title("Product Name");
-            columns.Command(command => command.Destroy());
-        })
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Destroy(destroy => destroy.Action("Products_Destroy", "Home")
-                .Read(read => read.Action("Products_Read", "Home"))
-            )
-        %>
+                columns.Command(command => command.Destroy());
+                })
+                .DataSource(dataSource =>
+                    // configure the data source
+                    dataSource
+                    .Ajax()
+                    .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
+                        .Read(read => read.Action("Products_Read", "Home"))
+                        )
+                        %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -769,20 +769,20 @@ The lambda which configures columns
         .Columns(columns =>
         {
             columns.Bound(product => product.ProductName).Title("Product Name");
-            columns.Command(command => command.Destroy());
-        })
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Destroy(destroy => destroy.Action("Products_Destroy", "Home")
-                .Read(read => read.Action("Products_Read", "Home"))
-            )
-        )
+                columns.Command(command => command.Destroy());
+                })
+                .DataSource(dataSource =>
+                    // configure the data source
+                    dataSource
+                    .Ajax()
+                    .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
+                        .Read(read => read.Action("Products_Read", "Home"))
+                        )
+                    )
 
 
 ### Sortable
-Enables grid column filtering.
+Enables grid column sorting.
 
 
 
@@ -796,8 +796,8 @@ Enables grid column filtering.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -808,8 +808,8 @@ Enables grid column filtering.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Sortable(`System.Action<Kendo.Mvc.UI.Fluent.GridSortSettingsBuilder<T>>`)
@@ -827,26 +827,26 @@ The lambda which configures the sorting
 #### Example (ASPX)
     <%:Html.Kendo().Grid<Product>()
         .Name("grid")
-        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn)
+        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn))
             .DataSource(dataSource =>
                 // configure the data source
                 dataSource
                 .Ajax()
                 .Read(read => read.Action("Products_Read", "Home"))
-            )
-        %>
+                )
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
-        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn)
+        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn))
             .DataSource(dataSource =>
                 // configure the data source
                 dataSource
                 .Ajax()
                 .Read(read => read.Action("Products_Read", "Home"))
+                )
             )
-        )
 
 
 ### Selectable
@@ -864,8 +864,8 @@ Enables grid row selection.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -876,8 +876,8 @@ Enables grid row selection.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Selectable(`System.Action<Kendo.Mvc.UI.Fluent.GridSelectionSettingsBuilder>`)
@@ -896,25 +896,25 @@ The lambda which configures the selection
     <%:Html.Kendo().Grid<Product>()
         .Name("grid")
         .Selectable(selection => selection.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
         .Selectable(selection => selection.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    )
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+            )
 
 
 ### PrefixUrlParameters(`System.Boolean`)
@@ -926,7 +926,7 @@ If set to true the grid will prefix the query string parameters with its name du
 
 #### Example (ASPX)
     <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
-        <%: Html.Kendo().Grid(Model)
+    <%: Html.Kendo().Grid(Model)
         .Name("grid")
         .PrefixUrlParameters(false)
     %>
@@ -954,8 +954,8 @@ Enables grid paging.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -966,8 +966,8 @@ Enables grid paging.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Pageable(`System.Action<Kendo.Mvc.UI.Fluent.PageableBuilder>`)
@@ -993,8 +993,8 @@ The lambda which configures the paging
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1007,8 +1007,8 @@ The lambda which configures the paging
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Filterable
@@ -1026,8 +1026,8 @@ Enables grid filtering.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1038,8 +1038,8 @@ Enables grid filtering.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Filterable(`System.Action<Kendo.Mvc.UI.Fluent.GridFilterableSettingsBuilder>`)
@@ -1058,25 +1058,25 @@ The lambda which configures the filtering
     <%:Html.Kendo().Grid<Product>()
         .Name("grid")
         .Filterable(filtering => filtering.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
         .Filterable(filtering => filtering.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    )
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+            )
 
 
 ### ColumnMenu
@@ -1093,9 +1093,9 @@ Enables the grid column menu.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ColumnMenu()
-    %>
+            )
+            .ColumnMenu()
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1105,9 +1105,9 @@ Enables the grid column menu.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
+            .ColumnMenu()
         )
-        .ColumnMenu()
-    )
 
 
 ### ColumnMenu(`System.Action<Kendo.Mvc.UI.Fluent.GridColumnMenuSettingsBuilder>`)
@@ -1130,9 +1130,9 @@ The lambda which configures the column menu
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ColumnMenu(columnMenu => columnMenu.Enabled(true))
-    %>
+            )
+            .ColumnMenu(columnMenu => columnMenu.Enabled(true))
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1142,9 +1142,9 @@ The lambda which configures the column menu
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .ColumnMenu(columnMenu => columnMenu.Enabled(true))
-    )
+            )
+            .ColumnMenu(columnMenu => columnMenu.Enabled(true))
+            )
 
 
 ### Scrollable
@@ -1162,8 +1162,8 @@ Enables grid scrolling.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1174,8 +1174,8 @@ Enables grid scrolling.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Scrollable(`System.Action<Kendo.Mvc.UI.Fluent.GridScrollSettingsBuilder>`)
@@ -1194,25 +1194,25 @@ The lambda which configures the scrolling
     <%:Html.Kendo().Grid<Product>()
         .Name("grid")
         .Scrollable(scrolling => scrolling.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
         .Scrollable(scrolling => scrolling.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    )
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+            )
 
 
 ### Navigatable
@@ -1230,8 +1230,8 @@ Enables grid keyboard navigation.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1242,8 +1242,8 @@ Enables grid keyboard navigation.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 ### Navigatable(`System.Action<Kendo.Mvc.UI.Fluent.GridNavigatableSettingsBuilder>`)
@@ -1262,25 +1262,25 @@ The lambda which configures the keyboard navigation
     <%:Html.Kendo().Grid<Product>()
         .Name("grid")
         .Navigatable(navigation => navigation.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
         .Navigatable(navigation => navigation.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    )
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+            )
 
 
 ### Events(`System.Action<Kendo.Mvc.UI.Fluent.GridEventBuilder>`)
@@ -1303,14 +1303,14 @@ The lambda which configures the events
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .Events(events => events.DataBound("grid_dataBound"))
-        %>
-        <script>
-        function grid_dataBound(e) {
-        // handle the dataBound event
-    }
-    </script>
+            )
+            .Events(events => events.DataBound("grid_dataBound"))
+                %>
+                <script>
+                function grid_dataBound(e) {
+                // handle the dataBound event
+                }
+                </script>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1320,14 +1320,14 @@ The lambda which configures the events
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-        .Events(events => events.DataBound("grid_dataBound"))
-    )
-    <script>
-    function grid_dataBound(e) {
-    // handle the dataBound event
-}
-    </script>
+            )
+            .Events(events => events.DataBound("grid_dataBound"))
+            )
+            <script>
+            function grid_dataBound(e) {
+            // handle the dataBound event
+            }
+            </script>
 
 
 ### Groupable(`System.Action<Kendo.Mvc.UI.Fluent.GridGroupingSettingsBuilder>`)
@@ -1346,25 +1346,25 @@ The lambda which configures the grouping
     <%:Html.Kendo().Grid<Product>()
         .Name("grid")
         .Groupable(grouping => grouping.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+                %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
         .Groupable(grouping => grouping.Enabled(true))
-        .DataSource(dataSource =>
-            // configure the data source
-            dataSource
-            .Ajax()
-            .Read(read => read.Action("Products_Read", "Home"))
-        )
-    )
+            .DataSource(dataSource =>
+                // configure the data source
+                dataSource
+                .Ajax()
+                .Read(read => read.Action("Products_Read", "Home"))
+                )
+            )
 
 
 ### Groupable
@@ -1382,8 +1382,8 @@ Enables grid grouping.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
-        )
-    %>
+            )
+            %>
 
 #### Example (Razor)
     @(Html.Kendo().Grid<Product>()
@@ -1394,8 +1394,8 @@ Enables grid grouping.
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
+            )
         )
-    )
 
 
 

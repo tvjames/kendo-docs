@@ -26,8 +26,8 @@ Footer template to be used for rendering the footer of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .Footer("#= kendo.toString(data, "G") #")
+    .Name("DateTimePicker")
+    .Footer("#= kendo.toString(data, "G") #")
     %>
 
 
@@ -39,8 +39,8 @@ FooterId to be used for rendering the footer of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .FooterId("widgetFooterId")
+    .Name("DateTimePicker")
+    .FooterId("widgetFooterId")
     %>
 
 
@@ -52,8 +52,8 @@ Specifies the navigation depth.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .Depth(CalendarView.Month)
+    .Name("DateTimePicker")
+    .Depth(CalendarView.Month)
     %>
 
 
@@ -65,8 +65,8 @@ Specifies the start view.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .Start(CalendarView.Month)
+    .Name("DateTimePicker")
+    .Start(CalendarView.Month)
     %>
 
 
@@ -78,8 +78,8 @@ MonthTemplateId to be used for rendering the cells of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .MonthTemplateId("widgetMonthTemplateId")
+    .Name("DateTimePicker")
+    .MonthTemplateId("widgetMonthTemplateId")
     %>
 
 
@@ -91,8 +91,8 @@ Templates for the cells rendered in the "month" view.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .MonthTemplate("#= data.value #")
+    .Name("DateTimePicker")
+    .MonthTemplate("#= data.value #")
     %>
 
 
@@ -104,8 +104,8 @@ Configures the content of cells of the Calendar.
 
 #### Example (ASPX)
     <%= Html.Kendo().DateTimePicker()
-        .Name("DateTimePicker")
-        .MonthTemplate(month => month.Content("#= data.value #"))
+    .Name("DateTimePicker")
+    .MonthTemplate(month => month.Content("#= data.value #"))
     %>
 
 

@@ -25,8 +25,8 @@ The boolean value.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Animation(false) //toggle effect
+    .Name("DatePicker")
+    .Animation(false) //toggle effect
     %>
 
 
@@ -44,15 +44,15 @@ The action which configures the animation effects.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Animation(animation =>
+    .Name("DatePicker")
+    .Animation(animation =>
+    {
+        animation.Open(open =>
         {
-            animation.Open(open =>
-            {
-                open.SlideIn(SlideDirection.Down);
-            }
-            })
-        %>
+            open.SlideIn(SlideDirection.Down);
+        })
+    })
+    %>
 
 
 ### Culture(`System.String`)
@@ -63,8 +63,8 @@ Specifies the culture info used by the widget.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Culture("de-DE")
+    .Name("DatePicker")
+    .Culture("de-DE")
     %>
 
 
@@ -82,10 +82,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Events(events =>
-            events.Open("open").Change("change")
-        )
+    .Name("DatePicker")
+    .Events(events =>
+        events.Open("open").Change("change")
+    )
     %>
 
 

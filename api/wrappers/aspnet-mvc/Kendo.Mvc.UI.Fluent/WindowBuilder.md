@@ -72,7 +72,7 @@ The Razor inline template
 
 #### Example (ASPX)
     @(Html.Kendo().Window()
-            .Name("Window")
+        .Name("Window")
         .Content(@<strong> Hello World!</strong>))
 
 
@@ -103,8 +103,8 @@ The route values of the Action method.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .LoadContentFrom(MVC.Home.Index().GetRouteValueDictionary());
+    .Name("Window")
+    .LoadContentFrom(MVC.Home.Index().GetRouteValueDictionary());
     %>
 
 
@@ -125,8 +125,8 @@ The controller name.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .LoadContentFrom("AjaxView_OpenSource", "Window")
+    .Name("Window")
+    .LoadContentFrom("AjaxView_OpenSource", "Window")
     %>
 
 
@@ -150,8 +150,8 @@ Route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .LoadContentFrom("AjaxView_OpenSource", "Window", new { id = 10})
+    .Name("Window")
+    .LoadContentFrom("AjaxView_OpenSource", "Window", new { id = 10})
     %>
 
 
@@ -169,8 +169,8 @@ The url.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .LoadContentFrom(Url.Action("AjaxView_OpenSource", "Window"))
+    .Name("Window")
+    .LoadContentFrom(Url.Action("AjaxView_OpenSource", "Window"))
     %>
 
 
@@ -188,10 +188,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Events(events =>
-            events.Open("onOpen").Close("onClose")
-        )
+    .Name("Window")
+    .Events(events =>
+        events.Open("onOpen").Close("onClose")
+    )
     %>
 
 
@@ -203,8 +203,8 @@ Enables windows resizing.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Resizable()
+    .Name("Window")
+    .Resizable()
     %>
 
 
@@ -222,10 +222,10 @@ Resizing settings action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Resizable(settings =>
-            settings.Enabled(true).MaxHeight(500).MaxWidth(500)
-        )
+    .Name("Window")
+    .Resizable(settings =>
+        settings.Enabled(true).MaxHeight(500).MaxWidth(500)
+    )
     %>
 
 
@@ -243,10 +243,10 @@ The buttons configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Actions(actions =>
-            actions.
-        )
+    .Name("Window")
+    .Actions(actions =>
+        actions.
+    )
     %>
 
 
@@ -278,10 +278,10 @@ Position settings action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
-        .Position(settings =>
-            settings.Top(100).Left(100)
-        )
+    .Name("Window")
+    .Position(settings =>
+        settings.Top(100).Left(100)
+    )
     %>
 
 
@@ -313,7 +313,7 @@ Whether the component animation is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
+    .Name("Window")
     .Animation(false)
 
 
@@ -331,7 +331,7 @@ The action that configures the animation.
 
 #### Example (ASPX)
     <%= Html.Kendo().Window()
-        .Name("Window")
+    .Name("Window")
     .Animation(animation => animation.Expand)
 
 

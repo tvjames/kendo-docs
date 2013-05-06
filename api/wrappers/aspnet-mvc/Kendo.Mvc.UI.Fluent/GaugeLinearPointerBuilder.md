@@ -233,9 +233,9 @@ The configuration action.
         .Name("linearGauge")
         .Pointer(pointer => pointer
             .Track(track => track.Visible(true))
-        )
-        .Render();
-    %>
+            )
+            .Render();
+            %>
 
 
 

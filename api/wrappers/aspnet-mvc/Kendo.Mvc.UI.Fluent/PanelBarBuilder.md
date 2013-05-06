@@ -25,12 +25,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("PanelBar")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -48,10 +48,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Events(events =>
-            events.Expand("expand").Collapse("collapse")
-        )
+    .Name("PanelBar")
+    .Events(events =>
+        events.Expand("expand").Collapse("collapse")
+    )
     %>
 
 
@@ -72,10 +72,10 @@ The action to configure the item.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .BindTo("examples", (item, siteMapNode) =>
-        {
-        })
+    .Name("PanelBar")
+    .BindTo("examples", (item, siteMapNode) =>
+    {
+    })
     %>
 
 
@@ -93,8 +93,8 @@ The view data key.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .BindTo("examples")
+    .Name("PanelBar")
+    .BindTo("examples")
     %>
 
 
@@ -115,11 +115,11 @@ The action executed for every data bound item.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .BindTo(new []{"First", "Second"}, (item, value)
-        {
-            item.Text = value;
-        })
+    .Name("PanelBar")
+    .BindTo(new []{"First", "Second"}, (item, value) =>
+    {
+        item.Text = value;
+    })
     %>
 
 
@@ -140,18 +140,18 @@ The action which will configure the mappings
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .BindTo(Model, mapping => mapping
-            .For<Customer>(binding => binding
-                .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
+    .Name("PanelBar")
+    .BindTo(Model, mapping => mapping
+        .For<Customer>(binding => binding
+            .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
                 .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to PanelBarItem properties
-            )
-            .For<Order<(binding => binding
-                .Children(o => null) // "Orders" do not have child objects so return "null"
-                .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to PanelBarItem properties
-            )
-        )
-    %>
+                )
+                .For<Order<(binding => binding
+                    .Children(o => null) // "Orders" do not have child objects so return "null"
+                        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to PanelBarItem properties
+                        )
+                    )
+                    %>
 
 
 ### Animation(`System.Boolean`)
@@ -168,7 +168,7 @@ Whether the component animation is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
+    .Name("PanelBar")
     .Animation(false)
 
 
@@ -186,7 +186,7 @@ The action that configures the animation.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
+    .Name("PanelBar")
     .Animation(animation => animation.Expand(config => config.Fade(FadeDirection.In)))
 
 
@@ -204,13 +204,13 @@ Action, which will be executed for each item.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .ItemAction(item =>
-        {
-            item
-            .Text(...)
-            .HtmlAttributes(...);
-        })
+    .Name("PanelBar")
+    .ItemAction(item =>
+    {
+        item
+        .Text(...)
+        .HtmlAttributes(...);
+    })
     %>
 
 
@@ -228,8 +228,8 @@ If true the item will be highlighted.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .HighlightPath(true)
+    .Name("PanelBar")
+    .HighlightPath(true)
     %>
 
 
@@ -247,8 +247,8 @@ If true the panelbar will be expanded.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .ExpandAll(true)
+    .Name("PanelBar")
+    .ExpandAll(true)
     %>
 
 
@@ -266,8 +266,8 @@ The desired expand mode.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .ExpandMode(PanelBarExpandMode.Multiple)
+    .Name("PanelBar")
+    .ExpandMode(PanelBarExpandMode.Multiple)
     %>
 
 
@@ -285,13 +285,13 @@ The index.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
-        .SelectedIndex(1)
+    .Name("PanelBar")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
+    .SelectedIndex(1)
     %>
 
 
@@ -309,8 +309,8 @@ If true security trimming is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .SecurityTrimming(false)
+    .Name("PanelBar")
+    .SecurityTrimming(false)
     %>
 
 
@@ -328,11 +328,11 @@ The securityTrimming action.
 
 #### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .SecurityTrimming(builder =>
-        {
-            builder.Enabled(true).HideParent(true);
-        })
+    .Name("PanelBar")
+    .SecurityTrimming(builder =>
+    {
+        builder.Enabled(true).HideParent(true);
+    })
     %>
 
 

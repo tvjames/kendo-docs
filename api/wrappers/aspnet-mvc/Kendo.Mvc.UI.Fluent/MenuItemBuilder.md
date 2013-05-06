@@ -25,13 +25,13 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Menu()
-        .Name("Menu")
-        .Items(items =>
+    .Name("Menu")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
         {
-            items.Add().Text("First Item").Items(firstItemChildren =>
-            {
-                firstItemChildren.Add().Text("Child Item 1");
-                firstItemChildren.Add().Text("Child Item 2");
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
             });
         })
     %>

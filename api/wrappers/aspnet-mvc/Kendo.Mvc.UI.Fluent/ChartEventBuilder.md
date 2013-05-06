@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DataBound(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DataBound(`System.String`)
@@ -55,8 +55,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.DataBound("onDataBound"))
+    .Name("Chart")
+    .Events(events => events.DataBound("onDataBound"))
     %>
 
 
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DataBinding(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DataBinding(`System.String`)
@@ -104,8 +104,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.DataBinding("onDataBinding"))
+    .Name("Chart")
+    .Events(events => events.DataBinding("onDataBinding"))
     %>
 
 
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SeriesClick(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SeriesClick(`System.String`)
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.SeriesClick("onSeriesClick"))
+    .Name("Chart")
+    .Events(events => events.SeriesClick("onSeriesClick"))
     %>
 
 
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SeriesHover(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SeriesHover(`System.String`)
@@ -202,8 +202,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.SeriesHover("onSeriesHover"))
+    .Name("Chart")
+    .Events(events => events.SeriesHover("onSeriesHover"))
     %>
 
 
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.AxisLabelClick(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### AxisLabelClick(`System.String`)
@@ -251,8 +251,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.AxisLabelClick("onAxisLabelClick"))
+    .Name("Chart")
+    .Events(events => events.AxisLabelClick("onAxisLabelClick"))
     %>
 
 
@@ -274,14 +274,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.LegendItemClick(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### LegendItemClick(`System.String`)
@@ -300,8 +300,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.LegendItemClick("onLegendItemClick"))
+    .Name("Chart")
+    .Events(events => events.LegendItemClick("onLegendItemClick"))
     %>
 
 
@@ -323,14 +323,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.LegendItemHover(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### LegendItemHover(`System.String`)
@@ -349,8 +349,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.LegendItemHover("onLegendItemHover"))
+    .Name("Chart")
+    .Events(events => events.LegendItemHover("onLegendItemHover"))
     %>
 
 
@@ -370,8 +370,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.DragStart("onDragStart"))
+    .Name("Chart")
+    .Events(events => events.DragStart("onDragStart"))
     %>
 
 
@@ -393,14 +393,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DragStart(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Drag(`System.String`)
@@ -419,8 +419,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.Drag("onDrag"))
+    .Name("Chart")
+    .Events(events => events.Drag("onDrag"))
     %>
 
 
@@ -442,14 +442,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.Drag(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DragEnd(`System.String`)
@@ -468,8 +468,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.DragEnd("onDragEnd"))
+    .Name("Chart")
+    .Events(events => events.DragEnd("onDragEnd"))
     %>
 
 
@@ -491,14 +491,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DragEnd(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### PlotAreaClick(`System.Func<System.Object,System.Object>`)
@@ -519,14 +519,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.PlotAreaClick(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### PlotAreaClick(`System.String`)
@@ -545,8 +545,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.PlotAreaClick("onPlotAreaClick"))
+    .Name("Chart")
+    .Events(events => events.PlotAreaClick("onPlotAreaClick"))
     %>
 
 
@@ -566,8 +566,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.ZoomStart("onZoomStart"))
+    .Name("Chart")
+    .Events(events => events.ZoomStart("onZoomStart"))
     %>
 
 
@@ -589,14 +589,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.ZoomStart(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Zoom(`System.String`)
@@ -615,8 +615,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.Zoom("onZoom"))
+    .Name("Chart")
+    .Events(events => events.Zoom("onZoom"))
     %>
 
 
@@ -638,14 +638,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.Zoom(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### ZoomEnd(`System.String`)
@@ -664,8 +664,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.ZoomEnd("onZoomEnd"))
+    .Name("Chart")
+    .Events(events => events.ZoomEnd("onZoomEnd"))
     %>
 
 
@@ -687,14 +687,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.ZoomEnd(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SelectStart(`System.String`)
@@ -713,8 +713,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.SelectStart("onSelectStart"))
+    .Name("Chart")
+    .Events(events => events.SelectStart("onSelectStart"))
     %>
 
 
@@ -736,14 +736,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SelectStart(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -762,8 +762,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.Select("onSelect"))
+    .Name("Chart")
+    .Events(events => events.Select("onSelect"))
     %>
 
 
@@ -785,14 +785,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.Select(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SelectEnd(`System.String`)
@@ -811,8 +811,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .Events(events => events.SelectEnd("onSelectEnd"))
+    .Name("Chart")
+    .Events(events => events.SelectEnd("onSelectEnd"))
     %>
 
 
@@ -834,14 +834,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SelectEnd(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 

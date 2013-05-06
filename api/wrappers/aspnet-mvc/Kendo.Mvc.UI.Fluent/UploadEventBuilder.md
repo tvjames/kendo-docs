@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Select(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -55,8 +55,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Select("onSelect"))
+    .Name("Upload")
+    .Events(events => events.Select("onSelect"))
     %>
 
 
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Upload(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Upload(`System.String`)
@@ -104,8 +104,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Upload("onUpload"))
+    .Name("Upload")
+    .Events(events => events.Upload("onUpload"))
     %>
 
 
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Success(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Success(`System.String`)
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Success("onSuccess"))
+    .Name("Upload")
+    .Events(events => events.Success("onSuccess"))
     %>
 
 
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Error(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Error(`System.String`)
@@ -202,8 +202,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Error("onError"))
+    .Name("Upload")
+    .Events(events => events.Error("onError"))
     %>
 
 
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Complete(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Complete(`System.String`)
@@ -251,8 +251,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Complete("onComplete"))
+    .Name("Upload")
+    .Events(events => events.Complete("onComplete"))
     %>
 
 
@@ -274,14 +274,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Cancel(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Cancel(`System.String`)
@@ -300,8 +300,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Cancel("onCancel"))
+    .Name("Upload")
+    .Events(events => events.Cancel("onCancel"))
     %>
 
 
@@ -323,14 +323,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Remove(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Remove(`System.String`)
@@ -349,8 +349,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Remove("onRemove"))
+    .Name("Upload")
+    .Events(events => events.Remove("onRemove"))
     %>
 
 
@@ -372,14 +372,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Progress(
-                @<text>
+            @<text>
                 function(e) {
                 //event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Progress(`System.String`)
@@ -398,8 +398,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Events(events => events.Progress("onProgress"))
+    .Name("Upload")
+    .Events(events => events.Progress("onProgress"))
     %>
 
 

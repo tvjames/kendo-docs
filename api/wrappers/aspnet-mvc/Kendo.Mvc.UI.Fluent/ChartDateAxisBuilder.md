@@ -38,8 +38,8 @@ The start date of the axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(a => a.Date().Min(DateTime.Parse("2012/01/01")))
+    .Name("Chart")
+    .XAxis(a => a.Date().Min(DateTime.Parse("2012/01/01")))
     %>
 
 
@@ -57,8 +57,8 @@ The end date of the axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(a => a.Date().Max(DateTime.Parse("2012/01/01")))
+    .Name("Chart")
+    .XAxis(a => a.Date().Max(DateTime.Parse("2012/01/01")))
     %>
 
 
@@ -76,8 +76,8 @@ The interval between major divisions in base units.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(a => a.Date().BaseUnit(ChartAxisBaseUnit.Months).MajorUnit(4))
+    .Name("Chart")
+    .XAxis(a => a.Date().BaseUnit(ChartAxisBaseUnit.Months).MajorUnit(4))
     %>
 
 
@@ -96,8 +96,8 @@ The interval between minor divisions in base units.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(a => a.Date().BaseUnit(ChartAxisBaseUnit.Days).MajorUnit(4).MinorUnit(2))
+    .Name("Chart")
+    .XAxis(a => a.Date().BaseUnit(ChartAxisBaseUnit.Days).MajorUnit(4).MinorUnit(2))
     %>
 
 
@@ -115,8 +115,8 @@ The value at which the first perpendicular axis crosses this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .XAxis(axis => axis.Date().AxisCrossingValue(DateTime.Parse("2012/01/01")))
+    .Name("Chart")
+    .XAxis(axis => axis.Date().AxisCrossingValue(DateTime.Parse("2012/01/01")))
     %>
 
 
@@ -134,11 +134,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.Date().AxisCrossingValue(DateTime.Parse("2012/01/01"), DateTime.Parse("2012/01/10")))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.Date().AxisCrossingValue(DateTime.Parse("2012/01/01"), DateTime.Parse("2012/01/10")))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.DateTime>`)
@@ -155,13 +155,13 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.Date().AxisCrossingValue(new DateTime[] {
-                DateTime.Parse("2012/01/01"), DateTime.Parse("2012/01/10")
-            }))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.Date().AxisCrossingValue(new DateTime[] {
+        DateTime.Parse("2012/01/01"), DateTime.Parse("2012/01/10")
+        }))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>`)
@@ -178,15 +178,15 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .XAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .Culture(new CultureInfo("es-ES")
-                    .Visible(true)
-                );
-            )
-        %>
+    .Name("Chart")
+    .XAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .Culture(new CultureInfo("es-ES")
+            .Visible(true)
+        )
+        ))
+    %>
 
 
 

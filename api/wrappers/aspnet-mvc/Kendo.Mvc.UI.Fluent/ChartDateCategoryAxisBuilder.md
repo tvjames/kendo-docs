@@ -194,11 +194,11 @@ The value at which the first perpendicular axis crosses this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.Date().AxisCrossingValue(4))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.Date().AxisCrossingValue(4))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Double[]`)
@@ -215,11 +215,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.Date().AxisCrossingValue(0, 10))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.Date().AxisCrossingValue(0, 10))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.Double>`)
@@ -236,11 +236,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.Date().AxisCrossingValue(new double[] { 0, 10 }))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.Date().AxisCrossingValue(new double[] { 0, 10 }))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>`)
@@ -257,15 +257,15 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart()
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Date()
-            .Labels(labels => labels
-                .Culture(new CultureInfo("es-ES")
-                    .Visible(true)
-                );
-            )
-        %>
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Date()
+        .Labels(labels => labels
+            .Culture(new CultureInfo("es-ES")
+            .Visible(true)
+        )
+        ))
+    %>
 
 
 ### Select(`System.Nullable<System.DateTime>,System.Nullable<System.DateTime>`)
@@ -288,8 +288,8 @@ The selection range end.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
-        .CategoryAxis(axis => axis.Select(DateTime.Today.AddMonths(-1), DateTime.Today))
+    .Name("StockChart")
+    .CategoryAxis(axis => axis.Select(DateTime.Today.AddMonths(-1), DateTime.Today))
     %>
 
 
@@ -307,11 +307,11 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
-        .CategoryAxis(axis => axis.Select(select =>
-                select.Mousewheel(mw => mw.Reverse())
-            )
-        %>
+    .Name("StockChart")
+    .CategoryAxis(axis => axis.Select(select =>
+        select.Mousewheel(mw => mw.Reverse())
+            ))
+            %>
 
 
 

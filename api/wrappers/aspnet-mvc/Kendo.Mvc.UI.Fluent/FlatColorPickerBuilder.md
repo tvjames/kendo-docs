@@ -25,10 +25,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
-        .Events(events =>
-            events.Select("select").Change("change")
-        )
+    .Name("FlatColorPicker")
+    .Events(events =>
+        events.Select("select").Change("change")
+    )
     %>
 
 
@@ -46,8 +46,8 @@ The initially selected color
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
-        .Value("#ff0000")
+    .Name("FlatColorPicker")
+    .Value("#ff0000")
     %>
 
 
@@ -65,8 +65,8 @@ Whether the user is allowed to change the color opacity.
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
-        .Opacity(true)
+    .Name("FlatColorPicker")
+    .Opacity(true)
     %>
 
 
@@ -84,8 +84,8 @@ Whether the input field should be shown.
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
-        .Input(false)
+    .Name("FlatColorPicker")
+    .Input(false)
     %>
 
 
@@ -103,8 +103,8 @@ Whether the preview area should be shown.
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
-        .Preview(false)
+    .Name("FlatColorPicker")
+    .Preview(false)
     %>
 
 
@@ -122,8 +122,8 @@ Whether the buttons should be shown.
 
 #### Example (ASPX)
     <%= Html.Kendo().FlatColorPicker()
-        .Name("FlatColorPicker")
-        .Buttons(false)
+    .Name("FlatColorPicker")
+    .Buttons(false)
     %>
 
 

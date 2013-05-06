@@ -27,15 +27,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().NumericTextBox()
-            .Name("NumericTextBox")
-            .Events(events => events.Change(
-                    @<text>
-                    function(e) {
-                    //event handling code
+        .Name("NumericTextBox")
+        .Events(events => events.Change(
+            @<text>
+                function(e) {
+                //event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Change(`System.String`)
@@ -54,9 +54,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().NumericTextBox()
-            .Name("NumericTextBox")
-            .Events(events => events.Change("change"))
-    )
+        .Name("NumericTextBox")
+        .Events(events => events.Change("change"))
+        )
 
 
 ### Spin(`System.Func<System.Object,System.Object>`)
@@ -75,15 +75,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().NumericTextBox()
-            .Name("NumericTextBox")
-            .Events(events => events.Spin(
-                    @<text>
-                    function(e) {
-                    //event handling code
+        .Name("NumericTextBox")
+        .Events(events => events.Spin(
+            @<text>
+                function(e) {
+                //event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Spin(`System.String`)
@@ -102,9 +102,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().NumericTextBox()
-            .Name("NumericTextBox")
-            .Events(events => events.Spin("spin"))
-    )
+        .Name("NumericTextBox")
+        .Events(events => events.Spin("spin"))
+        )
 
 
 

@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Collapse(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Collapse(`System.String`)
@@ -55,8 +55,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.Collapse("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.Collapse("onExpand"))
     %>
 
 
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.DataBound(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DataBound(`System.String`)
@@ -104,8 +104,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.DataBound("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.DataBound("onExpand"))
     %>
 
 
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Drag(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Drag(`System.String`)
@@ -153,8 +153,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.Drag("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.Drag("onExpand"))
     %>
 
 
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.DragEnd(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DragEnd(`System.String`)
@@ -202,8 +202,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.DragEnd("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.DragEnd("onExpand"))
     %>
 
 
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.DragStart(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DragStart(`System.String`)
@@ -251,8 +251,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.DragStart("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.DragStart("onExpand"))
     %>
 
 
@@ -274,14 +274,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Drop(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Drop(`System.String`)
@@ -300,8 +300,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.Drop("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.Drop("onExpand"))
     %>
 
 
@@ -323,14 +323,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Expand(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Expand(`System.String`)
@@ -349,8 +349,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.Expand("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.Expand("onExpand"))
     %>
 
 
@@ -372,14 +372,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Select(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -398,8 +398,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.Select("onExpand"))
+    .Name("TreeView")
+    .Events(events => events.Select("onExpand"))
     %>
 
 
@@ -421,14 +421,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Change(
-                @<text>
+            @<text>
                 function(e) {
                 // event handling code
-            }
-            </text>
-            ))
-        .Render();
-    %>
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Change(`System.String`)
@@ -447,8 +447,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events => events.Change("onChange"))
+    .Name("TreeView")
+    .Events(events => events.Change("onChange"))
     %>
 
 

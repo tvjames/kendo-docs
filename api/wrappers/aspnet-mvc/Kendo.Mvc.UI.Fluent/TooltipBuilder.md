@@ -121,8 +121,8 @@ The route values of the Action method.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("#element")
-        .LoadContentFrom(MVC.Home.Index().GetRouteValueDictionary());
+    .For("#element")
+    .LoadContentFrom(MVC.Home.Index().GetRouteValueDictionary());
     %>
 
 
@@ -143,8 +143,8 @@ The controller name.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("#element")
-        .LoadContentFrom("AjaxView_OpenSource", "Tooltip")
+    .For("#element")
+    .LoadContentFrom("AjaxView_OpenSource", "Tooltip")
     %>
 
 
@@ -168,8 +168,8 @@ Route values.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("#element")
-        .LoadContentFrom("AjaxView_OpenSource", "Tooltip", new { id = 10})
+    .For("#element")
+    .LoadContentFrom("AjaxView_OpenSource", "Tooltip", new { id = 10})
     %>
 
 
@@ -187,8 +187,8 @@ The url.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("#element")
-        .LoadContentFrom(Url.Action("AjaxView_OpenSource", "Tooltip"))
+    .For("#element")
+    .LoadContentFrom(Url.Action("AjaxView_OpenSource", "Tooltip"))
     %>
 
 
@@ -252,7 +252,7 @@ Whether the component animation is enabled.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("#element")
+    .For("#element")
     .Animation(false)
 
 
@@ -270,7 +270,7 @@ The action that configures the animation.
 
 #### Example (ASPX)
     <%= Html.Kendo().Tooltip()
-        .For("#element")
+    .For("#element")
     .Animation(animation => animation.Expand)
 
 

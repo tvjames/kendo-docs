@@ -76,10 +76,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
-        .Name("NumericTextBox")
-        .Events(events =>
-            events.OnLoad("onLoad").OnChange("onChange")
-        )
+    .Name("NumericTextBox")
+    .Events(events =>
+        events.OnLoad("onLoad").OnChange("onChange")
+    )
     %>
 
 
@@ -107,8 +107,8 @@ Stes the format of the NumericTextBox.
 
 #### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
-        .Name("NumericTextBox")
-        .Format("c3")
+    .Name("NumericTextBox")
+    .Format("c3")
     %>
 
 
@@ -120,8 +120,8 @@ Specifies the culture info used by the NumericTextBox widget.
 
 #### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
-        .Name("NumericTextBox")
-        .Culture("de-DE")
+    .Name("NumericTextBox")
+    .Culture("de-DE")
     %>
 
 
@@ -133,8 +133,8 @@ Specifies the number precision. If not set precision defined by current culture 
 
 #### Example (ASPX)
     <%= Html.Kendo().NumericTextBox()
-        .Name("NumericTextBox")
-        .Decimals(3)
+    .Name("NumericTextBox")
+    .Decimals(3)
     %>
 
 

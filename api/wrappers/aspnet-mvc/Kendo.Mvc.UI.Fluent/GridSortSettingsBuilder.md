@@ -19,8 +19,8 @@ Enables or disables sorting.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Sorting(sorting => sorting.Enabled((bool)ViewData["enableSorting"]))
+    .Name("Grid")
+    .Sorting(sorting => sorting.Enabled((bool)ViewData["enableSorting"]))
     %>
 
 
@@ -38,8 +38,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Sorting(sorting => sorting.SortMode(GridSortMode.MultipleColumns))
+    .Name("Grid")
+    .Sorting(sorting => sorting.SortMode(GridSortMode.MultipleColumns))
     %>
 
 
@@ -57,8 +57,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Sorting(sorting => sorting.AllowUnsort(true))
+    .Name("Grid")
+    .Sorting(sorting => sorting.AllowUnsort(true))
     %>
 
 

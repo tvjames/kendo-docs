@@ -25,8 +25,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Format("{0:dd/MM/yyyy}"))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderDate).Format("{0:dd/MM/yyyy}"))
     %>
 
 
@@ -44,9 +44,9 @@ An anonymous object which contains the additional data
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => {
-            columns.Bound(o => o.Customer).EditorViewData(new { customers = Model.Customers });
+    .Name("Grid")
+    .Columns(columns => {
+        columns.Bound(o => o.Customer).EditorViewData(new { customers = Model.Customers });
         })
     %>
 
@@ -72,8 +72,8 @@ Enables or disables sorting the column. All bound columns are sortable by defaul
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Sortable(false))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderDate).Sortable(false))
     %>
 
 
@@ -85,8 +85,8 @@ Enables or disables grouping by that column. All bound columns are groupable by 
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Groupable(false))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderDate).Groupable(false))
     %>
 
 
@@ -98,8 +98,8 @@ Enables or disables filtering the column. All bound columns are filterable by de
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Filterable(false))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderDate).Filterable(false))
     %>
 
 
@@ -111,8 +111,8 @@ Enables or disables HTML encoding the data of the column. All bound columns are 
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Columns(columns => columns.Bound(o => o.OrderDate).Encoded(false))
+    .Name("Grid")
+    .Columns(columns => columns.Bound(o => o.OrderDate).Encoded(false))
     %>
 
 
@@ -133,17 +133,17 @@ The action defining the template.
         .Name("Grid")
         .Columns(columns => columns
             .Add(c => c.CustomerID)
-            .Template(() =>
-            {
-                %>
-                >img
-                alt="<%= c.CustomerID %>"
-                src="<%= Url.Content("~/Content/Grid/Customers/" + c.CustomerID + ".jpg") %>"
-                />
-                <%
-            }).Title("Picture");)
-        .Render();
-    %>
+                .Template(() =>
+                {
+                    %>
+                    >img
+                    alt="<%= c.CustomerID %>"
+                    src="<%= Url.Content("~/Content/Grid/Customers/" + c.CustomerID + ".jpg") %>"
+                    />
+                    <%
+                    }).Title("Picture");)
+                    .Render();
+                    %>
 
 
 ### Template(`System.Func<T,System.Object>`)

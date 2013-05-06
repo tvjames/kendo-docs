@@ -25,8 +25,8 @@ The date field.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .DateField("Date")
+    .Name("Chart")
+    .DateField("Date")
     %>
 
 
@@ -46,10 +46,10 @@ Gets or sets a value indicating if the chart
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .DataSource(ds =>
-        {
-            ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
+    .Name("Chart")
+    .DataSource(ds =>
+    {
+        ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
         })
         .AutoBind(false)
     %>
@@ -69,14 +69,14 @@ The navigator configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
-        .Navigator(nav => nav
-            .Series(series =>
-            {
-                series.Line(s => s.Volume);
-            }
-            )
-        %>
+    .Name("StockChart")
+    .Navigator(nav => nav
+        .Series(series =>
+        {
+            series.Line(s => s.Volume);
+            })
+        )
+    %>
 
 
 ### Events(`System.Action<Kendo.Mvc.UI.Fluent.ChartEventBuilder>`)
@@ -93,10 +93,10 @@ The client events configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Events(events => events
-            .OnLoad("onLoad")
-        )
+    .Name("Chart")
+    .Events(events => events
+        .OnLoad("onLoad")
+    )
     %>
 
 
@@ -114,8 +114,8 @@ The Chart theme.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Theme("Telerik")
+    .Name("Chart")
+    .Theme("Telerik")
     %>
 
 
@@ -133,8 +133,8 @@ The Chart area.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .ChartArea(chartArea => chartArea.margin(20))
+    .Name("Chart")
+    .ChartArea(chartArea => chartArea.margin(20))
     %>
 
 
@@ -152,8 +152,8 @@ The Plot area.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .PlotArea(plotArea => plotArea.margin(20))
+    .Name("Chart")
+    .PlotArea(plotArea => plotArea.margin(20))
     %>
 
 
@@ -171,8 +171,8 @@ The Chart title.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Title("Yearly sales")
+    .Name("Chart")
+    .Title("Yearly sales")
     %>
 
 
@@ -190,8 +190,8 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Title(title => title.Text("Yearly sales"))
+    .Name("Chart")
+    .Title(title => title.Text("Yearly sales"))
     %>
 
 
@@ -209,8 +209,8 @@ A value indicating whether to show the legend.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Legend(false)
+    .Name("Chart")
+    .Legend(false)
     %>
 
 
@@ -228,8 +228,8 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Legend(legend => legend.Visible(true).Position(ChartLegendPosition.Bottom))
+    .Name("Chart")
+    .Legend(legend => legend.Visible(true).Position(ChartLegendPosition.Bottom))
     %>
 
 
@@ -247,10 +247,10 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Series(series =>
-        {
-            series.Bar(s => s.SalesAmount);
+    .Name("Chart")
+    .Series(series =>
+    {
+        series.Bar(s => s.SalesAmount);
         })
     %>
 
@@ -269,8 +269,8 @@ The configurator.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .SeriesDefaults(series => series.Bar().Stack(true))
+    .Name("Chart")
+    .SeriesDefaults(series => series.Bar().Stack(true))
     %>
 
 
@@ -288,11 +288,11 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .Panes(panes =>
-        {
-            panes.Add("volume");
-        })
+    .Name("Chart")
+    .Panes(panes =>
+    {
+        panes.Add("volume");
+    })
     %>
 
 
@@ -310,8 +310,8 @@ The configurator.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .AxisDefaults(axisDefaults => axisDefaults.MinorTickSize(5))
+    .Name("Chart")
+    .AxisDefaults(axisDefaults => axisDefaults.MinorTickSize(5))
     %>
 
 
@@ -329,9 +329,9 @@ The configurator
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
+    .Name("Chart")
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
         )
     %>
 
@@ -350,8 +350,8 @@ The configurator
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .ValueAxis(a => a.Numeric().TickSize(4))
+    .Name("Chart")
+    .ValueAxis(a => a.Numeric().TickSize(4))
     %>
 
 
@@ -369,8 +369,8 @@ The configurator
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .XAxis(a => a.Numeric().Max(4))
+    .Name("Chart")
+    .XAxis(a => a.Numeric().Max(4))
     %>
 
 
@@ -388,8 +388,8 @@ The configurator
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("Chart")
-        .YAxis(a => a.Numeric().Max(4))
+    .Name("Chart")
+    .YAxis(a => a.Numeric().Max(4))
     %>
 
 
@@ -407,10 +407,10 @@ Use the configurator to set different data binding options.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .DataSource(ds =>
-        {
-            ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
+    .Name("Chart")
+    .DataSource(ds =>
+    {
+        ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
         })
     %>
 
@@ -429,8 +429,8 @@ A list of the series colors.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .SeriesColors(new string[] { "#f00", "#0f0", "#00f" })
+    .Name("Chart")
+    .SeriesColors(new string[] { "#f00", "#0f0", "#00f" })
     %>
 
 
@@ -448,8 +448,8 @@ The series colors.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .SeriesColors("#f00", "#0f0", "#00f")
+    .Name("Chart")
+    .SeriesColors("#f00", "#0f0", "#00f")
     %>
 
 
@@ -467,11 +467,11 @@ Use the configurator to set data tooltip options.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Tooltip(tooltip =>
-        {
-            tooltip.Visible(true).Format("{0:C}");
-        })
+    .Name("Chart")
+    .Tooltip(tooltip =>
+    {
+        tooltip.Visible(true).Format("{0:C}");
+    })
     %>
 
 
@@ -490,8 +490,8 @@ A value indicating if the data point tooltip should be displayed.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Tooltip(true)
+    .Name("Chart")
+    .Tooltip(true)
     %>
 
 
@@ -509,8 +509,8 @@ A value indicating if transition animations should be played.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart()
-        .Name("Chart")
-        .Transitions(false)
+    .Name("Chart")
+    .Transitions(false)
     %>
 
 

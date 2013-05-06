@@ -25,8 +25,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Slider()
-        .Name("Slider")
-        .Tooltip(tooltip => tooltip.Format("{0:P"))
+    .Name("Slider")
+    .Tooltip(tooltip => tooltip.Format("{0:P}"))
     %>
 
 
@@ -44,8 +44,8 @@ The value.
 
 #### Example (ASPX)
     <%= Html.Kendo().Slider()
-        .Name("Slider")
-        .Tooltip(tooltip => tooltip.Enable(false))
+    .Name("Slider")
+    .Tooltip(tooltip => tooltip.Enable(false))
     %>
 
 
@@ -63,8 +63,8 @@ The template.
 
 #### Example (ASPX)
     <%= Html.Kendo().Slider()
-        .Name("Slider")
-        .Tooltip(tooltip => tooltip.template("${value}"))
+    .Name("Slider")
+    .Tooltip(tooltip => tooltip.template("${value}"))
     %>
 
 

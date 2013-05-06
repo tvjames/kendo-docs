@@ -69,11 +69,11 @@ The value at which the first perpendicular axis crosses this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.AxisCrossingValue(4))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.AxisCrossingValue(4))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Double[]`)
@@ -90,11 +90,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.Double>`)
@@ -111,11 +111,11 @@ The values at which perpendicular axes cross this axis.
 
 #### Example (ASPX)
     <%= Html.Kendo().Chart(Model)
-        .Name("Chart")
-        .CategoryAxis(axis => axis.AxisCrossingValue(new double[] { 0, 10 }))
+    .Name("Chart")
+    .CategoryAxis(axis => axis.AxisCrossingValue(new double[] { 0, 10 }))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### Justify(`System.Boolean`)
@@ -161,8 +161,8 @@ The selection range end.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
-        .CategoryAxis(axis => axis.Select(0, 3))
+    .Name("StockChart")
+    .CategoryAxis(axis => axis.Select(0, 3))
     %>
 
 
@@ -180,11 +180,11 @@ The configuration action.
 
 #### Example (ASPX)
     <%= Html.Kendo().StockChart(Model)
-        .Name("StockChart")
-        .CategoryAxis(axis => axis.Select(select =>
-                select.Mousewheel(mw => mw.Reverse())
-            )
-        %>
+    .Name("StockChart")
+    .CategoryAxis(axis => axis.Select(select =>
+        select.Mousewheel(mw => mw.Reverse())
+            ))
+            %>
 
 
 

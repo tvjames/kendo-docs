@@ -29,15 +29,15 @@ The action defining the inline handler.
     <% Html.Kendo().RangeSlider()
         .Name("RangeSlider")
         .Events(events => events.Change(() =>
-            {
-                %>
-                function(e) {
-                //event handling code
+        {
+            %>
+            function(e) {
+            //event handling code
             }
-                <%
+            <%
             }))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Change(`System.String`)
@@ -56,8 +56,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events => events.Change("change"))
+    .Name("RangeSlider")
+    .Events(events => events.Change("change"))
     %>
 
 
@@ -79,15 +79,15 @@ The action defining the inline handler.
     <% Html.Kendo().RangeSlider()
         .Name("RangeSlider")
         .Events(events => events.Slide(() =>
-            {
-                %>
-                function(e) {
-                //event handling code
+        {
+            %>
+            function(e) {
+            //event handling code
             }
-                <%
+            <%
             }))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Slide(`System.String`)
@@ -106,8 +106,8 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     <%= Html.Kendo().RangeSlider()
-        .Name("RangeSlider")
-        .Events(events => events.Slide("slide"))
+    .Name("RangeSlider")
+    .Events(events => events.Slide("slide"))
     %>
 
 

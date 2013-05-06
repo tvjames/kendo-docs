@@ -25,13 +25,13 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Telerik().TreeView()
-        .Name("TreeView")
-        .Items(items =>
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
         {
-            items.Add().Text("First Item").Items(firstItemChildren =>
-            {
-                firstItemChildren.Add().Text("Child Item 1");
-                firstItemChildren.Add().Text("Child Item 2");
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
             });
         })
     %>
@@ -51,8 +51,8 @@ The id.
 
 #### Example (ASPX)
     <%= Html.Telerik().TreeView()
-        .Name("TreeView")
-        .Items(items => items.Add().Id("42"))
+    .Name("TreeView")
+    .Items(items => items.Add().Id("42"))
     %>
 
 
@@ -70,16 +70,16 @@ If true the item will be expanded.
 
 #### Example (ASPX)
     <%= Html.Telerik().TreeView()
-        .Name("TreeView")
-        .Items(items =>
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
         {
-            items.Add().Text("First Item").Items(firstItemChildren =>
-            {
-                firstItemChildren.Add().Text("Child Item 1");
-                firstItemChildren.Add().Text("Child Item 2");
-            })
-            .Expanded(true);
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
         })
+        .Expanded(true);
+    })
     %>
 
 
@@ -97,12 +97,12 @@ If true, the item will be checked.
 
 #### Example (ASPX)
     <%= Html.Telerik().TreeView()
-        .Name("TreeView")
-        .Checkboxes(true)
-        .Items(items =>
-        {
-            items.Add().Text("Item").Checked(true);
-        })
+    .Name("TreeView")
+    .Checkboxes(true)
+    .Items(items =>
+    {
+        items.Add().Text("Item").Checked(true);
+    })
     %>
 
 
@@ -120,16 +120,16 @@ If true then item will be loaded on demand from client side, if the treeview Dat
 
 #### Example (ASPX)
     <%= Html.Telerik().TreeView()
-        .Name("TreeView")
-        .Items(items =>
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
         {
-            items.Add().Text("First Item").Items(firstItemChildren =>
-            {
-                firstItemChildren.Add().Text("Child Item 1");
-                firstItemChildren.Add().Text("Child Item 2");
-            })
-            .HasChildren(true);
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
         })
+        .HasChildren(true);
+    })
     %>
 
 

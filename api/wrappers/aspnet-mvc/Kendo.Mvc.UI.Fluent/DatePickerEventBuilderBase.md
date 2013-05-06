@@ -27,15 +27,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().DatePicker()
-            .Name("DatePicker")
-            .Events(events => events.Change(
-                    @<text>
-                    function(e) {
-                    //event handling code
+        .Name("DatePicker")
+        .Events(events => events.Change(
+            @<text>
+                function(e) {
+                //event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Change(`System.String`)
@@ -54,9 +54,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().DatePicker()
-            .Name("DatePicker")
-            .Events(events => events.Change("change"))
-    )
+        .Name("DatePicker")
+        .Events(events => events.Change("change"))
+        )
 
 
 ### Open(`System.Func<System.Object,System.Object>`)
@@ -75,16 +75,16 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().DatePicker()
-            .Name("DatePicker")
-            .Events(events => events.Open(
-                    @<text>
-                    %>
-                    function(e) {
-                    //event handling code
+        .Name("DatePicker")
+        .Events(events => events.Open(
+            @<text>
+                %>
+                function(e) {
+                //event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Open(`System.String`)
@@ -103,9 +103,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().DatePicker()
-            .Name("DatePicker")
-            .Events(events => events.Open("open"))
-    )
+        .Name("DatePicker")
+        .Events(events => events.Open("open"))
+        )
 
 
 ### Close(`System.Func<System.Object,System.Object>`)
@@ -124,15 +124,15 @@ The handler code wrapped in a text tag (Razor syntax).
 
 #### Example (ASPX)
     @(Html.Kendo().DatePicker()
-            .Name("DatePicker")
-            .Events(events => events.Close(
-                    @<text>
-                    function(e) {
-                    //event handling code
+        .Name("DatePicker")
+        .Events(events => events.Close(
+            @<text>
+                function(e) {
+                //event handling code
                 }
                 </text>
                 ))
-    )
+            )
 
 
 ### Close(`System.String`)
@@ -151,9 +151,9 @@ The name of the JavaScript function that will handle the event.
 
 #### Example (ASPX)
     @(Html.Kendo().DatePicker()
-            .Name("DatePicker")
-            .Events(events => events.Close("close"))
-    )
+        .Name("DatePicker")
+        .Events(events => events.Close("close"))
+        )
 
 
 

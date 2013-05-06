@@ -19,8 +19,8 @@ Enables/disables header column menu.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .ColumnMenu(menu => menu.Enabled((bool)ViewData["enableColumnMenu"]))
+    .Name("Grid")
+    .ColumnMenu(menu => menu.Enabled((bool)ViewData["enableColumnMenu"]))
     %>
 
 
@@ -32,8 +32,8 @@ Enables/disables sort section in header column menu.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .ColumnMenu(menu => menu.Sortable((bool)ViewData["enableSort"]))
+    .Name("Grid")
+    .ColumnMenu(menu => menu.Sortable((bool)ViewData["enableSort"]))
     %>
 
 
@@ -45,8 +45,8 @@ Enables/disables filter section in header column menu.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .ColumnMenu(menu => menu.Filterable((bool)ViewData["enableFilter"]))
+    .Name("Grid")
+    .ColumnMenu(menu => menu.Filterable((bool)ViewData["enableFilter"]))
     %>
 
 
@@ -58,8 +58,8 @@ Enables/disables columns section in header column menu.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .ColumnMenu(menu => menu.Columns((bool)ViewData["enableColumns"]))
+    .Name("Grid")
+    .ColumnMenu(menu => menu.Columns((bool)ViewData["enableColumns"]))
     %>
 
 
@@ -71,9 +71,9 @@ Enables you to define custom messages in grid column menu.
 
 #### Example (ASPX)
     <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .ColumnMenu(menu => menu.Messages(msg => msg.Filter("Custom filter message"))
-        %>
+    .Name("Grid")
+    .ColumnMenu(menu => menu.Messages(msg => msg.Filter("Custom filter message")))
+    %>
 
 
 

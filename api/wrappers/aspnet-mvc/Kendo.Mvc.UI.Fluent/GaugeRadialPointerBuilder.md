@@ -95,9 +95,9 @@ The configuration action.
         .Name("radialGauge")
         .Pointer(pointer => pointer
             .Cap(cap => cap.Color("red"))
-        )
-        .Render();
-    %>
+            )
+            .Render();
+            %>
 
 
 

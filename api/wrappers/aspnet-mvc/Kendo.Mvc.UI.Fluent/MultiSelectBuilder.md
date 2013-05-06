@@ -19,8 +19,8 @@ Controls whether to bind the widget to the DataSource on initialization.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .AutoBind(false)
+    .Name("MultiSelect")
+    .AutoBind(false)
     %>
 
 
@@ -32,9 +32,9 @@ Sets the field of the data item that provides the value content of the list item
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .DataTextField("Text")
-        .DataValueField("Value")
+    .Name("MultiSelect")
+    .DataTextField("Text")
+    .DataValueField("Value")
     %>
 
 
@@ -52,10 +52,10 @@ The client events action.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .Events(events =>
-            events.Change("change")
-        )
+    .Name("MultiSelect")
+    .Events(events =>
+        events.Change("change")
+    )
     %>
 
 
@@ -67,8 +67,8 @@ Use it to enable filtering of items.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .Filter("startswith");
+    .Name("MultiSelect")
+    .Filter("startswith");
     %>
 
 
@@ -80,8 +80,8 @@ Use it to enable filtering of items.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .Filter(FilterType.Contains);
+    .Name("MultiSelect")
+    .Filter(FilterType.Contains);
     %>
 
 
@@ -99,12 +99,12 @@ The add action.
 
 #### Example (ASPX)
     <%= Html.Telerik().MultiSelect()
-        .Name("MultiSelect")
-        .Items(items =>
-        {
-            items.Add().Text("First Item");
-            items.Add().Text("Second Item");
-        })
+    .Name("MultiSelect")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
     %>
 
 
@@ -116,8 +116,8 @@ Use it to enable highlighting of first matched item.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .HighlightFirst(true)
+    .Name("MultiSelect")
+    .HighlightFirst(true)
     %>
 
 
@@ -129,8 +129,8 @@ Specifies the minimum number of characters that should be typed before the widge
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .MinLength(3)
+    .Name("MultiSelect")
+    .MinLength(3)
     %>
 
 
@@ -142,8 +142,8 @@ A string that appears in the textbox when it has no value.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .Placeholder("Select country...")
+    .Name("MultiSelect")
+    .Placeholder("Select country...")
     %>
 
 
@@ -155,8 +155,8 @@ Template to be used for rendering the items in the list.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .ItemTemplate("#= data #")
+    .Name("MultiSelect")
+    .ItemTemplate("#= data #")
     %>
 
 
@@ -168,8 +168,8 @@ TemplateId to be used for rendering the items in the list.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .ItemTemplateId("widgetTemplateId")
+    .Name("MultiSelect")
+    .ItemTemplateId("widgetTemplateId")
     %>
 
 
@@ -181,8 +181,8 @@ Template to be used for rendering the tags of the selected items.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .TagTemplate("#= data #")
+    .Name("MultiSelect")
+    .TagTemplate("#= data #")
     %>
 
 
@@ -194,8 +194,8 @@ TemplateId to be used for rendering the tags of the selected items.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .TagTemplateId("widgetTemplateId")
+    .Name("MultiSelect")
+    .TagTemplateId("widgetTemplateId")
     %>
 
 
@@ -207,8 +207,8 @@ Sets the value of the widget.
 
 #### Example (ASPX)
     <%= Html.Kendo().MultiSelect()
-        .Name("MultiSelect")
-        .Value(new string[] { "1" })
+    .Name("MultiSelect")
+    .Value(new string[] { "1" })
     %>
 
 
