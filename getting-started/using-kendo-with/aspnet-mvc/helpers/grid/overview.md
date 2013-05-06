@@ -1,6 +1,6 @@
 ---
 title: Overview
-meta_title: How to use the Grid HtmlHelper extension, server-side wrapper for Kendo UI Grid widget
+meta_title: How to use the Kendo UI Grid HtmlHelper extension, server-side ASP.NET MVC wrapper for Kendo UI Grid widget
 meta_description: Learn how to bind Kendo UI Grid for ASP.NET MVC, handle Kendo UI Grid Events, access an existing grid with Grid HtmlHelper extension documentation.
 slug: mvc-grid-overview
 publish: true
@@ -8,62 +8,81 @@ publish: true
 
 # Grid
 
-The Grid HtmlHelper extension is a server-side wrapper for the [Kendo UI Grid](http://docs.kendoui.com/api/web/grid) widget.
+The Grid HtmlHelper extension is a server-side wrapper for the [Kendo UI Grid](http://docs.kendoui.com/api/web/grid) widget. It allows you to configure the Kendo UI grid
+from server-side code, helps with data binding and editing.
 
-## Getting Started
+## Introduction
 
-There are two ways to bind a Kendo Grid for ASP.NET MVC:
+Kendo UI Grid for ASP.NET MVC supports two ways of data-binding:
 
-*   [server ](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/server-binding)- the grid will make HTTP GET requests when binding
-*   [ajax ](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/ajax-binding)- the grid will make ajax requests when binding
+*   [server](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/server-binding)- the widget makes HTTP GET requests when binding
+*   [ajax](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/ajax-binding)- the widget will make ajax requests when binding
 
-Here is how to configure the Kendo Grid for server binding to the Northwind Products table using Linq to SQL:
+Here are some of the differences between server and ajax bound modes:
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+*  Templates
+    - In server-bound mode the grid templates use server-side expressions and .NET code (C# or Visual Basic). Templates are executed server-side.
+    - In ajax-bound mode the grid uses Kendo UI Templates. Templates are executed client-side and use JavaScript.
 
-2.  Create a new action method and pass the Products table as the model:
+*  Full page updates
+    - In server-bound mode the grid makes HTTP get requests to ASP.NET MVC action methods which cause a full page refresh.
+    - In ajax-bound mode the grid makes ajax requests which cause partial page update. The grid retrieves only the data needed for the current page.
+
+## Getting started
+
+The following tutorial shows how to configure Kendo UI Grid for ASP.NET MVC to do server binding to the Northwind database (the Products table).
+
+1.  Create a new ASP.NET MVC 4 application (or Kendo UI ASP.NET MVC application if you have installed the Kendo UI Visual Studio Extensions). Name the application "KendoGridServerBinding".
+If you decided not to use the Kendo UI Visual Studio Extensions followe the steps from the [introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic in order
+to add Kendo UI Complete for ASP.NET MVC to the application.
+1.  Add a new Entity Framework Data Model. Right click the Models folder in solution explorer and pick "Add new item". Choose Data->ADO.NET Entity Data Model in the "Add New Item" dialog.
+Name the model "Northwind.edmx" and click "Next". This will start the "Entity Data Model Wizard".
+1.  Pick the "Generate from database" option and click "Next". Configure a connection to the Northwind database. Click "Next".
+1.  Choose the "Products" table from the "Which database objects do you want to include in your model?". Leave all other options as they are set by default. Click "Finish". Your model is created!
+1.  Open "HomeController.cs" and modify the `Index` action method:
 
         public ActionResult Index()
         {
-            NorthwindDataContext northwind = new NorthwindDataContext();
-
-            return View(northwind.Products);
+            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            var northwind = new NorthwindEntities();
+            // Get the Products entities and add them in the ViewBag
+            ViewBag.Products = northwind.Products;
+            return View();
         }
-3.  Make your view strongly typed:
-    - WebForms
+1.  Add a Kendo UI Grid to the Index view
+    - Index.aspx (ASPX)
 
-            <%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master"
-               Inherits="System.Web.Mvc.ViewPage<IEnumerable<MvcApplication1.Models.Product>>" %>
-    - Razor
-
-            @model IEnumerable<MvcApplication1.Models.Product>
-4.  Add a server bound grid:
-    - WebForms
-
-            <%: Html.Kendo().Grid(Model)         //The grid will be bound to the Model which is the Products table
-                    .Name("productGrid") //The name of the grid is mandatory. It specifies the "id" attribute of the widget.
+            <%: Html.Kendo().Grid((IEnumerable<KendoGridServerBinding.Models.Product>)ViewBag.Products) //Bind the grid to ViewBag.Products
+                    .Name("grid")
                     .Columns(columns =>
                     {
-                        columns.Bound(p => p.ProductID);   //Create a column bound to the "ProductID" property
-                        columns.Bound(p => p.ProductName); //Create a column bound to the "ProductName" property
-                        columns.Bound(p => p.UnitPrice);   //Create a column bound to the "UnitPrice" property
-                        columns.Bound(p => p.UnitsInStock);//Create a column bound to the "UnitsInStock" property
+                        // Create a column bound to the ProductID property
+                        columns.Bound(product => product.ProductID);
+                        // Create a column bound to the ProductName property
+                        columns.Bound(product => product.ProductName);
+                        // Create a column bound to the UnitsInStock property
+                        columns.Bound(product => product.UnitsInStock);
                     })
-                    .Pageable() //Enable paging
+                    .Pageable() // Enable paging
+                    .Sortable() // Enable sorting
             %>
-    - Razor
+    - Index.cshtml (Razor)
 
-            @(Html.Kendo().Grid(Model)            //The grid will be bound to the Model which is the Products table
-                  .Name("productGrid") //The name of the grid is mandatory. It specifies the "id" attribute of the widget.
+            @(Html.Kendo().Grid((IEnumerable<KendoGridServerBinding.Models.Product>)ViewBag.Products) //Bind the grid to ViewBag.Products
+                  .Name("grid")
                   .Columns(columns =>
                   {
-                      columns.Bound(p => p.ProductID);   //Create a column bound to the "ProductID" property
-                      columns.Bound(p => p.ProductName); //Create a column bound to the "ProductName" property
-                      columns.Bound(p => p.UnitPrice);   //Create a column bound to the "UnitPrice" property
-                      columns.Bound(p => p.UnitsInStock);//Create a column bound to the "UnitsInStock" property
+                      // Create a column bound to the ProductID property
+                      columns.Bound(product => product.ProductID);
+                      // Create a column bound to the ProductName property
+                      columns.Bound(product => product.ProductName);
+                      // Create a column bound to the UnitsInStock property
+                      columns.Bound(product => product.UnitsInStock);
                   })
-                 .Pageable() //Enable paging
+                  .Pageable() // Enable paging
+                  .Sortable() // Enable sorting
             )
+1. Build and run the application
 
 ## Accessing an Existing Grid
 
