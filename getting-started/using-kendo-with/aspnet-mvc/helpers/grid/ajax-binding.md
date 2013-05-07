@@ -60,7 +60,7 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
             return Json(result);
         }
 5.  In the view configure the grid to use the action method created in the previous steps.
-    - WebForms
+    - Index.aspx (ASPX)
 
             <%: Html.Kendo().Grid<KendoGridAjaxBinding.Models.Product>()
                   .Name("grid")
