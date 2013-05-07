@@ -36,9 +36,12 @@ The following tutorial shows how to configure Kendo UI Grid for ASP.NET MVC to d
 If you decided not to use the Kendo UI Visual Studio Extensions followe the steps from the [introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic in order
 to add Kendo UI Complete for ASP.NET MVC to the application.
 1.  Add a new Entity Framework Data Model. Right click the Models folder in solution explorer and pick "Add new item". Choose Data->ADO.NET Entity Data Model in the "Add New Item" dialog.
-Name the model "Northwind.edmx" and click "Next". This will start the "Entity Data Model Wizard".![New entity data model](images/entity-data-model.png)
-1.  Pick the "Generate from database" option and click "Next". Configure a connection to the Northwind database. Click "Next". ![Choose the connection](images/entity-data-model.png)
-1.  Choose the "Products" table from the "Which database objects do you want to include in your model?". Leave all other options as they are set by default. Click "Finish". Your model is created. ![Choose the Products table](images/database-objects.png)
+Name the model "Northwind.edmx" and click "Next". This will start the "Entity Data Model Wizard".
+![New entity data model](images/entity-data-model.png)
+1.  Pick the "Generate from database" option and click "Next". Configure a connection to the Northwind database. Click "Next".
+![Choose the connection](images/entity-data-model.png)
+1.  Choose the "Products" table from the "Which database objects do you want to include in your model?". Leave all other options as they are set by default. Click "Finish". Your model is created!
+![Choose the Products table](images/database-objects.png)
 1.  Open "HomeController.cs" and modify the `Index` action method:
 
         public ActionResult Index()
@@ -82,7 +85,8 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
                   .Pageable() // Enable paging
                   .Sortable() // Enable sorting
             )
-1. Build and run the application ![Final result](images/final-server-bound-grid.png)
+1. Build and run the application
+![Final result](images/final-server-bound-grid.png)
 
 ## Accessing an Existing Grid
 
