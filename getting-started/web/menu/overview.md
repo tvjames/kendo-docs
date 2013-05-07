@@ -108,7 +108,7 @@ placement in the hierarchy.
 A reference item is simply a target Menu Item HTML element that
 already exists in the Menu. Any valid jQuery selector can be used to
 obtain a reference to the target item. For examples, see the
-[Menu API demos](../menu/api.html "Menu API demos").
+[Menu API demos](http://demos.kendoui.com/web/menu/api.html).
 Removing an item only requires a reference to the target element that
 should be removed.
 
