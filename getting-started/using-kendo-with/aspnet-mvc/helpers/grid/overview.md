@@ -33,10 +33,10 @@ Here are some of the differences between server and ajax bound modes:
 
 The following tutorial shows how to configure Kendo UI Grid for ASP.NET MVC to do server binding to the Northwind database (the Products table).
 
-1.  Create a new ASP.NET MVC 4 application (or Kendo UI ASP.NET MVC application if you have installed the Kendo UI Visual Studio Extensions). Name the application "KendoGridServerBinding".
+1.  Create a new ASP.NET MVC 4 application (or Kendo UI ASP.NET MVC application if you have installed the [Kendo UI Visual Studio Extensions](/getting-started/using-kendo-with/aspnet-mvc/introduction#kendo-ui-for-asp.net-mvc-visual-studio-extensions)). Name the application "KendoGridServerBinding".
 If you decided not to use the Kendo UI Visual Studio Extensions followe the steps from the [introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic in order
 to add Kendo UI Complete for ASP.NET MVC to the application.
-1.  Add a new Entity Framework Data Model. Right click the Models folder in solution explorer and pick "Add new item". Choose Data->ADO.NET Entity Data Model in the "Add New Item" dialog.
+1.  Add a new "Entity Framework Data Model". Right click the `~/Models` folder in the solution explorer and pick "Add new item". Choose "Data->ADO.NET Entity Data Model" in the "Add New Item" dialog.
 Name the model "Northwind.edmx" and click "Next". This will start the "Entity Data Model Wizard".
 ![New entity data model](images/entity-data-model.png)
 1.  Pick the "Generate from database" option and click "Next". Configure a connection to the Northwind database. Click "Next".
@@ -89,87 +89,95 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
 1. Build and run the application
 ![Final result](images/final-server-bound-grid.png)
 
-## Accessing an Existing Grid
+## Getting reference to the Kendo UI Grid widget
 
-You can reference an existing Grid instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/grid#methods) to control its behavior.
+To get a reference to a grid instance use the [jQuery.data()](http://api.jquery.com/jQuery.data/) method and the value specified via the `Name()` method.
+Then you can use you can use the JavaScript [API](/api/web/grid#methods) of the grid.
 
-### Accessing an existing Grid instance
+### Example - get reference to a Kendo UI Grid instance
 
-    //Put this after your Kendo Grid for ASP.NET MVC declaration
+    @(Html.Kendo().Grid((IEnumerable<KendoGridServerBinding.Models.Product>)ViewBag.Products)
+          .Name("grid")
+          .Columns(columns =>
+          {
+              columns.Bound(product => product.ProductID);
+              columns.Bound(product => product.ProductName);
+              columns.Bound(product => product.UnitsInStock);
+          })
+    )
     <script>
     $(function() {
         // Notice that the Name() of the grid is used to get its client-side instance
-        var grid = $("#productGrid").data("kendoGrid");
+        var grid = $("#grid").data("kendoGrid");
     });
     </script>
 
 
 ## Handling Kendo UI Grid events
 
-You can subscribe to all [events](http://docs.kendoui.com/api/web/grid#events) exposed by Kendo UI grid:
+You can subscribe to all [events](/api/web/grid#events) exposed by the widget:
 
-
-### WebForms - subscribe by handler name
+### Example - subscribe to event by handler name (ASPX)
 
     <%: Html.Kendo().Grid(Model)
-            .Name("productGrid")
+            .Name("grid")
             .Events(e => e
-                .DataBound("productGrid_dataBound")
-                .Change("productGrid_change")
+                .DataBound("grid_dataBound")
+                .Change("grid_change")
             )
     %>
     <script>
-    function productGrid_dataBound() {
+    function grid_dataBound() {
         //Handle the dataBound event
     }
 
-    function productGrid_change() {
+    function grid_change() {
         //Handle the change event
     }
     </script>
 
 
-### Razor - subscribe by handler name
+### Example - subscribe to event by handler name (Razor)
 
     @(Html.Kendo().Grid(Model)
-          .Name("productGrid")
+          .Name("grid")
           .Events(e => e
-              .DataBound("productGrid_dataBound")
-              .Change("productGrid_change")
+              .DataBound("grid_dataBound")
+              .Change("grid_change")
           )
     )
     <script>
-    function productGrid_dataBound() {
+    function grid_dataBound() {
         //Handle the dataBound event
     }
 
-    function productGrid_change() {
+    function grid_change() {
         //Handle the change event
     }
     </script>
 
 
-### Razor - subscribe by template delegate
+### Example - subscribe to event via Razor delegate
 
     @(Html.Kendo().Grid(Model)
-          .Name("productGrid")
+          .Name("grid")
           .Events(e => e
               .DataBound(@<text>
-                function() {
-                    //Handle the dataBound event inline
-                }
+                  function() {
+                      //Handle the dataBound event inline
+                  }
               </text>)
               .Change(@<text>
-                function() {
-                    //Handle the change event inline
-                }
-                </text>)
+                  function() {
+                      //Handle the change event inline
+                  }
+              </text>)
           )
     )
 
 ## Further reading
 
+1. [API reference](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridBuilder)
 1. [Configuration](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/configuration)
 1. [FAQ](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/faq)
 1. [Ajax Binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/ajax-binding)
