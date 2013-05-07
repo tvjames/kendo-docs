@@ -28,9 +28,9 @@ The track color.
         .Name("linearGauge")
         .Pointer(pointer => pointer
             .Track(track => track.Color("red"))
-            )
-            .Render();
-            %>
+        )
+        .Render();
+    %>
 
 
 ### Size(`System.Double`)
@@ -50,9 +50,9 @@ The track size.
         .Name("linearGauge")
         .Pointer(pointer => pointer
             .Track(track => track.Size(8))
-            )
-            .Render();
-            %>
+        )
+        .Render();
+    %>
 
 
 ### Visible(`System.Boolean`)
@@ -72,9 +72,9 @@ The track visibility.
         .Name("linearGauge")
         .Pointer(pointer => pointer
             .Track(track => track.Visible(true))
-            )
-            .Render();
-            %>
+        )
+        .Render();
+    %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -100,9 +100,9 @@ The pointer dash type.
         .Name("linearGauge")
         .Pointer(pointer => pointer
             .Track(track => track.Border(1, "#000", ChartDashType.Dot))
-            )
-            .Render();
-            %>
+        )
+        .Render();
+    %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)

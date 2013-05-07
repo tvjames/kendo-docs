@@ -67,12 +67,12 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Line(s => s.Sales)
-            .Labels(labels => labels
-                .Position(ChartBarLabelsPosition.Above)
-                .Visible(true)
-                );
-            )
-            %>
+        .Labels(labels => labels
+            .Position(ChartBarLabelsPosition.Above)
+            .Visible(true)
+            );
+        )
+    %>
 
 
 ### Labels(`System.Boolean`)
@@ -92,8 +92,8 @@ The visibility. The default value is false.
     .Name("Chart")
     .Series(series => series
         .Line(s => s.Sales)
-            .Labels(true);
-        )
+        .Labels(true);
+    )
     %>
 
 
@@ -113,8 +113,8 @@ The line width.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Line(s => s.Sales).Width(2))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### DashType(`Kendo.Mvc.UI.ChartDashType`)
@@ -133,8 +133,8 @@ The line dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Line(s => s.Sales).DashType(ChartDashType.Dot))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
@@ -154,11 +154,11 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Line(s => s.Sales)
-            .Markers(markers => markers
-                .Type(ChartMarkerShape.Triangle)
-                );
-            )
-            %>
+        .Markers(markers => markers
+            .Type(ChartMarkerShape.Triangle)
+            );
+        )
+    %>
 
 
 ### Markers(`System.Boolean`)
@@ -178,8 +178,8 @@ The visibility. The default value is true.
     .Name("Chart")
     .Series(series => series
         .Line(s => s.Sales)
-            .Markers(true);
-        )
+        .Markers(true);
+    )
     %>
 
 
@@ -200,8 +200,8 @@ The missing values behavior. The default is to leave gaps.
     .Name("Chart")
     .Series(series => series
         .Line(s => s.Sales)
-            .MissingValues(ChartLineMissingValues.Interpolate);
-        )
+        .MissingValues(ChartLineMissingValues.Interpolate);
+    )
     %>
 
 

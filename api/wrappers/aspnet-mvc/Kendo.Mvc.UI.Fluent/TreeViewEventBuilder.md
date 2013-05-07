@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Collapse(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Collapse(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.DataBound(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### DataBound(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Drag(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Drag(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.DragEnd(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### DragEnd(`System.String`)
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.DragStart(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### DragStart(`System.String`)
@@ -274,14 +274,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Drop(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Drop(`System.String`)
@@ -323,14 +323,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Expand(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Expand(`System.String`)
@@ -372,14 +372,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Select(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Select(`System.String`)
@@ -421,14 +421,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TreeView()
         .Name("TreeView")
         .Events(events => events.Change(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Change(`System.String`)

@@ -28,13 +28,13 @@ The labels align.
         .Name("Chart")
         .Series(series => series
             .Pie(p => p.Sales)
-                .Labels(labels => labels
-                    .Align(ChartPieLabelsAlign.Column)
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Align(ChartPieLabelsAlign.Column)
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Distance(`System.Int32`)
@@ -54,13 +54,13 @@ The labels distance.
         .Name("Chart")
         .Series(series => series
             .Pie(p => p.Sales)
-                .Labels(labels => labels
-                    .Distance(20)
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Distance(20)
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Position(`Kendo.Mvc.UI.ChartPieLabelsPosition`)
@@ -80,13 +80,13 @@ The labels position.
         .Name("Chart")
         .Series(series => series
             .Pie(p => p.Sales)
-                .Labels(labels => labels
-                    .Position(ChartPieLabelsPosition.Center)
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Position(ChartPieLabelsPosition.Center)
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 

@@ -271,14 +271,14 @@ The action which will configure the mappings
     .BindTo(Model, mapping => mapping
         .For<Customer>(binding => binding
             .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
-                .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to TreeViewItem properties
-                )
-                .For<Order<(binding => binding
-                    .Children(o => null) // "Orders" do not have child objects so return "null"
-                        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to TreeViewItem properties
-                        )
-                    )
-                    %>
+            .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to TreeViewItem properties
+        )
+        .For<Order<(binding => binding
+            .Children(o => null) // "Orders" do not have child objects so return "null"
+            .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to TreeViewItem properties
+        )
+    )
+    %>
 
 
 ### ItemAction(`System.Action<Kendo.Mvc.UI.TreeViewItem>`)

@@ -30,11 +30,11 @@ The border color (CSS format).
         .Series(series =>
         {
             series.Bar(s => s.SalesAmount);
-            })
-            .Hint(hint => hint
-                .Format("{0:d} | {1:d}")
-            )
+        })
+        .Hint(hint => hint
+            .Format("{0:d} | {1:d}")
         )
+    )
     %>
 
 
@@ -57,11 +57,11 @@ The border opacity (CSS format).
         .Series(series =>
         {
             series.Bar(s => s.SalesAmount);
-            })
-            .Hint(hint => hint
-                .Template("From: #= from # To: #= to #")
-            )
+        })
+        .Hint(hint => hint
+            .Template("From: #= from # To: #= to #")
         )
+    )
     %>
 
 
@@ -84,11 +84,11 @@ The hint visibility.
         .Series(series =>
         {
             series.Bar(s => s.SalesAmount);
-            })
-            .Hint(hint => hint
-                .Visible(false)
-            )
+        })
+        .Hint(hint => hint
+            .Visible(false)
         )
+    )
     %>
 
 

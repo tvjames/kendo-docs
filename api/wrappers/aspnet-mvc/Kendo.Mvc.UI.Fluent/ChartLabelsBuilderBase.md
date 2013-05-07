@@ -28,13 +28,13 @@ The labels font (CSS format).
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Font("14px Arial,Helvetica,sans-serif")
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Font("14px Arial,Helvetica,sans-serif")
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Visible(`System.Boolean`)
@@ -54,12 +54,12 @@ The labels visibility.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Background(`System.String`)
@@ -79,13 +79,13 @@ The labels background color.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Background("Red")
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Background("Red")
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Color(`System.String`)
@@ -105,13 +105,13 @@ The labels text color.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Color("Red")
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Color("Red")
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -140,13 +140,13 @@ The labels left margin.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Margin(0, 5, 5, 0)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Margin(0, 5, 5, 0)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32`)
@@ -166,13 +166,13 @@ The labels margin.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Margin(20)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Margin(20)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -201,13 +201,13 @@ The labels left padding.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Padding(0, 5, 5, 0)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Padding(0, 5, 5, 0)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Padding(`System.Int32`)
@@ -227,13 +227,13 @@ The labels padding.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Padding(20)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Padding(20)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -259,13 +259,13 @@ The labels border dash type.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Border(1, "Red", ChartDashType.Dot)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Border(1, "Red", ChartDashType.Dot)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -298,13 +298,13 @@ The labels format.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Format("{0:C}")
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Format("{0:C}")
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Template(`System.String`)
@@ -324,13 +324,13 @@ The labels template.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Template("${TotalSales}")
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Template("${TotalSales}")
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Opacity(`System.Double`)
@@ -351,13 +351,13 @@ The series opacity in the range from 0 (transparent) to 1 (opaque).
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Opacity(0.5)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Opacity(0.5)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 ### Rotation(`System.Int32`)
@@ -377,13 +377,13 @@ The labels text rotation.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-                .Labels(labels => labels
-                    .Rotation(45)
-                    .Visible(true);
-                    );
-                )
-                .Render();
-                %>
+            .Labels(labels => labels
+                .Rotation(45)
+                .Visible(true);
+                );
+            )
+            .Render();
+            %>
 
 
 

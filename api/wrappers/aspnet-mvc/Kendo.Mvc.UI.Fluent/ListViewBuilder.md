@@ -78,7 +78,7 @@ Allows paging of the data.
     <%= Html.Kendo().ListView()
     .Name("ListView")
     .Ajax(ajax => ajax.Action("Orders", "ListView"))
-        .Pageable();
+    .Pageable();
     %>
 
 
@@ -98,8 +98,8 @@ Use builder to define paging settings.
     <%= Html.Kendo().ListView()
     .Name("Grid")
     .Ajax(ajax => ajax.Action("Orders", "ListView"))
-        .Pageable(paging => paging.Enabled(true))
-            %>
+    .Pageable(paging => paging.Enabled(true))
+    %>
 
 
 ### Navigatable
@@ -112,7 +112,7 @@ Enables keyboard navigation.
     <%= Html.Kendo().ListView()
     .Name("ListView")
     .Ajax(ajax => ajax.Action("Orders", "ListView"))
-        .Navigatable();
+    .Navigatable();
     %>
 
 

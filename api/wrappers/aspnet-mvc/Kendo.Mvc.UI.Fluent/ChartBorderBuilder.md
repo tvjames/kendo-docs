@@ -27,8 +27,8 @@ The border color (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .ChartArea(chartArea => chartArea.Border(border => border.Color("#f00")))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Opacity(`System.Double`)
@@ -47,8 +47,8 @@ The border opacity (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .ChartArea(chartArea => chartArea.Border(border => border.Opacity(0.2)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Width(`System.Int32`)
@@ -67,8 +67,8 @@ The border width.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .ChartArea(chartArea => chartArea.Border(border => border.Width(2)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### DashType(`Kendo.Mvc.UI.ChartDashType`)
@@ -87,8 +87,8 @@ The border dashType.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .ChartArea(chartArea => chartArea.Border(border => border.DashType(ChartDashType.Dot)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 
