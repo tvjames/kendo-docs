@@ -26,14 +26,14 @@ You can attach your handler to the Button's own click event.
 
 A: Android has severe problems with input elements, especially when mixed with CSS3 transforms (which our mobile scroller uses for faster animation).
 WP8 on the other hand switches off transforms when an input element is focused, thus stopping any scrolling and resetting the scroller to top.
-Check the [Forms](./getting-started/mobile/forms) article for more information about both. To avoid these issues, refer to View's [useNativeScroller](./api/mobile/view#configuration-useNativeScrolling)
-config option or Scroller's [useNative](./api/mobile/scroller#configuration-useNative) option (available since Q1 2013).
+Check the [Forms](./mobile/forms) article for more information about both. To avoid these issues, refer to View's [useNativeScroller](../api/mobile/view#configuration-useNativeScrolling)
+config option or Scroller's [useNative](../api/mobile/scroller#configuration-useNative) option (available since Q1 2013).
 
 ### Q: My application looks different in all platforms, why is that?
 
 A: Kendo UI Mobile strives to achieve native-like styling for the different platforms, hence the styling is completely different and tries to match the current device
 styling automatically. If you want to have the same styling on all devices, choose the one you want and force it
-through the Application [platform](./getting-started/mobile/application#force-ios-5-look) option.
+through the Application [platform](./mobile/application#force-ios-5-look) option.
 
 ### Q: I defined a layout for each View, but it disappears after the user navigates, why is that?
 
@@ -50,7 +50,7 @@ A: This can happen when the mobile widget is initialized multiple times. A commo
 
 A: Kendo UI Mobile tries to match the native look of several iOS platform versions and devices. Thus some widgets look slightly different on iOS 5 versus iOS 6.
 Additionally tablet and phone styling is slightly different too. If you want to have the same styling on all iOS devices, choose the one you want and force it
-through the Application [platform](./getting-started/mobile/application#force-ios-5-look) option.
+through the Application [platform](./mobile/application#force-ios-5-look) option.
 
 ## Android
 
@@ -62,7 +62,7 @@ A: WebKit mask icons break in Android when mixed with CSS3 transforms which our 
 
 A: The rendering hardware acceleration that Android 4.0 has does indeed perform much better than Android 2.x for View transitions, but the preparation of the hardware accelerated
 layer that runs the animation takes considerable time. Your application will actually be much more responsive if you disable the hardware acceleration from the manifest file.
-Check the [Performance](./getting-started/mobile/performance) article for more information about that.
+Check the [Performance](./mobile/performance) article for more information about that.
 
 ### Q: I have some inputs with type date and time. When I test on Jelly Bean, I can see date/time pickers in the browser, but they don't work in PhoneGap, why so?
 
