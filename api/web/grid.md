@@ -5526,7 +5526,7 @@ The widget instance which fired the event.
 
 ##### e.values `Object`
 
-The values entered by the user.
+The values entered by the user. **Availabe only when the [editable.mode](#configuration-editable.mode) option is set to "incell".**
 
 #### Example - subscribe to the "save" event during initialization
     <div id="grid"></div>
