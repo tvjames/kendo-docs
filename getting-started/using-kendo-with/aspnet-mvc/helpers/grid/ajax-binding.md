@@ -28,7 +28,7 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
 ![New entity data model](images/entity-data-model.png)
 1.  Pick the "Generate from database" option and click "Next". Configure a connection to the Northwind database. Click "Next".
 ![Choose the connection](images/entity-data-model.png)
-1.  Choose the "Products" table from the "Which database objects do you want to include in your model?". Leave all other options as they are set by default. Click "Finish". Your model is created!
+1.  Choose the "Products" table from the "Which database objects do you want to include in your model?". Leave all other options as they are set by default. Click "Finish".
 ![Choose the Products table](images/database-objects.png)
 1.  Open HomeController.cs and add a new action method which will return the Products as JSON. The grid will make ajax requests to this action.
 
@@ -36,7 +36,7 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
         {
         }
 1.  Add a new parameter of type `Kendo.Mvc.UI.DataSourceRequest` to the action. This parameter will contain the current grid request information - page, sort, group and filter.
-Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That attribute will populate the `DataSourceRequest` object from the posted data. You need to import the `Kendo.UI` namespace.
+Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That attribute will populate the `DataSourceRequest` object from the posted data. You need to import the `Kendo.Mvc.UI` namespace.
 
         public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
         {
