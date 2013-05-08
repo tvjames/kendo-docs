@@ -88,7 +88,8 @@ To achieve complex layouts, the **Splitter** supports nested layouts.
     $("#verticalSplitter").kendoSplitter({ orientation: "vertical" });
 
 > Using the same DIV element for a Splitter pane and for a nested Splitter is not recommended.
-Nested Splitters will be sized automatically to match the parent pane's height only if the nested Splitter is a direct child of the parent pane.
+Nested Splitters will be sized automatically to match the parent pane's height if the nested Splitter has 100% width and height styles.
+We recommend using a nested Splitter, which is a direct child of the parent Splitter's pane.
 
 ## Loading Content with AJAX
 
