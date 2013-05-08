@@ -158,12 +158,3 @@ can use the API to control its behavior.
 ### Accessing an existing ComboBox instance
 
     var comboBox = $("#comboBox").data("kendoComboBox");
-
-## Modifying widget's popup
-The **popup** property holds the Popup object of the widget.
-
-### Set width of the popup element
-
-    var comboBox = $("#comboBox").data("kendoComboBox");
-
-    comboBox.popup.element.width(400); //width of the popup element will be 400px

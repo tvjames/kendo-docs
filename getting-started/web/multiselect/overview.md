@@ -198,12 +198,3 @@ can use the API to control its behavior.
 ### Accessing an existing MultiSelect instance
 
     var multiselect = $("#multiselect").data("kendoMultiSelect");
-
-## Modifying widget's popup
-The **popup** property holds the Popup object of the widget.
-
-### Set width of the popup element
-
-    var multiselect = $("#multiselect").data("kendoMultiSelect");
-
-    multiselect.popup.element.width(400); //width of the popup element will be 400px
