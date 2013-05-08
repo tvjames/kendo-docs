@@ -178,7 +178,6 @@ detailed description of the capabilities and syntax of the Kendo UI templates, p
 
 ## Customizing the width of the drop-down list
 
-
 Width of MultiSelect' drop-down list can be changed via jQuery width method.
 
 ### Example
@@ -187,6 +186,37 @@ Width of MultiSelect' drop-down list can be changed via jQuery width method.
 
     // set width of the drop-down list
     multiselect.list.width(400);
+
+## Pre-select values on initial loading
+
+When deffered binding (autoBind: false) is used you will need to specify a list of data items instead of just list of strings.
+This functionality is supported in Q1 SP1 2013 release and newer.
+
+    <!-- MultiSelect initialization -->
+    <script>
+        $(document).ready(function() {
+            $("#multiselect").kendoMultiSelect({
+                autoBind: false,
+                dataTextField: "Name",
+                dataValueField: "Id",
+                dataSource: {
+                    type: "odata",
+                    serverFiltering: true,
+                    transport: {
+                        read: {
+                            url: "http://demos.kendoui.com/service/Northwind.svc/Products",
+                        }
+                    }
+                },
+                value: [
+                    { ProductName: "Chang", ProductID: 2 },
+                    { ProductName: "Uncle Bob's Organic Dried Pears", ProductID: 7 }
+                ]
+            });
+        });
+    </script>
+
+> Please note that you will need to use a list of strings if the **autoBind** option is set to **true**.
 
 ## Accessing an Existing MultiSelect
 
