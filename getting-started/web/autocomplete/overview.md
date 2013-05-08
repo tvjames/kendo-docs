@@ -27,6 +27,17 @@ the **AutoComplete** can come from a local Array or from a remote data service.
      $("#autoComplete").kendoAutoComplete(["Item1", "Item2"]);
     });
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
+
+    <input id="autoComplete" class="myClass" />
+
+    results to:
+
+    <span class="k-widget k-autocomplete k-header k-state-default myClass">
+        <input id="autoComplete" class="myClass" />
+    </span>
+
+
 ## AutoComplete Suggestions
 
 
