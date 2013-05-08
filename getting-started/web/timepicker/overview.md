@@ -30,6 +30,7 @@ interval between predefined values in the list.
 When a **TimePicker** is initialized, it will automatically be displayed near the location of the
 used HTML element.
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
 
 ## Configuring TimePicker Behaviors
 

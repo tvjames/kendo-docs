@@ -35,6 +35,8 @@ Initialization of a **MultiSelect** should occur after the DOM is fully loaded. 
 that initialization the **MultiSelect** occur within a handler is provided to
 $(document).ready().
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element and visible input.
+
 ### Initialize a MultiSelect using a selector within $(document).ready()
 
     $(document).ready(function(){

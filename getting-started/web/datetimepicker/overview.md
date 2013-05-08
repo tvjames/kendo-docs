@@ -32,6 +32,7 @@ of the calendar, start view and the depth of the navigation.
 When a **DateTimePicker** is initialized, it will be displayed at the
 location of the target HTML element.
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
 
 ## Configuring DateTimePicker Behaviors
 

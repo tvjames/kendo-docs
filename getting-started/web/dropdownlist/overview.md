@@ -35,6 +35,8 @@ Initialization of a **DropDownList** should occur after the DOM is fully loaded.
 that initialization the **DropDownList** occur within a handler is provided to
 $(document).ready().
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
+
 ### Initialize a DropDownList using a selector within $(document).ready()
 
     $(document).ready(function() {

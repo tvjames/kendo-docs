@@ -37,6 +37,8 @@ Initialization of a **ComboBox** should occur after the DOM is fully loaded. It 
 that initialization the **ComboBox** occur within a handler is provided to
 $(document).ready().
 
+> Widget copies any styles and CSS classes from the input element to the visible input and the wrapper element.
+
 ### Initialize a ComboBox using a selector within $(document).ready()
 
     $(document).ready(function(){
