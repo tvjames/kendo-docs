@@ -160,4 +160,11 @@ its behavior.
 
     var autoComplete = $("#autoComplete").data("kendoAutoComplete");
 
+## Modifying widget's popup
+The **popup** property holds the Popup object of the widget.
 
+### Set width of the popup element
+
+    var autoComplete = $("#autoComplete").data("kendoAutoComplete");
+
+    autoComplete.popup.element.width(400); //width of the popup element will be 400px

@@ -78,3 +78,11 @@ use the API to control its behavior.
 
     var timePicker = $("#timePicker").data("kendoTimePicker");
 
+## Modifying widget's popup
+The **popup** property holds the Popup object of the widget.
+
+### Set width of the popup element
+
+    var timePicker = $("#timePicker").data("kendoTimePicker");
+
+    timepicker.popup.element.width(400); //width of the popup element will be 400px

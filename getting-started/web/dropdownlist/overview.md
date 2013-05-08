@@ -154,3 +154,11 @@ use the API to control its behavior.
 
     var dropDownList = $("#dropDownList").data("kendoDropDownList");
 
+## Modifying widget's popup
+The **popup** property holds the Popup object of the widget.
+
+### Set width of the popup element
+
+    var dropDownList = $("#dropDownList").data("kendoDropDownList");
+
+    dropDownList.popup.element.width(400); //width of the popup element will be 400px

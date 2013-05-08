@@ -92,3 +92,11 @@ its behavior.
 
     var datePicker = $("#datePicker").data("kendoDatePicker");
 
+## Modifying widget's popup
+The **popup** property holds the Popup object of the widget.
+
+### Set width of the popup element
+
+    var datePicker = $("#datePicker").data("kendoDatePicker");
+
+    datePicker.popup.element.width(400); //width of the popup element will be 400px
