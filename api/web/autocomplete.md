@@ -399,7 +399,7 @@ Returns the data item at the specified index.
 
 #### Parameters
 
-##### index `Number`
+##### index `Number` *(optional)*
 
 The zero-based index of of the data item.
 
