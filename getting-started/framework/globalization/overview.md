@@ -62,6 +62,10 @@ For more detail information, check these help topics:
 and
 [Date Parsing](http://docs.kendoui.com/getting-started/framework/globalization/dateparsing)
 
+## globalize.js support
+
+> When globalize.js is registered before Kendo scripts, then Kendo will use globalize.js features instead of Kendo Globalization.
+
 ## Widgets that depend on culture info
 
 Here is a list of widgets which depends on the current culture:
