@@ -82,6 +82,11 @@ Slider Configuration API documentation tab.
          value: 0.15 // 15 %
      });
 
+## Support for label element
+
+Because of the complex rendering of the widget, focusing of the widget using label element will require additional implementation.
+Check [this jsFiddle demo](http://jsfiddle.net/krustev/6mHKF/), which shows how to achieve this.
+
 ## Accessing an Existing NumericTextBox
 
 

@@ -138,7 +138,6 @@ detailed description of the capabilities and syntax of the Kendo UI templates, p
 
 ## Customizing the width of the drop-down list
 
-
 Width of ComboBox' drop-down list can be changed via jQuery width method.
 
 ### Example
@@ -147,6 +146,11 @@ Width of ComboBox' drop-down list can be changed via jQuery width method.
 
     // set width of the drop-down list
     combobox.list.width(400);
+
+## Support for label element
+
+Because of the complex rendering of the widget, focusing of the widget using label element will require additional implementation.
+Check [this jsFiddle demo](http://jsfiddle.net/krustev/6mHKF/), which shows how to achieve this.
 
 ## Accessing an Existing ComboBox
 
