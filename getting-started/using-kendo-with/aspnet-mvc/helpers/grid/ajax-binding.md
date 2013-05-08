@@ -109,6 +109,72 @@ The JSON response of the action method will contain only a single page of data. 
 > If your data is `IQueryable<T>` returned by a LINQ-enabled provider (Entity Framework, LINQ to SQL, Telerik OpenAccess, NHibernate or other) the LINQ expressions
 created by the `ToDataSourceResult` method will be converted to SQL and executed by the database server.
 
+## Using View Models
+
+Sometimes it is convenient to use view model objects instead of entities returned by Entity Framework. For example you may want to
+avoid serializing all Entity Framework properties as JSON or prevent serialization exceptions caused by circular references.
+This tutorial will show how to use view models and Kendo UI Grid for ASP.NET MVC.
+
+1. Perform all steps from the previous tutorial.
+1. Add a new class to the `~/Models` folder. Name it `ProductViewModel`.
+
+        public class ProductViewModel
+        {
+            public int ProductID { get; set; }
+            public int ProductName { get; set; }
+            public int UnitsInStock { get; set; }
+        }
+1. Modify the grid declaration and make it use `ProductViewModel` instead of `Product`.
+    - Index.aspx (ASPX)
+
+            <%: Html.Kendo().Grid<KendoGridAjaxBinding.Models.ProductViewModel>()
+                  .Name("grid")
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .Read(read => read.Action("Products_Read", "Home"))
+                   )
+                  .Columns(columns =>
+                  {
+                      columns.Bound(product => product.ProductID);
+                      columns.Bound(product => product.ProductName);
+                      columns.Bound(product => product.UnitsInStock);
+                  })
+                  .Pageable()
+                  .Sortable()
+            %>
+    - Index.cshtml (Razor)
+
+            @(Html.Kendo().Grid<KendoGridAjaxBinding.Models.ProductViewModel>()
+                  .Name("grid")
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .Read(read => read.Action("Products_Read", "Home"))
+                   )
+                  .Columns(columns =>
+                  {
+                      columns.Bound(product => product.ProductID);
+                      columns.Bound(product => product.ProductName);
+                      columns.Bound(product => product.UnitsInStock);
+                  })
+                  .Pageable()
+                  .Sortable()
+            )
+1. Modify the `Products_Read` action method and use the `ToDataSourceResult` method overload which accepts a mapping lambda.
+
+            public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
+            {
+                var northwind = new NorthwindEntities();
+                IQueryable<Product> products = northwind.Products;
+                // Convert the Product entities to ProductViewModel instances
+                DataSourceResult result = products.ToDataSourceResult(request, product => new ProductViewModel
+                {
+                    ProductID = product.ProductID,
+                    ProductName = product.ProductName,
+                    UnitsInStock = product.UnitsInStock
+                });
+                return Json(result);
+            }
+
 ## Pass Additional Data to the Action Method
 
 To pass additional parameters to the action use the `Data` method. Provide the name of a JavaScript function which will return a JavaScript object with the additional data:
@@ -184,7 +250,7 @@ To pass additional parameters to the action use the `Data` method. Provide the n
 By default the Kendo UI Grid for ASP.NET MVC will make an ajax request to the action method every time the user changes the page, sorts, filters or groups. This behavior
 can be changed by disabling `ServerOperation`.
 
-### Example - disable server operation (ASPX)
+### Example - enable client data processing (ASPX)
 
     <%: Html.Kendo().Grid<KendoGridAjaxBinding.Models.Product>()
           .Name("grid")
@@ -206,7 +272,7 @@ can be changed by disabling `ServerOperation`.
           .Sortable()
     %>
 
-### Example - disable server operation (Razor)
+### Example - enable client data processing (Razor)
 
     @(Html.Kendo().Grid<KendoGridAjaxBinding.Models.Product>()
           .Name("grid")
