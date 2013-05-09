@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Window
 
-A PHP class representing Kendo [Window](/api/web/window).
+A PHP wrapper for Kendo UI [Window](/api/web/window).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

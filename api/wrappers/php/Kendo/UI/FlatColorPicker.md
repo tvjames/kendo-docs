@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\FlatColorPicker
 
-A PHP class representing Kendo [FlatColorPicker](/api/web/flatcolorpicker).
+A PHP wrapper for Kendo UI [FlatColorPicker](/api/web/flatcolorpicker).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\TabStrip
 
-A PHP class representing Kendo [TabStrip](/api/web/tabstrip).
+A PHP wrapper for Kendo UI [TabStrip](/api/web/tabstrip).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

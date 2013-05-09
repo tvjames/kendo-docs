@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\ColorPalette
 
-A PHP class representing Kendo [ColorPalette](/api/web/colorpalette).
+A PHP wrapper for Kendo UI [ColorPalette](/api/web/colorpalette).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

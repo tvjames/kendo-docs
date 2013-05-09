@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\MultiSelect
 
-A PHP class representing Kendo [MultiSelect](/api/web/multiselect).
+A PHP wrapper for Kendo UI [MultiSelect](/api/web/multiselect).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

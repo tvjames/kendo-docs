@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\TimePicker
 
-A PHP class representing Kendo [TimePicker](/api/web/timepicker).
+A PHP wrapper for Kendo UI [TimePicker](/api/web/timepicker).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

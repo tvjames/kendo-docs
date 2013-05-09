@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\DropDownList
 
-A PHP class representing Kendo [DropDownList](/api/web/dropdownlist).
+A PHP wrapper for Kendo UI [DropDownList](/api/web/dropdownlist).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

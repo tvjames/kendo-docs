@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\DateTimePicker
 
-A PHP class representing Kendo [DateTimePicker](/api/web/datetimepicker).
+A PHP wrapper for Kendo UI [DateTimePicker](/api/web/datetimepicker).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\Data\DataSource
 
-A PHP class representing Kendo [DataSource](/api/framework/datasource).
+A PHP wrapper for Kendo UI [DataSource](/api/framework/datasource).
 
 
 ## Methods

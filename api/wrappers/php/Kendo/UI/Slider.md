@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Slider
 
-A PHP class representing Kendo [Slider](/api/web/slider).
+A PHP wrapper for Kendo UI [Slider](/api/web/slider).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

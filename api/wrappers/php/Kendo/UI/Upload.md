@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Upload
 
-A PHP class representing Kendo [Upload](/api/web/upload).
+A PHP wrapper for Kendo UI [Upload](/api/web/upload).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\PanelBar
 
-A PHP class representing Kendo [PanelBar](/api/web/panelbar).
+A PHP wrapper for Kendo UI [PanelBar](/api/web/panelbar).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

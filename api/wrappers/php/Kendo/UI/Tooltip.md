@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Tooltip
 
-A PHP class representing Kendo [Tooltip](/api/web/tooltip).
+A PHP wrapper for Kendo UI [Tooltip](/api/web/tooltip).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

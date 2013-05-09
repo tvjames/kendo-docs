@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Grid
 
-A PHP class representing Kendo [Grid](/api/web/grid).
+A PHP wrapper for Kendo UI [Grid](/api/web/grid).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

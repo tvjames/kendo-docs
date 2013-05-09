@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\ColorPicker
 
-A PHP class representing Kendo [ColorPicker](/api/web/colorpicker).
+A PHP wrapper for Kendo UI [ColorPicker](/api/web/colorpicker).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\ListView
 
-A PHP class representing Kendo [ListView](/api/web/listview).
+A PHP wrapper for Kendo UI [ListView](/api/web/listview).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

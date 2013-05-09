@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\AutoComplete
 
-A PHP class representing Kendo [AutoComplete](/api/web/autocomplete).
+A PHP wrapper for Kendo UI [AutoComplete](/api/web/autocomplete).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

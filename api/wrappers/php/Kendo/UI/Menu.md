@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Menu
 
-A PHP class representing Kendo [Menu](/api/web/menu).
+A PHP wrapper for Kendo UI [Menu](/api/web/menu).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
@@ -100,7 +100,7 @@ by setting the close animation.  Each animation also has a direction which can b
     ?>
 
 ### close
-Fires after a sub menu gets closed.
+Fires before a sub menu gets closed. You can cancel this event to prevent closure.
 For additional information check the [close](/api/web/menu#events-close) event documentation.
 
 #### Returns
@@ -266,7 +266,7 @@ Adds one or more MenuItem to the Menu.
     ?>
 
 ### open
-Fires before a sub menu gets opened.
+Fires before a sub menu gets opened. You can cancel this event to prevent opening the sub menu.
 For additional information check the [open](/api/web/menu#events-open) event documentation.
 
 #### Returns

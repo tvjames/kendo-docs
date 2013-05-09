@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Editor
 
-A PHP class representing Kendo [Editor](/api/web/editor).
+A PHP wrapper for Kendo UI [Editor](/api/web/editor).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

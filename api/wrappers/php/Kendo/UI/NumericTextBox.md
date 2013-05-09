@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\NumericTextBox
 
-A PHP class representing Kendo [NumericTextBox](/api/web/numerictextbox).
+A PHP wrapper for Kendo UI [NumericTextBox](/api/web/numerictextbox).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

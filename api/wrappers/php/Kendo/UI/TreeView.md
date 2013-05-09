@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\TreeView
 
-A PHP class representing Kendo [TreeView](/api/web/treeview).
+A PHP wrapper for Kendo UI [TreeView](/api/web/treeview).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

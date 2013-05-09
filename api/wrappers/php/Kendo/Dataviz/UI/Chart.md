@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\Dataviz\UI\Chart
 
-A PHP class representing Kendo [Chart](/api/web/chart).
+A PHP wrapper for Kendo UI [Chart](/api/dataviz/chart).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

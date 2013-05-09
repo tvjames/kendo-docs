@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\Dataviz\UI\LinearGauge
 
-A PHP class representing Kendo [LinearGauge](/api/web/lineargauge).
+A PHP wrapper for Kendo UI [LinearGauge](/api/dataviz/lineargauge).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

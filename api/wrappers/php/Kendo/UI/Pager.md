@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Pager
 
-A PHP class representing Kendo [Pager](/api/web/pager).
+A PHP wrapper for Kendo UI [Pager](/api/web/pager).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

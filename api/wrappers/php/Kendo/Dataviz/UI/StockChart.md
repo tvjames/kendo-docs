@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\Dataviz\UI\StockChart
 
-A PHP class representing Kendo [StockChart](/api/web/stockchart).
+A PHP wrapper for Kendo UI [StockChart](/api/dataviz/stockchart).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Splitter
 
-A PHP class representing Kendo [Splitter](/api/web/splitter).
+A PHP wrapper for Kendo UI [Splitter](/api/web/splitter).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

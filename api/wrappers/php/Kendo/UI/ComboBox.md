@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\ComboBox
 
-A PHP class representing Kendo [ComboBox](/api/web/combobox).
+A PHP wrapper for Kendo UI [ComboBox](/api/web/combobox).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\Calendar
 
-A PHP class representing Kendo [Calendar](/api/web/calendar).
+A PHP wrapper for Kendo UI [Calendar](/api/web/calendar).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

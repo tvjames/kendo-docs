@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\Dataviz\UI\Sparkline
 
-A PHP class representing Kendo [Sparkline](/api/web/sparkline).
+A PHP wrapper for Kendo UI [Sparkline](/api/dataviz/sparkline).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

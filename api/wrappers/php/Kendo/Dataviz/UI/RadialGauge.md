@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\Dataviz\UI\RadialGauge
 
-A PHP class representing Kendo [RadialGauge](/api/web/radialgauge).
+A PHP wrapper for Kendo UI [RadialGauge](/api/dataviz/radialgauge).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 

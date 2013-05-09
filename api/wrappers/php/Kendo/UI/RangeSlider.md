@@ -7,7 +7,7 @@ publish: true
 
 # \Kendo\UI\RangeSlider
 
-A PHP class representing Kendo [RangeSlider](/api/web/rangeslider).
+A PHP wrapper for Kendo UI [RangeSlider](/api/web/rangeslider).
 
 Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
