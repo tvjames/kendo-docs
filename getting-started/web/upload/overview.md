@@ -49,7 +49,7 @@ Please consult the documentation of your specific server technology regarding th
 
 ## See Also
 
-[Upload Modes](http://www.kendoui.com/documentation/ui-widgets/upload/modes.aspx)
+[Upload Modes](/getting-started/web/upload/modes)
 
 ## Accessing an Existing Upload
 

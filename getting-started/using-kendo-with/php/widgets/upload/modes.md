@@ -12,7 +12,7 @@ relatedDocs: php-ui-upload
 The Upload supports two modes of operation - synchronous and asynchronous.
 
 This help topic explains how to use these modes with PHP.
-Please review the main [Upload Modes](/getting-started/ui-widgets/upload/modes) help topic for general information.
+Please review the main [Upload Modes](/getting-started/web/upload/modes) help topic for general information.
 
 ## Synchronous mode
 
