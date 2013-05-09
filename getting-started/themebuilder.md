@@ -27,4 +27,4 @@ Just copy the CSS output to a .css file and include it in your page.
 
 The LESS output of the ThemeBuilder depends on the template.less theme template that is distributed along with the Kendo UI source. Save the LESS output to a .less file alongside the template.less and refer to the [official LESS documentation](http://lesscss.org/#-client-side-usage) on the various ways you can process it.
 
-> The common CSS files (`kendo.common.css` when using Kendo UI Web or `kendo.dataviz.css` when using Kendo UI DataViz) file should always be registered on the page.
+> The common CSS files (`kendo.common.css` when using Kendo UI Web or `kendo.dataviz.css` when using Kendo UI DataViz) should always be registered on the page, even when using ThemeBuilder-generated themes.
