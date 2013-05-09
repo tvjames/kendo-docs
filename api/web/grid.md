@@ -4312,8 +4312,8 @@ Switches the table row which is in edit mode and saves any changes made by the u
       editable: "inline"
     });
     var grid = $("#grid").data("kendoGrid");
-    grid.editRow($("#grid tr:eq(1)");
-    grid.saveChanges();
+    grid.editRow($("#grid tr:eq(1)"));
+    grid.saveRow();
     </script>
 
 ### select
