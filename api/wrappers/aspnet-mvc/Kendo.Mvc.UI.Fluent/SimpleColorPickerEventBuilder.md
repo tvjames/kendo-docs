@@ -14,7 +14,7 @@ Defines the fluent interface for configuring ColorPicker client events.
 ### Change(`System.Func<System.Object,System.Object>`)
 Defines the inline handler of the Change client-side event
 
-For additional information check the [change](/api/web/simplecolorpicker#events-change) event documentation.
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
 
 
 #### Parameters
@@ -41,7 +41,7 @@ The handler code wrapped in a text tag (Razor syntax).
 ### Change(`System.String`)
 Defines the name of the JavaScript function that will handle the the Change client-side event.
 
-For additional information check the [change](/api/web/simplecolorpicker#events-change) event documentation.
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
 
 
 #### Parameters
