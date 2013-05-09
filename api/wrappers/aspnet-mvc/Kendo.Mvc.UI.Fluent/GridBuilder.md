@@ -27,6 +27,7 @@ The lambda which configures the data source
     @(Html.Kendo().Grid<Product>()
         .Name("grid")
         .DataSource(dataSource =>
+            // configure the data source
             dataSource
             .Ajax()
             .Read(read => read.Action("Products_Read", "Home"))
