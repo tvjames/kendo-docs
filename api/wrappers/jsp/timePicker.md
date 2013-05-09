@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:timePicker\>
-A JSP tag representing Kendo TimePicker.
+A JSP wrapper for Kendo UI [TimePicker](/api/web/timepicker).
 
 ## Configuration Attributes
 

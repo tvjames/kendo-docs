@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:autoComplete\>
-A JSP tag representing Kendo AutoComplete.
+A JSP wrapper for Kendo UI [AutoComplete](/api/web/autocomplete).
 
 ## Configuration Attributes
 

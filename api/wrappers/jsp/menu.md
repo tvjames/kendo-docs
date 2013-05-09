@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:menu\>
-A JSP tag representing Kendo Menu.
+A JSP wrapper for Kendo UI [Menu](/api/web/menu).
 
 ## Configuration Attributes
 
@@ -95,7 +95,7 @@ More documentation is available at [kendo:menu-items](menu/items).
 
 ### close `String`
 
-Fires after a sub menu gets closed.
+Fires before a sub menu gets closed. You can cancel this event to prevent closure.
 
 
 For additional information check the [close](/api/web/menu#events-close) event documentation.
@@ -111,7 +111,7 @@ For additional information check the [close](/api/web/menu#events-close) event d
 
 ### open `String`
 
-Fires before a sub menu gets opened.
+Fires before a sub menu gets opened. You can cancel this event to prevent opening the sub menu.
 
 
 For additional information check the [open](/api/web/menu#events-open) event documentation.
@@ -177,7 +177,7 @@ For additional information check the [select](/api/web/menu#events-select) event
 
 ### kendo:menu-close
 
-Fires after a sub menu gets closed.
+Fires before a sub menu gets closed. You can cancel this event to prevent closure.
 
 
 For additional information check the [close](/api/web/menu#events-close) event documentation.
@@ -195,7 +195,7 @@ For additional information check the [close](/api/web/menu#events-close) event d
 
 ### kendo:menu-open
 
-Fires before a sub menu gets opened.
+Fires before a sub menu gets opened. You can cancel this event to prevent opening the sub menu.
 
 
 For additional information check the [open](/api/web/menu#events-open) event documentation.

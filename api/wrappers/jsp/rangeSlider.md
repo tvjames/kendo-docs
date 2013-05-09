@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:rangeSlider\>
-A JSP tag representing Kendo RangeSlider.
+A JSP wrapper for Kendo UI [RangeSlider](/api/web/rangeslider).
 
 ## Configuration Attributes
 

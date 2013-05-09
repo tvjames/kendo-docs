@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:colorPalette\>
-A JSP tag representing Kendo ColorPalette.
+A JSP wrapper for Kendo UI [ColorPalette](/api/web/colorpalette).
 
 ## Configuration Attributes
 

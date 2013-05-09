@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:chart\>
-A JSP tag representing Kendo Chart.
+A JSP wrapper for Kendo UI [Chart](/api/dataviz/chart).
 
 ## Configuration Attributes
 

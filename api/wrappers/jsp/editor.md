@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:editor\>
-A JSP tag representing Kendo Editor.
+A JSP wrapper for Kendo UI [Editor](/api/web/editor).
 
 ## Configuration Attributes
 

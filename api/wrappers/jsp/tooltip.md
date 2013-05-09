@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:tooltip\>
-A JSP tag representing Kendo Tooltip.
+A JSP wrapper for Kendo UI [Tooltip](/api/web/tooltip).
 
 ## Configuration Attributes
 

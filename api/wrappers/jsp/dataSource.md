@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:dataSource\>
-A JSP tag representing Kendo DataSource.
+A JSP wrapper for Kendo UI [DataSource](/api/framework/datasource).
 
 ## Configuration Attributes
 

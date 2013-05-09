@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:comboBox\>
-A JSP tag representing Kendo ComboBox.
+A JSP wrapper for Kendo UI [ComboBox](/api/web/combobox).
 
 ## Configuration Attributes
 

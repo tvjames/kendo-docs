@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:stockChart\>
-A JSP tag representing Kendo StockChart.
+A JSP wrapper for Kendo UI [StockChart](/api/dataviz/stockchart).
 
 ## Configuration Attributes
 

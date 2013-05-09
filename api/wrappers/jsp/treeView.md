@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:treeView\>
-A JSP tag representing Kendo TreeView.
+A JSP wrapper for Kendo UI [TreeView](/api/web/treeview).
 
 ## Configuration Attributes
 

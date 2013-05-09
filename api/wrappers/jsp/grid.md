@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:grid\>
-A JSP tag representing Kendo Grid.
+A JSP wrapper for Kendo UI [Grid](/api/web/grid).
 
 ## Configuration Attributes
 

@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:sparkline\>
-A JSP tag representing Kendo Sparkline.
+A JSP wrapper for Kendo UI [Sparkline](/api/dataviz/sparkline).
 
 ## Configuration Attributes
 

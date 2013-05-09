@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:flatColorPicker\>
-A JSP tag representing Kendo FlatColorPicker.
+A JSP wrapper for Kendo UI [FlatColorPicker](/api/web/flatcolorpicker).
 
 ## Configuration Attributes
 

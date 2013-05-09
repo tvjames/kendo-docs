@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:splitter\>
-A JSP tag representing Kendo Splitter.
+A JSP wrapper for Kendo UI [Splitter](/api/web/splitter).
 
 ## Configuration Attributes
 

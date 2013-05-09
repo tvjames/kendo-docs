@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:window\>
-A JSP tag representing Kendo Window.
+A JSP wrapper for Kendo UI [Window](/api/web/window).
 
 ## Configuration Attributes
 

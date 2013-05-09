@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:colorPicker\>
-A JSP tag representing Kendo ColorPicker.
+A JSP wrapper for Kendo UI [ColorPicker](/api/web/colorpicker).
 
 ## Configuration Attributes
 

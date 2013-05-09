@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:radialGauge\>
-A JSP tag representing Kendo RadialGauge.
+A JSP wrapper for Kendo UI [RadialGauge](/api/dataviz/radialgauge).
 
 ## Configuration Attributes
 

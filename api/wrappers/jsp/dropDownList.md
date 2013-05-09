@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:dropDownList\>
-A JSP tag representing Kendo DropDownList.
+A JSP wrapper for Kendo UI [DropDownList](/api/web/dropdownlist).
 
 ## Configuration Attributes
 

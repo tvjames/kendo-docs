@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:pager\>
-A JSP tag representing Kendo Pager.
+A JSP wrapper for Kendo UI [Pager](/api/web/pager).
 
 ## Configuration Attributes
 

@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:datePicker\>
-A JSP tag representing Kendo DatePicker.
+A JSP wrapper for Kendo UI [DatePicker](/api/web/datepicker).
 
 ## Configuration Attributes
 

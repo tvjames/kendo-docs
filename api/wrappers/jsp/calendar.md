@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:calendar\>
-A JSP tag representing Kendo Calendar.
+A JSP wrapper for Kendo UI [Calendar](/api/web/calendar).
 
 ## Configuration Attributes
 

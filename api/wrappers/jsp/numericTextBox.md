@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:numericTextBox\>
-A JSP tag representing Kendo NumericTextBox.
+A JSP wrapper for Kendo UI [NumericTextBox](/api/web/numerictextbox).
 
 ## Configuration Attributes
 

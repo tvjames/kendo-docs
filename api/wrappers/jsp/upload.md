@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:upload\>
-A JSP tag representing Kendo Upload.
+A JSP wrapper for Kendo UI [Upload](/api/web/upload).
 
 ## Configuration Attributes
 

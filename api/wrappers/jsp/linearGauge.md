@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:linearGauge\>
-A JSP tag representing Kendo LinearGauge.
+A JSP wrapper for Kendo UI [LinearGauge](/api/dataviz/lineargauge).
 
 ## Configuration Attributes
 

@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:listView\>
-A JSP tag representing Kendo ListView.
+A JSP wrapper for Kendo UI [ListView](/api/web/listview).
 
 ## Configuration Attributes
 

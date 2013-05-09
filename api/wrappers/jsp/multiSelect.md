@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:multiSelect\>
-A JSP tag representing Kendo MultiSelect.
+A JSP wrapper for Kendo UI [MultiSelect](/api/web/multiselect).
 
 ## Configuration Attributes
 

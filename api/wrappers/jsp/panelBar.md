@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:panelBar\>
-A JSP tag representing Kendo PanelBar.
+A JSP wrapper for Kendo UI [PanelBar](/api/web/panelbar).
 
 ## Configuration Attributes
 

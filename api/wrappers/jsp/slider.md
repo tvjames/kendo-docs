@@ -6,7 +6,7 @@ publish: true
 ---
 
 # \<kendo:slider\>
-A JSP tag representing Kendo Slider.
+A JSP wrapper for Kendo UI [Slider](/api/web/slider).
 
 ## Configuration Attributes
 
