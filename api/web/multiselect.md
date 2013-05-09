@@ -313,7 +313,7 @@ Template to be used for rendering the tags of the selected items.
         autoBind: false,
         dataTextField: "text",
         dataValueField: "value",
-        [{ text: "Item 1", value: "1" }, { text: "Item 2", value: "2" }]
+        value: [{ text: "Item 1", value: "1" }, { text: "Item 2", value: "2" }]
     });
 
 ## Methods
