@@ -27,8 +27,8 @@ The text title.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Text("Chart"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Font(`System.String`)
@@ -47,8 +47,8 @@ The title font (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Font("16px Arial,Helvetica,sans-serif"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Color(`System.String`)
@@ -67,8 +67,8 @@ The title color (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Color("#ff0000").Text("Title"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Background(`System.String`)
@@ -87,8 +87,8 @@ The background color.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Background("red"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Position(`Kendo.Mvc.UI.ChartTitlePosition`)
@@ -107,8 +107,8 @@ The title position.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Position(ChartTitlePosition.Bottom))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Align(`Kendo.Mvc.UI.ChartTextAlignment`)
@@ -127,8 +127,8 @@ The title alignment.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Align(ChartTextAlignment.Left))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Visible(`System.Boolean`)
@@ -147,8 +147,8 @@ The title visibility.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Visible(false))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -176,8 +176,8 @@ The title left margin.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Margin(20))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32`)
@@ -196,8 +196,8 @@ The title margin.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Margin(20))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -225,8 +225,8 @@ The title left padding.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Padding(20))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Padding(`System.Int32`)
@@ -245,8 +245,8 @@ The title padding.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Padding(20))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -271,8 +271,8 @@ The title dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Title(title => title.Border(1, "#000", ChartDashType.Dot))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)

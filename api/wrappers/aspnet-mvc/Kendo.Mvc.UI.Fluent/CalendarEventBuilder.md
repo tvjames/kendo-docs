@@ -29,13 +29,13 @@ The handler code wrapped in a text tag (Razor syntax).
     <%= Html.Kendo().Calendar()
     .Name("DatePicker")
     .Events(events => events.Change(
-            @<text>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                %>
+        @<text>
+            function(e) {
+            //event handling code
+            }
+            </text>
+            ))
+            %>
 
 
 ### Change(`System.String`)
@@ -77,14 +77,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <%= Html.Kendo().Calendar()
     .Name("Calendar")
     .Events(events => events.Navigate(
-            @<text>
-                %>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                %>
+        @<text>
+            %>
+            function(e) {
+            //event handling code
+            }
+            </text>
+            ))
+            %>
 
 
 ### Navigate(`System.String`)

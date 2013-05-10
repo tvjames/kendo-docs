@@ -29,9 +29,9 @@ Culture to use for formatting the dates.
     .CategoryAxis(axis => axis
         .Date()
         .Categories(sale => sale.Date)
-        .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
-    )
-    %>
+            .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
+            )
+            %>
 
 
 ### DateFormats(`System.Action<Kendo.Mvc.UI.Fluent.ChartAxisLabelsDateFormatsBuilder>`)
@@ -54,9 +54,9 @@ Culture to use for formatting the dates.
     .CategoryAxis(axis => axis
         .Date()
         .Categories(sale => sale.Date)
-        .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
-    )
-    %>
+            .Labels(labels => labels.Culture(new CultureInfo("es-ES")))
+            )
+            %>
 
 
 

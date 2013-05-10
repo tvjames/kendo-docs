@@ -63,19 +63,6 @@ Configures the window to show a refresh button.
     %>
 
 
-### Pin
-Configures the window to show a pin button.
-
-
-
-
-#### Example (ASPX)
-    <%= Html.Kendo().Window()
-    .Name("Window")
-    .Actions(actions => actions.Pin())
-    %>
-
-
 ### Custom(`System.String`)
 Configures the window to show a refresh button.
 

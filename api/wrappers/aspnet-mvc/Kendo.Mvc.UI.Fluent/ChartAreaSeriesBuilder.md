@@ -67,12 +67,12 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Area(s => s.Sales)
-        .Labels(labels => labels
-            .Position(ChartBarLabelsPosition.Above)
-            .Visible(true)
-            );
-        )
-    %>
+            .Labels(labels => labels
+                .Position(ChartBarLabelsPosition.Above)
+                .Visible(true)
+                );
+            )
+            %>
 
 
 ### Labels(`System.Boolean`)
@@ -92,8 +92,8 @@ The visibility. The default value is false.
     .Name("Chart")
     .Series(series => series
         .Area(s => s.Sales)
-        .Labels(true);
-    )
+            .Labels(true);
+        )
     %>
 
 
@@ -120,10 +120,10 @@ The line dashType.
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-            .Line(2, "red", ChartDashType.Dot)
-        )
-        .Render();
-    %>
+                .Line(2, "red", ChartDashType.Dot)
+            )
+            .Render();
+            %>
 
 
 ### Line(`System.Action<Kendo.Mvc.UI.Fluent.ChartAreaLineBuilder>`)
@@ -143,10 +143,10 @@ The configuration action.
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-            .Line(line => line.Opacity(0.2))
-        )
-        .Render();
-    %>
+                .Line(line => line.Opacity(0.2))
+                )
+                .Render();
+                %>
 
 
 ### Markers(`System.Action<Kendo.Mvc.UI.Fluent.ChartMarkersBuilder>`)
@@ -166,11 +166,11 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Area(s => s.Sales)
-        .Markers(markers => markers
-            .Type(ChartMarkerShape.Triangle)
-            );
-        )
-    %>
+            .Markers(markers => markers
+                .Type(ChartMarkerShape.Triangle)
+                );
+            )
+            %>
 
 
 ### Markers(`System.Boolean`)
@@ -190,8 +190,8 @@ The visibility. The default value is true.
     .Name("Chart")
     .Series(series => series
         .Area(s => s.Sales)
-        .Markers(true);
-    )
+            .Markers(true);
+        )
     %>
 
 
@@ -212,8 +212,8 @@ The missing values behavior. The default is to leave gaps.
     .Name("Chart")
     .Series(series => series
         .Area(s => s.Sales)
-        .MissingValues(ChartAreaMissingValues.Interpolate);
-    )
+            .MissingValues(ChartAreaMissingValues.Interpolate);
+        )
     %>
 
 

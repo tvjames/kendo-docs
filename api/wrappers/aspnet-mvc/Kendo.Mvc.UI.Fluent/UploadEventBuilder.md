@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Select(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Upload(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Upload(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Success(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Success(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Error(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Error(`System.String`)
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Complete(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Complete(`System.String`)
@@ -274,14 +274,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Cancel(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Cancel(`System.String`)
@@ -323,14 +323,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Remove(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Remove(`System.String`)
@@ -372,14 +372,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Upload()
         .Name("Upload")
         .Events(events => events.Progress(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Progress(`System.String`)

@@ -11,7 +11,7 @@ Creates data key for the !:Grid{T}.
 
 ## Methods
 
-### Add(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### AddT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines a data key.
 
 

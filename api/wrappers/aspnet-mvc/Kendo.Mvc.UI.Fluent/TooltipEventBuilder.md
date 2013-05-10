@@ -29,13 +29,13 @@ The handler code wrapped in a text tag (Razor syntax).
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.Show(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                )
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+            )
 
 
 ### Show(`System.String`)
@@ -56,7 +56,7 @@ The name of the JavaScript function that will handle the event.
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.Show("show"))
-    )
+        )
 
 
 ### Hide(`System.Func<System.Object,System.Object>`)
@@ -77,13 +77,13 @@ The handler code wrapped in a text tag (Razor syntax).
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.Hide(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                )
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+            )
 
 
 ### Hide(`System.String`)
@@ -104,7 +104,7 @@ The name of the JavaScript function that will handle the event.
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.Hide("hide"))
-    )
+        )
 
 
 ### ContentLoad(`System.Func<System.Object,System.Object>`)
@@ -125,13 +125,13 @@ The handler code wrapped in a text tag (Razor syntax).
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.ContentLoad(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                )
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+            )
 
 
 ### ContentLoad(`System.String`)
@@ -152,7 +152,7 @@ The name of the JavaScript function that will handle the event.
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.ContentLoad("contentLoad"))
-    )
+        )
 
 
 ### Error(`System.Func<System.Object,System.Object>`)
@@ -173,13 +173,13 @@ The handler code wrapped in a text tag (Razor syntax).
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.Error(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                )
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+            )
 
 
 ### Error(`System.String`)
@@ -200,7 +200,7 @@ The name of the JavaScript function that will handle the event.
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.Error("error"))
-    )
+        )
 
 
 ### RequestStart(`System.Func<System.Object,System.Object>`)
@@ -221,13 +221,13 @@ The handler code wrapped in a text tag (Razor syntax).
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.RequestStart(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                )
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+            )
 
 
 ### RequestStart(`System.String`)
@@ -248,7 +248,7 @@ The name of the JavaScript function that will handle the event.
     @(Html.Kendo().Tooltip()
         .For("#element")
         .Events(events => events.RequestStart("requestStart"))
-    )
+        )
 
 
 

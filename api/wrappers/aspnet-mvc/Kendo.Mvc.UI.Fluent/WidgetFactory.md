@@ -49,7 +49,7 @@ Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data item type.
     %>
 
 
-### Grid(`System.Collections.Generic.IEnumerable<T1>`)
+### GridT1(`System.Collections.Generic.IEnumerable<T1>`)
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound to the specified data source.
 
 
@@ -93,7 +93,7 @@ DataView from which the grid instance will be bound
 
 
 
-### Grid(`System.String`)
+### GridT1(`System.String`)
 Creates a new !:Kendo.Mvc.UI.Grid{T} bound an item in ViewData.
 
 
@@ -124,7 +124,7 @@ Creates a new !:UI.ListView{T} bound to the specified data item type.
     %>
 
 
-### ListView(`System.Collections.Generic.IEnumerable<T1>`)
+### ListViewT1(`System.Collections.Generic.IEnumerable<T1>`)
 Creates a new !:ListView{T} bound to the specified data source.
 
 
@@ -142,7 +142,7 @@ The data source.
     %>
 
 
-### ListView(`System.String`)
+### ListViewT1(`System.String`)
 Creates a new !:ListView{T} bound an item in ViewData.
 
 
@@ -555,7 +555,7 @@ Creates a !:Kendo.Mvc.UI.Chart{T}
     %>
 
 
-### Chart(`System.Collections.Generic.IEnumerable<T1>`)
+### ChartT1(`System.Collections.Generic.IEnumerable<T1>`)
 Creates a new !:Kendo.Mvc.UI.Chart{T} bound to the specified data source.
 
 
@@ -573,7 +573,7 @@ The data source.
     %>
 
 
-### Chart(`System.String`)
+### ChartT1(`System.String`)
 Creates a new !:Kendo.Mvc.UI.Chart{T} bound an item in ViewData.
 
 
@@ -618,7 +618,7 @@ Creates a !:Kendo.Mvc.UI.StockChart{T}
     %>
 
 
-### StockChart(`System.Collections.Generic.IEnumerable<T1>`)
+### StockChartT1(`System.Collections.Generic.IEnumerable<T1>`)
 Creates a new !:Kendo.Mvc.UI.StockChart{T} bound to the specified data source.
 
 
@@ -636,7 +636,7 @@ The data source.
     %>
 
 
-### StockChart(`System.String`)
+### StockChartT1(`System.String`)
 Creates a new !:Kendo.Mvc.UI.StockChart{T} bound an item in ViewData.
 
 
@@ -681,7 +681,7 @@ Creates a !:Kendo.Mvc.UI.Sparkline{T}
     %>
 
 
-### Sparkline(`System.Collections.Generic.IEnumerable<T1>`)
+### SparklineT1(`System.Collections.Generic.IEnumerable<T1>`)
 Creates a new !:Kendo.Mvc.UI.Sparkline{T} bound to the specified data source.
 
 
@@ -699,7 +699,7 @@ The data source.
     %>
 
 
-### Sparkline(`System.String`)
+### SparklineT1(`System.String`)
 Creates a new !:Kendo.Mvc.UI.Sparkline{T} bound an item in ViewData.
 
 

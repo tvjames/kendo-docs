@@ -123,9 +123,9 @@ The configuration action.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .MajorGridLines(lines => lines.Visible(true))
-    )
-    %>
+            .MajorGridLines(lines => lines.Visible(true))
+            )
+            %>
 
 
 ### MajorGridLines(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -151,8 +151,8 @@ The major gridlines line dashType.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .MajorGridLines(2, "red", ChartDashType.Dot)
-    )
+            .MajorGridLines(2, "red", ChartDashType.Dot)
+        )
     %>
 
 
@@ -173,9 +173,9 @@ The configuration action.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .MinorGridLines(lines => lines.Visible(true))
-    )
-    %>
+            .MinorGridLines(lines => lines.Visible(true))
+            )
+            %>
 
 
 ### MinorGridLines(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -201,8 +201,8 @@ The minor grid lines dash type
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .MinorGridLines(2, "red", ChartDashType.Dot)
-    )
+            .MinorGridLines(2, "red", ChartDashType.Dot)
+        )
     %>
 
 
@@ -223,9 +223,9 @@ The configuration action.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Line(line => line.Color("#f00"))
-    )
-    %>
+            .Line(line => line.Color("#f00"))
+            )
+            %>
 
 
 ### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -251,8 +251,8 @@ The axis line dashType.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Line(2, "#f00", ChartDashType.Dot)
-    )
+            .Line(2, "#f00", ChartDashType.Dot)
+        )
     %>
 
 
@@ -339,9 +339,9 @@ The configuration action.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Title(title => title.Text("Axis"))
-    )
-    %>
+            .Title(title => title.Text("Axis"))
+            )
+            %>
 
 
 ### Title(`System.String`)
@@ -361,8 +361,8 @@ The axis title.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Title("Axis")
-    )
+            .Title("Axis")
+        )
     %>
 
 
@@ -387,8 +387,8 @@ The pane name.
     })
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Pane("volumePane")
-    )
+            .Pane("volumePane")
+        )
     %>
 
 
@@ -409,8 +409,8 @@ The axis color.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Color("#ff0000")
-    )
+            .Color("#ff0000")
+        )
     %>
 
 
@@ -431,8 +431,8 @@ A value indicating if the axis labels should be rendered in reverse.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Reverse(true)
-    )
+            .Reverse(true)
+        )
     %>
 
 
@@ -447,8 +447,8 @@ Reverse the axis.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        .Reverse()
-    )
+            .Reverse()
+        )
     %>
 
 

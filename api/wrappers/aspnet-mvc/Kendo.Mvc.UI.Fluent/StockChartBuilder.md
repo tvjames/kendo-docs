@@ -50,8 +50,8 @@ Gets or sets a value indicating if the chart
     .DataSource(ds =>
     {
         ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
-    })
-    .AutoBind(false)
+        })
+        .AutoBind(false)
     %>
 
 
@@ -74,8 +74,8 @@ The navigator configuration action.
         .Series(series =>
         {
             series.Line(s => s.Volume);
-        })
-    )
+            })
+        )
     %>
 
 
@@ -251,7 +251,7 @@ The add action.
     .Series(series =>
     {
         series.Bar(s => s.SalesAmount);
-    })
+        })
     %>
 
 
@@ -332,7 +332,7 @@ The configurator
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-    )
+        )
     %>
 
 
@@ -411,7 +411,7 @@ Use the configurator to set different data binding options.
     .DataSource(ds =>
     {
         ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
-    })
+        })
     %>
 
 

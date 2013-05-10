@@ -47,7 +47,7 @@ An anonymous object which contains the additional data
     .Name("Grid")
     .Columns(columns => {
         columns.Bound(o => o.Customer).EditorViewData(new { customers = Model.Customers });
-    })
+        })
     %>
 
 
@@ -133,17 +133,17 @@ The action defining the template.
         .Name("Grid")
         .Columns(columns => columns
             .Add(c => c.CustomerID)
-            .Template(() =>
-            {
-                %>
-                >img
-                alt="<%= c.CustomerID %>"
-                src="<%= Url.Content("~/Content/Grid/Customers/" + c.CustomerID + ".jpg") %>"
-                />
-                <%
-                }).Title("Picture");)
-                .Render();
-                %>
+                .Template(() =>
+                {
+                    %>
+                    >img
+                    alt="<%= c.CustomerID %>"
+                    src="<%= Url.Content("~/Content/Grid/Customers/" + c.CustomerID + ".jpg") %>"
+                    />
+                    <%
+                    }).Title("Picture");)
+                    .Render();
+                    %>
 
 
 ### Template(`System.Func<T,System.Object>`)

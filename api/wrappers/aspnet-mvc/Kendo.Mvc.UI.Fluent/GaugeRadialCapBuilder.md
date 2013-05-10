@@ -28,9 +28,9 @@ The cap color.
         .Name("radialGauge")
         .Pointer(pointer => pointer
             .Cap(cap => cap.Color("red"))
-        )
-        .Render();
-    %>
+            )
+            .Render();
+            %>
 
 
 ### Opacity(`System.Double`)
@@ -51,9 +51,9 @@ The cap opacity in the range from 0 (transparent) to 1 (opaque).
         .Name("radialGauge")
         .Pointer(pointer => pointer
             .Cap(cap => cap.Opacity(0.5))
-        )
-        .Render();
-    %>
+            )
+            .Render();
+            %>
 
 
 ### Size(`System.Double`)
@@ -73,9 +73,9 @@ The cap size in percents.
         .Name("radialGauge")
         .Pointer(pointer => pointer
             .Cap(cap => cap.Size(8))
-        )
-        .Render();
-    %>
+            )
+            .Render();
+            %>
 
 
 

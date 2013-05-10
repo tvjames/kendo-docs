@@ -16,7 +16,7 @@ The parent Sparkline
 
 ## Methods
 
-### Bar(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### BarT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bar series.
 
 
@@ -80,7 +80,7 @@ The data to bind to.
 
 
 
-### Column(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### ColumnT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound column series.
 
 
@@ -144,7 +144,7 @@ The data to bind to
 
 
 
-### Line(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### LineT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound line series.
 
 
@@ -199,7 +199,7 @@ The data to bind to
 
 
 
-### Area(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### AreaT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound area series.
 
 
@@ -254,7 +254,7 @@ The data to bind to
 
 
 
-### Pie(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
+### PieT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>>`)
 Defines bound pie series.
 
 
@@ -288,7 +288,7 @@ The data to bind to
 
 
 
-### Bullet(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
+### BulletT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Linq.Expressions.Expression<System.Func<T,System.String>>`)
 Defines bound bullet series.
 
 

@@ -27,8 +27,8 @@ The background color.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .GaugeArea(gaugeArea => gaugeArea.Background("red"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -56,8 +56,8 @@ The gauge area left margin.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .GaugeArea(gaugeArea => gaugeArea.Margin(0, 5, 5, 0))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Margin(`System.Int32`)
@@ -76,8 +76,8 @@ The gauge area margin.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .GaugeArea(gaugeArea => gaugeArea.Margin(5))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -102,8 +102,8 @@ The border dash type.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .GaugeArea(gaugeArea => gaugeArea.Border(1, "#000", ChartDashType.Dot))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)

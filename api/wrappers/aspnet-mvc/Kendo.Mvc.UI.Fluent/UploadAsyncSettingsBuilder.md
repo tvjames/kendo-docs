@@ -205,7 +205,7 @@ The route values.
     %>
 
 
-### Save(`System.Linq.Expressions.Expression<System.Action<T1>>`)
+### SaveT1(`System.Linq.Expressions.Expression<System.Action<T1>>`)
 Sets the action for the save operation
 
 
@@ -222,7 +222,7 @@ The action.
     .Name("Upload")
     .Async(async => async
         .Save<HomeController>(controller => controller.Save())
-    )
+        )
     %>
 
 
@@ -438,7 +438,7 @@ The route values.
     %>
 
 
-### Remove(`System.Linq.Expressions.Expression<System.Action<T1>>`)
+### RemoveT1(`System.Linq.Expressions.Expression<System.Action<T1>>`)
 Sets the action for the remove operation
 
 
@@ -455,7 +455,7 @@ The action.
     .Name("Upload")
     .Async(async => async
         .Remove<HomeController>(controller => controller.Remove())
-    )
+        )
     %>
 
 

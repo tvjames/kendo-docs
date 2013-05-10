@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Open(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Open(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Close(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Close(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Activate(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Activate(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Deactivate(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Deactivate(`System.String`)
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Menu()
         .Name("Menu")
         .Events(events => events.Select(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)

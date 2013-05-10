@@ -22,10 +22,10 @@ Sets the type of the input element of the filter menu
     .Name("Grid")
     .Columns(columns =>
         columns.Bound(o => o.OrderDate)
-        .Filterable(filterable =>
-            filterable.UI(GridFilterUIRole.DatePicker)
+            .Filterable(filterable =>
+                filterable.UI(GridFilterUIRole.DatePicker)
+            )
         )
-    )
     %>
 
 
@@ -40,12 +40,12 @@ Sets JavaScript function which to modify the UI of the filter input.
     .Name("Grid")
     .Columns(columns =>
         columns.Bound(o => o.OrderDate)
-        .Filterable(filterable =>
-            filterable.UI(@<text>
-                JavaScript function goes here
-            </text>)
+            .Filterable(filterable =>
+                filterable.UI(@<text>
+                    JavaScript function goes here
+                </text>)
+            )
         )
-    )
     %>
 
 

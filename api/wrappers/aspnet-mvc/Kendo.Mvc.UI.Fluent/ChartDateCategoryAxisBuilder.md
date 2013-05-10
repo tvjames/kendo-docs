@@ -196,9 +196,9 @@ The value at which the first perpendicular axis crosses this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.Date().AxisCrossingValue(4))
-    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Double[]`)
@@ -217,9 +217,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.Date().AxisCrossingValue(0, 10))
-    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.Double>`)
@@ -238,9 +238,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.Date().AxisCrossingValue(new double[] { 0, 10 }))
-    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-    %>
+        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+                %>
 
 
 ### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>`)
@@ -310,8 +310,8 @@ The configuration action.
     .Name("StockChart")
     .CategoryAxis(axis => axis.Select(select =>
         select.Mousewheel(mw => mw.Reverse())
-        ))
-    %>
+            ))
+            %>
 
 
 

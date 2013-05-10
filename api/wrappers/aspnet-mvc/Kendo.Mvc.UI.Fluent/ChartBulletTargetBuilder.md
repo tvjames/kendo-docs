@@ -28,12 +28,12 @@ The target width.
         .Name("Chart")
         .Series(series => series
             .Bullet(s => s.Current, s => s.Target)
-            .Target(target => target
-                .Width(10)
-                );
-            )
-            .Render();
-            %>
+                .Target(target => target
+                    .Width(10)
+                    );
+                )
+                .Render();
+                %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -59,12 +59,12 @@ The target border dash type.
         .Name("Chart")
         .Series(series => series
             .Bullet(s => s.Current, s => s.Target)
-            .Target(target => target
-                .Border(1, "Red", ChartDashType.Dot)
-                );
-            )
-            .Render();
-            %>
+                .Target(target => target
+                    .Border(1, "Red", ChartDashType.Dot)
+                    );
+                )
+                .Render();
+                %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -97,12 +97,12 @@ The color of the bullet chart target.
         .Name("Chart")
         .Series(series => series
             .Bullet(s => s.Current, s => s.Target)
-            .Target(target => target
-                .Color("Red");
-                );
-            )
-            .Render();
-            %>
+                .Target(target => target
+                    .Color("Red");
+                    );
+                )
+                .Render();
+                %>
 
 
 

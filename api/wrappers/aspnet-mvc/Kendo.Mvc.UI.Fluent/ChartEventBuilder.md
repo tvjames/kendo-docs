@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DataBound(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DataBound(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DataBinding(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DataBinding(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SeriesClick(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SeriesClick(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SeriesHover(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SeriesHover(`System.String`)
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.AxisLabelClick(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### AxisLabelClick(`System.String`)
@@ -274,14 +274,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.LegendItemClick(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### LegendItemClick(`System.String`)
@@ -323,14 +323,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.LegendItemHover(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### LegendItemHover(`System.String`)
@@ -393,14 +393,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DragStart(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Drag(`System.String`)
@@ -442,14 +442,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.Drag(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### DragEnd(`System.String`)
@@ -491,14 +491,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.DragEnd(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### PlotAreaClick(`System.Func<System.Object,System.Object>`)
@@ -519,14 +519,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.PlotAreaClick(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### PlotAreaClick(`System.String`)
@@ -589,14 +589,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.ZoomStart(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Zoom(`System.String`)
@@ -638,14 +638,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.Zoom(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### ZoomEnd(`System.String`)
@@ -687,14 +687,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.ZoomEnd(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SelectStart(`System.String`)
@@ -736,14 +736,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SelectStart(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -785,14 +785,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.Select(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### SelectEnd(`System.String`)
@@ -834,14 +834,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Events(events => events.SelectEnd(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 

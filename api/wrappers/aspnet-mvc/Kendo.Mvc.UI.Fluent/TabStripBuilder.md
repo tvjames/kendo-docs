@@ -134,7 +134,7 @@ The view data key.
     %>
 
 
-### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.TabStripItem,T1>`)
+### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.TabStripItem,T1>`)
 Binds the tabstrip to a list of objects
 
 

@@ -123,12 +123,12 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Bar(s => s.Sales)
-        .Labels(labels => labels
-            .Position(ChartBarLabelsPosition.InsideEnd)
-            .Visible(true)
-            );
-        )
-    %>
+            .Labels(labels => labels
+                .Position(ChartBarLabelsPosition.InsideEnd)
+                .Visible(true)
+                );
+            )
+            %>
 
 
 ### Labels(`System.Boolean`)
@@ -148,8 +148,8 @@ The visibility. The default value is false.
     .Name("Chart")
     .Series(series => series
         .Bar(s => s.Sales)
-        .Labels(true);
-    )
+            .Labels(true);
+        )
     %>
 
 
@@ -175,8 +175,8 @@ The bars border dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Border("1", "#000", ChartDashType.Dot))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -208,8 +208,8 @@ The bar effects overlay. The default is ChartBarSeriesOverlay.Glass
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Overlay(ChartBarSeriesOverlay.None))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### NegativeColor(`System.String`)
@@ -228,8 +228,8 @@ The bar color for negative values(CSS syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).NegativeColor("Red"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 

@@ -28,13 +28,13 @@ The labels position.
         .Name("Chart")
         .Series(series => series
             .Bar(s => s.Sales)
-            .Labels(labels => labels
-                .Position(ChartBarLabelsPosition.InsideEnd)
-                .Visible(true)
-                );
-            )
-            .Render();
-            %>
+                .Labels(labels => labels
+                    .Position(ChartBarLabelsPosition.InsideEnd)
+                    .Visible(true)
+                    );
+                )
+                .Render();
+                %>
 
 
 

@@ -37,7 +37,7 @@ Member access expression which describes the member
 
 
 
-### Add(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### AddT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Specifies the member on which the filter should be applied.
 
 

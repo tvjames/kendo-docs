@@ -28,12 +28,12 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Scatter(s => s.x, s => s.y)
-        .Labels(labels => labels
-            .Position(ChartBarLabelsPosition.Above)
-            .Visible(true)
-            );
-        )
-    %>
+            .Labels(labels => labels
+                .Position(ChartBarLabelsPosition.Above)
+                .Visible(true)
+                );
+            )
+            %>
 
 
 ### Labels(`System.Boolean`)
@@ -53,8 +53,8 @@ The visibility. The default value is false.
     .Name("Chart")
     .Series(series => series
         .Scatter(s => s.x, s => s.y)
-        .Labels(true);
-    )
+            .Labels(true);
+        )
     %>
 
 
@@ -75,11 +75,11 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Scatter(s => s.x, s => s.y)
-        .Markers(markers => markers
-            .Type(ChartMarkerShape.Triangle)
-            );
-        )
-    %>
+            .Markers(markers => markers
+                .Type(ChartMarkerShape.Triangle)
+                );
+            )
+            %>
 
 
 ### Markers(`System.Boolean`)
@@ -99,8 +99,8 @@ The visibility. The default value is true.
     .Name("Chart")
     .Series(series => series
         .Scatter(s => s.x, s => s.y)
-        .Markers(true);
-    )
+            .Markers(true);
+        )
     %>
 
 
@@ -120,9 +120,9 @@ The axis name for this series.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .Series(series => series.Scatter(s => s.X, s => s.Y).Name("Scatter").XAxis("secondary"))
-    .XAxis(axis => axis.Numeric())
-    .XAxis(axis => axis.Numeric("secondary"))
-    %>
+        .XAxis(axis => axis.Numeric())
+            .XAxis(axis => axis.Numeric("secondary"))
+                %>
 
 
 ### YAxis(`System.String`)
@@ -141,9 +141,9 @@ The axis name for this series.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .Series(series => series.Scatter(s => s.Sales).Name("Sales").YAxis("secondary"))
-    .YAxis(axis => axis.Numeric())
-    .YAxis(axis => axis.Numeric("secondary"))
-    %>
+        .YAxis(axis => axis.Numeric())
+            .YAxis(axis => axis.Numeric("secondary"))
+                %>
 
 
 ### Axis(`System.String`)

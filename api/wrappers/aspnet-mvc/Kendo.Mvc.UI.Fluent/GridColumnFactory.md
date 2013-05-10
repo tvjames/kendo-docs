@@ -11,7 +11,7 @@ Creates columns for the !:Grid{TModel}.
 
 ## Methods
 
-### Bound(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### BoundT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines a bound column.
 
 
@@ -41,7 +41,7 @@ Defines a bound column.
 
 
 
-### ForeignKey(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Collections.IEnumerable,System.String,System.String`)
+### ForeignKeyT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Collections.IEnumerable,System.String,System.String`)
 Defines a foreign key column.
 
 
@@ -66,7 +66,7 @@ The data text field
 
 
 
-### ForeignKey(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Web.Mvc.SelectList`)
+### ForeignKeyT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>,System.Web.Mvc.SelectList`)
 Defines a foreign key column.
 
 

@@ -75,8 +75,8 @@ The bullets border dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bullet(s => s.Current, s => s.Target).Border("1", "#000", ChartDashType.Dot))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Overlay(`Kendo.Mvc.UI.ChartBarSeriesOverlay`)
@@ -95,8 +95,8 @@ The bullet effects overlay. The default is ChartBarSeriesOverlay.Glass
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bullet(s => s.Current, s => s.Target).Overlay(ChartBarSeriesOverlay.None))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Name(`System.String`)
@@ -154,8 +154,8 @@ The bar bullet color (CSS syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bullet(s => s.Current, s => s.Target).Color("Red"))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 ### Tooltip(`System.Action<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>`)
@@ -218,10 +218,10 @@ The axis name for this series.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .Series(series => series.Bullet(s => s.Current, s => s.Target).Name("Sales").Axis("secondary"))
-    .ValueAxis(axis => axis.Numeric())
-    .ValueAxis(axis => axis.Numeric("secondary"))
-    .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
-    %>
+        .ValueAxis(axis => axis.Numeric())
+            .ValueAxis(axis => axis.Numeric("secondary"))
+                .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
+                    %>
 
 
 ### Target(`System.Action<Kendo.Mvc.UI.Fluent.ChartBulletTargetBuilder>`)

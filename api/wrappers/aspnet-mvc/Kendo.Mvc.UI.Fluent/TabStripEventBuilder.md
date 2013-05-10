@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.Activate(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Activate(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.Select(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Select(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.ContentLoad(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### ContentLoad(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().TabStrip()
         .Name("TabStrip")
         .Events(events => events.Error(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Error(`System.String`)

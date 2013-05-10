@@ -27,8 +27,8 @@ The line visibility.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale.Line(line => line.Color("#f00")))
-        .Render();
-    %>
+            .Render();
+            %>
 
 
 

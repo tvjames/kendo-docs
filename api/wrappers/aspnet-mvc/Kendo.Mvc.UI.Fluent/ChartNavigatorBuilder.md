@@ -52,8 +52,8 @@ The add action.
         nav.Series(series =>
         {
             series.Bar(s => s.SalesAmount);
-        })
-    )
+            })
+        )
     %>
 
 
@@ -76,9 +76,9 @@ The navigator visibility.
         .Series(series =>
         {
             series.Bar(s => s.SalesAmount);
-        })
-        .Visible(false)
-    )
+            })
+            .Visible(false)
+        )
     %>
 
 
@@ -101,8 +101,8 @@ The add action.
         nav.Series(series =>
         {
             series.Bar(s => s.SalesAmount);
-        })
-    )
+            })
+        )
     %>
 
 
@@ -126,8 +126,8 @@ Use the configurator to set different data binding options.
         .DataSource(ds =>
         {
             ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
-        })
-    )
+            })
+        )
     %>
 
 
@@ -173,9 +173,9 @@ Gets or sets a value indicating if the navigator
         .DataSource(ds =>
         {
             ds.Ajax().Read(r => r.Action("SalesData", "Chart"));
-        })
-        .AutoBind(false)
-    )
+            })
+            .AutoBind(false)
+        )
     %>
 
 

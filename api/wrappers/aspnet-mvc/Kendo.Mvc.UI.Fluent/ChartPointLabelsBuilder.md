@@ -28,13 +28,13 @@ The labels position.
         .Name("Chart")
         .Series(series => series
             .Line(s => s.Sales)
-            .Labels(labels => labels
-                .Position(ChartPointLabelsPosition.Above)
-                .Visible(true)
-                );
-            )
-            .Render();
-            %>
+                .Labels(labels => labels
+                    .Position(ChartPointLabelsPosition.Above)
+                    .Visible(true)
+                    );
+                )
+                .Render();
+                %>
 
 
 

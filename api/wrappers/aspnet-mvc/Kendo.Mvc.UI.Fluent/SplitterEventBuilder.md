@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.Resize(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Resize(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.Expand(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Expand(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.Collapse(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### Collapse(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().Splitter()
         .Name("Splitter")
         .Events(events => events.ContentLoad(
-                @<text>
-                    function(e) {
-                    //event handling code
-                    }
-                    </text>
-                    ))
-                    .Render();
-                    %>
+            @<text>
+                function(e) {
+                //event handling code
+                }
+                </text>
+                ))
+                .Render();
+                %>
 
 
 ### ContentLoad(`System.String`)

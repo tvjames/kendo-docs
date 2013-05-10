@@ -264,27 +264,6 @@ Sets the height of the window.
 
 
 
-### Position(`System.Action<Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder>`)
-Configures the position of the window.
-
-
-#### Parameters
-
-##### positionSettingsAction System.Action<[Kendo.Mvc.UI.Fluent.WindowPositionSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/WindowPositionSettingsBuilder)>
-Position settings action.
-
-
-
-
-#### Example (ASPX)
-    <%= Html.Kendo().Window()
-    .Name("Window")
-    .Position(settings =>
-        settings.Top(100).Left(100)
-    )
-    %>
-
-
 ### Visible(`System.Boolean`)
 Sets whether the window should be rendered visible.
 
@@ -351,20 +330,6 @@ Sets whether the window can be moved.
 
 ### Draggable(`System.Boolean`)
 Sets whether the window can be moved.
-
-
-
-
-
-### Pinned
-Sets whether the window is pinned.
-
-
-
-
-
-### Pinned(`System.Boolean`)
-Sets whether the window is pinned.
 
 
 
