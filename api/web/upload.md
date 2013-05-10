@@ -284,6 +284,9 @@ Fires when upload progress data is available.
 Note: The progress event fires only when the upload is in
 [async mode](/getting-started/web/upload/modes#asynchronous-mode).
 
+Note: The progress event is not fired in IE.
+See [Supported Browsers](/getting-started/web/upload/supported-browsers)
+
 #### Example
 
     $("#photos").kendoUpload({
