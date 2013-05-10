@@ -59,7 +59,7 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
             DataSourceResult result = products.ToDataSourceResult(request);
             return Json(result);
         }
-5.  In the view configure the grid to use the action method created in the previous steps.
+1.  In the view configure the grid to use the action method created in the previous steps.
     - Index.aspx (ASPX)
 
             <%: Html.Kendo().Grid<KendoGridAjaxBinding.Models.Product>()
@@ -122,7 +122,7 @@ This tutorial will show how to use view models and Kendo UI Grid for ASP.NET MVC
         {
             public int ProductID { get; set; }
             public int ProductName { get; set; }
-            public int UnitsInStock { get; set; }
+            public short? UnitsInStock { get; set; }
         }
 1. Modify the grid declaration and make it use `ProductViewModel` instead of `Product`.
     - Index.aspx (ASPX)

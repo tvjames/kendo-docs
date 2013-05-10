@@ -10,194 +10,172 @@ publish: true
 
 ## Getting started
 
-To configure Kendo Grid for ASP.NET MVC for ajax editing follow these steps:
+The following tutorial shows how to configure Kendo UI Grid for ASP.NET MVC to do ajax editing of the Northwind database (the Products table).
 
-1.  Define a command column for the `Edit` and `Destroy` commands:
+1.  Create a new ASP.NET MVC 4 application (or Kendo UI ASP.NET MVC application if you have installed the [Kendo UI Visual Studio Extensions](/getting-started/using-kendo-with/aspnet-mvc/introduction#kendo-ui-for-asp.net-mvc-visual-studio-extensions)).
+Name the application "KendoGridAjaxBinding". If you decided not to use the Kendo UI Visual Studio Extensions followe the steps from the [introduction](/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic in order
+to add Kendo UI Complete for ASP.NET MVC to the application.
+1.  Add a new "Entity Framework Data Model". Right click the `~/Models` folder in the solution explorer and pick "Add ->  New Item". Choose "Data -> ADO.NET Entity Data Model" in the "Add New Item" dialog.
+Name the model "Northwind.edmx" and click "Next". This will start the "Entity Data Model Wizard".
+![New entity data model](images/entity-data-model.png)
+1.  Pick the "Generate from database" option and click "Next". Configure a connection to the Northwind database. Click "Next".
+![Choose the connection](images/entity-data-model.png)
+1.  Choose the "Products" table from the "Which database objects do you want to include in your model?". Leave all other options as they are set by default. Click "Finish".
+![Choose the Products table](images/database-objects.png)
+1. Add a new class to the `~/Models` folder. Name it `ProductViewModel`.
 
-        <%: Html.Kendo().Grid<MvcApplication1.Models.Product>()
-                .Name("Home")
-                .Columns(columns =>
-                {
-                    columns.Bound(p => p.ProductName);
-                    columns.Bound(p => p.UnitPrice).Width(140);
-                    columns.Bound(p => p.UnitsInStock).Width(140);
-                    columns.Bound(p => p.Discontinued).Width(100);
-                    // Add "Edit" and "Destroy" commands
-                    columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-                })
-        %>
-2.  Set the editing mode to `InLine`:
-
-        <%: Html.Kendo().Grid<MvcApplication1.Models.Product>()
-                .Name("Home")
-                .Columns(columns =>
-                {
-                    columns.Bound(p => p.ProductName);
-                    columns.Bound(p => p.UnitPrice).Width(140);
-                    columns.Bound(p => p.UnitsInStock).Width(140);
-                    columns.Bound(p => p.Discontinued).Width(100);
-                    columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-                })
-                // Set the edit mode to "InLine"
-                .Editable(editable => editable.Mode(GridEditMode.InLine))
-        %>
-3.  Add the `Create` command to the grid toolbar:
-
-        <%: Html.Kendo().Grid<MvcApplication1.Models.Product>()
-                .Name("Home")
-                .Columns(columns =>
-                {
-                    columns.Bound(p => p.ProductName);
-                    columns.Bound(p => p.UnitPrice).Width(140);
-                    columns.Bound(p => p.UnitsInStock).Width(140);
-                    columns.Bound(p => p.Discontinued).Width(100);
-                    columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-                })
-                // Add "Create" command
-                .ToolBar(commands => commands.Create())
-                .Editable(editable => editable.Mode(GridEditMode.InLine))
-        %>
-4.  Specify the action methods which will handle the Create, Update and Destroy operations:
-
-        <%: Html.Kendo().Grid<MvcApplication1.Models.Product>()
-                .Name("Home")
-                .Columns(columns =>
-                {
-                    columns.Bound(p => p.ProductName);
-                    columns.Bound(p => p.UnitPrice).Width(140);
-                    columns.Bound(p => p.UnitsInStock).Width(140);
-                    columns.Bound(p => p.Discontinued).Width(100);
-                    columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-                })
-                .ToolBar(toolbar => toolbar.Create())
-                .Editable(editable => editable.Mode(GridEditMode.InLine))
-                .DataSource(dataSource => dataSource
-                    .Ajax()
-                    // Configure CRUD -->
-                    .Create(create => create.Action("Products_Create", "Home"))
-                    .Read(read => read.Action("Products_Read", "Home"))
-                    .Update(update => update.Action("Products_Update", "Home"))
-                    .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
-                    // <-- Configure CRUD
-                )
-        %>
-5.  Specify the property of the model which is the unique identifier (primary key):
-
-        <%: Html.Kendo().Grid<MvcApplication1.Models.Product>()
-                .Name("Home")
-                .Columns(columns =>
-                {
-                    columns.Bound(p => p.ProductName);
-                    columns.Bound(p => p.UnitPrice).Width(140);
-                    columns.Bound(p => p.UnitsInStock).Width(140);
-                    columns.Bound(p => p.Discontinued).Width(100);
-                    columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-                })
-                .ToolBar(toolbar => toolbar.Create())
-                .Editable(editable => editable.Mode(GridEditMode.InLine))
-                .DataSource(dataSource => dataSource
-                    .Ajax()
-                    // Specify that the ProductID property is the unique identifier of the model
-                    .Model(model => model.Id(p => p.ProductID))
-                    .Create(create => create.Action("Products_Create", "Home"))
-                    .Read(read => read.Action("Products_Read", "Home"))
-                    .Update(update => update.Action("Products_Update", "Home"))
-                    .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
-                )
-        %>
-6.  Implement the `Read` action method:
-
-        public ActionResult Products_Read([DataSourceRequest] DataSourceRequest request)
+        public class ProductViewModel
         {
-            return Json(ProductRepository.All().ToDataSourceResult(request));
+            public int ProductID { get; set; }
+            public int ProductName { get; set; }
+            public short? UnitsInStock { get; set; }
         }
-7.  Implement the `Create` action method:
+1.  Open HomeController.cs and add a new action method which will return the Products as JSON. The grid will make ajax requests to this action.
 
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Products_Create([DataSourceRequest] DataSourceRequest request, Product product)
+        public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
         {
-            if (product != null &amp;&amp; ModelState.IsValid)
+            var northwind = new NorthwindEntities();
+            IQueryable<Product> products = northwind.Products;
+            DataSourceResult result = products.ToDataSourceResult(request);
+        }
+1.  Add new action method to HomeController.cs. It will be responsible for saving new data items. Name the method "Products_Create".
+
+        public ActionResult Products_Create([DataSourceRequest]DataSourceRequest request, ProductViewModel product)
+        {
+            if (ModelState.IsValid)
             {
-                ProductRepository.Insert(product);
-            }
-
-            //Return any validation errors if any
-            return Json(new [] { product }.ToDataSourceResult(request, ModelState));
-        }
-8.  Implement the `Update` action method:
-
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Products_Update([DataSourceRequest] DataSourceRequest request, Product product)
-        {
-            if (product != null &amp;&amp; ModelState.IsValid)
-            {
-                var target = ProductRepository.One(p => p.ProductID == product.ProductID);
-                if (target != null)
+                var northwind = new NorthwindEntities();
+                // Create a new Product entity and set its properties from the posted ProductViewModel
+                var entity = new Product
                 {
-                    target.ProductName = product.ProductName;
-                    target.UnitPrice = product.UnitPrice;
-                    target.UnitsInStock = product.UnitsInStock;
-                    target.LastSupply = product.LastSupply;
-                    target.Discontinued = product.Discontinued;
-                    ProductRepository.Update(target);
-                }
+                    ProductName = product.ProductName,
+                    UnitsInStock = product.UnitsInStock
+                };
+                // Add the entity
+                northwind.Products.Add(entity);
+                // Insert the entity in the database
+                northwind.SaveChanges();
+                // Get the ProductID generated by the database
+                product.ProductID = entity.ProductID;
             }
-
-            //Return any validation errors if any
-            return Json(ModelState.ToDataSourceResult());
+            // Return the inserted product. The grid needs the generated ProductID. Also return any validation errors.
+            return Json(new[] { product }.ToDataSourceResult(request, ModelState));
         }
-9.  Implement the `Destroy` action method:
+1.  Add new action method to HomeController.cs. It will be responsible for saving updated data items. Name the method "Products_Update".
 
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Products_Destroy([DataSourceRequest] DataSourceRequest request, Product product)
+        public ActionResult Products_Update([DataSourceRequest]DataSourceRequest request, ProductViewModel product)
         {
-            if (product != null)
+            if (ModelState.IsValid)
             {
-                ProductRepository.Delete(product);
-            }
-
-            //Return any validation errors if any
-            return Json(ModelState.ToDataSourceResult());
-        }
-10.  Show any validation errors by handling the Error event of the DataSource:
-
-        <%: Html.Kendo().Grid<MvcApplication1.Models.Product>()
-                .Name("Home")
-                .Columns(columns =>
+                var northwind = new NorthwindEntities();
+                // Create a new Product entity and set its properties from the posted ProductViewModel
+                var entity = new Product
                 {
-                    columns.Bound(p => p.ProductName);
-                    columns.Bound(p => p.UnitPrice).Width(140);
-                    columns.Bound(p => p.UnitsInStock).Width(140);
-                    columns.Bound(p => p.Discontinued).Width(100);
-                    columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-                })
-                .ToolBar(toolbar => toolbar.Create())
-                .Editable(editable => editable.Mode(GridEditMode.InLine))
-                .DataSource(dataSource => dataSource
-                    .Ajax()
-                    .Model(model => model.Id(p => p.ProductID))
-                    // Specify a handler for the error event
-                    .Events(events => events.Error("error"))
-                    .Create(create => create.Action("Products_Create", "Home"))
-                    .Read(read => read.Action("Products_Read", "Home"))
-                    .Update(update => update.Action("Products_Update", "Home"))
-                    .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
-                )
-        %>
-        <script>
-        function error(e) {
-            if (e.errors) {
-                var message = "Errors:\n";
-                $.each(e.errors, function (key, value) {
-                    if ('errors' in value) {
-                        $.each(value.errors, function() {
-                            message += this + "\n";
-                        });
-                    }
-                });
-
-                alert(message);
+                    ProductID = product.ProductID,
+                    ProductName = product.ProductName,
+                    UnitsInStock = product.UnitsInStock
+                };
+                // Attach the entity
+                northwind.Products.Attach(entity);
+                // Change its state to Modified so Entity Framework can update the existing product instead of creating a new one
+                northwind.Entry(entity).State = EntityState.Modified;
+                // Or use ObjectStateManager if using a previous version of Entity Framework
+                // northwind.ObjectStateManager.ChangeObjectState(entity, EntityState.Modified);
+                // Update the entity in the database
+                northwind.SaveChanges();
             }
+            // Return the updated product. Also return any validation errors.
+            return Json(new[] { product }.ToDataSourceResult(request, ModelState));
         }
-        </script>
 
+1.  Add new action method to HomeController.cs. It will be responsible for saving deleted data items. Name the method "Products_Destroy".
+
+        public ActionResult Products_Destroy([DataSourceRequest]DataSourceRequest request, ProductViewModel product)
+        {
+            if (ModelState.IsValid)
+            {
+                var northwind = new NorthwindEntities();
+                // Create a new Product entity and set its properties from the posted ProductViewModel
+                var entity = new Product
+                {
+                    ProductID = product.ProductID,
+                    ProductName = product.ProductName,
+                    UnitsInStock = product.UnitsInStock
+                };
+                // Attach the entity
+                northwind.Products.Attach(entity);
+                // Delete the entity
+                northwind.Products.Remove(entity);
+                // Or use DeleteObject if using a previous versoin of Entity Framework
+                // northwind.Products.DeleteObject(entity);
+                // Delete the entity in the database
+                northwind.SaveChanges();
+            }
+            // Return the removed product. Also return any validation errors.
+            return Json(new[] { product }.ToDataSourceResult(request, ModelState));
+        }
+1.  In the view configure the grid to use the action methods created in the previous steps.
+    - Index.aspx (ASPX)
+
+            <%: Html.Kendo().Grid<KendoGridAjaxEditing.Models.ProductViewModel>()
+                  .Name("grid")
+                  .Columns(columns =>
+                  {
+                      columns.Bound(product => product.ProductID).Width(100);
+                      columns.Bound(product => product.ProductName);
+                      columns.Bound(product => product.UnitsInStock).Width(250);
+                      columns.Command(commands =>
+                      {
+                          commands.Edit(); // The "edit" command will edit and update data items
+                          commands.Destroy(); // The "destroy" command removes data items
+                      }).Title("Commands").Width(200);
+                  })
+                  .ToolBar(toolbar => toolbar.Create()) // The "create" command adds new data items
+                  .Editable(editable => editable.Mode(GridEditMode.InLine)) // Use inline editing mode
+                  .DataSource(dataSource =>
+                      dataSource.Ajax()
+                        .Model(model =>
+                        {
+                            model.Id(product => product.ProductID); // Specify the property which is the unique identifier of the model
+                            model.Field(product => product.ProductID).Editable(false); // Make the ProductID property not editable
+                        })
+                        .Create(create => create.Action("Products_Create", "Home")) // Action method invoked when the user saves a new data item
+                        .Read(read => read.Action("Products_Read", "Home"))  // Action method invoked when the grid needs data
+                        .Update(update => update.Action("Products_Update", "Home"))  // Action method invoked when the user saves an updated data item
+                        .Destroy(destroy => destroy.Action("Products_Destroy", "Home")) // Action method invoked when the user removes a data item
+                  )
+                  .Pageable()
+            %>
+    - Index.cshtml (Razor)
+
+            @(Html.Kendo().Grid<KendoGridAjaxEditing.Models.ProductViewModel>()
+                  .Name("grid")
+                  .Columns(columns =>
+                  {
+                      columns.Bound(product => product.ProductID).Width(100);
+                      columns.Bound(product => product.ProductName);
+                      columns.Bound(product => product.UnitsInStock).Width(250);
+                      columns.Command(commands =>
+                      {
+                          commands.Edit(); // The "edit" command will edit and update data items
+                          commands.Destroy(); // The "destroy" command removes data items
+                      }).Title("Commands").Width(200);
+                  })
+                  .ToolBar(toolbar => toolbar.Create()) // The "create" command adds new data items
+                  .Editable(editable => editable.Mode(GridEditMode.InLine)) // Use inline editing mode
+                  .DataSource(dataSource =>
+                      dataSource.Ajax()
+                        .Model(model =>
+                        {
+                            model.Id(product => product.ProductID); // Specify the property which is the unique identifier of the model
+                            model.Field(product => product.ProductID).Editable(false); // Make the ProductID property not editable
+                        })
+                        .Create(create => create.Action("Products_Create", "Home")) // Action method invoked when the user saves a new data item
+                        .Read(read => read.Action("Products_Read", "Home"))  // Action method invoked when the grid needs data
+                        .Update(update => update.Action("Products_Update", "Home"))  // Action method invoked when the user saves an updated data item
+                        .Destroy(destroy => destroy.Action("Products_Destroy", "Home")) // Action method invoked when the user removes a data item
+                  )
+                  .Pageable()
+            )
+1. Build and run the application
+![Final result](images/inline-grid.png)
