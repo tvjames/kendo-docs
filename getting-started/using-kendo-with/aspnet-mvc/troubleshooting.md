@@ -149,3 +149,16 @@ or change HTTP verb of the DataSource:
                       read.Action("GetCascadeCategories", "ComboBox").Type(HttpVerbs.Post);
                   })
             )
+
+## Only one instance of the widget works in the page
+
+This will happen if two or more widgets have the same `Name()`. The value specified via the `Name()` method is used as the `id` HTML attribute of the widget. The latter must be unique in the page.
+
+### Solution
+
+Always use unique widget names. For example you can append an index to make the name unique.
+
+## Loading a partial view that contains a Kendo UI widget works only the first time
+
+This happens because there is more than one Kendo UI widget with the same `Name()`. Check the solution of the previous problem.
+
