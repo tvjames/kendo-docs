@@ -90,7 +90,7 @@ The parsed parts of the URL are passed as parameters to the route callback.
             router.navigate("/items/books/59");
 
             // ...
-            router.navigate("/items");
+            router.navigate("/items/accessories");
 
             // ...
             router.navigate("/items/books");
