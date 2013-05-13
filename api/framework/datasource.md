@@ -1275,6 +1275,9 @@ If the value of `transport.create` is a function, the data source invokes that f
 
 If the value of `transport.create` is a string the data source uses this string as the URL of the remote service.
 
+> *Important:* The remote service must return the inserted data items and the data item field configured as the `id` must be set. For example
+if the `id` of the data item is `ProductID` the "create" server response must be `[{ "ProductID": 79 }]`.
+
 #### Example - set the create remote service
 
     <script>
@@ -1300,7 +1303,7 @@ If the value of `transport.create` is a string the data source uses this string 
     // create a new data item
     dataSource.add( { ProductName: "New Product" });
     // save the created data item
-    dataSource.sync();
+    dataSource.sync(); // server response is [{"ProductID":78,"ProductName":"New Product","UnitPrice":0,"UnitsInStock":0,"Discontinued":false}]
     </script>
 
 #### Example - set create as a function
