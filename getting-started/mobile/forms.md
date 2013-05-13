@@ -23,7 +23,7 @@ Select elements are also automatically styled for each platform and will use the
 
 > **Important:** To avoid many Android and WP8 form issues, please use native scroller in all Views that require text entry! Check the example below.
 
-    <div data-role="view" data-use-native-scroller="true">
+    <div data-role="view" data-use-native-scrolling="true">
         <form action="./index.html">
             <ul data-role="listview" data-style="inset">
                 <li>
