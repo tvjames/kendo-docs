@@ -160,6 +160,7 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
         }
 1.  In the view configure the grid to use the action methods created in the previous steps.
     - Index.aspx (ASPX)
+
             <%: Html.Kendo().Grid<KendoGridBatchEditing.Models.ProductViewModel>()
                   .Name("grid")
                   .Columns(columns =>
