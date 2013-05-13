@@ -190,7 +190,7 @@ Width of MultiSelect' drop-down list can be changed via jQuery width method.
 ## Pre-select values on initial loading
 
 When deffered binding (autoBind: false) is used you will need to specify a list of data items instead of just list of strings.
-This functionality is supported in Q1 SP1 2013 release and newer.
+This functionality is supported in Q1 SP1 2013 release and later versions of Kendo UI.
 
     <!-- MultiSelect initialization -->
     <script>
@@ -215,8 +215,6 @@ This functionality is supported in Q1 SP1 2013 release and newer.
             });
         });
     </script>
-
-> Please note that you will need to use a list of strings if the **autoBind** option is set to **true**.
 
 ## Accessing an Existing MultiSelect
 

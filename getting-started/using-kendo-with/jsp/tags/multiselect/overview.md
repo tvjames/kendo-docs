@@ -34,9 +34,41 @@ Here is how to configure the Kendo MultiSelect for binding to a data passed as m
 
 4.  Add a server bound multiSelect:
 
-        <kendo:multiSelect name="productMultiSelect" taTextField="productName" dataValueField="productId" filter="startswith">
+        @RequestMapping(value = {"index"}, method = RequestMethod.GET)
+        public String index(Model model) {
+            model.addAttribute("products", product.getList());
+            return "web/multiselect/index";
+        }
+
+        <kendo:multiSelect name="productMultiSelect" dataTextField="productName" dataValueField="productId" filter="startswith">
             <kendo:dataSource data="${products}"></kendo:dataSource>
         </kendo:multiSelect>
+
+## Pre-select values on initial loading
+
+When deffered binding (autoBind="false") is used you will need to specify a list of data items instead of just list of strings.
+This functionality is supported in Q1 SP1 2013 release and later versions of Kendo UI.
+
+        @RequestMapping(value = {"index"}, method = RequestMethod.GET)
+        public String index(Model model) {
+            model.addAttribute("products", product.getList());
+
+            Product product1 = new Product();
+            product1.setProductId(1);
+            product1.setProductName("Chai");
+
+            List<Product> values = new ArrayList<>();
+            values.add(product1);
+
+            model.addAttribute("values", values);
+
+            return "web/multiselect/index";
+        }
+
+    <kendo:multiSelect name="productMultiSelect" taTextField="productName" dataValueField="productId" filter="startswith"
+        autoBind="false" value="${values}">
+        <kendo:dataSource data="${products}"></kendo:dataSource>
+    </kendo:multiSelect>
 
 ## Accessing an Existing MultiSelect
 

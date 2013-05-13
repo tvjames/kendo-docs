@@ -53,7 +53,25 @@ Here is how to configure the multiselect for local binding:
         <?php
         echo $multiSelect->render();
         ?>
+## Pre-select values on initial loading
 
+When deffered binding (autoBind: false) is used you will need to specify a list of data items instead of just list of strings.
+This functionality is supported in Q1 SP1 2013 release and later versions of Kendo UI.
+
+        <?php
+        $dataSource = new \Kendo\Data\DataSource();
+        $dataSource->data($data);
+
+        $multiSelect = new \Kendo\UI\MultiSelect('MultiSelect');
+        $multiSelect->dataSource($dataSource);
+        $multiSelect->dataTextField('name');
+        $multiSelect->dataValueField('age');
+        $multiSelect->autoBind(false);
+        $multiSelect->value(array(
+            array('name' => 'John Doe', 'age' => 32),
+            array('name' => 'Jane Doe', 'age' => 29)
+        ));
+        ?>
 ## Getting Client-side Reference
 
 You can reference the client-side Kendo MultiSelect instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).

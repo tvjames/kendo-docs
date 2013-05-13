@@ -175,6 +175,55 @@ define event handler, it will be used.
 
 As you can see the multiselect sends the input's value only if the end-user starts to type in it.
 
+## Pre-select values on initial loading
+
+When deffered binding (AutoBind: false) is used you will need to specify a list of data items instead of just list of strings.
+This functionality is supported in Q1 SP1 2013 release and later versions of Kendo UI.
+
+- WebForms
+
+        <%= Html.Kendo().MultiSelect()
+                .Name("productMultiSelect") //The name of the multiselect is mandatory. It specifies the "id" attribute of the widget.
+                .DataTextField("ProductName") //Specifies which property of the Product to be used by the multiselect as a text.
+                .DataValueField("ProductID") //Specifies which property of the Product to be used by the multiselect as a value.
+                .Filter(FilterType.Contains)
+                .AutoBind(false)
+                .DataSource(source =>
+                {
+                   source.Read(read =>
+                   {
+                        read.Action("GetProducts", "Home") //Set the Action and Controller name
+                            .Data("onAdditionalData");
+                   });
+                })
+                .Value(new List<Product> {
+                  new Product { ProductName = "Chai", ProductID = 1 },
+                  new Product { ProductName = "Chang", ProductID = 2 }
+                })
+        %>
+
+- Razor
+
+        @(Html.Kendo().MultiSelect()
+              .Name("productMultiSelect") //The name of the multiselect is mandatory. It specifies the "id" attribute of the widget.
+              .DataTextField("ProductName") //Specifies which property of the Product to be used by the multiselect as a text.
+              .DataValueField("ProductID") //Specifies which property of the Product to be used by the multiselect as a value.
+              .Filter(FilterType.Contains)
+              .AutoBind(false)
+              .DataSource(source =>
+              {
+                 source.Read(read =>
+                 {
+                      read.Action("GetProducts", "Home") //Set the Action and Controller name
+                          .Data("onAdditionalData");
+                 });
+              })
+              .Value(new List<Product> {
+                new Product { ProductName = "Chai", ProductID = 1 },
+                new Product { ProductName = "Chang", ProductID = 2 }
+              })
+        )
+
 ## Accessing an Existing MultiSelect
 
 You can reference an existing MultiSelect instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
