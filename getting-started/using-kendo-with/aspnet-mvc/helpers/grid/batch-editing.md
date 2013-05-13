@@ -36,9 +36,12 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
 
         public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
         {
-            var northwind = new NorthwindEntities();
-            IQueryable<Product> products = northwind.Products;
-            DataSourceResult result = products.ToDataSourceResult(request);
+            using (var northwind = new NorthwindEntities())
+            {
+                IQueryable<Product> products = northwind.Products;
+                DataSourceResult result = products.ToDataSourceResult(request);
+                return Json(result);
+            }
         }
 1.  Add new action method to HomeController.cs. It will be responsible for saving new data items. Name the method "Products_Create".
 

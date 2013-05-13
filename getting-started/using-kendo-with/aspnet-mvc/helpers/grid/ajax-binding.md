@@ -46,18 +46,22 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
 
         public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
         {
-            var northwind = new NorthwindEntities();
-            IQueryable<Product> products = northwind.Products;
-            DataSourceResult result = products.ToDataSourceResult(request);
+            using (var northwind = new NorthwindEntities())
+            {
+                IQueryable<Product> products = northwind.Products;
+                DataSourceResult result = products.ToDataSourceResult(request);
+            }
         }
 1.  Return the `DataSourceResult` as JSON. Now let's configure Kendo UI Grid for ajax binding.
 
         public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
         {
-            var northwind = new NorthwindEntities();
-            IQueryable<Product> products = northwind.Products;
-            DataSourceResult result = products.ToDataSourceResult(request);
-            return Json(result);
+            using (var northwind = new NorthwindEntities())
+            {
+                IQueryable<Product> products = northwind.Products;
+                DataSourceResult result = products.ToDataSourceResult(request);
+                return Json(result);
+            }
         }
 1.  In the view configure the grid to use the action method created in the previous steps.
     - Index.aspx (ASPX)
@@ -163,16 +167,18 @@ This tutorial will show how to use view models and Kendo UI Grid for ASP.NET MVC
 
             public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
             {
-                var northwind = new NorthwindEntities();
-                IQueryable<Product> products = northwind.Products;
-                // Convert the Product entities to ProductViewModel instances
-                DataSourceResult result = products.ToDataSourceResult(request, product => new ProductViewModel
+                using (var northwind = new NorthwindEntities())
                 {
-                    ProductID = product.ProductID,
-                    ProductName = product.ProductName,
-                    UnitsInStock = product.UnitsInStock
-                });
-                return Json(result);
+                    IQueryable<Product> products = northwind.Products;
+                    // Convert the Product entities to ProductViewModel instances
+                    DataSourceResult result = products.ToDataSourceResult(request, product => new ProductViewModel
+                            {
+                            ProductID = product.ProductID,
+                            ProductName = product.ProductName,
+                            UnitsInStock = product.UnitsInStock
+                            });
+                    return Json(result);
+                }
             }
 
 ## Pass Additional Data to the Action Method
