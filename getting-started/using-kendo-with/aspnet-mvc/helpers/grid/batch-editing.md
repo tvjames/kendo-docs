@@ -182,7 +182,6 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
                   .DataSource(dataSource =>
                       dataSource.Ajax()
                         .Batch(true) // Enable batch updates
-                        .Events(events => events.Error("grid_error")) // Handle the "error" event
                         .Model(model =>
                         {
                             model.Id(product => product.ProductID); // Specify the property which is the unique identifier of the model
@@ -218,7 +217,6 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
                   .DataSource(dataSource =>
                       dataSource.Ajax()
                         .Batch(true) // Enable batch updates
-                        .Events(events => events.Error("grid_error")) // Handle the "error" event
                         .Model(model =>
                         {
                             model.Id(product => product.ProductID); // Specify the property which is the unique identifier of the model
