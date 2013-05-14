@@ -85,33 +85,38 @@ to the **~/Scripts/cultures/** directory of your application.
                 kendo.culture("@culture");
             </script>
 
-## DateTime model binding
+## Number model binding
 
-To make ASP.NET MVC parse DateTime objects using the `CurrentCulture` setting a custom model binder is needed.
+Currently the Kendo UI widgets send numbers with "." as a decimal separator. This requires a custom model binder when the `CurrentCulture` uses a different decimal separator.
 
-1. Create a new file named **CultureAwareDateTimeModelBinder.cs**.
+1. Create a new file named **InvariantNumericBinder.cs**.
 1. Paste the following code
 
-        public class CultureAwareDateTimeModelBinder : IModelBinder
+        public class InvariantNumericBinder<T> : IModelBinder
+            where T : struct
         {
             public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
             {
                 ValueProviderResult valueResult = bindingContext.ValueProvider
                     .GetValue(bindingContext.ModelName);
+
                 ModelState modelState = new ModelState { Value = valueResult };
                 object actualValue = null;
-                try
+
+                if (valueResult != null)
                 {
-                    // Use the CurrentCulture when parsing the date
-                    actualValue = Convert.ToDateTime(valueResult.AttemptedValue,
-                        CultureInfo.CurrentCulture);
-                }
-                catch (FormatException e)
-                {
-                    modelState.Errors.Add(e);
+                    try
+                    {
+                        actualValue = Convert.ChangeType(valueResult.AttemptedValue, typeof(T), System.Globalization.CultureInfo.InvariantCulture);
+                    }
+                    catch (FormatException e)
+                    {
+                        modelState.Errors.Add(e);
+                    }
+
+                    bindingContext.ModelState.Add(bindingContext.ModelName, modelState);
                 }
 
-                bindingContext.ModelState.Add(bindingContext.ModelName, modelState);
                 return actualValue;
             }
         }
@@ -120,7 +125,12 @@ To make ASP.NET MVC parse DateTime objects using the `CurrentCulture` setting a 
         protected void Application_Start()
         {
             // -- snip --
-            ModelBinders.Binders.Add(typeof(DateTime), new CultureAwareDateTimeModelBinder());
+            ModelBinders.Binders.Add(typeof(decimal?), new InvariantNumericBinder<decimal>());
+            ModelBinders.Binders.Add(typeof(decimal), new InvariantNumericBinder<decimal>());
+            ModelBinders.Binders.Add(typeof(float?), new InvariantNumericBinder<float>());
+            ModelBinders.Binders.Add(typeof(float), new InvariantNumericBinder<float>());
+            ModelBinders.Binders.Add(typeof(double?), new InvariantNumericBinder<double>());
+            ModelBinders.Binders.Add(typeof(double), new InvariantNumericBinder<double>());
         }
 
 ## Localized user interface
