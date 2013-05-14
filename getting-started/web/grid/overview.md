@@ -47,6 +47,10 @@ There are two primary ways to create a Kendo Grid:
       </tbody>
      </table>
 
+> The Grid data field names are either created from the header cell content or the `data-field` attributes.
+The data field names should be valid Javascript identifiers, that's why using data-field attributes is highly recommended.
+Otherwise there would be limitations imposed on the header cell content (e.g. no special characters and spaces).
+	 
 ### Initialize the Kendo Grid
 
       $(document).ready(function(){
