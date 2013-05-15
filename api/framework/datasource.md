@@ -675,7 +675,7 @@ The aggregate results should have the following format:
 
 ### schema.data `Function|String`
 
-The field from the server response which contains the data items. Can be set to a functin which is called to
+The field from the server response which contains the data items. Can be set to a function which is called to
 return the data items for the response.
 
 #### Returns
