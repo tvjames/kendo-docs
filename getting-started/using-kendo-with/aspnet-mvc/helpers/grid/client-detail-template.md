@@ -92,7 +92,7 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
                   .Pageable()
             )
 1.  Define the client template using [Kendo UI Template](/getting-started/framework/templates/overview) syntax. The context of the template is the data item (Product entity) to which the current grid row is bound.
-> Any "#" symbols that are not part of a template expression (#: #, # # or #= #) must be escaped ("\#").
+> Any "#" symbols that are not part of a template expression (#: #, # # or #= #) must be escaped ("\\#").
 
         <script id="client-template" type="text/x-kendo-template">
           <div>ProductID: #: ProductID #</div>
