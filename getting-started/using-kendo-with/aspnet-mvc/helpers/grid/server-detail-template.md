@@ -2,7 +2,7 @@
 title: Server Detail Template
 meta_title: Configure Kendo UI Grid Server Detail Template
 meta_description: Set the detail template of Kendo UI Grid used during server binding
-slug: mvc-grid-server-detail-template
+slug: mvc-grid-detail-template
 publish: true
 ---
 
@@ -100,7 +100,7 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
                   </text>)
             )
 1. Build and run.
-![Server detail template](images/server-detail-template.png)
+![Server detail template](images/detail-template.png)
 
 ## Server hierarchy
 
@@ -195,4 +195,4 @@ Name the model "Northwind.edmx" and click "Next". This will start the "Entity Da
                   </text>)
             )
 1. Build and run.
-![Server hierarchy](images/server-hierarchy.png)
+![Server hierarchy](images/hierarchy.png)
