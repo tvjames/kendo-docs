@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.Chart Hello new MORE AND MORE AGAInedgwasdfadddddRRRRRR
+# kendo.dataviz.ui.Chart back to basics
 
 ## Configuration
 
