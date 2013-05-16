@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.Chart
+# kendo.dataviz.ui.Chart SITEFINITY
 
 ## Configuration
 
@@ -23,20 +23,20 @@ Category index at which the first value axis crosses this axis. (Only for object
 
 Category indicies at which the value axes cross the category axis. (Only for array)
 
-**Note:&amp;nbsp;** Specify an index greater than or equal to the number
+**Note:&amp;amp;nbsp;** Specify an index greater than or equal to the number
 of categories to denote the far end of the axis.
 
 #### Example
-    &lt;p&gt;
-    $(&quot;#chart&quot;).kendoChart({
+    &amp;lt;p&amp;gt;
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          categoryAxis: {
-             categories: [&quot;A&quot;, &quot;B&quot;],
+             categories: [&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;],
              axisCrossingValue: [0, 100]
          },
-         valueAxis: [{ }, { name: &quot;secondary&quot; }]
+         valueAxis: [{ }, { name: &amp;quot;secondary&amp;quot; }]
          ...
     })
-    &lt;/p&gt;
+    &amp;lt;/p&amp;gt;
 
 ### categoryAxis.categories `Array`
 
@@ -44,7 +44,7 @@ Array of category names.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         categoryAxis: {
             categories: [ 2005, 2006, 2007, 2008, 2009 ]
         },
@@ -64,13 +64,13 @@ The data field containing the category name.
 
     // assuming the following data...
     var data = [ { sales: 200, year: 2005 }, { sales: 300, year: 2006 }, { sales: 400, year: 2007 }];
-    // specify the &quot;year&quot; as the field for the category axis
-    $(&quot;#chart&quot;).kendoChart({
+    // specify the &amp;quot;year&amp;quot; as the field for the category axis
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         dataSource: {
             data: data
         },
         categoryAxis: {
-            field: &quot;year&quot;
+            field: &amp;quot;year&amp;quot;
         },
         ...
     });
@@ -93,39 +93,39 @@ The background color of the labels. Any valid CSS color string will work here, i
 
 The border of the labels.
 
-### categoryAxis.labels.border.color `String`*(default: &quot;black&quot;)*
+### categoryAxis.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border. Any valid CSS color string will work here, including hex and rgb.
 
-### categoryAxis.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### categoryAxis.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -137,7 +137,7 @@ The width of the border.
 
 The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
 
-### categoryAxis.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### categoryAxis.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
@@ -201,19 +201,19 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [{
-             name: &quot;Series 1&quot;,
+             name: &amp;quot;Series 1&amp;quot;,
              data: [200, 450, 300, 125]
          }],
          categoryAxis: {
              categories: [2000, 2001, 2002, 2003],
              labels: {
                  // labels template
-                 template: &quot;Year: #= value #&quot;
+                 template: &amp;quot;Year: #= value #&amp;quot;
              }
          }
     });
@@ -226,41 +226,41 @@ The visibility of the labels.
 
 Configures the axis line. This will also effect major and minor ticks, but not gridlines.
 
-### categoryAxis.line.color `String`*(default: &quot;black&quot;)*
+### categoryAxis.line.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the lines. Any valid CSS color string will work here, including hex and rgb.
 
 **Note:** This will also effect the major and minor ticks, but not the grid lines.
 
-### categoryAxis.line.dashType `String`*(default: &quot;solid&quot;)*
+### categoryAxis.line.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the line.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -278,39 +278,39 @@ not the grid lines.
 Configures the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
-### categoryAxis.majorGridLines.color `String`*(default: &quot;black&quot;)*
+### categoryAxis.majorGridLines.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the lines. Any valid CSS color string will work here, including hex and rgb.
 
-### categoryAxis.majorGridLines.dashType `String`*(default: &quot;solid&quot;)*
+### categoryAxis.majorGridLines.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the grid lines.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -342,7 +342,7 @@ the body of the chart.
 
 Note that minor grid lines are not visible by default, therefore none of these settings will take effect with the minor grid lines visibility being set to **true**.
 
-### categoryAxis.minorGridLines.color `String`*(default: &quot;black&quot;)*
+### categoryAxis.minorGridLines.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the lines. Any valid CSS color string will work here, including hex and
 rgb.
@@ -350,35 +350,35 @@ rgb.
 Note that this setting has no effect if the visibility of the minor
 grid lines is not set to **true**.
 
-### categoryAxis.minorGridLines.dashType `String`*(default: &quot;solid&quot;)*
+### categoryAxis.minorGridLines.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the grid lines.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -386,7 +386,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 The visibility of the lines.
 
-### categoryAxis.minorGridLines.width `Number`*(default: 1&gt; The width of the lines. &lt;p)*
+### categoryAxis.minorGridLines.width `Number`*(default: 1&amp;gt; The width of the lines. &amp;lt;p)*
 
 The width of the lines.
 
@@ -415,15 +415,15 @@ The unique axis name.
 The plot bands of category axis.
 The plot band fields:
 
-#### *&quot;from&quot;*
+#### *&amp;quot;from&amp;quot;*
 
 The start position of the plot band.
 
-#### *&quot;to&quot;*
+#### *&amp;quot;to&amp;quot;*
 
 The end position of the plot band.
 
-#### *&quot;color&quot;*
+#### *&amp;quot;color&amp;quot;*
 
 The color of the plot band.
 
@@ -445,40 +445,40 @@ hex and rgb.
 
 The border of the title.
 
-### categoryAxis.title.border.color `String`*(default: &quot;black&quot;)*
+### categoryAxis.title.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border. Any valid CSS color string will work here, including
 hex and rgb.
 
-### categoryAxis.title.border.dashType `String`*(default: &quot;solid&quot;)*
+### categoryAxis.title.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -490,7 +490,7 @@ The width of the border.
 
 The text color of the title. Any valid CSS color string will work here, including hex and rgb.
 
-### categoryAxis.title.font `String`*(default: &quot;16px Arial,Helvetica,sans-serif&quot;)*
+### categoryAxis.title.font `String`*(default: &amp;quot;16px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the title.
 
@@ -500,7 +500,7 @@ The margin of the title.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         categoryAxis: {
             title: {
                 // sets the top, right, bottom and left margin to 3px.
@@ -510,7 +510,7 @@ The margin of the title.
         ...
     });
     //
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         categoryAxis: {
             title: {
                 // sets the top and left margin to 1px
@@ -521,27 +521,27 @@ The margin of the title.
         ...
     });
 
-### categoryAxis.title.position `String`*(default: &quot;center&quot;)*
+### categoryAxis.title.position `String`*(default: &amp;quot;center&amp;quot;)*
 
 The position of the title.
 
-#### *&quot;top&quot;*
+#### *&amp;quot;top&amp;quot;*
 
 The axis title is positioned on the top (applicable to vertical axis)
 
-#### *&quot;bottom&quot;*
+#### *&amp;quot;bottom&amp;quot;*
 
 The axis title is positioned on the bottom (applicable to vertical axis)
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The axis title is positioned on the left (applicable to horizontal axis)
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The axis title is positioned on the right (applicable to horizontal axis)
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
 The axis title is positioned in the center
 
@@ -557,22 +557,22 @@ The text of the title.
 
 The visibility of the title.
 
-### categoryAxis.type `String`*(default: &quot;category&quot;)*
+### categoryAxis.type `String`*(default: &amp;quot;category&amp;quot;)*
 
 The axis type.
 
-#### *&quot;category&quot;*
+#### *&amp;quot;category&amp;quot;*
 
 Discrete category axis.
 
-#### *&quot;date&quot;*
+#### *&amp;quot;date&amp;quot;*
 
 Specialized axis for displaying chronological data.
 
 ### categoryAxis.autoBaseUnitSteps `Object`
 
 Specifies the discrete **baseUnitStep** values when
-either **baseUnit** is set to &quot;fit&quot; or **baseUnitStep** is set to &quot;auto&quot;.
+either **baseUnit** is set to &amp;quot;fit&amp;quot; or **baseUnitStep** is set to &amp;quot;auto&amp;quot;.
 
 The default configuration is as follows:
 * `minutes: [1, 2, 5, 15, 30]`
@@ -586,14 +586,14 @@ Each setting can be overriden individually.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         categoryAxis: {
             categories: [
-                new Date(&quot;2012/02/01 00:00:00&quot;),
-                new Date(&quot;2012/02/02 00:00:00&quot;),
-                new Date(&quot;2012/02/20 00:00:00&quot;)
+                new Date(&amp;quot;2012/02/01 00:00:00&amp;quot;),
+                new Date(&amp;quot;2012/02/02 00:00:00&amp;quot;),
+                new Date(&amp;quot;2012/02/20 00:00:00&amp;quot;)
             ],
-            baseUnitStep: &quot;auto&quot;,
+            baseUnitStep: &amp;quot;auto&amp;quot;,
             autoBaseUnitSteps: {
                 days: [3]
             }
@@ -615,7 +615,7 @@ between subsequent categories. Available options:
 * years
 * **fit**
 
-Setting **baseUnit** to &quot;fit&quot; will set such base unit and **baseUnitStep**
+Setting **baseUnit** to &amp;quot;fit&amp;quot; will set such base unit and **baseUnitStep**
 that the total number of categories does not exceed **maxDateGroups**.
 
 Series data is aggregated for the specified base unit by using the
@@ -624,9 +624,9 @@ Series data is aggregated for the specified base unit by using the
 ### categoryAxis.baseUnitStep `Object`*(default: 1)*
 
 Sets the step (interval) between categories in base units.
-Specifiying &quot;auto&quot; will set the step to such value that the total number of categories does not exceed **maxDateGroups**.
+Specifiying &amp;quot;auto&amp;quot; will set the step to such value that the total number of categories does not exceed **maxDateGroups**.
 
-This option is ignored if **baseUnit** is set to &quot;fit&quot;.
+This option is ignored if **baseUnit** is set to &amp;quot;fit&amp;quot;.
 
 ### categoryAxis.labels `Object`
 
@@ -640,25 +640,25 @@ Culture to use for formatting the dates. See [Globalization](http://www.kendoui.
 
 Date format strings
 
-#### *&quot;hours&quot;*
+#### *&amp;quot;hours&amp;quot;*
 
-&quot;HH:mm&quot;
+&amp;quot;HH:mm&amp;quot;
 
-#### *&quot;days&quot;*
+#### *&amp;quot;days&amp;quot;*
 
-&quot;M/d&quot;
+&amp;quot;M/d&amp;quot;
 
-#### *&quot;weeks&quot;*
+#### *&amp;quot;weeks&amp;quot;*
 
-&quot;M/d&quot;
+&amp;quot;M/d&amp;quot;
 
-#### *&quot;months&quot;*
+#### *&amp;quot;months&amp;quot;*
 
-&quot;MMM &#39;yy&quot;
+&amp;quot;MMM &amp;#39;yy&amp;quot;
 
-#### *&quot;years&quot;*
+#### *&amp;quot;years&amp;quot;*
 
-&quot;yyyy&quot;
+&amp;quot;yyyy&amp;quot;
 
 The Chart will choose the appropriate format for the current `baseUnit`.
 Setting the labels **format** option will override these defaults.
@@ -688,7 +688,7 @@ It will be ignored if either bar, column, ohlc or candlestick series are plotted
 
 ### categoryAxis.weekStartDay `Number`*(default: kendo.days.Sunday)*
 
-Specifies the week start day when **baseUnit** is set to &quot;weeks&quot;.
+Specifies the week start day when **baseUnit** is set to &amp;quot;weeks&amp;quot;.
 Use the *kendo.days* constants to specify the day by name.
 
 * kendo.days.Sunday (0)
@@ -703,7 +703,7 @@ Use the *kendo.days* constants to specify the day by name.
 ### categoryAxis.maxDateGroups `Number`*(default: 10)*
 
 Specifies the maximum number of groups (categories) to produce when
-either **baseUnit** is set to &quot;fit&quot; or **baseUnitStep** is set to &quot;auto&quot;.
+either **baseUnit** is set to &amp;quot;fit&amp;quot; or **baseUnitStep** is set to &amp;quot;auto&amp;quot;.
 
 This option is ignored in all other cases.
 
@@ -716,7 +716,7 @@ The visibility of the axis.
 The chart area configuration options.
 This is the entire visible area of the chart.
 
-### chartArea.background `String`*(default: &quot;white&quot;)*
+### chartArea.background `String`*(default: &amp;quot;white&amp;quot;)*
 
 The background color of the chart area.
 
@@ -728,39 +728,39 @@ The background opacity of the chart area.
 
 The border of the chart area.
 
-### chartArea.border.color `String`*(default: &quot;black&quot;)*
+### chartArea.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border.
 
-### chartArea.border.dashType `String`*(default: &quot;solid&quot;)*
+### chartArea.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -795,34 +795,34 @@ DataSource configuration or instance.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         dataSource: {
             transport: {
-                 read: &quot;spain-electricity.json&quot;
+                 read: &amp;quot;spain-electricity.json&amp;quot;
             }
         },
         series: [{
-            field: &quot;value&quot;
+            field: &amp;quot;value&amp;quot;
         }],
         categoryAxis: {
-            field: &quot;year&quot;
+            field: &amp;quot;year&amp;quot;
         }
     });
 
     // Alternative configuration
     var dataSource = new kendo.data.DataSource({
         transport: {
-             read: &quot;spain-electricity.json&quot;
+             read: &amp;quot;spain-electricity.json&amp;quot;
         }
     });
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         dataSource: dataSource,
         series: [{
-            field: &quot;value&quot;
+            field: &amp;quot;value&amp;quot;
         }],
         categoryAxis: {
-            field: &quot;year&quot;
+            field: &amp;quot;year&amp;quot;
         }
     });
 
@@ -832,18 +832,18 @@ The chart legend configuration options.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // set the background color to a dark blue
-            background: &quot;#336699&quot;,
+            background: &amp;quot;#336699&amp;quot;,
             labels: {
                 // set the font to a size of 14px
-                font: &quot;14px Arial,Helvetica,sans-serif&quot;,
+                font: &amp;quot;14px Arial,Helvetica,sans-serif&amp;quot;,
                 // set the color to red
-                color: &quot;red&quot;
+                color: &amp;quot;red&amp;quot;
             },
             // move the legend to the left
-            position: &quot;left&quot;,
+            position: &amp;quot;left&amp;quot;,
             // move the legend a bit closer to the chart by setting the x offset to 20
             offsetX: 20,
             // move the legend up to the top by setting the y offset to -100
@@ -851,7 +851,7 @@ The chart legend configuration options.
         }
     });
 
-### legend.background `String`*(default: &quot;white&quot;)*
+### legend.background `String`*(default: &amp;quot;white&amp;quot;)*
 
  The background color of the legend. Any valid CSS color string will work here, including hex and rgb.
 
@@ -861,54 +861,54 @@ The border of the legend.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             border: {
                 // set the border width to 2 pixels
                 width: 2,
                 // set the color to grey
-                color: &quot;grey&quot;,
+                color: &amp;quot;grey&amp;quot;,
                 // set the dash type to solid. this is the default so we could leave this line out.
-                dashType: &quot;solid&quot;
+                dashType: &amp;quot;solid&amp;quot;
             }
         },
         ...
     });
 
-### legend.border.color `String`*(default: &quot;black&quot;)*
+### legend.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### legend.border.dashType `String`*(default: &quot;solid&quot;)*
+### legend.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -924,7 +924,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 Configures the legend labels.
 
-### legend.labels.color `String`*(default: &quot;black&quot;)*
+### legend.labels.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
@@ -950,7 +950,7 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // sets the top, right, bottom and left margin to 3px.
             margin: 3
@@ -958,7 +958,7 @@ Template variables:
         ...
     });
     //
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // sets the top and left margin to 1px
             // margin right and bottom are with 10px (by default)
@@ -970,12 +970,12 @@ Template variables:
 ### legend.offsetX `Number`*(default: 0)*
 
  The X offset from its position.  The offset is relative to the current position of the legend.
-For instance, a value of 20 will move the legend 20 pixels to the right of it&#39;s initial position.  A negative value will move the legend
+For instance, a value of 20 will move the legend 20 pixels to the right of it&amp;#39;s initial position.  A negative value will move the legend
 to the left of the current position.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // move the legend to the left side of the chart
             offsetX: 20
@@ -986,12 +986,12 @@ to the left of the current position.
 ### legend.offsetY `Number`*(default: 0)*
 
  The Y offset from its position.  The offset is relative to the current position of the legend.
-For instance, a value of 20 will move the legend 20 pixels down from it&#39;s initial position.  A negative value will move the legend
+For instance, a value of 20 will move the legend 20 pixels down from it&amp;#39;s initial position.  A negative value will move the legend
 upwards from the current position.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // move the legend up 100 pixels
             offsetY: -100
@@ -1006,7 +1006,7 @@ upwards from the current position.
 #### Example
 
     // sets the top, right, bottom and left padding to 3px.
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // sets the top, right, bottom and left padding to 3px.
             padding: 3
@@ -1014,7 +1014,7 @@ upwards from the current position.
         ...
     });
     //
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
            // sets the top and left padding to 1px
            // padding right and bottom are with 5px (by default)
@@ -1028,23 +1028,23 @@ upwards from the current position.
  The positions of the legend.
 
 
-#### *&quot;top&quot;*
+#### *&amp;quot;top&amp;quot;*
 
 The legend is positioned on the top.
 
-#### *&quot;bottom&quot;*
+#### *&amp;quot;bottom&amp;quot;*
 
 The legend is positioned on the bottom.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The legend is positioned on the left.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The legend is positioned on the right.
 
-#### *&quot;custom&quot;*
+#### *&amp;quot;custom&amp;quot;*
 
 The legend is positioned using OffsetX and OffsetY.
 
@@ -1054,7 +1054,7 @@ The legend is positioned using OffsetX and OffsetY.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         legend: {
             // hide the legend
             visible: false
@@ -1066,7 +1066,7 @@ The legend is positioned using OffsetX and OffsetY.
 
 The plot area configuration options. This is the area containing the plotted series.
 
-### plotArea.background `String`*(default: &quot;white&quot;)*
+### plotArea.background `String`*(default: &amp;quot;white&amp;quot;)*
 
  The background color of the plot area.
 
@@ -1078,40 +1078,40 @@ The plot area configuration options. This is the area containing the plotted ser
 
 The border of the plot area.
 
-### plotArea.border.color `String`*(default: &quot;black&quot;)*
+### plotArea.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### plotArea.border.dashType `String`*(default: &quot;solid&quot;)*
+### plotArea.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -1145,19 +1145,19 @@ Each series type has a different set of options.
 
 The type of the series.
 
-### series.type=&quot;area&quot; `Object`
+### series.type=&amp;quot;area&amp;quot; `Object`
 
 Available options for area series:
 
-### series.type=&quot;area&quot;.data `Array`
+### series.type=&amp;quot;area&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;area&quot;.field `String`
+### series.type=&amp;quot;area&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;area&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;area&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -1169,34 +1169,34 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;area&quot;.name `String`
+### series.type=&amp;quot;area&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;area&quot;.aggregate `String`*(default: &quot;max&quot;)*
+### series.type=&amp;quot;area&amp;quot;.aggregate `String`*(default: &amp;quot;max&amp;quot;)*
 
  Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.
 
 
-#### *&quot;max&quot;*
+#### *&amp;quot;max&amp;quot;*
 
 The highest value for the date period.
 
-#### *&quot;min&quot;*
+#### *&amp;quot;min&amp;quot;*
 
 The lowest value for the date period.
 
-#### *&quot;sum&quot;*
+#### *&amp;quot;sum&amp;quot;*
 
 The sum of all values for the date period.
 
-#### *&quot;count&quot;*
+#### *&amp;quot;count&amp;quot;*
 
 The number of values for the date period.
 
-#### *&quot;avg&quot;*
+#### *&amp;quot;avg&amp;quot;*
 
 The average of all values for the date period.
 
@@ -1204,81 +1204,81 @@ The average of all values for the date period.
 
 User-defined aggregate function.
 
-### series.type=&quot;area&quot;.color `String`
+### series.type=&amp;quot;area&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;area&quot;.labels `Object`
+### series.type=&amp;quot;area&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;area&quot;.labels.background `String`
+### series.type=&amp;quot;area&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;area&quot;.labels.border `Object`
+### series.type=&amp;quot;area&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;area&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;area&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;area&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;area&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;area&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;area&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;area&quot;.labels.color `String`
+### series.type=&amp;quot;area&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;area&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;area&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;area&quot;.labels.format `String`
+### series.type=&amp;quot;area&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;area&quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
+### series.type=&amp;quot;area&amp;quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
 
 The margin of the labels.
 
@@ -1291,7 +1291,7 @@ The margin of the labels.
     // margin left and right are with 5px (by default)
     margin: { top: 1, bottom: 1 }
 
-### series.type=&quot;area&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;area&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -1304,28 +1304,28 @@ The margin of the labels.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;area&quot;.labels.position `String`*(default: &quot;above&quot;)*
+### series.type=&amp;quot;area&amp;quot;.labels.position `String`*(default: &amp;quot;above&amp;quot;)*
 
 Defines the position of the area labels.
 
 
-#### *&quot;above&quot;*
+#### *&amp;quot;above&amp;quot;*
 
 The label is positioned at the top of the area chart marker.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The label is positioned at the right of the area chart marker.
 
-#### *&quot;below&quot;*
+#### *&amp;quot;below&amp;quot;*
 
 The label is positioned at the bottom of the area chart marker.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The label is positioned at the left of the area chart marker.
 
-### series.type=&quot;area&quot;.labels.template `String | Function`
+### series.type=&amp;quot;area&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -1340,18 +1340,18 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;area&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;area&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  labels: {
                      // label template
-                     template: &quot;#= value #%&quot;,
+                     template: &amp;quot;#= value #%&amp;quot;,
                      visible: true
                  }
              }
@@ -1361,138 +1361,138 @@ Template variables:
          }
     });
 
-### series.type=&quot;area&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;area&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;area&quot;.line `String | Object`
+### series.type=&amp;quot;area&amp;quot;.line `String | Object`
 
 The line of the area chart.
 
-### series.type=&quot;area&quot;.line.color `String`
+### series.type=&amp;quot;area&amp;quot;.line.color `String`
 
 The line color of the area chart.
 
-### series.type=&quot;area&quot;.line.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;area&amp;quot;.line.opacity `Number`*(default: 1)*
 
  The line opacity of the area chart.
 
-### series.type=&quot;area&quot;.line.width `String`*(default: 4)*
+### series.type=&amp;quot;area&amp;quot;.line.width `String`*(default: 4)*
 
  The line width of the area chart.
 
-### series.type=&quot;area&quot;.markers `Object`
+### series.type=&amp;quot;area&amp;quot;.markers `Object`
 
 Configures the area markers.
 
-### series.type=&quot;area&quot;.markers.background `String`
+### series.type=&amp;quot;area&amp;quot;.markers.background `String`
 
 The background color of the current series markers.
 
-### series.type=&quot;area&quot;.markers.border `Object`
+### series.type=&amp;quot;area&amp;quot;.markers.border `Object`
 
 The border of the markers.
 
-### series.type=&quot;area&quot;.markers.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;area&amp;quot;.markers.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;area&quot;.markers.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;area&amp;quot;.markers.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;area&quot;.markers.size `Number`*(default: 6)*
+### series.type=&amp;quot;area&amp;quot;.markers.size `Number`*(default: 6)*
 
  The marker size.
 
-### series.type=&quot;area&quot;.markers.type `String`*(default: &quot;circle&quot;)*
+### series.type=&amp;quot;area&amp;quot;.markers.type `String`*(default: &amp;quot;circle&amp;quot;)*
 
 Configures the markers shape type.
 
 
-#### *&quot;square&quot;*
+#### *&amp;quot;square&amp;quot;*
 
 The marker shape is square.
 
-#### *&quot;triangle&quot;*
+#### *&amp;quot;triangle&amp;quot;*
 
 The marker shape is triangle.
 
-#### *&quot;circle&quot;*
+#### *&amp;quot;circle&amp;quot;*
 
 The marker shape is circle.
 
-### series.type=&quot;area&quot;.markers.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;area&amp;quot;.markers.visible `Boolean`*(default: false)*
 
  The markers visibility.
 
-### series.type=&quot;area&quot;.missingValues `String`*(default: &quot;gap&quot;)*
+### series.type=&amp;quot;area&amp;quot;.missingValues `String`*(default: &amp;quot;gap&amp;quot;)*
 
 Configures the behavior for handling missing values in area series.
 
 
-#### *&quot;interpolate&quot;*
+#### *&amp;quot;interpolate&amp;quot;*
 
 The value is interpolated from neighboring points.
 
-#### *&quot;zero&quot;*
+#### *&amp;quot;zero&amp;quot;*
 
 The value is assumed to be zero.
 
-#### *&quot;gap&quot;*
+#### *&amp;quot;gap&amp;quot;*
 
 The line stops before the missing point and continues after it.
 
-### series.type=&quot;area&quot;.name `String`
+### series.type=&amp;quot;area&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;area&quot;.opacity `Number`*(default: 0.4)*
+### series.type=&amp;quot;area&amp;quot;.opacity `Number`*(default: 0.4)*
 
  The series opacity.
 
-### series.type=&quot;area&quot;.stack `Boolean`*(default: false)*
+### series.type=&amp;quot;area&amp;quot;.stack `Boolean`*(default: false)*
 
 A value indicating if the series should be stacked.
 
-### series.type=&quot;area&quot;.tooltip `Object`
+### series.type=&amp;quot;area&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;area&quot;.tooltip.background `String`
+### series.type=&amp;quot;area&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;area&quot;.tooltip.border `Object`
+### series.type=&amp;quot;area&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;area&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;area&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;area&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;area&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;area&quot;.tooltip.color `String`
+### series.type=&amp;quot;area&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;area&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;area&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;area&quot;.tooltip.format `String`
+### series.type=&amp;quot;area&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;area&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;area&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -1505,7 +1505,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;area&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;area&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -1519,18 +1519,18 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;area&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;area&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value #&quot;
+                     template: &amp;quot;#= category # - #= value #&amp;quot;
                  }
              }
          ],
@@ -1539,23 +1539,23 @@ Template variables:
          }
     });
 
-### series.type=&quot;area&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;area&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;bar&quot; `Object`
+### series.type=&amp;quot;bar&amp;quot; `Object`
 
 Available options for bar series:
 
-### series.type=&quot;bar&quot;.data `Array`
+### series.type=&amp;quot;bar&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;bar&quot;.field `String`
+### series.type=&amp;quot;bar&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;bar&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;bar&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -1567,34 +1567,34 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;bar&quot;.name `String`
+### series.type=&amp;quot;bar&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;bar&quot;.aggregate `String`*(default: &quot;max&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.aggregate `String`*(default: &amp;quot;max&amp;quot;)*
 
  Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.
 
 
-#### *&quot;max&quot;*
+#### *&amp;quot;max&amp;quot;*
 
 The highest value for the date period.
 
-#### *&quot;min&quot;*
+#### *&amp;quot;min&amp;quot;*
 
 The lowest value for the date period.
 
-#### *&quot;sum&quot;*
+#### *&amp;quot;sum&amp;quot;*
 
 The sum of all values for the date period.
 
-#### *&quot;count&quot;*
+#### *&amp;quot;count&amp;quot;*
 
 The number of values for the date period.
 
-#### *&quot;avg&quot;*
+#### *&amp;quot;avg&amp;quot;*
 
 The average of all values for the date period.
 
@@ -1602,138 +1602,138 @@ The average of all values for the date period.
 
 User-defined aggregate function.
 
-### series.type=&quot;bar&quot;.axis `String`*(default: primary)*
+### series.type=&amp;quot;bar&amp;quot;.axis `String`*(default: primary)*
 
  The name of the value axis to use.
 
-### series.type=&quot;bar&quot;.border `Object`
+### series.type=&amp;quot;bar&amp;quot;.border `Object`
 
 The border of the series.
 
-### series.type=&quot;bar&quot;.border.color `String`*(default: the color of the curren series)*
+### series.type=&amp;quot;bar&amp;quot;.border.color `String`*(default: the color of the curren series)*
 
 The color of the border.
 
-### series.type=&quot;bar&quot;.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;bar&quot;.border.width `Number`*(default: 1)*
+### series.type=&amp;quot;bar&amp;quot;.border.width `Number`*(default: 1)*
 
  The width of the border.
 
-### series.type=&quot;bar&quot;.color `String`
+### series.type=&amp;quot;bar&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;bar&quot;.colorField `String`
+### series.type=&amp;quot;bar&amp;quot;.colorField `String`
 
 The data field containing the bar color.
 
-### series.type=&quot;bar&quot;.gap `Number`*(default: 1.5)*
+### series.type=&amp;quot;bar&amp;quot;.gap `Number`*(default: 1.5)*
 
  The distance between category clusters.
 
-### series.type=&quot;bar&quot;.labels `Object`
+### series.type=&amp;quot;bar&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;bar&quot;.labels.background `String`
+### series.type=&amp;quot;bar&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;bar&quot;.labels.border `Object`
+### series.type=&amp;quot;bar&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;bar&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;bar&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;bar&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;bar&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;bar&quot;.labels.color `String`
+### series.type=&amp;quot;bar&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;bar&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;bar&quot;.labels.format `String`
+### series.type=&amp;quot;bar&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;bar&quot;.labels.margin `Number|Object`*(default: 2)*
+### series.type=&amp;quot;bar&amp;quot;.labels.margin `Number|Object`*(default: 2)*
 
  The margin of the labels.
 
@@ -1746,7 +1746,7 @@ The format of the labels.
     // margin right and bottom are with 2px (by default)
     margin: { top: 1, left: 1 }
 
-### series.type=&quot;bar&quot;.labels.padding `Number|Object`*(default: 2)*
+### series.type=&amp;quot;bar&amp;quot;.labels.padding `Number|Object`*(default: 2)*
 
  The padding of the labels.
 
@@ -1759,29 +1759,29 @@ The format of the labels.
     // padding right and bottom are with 2px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;bar&quot;.labels.position `String`*(default: &quot;outsideEnd&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.labels.position `String`*(default: &amp;quot;outsideEnd&amp;quot;)*
 
 Defines the position of the bar labels.
 
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
 The label is positioned at the bar center.
 
-#### *&quot;insideEnd&quot;*
+#### *&amp;quot;insideEnd&amp;quot;*
 
 The label is positioned inside, near the end of the bar.
 
-#### *&quot;insideBase&quot;*
+#### *&amp;quot;insideBase&amp;quot;*
 
 The label is positioned inside, near the base of the bar.
 
-#### *&quot;outsideEnd&quot;*
+#### *&amp;quot;outsideEnd&amp;quot;*
 
 The label is positioned outside, near the end of the bar.
              Not applicable for stacked bar series.
 
-### series.type=&quot;bar&quot;.labels.template `String | Function`
+### series.type=&amp;quot;bar&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -1796,18 +1796,18 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;bar&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;bar&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  labels: {
                      // label template
-                     template: &quot;#= value #%&quot;,
+                     template: &amp;quot;#= value #%&amp;quot;,
                      visible: true
                  }
              }
@@ -1817,85 +1817,85 @@ Template variables:
          }
     });
 
-### series.type=&quot;bar&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;bar&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;bar&quot;.name `String`
+### series.type=&amp;quot;bar&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;bar&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;bar&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;bar&quot;.overlay `Object`
+### series.type=&amp;quot;bar&amp;quot;.overlay `Object`
 
 The effects overlay.
 
-### series.type=&quot;bar&quot;.overlay.gradient `String`*(default: &quot;glass&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.overlay.gradient `String`*(default: &amp;quot;glass&amp;quot;)*
 
  The gradient name.
 
 
-#### *&quot;glass&quot;*
+#### *&amp;quot;glass&amp;quot;*
 
 The bars have glass effect overlay.
 
-#### *&quot;none&quot;*
+#### *&amp;quot;none&amp;quot;*
 
 The bars have no effect overlay.
 
-### series.type=&quot;bar&quot;.spacing `Number`*(default: 0.4)*
+### series.type=&amp;quot;bar&amp;quot;.spacing `Number`*(default: 0.4)*
 
  Space between bars.
 
-### series.type=&quot;bar&quot;.stack `Boolean`*(default: false)*
+### series.type=&amp;quot;bar&amp;quot;.stack `Boolean`*(default: false)*
 
 A value indicating if the series should be stacked.
 
-### series.type=&quot;bar&quot;.stack `String`
+### series.type=&amp;quot;bar&amp;quot;.stack `String`
 
 Indicates that the series should be stacked in a group with the specified name.
 
-### series.type=&quot;bar&quot;.tooltip `Object`
+### series.type=&amp;quot;bar&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;bar&quot;.tooltip.background `String`
+### series.type=&amp;quot;bar&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;bar&quot;.tooltip.border `Object`
+### series.type=&amp;quot;bar&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;bar&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;bar&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;bar&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;bar&quot;.tooltip.color `String`
+### series.type=&amp;quot;bar&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;bar&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;bar&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;bar&quot;.tooltip.format `String`
+### series.type=&amp;quot;bar&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;bar&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;bar&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -1908,7 +1908,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;bar&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;bar&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -1922,18 +1922,18 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;bar&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;bar&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  tooltip: {
                      visible: true,
-                 template: &quot;#= category # - #= value #&quot;
+                 template: &amp;quot;#= category # - #= value #&amp;quot;
                  }
              }
          ],
@@ -1942,23 +1942,23 @@ Template variables:
          }
     });
 
-### series.type=&quot;bar&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;bar&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
 A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;column&quot; `Object`
+### series.type=&amp;quot;column&amp;quot; `Object`
 
 Available options for column series:
 
-### series.type=&quot;column&quot;.data `Array`
+### series.type=&amp;quot;column&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;column&quot;.field `String`
+### series.type=&amp;quot;column&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;column&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;column&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -1970,34 +1970,34 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;column&quot;.name `String`
+### series.type=&amp;quot;column&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;column&quot;.aggregate `String`*(default: &quot;max&quot;)*
+### series.type=&amp;quot;column&amp;quot;.aggregate `String`*(default: &amp;quot;max&amp;quot;)*
 
  Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.
 
 
-#### *&quot;max&quot;*
+#### *&amp;quot;max&amp;quot;*
 
 The highest value for the date period.
 
-#### *&quot;min&quot;*
+#### *&amp;quot;min&amp;quot;*
 
 The lowest value for the date period.
 
-#### *&quot;sum&quot;*
+#### *&amp;quot;sum&amp;quot;*
 
 The sum of all values for the date period.
 
-#### *&quot;count&quot;*
+#### *&amp;quot;count&amp;quot;*
 
 The number of values for the date period.
 
-#### *&quot;avg&quot;*
+#### *&amp;quot;avg&amp;quot;*
 
 The average of all values for the date period.
 
@@ -2005,138 +2005,138 @@ The average of all values for the date period.
 
 User-defined aggregate function.
 
-### series.type=&quot;column&quot;.axis `String`*(default: primary)*
+### series.type=&amp;quot;column&amp;quot;.axis `String`*(default: primary)*
 
  The name of the value axis to use.
 
-### series.type=&quot;column&quot;.border `Object`
+### series.type=&amp;quot;column&amp;quot;.border `Object`
 
 The border of the series.
 
-### series.type=&quot;column&quot;.border.color `String`*(default: the color of the curren series)*
+### series.type=&amp;quot;column&amp;quot;.border.color `String`*(default: the color of the curren series)*
 
 The color of the border.
 
-### series.type=&quot;column&quot;.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;column&amp;quot;.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;column&quot;.border.width `Number`*(default: 1)*
+### series.type=&amp;quot;column&amp;quot;.border.width `Number`*(default: 1)*
 
  The width of the border.
 
-### series.type=&quot;column&quot;.color `String`
+### series.type=&amp;quot;column&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;column&quot;.colorField `String`
+### series.type=&amp;quot;column&amp;quot;.colorField `String`
 
 The data field containing the column color.
 
-### series.type=&quot;column&quot;.gap `Number`*(default: 1.5)*
+### series.type=&amp;quot;column&amp;quot;.gap `Number`*(default: 1.5)*
 
  The distance between category clusters.
 
-### series.type=&quot;column&quot;.labels `Object`
+### series.type=&amp;quot;column&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;column&quot;.labels.background `String`
+### series.type=&amp;quot;column&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;column&quot;.labels.border `Object`
+### series.type=&amp;quot;column&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;column&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;column&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;column&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;column&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;column&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;column&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;column&quot;.labels.color `String`
+### series.type=&amp;quot;column&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;column&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;column&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;column&quot;.labels.format `String`
+### series.type=&amp;quot;column&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;column&quot;.labels.margin `Number|Object`*(default: 2)*
+### series.type=&amp;quot;column&amp;quot;.labels.margin `Number|Object`*(default: 2)*
 
  The margin of the labels.
 
@@ -2149,7 +2149,7 @@ The format of the labels.
     // margin right and bottom are with 2px (by default)
     margin: { top: 1, left: 1 }
 
-### series.type=&quot;column&quot;.labels.padding `Number|Object`*(default: 2)*
+### series.type=&amp;quot;column&amp;quot;.labels.padding `Number|Object`*(default: 2)*
 
  The padding of the labels.
 
@@ -2162,29 +2162,29 @@ The format of the labels.
     // padding right and bottom are with 2px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;column&quot;.labels.position `String`*(default: &quot;outsideEnd&quot;)*
+### series.type=&amp;quot;column&amp;quot;.labels.position `String`*(default: &amp;quot;outsideEnd&amp;quot;)*
 
 Defines the position of the column labels.
 
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
 The label is positioned at the column center.
 
-#### *&quot;insideEnd&quot;*
+#### *&amp;quot;insideEnd&amp;quot;*
 
 The label is positioned inside, near the end of the column.
 
-#### *&quot;insideBase&quot;*
+#### *&amp;quot;insideBase&amp;quot;*
 
 The label is positioned inside, near the base of the column.
 
-#### *&quot;outsideEnd&quot;*
+#### *&amp;quot;outsideEnd&amp;quot;*
 
 The label is positioned outside, near the end of the column.
              Not applicable for stacked column series.
 
-### series.type=&quot;column&quot;.labels.template `String | Function`
+### series.type=&amp;quot;column&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -2199,18 +2199,18 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;column&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;column&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  labels: {
                      // label template
-                     template: &quot;#= value #%&quot;,
+                     template: &amp;quot;#= value #%&amp;quot;,
                      visible: true
                  }
              }
@@ -2220,85 +2220,85 @@ Template variables:
          }
     });
 
-### series.type=&quot;column&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;column&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;column&quot;.name `String`
+### series.type=&amp;quot;column&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;column&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;column&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;column&quot;.overlay `Object`
+### series.type=&amp;quot;column&amp;quot;.overlay `Object`
 
 The effects overlay.
 
-### series.type=&quot;column&quot;.overlay.gradient `String`*(default: &quot;glass&quot;)*
+### series.type=&amp;quot;column&amp;quot;.overlay.gradient `String`*(default: &amp;quot;glass&amp;quot;)*
 
  The gradient name.
 
 
-#### *&quot;glass&quot;*
+#### *&amp;quot;glass&amp;quot;*
 
 The columns have glass effect overlay.
 
-#### *&quot;none&quot;*
+#### *&amp;quot;none&amp;quot;*
 
 The columns have no effect overlay.
 
-### series.type=&quot;column&quot;.spacing `Number`*(default: 0.4)*
+### series.type=&amp;quot;column&amp;quot;.spacing `Number`*(default: 0.4)*
 
  Space between columns.
 
-### series.type=&quot;column&quot;.stack `Boolean`*(default: false)*
+### series.type=&amp;quot;column&amp;quot;.stack `Boolean`*(default: false)*
 
 A value indicating if the series should be stacked.
 
-### series.type=&quot;column&quot;.stack `String`
+### series.type=&amp;quot;column&amp;quot;.stack `String`
 
 Indicates that the series should be stacked in a group with the specified name.
 
-### series.type=&quot;column&quot;.tooltip `Object`
+### series.type=&amp;quot;column&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;column&quot;.tooltip.background `String`
+### series.type=&amp;quot;column&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;column&quot;.tooltip.border `Object`
+### series.type=&amp;quot;column&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;column&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;column&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;column&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;column&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;column&quot;.tooltip.color `String`
+### series.type=&amp;quot;column&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;column&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;column&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;column&quot;.tooltip.format `String`
+### series.type=&amp;quot;column&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;column&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;column&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -2311,7 +2311,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;column&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;column&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -2325,18 +2325,18 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;column&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;column&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  tooltip: {
                      visible: true,
-                 template: &quot;#= category # - #= value #&quot;
+                 template: &amp;quot;#= category # - #= value #&amp;quot;
                  }
              }
          ],
@@ -2345,23 +2345,23 @@ Template variables:
          }
     });
 
-### series.type=&quot;column&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;column&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;bubble&quot; `Object`
+### series.type=&amp;quot;bubble&amp;quot; `Object`
 
 Available options for bubble series:
 
-### series.type=&quot;bubble&quot;.data `Array`
+### series.type=&amp;quot;bubble&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;bubble&quot;.field `String`
+### series.type=&amp;quot;bubble&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;bubble&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;bubble&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -2373,35 +2373,35 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;bubble&quot;.name `String`
+### series.type=&amp;quot;bubble&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;bubble&quot;.border `Object`
+### series.type=&amp;quot;bubble&amp;quot;.border `Object`
 
 The border of the bubble.
 
-### series.type=&quot;bubble&quot;.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;bubble&quot;.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;bubble&amp;quot;.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;bubble&quot;.categoryField `String`
+### series.type=&amp;quot;bubble&amp;quot;.categoryField `String`
 
 The data field containing the bubble category name.
 
-### series.type=&quot;bubble&quot;.color `String`
+### series.type=&amp;quot;bubble&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;bubble&quot;.colorField `String`
+### series.type=&amp;quot;bubble&amp;quot;.colorField `String`
 
 The data field containing the bubble color.
 
-### series.type=&quot;bubble&quot;.data `Array`
+### series.type=&amp;quot;bubble&amp;quot;.data `Array`
 
 Array of data items (optional).
 The bubble chart can be bound to an array of arrays with three numbers (X, Y and Size).
@@ -2411,83 +2411,83 @@ The bubble chart can be bound to an array of arrays with three numbers (X, Y and
 
     // ...
      series:[{
-         type: &quot;bubble&quot;,
+         type: &amp;quot;bubble&amp;quot;,
          data:[[1, 1, 1], [1, 2, 2]],
-         name: &quot;Points&quot;
+         name: &amp;quot;Points&amp;quot;
      }]
      // ...
 
-### series.type=&quot;bubble&quot;.labels `Object`
+### series.type=&amp;quot;bubble&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;bubble&quot;.labels.background `String`
+### series.type=&amp;quot;bubble&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;bubble&quot;.labels.border `Object`
+### series.type=&amp;quot;bubble&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;bubble&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;bubble&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;bubble&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;bubble&quot;.labels.color `String`
+### series.type=&amp;quot;bubble&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;bubble&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;bubble&quot;.labels.format `String`
+### series.type=&amp;quot;bubble&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;bubble&quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
+### series.type=&amp;quot;bubble&amp;quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
 
 The margin of the labels.
 
@@ -2500,7 +2500,7 @@ The margin of the labels.
     // margin left and right are with 5px (by default)
     margin: { top: 1, bottom: 1 }
 
-### series.type=&quot;bubble&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -2513,28 +2513,28 @@ The margin of the labels.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;bubble&quot;.labels.position `String`*(default: &quot;above&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.position `String`*(default: &amp;quot;above&amp;quot;)*
 
 Defines the position of the bubble labels.
 
 
-#### *&quot;above&quot;*
+#### *&amp;quot;above&amp;quot;*
 
 The label is positioned at the top of the bubble chart marker.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The label is positioned at the right of the bubble chart marker.
 
-#### *&quot;below&quot;*
+#### *&amp;quot;below&amp;quot;*
 
 The label is positioned at the bottom of the bubble chart marker.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The label is positioned at the left of the bubble chart marker.
 
-### series.type=&quot;bubble&quot;.labels.template `String | Function`
+### series.type=&amp;quot;bubble&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -2551,89 +2551,89 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;bubble&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;bubble&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[1, 1, 1], [1, 2, 2], [1, 3, 3]],
                  labels: {
                      // label template
-                     template: &quot;#= value.x # - #= value.y # - #= value.size #&quot;,
+                     template: &amp;quot;#= value.x # - #= value.y # - #= value.size #&amp;quot;,
                      visible: true
                  }
              }
          ]
     });
 
-### series.type=&quot;bubble&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;bubble&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;bubble&quot;.maxSize `Number`*(default: 100)*
+### series.type=&amp;quot;bubble&amp;quot;.maxSize `Number`*(default: 100)*
 
  The max size of the bubble.
 
-### series.type=&quot;bubble&quot;.minSize `Number`*(default: 5)*
+### series.type=&amp;quot;bubble&amp;quot;.minSize `Number`*(default: 5)*
 
  The min size of the bubble.
 
-### series.type=&quot;bubble&quot;.name `String`
+### series.type=&amp;quot;bubble&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;bubble&quot;.negativeValues `Object`
+### series.type=&amp;quot;bubble&amp;quot;.negativeValues `Object`
 
 The settings for negative values.
 
-### series.type=&quot;bubble&quot;.negativeValues.color `String`*(default: &quot;#ffffff&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.negativeValues.color `String`*(default: &amp;quot;#ffffff&amp;quot;)*
 
  The color of the negative values.
 
-### series.type=&quot;bubble&quot;.negativeValues.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;bubble&amp;quot;.negativeValues.visible `Boolean`*(default: false)*
 
  The visibility of the negative values.
 
-### series.type=&quot;bubble&quot;.opacity `Number`*(default: 0.6)*
+### series.type=&amp;quot;bubble&amp;quot;.opacity `Number`*(default: 0.6)*
 
  The series opacity.
 
-### series.type=&quot;bubble&quot;.sizeField `String`
+### series.type=&amp;quot;bubble&amp;quot;.sizeField `String`
 
 The data field containing the bubble size value.
 
-### series.type=&quot;bubble&quot;.tooltip `Object`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;bubble&quot;.tooltip.background `String`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;bubble&quot;.tooltip.border `Object`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;bubble&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;bubble&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;bubble&quot;.tooltip.color `String`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;bubble&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;bubble&quot;.tooltip.format `String`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 Format variables:
@@ -2647,9 +2647,9 @@ Format variables:
 #### Example
 
     //sets format of the tooltip
-    format: &quot;{0:C}--{1:C}&quot;
+    format: &amp;quot;{0:C}--{1:C}&amp;quot;
 
-### series.type=&quot;bubble&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -2662,7 +2662,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;bubble&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -2678,60 +2678,60 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;bubble&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;bubble&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[1, 1, 1], [1, 2, 2], [1, 3, 3]],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value.x # - #= value.y # - #= value.size #&quot;
+                     template: &amp;quot;#= category # - #= value.x # - #= value.y # - #= value.size #&amp;quot;
                  }
              }
          ]
     });
 
-### series.type=&quot;bubble&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;bubble&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;bubble&quot;.visibleInLegendField `String`
+### series.type=&amp;quot;bubble&amp;quot;.visibleInLegendField `String`
 
 A boolean value indicating whether to show the bubble category name in the legend.
 
-### series.type=&quot;bubble&quot;.xAxis `String`*(default: primary)*
+### series.type=&amp;quot;bubble&amp;quot;.xAxis `String`*(default: primary)*
 
  The name of the X axis to use.
 
-### series.type=&quot;bubble&quot;.xField `String`
+### series.type=&amp;quot;bubble&amp;quot;.xField `String`
 
 The data field containing the bubble x value.
 
-### series.type=&quot;bubble&quot;.yAxis `String`*(default: primary)*
+### series.type=&amp;quot;bubble&amp;quot;.yAxis `String`*(default: primary)*
 
  The name of the Y axis to use.
 
-### series.type=&quot;bubble&quot;.yField `String`
+### series.type=&amp;quot;bubble&amp;quot;.yField `String`
 
 The data field containing the bubble y value.
 
-### series.type=&quot;donut&quot; `Object`
+### series.type=&amp;quot;donut&amp;quot; `Object`
 
 Available options for donut series:
 
-### series.type=&quot;donut&quot;.data `Array`
+### series.type=&amp;quot;donut&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;donut&quot;.field `String`
+### series.type=&amp;quot;donut&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;donut&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;donut&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -2743,102 +2743,102 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;donut&quot;.name `String`
+### series.type=&amp;quot;donut&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;donut&quot;.border `Object`
+### series.type=&amp;quot;donut&amp;quot;.border `Object`
 
 The border of the series.
 
-### series.type=&quot;donut&quot;.border.color `String`*(default: the color of the curren series)*
+### series.type=&amp;quot;donut&amp;quot;.border.color `String`*(default: the color of the curren series)*
 
 The color of the border.
 
-### series.type=&quot;donut&quot;.border.dashType `String`*(default: solid)*
+### series.type=&amp;quot;donut&amp;quot;.border.dashType `String`*(default: solid)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;donut&quot;.border.width `Number`*(default: 1)*
+### series.type=&amp;quot;donut&amp;quot;.border.width `Number`*(default: 1)*
 
  The width of the border.
 
-### series.type=&quot;donut&quot;.categoryField `String`
+### series.type=&amp;quot;donut&amp;quot;.categoryField `String`
 
 The data field containing the sector category name.
 
-### series.type=&quot;donut&quot;.colorField `String`
+### series.type=&amp;quot;donut&amp;quot;.colorField `String`
 
 The data field containing the sector color.
 
-### series.type=&quot;donut&quot;.connectors `Object`
+### series.type=&amp;quot;donut&amp;quot;.connectors `Object`
 
 The label connectors options.
 
-### series.type=&quot;donut&quot;.connectors.color `String`
+### series.type=&amp;quot;donut&amp;quot;.connectors.color `String`
 
 The color of the connector line.
 
-### series.type=&quot;donut&quot;.connectors.padding `Number`*(default: 4)*
+### series.type=&amp;quot;donut&amp;quot;.connectors.padding `Number`*(default: 4)*
 
 The padding between the connector line and the label, and connector line and donut chart.
 
-### series.type=&quot;donut&quot;.connectors.width `Number`*(default: 1)*
+### series.type=&amp;quot;donut&amp;quot;.connectors.width `Number`*(default: 1)*
 
  The width of the connector line.
 
-### series.type=&quot;donut&quot;.data `Array`
+### series.type=&amp;quot;donut&amp;quot;.data `Array`
 
 Array of data items (optional).
 The donut chart can be bound to an array of numbers or an array of objects
 with the following fields:
 
 
-#### *&quot;value&quot;*
+#### *&amp;quot;value&amp;quot;*
 
 The sector value.
 
-#### *&quot;category&quot;*
+#### *&amp;quot;category&amp;quot;*
 
 The sector category that is shown in the legend.
 
-#### *&quot;color&quot;*
+#### *&amp;quot;color&amp;quot;*
 
 The sector color.
 
-#### *&quot;explode&quot;*
+#### *&amp;quot;explode&amp;quot;*
 
 A boolean value indicating whether to explode the sector(available only for the last level of the series).
 
-#### *&quot;visibleInLegend&quot;*
+#### *&amp;quot;visibleInLegend&amp;quot;*
 
 A boolean value indicating whether to show the sector in the legend.
 
@@ -2847,116 +2847,116 @@ A boolean value indicating whether to show the sector in the legend.
 
     // ...
      series:[{
-         type: &quot;donut&quot;,
+         type: &amp;quot;donut&amp;quot;,
          data:[{
              value: 40,
-             category: &quot;Apples&quot;
+             category: &amp;quot;Apples&amp;quot;
          }, {
              value: 60,
-             category: &quot;Oranges&quot;,
-             color: &quot;#ff6103&quot;
+             category: &amp;quot;Oranges&amp;quot;,
+             color: &amp;quot;#ff6103&amp;quot;
          }],
-         name: &quot;Sales in Percent&quot;
+         name: &amp;quot;Sales in Percent&amp;quot;
      }]
      // ...
 
-### series.type=&quot;donut&quot;.explodeField `String`
+### series.type=&amp;quot;donut&amp;quot;.explodeField `String`
 
 The data field containing a boolean value that indicates if the sector is exploded
 (available only for the last level of the series).
 
-### series.type=&quot;donut&quot;.holeSize `Number`
+### series.type=&amp;quot;donut&amp;quot;.holeSize `Number`
 
 The the size of the donut hole.
 
-### series.type=&quot;donut&quot;.labels `Object`
+### series.type=&amp;quot;donut&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;donut&quot;.labels.align `String`*(default: &quot;circle&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.labels.align `String`*(default: &amp;quot;circle&amp;quot;)*
 
 Defines the alignment of the donut labels.
 
 
-#### *&quot;circle&quot;*
+#### *&amp;quot;circle&amp;quot;*
 
 The labels are positioned in circle around the donut chart.
 
-#### *&quot;column&quot;*
+#### *&amp;quot;column&amp;quot;*
 
 The labels are positioned in columns to the left and right of the donut chart.
 
-### series.type=&quot;donut&quot;.labels.background `String`
+### series.type=&amp;quot;donut&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;donut&quot;.labels.border `Object`
+### series.type=&amp;quot;donut&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;donut&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;donut&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;donut&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;donut&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;donut&quot;.labels.color `String`
+### series.type=&amp;quot;donut&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;donut&quot;.labels.distance `Number`*(default: 35)*
+### series.type=&amp;quot;donut&amp;quot;.labels.distance `Number`*(default: 35)*
 
  The distance of the labels.
 
-### series.type=&quot;donut&quot;.labels.font `String`*(default: &quot;12px Arial, sans-serif&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial, sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;donut&quot;.labels.format `String`
+### series.type=&amp;quot;donut&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;donut&quot;.labels.margin `Number|Object`*(default: 0.5)*
+### series.type=&amp;quot;donut&amp;quot;.labels.margin `Number|Object`*(default: 0.5)*
 
  The margin of the labels.
 
@@ -2969,7 +2969,7 @@ The format of the labels.
     // margin right and bottom are with 2px (by default)
     margin: { top: 1, left: 1 }
 
-### series.type=&quot;donut&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;donut&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -2982,25 +2982,25 @@ The format of the labels.
     // padding right and bottom are with 2px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;donut&quot;.labels.position `String`*(default: &quot;center&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.labels.position `String`*(default: &amp;quot;center&amp;quot;)*
 
 Defines the position of the donut labels.
 
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
 The labels are positioned at the center of the donut segments.
 
-#### *&quot;insideEnd&quot;*
+#### *&amp;quot;insideEnd&amp;quot;*
 
 The labels are positioned inside, near the end of the donut segments.
 
-#### *&quot;outsideEnd&quot;*
+#### *&amp;quot;outsideEnd&amp;quot;*
 
 The labels are positioned outside, near the end of the donut segments.
              The labels and the donut segments are connected with connector line.
 
-### series.type=&quot;donut&quot;.labels.template `String | Function`
+### series.type=&amp;quot;donut&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -3016,12 +3016,12 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [{
-             type: &quot;donut&quot;,
+             type: &amp;quot;donut&amp;quot;,
              data: [
                  { value: 200, category: 2000 },
                  { value: 450, category: 2001 },
@@ -3030,84 +3030,84 @@ Template variables:
              ],
              labels: {
                  // label template
-                 template: &quot;#= value #%&quot;,
+                 template: &amp;quot;#= value #%&amp;quot;,
                  visible: true
              }
          }]
     });
 
-### series.type=&quot;donut&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;donut&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;donut&quot;.margin `Number`*(default: 1)*
+### series.type=&amp;quot;donut&amp;quot;.margin `Number`*(default: 1)*
 
  The margin around each series
 (not available for the last level of the series).
 
-### series.type=&quot;donut&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;donut&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;donut&quot;.overlay `Object`
+### series.type=&amp;quot;donut&amp;quot;.overlay `Object`
 
 The effects overlay.
 
-### series.type=&quot;donut&quot;.overlay.gradient `String`*(default: &quot;roundedBevel&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.overlay.gradient `String`*(default: &amp;quot;roundedBevel&amp;quot;)*
 
  The gradient name.
-Available options are &quot;none&quot; and &quot;roundedCircle&quot;.
+Available options are &amp;quot;none&amp;quot; and &amp;quot;roundedCircle&amp;quot;.
 
-### series.type=&quot;donut&quot;.padding `Number`
+### series.type=&amp;quot;donut&amp;quot;.padding `Number`
 
 The padding around the donut chart (equal on all sides).
 
-### series.type=&quot;donut&quot;.size `Number`
+### series.type=&amp;quot;donut&amp;quot;.size `Number`
 
 The size of the series.
 
-### series.type=&quot;donut&quot;.startAngle `number`*(default: 90)*
+### series.type=&amp;quot;donut&amp;quot;.startAngle `number`*(default: 90)*
 
  The start angle of the first donut segment.
 
-### series.type=&quot;donut&quot;.tooltip `Object`
+### series.type=&amp;quot;donut&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;donut&quot;.tooltip.background `String`
+### series.type=&amp;quot;donut&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;donut&quot;.tooltip.border `Object`
+### series.type=&amp;quot;donut&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;donut&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;donut&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;donut&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;donut&quot;.tooltip.color `String`
+### series.type=&amp;quot;donut&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;donut&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;donut&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;donut&quot;.tooltip.format `String`
+### series.type=&amp;quot;donut&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;donut&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;donut&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -3120,7 +3120,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;donut&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;donut&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -3135,38 +3135,38 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [{
-                 type: &quot;donut&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;donut&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value #&quot;
+                     template: &amp;quot;#= category # - #= value #&amp;quot;
                  }
          }]
     });
 
-### series.type=&quot;donut&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;donut&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;line&quot; `Object`
+### series.type=&amp;quot;line&amp;quot; `Object`
 
 Available options for line series:
 
-### series.type=&quot;line&quot;.data `Array`
+### series.type=&amp;quot;line&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;line&quot;.field `String`
+### series.type=&amp;quot;line&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;line&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;line&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -3178,33 +3178,33 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;line&quot;.name `String`
+### series.type=&amp;quot;line&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;line&quot;.aggregate `String`*(default: &quot;max&quot;)*
+### series.type=&amp;quot;line&amp;quot;.aggregate `String`*(default: &amp;quot;max&amp;quot;)*
 
 Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.
 
-#### *&quot;max&quot;*
+#### *&amp;quot;max&amp;quot;*
 
 The highest value for the date period.
 
-#### *&quot;min&quot;*
+#### *&amp;quot;min&amp;quot;*
 
 The lowest value for the date period.
 
-#### *&quot;sum&quot;*
+#### *&amp;quot;sum&amp;quot;*
 
 The sum of all values for the date period.
 
-#### *&quot;count&quot;*
+#### *&amp;quot;count&amp;quot;*
 
 The number of values for the date period.
 
-#### *&quot;avg&quot;*
+#### *&amp;quot;avg&amp;quot;*
 
 The average of all values for the date period.
 
@@ -3212,118 +3212,118 @@ The average of all values for the date period.
 
 User-defined aggregate function.
 
-### series.type=&quot;line&quot;.axis `String`*(default: primary)*
+### series.type=&amp;quot;line&amp;quot;.axis `String`*(default: primary)*
 
  The name of the value axis to use.
 
-### series.type=&quot;line&quot;.color `String`
+### series.type=&amp;quot;line&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;line&quot;.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;line&amp;quot;.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the line.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;line&quot;.labels `Object`
+### series.type=&amp;quot;line&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;line&quot;.labels.background `String`
+### series.type=&amp;quot;line&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;line&quot;.labels.border `Object`
+### series.type=&amp;quot;line&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;line&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;line&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;line&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;line&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;line&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;line&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;line&quot;.labels.color `String`
+### series.type=&amp;quot;line&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;line&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;line&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;line&quot;.labels.format `String`
+### series.type=&amp;quot;line&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;line&quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
+### series.type=&amp;quot;line&amp;quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
 
 The margin of the labels.
 
@@ -3336,7 +3336,7 @@ The margin of the labels.
     // margin left and right are with 5px (by default)
     margin: { top: 1, bottom: 1 }
 
-### series.type=&quot;line&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;line&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -3349,28 +3349,28 @@ The margin of the labels.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;line&quot;.labels.position `String`*(default: &quot;above&quot;)*
+### series.type=&amp;quot;line&amp;quot;.labels.position `String`*(default: &amp;quot;above&amp;quot;)*
 
 Defines the position of the line labels.
 
 
-#### *&quot;above&quot;*
+#### *&amp;quot;above&amp;quot;*
 
 The label is positioned at the top of the line chart marker.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The label is positioned at the right of the line chart marker.
 
-#### *&quot;below&quot;*
+#### *&amp;quot;below&amp;quot;*
 
 The label is positioned at the bottom of the line chart marker.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The label is positioned at the left of the line chart marker.
 
-### series.type=&quot;line&quot;.labels.template `String | Function`
+### series.type=&amp;quot;line&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -3385,18 +3385,18 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;line&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;line&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  labels: {
                      // label template
-                     template: &quot;#= value #%&quot;,
+                     template: &amp;quot;#= value #%&amp;quot;,
                      visible: true
                  }
              }
@@ -3406,122 +3406,122 @@ Template variables:
          }
     });
 
-### series.type=&quot;line&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;line&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;line&quot;.markers `Object`
+### series.type=&amp;quot;line&amp;quot;.markers `Object`
 
 Configures the line markers.
 
-### series.type=&quot;line&quot;.markers.background `String`
+### series.type=&amp;quot;line&amp;quot;.markers.background `String`
 
 The background color of the current series markers.
 
-### series.type=&quot;line&quot;.markers.border `Object`
+### series.type=&amp;quot;line&amp;quot;.markers.border `Object`
 
 The border of the markers.
 
-### series.type=&quot;line&quot;.markers.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;line&amp;quot;.markers.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;line&quot;.markers.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;line&amp;quot;.markers.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;line&quot;.markers.size `Number`*(default: 6)*
+### series.type=&amp;quot;line&amp;quot;.markers.size `Number`*(default: 6)*
 
  The marker size.
 
-### series.type=&quot;line&quot;.markers.type `String`*(default: &quot;circle&quot;)*
+### series.type=&amp;quot;line&amp;quot;.markers.type `String`*(default: &amp;quot;circle&amp;quot;)*
 
 Configures the markers shape type.
 
 
-#### *&quot;square&quot;*
+#### *&amp;quot;square&amp;quot;*
 
 The marker shape is square.
 
-#### *&quot;triangle&quot;*
+#### *&amp;quot;triangle&amp;quot;*
 
 The marker shape is triangle.
 
-#### *&quot;circle&quot;*
+#### *&amp;quot;circle&amp;quot;*
 
 The marker shape is circle.
 
-### series.type=&quot;line&quot;.markers.visible `Boolean`*(default: true)*
+### series.type=&amp;quot;line&amp;quot;.markers.visible `Boolean`*(default: true)*
 
  The markers visibility.
 
-### series.type=&quot;line&quot;.missingValues `String`*(default: &quot;gap&quot;)*
+### series.type=&amp;quot;line&amp;quot;.missingValues `String`*(default: &amp;quot;gap&amp;quot;)*
 
 Configures the behavior for handling missing values in line series.
 
 
-#### *&quot;interpolate&quot;*
+#### *&amp;quot;interpolate&amp;quot;*
 
 The value is interpolated from neighboring points.
 
-#### *&quot;zero&quot;*
+#### *&amp;quot;zero&amp;quot;*
 
 The value is assumed to be zero.
 
-#### *&quot;gap&quot;*
+#### *&amp;quot;gap&amp;quot;*
 
 The line stops before the missing point and continues after it.
 
-### series.type=&quot;line&quot;.name `String`
+### series.type=&amp;quot;line&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;line&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;line&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;line&quot;.stack `Boolean`*(default: false)*
+### series.type=&amp;quot;line&amp;quot;.stack `Boolean`*(default: false)*
 
 A value indicating if the series should be stacked.
 
-### series.type=&quot;line&quot;.tooltip `Object`
+### series.type=&amp;quot;line&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;line&quot;.tooltip.background `String`
+### series.type=&amp;quot;line&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;line&quot;.tooltip.border `Object`
+### series.type=&amp;quot;line&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;line&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;line&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;line&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;line&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;line&quot;.tooltip.color `String`
+### series.type=&amp;quot;line&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;line&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;line&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;line&quot;.tooltip.format `String`
+### series.type=&amp;quot;line&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;line&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;line&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -3534,7 +3534,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;line&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;line&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -3548,18 +3548,18 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;line&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;line&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value #&quot;
+                     template: &amp;quot;#= category # - #= value #&amp;quot;
                  }
              }
          ],
@@ -3568,27 +3568,27 @@ Template variables:
          }
     });
 
-### series.type=&quot;line&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;line&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;line&quot;.width `String`*(default: 4)*
+### series.type=&amp;quot;line&amp;quot;.width `String`*(default: 4)*
 
  The line width of the line chart.
 
-### series.type=&quot;pie&quot; `Object`
+### series.type=&amp;quot;pie&amp;quot; `Object`
 
 Available options for pie series:
 
-### series.type=&quot;pie&quot;.data `Array`
+### series.type=&amp;quot;pie&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;pie&quot;.field `String`
+### series.type=&amp;quot;pie&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;pie&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;pie&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -3600,103 +3600,103 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;pie&quot;.name `String`
+### series.type=&amp;quot;pie&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;pie&quot;.border `Object`
+### series.type=&amp;quot;pie&amp;quot;.border `Object`
 
 The border of the series.
 
-### series.type=&quot;pie&quot;.border.color `String`*(default: the color of the curren series)*
+### series.type=&amp;quot;pie&amp;quot;.border.color `String`*(default: the color of the curren series)*
 
 The color of the border.
 
-### series.type=&quot;pie&quot;.border.dashType `String`*(default: solid)*
+### series.type=&amp;quot;pie&amp;quot;.border.dashType `String`*(default: solid)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;pie&quot;.border.width `Number`*(default: 1)*
+### series.type=&amp;quot;pie&amp;quot;.border.width `Number`*(default: 1)*
 
  The width of the border.
 
-### series.type=&quot;pie&quot;.categoryField `String`
+### series.type=&amp;quot;pie&amp;quot;.categoryField `String`
 
 The data field containing the sector category name.
 
-### series.type=&quot;pie&quot;.colorField `String`
+### series.type=&amp;quot;pie&amp;quot;.colorField `String`
 
 The data field containing the sector color.
 
-### series.type=&quot;pie&quot;.connectors `Object`
+### series.type=&amp;quot;pie&amp;quot;.connectors `Object`
 
 The label connectors options.
 
-### series.type=&quot;pie&quot;.connectors.color `String`
+### series.type=&amp;quot;pie&amp;quot;.connectors.color `String`
 
 The color of the connector line.
 
-### series.type=&quot;pie&quot;.connectors.padding `Number`*(default: 4)*
+### series.type=&amp;quot;pie&amp;quot;.connectors.padding `Number`*(default: 4)*
 
 The padding between the connector line and the label, and connector line and pie chart.
 
-### series.type=&quot;pie&quot;.connectors.width `Number`*(default: 1)*
+### series.type=&amp;quot;pie&amp;quot;.connectors.width `Number`*(default: 1)*
 
  The width of the connector line.
 
-### series.type=&quot;pie&quot;.data `Array`
+### series.type=&amp;quot;pie&amp;quot;.data `Array`
 
 Array of data items (optional).
 The pie chart can be bound to an array of numbers or an array of objects
 with the following fields:
 
 
-#### *&quot;value&quot;*
+#### *&amp;quot;value&amp;quot;*
 
 The sector value.
 
-#### *&quot;category&quot;*
+#### *&amp;quot;category&amp;quot;*
 
 The sector category that is shown in the legend.
 
-#### *&quot;color&quot;*
+#### *&amp;quot;color&amp;quot;*
 
 The sector color.
 
-#### *&quot;explode&quot;*
+#### *&amp;quot;explode&amp;quot;*
 
 A boolean value indicating whether to explode the sector.
 
-#### *&quot;visibleInLegend&quot;*
+#### *&amp;quot;visibleInLegend&amp;quot;*
 
 A boolean value indicating whether to show the sector in the legend.
 
@@ -3705,112 +3705,112 @@ A boolean value indicating whether to show the sector in the legend.
 
     // ...
      series:[{
-         type: &quot;pie&quot;,
+         type: &amp;quot;pie&amp;quot;,
          data:[{
              value: 40,
-             category: &quot;Apples&quot;
+             category: &amp;quot;Apples&amp;quot;
          }, {
              value: 60,
-             category: &quot;Oranges&quot;,
-             color: &quot;#ff6103&quot;
+             category: &amp;quot;Oranges&amp;quot;,
+             color: &amp;quot;#ff6103&amp;quot;
              }
          ],
-         name: &quot;Sales in Percent&quot;
+         name: &amp;quot;Sales in Percent&amp;quot;
      }]
      // ...
 
-### series.type=&quot;pie&quot;.explodeField `String`
+### series.type=&amp;quot;pie&amp;quot;.explodeField `String`
 
 The data field containing a boolean value that indicates if the sector is exploded.
 
-### series.type=&quot;pie&quot;.labels `Object`
+### series.type=&amp;quot;pie&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;pie&quot;.labels.align `String`*(default: &quot;circle&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.labels.align `String`*(default: &amp;quot;circle&amp;quot;)*
 
 Defines the alignment of the pie labels.
 
 
-#### *&quot;circle&quot;*
+#### *&amp;quot;circle&amp;quot;*
 
 The labels are positioned in circle around the pie chart.
 
-#### *&quot;column&quot;*
+#### *&amp;quot;column&amp;quot;*
 
 The labels are positioned in columns to the left and right of the pie chart.
 
-### series.type=&quot;pie&quot;.labels.background `String`
+### series.type=&amp;quot;pie&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;pie&quot;.labels.border `Object`
+### series.type=&amp;quot;pie&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;pie&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;pie&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;pie&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;pie&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;pie&quot;.labels.color `String`
+### series.type=&amp;quot;pie&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;pie&quot;.labels.distance `Number`*(default: 35)*
+### series.type=&amp;quot;pie&amp;quot;.labels.distance `Number`*(default: 35)*
 
  The distance of the labels.
 
-### series.type=&quot;pie&quot;.labels.font `String`*(default: &quot;12px Arial, sans-serif&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial, sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;pie&quot;.labels.format `String`
+### series.type=&amp;quot;pie&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;pie&quot;.labels.margin `Number|Object`*(default: 0.5)*
+### series.type=&amp;quot;pie&amp;quot;.labels.margin `Number|Object`*(default: 0.5)*
 
  The margin of the labels.
 
@@ -3823,7 +3823,7 @@ The format of the labels.
     // margin right and bottom are with 2px (by default)
     margin: { top: 1, left: 1 }
 
-### series.type=&quot;pie&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;pie&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -3836,25 +3836,25 @@ The format of the labels.
     // padding right and bottom are with 2px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;pie&quot;.labels.position `String`*(default: &quot;outsideEnd&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.labels.position `String`*(default: &amp;quot;outsideEnd&amp;quot;)*
 
 Defines the position of the pie labels.
 
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
 The labels are positioned at the center of the pie segments.
 
-#### *&quot;insideEnd&quot;*
+#### *&amp;quot;insideEnd&amp;quot;*
 
 The labels are positioned inside, near the end of the pie segments.
 
-#### *&quot;outsideEnd&quot;*
+#### *&amp;quot;outsideEnd&amp;quot;*
 
 The labels are positioned outside, near the end of the pie segments.
              The labels and the pie segments are connected with connector line.
 
-### series.type=&quot;pie&quot;.labels.template `String | Function`
+### series.type=&amp;quot;pie&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -3870,14 +3870,14 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;pie&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;pie&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [
                      { value: 200, category: 2000 },
                      { value: 450, category: 2001 },
@@ -3886,76 +3886,76 @@ Template variables:
                  ],
                  labels: {
                      // label template
-                     template: &quot;#= value #%&quot;,
+                     template: &amp;quot;#= value #%&amp;quot;,
                      visible: true
                  }
              }
          ]
     });
 
-### series.type=&quot;pie&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;pie&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;pie&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;pie&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;pie&quot;.overlay `Object`
+### series.type=&amp;quot;pie&amp;quot;.overlay `Object`
 
 The effects overlay.
 
-### series.type=&quot;pie&quot;.overlay.gradient `String`*(default: &quot;roundedBevel&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.overlay.gradient `String`*(default: &amp;quot;roundedBevel&amp;quot;)*
 
  The gradient name.
-Available options are &quot;none&quot;, &quot;sharpBevel&quot; and &quot;roundedBevel&quot;.
+Available options are &amp;quot;none&amp;quot;, &amp;quot;sharpBevel&amp;quot; and &amp;quot;roundedBevel&amp;quot;.
 
-### series.type=&quot;pie&quot;.padding `Number`
+### series.type=&amp;quot;pie&amp;quot;.padding `Number`
 
 The padding around the pie chart (equal on all sides).
 
-### series.type=&quot;pie&quot;.startAngle `number`*(default: 90)*
+### series.type=&amp;quot;pie&amp;quot;.startAngle `number`*(default: 90)*
 
  The start angle of the first pie segment.
 
-### series.type=&quot;pie&quot;.tooltip `Object`
+### series.type=&amp;quot;pie&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;pie&quot;.tooltip.background `String`
+### series.type=&amp;quot;pie&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;pie&quot;.tooltip.border `Object`
+### series.type=&amp;quot;pie&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;pie&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;pie&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;pie&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;pie&quot;.tooltip.color `String`
+### series.type=&amp;quot;pie&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;pie&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;pie&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;pie&quot;.tooltip.format `String`
+### series.type=&amp;quot;pie&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;pie&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;pie&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -3968,7 +3968,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;pie&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;pie&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -3983,48 +3983,48 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;pie&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;pie&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value #&quot;
+                     template: &amp;quot;#= category # - #= value #&amp;quot;
                  }
              }
          ]
     });
 
-### series.type=&quot;pie&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;pie&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;pie&quot;.visibleInLegendField `Number`
+### series.type=&amp;quot;pie&amp;quot;.visibleInLegendField `Number`
 
 A boolean value indicating whether to show the sector in the legend.
 
-### series.type=&quot;pie&quot;.visibleInLegendField `Number`
+### series.type=&amp;quot;pie&amp;quot;.visibleInLegendField `Number`
 
 A boolean value indicating whether to show the sector in the legend.
 
-### series.type=&quot;scatter&quot; `Object`
+### series.type=&amp;quot;scatter&amp;quot; `Object`
 
 Available options for scatter series:
 
-### series.type=&quot;scatter&quot;.data `Array`
+### series.type=&amp;quot;scatter&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;scatter&quot;.field `String`
+### series.type=&amp;quot;scatter&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;scatter&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;scatter&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -4036,15 +4036,15 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;scatter&quot;.name `String`
+### series.type=&amp;quot;scatter&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;scatter&quot;.color `String`
+### series.type=&amp;quot;scatter&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;scatter&quot;.data `Array`
+### series.type=&amp;quot;scatter&amp;quot;.data `Array`
 
 Array of data items (optional).
 The scatter chart can be bound to an array of arrays with two numbers (X and Y).
@@ -4054,83 +4054,83 @@ The scatter chart can be bound to an array of arrays with two numbers (X and Y).
 
     // ...
      series:[{
-         type: &quot;scatter&quot;,
+         type: &amp;quot;scatter&amp;quot;,
          data:[[1, 1], [1, 2]],
-         name: &quot;Points&quot;
+         name: &amp;quot;Points&amp;quot;
      }]
      // ...
 
-### series.type=&quot;scatter&quot;.labels `Object`
+### series.type=&amp;quot;scatter&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;scatter&quot;.labels.background `String`
+### series.type=&amp;quot;scatter&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;scatter&quot;.labels.border `Object`
+### series.type=&amp;quot;scatter&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;scatter&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;scatter&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;scatter&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;scatter&quot;.labels.color `String`
+### series.type=&amp;quot;scatter&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;scatter&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;scatter&quot;.labels.format `String`
+### series.type=&amp;quot;scatter&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;scatter&quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
+### series.type=&amp;quot;scatter&amp;quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
 
 The margin of the labels.
 
@@ -4143,7 +4143,7 @@ The margin of the labels.
     // margin left and right are with 5px (by default)
     margin: { top: 1, bottom: 1 }
 
-### series.type=&quot;scatter&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -4156,28 +4156,28 @@ The margin of the labels.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;scatter&quot;.labels.position `String`*(default: &quot;above&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.position `String`*(default: &amp;quot;above&amp;quot;)*
 
 Defines the position of the scatter labels.
 
 
-#### *&quot;above&quot;*
+#### *&amp;quot;above&amp;quot;*
 
 The label is positioned at the top of the scatter chart marker.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The label is positioned at the right of the scatter chart marker.
 
-#### *&quot;below&quot;*
+#### *&amp;quot;below&amp;quot;*
 
 The label is positioned at the bottom of the scatter chart marker.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The label is positioned at the left of the scatter chart marker.
 
-### series.type=&quot;scatter&quot;.labels.template `String | Function`
+### series.type=&amp;quot;scatter&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -4192,119 +4192,119 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;scatter&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;scatter&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[1, 1], [1, 2], [1, 3]],
                  labels: {
                      // label template
-                     template: &quot;#= value.x # - #= value.y x #&quot;,
+                     template: &amp;quot;#= value.x # - #= value.y x #&amp;quot;,
                      visible: true
                  }
              }
          ]
     });
 
-### series.type=&quot;scatter&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;scatter&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;scatter&quot;.markers `Object`
+### series.type=&amp;quot;scatter&amp;quot;.markers `Object`
 
 Configures the scatter markers.
 
-### series.type=&quot;scatter&quot;.markers.background `String`
+### series.type=&amp;quot;scatter&amp;quot;.markers.background `String`
 
 The background color of the current series markers.
 
-### series.type=&quot;scatter&quot;.markers.border `Object`
+### series.type=&amp;quot;scatter&amp;quot;.markers.border `Object`
 
 The border of the markers.
 
-### series.type=&quot;scatter&quot;.markers.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.markers.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;scatter&quot;.markers.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;scatter&amp;quot;.markers.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;scatter&quot;.markers.size `Number`*(default: 6)*
+### series.type=&amp;quot;scatter&amp;quot;.markers.size `Number`*(default: 6)*
 
  The marker size.
 
-### series.type=&quot;scatter&quot;.markers.type `String`*(default: &quot;circle&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.markers.type `String`*(default: &amp;quot;circle&amp;quot;)*
 
 Configures the markers shape type.
 
 
-#### *&quot;square&quot;*
+#### *&amp;quot;square&amp;quot;*
 
 The marker shape is square.
 
-#### *&quot;triangle&quot;*
+#### *&amp;quot;triangle&amp;quot;*
 
 The marker shape is triangle.
 
-#### *&quot;circle&quot;*
+#### *&amp;quot;circle&amp;quot;*
 
 The marker shape is circle.
 
-### series.type=&quot;scatter&quot;.markers.visible `Boolean`*(default: true)*
+### series.type=&amp;quot;scatter&amp;quot;.markers.visible `Boolean`*(default: true)*
 
  The markers visibility.
 
-### series.type=&quot;scatter&quot;.name `String`
+### series.type=&amp;quot;scatter&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;scatter&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;scatter&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;scatter&quot;.tooltip `Object`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;scatter&quot;.tooltip.background `String`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;scatter&quot;.tooltip.border `Object`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;scatter&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;scatter&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;scatter&quot;.tooltip.color `String`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;scatter&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;scatter&quot;.tooltip.format `String`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;{0:C}--{1:C}&quot;
+    format: &amp;quot;{0:C}--{1:C}&amp;quot;
 
-### series.type=&quot;scatter&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -4317,7 +4317,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;scatter&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -4331,48 +4331,48 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;scatter&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;scatter&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[1, 1], [1, 2], [1, 3]],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value.x # - #= value.y #&quot;
+                     template: &amp;quot;#= category # - #= value.x # - #= value.y #&amp;quot;
                  }
              }
          ]
     });
 
-### series.type=&quot;scatter&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;scatter&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
 A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;scatter&quot;.xAxis `String`*(default: primary)*
+### series.type=&amp;quot;scatter&amp;quot;.xAxis `String`*(default: primary)*
 
 The name of the X axis to use.
 
-### series.type=&quot;scatter&quot;.yAxis `String`*(default: primary)*
+### series.type=&amp;quot;scatter&amp;quot;.yAxis `String`*(default: primary)*
 
 The name of the Y axis to use.
 
-### series.type=&quot;scatterLine&quot; `Object`
+### series.type=&amp;quot;scatterLine&amp;quot; `Object`
 
 Available options for scatter line series:
 
-### series.type=&quot;scatterLine&quot;.data `Array`
+### series.type=&amp;quot;scatterLine&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;scatterLine&quot;.field `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;scatterLine&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -4384,47 +4384,47 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;scatterLine&quot;.name `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;scatterLine&quot;.color `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;scatterLine&quot;.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the line.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;scatterLine&quot;.data `Array`
+### series.type=&amp;quot;scatterLine&amp;quot;.data `Array`
 
 Array of data items (optional).
 The scatter chart can be bound to an array of arrays with two numbers (X and Y).
@@ -4433,83 +4433,83 @@ The scatter chart can be bound to an array of arrays with two numbers (X and Y).
 
     // ...
      series:[{
-         type: &quot;scatterLine&quot;,
+         type: &amp;quot;scatterLine&amp;quot;,
          data:[[1, 1], [1, 2]],
-         name: &quot;Points&quot;
+         name: &amp;quot;Points&amp;quot;
      }]
      // ...
 
-### series.type=&quot;scatterLine&quot;.labels `Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.labels `Object`
 
 Configures the series data labels.
 
-### series.type=&quot;scatterLine&quot;.labels.background `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.background `String`
 
 The background color of the labels.
 
-### series.type=&quot;scatterLine&quot;.labels.border `Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.border `Object`
 
 The border of the labels.
 
-### series.type=&quot;scatterLine&quot;.labels.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;scatterLine&quot;.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;scatterLine&quot;.labels.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;scatterLine&quot;.labels.color `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.color `String`
 
 The text color of the labels.
 
-### series.type=&quot;scatterLine&quot;.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
-### series.type=&quot;scatterLine&quot;.labels.format `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.format `String`
 
 The format of the labels.
 
 #### Example
 
     //sets format of the labels
-    format: &quot;{0:C}--{1:C}&quot;
+    format: &amp;quot;{0:C}--{1:C}&amp;quot;
 
-### series.type=&quot;scatterLine&quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.margin `Number|Object`*(default: { left: 5, right: 5})*
 
 The margin of the labels.
 
@@ -4522,7 +4522,7 @@ The margin of the labels.
     // margin left and right are with 5px (by default)
     margin: { top: 1, bottom: 1 }
 
-### series.type=&quot;scatterLine&quot;.labels.padding `Number|Object`*(default: 0)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.padding `Number|Object`*(default: 0)*
 
  The padding of the labels.
 
@@ -4535,28 +4535,28 @@ The margin of the labels.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;scatterLine&quot;.labels.position `String`*(default: &quot;above&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.position `String`*(default: &amp;quot;above&amp;quot;)*
 
 Defines the position of the scatter labels.
 
 
-#### *&quot;above&quot;*
+#### *&amp;quot;above&amp;quot;*
 
 The label is positioned at the top of the scatter chart marker.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The label is positioned at the right of the scatter chart marker.
 
-#### *&quot;below&quot;*
+#### *&amp;quot;below&amp;quot;*
 
 The label is positioned at the bottom of the scatter chart marker.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The label is positioned at the left of the scatter chart marker.
 
-### series.type=&quot;scatterLine&quot;.labels.template `String | Function`
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.template `String | Function`
 
 The label template.
 Template variables:
@@ -4571,136 +4571,136 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;scatterLine&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;scatterLine&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[1, 1], [1, 2], [1, 3]],
                  labels: {
                      // label template
-                     template: &quot;#= value.x # - #= value.y #&quot;,
+                     template: &amp;quot;#= value.x # - #= value.y #&amp;quot;,
                      visible: true
                  }
              }
          ]
     });
 
-### series.type=&quot;scatterLine&quot;.labels.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;scatterLine&amp;quot;.labels.visible `Boolean`*(default: false)*
 
  The visibility of the labels.
 
-### series.type=&quot;scatterLine&quot;.markers `Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.markers `Object`
 
 Configures the scatter markers.
 
-### series.type=&quot;scatterLine&quot;.markers.background `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.background `String`
 
 The background color of the current series markers.
 
-### series.type=&quot;scatterLine&quot;.markers.border `Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.border `Object`
 
 The border of the markers.
 
-### series.type=&quot;scatterLine&quot;.markers.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;scatterLine&quot;.markers.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;scatterLine&quot;.markers.size `Number`*(default: 6)*
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.size `Number`*(default: 6)*
 
  The marker size.
 
-### series.type=&quot;scatterLine&quot;.markers.type `String`*(default: &quot;circle&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.type `String`*(default: &amp;quot;circle&amp;quot;)*
 
 Configures the markers shape type.
 
 
-#### *&quot;square&quot;*
+#### *&amp;quot;square&amp;quot;*
 
 The marker shape is square.
 
-#### *&quot;triangle&quot;*
+#### *&amp;quot;triangle&amp;quot;*
 
 The marker shape is triangle.
 
-#### *&quot;circle&quot;*
+#### *&amp;quot;circle&amp;quot;*
 
 The marker shape is circle.
 
-### series.type=&quot;scatterLine&quot;.markers.visible `Boolean`*(default: true)*
+### series.type=&amp;quot;scatterLine&amp;quot;.markers.visible `Boolean`*(default: true)*
 
  The markers visibility.
 
-### series.type=&quot;scatterLine&quot;.missingValues `String`*(default: &quot;gap&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.missingValues `String`*(default: &amp;quot;gap&amp;quot;)*
 
 Configures the behavior for handling missing values in scatter series.
 
 
-#### *&quot;interpolate&quot;*
+#### *&amp;quot;interpolate&amp;quot;*
 
 The value is interpolated from neighboring points.
 
-#### *&quot;zero&quot;*
+#### *&amp;quot;zero&amp;quot;*
 
 The value is assumed to be zero.
 
-#### *&quot;gap&quot;*
+#### *&amp;quot;gap&amp;quot;*
 
 The line stops before the missing point and continues after it.
 
-### series.type=&quot;scatterLine&quot;.name `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;scatterLine&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;scatterLine&amp;quot;.opacity `Number`*(default: 1)*
 
  The series opacity.
 
-### series.type=&quot;scatterLine&quot;.tooltip `Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;scatterLine&quot;.tooltip.background `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;scatterLine&quot;.tooltip.border `Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;scatterLine&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### series.type=&quot;scatterLine&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
  The width of the border.
 
-### series.type=&quot;scatterLine&quot;.tooltip.color `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;scatterLine&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
-### series.type=&quot;scatterLine&quot;.tooltip.format `String`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.format `String`
 
 The tooltip format.
 
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
-### series.type=&quot;scatterLine&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -4713,7 +4713,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;scatterLine&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -4727,62 +4727,62 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;scatterLine&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;scatterLine&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[1, 1], [1, 2], [1, 3]],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value.x # - #= value.y #&quot;
+                     template: &amp;quot;#= category # - #= value.x # - #= value.y #&amp;quot;
                  }
              }
          ]
     });
 
-### series.type=&quot;scatterLine&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;scatterLine&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
  A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;scatterLine&quot;.width `Number`*(default: 1)*
+### series.type=&amp;quot;scatterLine&amp;quot;.width `Number`*(default: 1)*
 
  The line width of the scatter line chart.
 
-### series.type=&quot;scatterLine&quot;.xAxis `String`*(default: primary)*
+### series.type=&amp;quot;scatterLine&amp;quot;.xAxis `String`*(default: primary)*
 
  The name of the X axis to use.
 
-### series.type=&quot;scatterLine&quot;.yAxis `String`*(default: primary)*
+### series.type=&amp;quot;scatterLine&amp;quot;.yAxis `String`*(default: primary)*
 
  The name of the Y axis to use.
 
-### series.type=&quot;verticalArea&quot;
+### series.type=&amp;quot;verticalArea&amp;quot;
 
 Vertical area series use the same options as area series.
 The category axis is rendered vertically instead of horizontally.
 
-### series.type=&quot;verticalLine&quot;
+### series.type=&amp;quot;verticalLine&amp;quot;
 
 Vertical line series accepts the same parameters as line series.
 The line and the category axis are now vertical instead of horizontal.
 
-### series.type=&quot;candlestick&quot; `Object`
+### series.type=&amp;quot;candlestick&amp;quot; `Object`
 
 Available options for candlestick series.
 
-### series.type=&quot;candlestick&quot;.data `Array`
+### series.type=&amp;quot;candlestick&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;candlestick&quot;.field `String`
+### series.type=&amp;quot;candlestick&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;candlestick&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;candlestick&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -4794,33 +4794,33 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;candlestick&quot;.name `String`
+### series.type=&amp;quot;candlestick&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;candlestick&quot;.aggregates `Object`*(default: { open: &quot;max&quot;, high: &quot;max&quot;, close: &quot;min&quot;, low: &quot;max&quot; })*
+### series.type=&amp;quot;candlestick&amp;quot;.aggregates `Object`*(default: { open: &amp;quot;max&amp;quot;, high: &amp;quot;max&amp;quot;, close: &amp;quot;min&amp;quot;, low: &amp;quot;max&amp;quot; })*
 
 Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return values are displayed instead of the individual points.
 
-#### *&quot;max&quot;*
+#### *&amp;quot;max&amp;quot;*
 
 The highest value for the date period.
 
-#### *&quot;min&quot;*
+#### *&amp;quot;min&amp;quot;*
 
 The lowest value for the date period.
 
-#### *&quot;sum&quot;*
+#### *&amp;quot;sum&amp;quot;*
 
 The sum of all values for the date period.
 
-#### *&quot;count&quot;*
+#### *&amp;quot;count&amp;quot;*
 
 The number of values for the date period.
 
-#### *&quot;avg&quot;*
+#### *&amp;quot;avg&amp;quot;*
 
 The average of all values for the date period.
 
@@ -4828,151 +4828,151 @@ The average of all values for the date period.
 
 User-defined aggregate function.
 
-### series.type=&quot;candlestick&quot;.axis `String`*(default: primary)*
+### series.type=&amp;quot;candlestick&amp;quot;.axis `String`*(default: primary)*
 
 The name of the value axis to use.
 
-### series.type=&quot;candlestick&quot;.border `Object`
+### series.type=&amp;quot;candlestick&amp;quot;.border `Object`
 
 The border of the series.
 
-### series.type=&quot;candlestick&quot;.border.color `String`*(default: the color of the curren series)*
+### series.type=&amp;quot;candlestick&amp;quot;.border.color `String`*(default: the color of the curren series)*
 
 The color of the border.
 
-### series.type=&quot;candlestick&quot;.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;candlestick&amp;quot;.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;candlestick&quot;.border.width `Number`*(default: 1)*
+### series.type=&amp;quot;candlestick&amp;quot;.border.width `Number`*(default: 1)*
 
  The width of the border.
 
-### series.type=&quot;candlestick&quot;.color `String`
+### series.type=&amp;quot;candlestick&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;candlestick&quot;.colorField `String`
+### series.type=&amp;quot;candlestick&amp;quot;.colorField `String`
 
 The data field containing the point color.
 
-### series.type=&quot;candlestick&quot;.downColor `String`
+### series.type=&amp;quot;candlestick&amp;quot;.downColor `String`
 
 The series color when open value is smoller then close value.
 
-### series.type=&quot;candlestick&quot;.downColorField `String`
+### series.type=&amp;quot;candlestick&amp;quot;.downColorField `String`
 
 The data field containing the body color.
 
-### series.type=&quot;candlestick&quot;.openField `String`
+### series.type=&amp;quot;candlestick&amp;quot;.openField `String`
 
 The data field containing the open value.
 
-### series.type=&quot;candlestick&quot;.highField `String`
+### series.type=&amp;quot;candlestick&amp;quot;.highField `String`
 
 The data field containing the high value.
 
-### series.type=&quot;candlestick&quot;.lowField `String`
+### series.type=&amp;quot;candlestick&amp;quot;.lowField `String`
 
 The data field containing the low value.
 
-### series.type=&quot;candlestick&quot;.closeField `String`
+### series.type=&amp;quot;candlestick&amp;quot;.closeField `String`
 
 The data field containing the close value.
 
-### series.type=&quot;candlestick&quot;.gap `Number`*(default: 1)*
+### series.type=&amp;quot;candlestick&amp;quot;.gap `Number`*(default: 1)*
 
 The distance between category clusters.
 
-### series.type=&quot;candlestick&quot;.name `String`
+### series.type=&amp;quot;candlestick&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;candlestick&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;candlestick&amp;quot;.opacity `Number`*(default: 1)*
 
 The series opacity.
 
-### series.type=&quot;candlestick&quot;.overlay `Object`
+### series.type=&amp;quot;candlestick&amp;quot;.overlay `Object`
 
 The effects overlay.
 
-### series.type=&quot;candlestick&quot;.overlay.gradient `String`*(default: &quot;glass&quot;)*
+### series.type=&amp;quot;candlestick&amp;quot;.overlay.gradient `String`*(default: &amp;quot;glass&amp;quot;)*
 
 The gradient name.
 
-#### *&quot;glass&quot;*
+#### *&amp;quot;glass&amp;quot;*
 
 The bars have glass effect overlay.
 
-#### *&quot;none&quot;*
+#### *&amp;quot;none&amp;quot;*
 
 The bars have no effect overlay.
 
-### series.type=&quot;candlestick&quot;.spacing `Number`*(default: 0.3)*
+### series.type=&amp;quot;candlestick&amp;quot;.spacing `Number`*(default: 0.3)*
 
 Space between points.
 
-### series.type=&quot;candlestick&quot;.stack `Boolean`*(default: false)*
+### series.type=&amp;quot;candlestick&amp;quot;.stack `Boolean`*(default: false)*
 
 A value indicating if the series should be stacked.
 
-### series.type=&quot;candlestick&quot;.tooltip `Object`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;candlestick&quot;.tooltip.background `String`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;candlestick&quot;.tooltip.border `Object`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;candlestick&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border.
 
-### series.type=&quot;candlestick&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
 The width of the border.
 
-### series.type=&quot;candlestick&quot;.tooltip.color `String`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;candlestick&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The tooltip font.
 
-### series.type=&quot;candlestick&quot;.tooltip.format `String`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.format `String`
 
 The tooltip format. Format variables:
 
@@ -4985,9 +4985,9 @@ The tooltip format. Format variables:
 #### Example
 
     // sets format of the tooltip
-    format: &quot;{0:C}--{1:C}--{2:C}--{3:C}&quot;
+    format: &amp;quot;{0:C}--{1:C}--{2:C}--{3:C}&amp;quot;
 
-### series.type=&quot;candlestick&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -5000,7 +5000,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;candlestick&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -5017,56 +5017,56 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;candlestick&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;candlestick&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[300, 450, 125, 200]],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value.open #&quot;
+                     template: &amp;quot;#= category # - #= value.open #&amp;quot;
                  }
              }
          ]
     });
 
-### series.type=&quot;candlestick&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;candlestick&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
 A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;candlestick&quot;.line `Object`
+### series.type=&amp;quot;candlestick&amp;quot;.line `Object`
 
 The line of the candlestick chart.
 
-### series.type=&quot;candlestick&quot;.line.color `String`
+### series.type=&amp;quot;candlestick&amp;quot;.line.color `String`
 
 The line color of the candlestick chart.
 
-### series.type=&quot;candlestick&quot;.line.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;candlestick&amp;quot;.line.opacity `Number`*(default: 1)*
 
 The line opacity of the candlestick chart.
 
-### series.type=&quot;candlestick&quot;.line.width `String`*(default: 2)*
+### series.type=&amp;quot;candlestick&amp;quot;.line.width `String`*(default: 2)*
 
 The line width of the candlestick chart.
 
-### series.type=&quot;ohlc&quot; `Object`
+### series.type=&amp;quot;ohlc&amp;quot; `Object`
 
 Available options for ohlc series.
 
-### series.type=&quot;ohlc&quot;.data `Array`
+### series.type=&amp;quot;ohlc&amp;quot;.data `Array`
 
 Array of data points.
 
-### series.type=&quot;ohlc&quot;.field `String`
+### series.type=&amp;quot;ohlc&amp;quot;.field `String`
 
 The data field containing the series value.
 
-### series.type=&quot;ohlc&quot;.groupNameTemplate `String`
+### series.type=&amp;quot;ohlc&amp;quot;.groupNameTemplate `String`
 
 Name template for auto-generated
 series when binding to grouped data.
@@ -5078,33 +5078,33 @@ Template variables:
 *   **group.field** - the name of the field used for grouping
 *   **group.value** - the field value for this group.
 
-### series.type=&quot;ohlc&quot;.name `String`
+### series.type=&amp;quot;ohlc&amp;quot;.name `String`
 
 The series name visible in the legend.
 
-### series.type=&quot;ohlc&quot;.aggregates `Object`*(default: { open: &quot;max&quot;, high: &quot;max&quot;, close: &quot;min&quot;, low: &quot;max&quot; })*
+### series.type=&amp;quot;ohlc&amp;quot;.aggregates `Object`*(default: { open: &amp;quot;max&amp;quot;, high: &amp;quot;max&amp;quot;, close: &amp;quot;min&amp;quot;, low: &amp;quot;max&amp;quot; })*
 
 Aggregate function for date series.
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return values are displayed instead of the individual points.
 
-#### *&quot;max&quot;*
+#### *&amp;quot;max&amp;quot;*
 
 The highest value for the date period.
 
-#### *&quot;min&quot;*
+#### *&amp;quot;min&amp;quot;*
 
 The lowest value for the date period.
 
-#### *&quot;sum&quot;*
+#### *&amp;quot;sum&amp;quot;*
 
 The sum of all values for the date period.
 
-#### *&quot;count&quot;*
+#### *&amp;quot;count&amp;quot;*
 
 The number of values for the date period.
 
-#### *&quot;avg&quot;*
+#### *&amp;quot;avg&amp;quot;*
 
 The average of all values for the date period.
 
@@ -5112,131 +5112,131 @@ The average of all values for the date period.
 
 User-defined aggregate function.
 
-### series.type=&quot;ohlc&quot;.axis `String`*(default: primary)*
+### series.type=&amp;quot;ohlc&amp;quot;.axis `String`*(default: primary)*
 
 The name of the value axis to use.
 
-### series.type=&quot;ohlc&quot;.border `Object`
+### series.type=&amp;quot;ohlc&amp;quot;.border `Object`
 
 The border of the series.
 
-### series.type=&quot;ohlc&quot;.border.color `String`*(default: the color of the curren series)*
+### series.type=&amp;quot;ohlc&amp;quot;.border.color `String`*(default: the color of the curren series)*
 
 The color of the border.
 
-### series.type=&quot;ohlc&quot;.border.dashType `String`*(default: &quot;solid&quot;)*
+### series.type=&amp;quot;ohlc&amp;quot;.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
-### series.type=&quot;ohlc&quot;.border.width `Number`*(default: 1)*
+### series.type=&amp;quot;ohlc&amp;quot;.border.width `Number`*(default: 1)*
 
  The width of the border.
 
-### series.type=&quot;ohlc&quot;.color `String`
+### series.type=&amp;quot;ohlc&amp;quot;.color `String`
 
 The series base color.
 
-### series.type=&quot;ohlc&quot;.colorField `String`
+### series.type=&amp;quot;ohlc&amp;quot;.colorField `String`
 
 The data field containing the point color.
 
-### series.type=&quot;ohlc&quot;.openField `String`
+### series.type=&amp;quot;ohlc&amp;quot;.openField `String`
 
 The data field containing the open value.
 
-### series.type=&quot;ohlc&quot;.highField `String`
+### series.type=&amp;quot;ohlc&amp;quot;.highField `String`
 
 The data field containing the high value.
 
-### series.type=&quot;ohlc&quot;.lowField `String`
+### series.type=&amp;quot;ohlc&amp;quot;.lowField `String`
 
 The data field containing the low value.
 
-### series.type=&quot;ohlc&quot;.closeField `String`
+### series.type=&amp;quot;ohlc&amp;quot;.closeField `String`
 
 The data field containing the close value.
 
-### series.type=&quot;ohlc&quot;.gap `Number`*(default: 1)*
+### series.type=&amp;quot;ohlc&amp;quot;.gap `Number`*(default: 1)*
 
 The distance between category clusters.
 
-### series.type=&quot;ohlc&quot;.name `String`
+### series.type=&amp;quot;ohlc&amp;quot;.name `String`
 
 The series name.
 
-### series.type=&quot;ohlc&quot;.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;ohlc&amp;quot;.opacity `Number`*(default: 1)*
 
 The series opacity.
 
-### series.type=&quot;ohlc&quot;.overlay `Object`
+### series.type=&amp;quot;ohlc&amp;quot;.overlay `Object`
 
 The effects overlay.
 
-### series.type=&quot;ohlc&quot;.spacing `Number`*(default: 0.3)*
+### series.type=&amp;quot;ohlc&amp;quot;.spacing `Number`*(default: 0.3)*
 
 Space between points.
 
-### series.type=&quot;ohlc&quot;.stack `Boolean`*(default: false)*
+### series.type=&amp;quot;ohlc&amp;quot;.stack `Boolean`*(default: false)*
 
 A value indicating if the series should be stacked.
 
-### series.type=&quot;ohlc&quot;.tooltip `Object`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip `Object`
 
 The data point tooltip configuration options.
 
-### series.type=&quot;ohlc&quot;.tooltip.background `String`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.background `String`
 
 The background color of the tooltip. The default is determined from the series color.
 
-### series.type=&quot;ohlc&quot;.tooltip.border `Object`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.border `Object`
 
 The border configuration options.
 
-### series.type=&quot;ohlc&quot;.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border.
 
-### series.type=&quot;ohlc&quot;.tooltip.border.width `Number`*(default: 0)*
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.border.width `Number`*(default: 0)*
 
 The width of the border.
 
-### series.type=&quot;ohlc&quot;.tooltip.color `String`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.color `String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### series.type=&quot;ohlc&quot;.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The tooltip font.
 
-### series.type=&quot;ohlc&quot;.tooltip.format `String`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.format `String`
 
 The tooltip format. Format variables:
 
@@ -5249,9 +5249,9 @@ The tooltip format. Format variables:
 #### Example
 
     // sets format of the tooltip
-    format: &quot;{0:C}--{1:C}--{2:C}--{3:C}&quot;
+    format: &amp;quot;{0:C}--{1:C}--{2:C}--{3:C}&amp;quot;
 
-### series.type=&quot;ohlc&quot;.tooltip.padding `Number|Object`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.padding `Number|Object`
 
 The padding of the tooltip.
 
@@ -5264,7 +5264,7 @@ The padding of the tooltip.
     // right and bottom padding are left at their default values
     padding: { top: 1, left: 1 }
 
-### series.type=&quot;ohlc&quot;.tooltip.template `String|Function`
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.template `String|Function`
 
 The tooltip template.
 Template variables:
@@ -5280,46 +5280,46 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 type: &quot;ohlc&quot;,
-                 name: &quot;Series 1&quot;,
+                 type: &amp;quot;ohlc&amp;quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [[300, 450, 125, 200]],
                  tooltip: {
                      visible: true,
-                     template: &quot;#= category # - #= value.open #&quot;
+                     template: &amp;quot;#= category # - #= value.open #&amp;quot;
                  }
              }
          ]
     });
 
-### series.type=&quot;ohlc&quot;.tooltip.visible `Boolean`*(default: false)*
+### series.type=&amp;quot;ohlc&amp;quot;.tooltip.visible `Boolean`*(default: false)*
 
 A value indicating if the tooltip should be displayed.
 
-### series.type=&quot;ohlc&quot;.line `Object`
+### series.type=&amp;quot;ohlc&amp;quot;.line `Object`
 
 The line of the ohlc chart.
 
-### series.type=&quot;ohlc&quot;.line.color `String`
+### series.type=&amp;quot;ohlc&amp;quot;.line.color `String`
 
 The line color of the ohlc chart.
 
-### series.type=&quot;ohlc&quot;.line.opacity `Number`*(default: 1)*
+### series.type=&amp;quot;ohlc&amp;quot;.line.opacity `Number`*(default: 1)*
 
 The line opacity of the ohlc chart.
 
-### series.type=&quot;ohlc&quot;.line.width `String`*(default: 2)*
+### series.type=&amp;quot;ohlc&amp;quot;.line.width `String`*(default: 2)*
 
 The line width of the ohlc chart.
 
 ### seriesColors `Array`
 
-The default colors for the chart&#39;s series. When all colors are used, new colors are pulled from the start again.
+The default colors for the chart&amp;#39;s series. When all colors are used, new colors are pulled from the start again.
 
 ### seriesDefaults `Object`
 
@@ -5348,39 +5348,39 @@ The default options for all bar series. For more details see the series options.
 
 The border of the series.
 
-### seriesDefaults.border.color `String`*(default: &quot;black&quot;)*
+### seriesDefaults.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border.
 
-### seriesDefaults.border.dashType `String`*(default: &quot;solid&quot;)*
+### seriesDefaults.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -5413,14 +5413,14 @@ Configures the series data labels.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         seriesDefault: {
             // adjust the default label appearence for all series
             labels: {
                 // set the margin on all sides to 1
                 margin: 1,
                 // format the labels as currency
-                format: &quot;C&quot;
+                format: &amp;quot;C&amp;quot;
             }
         },
         ...
@@ -5435,40 +5435,40 @@ including hex and rgb.
 
 The border of the labels.
 
-### seriesDefaults.labels.border.color `String`*(default: &quot;black&quot;)*
+### seriesDefaults.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### seriesDefaults.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### seriesDefaults.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -5481,19 +5481,19 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 The text color of the labels. Any valid CSS color string will work here, inlcuding hex
 and rgb.
 
-### seriesDefaults.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### seriesDefaults.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 labels
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         seriesDefault: {
             // adjust the default label appearence for all series
             labels: {
                 // set the font size to 14px
-                font: &quot;14px Arial,Helvetica,sans-serif&quot;
+                font: &amp;quot;14px Arial,Helvetica,sans-serif&amp;quot;
             }
         },
         ...
@@ -5506,7 +5506,7 @@ The format of the labels.
 #### Example
 
     //sets format of the labels
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
 ### seriesDefaults.labels.margin `Number|Object`*(default: 0)*
 
@@ -5514,7 +5514,7 @@ The format of the labels.
 
 #### Example
 
-    $(&quot;#chart).kendoChart({
+    $(&amp;quot;#chart).kendoChart({
          labels: {
              // sets the top, right, bottom and left margin to 3px.
              margin: 3
@@ -5522,7 +5522,7 @@ The format of the labels.
          ...
     });
     //
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          labels: {
              // sets the top and left margin to 1px
              // margin right and bottom are with 0px (by default)
@@ -5559,20 +5559,20 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          seriesDefault: {
              labels: {
                  // label template
-                 template: &quot;#= value  #%&quot;,
+                 template: &amp;quot;#= value  #%&amp;quot;,
                  visible: true
              }
          },
          series: [
              {
-                 name: &quot;Series 1&quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125]
              }
          ],
@@ -5587,7 +5587,7 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         seriesDefault: {
             labels: {
                 // hide all the series labels by default
@@ -5641,7 +5641,7 @@ The background color of the tooltip. The default is determined from the series c
 
 The border configuration options.
 
-### seriesDefaults.tooltip.border.color `String`*(default: &quot;black&quot;)*
+### seriesDefaults.tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
@@ -5653,7 +5653,7 @@ The border configuration options.
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### seriesDefaults.tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### seriesDefaults.tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
@@ -5664,7 +5664,7 @@ The tooltip format.
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
 ### seriesDefaults.tooltip.padding `Number|Object`
 
@@ -5693,19 +5693,19 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          seriesDefaults: {
              tooltip: {
                  visible: true,
-                 template: &quot;#= category # - #= value #&quot;
+                 template: &amp;quot;#= category # - #= value #&amp;quot;
              }
          },
          series: [
              {
-                 name: &quot;Series 1&quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125]
              }
          ],
@@ -5736,23 +5736,23 @@ Sets Chart theme. Available themes: default, blueOpal, black.
 
 The chart title configuration options or text.
 
-### title.align `String`*(default: &quot;center&quot;)*
+### title.align `String`*(default: &amp;quot;center&amp;quot;)*
 
  The alignment of the title.
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The text is aligned to the left.
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
 The text is aligned to the middle.
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
 The text is aligned to the right.
 
-### title.background `String`*(default: &quot;white&quot;)*
+### title.background `String`*(default: &amp;quot;white&amp;quot;)*
 
  The background color of the title.
 
@@ -5762,55 +5762,55 @@ The border of the title.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         // set border options on the title
         title: {
             border: {
                 // set the border color to a dark blue
-                color: &quot;#336699&quot;,
+                color: &amp;quot;#336699&amp;quot;,
                 // set the width of the border to 2 pixels
                 width: 2,
                 // set the border style to long dashes
-                dashType: &quot;longDash&quot;
+                dashType: &amp;quot;longDash&amp;quot;
             }
         },
         ...
     });
 
-### title.border.color `String`*(default: &quot;black&quot;)*
+### title.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
-### title.border.dashType `String`*(default: &quot;solid&quot;)*
+### title.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
  The dash type of the border.
 
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -5818,7 +5818,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
  The width of the border.
 
-### title.font `String`*(default: &quot;16px Arial,Helvetica,sans-serif&quot;)*
+### title.font `String`*(default: &amp;quot;16px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The font of the title.
 
@@ -5828,7 +5828,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         // sets the top, right, bottom and left margin to 3px.
         title: {
             margin: 3
@@ -5836,7 +5836,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
         ...
     });
     //
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         // sets the top and left margin to 1px
         // margin right and bottom are with 5px (by default)
         title: {
@@ -5851,7 +5851,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         // sets the top, right, bottom and left padding to 3px.
         title: {
             padding: 3
@@ -5859,7 +5859,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
         ...
     });
     //
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         // sets the top and left padding to 1px
         // padding right and bottom are with 5px (by default)
         title: {
@@ -5868,16 +5868,16 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
         ...
     });
 
-### title.position `String`*(default: &quot;top&quot;)*
+### title.position `String`*(default: &amp;quot;top&amp;quot;)*
 
  The position of the title.
 
 
-#### *&quot;top&quot;*
+#### *&amp;quot;top&amp;quot;*
 
 The title is positioned on the top.
 
-#### *&quot;bottom&quot;*
+#### *&amp;quot;bottom&amp;quot;*
 
 The title is positioned on the bottom.
 
@@ -5887,15 +5887,15 @@ The title of the chart. You can also set the text directly for a title with defa
 
 #### Example
 
-    $(&quot;#chart &quot;).kendoChart({
+    $(&amp;quot;#chart &amp;quot;).kendoChart({
         title: {
-            text: &quot;Sales data&quot;
+            text: &amp;quot;Sales data&amp;quot;
         },
         ...
     });
 
-    $(&quot;#chart &quot;).kendoChart({
-        title: &quot;Sales data&quot;,
+    $(&amp;quot;#chart &amp;quot;).kendoChart({
+        title: &amp;quot;Sales data&amp;quot;,
         ...
     });
 
@@ -5906,7 +5906,7 @@ The title of the chart. You can also set the text directly for a title with defa
 
 #### Example
 
-    $(&quot;#chart &quot;).kendoChart({
+    $(&amp;quot;#chart &amp;quot;).kendoChart({
         title: {
             // hides the title
             visible: false
@@ -5926,7 +5926,7 @@ The background color of the tooltip. The default is determined from the series c
 
 The border configuration options.
 
-### tooltip.border.color `String`*(default: &quot;black&quot;)*
+### tooltip.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
  The color of the border.
 
@@ -5938,7 +5938,7 @@ The border configuration options.
 
 The text color of the tooltip. The default is the same as the series labels color.
 
-### tooltip.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### tooltip.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
  The tooltip font.
 
@@ -5949,7 +5949,7 @@ The tooltip format.
 #### Example
 
     //sets format of the tooltip
-    format: &quot;C&quot;
+    format: &amp;quot;C&amp;quot;
 
 ### tooltip.padding `Number|Object`
 
@@ -5978,12 +5978,12 @@ Template variables:
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [{
-             name: &quot;Series 1&quot;,
+             name: &amp;quot;Series 1&amp;quot;,
              data: [200, 450, 300, 125]
          }],
          categoryAxis: {
@@ -5991,7 +5991,7 @@ Template variables:
          },
          tooltip: {
              visible: true,
-             template: &quot;#= category # - #= value #&quot;
+             template: &amp;quot;#= category # - #= value #&amp;quot;
          }
     });
 
@@ -6015,23 +6015,23 @@ Value at which the category axis crosses this axis.
 
 Value indicies at which the category axes cross the value axis.
 
-**Note:&amp;nbsp;** Specify an index greater than or equal to the number
+**Note:&amp;amp;nbsp;** Specify an index greater than or equal to the number
 of categories to denote the far end of the axis.
 
 #### Example
-    &lt;p&gt;
-    $(&quot;#chart&quot;).kendoChart({
+    &amp;lt;p&amp;gt;
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          categoryAxis: [{
-             categories: [&quot;A&quot;, &quot;B&quot;]
+             categories: [&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;]
          }, {
-             categories: [&quot;C&quot;, &quot;D&quot;]
+             categories: [&amp;quot;C&amp;quot;, &amp;quot;D&amp;quot;]
          }],
          valueAxis: {
              axisCrossingValues: [0, 1]
          },
          ...
     })
-    &lt;/p&gt;
+    &amp;lt;/p&amp;gt;
 
 ### valueAxis.color `String`
 
@@ -6051,40 +6051,40 @@ hex and rgb
 
 The border of the labels.
 
-### valueAxis.labels.border.color `String`*(default: &quot;black&quot;)*
+### valueAxis.labels.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border. Any valid CSS color string will work here, including
 hex and rgb.
 
-### valueAxis.labels.border.dashType `String`*(default: &quot;solid&quot;)*
+### valueAxis.labels.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -6096,7 +6096,7 @@ The width of the border.
 
 The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
 
-### valueAxis.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
+### valueAxis.labels.font `String`*(default: &amp;quot;12px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the labels.
 
@@ -6106,11 +6106,11 @@ The format of the labels.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         valueAxis: {
            labels: {
                // set the format to currency
-               format: &quot;C&quot;
+               format: &amp;quot;C&amp;quot;
            }
         },
         ...
@@ -6172,13 +6172,13 @@ Template variables:
 #### Example
 
     // chart intialization
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          title: {
-             text: &quot;My Chart Title&quot;
+             text: &amp;quot;My Chart Title&amp;quot;
          },
          series: [
              {
-                 name: &quot;Series 1&quot;,
+                 name: &amp;quot;Series 1&amp;quot;,
                  data: [200, 450, 300, 125]
              }
          ],
@@ -6188,7 +6188,7 @@ Template variables:
          valueAxis: {
              labels: {
                  // labels template
-                 template: &quot;#= value #%&quot;
+                 template: &amp;quot;#= value #%&amp;quot;
              }
          }
     });
@@ -6201,40 +6201,40 @@ The visibility of the labels.
 
 Configures the axis line. This will also affect the major and minor ticks, but not the grid lines.
 
-### valueAxis.line.color `String`*(default: &quot;black&quot;)*
+### valueAxis.line.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the line. This will also effect the major and minor ticks, but
 not the grid lines.
 
-### valueAxis.line.dashType `String`*(default: &quot;solid&quot;)*
+### valueAxis.line.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the line.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -6252,7 +6252,7 @@ not the grid lines.
 Configures the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
-### valueAxis.majorGridLines.color `String`*(default: &quot;black&quot;)*
+### valueAxis.majorGridLines.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the lines.
 
@@ -6294,41 +6294,41 @@ This is often used in combination with the **max** configuration option.
 
 Configures the minor grid lines.  These are the lines that are an extension of the minor ticks through the
 
-### valueAxis.minorGridLines.color `String`*(default: &quot;black&quot;)*
+### valueAxis.minorGridLines.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the lines.
 
 Note that this has no effect if the visibility of the minor grid lines is not set to **true**.
 
-### valueAxis.minorGridLines.dashType `String`*(default: &quot;solid&quot;)*
+### valueAxis.minorGridLines.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the minor grid lines.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 body of the chart.
@@ -6371,27 +6371,27 @@ The unique axis name.
 The plot bands of the value axis.
 The plot band fields:
 
-#### *&quot;from&quot;*
+#### *&amp;quot;from&amp;quot;*
 
 The start position of the plot band in axis units.
 
-#### *&quot;to&quot;*
+#### *&amp;quot;to&amp;quot;*
 
 The end position of the plot band in axis units.
 
-#### *&quot;color&quot;*
+#### *&amp;quot;color&amp;quot;*
 
 The color of the plot band.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
         ...,
         valueAxis: {
             plotBands: [{
                 from: 0.2,
                 to: 0.4,
-                color: &quot;green&quot;
+                color: &amp;quot;green&amp;quot;
             }]
         },
      });
@@ -6414,39 +6414,39 @@ hex and rgb.
 
 The border of the title.
 
-### valueAxis.title.border.color `String`*(default: &quot;black&quot;)*
+### valueAxis.title.border.color `String`*(default: &amp;quot;black&amp;quot;)*
 
 The color of the border.
 
-### valueAxis.title.border.dashType `String`*(default: &quot;solid&quot;)*
+### valueAxis.title.border.dashType `String`*(default: &amp;quot;solid&amp;quot;)*
 
 The dash type of the border.
 
-#### *&quot;solid&quot;*
+#### *&amp;quot;solid&amp;quot;*
 
 Specifies a solid line.
 
-#### *&quot;dot&quot;*
+#### *&amp;quot;dot&amp;quot;*
 
 Specifies a line consisting of dots.
 
-#### *&quot;dash&quot;*
+#### *&amp;quot;dash&amp;quot;*
 
 Specifies a line consisting of dashes.
 
-#### *&quot;longDash&quot;*
+#### *&amp;quot;longDash&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *&quot;dashDot&quot;*
+#### *&amp;quot;dashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *&quot;longDashDot&quot;*
+#### *&amp;quot;longDashDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *&quot;longDashDotDot&quot;*
+#### *&amp;quot;longDashDotDot&amp;quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -6458,7 +6458,7 @@ The width of the border.
 
 The text color of the title. Any valid CSS color string will work here, including hex and rgb.
 
-### valueAxis.title.font `String`*(default: &quot;16px Arial,Helvetica,sans-serif&quot;)*
+### valueAxis.title.font `String`*(default: &amp;quot;16px Arial,Helvetica,sans-serif&amp;quot;)*
 
 The font style of the title.
 
@@ -6488,29 +6488,29 @@ The padding of the title.
     // padding right and bottom are with 0px (by default)
     padding: { top: 1, left: 1 }
 
-### valueAxis.title.position `String`*(default: &quot;center&quot;)*
+### valueAxis.title.position `String`*(default: &amp;quot;center&amp;quot;)*
 
 The position of the title.
 
-#### *&quot;top&quot;*
+#### *&amp;quot;top&amp;quot;*
 
 The axis title is positioned on the top (applicable to vertical axis).
 
-#### *&quot;bottom&quot;*
+#### *&amp;quot;bottom&amp;quot;*
 
 The axis title is positioned on the bottom (applicable to vertical axis).
 
-#### *&quot;left&quot;*
+#### *&amp;quot;left&amp;quot;*
 
 The axis title is positioned on the left (applicable to horizontal axis).
 
-#### *&quot;right&quot;*
+#### *&amp;quot;right&amp;quot;*
 
-&quot;The axis title is positioned on the right (applicable to horizontal axis).
+&amp;quot;The axis title is positioned on the right (applicable to horizontal axis).
 
-#### *&quot;center&quot;*
+#### *&amp;quot;center&amp;quot;*
 
-&quot;The axis title is positioned in the center.
+&amp;quot;The axis title is positioned in the center.
 
 ### valueAxis.title.rotation `Number`*(default: 0)*
 
@@ -6533,7 +6533,7 @@ The visibility of the axis.
 Scatter charts X-axis configuration options.
 Includes **all valueAxis options** in addition to:
 
-### xAxis.type `String`*(default: &quot;numeric&quot;)*
+### xAxis.type `String`*(default: &amp;quot;numeric&amp;quot;)*
 
 The axis type.
 
@@ -6572,25 +6572,25 @@ Culture to use for formatting the dates. See [Globalization](http://www.kendoui.
 
 Date format strings
 
-#### *&quot;hours&quot;*
+#### *&amp;quot;hours&amp;quot;*
 
-&quot;HH:mm&quot;
+&amp;quot;HH:mm&amp;quot;
 
-#### *&quot;days&quot;*
+#### *&amp;quot;days&amp;quot;*
 
-&quot;M/d&quot;
+&amp;quot;M/d&amp;quot;
 
-#### *&quot;weeks&quot;*
+#### *&amp;quot;weeks&amp;quot;*
 
-&quot;M/d&quot;
+&amp;quot;M/d&amp;quot;
 
-#### *&quot;months&quot;*
+#### *&amp;quot;months&amp;quot;*
 
-&quot;MMM &#39;yy&quot;
+&amp;quot;MMM &amp;#39;yy&amp;quot;
 
-#### *&quot;years&quot;*
+#### *&amp;quot;years&amp;quot;*
 
-&quot;yyyy&quot;
+&amp;quot;yyyy&amp;quot;
 
 The Chart will choose the appropriate format for the current `baseUnit`.
 Setting the labels **format** option will override these defaults.
@@ -6618,25 +6618,25 @@ It defaults to 1/5th of the majorUnit.
 Value at which the first Y axis crosses this axis.
 
 Values at which the Y axes cross this X axis.
-&lt;p&gt;
-**Note:&amp;nbsp;** Specify a value greater than or equal to the
+&amp;lt;p&amp;gt;
+**Note:&amp;amp;nbsp;** Specify a value greater than or equal to the
 axis maximum value to denote the far end of the axis.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          ...,
          xAxis: {
              axisCrossingValue: [0, 1000]
          },
-         yAxis: [{ }, { name: &quot;secondary&quot; }],
+         yAxis: [{ }, { name: &amp;quot;secondary&amp;quot; }],
          ...
     });
-    &lt;/p&gt;
+    &amp;lt;/p&amp;gt;
 
 ### yAxis `Object`
 
-### yAxis.type `String`*(default: &quot;numeric&quot;)*
+### yAxis.type `String`*(default: &amp;quot;numeric&amp;quot;)*
 
 The axis type.
 
@@ -6675,25 +6675,25 @@ Culture to use for formatting the dates. See [Globalization](http://www.kendoui.
 
 Date format strings
 
-#### *&quot;hours&quot;*
+#### *&amp;quot;hours&amp;quot;*
 
-&quot;HH:mm&quot;
+&amp;quot;HH:mm&amp;quot;
 
-#### *&quot;days&quot;*
+#### *&amp;quot;days&amp;quot;*
 
-&quot;M/d&quot;
+&amp;quot;M/d&amp;quot;
 
-#### *&quot;weeks&quot;*
+#### *&amp;quot;weeks&amp;quot;*
 
-&quot;M/d&quot;
+&amp;quot;M/d&amp;quot;
 
-#### *&quot;months&quot;*
+#### *&amp;quot;months&amp;quot;*
 
-&quot;MMM &#39;yy&quot;
+&amp;quot;MMM &amp;#39;yy&amp;quot;
 
-#### *&quot;years&quot;*
+#### *&amp;quot;years&amp;quot;*
 
-&quot;yyyy&quot;
+&amp;quot;yyyy&amp;quot;
 
 The Chart will choose the appropriate format for the current `baseUnit`.
 Setting the labels **format** option will override these defaults.
@@ -6721,21 +6721,21 @@ It defaults to 1/5th of the majorUnit.
 Value at which the first Y axis crosses this axis.
 
 Values at which the Y axes cross this X axis.
-&lt;p&gt;
-**Note:&amp;nbsp;** Specify a value greater than or equal to the
+&amp;lt;p&amp;gt;
+**Note:&amp;amp;nbsp;** Specify a value greater than or equal to the
 axis maximum value to denote the far end of the axis.
 
 #### Example
 
-    $(&quot;#chart&quot;).kendoChart({
+    $(&amp;quot;#chart&amp;quot;).kendoChart({
          ...,
          yAxis: {
              axisCrossingValue: [0, 1000]
          },
-         xAxis: [{ }, { name: &quot;secondary&quot; }],
+         xAxis: [{ }, { name: &amp;quot;secondary&amp;quot; }],
          ...
     });
-    &lt;/p&gt;
+    &amp;lt;/p&amp;gt;
 
 ## Methods
 
@@ -6747,8 +6747,8 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
 
 #### Example
 
-    kendo.destroy($(&quot;#chart&quot;));
-    $(&quot;#chart&quot;).remove();
+    kendo.destroy($(&amp;quot;#chart&amp;quot;));
+    $(&amp;quot;#chart&amp;quot;).remove();
 
 ### refresh
 
@@ -6756,7 +6756,7 @@ Reloads the data and repaints the chart.
 
 #### Example
 
-    var chart = $(&quot;#chart&quot;).data(&quot;kendoChart&quot;);
+    var chart = $(&amp;quot;#chart&amp;quot;).data(&amp;quot;kendoChart&amp;quot;);
 
     // refreshes the chart
     chart.refresh();
@@ -6773,7 +6773,7 @@ suitable for backend processing.
 
 #### Example
 
-    var chart = $(&quot;#chart&quot;).data(&quot;kendoChart&quot;);
+    var chart = $(&amp;quot;#chart&amp;quot;).data(&amp;quot;kendoChart&amp;quot;);
     var svgText = chart.svg();
 
 ## Events
@@ -6785,7 +6785,7 @@ Fires when an axis label is clicked.
 #### Example
 
     function onAxisLabelClick(e) {
-        alert(&quot;Clicked &quot; + e.axis.type + &quot; axis label with value: &quot; + e.value);
+        alert(&amp;quot;Clicked &amp;quot; + e.axis.type + &amp;quot; axis label with value: &amp;quot; + e.value);
     }
 
 #### Event Data
@@ -6833,7 +6833,7 @@ Fires when plot area is clicked.
 #### Example
 
     function onPlotAreaClick(e) {
-        alert(&quot;Clicked X axis value: &quot; + e.x);
+        alert(&amp;quot;Clicked X axis value: &amp;quot; + e.x);
     }
 
 #### Event Data
@@ -6867,7 +6867,7 @@ Fires when chart series are clicked.
 #### Example
 
     function onSeriesClick(e) {
-        alert(&quot;Clicked value: &quot; + e.value);
+        alert(&amp;quot;Clicked value: &amp;quot; + e.value);
     }
 
 #### Event Data
@@ -6911,7 +6911,7 @@ Fires when chart series are hovered.
 #### Example
 
     function onSeriesHover(e) {
-        alert(&quot;Hovered value: &quot; + e.value);
+        alert(&amp;quot;Hovered value: &amp;quot; + e.value);
     }
 
 #### Event Data
