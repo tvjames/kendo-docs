@@ -8,15 +8,15 @@ publish: true
 
 # JavaScript files used by Kendo UI
 
-Every widget from **Kendo UI** needs its JavaScript files to be included in order to work properly. This help topic lists the JavaScript files required by each widget.
+Every Kendo UI widget needs its JavaScript files to be included in order to work properly. This help topic lists the JavaScript files required by each widget.
 
 ## Combined Scripts
 
-The following combined scripts are made available in order to simplify development and deployment.
+The following combined scripts are provided in order to simplify development and deployment.
 
 *   **kendo.all.min.js** contains a minified version of all scripts (Web, DataViz and Mobile).
 
-> **Important**: kendo.all.min.js is only available in the Kendo UI Complete package. The contents of
+> **Important**: kendo.all.min.js is available in the Kendo UI Complete, Kendo UI Complete for ASP.NET MVC, Kendo UI Complete for JSP and Kendo UI Complete for PHP distributions. The contents of
 **kendo.aspnetmvc.min.js** are **not** included in kendo.all.min.js - you need to include kendo.aspnetmvc.min.js in addition to kendo.all.min.js or use the
 [custom download builder tool](http://www.kendoui.com/custom-download).
 
@@ -24,7 +24,8 @@ The following combined scripts are made available in order to simplify developme
 *   **kendo.dataviz.min.js** contains a minified version of all scripts from Kendo UI DataViz.
 *   **kendo.mobile.min.js** contains a minified version of all scripts from Kendo UI Mobile.
 
-**Important:** Only one of the above scripts can be included at a time.
+> **Important:** Only one of the **kendo.web.min.js**, **kendo.dataviz.min.js** and **kendo.mobile.min.js** JavaScript files can be included at a time. If widgets from
+different Kendo UI suites are needed one can either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.kendoui.com/custom-download).
 
 ## Custom Combined Scripts
 
@@ -33,7 +34,7 @@ to create a single JavaScript file which contains only the required widgets and 
 
 ## CDN
 
-The minified versions of all JavaScript files (except jQuery) are also available via CDN
+The minified versions of all JavaScript files are also available via CDN
 
     http://cdn.kendostatic.com/<version>/js/<filename>.min.js
 
@@ -98,7 +99,7 @@ can be included on a per-widget basis.
 1.  kendo.data.odata.js (if binding to OData)
 1.  kendo.data.xml.js (if binding to XML)
 1.  kendo.data.js
-1.  <span>kendo.binder.js (if using MVVM)</span>
+1.  kendo.binder.js (if using MVVM)
 1.  kendo.dataviz.core.js
 1.  kendo.dataviz.vml.js
 1.  kendo.dataviz.svg.js
