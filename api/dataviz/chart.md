@@ -15,7 +15,7 @@ Default options for all chart axes.
 
 ### categoryAxis `Object`
 
-The category axis configuration options.
+The category axis configuration options. THIS IS A LOCAL CHANGE HOORAY.
 
 ### categoryAxis.axisCrossingValue `Object | Date | Array`
 
