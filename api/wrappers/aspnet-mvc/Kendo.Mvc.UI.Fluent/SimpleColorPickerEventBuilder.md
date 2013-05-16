@@ -29,13 +29,13 @@ The handler code wrapped in a text tag (Razor syntax).
     @(Html.Kendo().ColorPicker()
         .Name("ColorPicker")
         .Events(events => events.Change(
-            @<text>
-                function(e) {
-                // event handling code
-                }
-                </text>
-                ))
-            )
+                @<text>
+                    function(e) {
+                    // event handling code
+                    }
+                    </text>
+                    ))
+                )
 
 
 ### Change(`System.String`)
@@ -56,7 +56,7 @@ The name of the JavaScript function that will handle the event.
     @(Html.Kendo().ColorPicker()
         .Name("ColorPicker")
         .Events(events => events.Change("change"))
-        )
+    )
 
 
 

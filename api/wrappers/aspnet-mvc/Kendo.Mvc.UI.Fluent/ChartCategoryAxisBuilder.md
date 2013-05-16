@@ -16,7 +16,7 @@ The parent Chart
 
 ## Methods
 
-### CategoriesT1(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
+### Categories(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Defines bound categories.
 
 
@@ -71,9 +71,9 @@ The value at which the first perpendicular axis crosses this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.AxisCrossingValue(4))
-        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 ### AxisCrossingValue(`System.Double[]`)
@@ -92,9 +92,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
-        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.Double>`)
@@ -113,9 +113,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.AxisCrossingValue(new double[] { 0, 10 }))
-        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 ### Justify(`System.Boolean`)
@@ -183,8 +183,8 @@ The configuration action.
     .Name("StockChart")
     .CategoryAxis(axis => axis.Select(select =>
         select.Mousewheel(mw => mw.Reverse())
-            ))
-            %>
+        ))
+    %>
 
 
 

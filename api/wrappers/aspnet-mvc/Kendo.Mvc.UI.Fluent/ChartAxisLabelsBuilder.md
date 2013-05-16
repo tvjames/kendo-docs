@@ -28,13 +28,13 @@ A value indicating whether to render the axis labels on the other side.
     .Name("Chart")
     .ValueAxis(axis => axis
         .Numeric().Labels(labels => labels.Mirror(true))
-        )
-        .CategoryAxis(axis => axis
-            .Categories(s => s.DateString)
-                // Move the value axis to the right side
-                .AxisCrossingValue(5)
-            )
-            %>
+    )
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
+        // Move the value axis to the right side
+        .AxisCrossingValue(5)
+    )
+    %>
 
 
 ### Step(`System.Int32`)
@@ -55,9 +55,9 @@ A value indicating the step at which labels are rendered.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(product => product.Name)
-            .Labels(labels => labels.Step(2))
-            )
-            %>
+        .Labels(labels => labels.Step(2))
+    )
+    %>
 
 
 ### Skip(`System.Int32`)
@@ -77,9 +77,9 @@ Skips rendering the first n labels.
     .Name("Chart")
     .CategoryAxis(axis => axis
         .Categories(product => product.Name)
-            .Labels(labels => labels.Skip(2))
-            )
-            %>
+        .Labels(labels => labels.Skip(2))
+    )
+    %>
 
 
 

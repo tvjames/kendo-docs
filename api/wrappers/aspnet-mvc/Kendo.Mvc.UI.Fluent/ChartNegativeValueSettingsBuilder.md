@@ -28,13 +28,13 @@ The bubble color (CSS format).
         .Name("Chart")
         .Series(series => series
             .Bubble(s => s.x, s => s.y, s => s.size)
-                .NegativeValues(n => n
-                    .Visible(true)
-                    .Color("#ff0000")
-                    );
-                )
-                .Render();
-                %>
+            .NegativeValues(n => n
+                .Visible(true)
+                .Color("#ff0000")
+                );
+            )
+            .Render();
+            %>
 
 
 ### Visible(`System.Boolean`)
@@ -54,12 +54,12 @@ The visibility for bubbles representing negative values.
         .Name("Chart")
         .Series(series => series
             .Bubble(s => s.x, s => s.y, s => s.size)
-                .NegativeValues(n => n
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .NegativeValues(n => n
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 

@@ -28,12 +28,12 @@ The markers shape type.
         .Name("Chart")
         .Series(series => series
             .Line(s => s.Sales)
-                .Markers(markers => markers
-                    .Type(ChartMarkerShape.Triangle)
-                    );
-                )
-                .Render();
-                %>
+            .Markers(markers => markers
+                .Type(ChartMarkerShape.Triangle)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Size(`System.Int32`)
@@ -53,12 +53,12 @@ The markers size.
         .Name("Chart")
         .Series(series => series
             .Line(s => s.Sales)
-                .Markers(markers => markers
-                    .Size(10)
-                    );
-                )
-                .Render();
-                %>
+            .Markers(markers => markers
+                .Size(10)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Visible(`System.Boolean`)
@@ -78,12 +78,12 @@ The markers visibility.
         .Name("Chart")
         .Series(series => series
             .Line(s => s.Sales)
-                .Markers(markers => markers
-                    .Visible(true)
-                    );
-                )
-                .Render();
-                %>
+            .Markers(markers => markers
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -109,12 +109,12 @@ The markers border dash type.
         .Name("Chart")
         .Series(series => series
             .Line(s => s.Sales)
-                .Markers(markers => markers
-                    .Border(1, "Red", ChartDashType.Dot)
-                    );
-                )
-                .Render();
-                %>
+            .Markers(markers => markers
+                .Border(1, "Red", ChartDashType.Dot)
+                );
+            )
+            .Render();
+            %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -147,12 +147,12 @@ The background color of the current series markers. The background color is seri
     .Name("Chart")
     .Series(series => series
         .Line(s => s.Sales)
-            .Markers(markers => markers
-                .Background("Red");
-                );
-            )
-            .Render();
-            %>
+        .Markers(markers => markers
+            .Background("Red");
+            );
+        )
+        .Render();
+    %>
 
 
 

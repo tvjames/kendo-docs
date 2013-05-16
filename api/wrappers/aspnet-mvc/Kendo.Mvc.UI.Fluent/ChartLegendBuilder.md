@@ -27,8 +27,8 @@ The legend labels font (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Font("16px Arial,Helvetica,sans-serif"))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Color(`System.String`)
@@ -47,8 +47,8 @@ The labels color (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Color("red"))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Background(`System.String`)
@@ -67,8 +67,8 @@ The background color.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Background("red"))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Position(`Kendo.Mvc.UI.ChartLegendPosition`)
@@ -87,8 +87,8 @@ The legend position.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Position(ChartLegendPosition.Bottom))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Visible(`System.Boolean`)
@@ -107,8 +107,8 @@ The legend visibility.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Visible(false))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Offset(`System.Int32,System.Int32`)
@@ -130,8 +130,8 @@ The legend Y offset from its position.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Offset(10, 50))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Margin(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -159,8 +159,8 @@ The legend top margin.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Margin(0, 5, 5, 0))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Margin(`System.Int32`)
@@ -179,8 +179,8 @@ The legend margin.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Margin(20))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Padding(`System.Int32,System.Int32,System.Int32,System.Int32`)
@@ -208,8 +208,8 @@ The legend left padding.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Padding(0, 5, 5, 0))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Padding(`System.Int32`)
@@ -228,8 +228,8 @@ The legend padding.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Padding(20))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -254,8 +254,8 @@ The legend border dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Legend(legend => legend.Border(1, "#000", ChartDashType.Dot))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)

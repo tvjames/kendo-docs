@@ -136,9 +136,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .CategoryAxis(axis => axis.Date().AxisCrossingValue(DateTime.Parse("2012/01/01"), DateTime.Parse("2012/01/10")))
-        .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+    .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
+    .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.DateTime>`)
@@ -160,8 +160,8 @@ The values at which perpendicular axes cross this axis.
         DateTime.Parse("2012/01/01"), DateTime.Parse("2012/01/10")
         }))
         .ValueAxis(axis => axis.Numeric().Title("Axis 1"))
-            .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+        .ValueAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 ### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartDateAxisLabelsBuilder>`)

@@ -28,10 +28,10 @@ The line color (CSS format).
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-                .Line(line => line.Color("#f00"))
-                )
-                .Render();
-                %>
+            .Line(line => line.Color("#f00"))
+        )
+        .Render();
+    %>
 
 
 ### Width(`System.Int32`)
@@ -51,10 +51,10 @@ The line width.
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-                .Line(line => line.Width(6))
-                )
-                .Render();
-                %>
+            .Line(line => line.Width(6))
+        )
+        .Render();
+    %>
 
 
 ### DashType(`Kendo.Mvc.UI.ChartDashType`)
@@ -74,10 +74,10 @@ The line dashType.
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-                .Line(line => line.DashType(ChartDashType.Dot))
-                )
-                .Render();
-                %>
+            .Line(line => line.DashType(ChartDashType.Dot))
+        )
+        .Render();
+    %>
 
 
 ### Opacity(`System.Double`)
@@ -97,10 +97,10 @@ The line opacity.
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-                .Line(line => line.Opacity(0.2))
-                )
-                .Render();
-                %>
+            .Line(line => line.Opacity(0.2))
+        )
+        .Render();
+    %>
 
 
 

@@ -27,8 +27,8 @@ The line color (CSS format).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Color("#f00")))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Width(`System.Int32`)
@@ -47,8 +47,8 @@ The line width.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .CategoryAxis(axis => axis.MajorGridLines(lines => lines.Width(2)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### DashType(`Kendo.Mvc.UI.ChartDashType`)
@@ -67,8 +67,8 @@ The line dashType.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .CategoryAxis(axis => axis.MajorGridLines(lines => lines.DashType(ChartDashType.Dot)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 

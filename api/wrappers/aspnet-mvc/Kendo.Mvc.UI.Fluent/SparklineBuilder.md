@@ -183,7 +183,7 @@ The add action.
     .Series(series =>
     {
         series.Bar(s => s.SalesAmount);
-        })
+    })
     %>
 
 
@@ -242,7 +242,7 @@ The configurator
     .Name("Sparkline")
     .CategoryAxis(axis => axis
         .Categories(s => s.DateString)
-        )
+    )
     %>
 
 
@@ -283,7 +283,7 @@ Use the configurator to set different data binding options.
     .DataSource(ds =>
     {
         ds.Ajax().Read(r => r.Action("SalesData", "Sparkline"));
-        })
+    })
     %>
 
 
@@ -307,8 +307,8 @@ Gets or sets a value indicating if the chart
     .DataSource(ds =>
     {
         ds.Ajax().Read(r => r.Action("SalesData", "Sparkline"));
-        })
-        .AutoBind(false)
+    })
+    .AutoBind(false)
     %>
 
 

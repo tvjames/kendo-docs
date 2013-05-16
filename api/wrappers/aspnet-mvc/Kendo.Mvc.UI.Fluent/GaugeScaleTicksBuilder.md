@@ -27,8 +27,8 @@ The ticks color (CSS format).
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale.MajorTicks(ticks => ticks.Color("#f00")))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Width(`System.Int32`)
@@ -47,8 +47,8 @@ The ticks width.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale.MajorTicks(ticks => ticks.Width(2)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Size(`System.Int32`)
@@ -67,8 +67,8 @@ The ticks size.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale.MajorTicks(ticks => ticks.Size(2)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### DashType(`Kendo.Mvc.UI.ChartDashType`)
@@ -87,8 +87,8 @@ The ticks dashType.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale.MajorTicks(ticks => ticks.DashType(ChartDashType.Dot)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Visible(`System.Boolean`)
@@ -107,8 +107,8 @@ The ticks visibility.
     <% Html.Kendo().LinearGauge()
         .Name("linearGauge")
         .Scale(scale => scale.MajorTicks(ticks => ticks.Visible(false)))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 

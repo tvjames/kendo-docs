@@ -99,8 +99,8 @@ The points border dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.OHLC(s => s.Sales).Border("1", "#000", ChartDashType.Dot))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Line(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
@@ -126,10 +126,10 @@ The lines dashType.
         .Name("Chart")
         .Series(series => series
             .OHLC(s => s.Sales)
-                .Line(2, "red", ChartDashType.Dot)
-            )
-            .Render();
-            %>
+            .Line(2, "red", ChartDashType.Dot)
+        )
+        .Render();
+    %>
 
 
 ### Line(`System.Int32`)
@@ -178,10 +178,10 @@ The configuration action.
         .Name("Chart")
         .Series(series => series
             .Area(s => s.Sales)
-                .Line(line => line.Opacity(0.2))
-                )
-                .Render();
-                %>
+            .Line(line => line.Opacity(0.2))
+        )
+        .Render();
+    %>
 
 
 ### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartOHLCSeriesHighlightBuilder>`)

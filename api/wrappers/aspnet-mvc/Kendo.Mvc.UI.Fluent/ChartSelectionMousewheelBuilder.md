@@ -24,9 +24,9 @@ Reverses the mousewheel direction.
         .CategoryAxis(axis => axis.Select(select => select
             .From(fromDate).To(toDate)
             .Mousewheel(mw => mw.Reverse())
-                ))
-                .Render();
-                %>
+            ))
+            .Render();
+            %>
 
 
 ### Reverse(`System.Boolean`)
@@ -48,9 +48,9 @@ true: scrolling up shrinks the selection.
         .CategoryAxis(axis => axis.Select(select => select
             .From(fromDate).To(toDate)
             .Mousewheel(mw => mw.Reverse(true))
-                ))
-                .Render();
-                %>
+            ))
+            .Render();
+            %>
 
 
 ### Zoom(`Kendo.Mvc.UI.ChartZoomDirection`)
@@ -71,9 +71,9 @@ The mousehweel zoom type. Default value is ChartZoomDirection.Both
         .CategoryAxis(axis => axis.Select(select =>
             select.From(from).To(to)
             .Mousewheel(mw => mw.Zoom(ChartZoomDirection.Left))
-                ))
-                .Render();
-                %>
+            ))
+            .Render();
+            %>
 
 
 

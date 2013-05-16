@@ -29,14 +29,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().PanelBar()
         .Name("PanelBar")
         .Events(events => events.Expand(
-            @<text>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    //event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Expand(`System.String`)
@@ -78,14 +78,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().PanelBar()
         .Name("PanelBar")
         .Events(events => events.ContentLoad(
-            @<text>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    //event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### ContentLoad(`System.String`)
@@ -127,14 +127,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().PanelBar()
         .Name("PanelBar")
         .Events(events => events.Collapse(
-            @<text>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    //event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Collapse(`System.String`)
@@ -176,14 +176,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().PanelBar()
         .Name("PanelBar")
         .Events(events => events.Select(
-            @<text>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    //event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Select(`System.String`)
@@ -225,14 +225,14 @@ The handler code wrapped in a text tag (Razor syntax).
     <% Html.Kendo().PanelBar()
         .Name("PanelBar")
         .Events(events => events.Error(
-            @<text>
-                function(e) {
-                //event handling code
-                }
-                </text>
-                ))
-                .Render();
-                %>
+                @<text>
+                    function(e) {
+                    //event handling code
+                    }
+                    </text>
+                    ))
+                    .Render();
+                    %>
 
 
 ### Error(`System.String`)

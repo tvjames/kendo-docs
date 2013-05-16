@@ -194,7 +194,7 @@ The view data key.
     %>
 
 
-### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.MenuItem,T1>`)
+### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.MenuItem,T1>`)
 Binds the menu to a list of objects. The menu will be "flat" which means a menu item will be created for
             every item in the data source.
 
@@ -241,14 +241,14 @@ The action which will configure the mappings
     .BindTo(Model, mapping => mapping
         .For<Customer>(binding => binding
             .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
-                .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to MenuItem properties
-                )
-                .For<Order<(binding => binding
-                    .Children(o => null) // "Orders" do not have child objects so return "null"
-                        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to MenuItem properties
-                        )
-                    )
-                    %>
+            .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to MenuItem properties
+        )
+        .For<Order<(binding => binding
+            .Children(o => null) // "Orders" do not have child objects so return "null"
+            .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to MenuItem properties
+        )
+    )
+    %>
 
 
 ### ItemAction(`System.Action<Kendo.Mvc.UI.MenuItem>`)

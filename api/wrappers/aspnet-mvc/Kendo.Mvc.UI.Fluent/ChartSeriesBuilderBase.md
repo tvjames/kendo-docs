@@ -52,14 +52,14 @@ The name template for auto-generated series when binding to grouped data.
         .Name("Chart")
         .DataSource(dataSource => dataSource
             .Read(read => read.Action("_StockData", "Scatter_Charts"))
-                .Group(group => group.Add(model => model.Symbol))
-                )
-                .Series(series => series.Bar(s => s.Sales)
-                    .Name("Sales")
-                    .GroupNameTemplate("#= series.name # for #= group.field # #= group.value #")
-                )
-                .Render();
-                %>
+            .Group(group => group.Add(model => model.Symbol))
+        )
+        .Series(series => series.Bar(s => s.Sales)
+            .Name("Sales")
+            .GroupNameTemplate("#= series.name # for #= group.field # #= group.value #")
+        )
+        .Render();
+    %>
 
 
 ### Opacity(`System.Double`)
@@ -98,8 +98,8 @@ The bar fill color (CSS syntax).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Color("Red"))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Tooltip(`System.Action<Kendo.Mvc.UI.Fluent.ChartTooltipBuilder>`)
@@ -162,10 +162,10 @@ The axis name for this series.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .Series(series => series.Bar(s => s.Sales).Name("Sales").Axis("secondary"))
-        .ValueAxis(axis => axis.Numeric())
-            .ValueAxis(axis => axis.Numeric("secondary"))
-                .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
-                    %>
+    .ValueAxis(axis => axis.Numeric())
+    .ValueAxis(axis => axis.Numeric("secondary"))
+    .CategoryAxis(axis => axis.AxisCrossingValue(0, 10))
+    %>
 
 
 ### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartSeriesHighlightBuilder>`)
@@ -210,8 +210,8 @@ The labels visibility.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Bar(s => s.Sales).Visible(false))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 

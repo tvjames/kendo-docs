@@ -24,6 +24,19 @@ Whether the window title will be visible
 
 
 
+### AppendTo(`System.String`)
+Defines a selector for the element to which the Window will be appended. By default this is the page body.
+
+
+#### Parameters
+
+##### selector `System.String`
+A selector of the Window container
+
+
+
+
+
 ### Title(`System.String`)
 Sets title, which appears in the header of the window.
 

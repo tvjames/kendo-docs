@@ -59,8 +59,8 @@ Sets the padding of the chart.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Pie(s => s.Sales, s => s.DateString).Padding(100))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### StartAngle(`System.Int32`)
@@ -79,8 +79,8 @@ The pie start angle(in degrees).
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Pie(s => s.Sales, s => s.DateString).StartAngle(100))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Labels(`System.Action<Kendo.Mvc.UI.Fluent.ChartPieLabelsBuilder>`)
@@ -100,12 +100,12 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Pie(s => s.Sales, s => s.DateString)
-            .Labels(labels => labels
-                .Color("red")
-                .Visible(true)
-                );
-            )
-            %>
+        .Labels(labels => labels
+            .Color("red")
+            .Visible(true)
+            );
+        )
+    %>
 
 
 ### Labels(`System.Boolean`)
@@ -125,8 +125,8 @@ The visibility. The default value is false.
     .Name("Chart")
     .Series(series => series
         .Pie(s => s.Sales, s => s.DateString)
-            .Labels(true);
-        )
+        .Labels(true);
+    )
     %>
 
 
@@ -152,8 +152,8 @@ The pie segments border dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Pie(s => s.Sales, s => s.DateString).Border(1, "#000", ChartDashType.Dot))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
@@ -186,8 +186,8 @@ The pie segment effects overlay.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.Pie(s => s.Sales, s => s.DateString).Overlay(ChartPieSeriesOverlay.None))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### Connectors(`System.Action<Kendo.Mvc.UI.Fluent.ChartPieConnectorsBuilder>`)
@@ -207,11 +207,11 @@ The configuration action.
     .Name("Chart")
     .Series(series => series
         .Pie(s => s.Sales, s => s.DateString)
-            .Connectors(c => c
-                .Color("red")
-                );
-            )
-            %>
+        .Connectors(c => c
+            .Color("red")
+            );
+        )
+    %>
 
 
 ### Highlight(`System.Action<Kendo.Mvc.UI.Fluent.ChartPieSeriesHighlightBuilder>`)

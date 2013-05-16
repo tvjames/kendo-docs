@@ -88,7 +88,7 @@ The interval between minor divisions.
         .MajorUnit(4)
         .MinorUnit(2)
         .MinorTicks(mt => mt.Visible(true))
-        )
+    )
     %>
 
 
@@ -127,9 +127,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .XAxis(axis => axis.Numeric().AxisCrossingValue(0, 10))
-        .YAxis(axis => axis.Numeric().Title("Axis 1"))
-            .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+    .YAxis(axis => axis.Numeric().Title("Axis 1"))
+    .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 ### AxisCrossingValue(`System.Collections.Generic.IEnumerable<System.Double>`)
@@ -148,9 +148,9 @@ The values at which perpendicular axes cross this axis.
     <%= Html.Kendo().Chart(Model)
     .Name("Chart")
     .XAxis(axis => axis.Numeric().AxisCrossingValue(new double[] { 0, 10 }))
-        .YAxis(axis => axis.Numeric().Title("Axis 1"))
-            .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
-                %>
+    .YAxis(axis => axis.Numeric().Title("Axis 1"))
+    .YAxis(axis => axis.Numeric("secondary").Title("Axis 2"))
+    %>
 
 
 

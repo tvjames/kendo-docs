@@ -36,8 +36,8 @@ The discrete steps when BaseUnit is set to Minutes.
             .Date()
             .BaseUnit(ChartAxisBaseUnit.Fit)
             .AutoBaseUnitSteps(steps => steps.Minutes(1, 2))
-            )
-            %>
+        )
+    %>
 
 
 ### Hours(`System.Int32[]`)
@@ -65,8 +65,8 @@ The discrete steps when BaseUnit is set to Hours.
             .Date()
             .BaseUnit(ChartAxisBaseUnit.Fit)
             .AutoBaseUnitSteps(steps => steps.Hours(1, 2))
-            )
-            %>
+        )
+    %>
 
 
 ### Days(`System.Int32[]`)
@@ -94,8 +94,8 @@ The discrete steps when BaseUnit is set to Days.
             .Date()
             .BaseUnit(ChartAxisBaseUnit.Fit)
             .AutoBaseUnitSteps(steps => steps.Days(1, 2))
-            )
-            %>
+        )
+    %>
 
 
 ### Weeks(`System.Int32[]`)
@@ -123,8 +123,8 @@ The discrete steps when BaseUnit is set to Weeks.
             .Date()
             .BaseUnit(ChartAxisBaseUnit.Fit)
             .AutoBaseUnitSteps(steps => steps.Weeks(1, 2))
-            )
-            %>
+        )
+    %>
 
 
 ### Months(`System.Int32[]`)
@@ -152,8 +152,8 @@ The discrete steps when BaseUnit is set to Months.
             .Date()
             .BaseUnit(ChartAxisBaseUnit.Fit)
             .AutoBaseUnitSteps(steps => steps.Months(1, 2))
-            )
-            %>
+        )
+    %>
 
 
 ### Years(`System.Int32[]`)
@@ -181,8 +181,8 @@ The discrete steps when BaseUnit is set to Years.
             .Date()
             .BaseUnit(ChartAxisBaseUnit.Fit)
             .AutoBaseUnitSteps(steps => steps.Years(1, 2))
-            )
-            %>
+        )
+    %>
 
 
 

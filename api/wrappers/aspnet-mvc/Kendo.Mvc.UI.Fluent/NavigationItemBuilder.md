@@ -422,8 +422,8 @@ The attributes.
     .Items(items => items
         .Add().Text("First Item")
         .Content(() => { %> <strong>First Item Content</strong> <% })
-            .ContentHtmlAttributes(new {@class="first-item-content"})
-        )
+        .ContentHtmlAttributes(new {@class="first-item-content"})
+    )
     %>
 
 
@@ -440,7 +440,7 @@ The attributes.
 
 
 
-### ActionT1(`System.Linq.Expressions.Expression<System.Action<T1>>`)
+### Action(`System.Linq.Expressions.Expression<System.Action<T1>>`)
 Makes the item navigate to the specified controllerAction method.
 
 
@@ -458,7 +458,7 @@ The action.
     .Items(items => items
         .Add().Text("First Item")
         .Action<HomeController>(controller => controller.Index()))
-            %>
+    %>
 
 
 ### Encoded(`System.Boolean`)

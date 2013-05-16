@@ -27,8 +27,8 @@ The line width.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.ScatterLine(s => s.x, s => s.y).Width(2))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### DashType(`Kendo.Mvc.UI.ChartDashType`)
@@ -47,8 +47,8 @@ The line dash type.
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series.ScatterLine(s => s.x, s => s.y).DashType(ChartDashType.Dot))
-            .Render();
-            %>
+        .Render();
+    %>
 
 
 ### MissingValues(`Kendo.Mvc.UI.ChartScatterLineMissingValues`)
@@ -68,8 +68,8 @@ The missing values behavior. The default is to leave gaps.
     .Name("Chart")
     .Series(series => series
         .ScatterLine(s => s.x, s => s.y)
-            .MissingValues(ChartScatterLineMissingValues.Interpolate);
-        )
+        .MissingValues(ChartScatterLineMissingValues.Interpolate);
+    )
     %>
 
 

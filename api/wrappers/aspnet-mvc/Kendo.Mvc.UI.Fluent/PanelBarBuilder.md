@@ -98,7 +98,7 @@ The view data key.
     %>
 
 
-### BindToT1(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.PanelBarItem,T1>`)
+### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.PanelBarItem,T1>`)
 Binds the panelbar to a list of objects
 
 
@@ -144,14 +144,14 @@ The action which will configure the mappings
     .BindTo(Model, mapping => mapping
         .For<Customer>(binding => binding
             .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
-                .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to PanelBarItem properties
-                )
-                .For<Order<(binding => binding
-                    .Children(o => null) // "Orders" do not have child objects so return "null"
-                        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to PanelBarItem properties
-                        )
-                    )
-                    %>
+            .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to PanelBarItem properties
+        )
+        .For<Order<(binding => binding
+            .Children(o => null) // "Orders" do not have child objects so return "null"
+            .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to PanelBarItem properties
+        )
+    )
+    %>
 
 
 ### Animation(`System.Boolean`)

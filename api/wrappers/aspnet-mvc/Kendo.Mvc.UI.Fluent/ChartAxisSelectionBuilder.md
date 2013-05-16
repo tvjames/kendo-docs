@@ -28,9 +28,9 @@ The selection lower boundary.
         .Name("Chart")
         .CategoryAxis(axis =>
             axis.Select(select => select.From(from))
-            )
-            .Render();
-            %>
+        )
+        .Render();
+    %>
 
 
 ### From(`System.Double`)
