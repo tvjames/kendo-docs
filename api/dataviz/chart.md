@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.Chart SITEFINITY
+# kendo.dataviz.ui.Chart SITEFINITY MAOR SITEFINITY
 
 ## Configuration
 
@@ -15,7 +15,7 @@ Default options for all chart axes.
 
 ### categoryAxis `Object`
 
-The category axis configuration options. THIS IS A LOCAL CHANGE HOORAY.
+The category axis configuration options.
 
 ### categoryAxis.axisCrossingValue `Object | Date | Array`
 
