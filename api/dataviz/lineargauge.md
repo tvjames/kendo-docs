@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.LinearGauge More alterations.
+# kendo.dataviz.ui.LinearGauge More alterations. CHANGE
 
 ## Configuration
 
