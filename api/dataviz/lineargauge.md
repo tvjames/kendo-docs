@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.LinearGauge
+# kendo.dataviz.ui.LinearGauge More alterations.
 
 ## Configuration
 
@@ -14,7 +14,7 @@ publish: true
 The gauge area configuration options.
 This is the entire visible area of the gauge.
 
-### gaugeArea.background `Object`*(default: "white")*
+### gaugeArea.background `Object`*(default: &quot;white&quot;)*
 
  The background of the gauge area.
 Any valid CSS color string will work here, including hex and rgb.
@@ -23,40 +23,40 @@ Any valid CSS color string will work here, including hex and rgb.
 
 The border of the gauge area.
 
-### gaugeArea.border.color `String`*(default: "black")*
+### gaugeArea.border.color `String`*(default: &quot;black&quot;)*
 
 The color of the border. Any valid CSS color string will work here, including hex and rgb.
 
-### gaugeArea.border.dashType `String`*(default: "solid")*
+### gaugeArea.border.dashType `String`*(default: &quot;solid&quot;)*
 
 The dash type of the border.
 
 
-#### *"solid"*
+#### *&quot;solid&quot;*
 
 Specifies a solid line.
 
-#### *"dot"*
+#### *&quot;dot&quot;*
 
 Specifies a line consisting of dots.
 
-#### *"dash"*
+#### *&quot;dash&quot;*
 
 Specifies a line consisting of dashes.
 
-#### *"longDash"*
+#### *&quot;longDash&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *"dashDot"*
+#### *&quot;dashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *"longDashDot"*
+#### *&quot;longDashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *"longDashDotDot"*
+#### *&quot;longDashDotDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -98,36 +98,36 @@ The border of the pointer.
 The color of the border.
 Any valid CSS color string will work here, including hex and rgb.
 
-### pointer.border.dashType `String`*(default: "solid")*
+### pointer.border.dashType `String`*(default: &quot;solid&quot;)*
 
 The dash type of the border.
 
 
-#### *"solid"*
+#### *&quot;solid&quot;*
 
 Specifies a solid line.
 
-#### *"dot"*
+#### *&quot;dot&quot;*
 
 Specifies a line consisting of dots.
 
-#### *"dash"*
+#### *&quot;dash&quot;*
 
 Specifies a line consisting of dashes.
 
-#### *"longDash"*
+#### *&quot;longDash&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *"dashDot"*
+#### *&quot;dashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *"longDashDot"*
+#### *&quot;longDashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *"longDashDotDot"*
+#### *&quot;longDashDotDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -162,11 +162,11 @@ Any valid CSS color string will work here, including hex and rgb.
 The shape of the pointer.
 
 
-#### *"barIndicator"*
+#### *&quot;barIndicator&quot;*
 
 Specifies a filling bar indicator.
 
-#### *"arrow"*
+#### *&quot;arrow&quot;*
 
 Specifies a arrow shape.
 
@@ -177,7 +177,7 @@ The size of the pointer.
 ### pointer.track `Object`
 
 The element arround/under the pointer.
-(available only for 'barIndicator' shape)
+(available only for &#39;barIndicator&#39; shape)
 
 ### pointer.track.border `Object`
 
@@ -187,36 +187,36 @@ The border of the track.
 
 The color of the border. Any valid CSS color string will work here, including hex and rgb.
 
-### pointer.track.border.dashType `String`*(default: "solid")*
+### pointer.track.border.dashType `String`*(default: &quot;solid&quot;)*
 
 The dash type of the border.
 
 
-#### *"solid"*
+#### *&quot;solid&quot;*
 
 Specifies a solid line.
 
-#### *"dot"*
+#### *&quot;dot&quot;*
 
 Specifies a line consisting of dots.
 
-#### *"dash"*
+#### *&quot;dash&quot;*
 
 Specifies a line consisting of dashes.
 
-#### *"longDash"*
+#### *&quot;longDash&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *"dashDot"*
+#### *&quot;dashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *"longDashDot"*
+#### *&quot;longDashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *"longDashDotDot"*
+#### *&quot;longDashDotDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -261,40 +261,40 @@ Any valid CSS color string will work here, including hex and rgb
 
 The border of the labels.
 
-### scale.labels.border.color `String`*(default: "black")*
+### scale.labels.border.color `String`*(default: &quot;black&quot;)*
 
 The color of the border. Any valid CSS color string will work here, including hex and rgb.
 
-### scale.labels.border.dashType `String`*(default: "solid")*
+### scale.labels.border.dashType `String`*(default: &quot;solid&quot;)*
 
 The dash type of the border.
 
 
-#### *"solid"*
+#### *&quot;solid&quot;*
 
 Specifies a solid line.
 
-#### *"dot"*
+#### *&quot;dot&quot;*
 
 Specifies a line consisting of dots.
 
-#### *"dash"*
+#### *&quot;dash&quot;*
 
 Specifies a line consisting of dashes.
 
-#### *"longDash"*
+#### *&quot;longDash&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash.
 
-#### *"dashDot"*
+#### *&quot;dashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of dash-dot.
 
-#### *"longDashDot"*
+#### *&quot;longDashDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot.
 
-#### *"longDashDotDot"*
+#### *&quot;longDashDotDot&quot;*
 
 Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
@@ -307,7 +307,7 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 The text color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
 
-### scale.labels.font `String`*(default: "12px Arial,Helvetica,sans-serif")*
+### scale.labels.font `String`*(default: &quot;12px Arial,Helvetica,sans-serif&quot;)*
 
 The font style of the labels.
 
@@ -317,11 +317,11 @@ The format of the labels.
 
 #### Example
 
-    $("#radial-gauge").kendoLinearGauge({
+    $(&quot;#radial-gauge&quot;).kendoLinearGauge({
         scale: {
            labels: {
                // set the format to currency
-               format: "C"
+               format: &quot;C&quot;
            }
         }
     });
@@ -354,11 +354,11 @@ Template variables:
 #### Example
 
     // chart intialization
-    $("#radial-gauge").kendoLinearGauge({
+    $(&quot;#radial-gauge&quot;).kendoLinearGauge({
          scale: {
              labels: {
                  // labels template
-                 template: "#= value #%"
+                 template: &quot;#= value #%&quot;
              }
          }
     });
@@ -438,27 +438,27 @@ The ranges of the scale.
 The range fields:
 
 
-#### *"from"*
+#### *&quot;from&quot;*
 
 The start position of the range in scale units.
 
-#### *"to"*
+#### *&quot;to&quot;*
 
 The end position of the range in scale units.
 
-#### *"color"*
+#### *&quot;color&quot;*
 
 The color of the range.
 Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
 
-    $("#linear-gauge").kendoLinearGauge({
+    $(&quot;#linear-gauge&quot;).kendoLinearGauge({
         scale: {
             ranges: [{
                 from: 10,
                 to: 20,
-                color: "green"
+                color: &quot;green&quot;
             }]
         }
      });
@@ -485,8 +485,8 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
 
 #### Example
 
-    kendo.destroy($("#linear-gauge"));
-    $("#linear-gauge").remove();
+    kendo.destroy($(&quot;#linear-gauge&quot;));
+    $(&quot;#linear-gauge&quot;).remove();
 
 ### redraw
 
@@ -494,7 +494,7 @@ Redraws the gauge.
 
 #### Example
 
-    var gauge = $("#linear-gauge").data("kendoLinearGauge");
+    var gauge = $(&quot;#linear-gauge&quot;).data(&quot;kendoLinearGauge&quot;);
     gauge.redraw();
 
 ### svg
@@ -509,7 +509,7 @@ suitable for backend processing.
 
 #### Example
 
-    var gauge = $("#linear-gauge").data("kendoLinearGauge");
+    var gauge = $(&quot;#linear-gauge&quot;).data(&quot;kendoLinearGauge&quot;);
     var svgText = gauge.svg();
 
 ### value
@@ -518,5 +518,5 @@ Change the value of the gauge.
 
 #### Example
 
-    var gauge = $("#linear-gauge").data("kendoLinearGauge");
+    var gauge = $(&quot;#linear-gauge&quot;).data(&quot;kendoLinearGauge&quot;);
     gauge.redraw();
