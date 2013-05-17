@@ -168,6 +168,23 @@ Since fonts are usually copyrighted, most browsers doesn't allow using them acro
         }
     }
 
+## Using Custom Icons with background-image
+
+To use any image for an icon in Kendo UI Mobile, raise the specificity of the background-image style to at least 40 in order to override the defaults. Use background-size to resize the image accordingly.
+
+### Define custom background-image icon
+
+    <style>
+        .km-root .km-pane .km-view .km-custom
+        {
+            background-image: url("../../content/mobile/overview/custom.jpg");
+        }
+    </style>
+
+    <div data-role="tabstrip">
+        <a href="#index" data-icon="custom">Home</a>
+    </div>
+
 ## Using Custom Icons with WebKit masks
 
 To use colorizable icon masks, specify the icon image as a **box mask** (either as dataURI or as a separate image).
@@ -178,7 +195,7 @@ The image color is not important - it will be used as a mask only - the alpha tr
 In Android and MeeGo Webkit masks are unreliable - they can be turned into colorized rectangles by a simple CSS transformation at the wrong place.
 In BBOS 7.0 WebKit masks are completely broken - though they work in BBOS 6.0 and 7.1!
 
-### Define custom icon
+### Define custom WebKit mask for an icon
 
     <style>
         .km-custom {
