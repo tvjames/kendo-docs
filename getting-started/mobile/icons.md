@@ -177,7 +177,7 @@ To use any image for an icon in Kendo UI Mobile, raise the specificity of the ba
     <style>
         .km-root .km-pane .km-view .km-custom
         {
-            background-image: url("../../content/mobile/overview/custom.jpg");
+            background-image: url("custom.jpg");
         }
     </style>
 
