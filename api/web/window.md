@@ -36,6 +36,10 @@ Effect to be used for closing of the popup.
 
 Difines the animation duration.
 
+### animation.close.reverse `Boolean` *(default: false)*
+
+Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
+
 ### animation.open `Object`
 
 The animation that will be used when a Window opens.
@@ -47,6 +51,10 @@ Effect to be used for opening of the popup.
 ### animation.open.duration `Number`
 
 Difines the animation duration.
+
+### animation.open.reverse `Boolean` *(default: false)*
+
+Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
 
 ### appendTo `Object|String`*(default: document.body)*
 
@@ -113,11 +121,11 @@ The text in the window title bar. If `false`, the window will be displayed witho
 
 Specifies whether the window will be initially visible.
 
-### width `Number`
+### width `Number | String`
 
 Specifies width of the window.
 
-### height `Number`
+### height `Number | String`
 
 Specifies height of the window.
 
