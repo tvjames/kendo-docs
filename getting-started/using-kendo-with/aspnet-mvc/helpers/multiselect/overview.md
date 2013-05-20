@@ -111,6 +111,8 @@ Here is how to configure the Kendo MultiSelect for ajax binding to the Northwind
                 })
             )
 
+> **Important:** **ToDataSourceResult()** extension method will modify structure of the result and the widget will not be able to bind to it. Please return simple array of data in this case.
+
 ### Sending parameters to the server
 
 Here is how to configure the Kendo MultiSelect to send parameters to the server:

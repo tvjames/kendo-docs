@@ -150,6 +150,26 @@ or change HTTP verb of the DataSource:
                   })
             )
 
+## AutoComplete/ComboBox/DropDownList/MultiSelect does not work with remote binding and there are no errors
+
+The most common cause of this issue is to use ToDataSourceResult extension method when returning Data. Please note that the method returns the result in a JSON structure,
+which is understandable only for the Grid widget.
+
+### Solution
+
+Return simple array of data:
+
+        public JsonResult GetCascadeCategories()
+        {
+            var northwind = new NorthwindDataContext();
+
+            //TODO: Do not use northwind.Categories.ToDataSourceResult();
+
+            return Json(northwind.Categories, **JsonRequestBehavior.AllowGet**);
+        }
+
+In "Getting Started" section of every widget you can find "Configure widget for ajax binding". It clearly shows how to return data to the client.
+
 ## Only one instance of the widget works in the page
 
 This will happen if two or more widgets have the same `Name()`. The value specified via the `Name()` method is used as the `id` HTML attribute of the widget. The latter must be unique in the page.

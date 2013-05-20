@@ -103,6 +103,8 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
                  })
              )
 
+> **Important:** **ToDataSourceResult()** extension method will modify structure of the result and the widget will not be able to bind to it. Please return simple array of data in this case.
+
 ### Sending parameters to the server
 
 Here is how to configure the Kendo ComboBox to send parameters to the server:

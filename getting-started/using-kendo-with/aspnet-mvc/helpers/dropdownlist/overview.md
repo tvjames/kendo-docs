@@ -1,6 +1,6 @@
 ---
 title: Overview
-meta_title: DropDownList HtmlHelper extension for Kendo UI DropDownList | Kendo UI documentation 
+meta_title: DropDownList HtmlHelper extension for Kendo UI DropDownList | Kendo UI documentation
 meta_description: How to bind a Kendo UI DropDownList for ASP.NET MVC, configure a server-side wrapper for Kendo UI DropDownlist Widget.
 slug: mvc-dropdownlist-overview
 publish: true
@@ -112,6 +112,8 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
                 })
                 .SelectedIndex(0) //Select first item.
             )
+
+> **Important:** **ToDataSourceResult()** extension method will modify structure of the result and the widget will not be able to bind to it. Please return simple array of data in this case.
 
 ## Accessing an Existing DropDownList
 
