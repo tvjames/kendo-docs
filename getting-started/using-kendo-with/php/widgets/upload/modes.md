@@ -1,6 +1,6 @@
 ---
 title: Modes
-meta_title: How to configure the upload mode of the Kendo UI Upload widget
+meta_title: Configuration of Kendo UI Upload widget's operation modes with PHP
 meta_description: Learn how to use the synchronous and asynchronous modes of Kendo UI Upload for PHP, handle save and remove requests.
 slug: php-upload-modes
 publish: true
