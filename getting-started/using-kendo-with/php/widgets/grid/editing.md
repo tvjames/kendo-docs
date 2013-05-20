@@ -1,6 +1,6 @@
 ---
 title: Editing
-meta_title: How to perform CRUD with Kendo Grid for PHP
+meta_title: Editing Kendo UI Grid widget for PHP | Kendo UI for PHP Documentation
 meta_description: Learn how to do create, update and destroy with Kendo UI Grid for PHP
 slug: php-grid-editing
 publish: true
