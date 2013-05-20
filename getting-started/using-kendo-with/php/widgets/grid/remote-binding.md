@@ -1,7 +1,7 @@
 ---
 title: Remote binding
-meta_title: How to bind Kendo Grid for PHP to remote service which returns JSON
-meta_description: Learn how to bind Kendo UI Grid for PHP to JSON
+meta_title: Bind Kendo UI Grid for PHP to JSON response | Kendo UI PHP wrappers
+meta_description: In this help topic we will guide you how to manage all data operations on the server-side. Remote data binding of Kendo UI Grid for PHP to JSON response.
 slug: php-grid-remote-binding
 publish: true
 relatedDocs: php-ui-grid, php-grid-overview
