@@ -1,5 +1,7 @@
 ---
 title: DataSource
+meta_title: PHP wrapper documentation for Kendo UI DataSource | Kendo UI for PHP
+meta_description: In this help topic we will guide you how to use the PHP wrapper for Kendo UI DataSource.
 slug: php-data-datasource
 tags: api, php
 publish: true
