@@ -1,6 +1,6 @@
 ---
 title: Overview
-meta_title: How to use the Calendar PHP class, server-side wrapper for Kendo UI Calendar widget
+meta_title: PHP server-side wrapper for the Kendo UI Calendar widget
 meta_description: Getting started with Kendo UI Calendar for PHP in quick steps - configure Kendo UI Calendar widget and operate Kendo UI Calendar events.
 slug: php-calendar-overview
 publish: true
