@@ -1,5 +1,7 @@
 ---
 title: GridColumn
+meta_title: Column setting of Kendo UI GridColumns with PHP
+meta_description: In this help guide you will find more about the PHP class, representing the column setting of Kendo UI GridColumns.
 slug: php-ui-gridcolumn
 tags: api, php
 publish: true
