@@ -168,6 +168,15 @@ Return simple array of data:
             return Json(northwind.Categories, **JsonRequestBehavior.AllowGet**);
         }
 
+or return Data property only:
+
+        public JsonResult GetCascadeCategories([DataSourceRequest] DataSourceRequest request)
+        {
+            var northwind = new NorthwindDataContext();
+
+            return Json(northwind.Categories.ToDataSourceResult(request).Data, **JsonRequestBehavior.AllowGet**);
+        }
+
 In "Getting Started" section of every widget you can find "Configure widget for ajax binding". It clearly shows how to return data to the client.
 
 ## Only one instance of the widget works in the page
