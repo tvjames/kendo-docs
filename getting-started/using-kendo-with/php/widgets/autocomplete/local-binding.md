@@ -1,7 +1,7 @@
 ---
 title: Local binding
-meta_title: How to bind Kendo AutoComplete for PHP to PHP array
-meta_description: Learn how to bind Kendo UI AutoComplete for PHP to array of data
+meta_title: Bind Kendo UI AutoComplete for PHP to a PHP array
+meta_description: Learn how to bind Kendo UI AutoComplete jQuery-based widget to a PHP array. With local binding the filtering operation is executed on the client-side.
 slug: php-autocomplete-local-binding
 publish: true
 relatedDocs: php-ui-autocomplete, php-autocomplete-overview
