@@ -1,6 +1,6 @@
 ---
 title: Editing
-meta_title: How to perform CRUD with Kendo ListView for PHP
+meta_title: Perform CRUD operations with Kendo UI ListView for PHP
 meta_description: Learn how to do create, update and destroy with Kendo UI ListView for PHP
 slug: php-listview-editing
 publish: true
