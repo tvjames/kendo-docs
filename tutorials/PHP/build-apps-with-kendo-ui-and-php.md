@@ -9,7 +9,7 @@ publish: true
 
 # Tutorial: Intro to Building Apps with Kendo UI And PHP - Part 1
 
-This tutorial will walk you through building your first Kendo UI PHP Application.  It is a two part tutorial in which you will learn...
+This tutorial will walk you through building your first Kendo UI PHP Application. You can use server-side PHP code to generate your client-side JavaScript for Kendo UI jQuery & HTML5 framework. In this two part tutorial you will learn...
 
 - How to setup your PHP Development Environment, including selecting an IDE
 - How to connect to your database and return data
