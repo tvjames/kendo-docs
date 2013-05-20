@@ -1,5 +1,7 @@
 ---
 title: Grid
+meta_title: Documentation for Kendo UI Grid widget in PHP | Kendo UI PHP wrappers
+meta_description: Learn how to use Kendo UI grid component in a PHP page, instantiate a new instance, configure it via the available configuration methods and output it. 
 slug: php-ui-grid
 tags: api, php
 publish: true
