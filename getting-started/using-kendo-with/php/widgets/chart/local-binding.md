@@ -1,7 +1,7 @@
 ---
 title: Local binding
-meta_title: How to bind Kendo Chart for PHP to PHP array
-meta_description: Learn how to bind Kendo UI Chart for PHP to array of data
+meta_title: Bind Kendo UI jQuery Chart to a PHP array | Kendo UI for PHP
+meta_description: In this tutorial you will learn how to bind Kendo UI widget, using jQuery and HTML5, to a PHP array.
 slug: php-chart-local-binding
 publish: true
 relatedDocs: php-dataviz-ui-chart, php-chart-overview
