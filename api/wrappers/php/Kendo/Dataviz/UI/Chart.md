@@ -1,5 +1,7 @@
 ---
 title: Chart
+meta_title: Using Kendo UI Chart with PHP | Kendo UI PHP wrappers
+meta_description: How to populate the Kendo UI Chart data dynamically with PHP. Documentation for the Kendo UI Chart PHP wrapper.
 slug: php-dataviz-ui-chart
 tags: api, php
 publish: true
