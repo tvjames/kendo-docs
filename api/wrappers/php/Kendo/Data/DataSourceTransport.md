@@ -1,5 +1,7 @@
 ---
 title: DataSourceTransport
+meta_title: PHP class, representing the transport setting of Kendo UI DataSource
+meta_description: In this help article you will find more about the methods in the DataSourceTransport, a PHP class representing the transport setting of the DataSource.
 slug: php-data-datasourcetransport
 tags: api, php
 publish: true
