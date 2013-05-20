@@ -1,7 +1,7 @@
 ---
 title: Introduction
 slug: php-introduction
-meta_title: Documentation guide for Kendo UI for PHP
+meta_title: Documentation guide for Kendo UI widgets for PHP | Kendo UI Complete for PHP
 meta_description: How to download, install Kendo UI Complete for PHP and run the sample application.
 publish: true
 ---
