@@ -15,7 +15,7 @@ The English culture is defined directly in kendo.core.js and it is considered as
 
 The default culture info is listed here:
 
-    kendo.cultures = {"en-US" : {
+    kendo.cultures["en-US"] = {
 	    //<language code>-<country/region code>
         name: "en-US",
 		// "numberFormat" defines general number formatting rules
