@@ -133,6 +133,11 @@ In order to configure the Grid to be 100% high and resize together with its pare
 The above script will be executed as window resize event handler. The Grid `div` should have a 100% height style applied and its default borders should be removed.
 Note that elements with percentage height require a parent element with an explicit height.
 
+### Column widths
+
+When Grid scrolling is enabled (by default), the Grid table layout style is "fixed". This means that all width-less columns will be equally wide no matter what their content is.
+When Grid scrolling is disabled, the Grid table layout style is "auto", i.e. the column widths are determined by the browser and cell content, if not set explicitly.
+
 ## Features
 
 ### Scrolling

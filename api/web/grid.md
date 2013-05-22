@@ -730,7 +730,7 @@ The text that is displayed in the column header cell. If not set the [field](#co
 
 ### columns.width `String|Number`
 
-The width of the column. Numeric values are treated as pixels.
+The width of the column. Numeric values are treated as pixels. Also refer to [Column Widths](/getting-started/web/grid/walkthrough#column-widths).
 
 > If all columns have widths and their sum exceeds the width of the grid, a horizontal scrollbar will appear (if scrolling is enabled). If that sum is less than the width of the grid,
 the column widths will be ignored and all columns will expand. This will lead to undesired side effects, e.g. when resizing columns. That's why it is recommended to have at least one column without specified width.
