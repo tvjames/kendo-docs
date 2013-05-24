@@ -1891,12 +1891,9 @@ The type of the request which the data source makes. The supported values are "c
           url: "http://demos.kendoui.com/service/products/create",
           dataType: "jsonp" // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
         },
-           parameterMap: function(data, type) {
-          if (type == "create") {
-            // send the created data items as the "models" service parameter encoded in JSON
-            return { models: kendo.stringify(data.models) };
-           }
-         }
+        parameterMap: function(data, type) {
+          return kendo.stringify(data);
+        }
       },
       batch: true,
       schema: {
