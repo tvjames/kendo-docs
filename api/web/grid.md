@@ -3650,7 +3650,7 @@ The [data source](/api/framework/datasource) of the widget. Configured via the [
 
 ### tbody `jQuery`
 
-The jQuery object which reprents the table body. Contains all grid table rows.
+The jQuery object which represents the table body. Contains all grid table rows.
 
 #### Example - get the first table row
 
