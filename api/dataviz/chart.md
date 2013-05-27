@@ -107,7 +107,7 @@ either [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "
 
 The days unit steps.
 
-### categoryAxis.autoBaseUnitSteps.hours `Array` *(default: [1, 2, 3, 6, 12])*
+### categoryAxis.autoBaseUnitSteps.hours `Array` *(default: [1, 2, 3])*
 
 The hours unit steps.
 
