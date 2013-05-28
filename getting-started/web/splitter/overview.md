@@ -208,7 +208,7 @@ the Splitter's computed height will fallback to `auto` and the widget may collap
 
 ## Resizing a Splitter manually
 
-The Splitter `div` can be resized manually by applying new width or height style with Javascript. Afterwards, a resize event should be triggered, so that the widget readjust its layout and pane sizes.
+The Splitter `div` can be resized manually by applying new width or height style with Javascript. Afterwards, a resize event should be triggered, so that the widget readjusts its layout and pane sizes.
 
     var splitterElement = $("#SplitterID"),
 	    splitterObject = splitterElement.data("kendoSplitter");
