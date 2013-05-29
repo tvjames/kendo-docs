@@ -233,7 +233,9 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                 bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
             }
 
-> The Kendo UI CSS files use relative paths to the theme images. This requires the virtual bundle URL to match the physical location of the CSS files, as demonstrated above.
+> The Kendo UI CSS files use relative paths to the theme images. This requires the theme images to be located in accordance with the relative paths in the CSS code.
+The easiest way to achieve this is to match the virtual bundle URL with the physical location of the CSS files, as demonstrated above.
+Otherwise, the theme images must be placed in a folder with a name that corresponds to the used theme name and this subfolder should be a child folder of the bundle path.
 
 7.  Register the bundles by executing the static method from the previous point in the `Application_Start()` method in **~/Global.asax.cs**:
 
