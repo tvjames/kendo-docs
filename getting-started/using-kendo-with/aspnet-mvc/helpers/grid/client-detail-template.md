@@ -102,7 +102,7 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
           <div>UnitsOnOrder: #: UnitsOnOrder #</div>
           <div>Discontinued: #: Discontinued #</div>
         </script>
-1.  Specify the id of the template using the `ClientTemplateId` method.
+1.  Specify the id of the template using the `ClientDetailTemplateId` method.
 
     - Index.aspx (ASPX)
 
@@ -118,7 +118,7 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
                       columns.Bound(product => product.ProductName);
                   })
                   .Pageable()
-                  .ClientTemplateId("client-template")
+                  .ClientDetailTemplateId("client-template")
             %>
     - Index.cshtml (Razor)
 
@@ -134,7 +134,7 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
                       columns.Bound(product => product.ProductName);
                   })
                   .Pageable()
-                  .ClientTemplateId("client-template")
+                  .ClientDetailTemplateId("client-template")
             )
 1. Build and run
 ![Client detail template](images/detail-template.png)
@@ -256,7 +256,7 @@ contains another grid which is bound to the `Products_Read` action.
               .ToClientTemplate()
         )
         </script>
-1. Specify the id of the template using the `ClientTemplateId` method.
+1. Specify the id of the template using the `ClientDetailTemplateId` method.
     - Index.aspx (ASPX)
 
             <%: Html.Kendo().Grid<KendoGridClientHierarchy.Models.Category>()
@@ -269,7 +269,7 @@ contains another grid which is bound to the `Products_Read` action.
                   .DataSource(dataSource =>
                       dataSource.Ajax().Read(read => read.Action("Categories_Read", "Home"))
                   )
-                  .ClientTemplateId("client-template")
+                  .ClientDetailTemplateId("client-template")
             %>
 
     - Index.cshtml (Razor)
@@ -284,7 +284,7 @@ contains another grid which is bound to the `Products_Read` action.
                   .DataSource(dataSource =>
                       dataSource.Ajax().Read(read => read.Action("Categories_Read", "Home"))
                   )
-                  .ClientTemplateId("client-template")
+                  .ClientDetailTemplateId("client-template")
             )
 1. Build and run.
 ![Client hierarchy](images/hierarchy.png)
