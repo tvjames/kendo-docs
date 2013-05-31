@@ -66,7 +66,7 @@ To configure Kendo Grid for JSP for editing follow these steps (using Spring MVC
 	        </kendo:grid-columns>
 	    </kendo:grid>
 
-4.  Specify the action methods which will handle the Create, Update and Destroy operations:
+4.  Specify the parameterMap and the action methods which will handle the Create, Update and Destroy operations:
 
    		<kendo:grid name="grid">
 			<kendo:grid-toolbar>
@@ -91,6 +91,18 @@ To configure Kendo Grid for JSP for editing follow these steps (using Spring MVC
 	                <kendo:dataSource-transport-read url="${readUrl}" dataType="json" type="POST" contentType="application/json"/>
 	                <kendo:dataSource-transport-update url="${updateUrl}" dataType="json" type="POST" contentType="application/json" />
 	                <kendo:dataSource-transport-destroy url="${destroyUrl}" dataType="json" type="POST" contentType="application/json" />
+					<kendo:dataSource-transport-parameterMap>
+						<script>
+							function parameterMap(options,type) { 
+								if(type==="read"){
+									return JSON.stringify(options);
+								} else {
+									return JSON.stringify(options.models);
+								}
+							}
+						</script>
+					</kendo:dataSource-transport-parameterMap>
+
 	            </kendo:dataSource-transport>
 	        </kendo:dataSource>
 	    </kendo:grid>
