@@ -93,16 +93,11 @@ To configure Kendo Grid for JSP for editing follow these steps (using Spring MVC
 	                <kendo:dataSource-transport-destroy url="${destroyUrl}" dataType="json" type="POST" contentType="application/json" />
 					<kendo:dataSource-transport-parameterMap>
 						<script>
-							function parameterMap(options,type) { 
-								if(type==="read"){
-									return JSON.stringify(options);
-								} else {
-									return JSON.stringify(options.models);
-								}
+							function parameterMap(options,type) { 	                		
+								return JSON.stringify(options);	                		
 							}
 						</script>
 					</kendo:dataSource-transport-parameterMap>
-
 	            </kendo:dataSource-transport>
 	        </kendo:dataSource>
 	    </kendo:grid>

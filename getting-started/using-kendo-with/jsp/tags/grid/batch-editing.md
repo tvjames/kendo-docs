@@ -38,7 +38,7 @@ To enable this mode follow these steps (using Spring MVC framework):
 	        </kendo:grid-columns>
 	    </kendo:grid>
 
-3.  Specify the action methods which will handle the `Create`, `Update` and `Destroy` operations:
+3.  Specify the parameterMap and the action methods which will handle the `Create`, `Update` and `Destroy` operations:
 
 	       <kendo:grid name="grid">
 				<kendo:grid-editable mode="incell"/>
@@ -61,6 +61,17 @@ To enable this mode follow these steps (using Spring MVC framework):
 		                <kendo:dataSource-transport-read url="${readUrl}" dataType="json" type="POST" contentType="application/json" />
 		                <kendo:dataSource-transport-update url="${updateUrl}" dataType="json" type="POST" contentType="application/json" />
 		                <kendo:dataSource-transport-destroy url="${destroyUrl}" dataType="json" type="POST" contentType="application/json" />
+						<kendo:dataSource-transport-parameterMap>
+							<script>
+								function parameterMap(options,type) { 
+									if(type==="read"){
+										return JSON.stringify(options);
+									} else {
+										return JSON.stringify(options.models);
+									}
+								}
+							</script>
+						</kendo:dataSource-transport-parameterMap>
 		            </kendo:dataSource-transport>
 					// <-- CRUD configuration
 		        </kendo:dataSource>
