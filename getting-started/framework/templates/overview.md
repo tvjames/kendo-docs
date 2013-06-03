@@ -98,6 +98,15 @@ To then consume this external template with an expression, we simply need to ini
 
 As you can see, the JavaScript executes a `for` loop inside of the template and produces a HTML list item for each name.
 
+Custom variables can be defined inside a template expression and then output in the same fashion as data fields:
+
+        <script id="javascriptTemplate" type="text/x-kendo-template">
+            # var myCustomVariable = "foo"; #
+			<p>
+				#= myCustomVariable #
+			</p>
+        </script>
+
 ### Internal vs. External Templates
 Kendo UI Templates can be defined in one of two ways:
 
