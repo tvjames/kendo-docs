@@ -130,9 +130,8 @@ should return a HTML fragment that can be loaded in a Window content area.
             title: "Async Window Content"
         });
     });
-
+	
 ## Accessing an Existing Window
-
 
 You can reference an existing **Window** instance via
 [jQuery.data()](http://api.jquery.com/jQuery.data/). Once a reference has been established, you can
@@ -142,4 +141,14 @@ use the API to control its behavior.
 
     var win = $("#window").data("kendoWindow");
 
+## Using Kendo UI Window with a form
 
+By default, the Window widget is moved in the DOM and placed as a child of the `body` element after initialization. This facilitates positioning the widget on top of everything else,
+but may lead to undesired side effects if the Window is created from an element inside a form, as the moved form fields will not be submitted. There are two ways to avoid this:
+
+1. the whole form including its opening and closing tags should be inside the element, from which the Window is created;
+1. if the Window is created from an element inside the form, then the [appendTo](http://docs.kendoui.com/api/web/window#configuration-appendTo) property should be used, so that the Window is not moved outside the form;
+
+If form data is validated on the server, we recommend submitting via AJAX, so that the Window remains visible and any validation messages are displayed seamlessly.
+
+The above remarks only apply to the case when the Window is *not* using an `iframe`.

@@ -58,7 +58,7 @@ Whether the effect should play backwards, useful when doing the same animation b
 
 ### appendTo `Object|String`*(default: document.body)*
 
-The element that the Window will be appended to.
+The element that the Window will be appended to. Beneficial if the [Window is used together with a form](http://docs.kendoui.com/getting-started/web/window/overview#using-kendo-ui-window-with-a-form).
 Note that this *does not* constrain the window dragging within the given element.
 
 #### Set the window container to be the form with id="mainForm"
