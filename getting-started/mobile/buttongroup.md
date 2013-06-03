@@ -40,10 +40,21 @@ Every Kendo Mobile ButtonGroup color can be customized by setting the respective
         <li style="beckground-color: red">Option2</li>
     </ul>
 
+## Button Badges
+
+Every button can have a badge, which is set using the `badge` data attribute of the Button's `li` element.
+
+### Setting badges to ButtonGroup's buttons
+
+    <ul id="buttongroup" data-role="buttongroup">
+        <li data-badge="5">Option 1</li>
+        <li data-badge="105">Option 2</li>
+    </ul>
+
 ## Button Icons
 
-A Button icon can be set in two ways - either by adding an `img` element inside the Button `a` element,
-or by setting an `icon` data attribute to the Button `a` element.
+A Button icon can be set in two ways - either by adding an `img` element inside the Button `li` element,
+or by setting an `icon` data attribute to the Button `li` element.
 
 KendoUI Mobile ships with several ready to use icons:
 

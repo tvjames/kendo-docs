@@ -29,6 +29,17 @@ The tabs of the TabStrip navigate to the mobile application's views. When the mo
         <a href="#featured">Featured</a>
     </div>
 
+## Tab Badges
+
+Every tab can have a badge, which is set using the `badge` data attribute of the Tab's `a` element.
+
+### Setting badges to tabs
+
+    <div data-role="tabstrip">
+        <a data-badge="5" href="#index">Home</a>
+        <a data-badge="105" href="#featured">Featured</a>
+    </div>
+
 ## Tab icons
 
 A tab icon can be set in two ways - either by adding an `img` element inside the `a` element, or by setting an `icon` data attribute to the `a` element.
