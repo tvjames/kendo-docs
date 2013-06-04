@@ -39,7 +39,7 @@ The name of the form field submitted to the Remove URL.
 The URL of the handler responsible for removing uploaded files (if any). The handler must accept POST
 requests containing one or more "fileNames" fields specifying the files to be deleted.
 
-### async.removeVerb `String`*(default: "DELETE")*
+### async.removeVerb `String`*(default: "POST")*
 
 The HTTP verb to be used by the remove action.
 
