@@ -77,7 +77,16 @@ versions, so it is advisable to always use the [iframe configuration option](#if
 
 ### content.template `String`
 
-Template for the content of a **Window**.
+Template for the content of a **Window**. Returned data from the server will be given as the `data` of this template.
+Note that if the returned data is JSON, the [`dataType` parameter](http://api.jquery.com/jQuery.ajax/) should be passed, so that the data gets parsed by jQuery.
+
+    $("#dialog").kendoWindow({
+        content: {
+            url: "/userDetails",
+            dataType: "json",
+            template: "User name: #= data.username #"
+        }
+    });
 
 ### draggable `Boolean`*(default: true)*
 
