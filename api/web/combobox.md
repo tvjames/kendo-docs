@@ -477,7 +477,7 @@ Selects a dropdown item and sets the value and the text of the combobox, or retr
         return dataItem.text === "test";
     });
 
-    // selects by index
+    // get selected index
     var selectedIndex = combobox.select();
 	
 	
@@ -491,7 +491,7 @@ LI element or index of the item or predicate function, which defines the item th
 
 `Number` The index of the selected item, if called with no parameters. If a custom value is entered, the returned selected index is `-1`.
 
-`undefined` if called with a parameter as a setter.
+`undefined` If called with a parameter as a setter.
 
 ### setDataSource
 
