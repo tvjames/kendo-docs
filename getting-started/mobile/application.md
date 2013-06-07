@@ -261,7 +261,7 @@ This allows fine-grained tuning of the application look and behavior. A sample o
     <script>
         new kendo.mobile.Application($(document.body), {
             platform: {
-                device: "ipad",       // Mobile device, can be "ipad", "iphone", "android" "fire", "blackberry", "wp", "meego"
+                device: "ipad",       // Mobile device, can be "ipad", "iphone", "android", "fire", "blackberry", "wp", "meego"
                 name: "ios",          // Mobile OS, can be "ios", "android", "blackberry", "wp", "meego"
                 ios: true,            // Mobile OS name as a flag
                 majorVersion: 5,      // Major OS version
