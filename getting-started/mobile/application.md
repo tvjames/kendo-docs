@@ -261,13 +261,13 @@ This allows fine-grained tuning of the application look and behavior. A sample o
     <script>
         new kendo.mobile.Application($(document.body), {
             platform: {
-                device: "ipad",       // Mobile device, can be "ipad", "iphone", "ipod", "android" "fire", "blackberry", "meego", "wp"
-                name: "ios",          // Mobile OS, can be "ios", "android", "blackberry", "meego", "wp"
+                device: "ipad",       // Mobile device, can be "ipad", "iphone", "android" "fire", "blackberry", "wp", "meego"
+                name: "ios",          // Mobile OS, can be "ios", "android", "blackberry", "wp", "meego"
                 ios: true,            // Mobile OS name as a flag
                 majorVersion: 5,      // Major OS version
                 minorVersion: "0.0",  // Minor OS versions
                 flatVersion: "500",   // Flat OS version for easier comparison
-                appMode: false,       // Whether running in browser or in AppMode/PhoneGap/Titanium.
+                appMode: false,       // Whether running in browser or in AppMode/PhoneGap/Icenium.
                 tablet: "ipad"        // If a tablet - tablet name or false for a phone.
             }
         });
