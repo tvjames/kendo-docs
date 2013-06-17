@@ -233,7 +233,7 @@ Opens a Window.
 
 ### refresh
 
-Refreshes the content of a Window from a remote URL.
+Refreshes the content of a Window from a remote URL or the initially defined (content template)[#configuration-content.template].
 
 #### Example
 
