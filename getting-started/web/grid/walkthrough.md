@@ -294,7 +294,7 @@ Keyboard navigation within the grid is supported by the `navigatable` option.  W
 
 In order to get a Grid table row by the data item ID can be achieved in the following way.
 
-First, the [http://docs.kendoui.com/api/framework/model#configuration-Example](ID field should be defined in the model configuration) of the Grid datasource.
+First, the [ID field should be defined in the model configuration](/api/framework/model#configuration-Example) of the Grid datasource.
 
 Then, the row model, the model UID and the Grid table row can be retrieved consecutively in the following way:
 
