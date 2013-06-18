@@ -290,7 +290,18 @@ Keyboard navigation within the grid is supported by the `navigatable` option.  W
          // other configuration
     });
 
+### Retrieving a Grid row by a model ID
 
+In order to get a Grid table row by the data item ID can be achieved in the following way.
+
+First, the [http://docs.kendoui.com/api/framework/model#configuration-Example](ID field should be defined in the model configuration) of the Grid datasource.
+
+Then, the row model, the model UID and the Grid table row can be retrieved consecutively in the following way:
+
+	var rowModel = gridObject.dataSource.get(10249); // get method of the Kendo UI DataSource object
+	var modelUID = rowModel.get("uid"); // get method of the Kendo UI Model object
+	var tableRow = $("[data-uid='" + modelUID + "']"); // the data-uid attribute is applied to the desired table row element
+	
 ## Applying Templates To Cells
 
 Using templates within either a script tag, or the template option on the column object if the grid is being initialized from a div can format each cell in the grid.
