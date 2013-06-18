@@ -300,7 +300,7 @@ Then, the row model, the model UID and the Grid table row can be retrieved conse
 
 	var rowModel = gridObject.dataSource.get(10249); // get method of the Kendo UI DataSource object
 	var modelUID = rowModel.get("uid"); // get method of the Kendo UI Model object
-	var tableRow = $("[data-uid='" + modelUID + "']"); // the data-uid attribute is applied to the desired table row element
+	var tableRow = $("[data-uid='" + modelUID + "']"); // the data-uid attribute is applied to the desired table row element. This UID is rendered by the Grid automatically.
 	
 ## Applying Templates To Cells
 
