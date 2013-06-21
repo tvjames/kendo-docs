@@ -28,7 +28,7 @@ If passing the effects as a string, the arguments are parsed as follows:
 Returns the elements for chaining.
 
 #### Example
-    $("#box").kendoAnimate("fade:in slide:left", 200, true, function (element) {
+    $("#box").kendoAnimate("fade:in slideIn:left", 200, true, function (element) {
         // Execute on completion
     });
 
@@ -48,8 +48,8 @@ If effects are passed as an object, then the arguments should be specified insid
 #### Parameters
 ##### effects `String|Object`
 The effect/s that should be executed on the selected elements. Can be one or several combined effects, specified as a string with format
-"effect:direction effect:direction". Transformation effects that animate the same property can't be combined, like slide:left and
-slide:right for instance.
+"effect:direction effect:direction". Transformation effects that animate the same property can't be combined, like slideIn:left and
+slideIn:right for instance.
 
 ##### duration `Number` *(default: 200)*
 The effect duration (speed) in milliseconds.
@@ -175,13 +175,6 @@ Does a zoom effect on the targets with directions _in_ and _out_. Uses scale tra
 
 #### Example
     element.kendoAnimate("zoom:in");
-
-### slide
-Slides the targets with their size in the specified direction, starting from their current position.
-Directions supported are _left_, _right_, _up_ and _down_.
-
-#### Example
-    element.kendoAnimate("slide:left");
 
 ### slideIn
 Moves the targets in the opposite direction with their size nad then slides them with their size in the specified direction. Expected to be used in a container.
