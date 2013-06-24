@@ -229,7 +229,7 @@ Instance of DataSource or the data that the DropDownList will be bound to.
         }
     });
 
-### template `String`
+### template `String|Function`
 
 Template to be used for rendering the items in the list.
 

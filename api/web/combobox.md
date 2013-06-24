@@ -275,7 +275,7 @@ A local JavaScript object or instance of DataSource or the data that the ComboBo
         suggest: false
     });
 
-### template `String`
+### template `String|Function`
 
 Template to be used for rendering the items in the list.
 
@@ -479,8 +479,8 @@ Selects a dropdown item and sets the value and the text of the combobox, or retr
 
     // get selected index
     var selectedIndex = combobox.select();
-	
-	
+
+
 #### Parameters
 
 ##### li `jQuery | Number | Function`
