@@ -8,9 +8,65 @@ publish: true
 
 # Kendo UI Framework Changes and Backwards Compatibility
 
+## KendoUI 2013 Q2
+
+### Changes from 2013 Q1 SP1 (2013.1.514)
+
+#### Breaking changes
+
+* **Editor**: default tools are now changed to enable table editing; as toolbar tools are now grouped, their dimensions have been increased by 2px. If you need to use the old configuration, use the following
+
+        $("#editor").kendoEditor({
+            tools: [
+                "bold", "italic", "underline", "strikethrough",
+                "fontName", "fontSize", "foreColor", "backColor",
+                "justifyLeft", "justifyCenter", "justifyRight", "justifyFull",
+                "insertUnorderedList", "insertOrderedList",
+                "indent", "outdent",
+                "formatBlock",
+                "createLink", "unlink", "insertImage"
+            ]
+        });
+
+#### Deprecated functionality
+
+* **Editor**: The **formatBlock** and **style** tools have been deprecated in favor of the unified **formatting** tool. The new tool supports the functionality of both old tools, as well as new styling options. If you need to keep the styles and block formats in different drop-downs, you can use two formatting tools in paralel. The old tool declarations work, yielding a console.warn about the deprecation, and will be removed with a future official release.
+    - Old
+
+            $("#editor").kendoEditor({
+                tools: [
+                    { name: "style", items: [
+                        // applies class "foo"
+                        { text: "foo", value: "foo" }
+                    ] },
+
+                    { name: "formatBlock", items: [
+                        // changes wrapping block to paragraph
+                        { text: "paragraph", value: "p" }
+                    ] }
+                ]
+            });
+    - New
+
+            $("#editor").kendoEditor({
+                tools: [
+                    { name: "formatting", items: [
+                        // applies class "foo"
+                        { text: "foo", value: ".foo" },
+
+                        // changes wrapping block to paragraph
+                        { text: "paragraph", value: "p" },
+
+                        // changes wrapping block to paragraph with class "fine-print"
+                        { text: "fine print", value: "p.fine-print" }
+                    ] }
+                ]
+            });
+
+
 ## KendoUI 2013 Q1
 
-### Changes from 2012 Q3 SP1 (2011.3.1315)
+### Changes from 2012 Q3 SP1 (2012.3.1315)
 
 #### Breaking changes
 
@@ -72,12 +128,12 @@ should be changed to this:
 
 * **DataViz:** Widgets now require theme-specific stylesheets. For example:
 
-    	<link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+        <link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
 
 if using the Default skin, should be updated to:
 
-		<link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
-		<link href="styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+        <link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+        <link href="styles/kendo.dataviz.default.min.css" rel="stylesheet" />
 
 * **DataViz:** missingValues defaults to "zero" for area, stacked area and stacked line series. The previous default was "gap" which can lead to incorrect results.
 
