@@ -109,6 +109,47 @@ Enables (**true**) or disables (**false**) the ability to display a file listing
 for uploading a file(s). Disabling a file listing may be useful you wish to customize the UI; use the
 client-side events to build your own UI.
 
+### template `String|Function`
+The [template](http://docs.kendoui.com/api/framework/kendo#methods-template) used to render the files in the list
+
+#### Template data `Array`
+
+*   name - the name of the file (string of all file names separated with comma, if batch upload is used)
+*   size - the file size in bytes / the total file size if batch upload is used (null if not available)
+*   files - array with information about all selected files - name, size and extension
+
+> **Important:** You should add the following markup to the template in order to render an action button for each file: `<button type='button' class='k-upload-action'></button>`.
+>To use the default progress-bar, you should add the following markup at the beginning of the template `<span class='k-progress'></span>` and render the rest of the template relative to it. Please check [Upload Templates](http://demos.kendoui.com/web/upload/templates.html) for a live demo.
+
+#### Example - specify template as a function
+
+	<input type="file" name="files" id="upload" />
+	<script id="fileTemplate" type="text/x-kendo-template">
+    	<div>
+    	    <p>Name: #=name#</p>
+    	    <p>Size: #=size# bytes</p>
+        	<p>Extension: #=files[0].extension#</p>
+        	<button type='button' class='k-upload-action' style='position: absolute; top: 0; right: 0;'></button>
+    	</div>
+	</script>
+	script>
+    	$("#upload").kendoUpload({
+    	    template: kendo.template($('#fileTemplate').html())
+    	});
+	</script>
+
+#### Example - specify template as a string
+
+	<input type="file" name="files" id="upload" />
+	<script>
+		$("#upload").kendoUpload({
+        template: "<div><p>Name: #=name#</p>" +
+                  "<p>Size: #=size# bytes</p><p>Extension: #=files[0].extension#</p>" +
+                  "<button type='button' class='k-upload-action' style='position: absolute; top: 0; right: 0;'></button>" +
+                  "</div>"
+    	});	
+	</script>
+
 ## Methods
 
 ### destroy
