@@ -138,6 +138,15 @@ Note that elements with percentage height require a parent element with an expli
 When Grid scrolling is enabled (by default), the Grid table layout style is "fixed". This means that all width-less columns will be equally wide no matter what their content is.
 When Grid scrolling is disabled, the Grid table layout style is "auto", i.e. the column widths are determined by the browser and cell content, if not set explicitly.
 
+### Using a wide non-scrollable Grid
+
+The Grid is basically a `TABLE` element inside a `DIV` element. Tables can expand horizontally beyond 100% to enclose their content, while divs don't do that. As a result, when Grid scrolling is disabled,
+the widget `TABLE` may overflow the wrapper `DIV`, leading to a visual glitch. Possible resolutions include:
+
+* enable Grid scrolling (which is disabled by default when using the Kendo UI Grid MVC wrapper)
+* set a large-enough width or min-width style for the Grid `DIV`
+* float the Grid `DIV` and clear the float right after the widget. Floated elements expand and shrink automatically to enclose their content, when needed.
+
 ## Features
 
 ### Scrolling
