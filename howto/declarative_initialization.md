@@ -67,7 +67,7 @@ included that list here as well.
 
   * [Enabled](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/enabled)
 
-  * [Event](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/event)
+  * [Events](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/events)
 
   * [Html](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/html)
 
