@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.Chart SITEFINITY MAOR SITEFINITY WHAT WILL HAPPEN, IDK WHAT WILL HAPPEN!! OH NO! Test Test.
+# kendo.dataviz.ui.Chart Differential Import Testing 
 
 ## Configuration
 
