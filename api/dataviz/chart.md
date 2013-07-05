@@ -5,7 +5,7 @@ tags: api,dataviz
 publish: true
 ---
 
-# kendo.dataviz.ui.Chart SITEFINITY MAOR SITEFINITY WHAT WILL HAPPEN
+# kendo.dataviz.ui.Chart SITEFINITY MAOR SITEFINITY WHAT WILL HAPPEN, IDK WHAT WILL HAPPEN!! OH NO! 
 
 ## Configuration
 
