@@ -4,7 +4,7 @@ slug:aspnetmvc-kendo.mvc.ui.grid
 publish:true
 ---
 
-# Kendo.Mvc.UI.Grid
+# Kendo.Mvc.UI.Grid Testing differential import on one of the grid pages
 
 The server side wrapper for Kendo UI Grid
 
