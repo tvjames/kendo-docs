@@ -2,7 +2,7 @@
 title: kendo.dataviz.diagram.Connector
 meta_title: API Reference for methods, objects and properties in the Connector - diagram's primitive
 meta_description: Examples and detailed explanation of Kendo UI methods and properties.
-slug: api-framework
+slug: api-framework-connector
 tags: api,framework
 publish: false
 ---

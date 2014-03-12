@@ -2,7 +2,7 @@
 title: kendo
 meta_title: API Reference for methods and properties in Kendo UI Framework
 meta_description: Examples and detailed explanation of Kendo UI methods and properties.
-slug: api-framework
+slug: api-framework-kendo
 tags: api,framework
 publish: true
 ---

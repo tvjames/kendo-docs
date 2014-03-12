@@ -2,7 +2,7 @@
 title: kendo.dataviz.diagram.shape
 meta_title: API Reference for methods, objects and properties in the Shape - diagram's primitive
 meta_description: Examples and detailed explanation of Kendo UI methods and properties.
-slug: api-framework
+slug: api-framework-shape
 tags: api,framework
 publish: false
 ---

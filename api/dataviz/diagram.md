@@ -2,7 +2,7 @@
 title: kendo.dataviz.ui.Diagram
 meta_title: API Reference for methods, objects and properties in the math module of Kendo diagram
 meta_description: Examples and detailed explanation of Kendo UI methods and properties.
-slug: api-framework
+slug: api-framework-diagram
 tags: api,framework
 publish: true
 ---
