@@ -5,151 +5,241 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.UploadMessagesBuilder
-
 A builder class for UploadMessages
+
+
 
 ## Methods
 
-### Cancel(System.String)
+### Cancel(`System.String`)
 Sets the Cancel button text
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .Cancel("cancel")
-        )
-        %>
 
 #### Parameters
 
 ##### cancelMessage `System.String`
 New cancel button text.
 
-### DropFilesHere(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Cancel("cancel")
+    )
+    %>
+
+
+### DropFilesHere(`System.String`)
 Sets the Drag and Drop hint text
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .DropFilesHere("drop files here")
-        )
-        %>
 
 #### Parameters
 
 ##### dropFilesHereMessage `System.String`
 New Drag and Drop hint text.
 
-### Remove(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .DropFilesHere("drop files here")
+    )
+    %>
+
+
+### Remove(`System.String`)
 Sets the Remove button text
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .Remove("drop files here")
-        )
-        %>
 
 #### Parameters
 
 ##### removeMessage `System.String`
 New Remove button text.
 
-### Retry(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Remove("drop files here")
+    )
+    %>
+
+
+### Retry(`System.String`)
 Sets the Retry button text
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .Retry("retry")
-        )
-        %>
 
 #### Parameters
 
 ##### retryMessage `System.String`
 New Retry button text.
 
-### Select(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Retry("retry")
+    )
+    %>
+
+
+### Select(`System.String`)
 Sets the Select button text
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .Select("select")
-        )
-        %>
 
 #### Parameters
 
 ##### selectMessage `System.String`
 New Select button text.
 
-### StatusFailed(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .Select("select")
+    )
+    %>
+
+
+### StatusFailed(`System.String`)
 Sets the "failed" status text accessible by screen readers
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .StatusFailed("failed")
-        )
-        %>
 
 #### Parameters
 
 ##### statusFailedMessage `System.String`
 New "failed" status text accessible by screen readers.
 
-### StatusUploaded(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .StatusFailed("failed")
+    )
+    %>
+
+
+### StatusUploaded(`System.String`)
 Sets the "uploaded" status text accessible by screen readers
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .StatusUploaded("uploaded")
-        )
-        %>
 
 #### Parameters
 
 ##### statusUploadedMessage `System.String`
 New "uploaded" status text accessible by screen readers.
 
-### StatusUploading(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .StatusUploaded("uploaded")
+    )
+    %>
+
+
+### StatusUploading(`System.String`)
 Sets the "uploading" status text accessible by screen readers
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .StatusUploading("uploading")
-        )
-        %>
 
 #### Parameters
 
 ##### statusUploadingMessage `System.String`
 New "uploading" status text accessible by screen readers.
 
-### UploadSelectedFiles(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .StatusUploading("uploading")
+    )
+    %>
+
+
+### HeaderStatusUploading(`System.String`)
+Sets the "uploading" header status text accessible by screen readers
+
+
+#### Parameters
+
+##### headerStatusUploadingMessage `System.String`
+New "header uploading" status text accessible by screen readers.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .HeaderStatusUploading("header uploading")
+    )
+    %>
+
+
+### HeaderStatusUploaded(`System.String`)
+Sets the "uploaded" header status text accessible by screen readers
+
+
+#### Parameters
+
+##### headerStatusUploadedMessage `System.String`
+New "header uploaded" status text accessible by screen readers.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .HeaderStatusUploaded("header uploaded")
+    )
+    %>
+
+
+### UploadSelectedFiles(`System.String`)
 Sets Upload button (visible when AutoUpload is set to false) text
 
-#### Example
-    <%= Html.Kendo().Upload()
-        .Name("Upload")
-        .Messages(msgs => msgs
-        .UploadSelectedFiles("uploading")
-        )
-        %>
 
 #### Parameters
 
 ##### uploadSelectedFilesMessage `System.String`
 New Upload button text.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Upload()
+    .Name("Upload")
+    .Messages(msgs => msgs
+        .UploadSelectedFiles("uploading")
+    )
+    %>
+
+
+

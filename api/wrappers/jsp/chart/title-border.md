@@ -6,43 +6,37 @@ publish: true
 ---
 
 # \<kendo:chart-title-border\>
-A JSP tag representing Kendo Border.
+
+The border of the series.
 
 #### Example
     <kendo:chart-title>
         <kendo:chart-title-border></kendo:chart-title-border>
     </kendo:chart-title>
 
-
 ## Configuration Attributes
 
+### color `java.lang.String`
 
-### color `String`
-
-The color of the border.
-
-#### Example
-    <kendo:chart color="color">
-    </kendo:chart>
-
-
-
-### dashType `String`
-
-The dash type of the border.
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
-    <kendo:chart dashType="dashType">
-    </kendo:chart>
+    <kendo:chart-title-border color="color">
+    </kendo:chart-title-border>
 
+### dashType `java.lang.String`
 
+The dash type of the chart title border.The following dash types are supported:
+
+#### Example
+    <kendo:chart-title-border dashType="dashType">
+    </kendo:chart-title-border>
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Example
-    <kendo:chart width="width">
-    </kendo:chart>
-
+    <kendo:chart-title-border width="width">
+    </kendo:chart-title-border>
 

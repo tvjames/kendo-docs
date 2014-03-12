@@ -1,11 +1,16 @@
 ---
 title: kendo.ui.RangeSlider
-slug: web-kendo.ui.rangeslider
+meta_title: Configuration, methods and events of Kendo UI RangeSlider
+meta_description: Easy configuration guide for the Range Slider widget and methods to enable/disable, set start and end value, or safely remove the widget from the DOM.
+slug: api-web-rangeslider
+relatedDocs: gs-web-rangeslider-overview
 tags: api,web
 publish: true
 ---
 
 # kendo.ui.RangeSlider
+
+Represents the Kendo UI RangeSlider widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
 
 ## Configuration
 
@@ -96,7 +101,7 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
 
 	// deatach events
 	$("#rangeSlider").data("kendoRangeSlider").destroy();
-	
+
 	// remove slider html from DOM
     $("#rangeSlider").closest(".k-slider").remove();
 
@@ -108,10 +113,10 @@ Enable/Disable the **RangeSlider** widget.
 
     // get a reference to the range slider widget
     var rangeSlider = $("#rangeSlider").data("kendoRangeSlider");
-    
+
     // disables the range slider
     rangeSlider.enable(false);
-    
+
     // enables the range slider
     rangeSlider.enable(true);
 
@@ -134,7 +139,17 @@ selection values.
 
 #### Parameters
 
-##### value ``
+##### selectionStart `Number`
+
+The selection start value of the RangeSlider.
+
+##### selectionEnd `Number`
+
+The selection start value of the RangeSlider.
+
+#### Returns
+
+`Array` The value of the RangeSlider.
 
 ## Events
 

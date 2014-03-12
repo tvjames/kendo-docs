@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:chart-seriesItem-negativeValues\>
-A JSP tag representing Kendo NegativeValues.
+
+The options for displaying the chart negative bubble values.
 
 #### Example
     <kendo:chart-seriesItem>
         <kendo:chart-seriesItem-negativeValues></kendo:chart-seriesItem-negativeValues>
     </kendo:chart-seriesItem>
 
-
 ## Configuration Attributes
 
+### color `java.lang.String`
 
-### color `String`
-
-The color of the negative values.
+The color of the chart negative bubble values.
 
 #### Example
-    <kendo:chart color="color">
-    </kendo:chart>
-
-
+    <kendo:chart-seriesItem-negativeValues color="color">
+    </kendo:chart-seriesItem-negativeValues>
 
 ### visible `boolean`
 
-The visibility of the negative values.
+If set to true the chart will display the negative bubbles. By default the negative bubbles are not displayed.
 
 #### Example
-    <kendo:chart visible="visible">
-    </kendo:chart>
-
+    <kendo:chart-seriesItem-negativeValues visible="visible">
+    </kendo:chart-seriesItem-negativeValues>
 

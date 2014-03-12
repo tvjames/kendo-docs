@@ -6,69 +6,64 @@ publish: true
 ---
 
 # \<kendo:linearGauge-gaugeArea\>
-A JSP tag representing Kendo GaugeArea.
+
+The gauge area configuration options.
+This is the entire visible area of the gauge.
 
 #### Example
     <kendo:linearGauge>
         <kendo:linearGauge-gaugeArea></kendo:linearGauge-gaugeArea>
     </kendo:linearGauge>
 
-
 ## Configuration Attributes
 
-
-### background `Object`
+### background `java.lang.Object`
 
 The background of the gauge area.
 Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
-    <kendo:linearGauge background="background">
-    </kendo:linearGauge>
-
-
+    <kendo:linearGauge-gaugeArea background="background">
+    </kendo:linearGauge-gaugeArea>
 
 ### height `float`
 
-The height of the gauge area.
+The height of the gauge area.  By default, the vertical gauge is 200px and
+the horizontal one is 60px.
 
 #### Example
-    <kendo:linearGauge height="height">
-    </kendo:linearGauge>
+    <kendo:linearGauge-gaugeArea height="height">
+    </kendo:linearGauge-gaugeArea>
 
-
-
-### margin `float`
+### margin `java.lang.Object`
 
 The margin of the gauge area.
 
 #### Example
-    <kendo:linearGauge margin="margin">
-    </kendo:linearGauge>
-
-
+    <kendo:linearGauge-gaugeArea margin="margin">
+    </kendo:linearGauge-gaugeArea>
 
 ### width `float`
 
-The width of the gauge area.
+The width of the gauge area.  By default the vertical gauge is 60px and
+horizontal gauge is 200px.
 
 #### Example
-    <kendo:linearGauge width="width">
-    </kendo:linearGauge>
+    <kendo:linearGauge-gaugeArea width="width">
+    </kendo:linearGauge-gaugeArea>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:linearGauge-gaugeArea-border
 
 The border of the gauge area.
 
-More documentation is available at [kendo:linearGauge-gaugeArea-border](/api/wrappers/jsp/lineargauge/gaugearea-border).
+More documentation is available at [kendo:linearGauge-gaugeArea-border](/kendo-ui/api/wrappers/jsp/lineargauge/gaugearea-border).
 
 #### Example
 
     <kendo:linearGauge-gaugeArea>
         <kendo:linearGauge-gaugeArea-border></kendo:linearGauge-gaugeArea-border>
     </kendo:linearGauge-gaugeArea>
- 
+

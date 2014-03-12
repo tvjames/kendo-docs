@@ -1,6 +1,9 @@
 ---
 title: Layout
+meta_title: How to use Kendo UI Mobile Layout widget | Kendo UI Documentation
+meta_description: Instructions how to use Mobile Layout widget to easily share headers and footers between multiple views.
 slug: gs-mobile-layout
+relatedDocs: api-mobile-layout
 tags: getting-started,mobile
 publish: true
 ---
@@ -29,7 +32,7 @@ to the ID of the layout (specified by the `data-id` attribute):
       <div data-role="footer">Footer</div>
     </div>
 
-A default application layout can be set through the [`layout` configuration](/api/mobile/application#layout-string) option of the **Application**.
+A default application layout can be set through the [`layout` configuration](/kendo-ui/api/mobile/application#layout-string) option of the **Application**.
 A mobile **View** can remove the default application layout by setting `data-layout=""`.
 
 ## Default Application Layout

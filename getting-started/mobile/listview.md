@@ -1,6 +1,9 @@
 ---
 title: ListView
+meta_title: User guide for Kendo UI Mobile ListView Widget
+meta_description: Documentation how to use capabilities of Kendo UI Mobile ListVeiw widget.
 slug: gs-mobile-listview
+relatedDocs: api-mobile-listview
 tags: api,mobile
 publish: true
 ---
@@ -76,7 +79,6 @@ and setting the widget's element `type` data attribute to `group`.
 
 ## Binding to Data
 
-
 The mobile ListView can be bound to both local JavaScript arrays and remote data via the
 **Kendo DataSource component**. Local JavaScript arrays are appropriate for limited value
 options, while remote data binding is better for larger data sets.
@@ -93,7 +95,9 @@ options, while remote data binding is better for larger data sets.
 
 The mobile ListView leverages Kendo UI high-performance Templates to provide complete control
 over item rendering. For a complete overview of Kendo UI Template capabilities and syntax,
-please review the [Kendo UI Templates](http://www.kendoui.com/documentation/framework/templates/ "Kendo UI Template") documentation.
+please review the [Kendo UI Templates](/kendo-ui/getting-started/framework/templates/overview) documentation.
+
+> The ListView automatically wraps the template content in `<li>` tag. Putting a `<li>` tag inside the template creates invalid nesting of elements.
 
 ### Basic item template customization
 
@@ -107,6 +111,49 @@ please review the [Kendo UI Templates](http://www.kendoui.com/documentation/fram
             });
         });
     </script>
+
+### Setting item template via data attribute
+
+    <div id="foo" data-role="view">
+        <ul id="list" data-role="listview" data-source="dataSource" data-template="tmp"></ul>
+    </div>
+
+    <script id="tmp" type="text/x-kendo-template">
+        <p>#: name # <span>Age: #: age #</span></p>
+    </script>
+
+    <script>
+        var app = new kendo.mobile.Application();
+        var dataSource = new kendo.data.DataSource({
+            data: [
+                { name: "Jane Doe", age: 30 },
+                { name: "John Doe", age: 33 }
+            ]
+        });
+    </script>
+
+## Press to Load More / Endless Scrolling
+
+The listview widget supports displaying large amounts of data by appending additional pages of data on demand.
+Loading can happen automatically by enabling [endless scrolling](/kendo-ui/api/mobile/listview#configuration-endlessScroll), or by displaying a button at the bottom ([ press to load more ](/kendo-ui/api/mobile/listview#configuration-loadMore)).
+Enabling endless scrolling or press to load more options triggers the **virtual mode** of the ListView.
+
+In order for the listview virtual mode to be working as expected, the listview should be the only widget in the scrolling container. In case more widgets are needed in the view in question, the listview should be wrapped in a mobile scroller container.
+
+The virtual mode interacts and alters the behavior of the containing scroller widget (by default, the view scroller). Native scrolling (view with `use-native-scrolling=true` or scroller with `use-native=true` attributes) **is not supported**.
+
+In virtual mode, fixed amount of DOM elements is rendered, and then dynamically repositioned and updated when the user scrolls the view. In endless scrolling mode, the next page is automatically prefetched when the user scrolls past two thirds of the current set of items.
+
+> The amount of actual DOM elements used in virtual mode is equal to half of the datasource page size option.
+
+In order for the scrolling to occur smoothly, the page size should **not be too low**.
+For example, if 5 items are visible on the page, at least 15 physical DOM elements are needed, which means that the DataSource page size should be 30 or greater.
+
+> Bigger DataSource page size ensures smooth scrolling, but has adverce effects on view transition performance.
+
+Once the listview reaches the amount of items specified by the [schema.total](/kendo-ui/api/framework/datasource#configuration-schema.total) setting of the datasource, the loadmore button/endless scrolling indicator is hidden.
+
+> Currently, certain features (**grouped mode** and **inset styling**) are **not supported** in virtual mode.
 
 ## Link Items
 
@@ -192,12 +239,8 @@ Kendo mobile ships with several ready to use icons:
 *   <span class="km-icon km-stop"></span>stop
 *   <span class="km-icon km-trash"></span>trash
 
-
-
 Additional icons may be added by defining the respective CSS class.
 If the `icon` data attribute is set to `custom`, the tab will receive `km-custom` CSS class.
-
-
 
 ### Creating Custom Icons
 
@@ -223,4 +266,68 @@ only few graphic editors, so **better stick with PNG24**). The image color is no
          Bar
       </li>
     </ul>
+
+In Q3 2012 due to numerous issues with WebKit mask icons, they were deprecated and Kendo UI Mobile introduced font icons. Since the font is not easy editable,
+the previous method for a mask icon can be used, but with some additional styling. Please note that the below example will restyle all font icons.
+
+### Define custom list item icon after Q3 2012
+
+    <style>
+        /* Remove font icons styling, use .km- + data-icon name if only one should be overridden */
+        .km-root .km-pane .km-view .km-icon {
+            background-size: 100% 100%;
+            -webkit-background-clip: border-box;
+            background-color: currentcolor;
+        }
+
+        .km-custom {
+            -webkit-mask-box-image: url("foo.png");
+            background-color: red;
+        }
+    </style>
+
+    <ul data-role="listview" data-style="inset">
+      <li data-icon="custom">
+         <a>Home</a>
+      </li>
+      <li>
+         Bar
+      </li>
+    </ul>
+
+If you want to add only one or two custom icons, specify them with their respective classes (.km- + data-icon name):
+
+### Restyle only the added Kendo UI Mobile custom icon.
+
+    .km-root .km-pane .km-view .km-question {
+        background-size: 100% 100%;
+        -webkit-background-clip: border-box;
+        background-color: currentcolor;
+    }
+
+    .km-question {
+        -webkit-mask-box-image: url("foo.png");
+        background-color: red;
+    }
+
+When custom icons are used and their names are the same as the integrated Kendo UI Mobile icon names, make sure that the font icons are not rendered.
+
+### Hide all Kendo UI Mobile font icons.
+
+    /* Don't render all internal Kendo UI font icons
+    .km-root .km-pane .km-view .km-icon:after,
+    .km-root .km-pane .km-view .km-icon:before
+    {
+        visibility: hidden;
+    }
+
+Again if only several icons should be overridden, specify them with their classes instead:
+
+### Hide specific Kendo UI Mobile font icons.
+
+    .km-root .km-pane .km-view .km-favorites:after,
+    .km-root .km-pane .km-view .km-favorites:before
+    {
+        visibility: hidden;
+    }
 

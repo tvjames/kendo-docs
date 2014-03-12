@@ -10,9 +10,9 @@ publish: true
 ![kendo-search-overview](images/kendo-search-overview.png)
 
 The Music Store application provides an text box for searching the store by album title.
-To implement this, a [Kendo AutoComplete Widget](http://demos.kendoui.com/web/autocomplete/index.html) was used.
+To implement this, a [Kendo AutoComplete Widget](http://demos.telerik.com/kendo-ui/web/autocomplete/index.html) was used.
 The desire was to have the autocomplete box query the server for albums that match the user's entered text and have
-the filtering performed server-side, using a [remote DataSource](http://demos.kendoui.com/web/datasource/remote-data.html).
+the filtering performed server-side, using a [remote DataSource](http://demos.telerik.com/kendo-ui/web/datasource/remote-data.html).
 The results would then be listed with the album art, title, and artist name, and be clickable to get details about the album.
 
 ## Add the input box
@@ -38,23 +38,14 @@ Next we turn the input element into an AutoComplete widget with JavaScript:
             serverPaging: true,
             pageSize: store.config.searchMaxResults,
             transport: {
-                read: {
-                    url: store.config.albumsUrl,
-                    dataType: "json"
-                },
-                parameterMap: function (options, type) {
-                    var paramMap = kendo.data.transports.odata.parameterMap(options);
-                    delete paramMap.$inlinecount;
-                    delete paramMap.$format;
-                    return paramMap;
-                }
+                read: store.config.albumsWithArtistsUrl
             },
             schema: {
                 data: function (data) {
-                    return data;
+                    return data.value;
                 },
                 total: function (data) {
-                    return data.length;
+                    return data["odata.count"];
                 }
             }
         },
@@ -77,7 +68,7 @@ Let's look closer at what each part of this JavaScript is doing:
 
 **placeholder: 'Search music...'** - This is the text that is displayed in the text box as a placeholder until the user clicks into the input box.
 
-**dataSource: {}** - Here we configure the source for our autocomplete data. We have specified the URL of our Albums WebAPI as the source. There is a lot going on in this data source, but most of it is enabling server-side filtering using OData.
+**dataSource: {}** - Here we configure the source for our autocomplete data. We have specified the URL of our Albums service as the source. There is a lot going on in this data source, but most of it is enabling server-side filtering using OData.
 
 ## Customizing the Dropdown Items
 
@@ -135,7 +126,7 @@ In the **_Layout.cshtml** file, this template is included with the line:
     @Html.Partial("_SearchResultTemplatePartial")
 
 If we were not using ASP.NET MVC, we could have written some additional code to load templates from external files.
-For more information on remote template loading, see [How To: Load Templates from External Files](http://docs.kendoui.com/howto/load-templates-external-files).
+For more information on remote template loading, see [How To: Load Templates from External Files](http://docs.telerik.com/kendo-ui/howto/load-templates-external-files).
 
 Now that the template is included in the body of the page, the application code is using a jQuery selector to fetch this &lt;script&gt; element by its id and get the contents.
 It then calls **kendo.template()** to process the template.
@@ -165,38 +156,23 @@ to do this is:
             
             
             transport: {
-                // Set the URL to read data from to our WebAPI controller,
-                // and specify that we want JSON data.
-                read: {
-                    url: store.config.albumsUrl,
-                    dataType: "json"
-                },
-                
-                // This fixes some compatibility issues between Kendo and WebAPI OData
-                parameterMap: function (options, type) {
-                    var paramMap = kendo.data.transports.odata.parameterMap(options);
-                    delete paramMap.$inlinecount;
-                    delete paramMap.$format;
-                    return paramMap;
-                }
+                // Set the URL to read data from
+                read: store.config.albumsWithArtistsUrl
             },
             
-            // This fixes some compatibility issues between Kendo and WebAPI OData
+            // This fixes some compatibility issues between Kendo and WCF Data Service OData
             schema: {
                 data: function (data) {
-                    return data;
+                    return data.value;
                 },
                 total: function (data) {
-                    return data.length;
+                    return data["odata.count"];
                 }
             }
         }
 
-There are some compatibility issues that are being worked around in this code, because at the time of
-creating this project, WebAPI OData did not support some of the OData parameters that Kendo uses by default.
-This process is explained in much more detail in a separate Kendo Blog post:
-[Using Kendo UI With MVC4, WebAPI, OData And EF](http://www.kendoui.com/blogs/teamblog/posts/12-10-25/using_kendo_ui_with_mvc4_webapi_odata_and_ef.aspx).
-For more information on each field set on the DataSource, also see the [DataSource documentation](http://docs.kendoui.com/api/framework/datasource).
+The **schema.data** and **schema.total** functions overcome a JSON formatting difference between Kendo and WCF Data Services OData.
+For more information on each field set on the DataSource, also see the [DataSource documentation](http:///api/framework/datasource).
 
 ## Handling the selection of a search result
 

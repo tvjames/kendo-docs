@@ -6,43 +6,69 @@ publish: true
 ---
 
 # \<kendo:tabStrip-item\>
-A JSP tag representing Kendo Item.
+
+Contains the items of the tabstrip widget
 
 #### Example
     <kendo:tabStrip-items>
         <kendo:tabStrip-item></kendo:tabStrip-item>
     </kendo:tabStrip-items>
 
-
 ## Configuration Attributes
 
+### contentUrl `java.lang.String`
 
-### text `String`
-
-Specifies the text displayed by the item
+Specifies the url from which the item content will be loaded
 
 #### Example
-    <kendo:tabStrip text="text">
-    </kendo:tabStrip>
+    <kendo:tabStrip-item contentUrl="contentUrl">
+    </kendo:tabStrip-item>
 
+### enabled `boolean`
 
+Specifies whether the item is initially enabled
 
-### spriteCssClass `String`
+#### Example
+    <kendo:tabStrip-item enabled="enabled">
+    </kendo:tabStrip-item>
+
+### imageUrl `java.lang.String`
+
+Specifies the URL of the image displayed by the item
+
+#### Example
+    <kendo:tabStrip-item imageUrl="imageUrl">
+    </kendo:tabStrip-item>
+
+### selected `boolean`
+
+Specifies whether the item is initially selected
+
+#### Example
+    <kendo:tabStrip-item selected="selected">
+    </kendo:tabStrip-item>
+
+### spriteCssClass `java.lang.String`
 
 Specifies the class name for the sprite image displayed by the item
 
 #### Example
-    <kendo:tabStrip spriteCssClass="spriteCssClass">
-    </kendo:tabStrip>
+    <kendo:tabStrip-item spriteCssClass="spriteCssClass">
+    </kendo:tabStrip-item>
 
+### text `java.lang.String`
 
-
-### expanded `boolean`
-
-Specifies whether the item is initially expanded
+Specifies the text displayed by the item
 
 #### Example
-    <kendo:tabStrip expanded="expanded">
-    </kendo:tabStrip>
+    <kendo:tabStrip-item text="text">
+    </kendo:tabStrip-item>
 
+### url `java.lang.String`
+
+Specifies the URL that the item links to
+
+#### Example
+    <kendo:tabStrip-item url="url">
+    </kendo:tabStrip-item>
 

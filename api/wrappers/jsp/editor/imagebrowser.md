@@ -1,67 +1,73 @@
 ---
-title: editor-imagebrowser
-slug: jsp-editor-imagebrowser
+title: editor-imageBrowser
+slug: jsp-editor-imageBrowser
 tags: api, java
 publish: true
 ---
 
-# \<kendo:editor-imagebrowser\>
-A JSP tag representing Kendo Imagebrowser.
+# \<kendo:editor-imageBrowser\>
+
+Configuration for image browser dialog.
 
 #### Example
     <kendo:editor>
-        <kendo:editor-imagebrowser></kendo:editor-imagebrowser>
+        <kendo:editor-imageBrowser></kendo:editor-imageBrowser>
     </kendo:editor>
-
 
 ## Configuration Attributes
 
-
-### fileTypes `String`
+### fileTypes `java.lang.String`
 
 Defines the allowed file extensions.
 
 #### Example
-    <kendo:editor fileTypes="fileTypes">
-    </kendo:editor>
+    <kendo:editor-imageBrowser fileTypes="fileTypes">
+    </kendo:editor-imageBrowser>
+
+### path `java.lang.String`
+
+Defines the initial folder to display, relative to the root.
+
+#### Example
+    <kendo:editor-imageBrowser path="path">
+    </kendo:editor-imageBrowser>
 
 
+##  Configuration JSP Tags
 
-## Child JSP Tags
+### kendo:editor-imageBrowser-messages
 
-### kendo:editor-imagebrowser-transport
+Defines texts shown within the image browser.
 
-Specifies the settings for loading and saving data.
-
-More documentation is available at [kendo:editor-imagebrowser-transport](/api/wrappers/jsp/editor/imagebrowser-transport).
+More documentation is available at [kendo:editor-imageBrowser-messages](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-messages).
 
 #### Example
 
-    <kendo:editor-imagebrowser>
-        <kendo:editor-imagebrowser-transport></kendo:editor-imagebrowser-transport>
-    </kendo:editor-imagebrowser>
- 
-### kendo:editor-imagebrowser-schema
+    <kendo:editor-imageBrowser>
+        <kendo:editor-imageBrowser-messages></kendo:editor-imageBrowser-messages>
+    </kendo:editor-imageBrowser>
+
+### kendo:editor-imageBrowser-schema
 
 Set the object responsible for describing the image raw data format.
 
-More documentation is available at [kendo:editor-imagebrowser-schema](/api/wrappers/jsp/editor/imagebrowser-schema).
+More documentation is available at [kendo:editor-imageBrowser-schema](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-schema).
 
 #### Example
 
-    <kendo:editor-imagebrowser>
-        <kendo:editor-imagebrowser-schema></kendo:editor-imagebrowser-schema>
-    </kendo:editor-imagebrowser>
- 
-### kendo:editor-imagebrowser-messages
+    <kendo:editor-imageBrowser>
+        <kendo:editor-imageBrowser-schema></kendo:editor-imageBrowser-schema>
+    </kendo:editor-imageBrowser>
 
-Defines texts shown within the pager.
+### kendo:editor-imageBrowser-transport
 
-More documentation is available at [kendo:editor-imagebrowser-messages](/api/wrappers/jsp/editor/imagebrowser-messages).
+Specifies the settings for loading and saving data.
+
+More documentation is available at [kendo:editor-imageBrowser-transport](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport).
 
 #### Example
 
-    <kendo:editor-imagebrowser>
-        <kendo:editor-imagebrowser-messages></kendo:editor-imagebrowser-messages>
-    </kendo:editor-imagebrowser>
- 
+    <kendo:editor-imageBrowser>
+        <kendo:editor-imageBrowser-transport></kendo:editor-imageBrowser-transport>
+    </kendo:editor-imageBrowser>
+

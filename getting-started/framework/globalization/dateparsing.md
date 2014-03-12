@@ -1,5 +1,7 @@
 ---
 title: Date parsing
+meta_title: Date Parsing | Kendo UI Framework Globalization documentation
+meta_description: Guide to supported methods for converting a specified string to a Date object using culture's specific settings.
 slug: date-parsing
 publish: true
 ---
@@ -9,21 +11,21 @@ Kendo exposes methods which converts the specified string to a [Date](https://de
 
 ## Parse a string as date without specifying a format
 
-[kendo.parseDate(string)](http://docs.kendoui.com/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object taking into account culture's set of default formats.
+[kendo.parseDate(string)](/kendo-ui/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object taking into account culture's set of default formats.
 
     //current culture is "en-US"
     kendo.parseDate("12/22/2000"); //Fri Dec 22 2000
 
 ## Parse a string as date with specifying a format/s
 
-[kendo.parseDate(string, format)](http://docs.kendoui.com/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object taking into account the specified format/s.
+[kendo.parseDate(string, format)](/kendo-ui/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object taking into account the specified format/s.
 
     kendo.parseDate("2000/12/22", "yyyy/MM/dd");
 	kendo.parseDate("2000/12/22", ["MM/dd/yyyy", "yyyy/MM/dd"]);
 
 ## Parse a string as date with specifying a format/s and culture name
 
-[kendo.parseDate(string, format, cultureName)](http://docs.kendoui.com/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object taking into account the specified format/s and culture
+[kendo.parseDate(string, format, cultureName)](/kendo-ui/api/framework/kendo#parseDate) - converts a string to a JavaScript Date object taking into account the specified format/s and culture
 
     kendo.parseDate("2012.07.16", "yyyy/MM/dd", "de-DE");
 	kendo.parseDate("2012.07.16", ["MM/dd/yyyy", "yyyy/MM/dd"], "de-DE");

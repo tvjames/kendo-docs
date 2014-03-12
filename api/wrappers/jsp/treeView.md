@@ -6,102 +6,157 @@ publish: true
 ---
 
 # \<kendo:treeView\>
-A JSP tag representing Kendo TreeView.
-
+A JSP wrapper for Kendo UI [TreeView](/kendo-ui/api/web/treeview).
 
 ## Configuration Attributes
 
+### animation `boolean`
+
+A collection of visual animations used when items are expanded or collapsed through user interaction.
+Setting this option to false will disable all animations. Further configuration is available via [kendo:treeView-animation](#kendo-treeView-animation). 
+
+#### Example
+    <kendo:treeView animation="animation">
+    </kendo:treeView>
+
+### autoBind `boolean`
+
+If set to false the widget will not bind to the data source during initialization. In this case data binding will occur when the change event of the
+data source is fired. By default the widget will bind to the data source specified in the configuration.
+
+#### Example
+    <kendo:treeView autoBind="autoBind">
+    </kendo:treeView>
 
 ### checkboxes `boolean`
 
-If Further configuration is available via [kendo:treeView-checkboxes](#kendo-treeView-checkboxes). 
+If true or an object, renders checkboxes beside each node. Further configuration is available via [kendo:treeView-checkboxes](#kendo-treeView-checkboxes). 
 
 #### Example
     <kendo:treeView checkboxes="checkboxes">
     </kendo:treeView>
 
+### dataImageUrlField `java.lang.String`
 
-
-### dataImageUrlField `String`
-
-Sets the field of the data item that provides
-the image URL of the treeview nodes.
+Sets the field of the data item that provides the image URL of the treeview nodes.
 
 #### Example
     <kendo:treeView dataImageUrlField="dataImageUrlField">
     </kendo:treeView>
 
+### dataSpriteCssClassField `java.lang.String`
 
-
-### dataSpriteCssClassField `String`
-
-Sets the field of the data item that provides
-the sprite CSS class of the treeview nodes.
+Sets the field of the data item that provides the sprite CSS class of the nodes.
+If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
     <kendo:treeView dataSpriteCssClassField="dataSpriteCssClassField">
     </kendo:treeView>
 
+### dataTextField `java.lang.Object`
 
-
-### dataTextField `String`
-
-Sets the field of the data item that provides
-the text content of the treeview nodes.
+Sets the field of the data item that provides the text content of the nodes.
+If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
     <kendo:treeView dataTextField="dataTextField">
     </kendo:treeView>
 
+### dataUrlField `java.lang.String`
 
-
-### dataUrlField `String`
-
-Sets the field of the data item that provides
-the link URL of the treeview nodes.
+Sets the field of the data item that provides the link URL of the nodes.
 
 #### Example
     <kendo:treeView dataUrlField="dataUrlField">
     </kendo:treeView>
 
-
-
 ### dragAndDrop `boolean`
 
-Disables (
+Disables (false) or enables (true) drag-and-drop of the nodes.
 
 #### Example
     <kendo:treeView dragAndDrop="dragAndDrop">
     </kendo:treeView>
 
-
-
 ### loadOnDemand `boolean`
 
-Indicates whether the child datasources should be fetched
-lazily, when parent groups get expanded. Setting this to false causes all child dataSources to
-be loaded at initialization time. Note: when initializing a TreeView from array (rather than from a
-HierarchicalDataSource instance), the default value of this option is false.
+Indicates whether the child datasources should be fetched lazily when parent groups get expanded.
+Setting this to false causes all child dataSources to be loaded at initialization time.
+Note: when initializing the widget from an array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
 
 #### Example
     <kendo:treeView loadOnDemand="loadOnDemand">
     </kendo:treeView>
 
+### template `java.lang.String`
 
-
-### template `String`
-
-Template for rendering of the nodes of the treeview.
+Template for rendering each node.
 
 #### Example
     <kendo:treeView template="template">
     </kendo:treeView>
 
 
+##  Configuration JSP Tags
+
+### kendo:treeView-animation
+
+A collection of visual animations used when items are expanded or collapsed through user interaction.
+Setting this option to false will disable all animations.
+
+More documentation is available at [kendo:treeView-animation](/kendo-ui/api/wrappers/jsp/treeview/animation).
+
+#### Example
+
+    <kendo:treeView>
+        <kendo:treeView-animation></kendo:treeView-animation>
+    </kendo:treeView>
+
+### kendo:treeView-checkboxes
+
+If true or an object, renders checkboxes beside each node.
+
+More documentation is available at [kendo:treeView-checkboxes](/kendo-ui/api/wrappers/jsp/treeview/checkboxes).
+
+#### Example
+
+    <kendo:treeView>
+        <kendo:treeView-checkboxes></kendo:treeView-checkboxes>
+    </kendo:treeView>
+
+### kendo:treeView-items
+
+Contains the items of the treeview widget
+
+More documentation is available at [kendo:treeView-items](/kendo-ui/api/wrappers/jsp/treeview/items).
+
+#### Example
+
+    <kendo:treeView>
+        <kendo:treeView-items></kendo:treeView-items>
+    </kendo:treeView>
+
+### kendo:treeView-messages
+
+The text messages displayed in the widget. Use it to customize or localize the messages.
+
+More documentation is available at [kendo:treeView-messages](/kendo-ui/api/wrappers/jsp/treeview/messages).
+
+#### Example
+
+    <kendo:treeView>
+        <kendo:treeView-messages></kendo:treeView-messages>
+    </kendo:treeView>
+
+
+## Event Attributes
 
 ### collapse `String`
 
 Triggered before a subgroup gets collapsed.
+
+
+For additional information check the [collapse](/kendo-ui/api/web/treeview#events-collapse) event documentation.
 
 #### Example
     <kendo:treeView collapse="handle_collapse">
@@ -112,11 +167,12 @@ Triggered before a subgroup gets collapsed.
         }
     </script>
 
-
-
 ### dataBound `String`
 
 Triggered after the dataSource change event has been processed (adding/removing items);
+
+
+For additional information check the [dataBound](/kendo-ui/api/web/treeview#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeView dataBound="handle_dataBound">
@@ -127,11 +183,12 @@ Triggered after the dataSource change event has been processed (adding/removing 
         }
     </script>
 
-
-
 ### drag `String`
 
 Triggered while a node is being dragged.
+
+
+For additional information check the [drag](/kendo-ui/api/web/treeview#events-drag) event documentation.
 
 #### Example
     <kendo:treeView drag="handle_drag">
@@ -142,11 +199,12 @@ Triggered while a node is being dragged.
         }
     </script>
 
-
-
 ### dragend `String`
 
 Triggered after a node has been dropped.
+
+
+For additional information check the [dragend](/kendo-ui/api/web/treeview#events-dragend) event documentation.
 
 #### Example
     <kendo:treeView dragend="handle_dragend">
@@ -157,11 +215,12 @@ Triggered after a node has been dropped.
         }
     </script>
 
-
-
 ### dragstart `String`
 
 Triggered before the dragging of a node starts.
+
+
+For additional information check the [dragstart](/kendo-ui/api/web/treeview#events-dragstart) event documentation.
 
 #### Example
     <kendo:treeView dragstart="handle_dragstart">
@@ -172,11 +231,12 @@ Triggered before the dragging of a node starts.
         }
     </script>
 
-
-
 ### drop `String`
 
 Triggered when a node is being dropped.
+
+
+For additional information check the [drop](/kendo-ui/api/web/treeview#events-drop) event documentation.
 
 #### Example
     <kendo:treeView drop="handle_drop">
@@ -187,11 +247,12 @@ Triggered when a node is being dropped.
         }
     </script>
 
-
-
 ### expand `String`
 
 Triggered before a subgroup gets expanded.
+
+
+For additional information check the [expand](/kendo-ui/api/web/treeview#events-expand) event documentation.
 
 #### Example
     <kendo:treeView expand="handle_expand">
@@ -202,11 +263,28 @@ Triggered before a subgroup gets expanded.
         }
     </script>
 
+### change `String`
 
+Triggered when the selection has changed (either by the user or through the select method).
+
+
+For additional information check the [change](/kendo-ui/api/web/treeview#events-change) event documentation.
+
+#### Example
+    <kendo:treeView change="handle_change">
+    </kendo:treeView>
+    <script>
+        function handle_change(e) {
+            // Code to handle the change event.
+        }
+    </script>
 
 ### select `String`
 
-Triggered when a node gets selected.
+Triggered when a node is being selected by the user. Cancellable.
+
+
+For additional information check the [select](/kendo-ui/api/web/treeview#events-select) event documentation.
 
 #### Example
     <kendo:treeView select="handle_select">
@@ -217,136 +295,30 @@ Triggered when a node gets selected.
         }
     </script>
 
+### navigate `String`
+
+Triggered when the user moves the focus on another node
 
 
-### Event Attributes
-
-
-### collapse `String`
-
-Triggered before a subgroup gets collapsed.
+For additional information check the [navigate](/kendo-ui/api/web/treeview#events-navigate) event documentation.
 
 #### Example
-    <kendo:treeView collapse="handle_collapse">
+    <kendo:treeView navigate="handle_navigate">
     </kendo:treeView>
     <script>
-        function handle_collapse(e) {
-            // Code to handle the collapse event.
+        function handle_navigate(e) {
+            // Code to handle the navigate event.
         }
     </script>
-
-
-
-### dataBound `String`
-
-Triggered after the dataSource change event has been processed (adding/removing items);
-
-#### Example
-    <kendo:treeView dataBound="handle_dataBound">
-    </kendo:treeView>
-    <script>
-        function handle_dataBound(e) {
-            // Code to handle the dataBound event.
-        }
-    </script>
-
-
-
-### drag `String`
-
-Triggered while a node is being dragged.
-
-#### Example
-    <kendo:treeView drag="handle_drag">
-    </kendo:treeView>
-    <script>
-        function handle_drag(e) {
-            // Code to handle the drag event.
-        }
-    </script>
-
-
-
-### dragend `String`
-
-Triggered after a node has been dropped.
-
-#### Example
-    <kendo:treeView dragend="handle_dragend">
-    </kendo:treeView>
-    <script>
-        function handle_dragend(e) {
-            // Code to handle the dragend event.
-        }
-    </script>
-
-
-
-### dragstart `String`
-
-Triggered before the dragging of a node starts.
-
-#### Example
-    <kendo:treeView dragstart="handle_dragstart">
-    </kendo:treeView>
-    <script>
-        function handle_dragstart(e) {
-            // Code to handle the dragstart event.
-        }
-    </script>
-
-
-
-### drop `String`
-
-Triggered when a node is being dropped.
-
-#### Example
-    <kendo:treeView drop="handle_drop">
-    </kendo:treeView>
-    <script>
-        function handle_drop(e) {
-            // Code to handle the drop event.
-        }
-    </script>
-
-
-
-### expand `String`
-
-Triggered before a subgroup gets expanded.
-
-#### Example
-    <kendo:treeView expand="handle_expand">
-    </kendo:treeView>
-    <script>
-        function handle_expand(e) {
-            // Code to handle the expand event.
-        }
-    </script>
-
-
-
-### select `String`
-
-Triggered when a node gets selected.
-
-#### Example
-    <kendo:treeView select="handle_select">
-    </kendo:treeView>
-    <script>
-        function handle_select(e) {
-            // Code to handle the select event.
-        }
-    </script>
-
 
 ## Event Tags
-   
 
 ### kendo:treeView-collapse
 
 Triggered before a subgroup gets collapsed.
+
+
+For additional information check the [collapse](/kendo-ui/api/web/treeview#events-collapse) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -359,11 +331,12 @@ Triggered before a subgroup gets collapsed.
         </kendo:treeView-collapse>
     </kendo:treeView>
 
- 
-
 ### kendo:treeView-dataBound
 
 Triggered after the dataSource change event has been processed (adding/removing items);
+
+
+For additional information check the [dataBound](/kendo-ui/api/web/treeview#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -376,11 +349,12 @@ Triggered after the dataSource change event has been processed (adding/removing 
         </kendo:treeView-dataBound>
     </kendo:treeView>
 
- 
-
 ### kendo:treeView-drag
 
 Triggered while a node is being dragged.
+
+
+For additional information check the [drag](/kendo-ui/api/web/treeview#events-drag) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -393,11 +367,12 @@ Triggered while a node is being dragged.
         </kendo:treeView-drag>
     </kendo:treeView>
 
- 
-
 ### kendo:treeView-dragend
 
 Triggered after a node has been dropped.
+
+
+For additional information check the [dragend](/kendo-ui/api/web/treeview#events-dragend) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -410,11 +385,12 @@ Triggered after a node has been dropped.
         </kendo:treeView-dragend>
     </kendo:treeView>
 
- 
-
 ### kendo:treeView-dragstart
 
 Triggered before the dragging of a node starts.
+
+
+For additional information check the [dragstart](/kendo-ui/api/web/treeview#events-dragstart) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -427,11 +403,12 @@ Triggered before the dragging of a node starts.
         </kendo:treeView-dragstart>
     </kendo:treeView>
 
- 
-
 ### kendo:treeView-drop
 
 Triggered when a node is being dropped.
+
+
+For additional information check the [drop](/kendo-ui/api/web/treeview#events-drop) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -444,11 +421,12 @@ Triggered when a node is being dropped.
         </kendo:treeView-drop>
     </kendo:treeView>
 
- 
-
 ### kendo:treeView-expand
 
 Triggered before a subgroup gets expanded.
+
+
+For additional information check the [expand](/kendo-ui/api/web/treeview#events-expand) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -461,11 +439,30 @@ Triggered before a subgroup gets expanded.
         </kendo:treeView-expand>
     </kendo:treeView>
 
- 
+### kendo:treeView-change
+
+Triggered when the selection has changed (either by the user or through the select method).
+
+
+For additional information check the [change](/kendo-ui/api/web/treeview#events-change) event documentation.
+
+#### Example
+    <kendo:treeView>
+        <kendo:treeView-change>
+            <script>
+                function(e) {
+                    // Code to handle the change event.
+                }
+            </script>
+        </kendo:treeView-change>
+    </kendo:treeView>
 
 ### kendo:treeView-select
 
-Triggered when a node gets selected.
+Triggered when a node is being selected by the user. Cancellable.
+
+
+For additional information check the [select](/kendo-ui/api/web/treeview#events-select) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -478,44 +475,21 @@ Triggered when a node gets selected.
         </kendo:treeView-select>
     </kendo:treeView>
 
- 
+### kendo:treeView-navigate
 
-## Child JSP Tags
+Triggered when the user moves the focus on another node
 
-### kendo:treeView-animation
 
-A collection of visual animations used when items are expanded or collapsed through user interaction.
-Setting this option to
-
-More documentation is available at [kendo:treeView-animation](/api/wrappers/jsp/treeview/animation).
+For additional information check the [navigate](/kendo-ui/api/web/treeview#events-navigate) event documentation.
 
 #### Example
-
     <kendo:treeView>
-        <kendo:treeView-animation></kendo:treeView-animation>
+        <kendo:treeView-navigate>
+            <script>
+                function(e) {
+                    // Code to handle the navigate event.
+                }
+            </script>
+        </kendo:treeView-navigate>
     </kendo:treeView>
- 
-### kendo:treeView-checkboxes
 
-If
-
-More documentation is available at [kendo:treeView-checkboxes](/api/wrappers/jsp/treeview/checkboxes).
-
-#### Example
-
-    <kendo:treeView>
-        <kendo:treeView-checkboxes></kendo:treeView-checkboxes>
-    </kendo:treeView>
- 
-### kendo:treeView-items
-
-Contains items of TreeView
-
-More documentation is available at [kendo:treeView-items](/api/wrappers/jsp/treeview/items).
-
-#### Example
-
-    <kendo:treeView>
-        <kendo:treeView-items></kendo:treeView-items>
-    </kendo:treeView>
-         

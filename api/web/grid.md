@@ -1,1399 +1,6266 @@
 ---
 title: kendo.ui.Grid
-slug: web-kendo.ui.grid
+meta_title: Configuration, methods and events of Kendo UI Grid
+meta_description: Code examples for Grid UI widget configuration, learn how to use methods and which events to set once the grid UI widget detail is initialized and expanded.
+slug: api-web-grid
+relatedDocs: gs-web-grid-overview
 tags: api,web
 publish: true
 ---
 
 # kendo.ui.Grid
 
+Represents the Kendo UI Grid widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
+
 ## Configuration
 
-### altRowTemplate `Function`
+### altRowTemplate `String|Function`
 
-Template to be used for rendering the alternate rows in the grid.
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the alternating table rows. Be default the grid renders a table row (`<tr>`) for every data source item.
 
-#### Example
+> The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
+> Set the `class` of the table row to `k-alt` to get the default "alternating" look and feel.
 
-    //template
-    <script id="altRowTemplate" type="text/x-kendo-tmpl">
-        <tr class="k-alt">
-            <td>
-                <img src="${ BoxArt.SmallUrl }" alt="${ Name }" />
-            </td>
-            <td>
-                ${ Name }
-            </td>
-            <td>
-                ${ AverageRating }
+#### Example - specify alternating row template as a function
+
+    <div id="grid"></div>
+    <script id="alt-template" type="text/x-kendo-template">
+        <tr data-uid="#= uid #">
+            <td colspan="2">
+                <strong>#: name #</strong>
+                <strong>#: age #</strong>
             </td>
         </tr>
     </script>
-
-    //grid intialization
-    <script>PO details informaiton
-        $("#grid").kendoGrid({
-            dataSource: dataSource,
-            altRowTemplate: kendo.template($("#altRowTemplate").html()),
-            height: 200
-        });
+    <script>
+    $("#grid").kendoGrid({
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      altRowTemplate: kendo.template($("#alt-template").html())
+    });
     </script>
 
-### autoBind `Boolean`*(default: true)*
+#### Example - specify alternating row template as a string
 
- Indicates whether the grid will call read on the DataSource initially.
-
-#### Example
-
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: sharedDataSource,
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ],
-         autoBind: false // the grid will not be populated with data until read() is called on the sharedDataSource
-     });
+      dataSource: [ { name: "Jane Doe", age: 30 }, { name: "John Doe", age: 33 } ],
+      altRowTemplate: '<tr data-uid="#= uid #"><td colspan="2"><strong>#: name #</strong><strong>#: age #</strong></td></tr>'
+    });
+    </script>
+
+### autoBind `Boolean` *(default: true)*
+
+If set to `false` the widget will not bind to the data source during initialization. In this case data binding will occur when the [change](/kendo-ui/api/framework/datasource#events-change) event of the
+data source is fired. By default the widget will bind to the data source specified in the configuration.
+
+> Setting `autoBind` to `false` is useful when multiple widgets are bound to the same data source. Disabling automatic binding ensures that the shared data source doesn't make more than one request to the remote service.
+
+#### Example - disable automatic binding
+
+    <div id="grid"></div>
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      data: [ { name: "Jane Doe" }, { name: "John Doe" }]
+    });
+    $("#grid").kendoGrid({
+      autoBind: false,
+      dataSource: dataSource
+    });
+    dataSource.read(); // "read()" will fire the "change" event of the dataSource and the widget will be bound
+    </script>
+
+### columnResizeHandleWidth `Number` *(default: 3)*
+
+Defines the width of the column resize handle in pixels. Apply a larger value for easier grasping.
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columnResizeHandleWidth: 6
+    });
+    </script>
 
 ### columns `Array`
 
-A collection of column objects or collection of strings that represents the name of the fields.
+The configuration of the grid columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
+[field](#configuration-columns.field) to which the column is bound. The grid will create a column for every item of the array.
 
-#### Example
+> If this setting is **not** specified the grid will create a column for every field of the data item.
 
-    var sharedDataSource = new kendo.data.DataSource({
-         data: [{title: "Star Wars: A New Hope", year: 1977}, {title: "Star Wars: The Empire Strikes Back", year: 1980}],
-         pageSize: 1
+#### Example - specify grid columns as array of strings
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: ["name", "age"], // two columns bound to the "name" and "age" fields
+      dataSource: [ { name: "Jane", age: 31 }, { name: "John", age: 33 }]
     });
+    </script>
+
+#### Example - specify grid columns as array of objects
+
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-        dataSource: sharedDataSource,
-        columns: [ { title: "Action", command: "destroy" }, // creates a column with delete buttons
-                   { title: "Title", field: "title", width: 200, template: "<div id='title'>${ title }</div>" },
-                   { title: "Year", field: "year", filterable: false, sortable: true, format: "{0:dd/MMMM/yyyy}" } ]
+      columns: [{
+        field: "name",// create a column bound to the "name" field
+        title: "Name" // set its title to "Name"
+      }, {
+        field: "age",// create a column bound to the "age" field
+        title: "Age" // set its title to "Age"
+      }],
+      dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }]
     });
-
-### columns.attributes `Object`
-
-Definition of column cells' HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
-
-#### Example
-
-    $("#grid").kendoGrid({
-        columns: [
-            {
-                field: "Price",
-                attributes: {
-                    "class": "myClass",
-                    style: "text-align: right"
-                }
-            }
-        ]
-    });
-
-### columns.command `String|Array`
-
-Definition of command column. The supported built-in commands are: "create", "cancel", "save", "destroy".
-
-### columns.command.name `String`
-
-The unique name of the command. The supported built-in commands are: "create", "cancel", "save", "destroy".
-
-### columns.command.text `String`
-
-The text displayed by the command.
-
-### columns.command.className `String`
-
-The CSS class of the command.
-
-### columns.command.click `Function`
-
-The JavaScript function executed when the user clicks the command button.
-
-### columns.editor `Function`
-
-Provides a way to specify custom editor for this column.
-
-#### Example
-
-    $(".k-grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50)
-         },
-         editable: true,
-         columns: [
-             {
-                 field: "Name",
-                 editor: function(container, options) {
-                     // create a KendoUI AutoComplete widget as column editor
-                      $('<input name="' + options.field + '"/>')
-                          .appendTo(container)
-                          .kendoAutoComplete({
-                              dataTextField: "ProductName",
-                              dataSource: {
-                                  transport: {
-                                    //...
-                                  }
-                              }
-                          });
-                 }
-             }
-         ]
-      });
-
-### columns.encoded `Boolean`*(default: true)*
-
- Specified whether the column content is escaped. Disable encoding if the data contains HTML markup.
-
-### columns.field `String`
-
-The field from the datasource that will be displayed in the column.
-
-### columns.filterable `Boolean`*(default: true)*
-
- Specifies whether given column is filterable.
-
-### columns.format `String`
-
-The format that will be applied on the column cells.
-
-#### Example
-
-    $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 format: "{0:dd/MMMM/yyyy}"
-            }
-         ]
-      });
-
-### columns.headerAttributes `Object`
-
-Definition of column header cell's HTML attributes. Reserved words in Javascript should be enclosed in quotation marks.
-
-#### Example
-
-    $("#grid").kendoGrid({
-        columns: [
-            {
-                field: "Price",
-                headerAttributes: {
-                    "class": "myHeader",
-                    style: "text-align: right"
-                }
-            }
-        ]
-    });
-
-### columns.headerTemplate `String`
-
-The template for column's header cell. If sorting is enabled, it will be wrapped in a `<a class="k-link">` element, so the template should consist of only inline elements
-in order to have valid HTML markup in the Grid.
-
-#### Example
-
-    $("#grid").kendoGrid({
-         columns: [
-             {
-                 headerTemplate: '<input type="checkbox" id="checkAll" />'
-            }
-         ]
-      });
-
-### columns.sortable `Boolean`*(default: true)*
-
- Specifies whether given column is sortable.
-
-### columns.template `String`
-
-The template for column's cells.
-
-#### Example
-
-    $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ]
-      });
+    </script>
 
 ### columns.aggregates `Array`
 
-The aggregates to be used when grouping is applied
+The aggregate(s) which are calculated when the grid is grouped by the columns [field](#configuration-columns.field).
+The supported aggregates are "average", "count", "max", "min" and "sum".
 
-#### Example
-
+#### Example - set column aggregates
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "UnitPrice",
-                 aggregates: ["count", "sum"]
+      columns: [
+        { field: "firstName", groupable: false },
+        { field: "lastName" }, /* group by this column to see the footer template */
+        { field: "age",
+          groupable: false,
+          aggregates: [ "count", "min", "max" ],
+          groupFooterTemplate: "age total: #: count #, min: #: min #, max: #: max #"
+        }
+      ],
+      groupable: true,
+      dataSource: {
+        data: [
+          { firstName: "Jane", lastName: "Doe", age: 30 },
+          { firstName: "John", lastName: "Doe", age: 33 }
+        ]
+      }
+    });
+    </script>
+
+> Check [Aggregates](http://demos.telerik.com/kendo-ui/web/grid/aggregates.html) for a live demo.
+
+### columns.attributes `Object`
+
+HTML attributes of the table cell (`<td>`) rendered for the column.
+
+> HTML attributes which are JavaScript keywords (e.g. *class*) must be quoted.
+
+#### Example - specify column HTML attributes
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name",
+        title: "Name",
+        attributes: {
+          "class": "table-cell",
+          style: "text-align: right; font-size: 14px"
+        }
+      } ],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" }]
+    });
+    </script>
+
+The table cells would look like this: `<td class="table-cell" style="text-align: right; font-size: 14px">...</td>`.
+
+### columns.command `String|Array`
+
+The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").
+
+The "edit" built-in command switches the current table row in edit mode.
+
+The "destroy" built-in command removes the data item to which the current table row is bound.
+
+Custom commands are supported by specifying the [click](#configuration-columns.command.click) option.
+
+> The built-in "edit" and "destroy" commands work *only* if editing is enabled via the [editable](#configuration-editable) option. The "edit" command supports "inline" and "popup" editing modes.
+
+#### Example - set command as a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { command: "destroy" } // displays the built-in "destroy" command
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+
+#### Example - set command as array of strings
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { command: ["edit", "destroy"] } // displays the built-in "edit" and "destroy" commands
+      ],
+      editable: "inline",
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+
+#### Example - set command as array of objects
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { command: [
+            {
+             name: "details",
+             click: function(e) {
+                // command button click handler
              }
-         ]
-      });
+            },
+            { name: "destroy" } // built-in "destroy" command
+          ]
+        }
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
+### columns.command.name `String`
 
-### columns.groupHeaderTemplate `String`
+The name of the command. The built-in commands are "edit" and "destroy". Can be set to a custom value.
 
-The template for group header item.
-
-#### Example
-
+#### Example - set the command name
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10,
-             group: { field: "BirthDate" }
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 groupHeaderTemplate: 'Birth Date: #= value #'
-            }
-         ]
-      });
+      columns: [
+        { field: "name" },
+        { command: [{ name: "edit" }] }
+      ],
+      editable: "popup",
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
-### columns.groupFooterTemplate `String`
+### columns.command.text `String`
 
-The template for column's cell in group footer item.
+The text displayed by the command button. If not set the [name](#configuration-columns.command.name) option is used as the button text.
 
-#### Example
-
+#### Example - customize the text of the command
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10,
-             group: { field: "BirthDate" }
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 groupFooterTemplate: 'custom text'
-            }
-         ]
-      });
+      columns: [
+        { field: "name" },
+        { command: [{ name: "destroy", text: "Remove" }] }
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
 
-### columns.footerTemplate `String`
-
-The template for column's cell in footer item.
-
-#### Example
-
+#### Example - customize the "edit", "cancel" and "update" text of the edit command
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 footerTemplate: 'custom footer text'
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: [{ name: "edit",
+                      text: { edit: "Custom edit", cancel: "Custom cancel", update: "Custom update" } }]  }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "inline"
+      }
+    });
+    </script>
+
+### columns.command.className `String`
+
+The CSS class applied to the command button.
+
+#### Example - set the CSS class of the command
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { command: [{ className: "btn-destroy", name: "destroy", text: "Remove" }] }
+      ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+    <style>
+    .btn-destroy {
+        color: red;
+    }
+    </style>
+
+### columns.command.click `Function`
+
+The JavaScript function executed when the user clicks the command button. The function receives a [jQuery Event](http://api.jquery.com/category/events/event-object/) as an argument.
+
+The function context (available via the `this` keyword) will be set to the grid instance.
+
+#### Example - handle the click event of the custom command button
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { command: [ {
+            name: "details",
+            click: function(e) {
+              // e.target is the DOM element representing the button
+              var tr = $(e.target).closest("tr"); // get the current table row (tr)
+              // get the data bound to the current table row
+              var data = this.dataItem(tr);
+              console.log("Details for: " + data.name);
             }
-         ]
-      });
+          } ]
+       }
+      ],
+      dataSource: [ { name: "Jane Doe" } ]
+    });
+    </script>
+
+### columns.editor `Function`
+
+Provides a way to specify a custom editing UI for the column. Use the `container` parameter to create the editing UI.
+
+> The editing UI should contain an element whose `name` HTML attribute is set as the column [field](#configuration-columns.field).
+
+> Validation settings defined in the `model.fields` configuration will **not** be applied automatically. In order the validation to work, **the developer is responsible for attaching the corresponding validation attributes to the editor input**. In case the custom editor is a widget, the developer should [customize the validation warning tooltip position](/kendo-ui/getting-started/framework/validator/overview#customizing-the-tooltip-position) in order to avoid visual issues.
+
+#### Parameters
+
+##### container `jQuery`
+
+The jQuery object representing the container element.
+
+##### options `Object`
+
+##### options.field `String`
+
+The name of the field to which the column is bound.
+
+##### options.format `String`
+
+The format string of the column specified via the [format](#configuration-columns.format) option.
+
+##### options.model `kendo.data.Model`
+
+The model instance to which the current table row is bound.
+
+##### options.values `Array`
+
+Array of values specified via the [values](#configuration-columns.values) option.
+
+#### Example - create a custom column editor using the Kendo UI AutoComplete
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name",
+        editor: function(container, options) {
+         // create an input element
+         var input = $("<input/>");
+         // set its name to the field to which the column is bound ('name' in this case)
+         input.attr("name", options.field);
+         // append it to the container
+         input.appendTo(container);
+         // initialize a Kendo UI AutoComplete
+         input.kendoAutoComplete({
+           dataTextField: "name",
+           dataSource: [
+             { name: "Jane Doe" },
+             { name: "John Doe" }
+           ]
+         });
+        }
+      } ],
+      editable: true,
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+#### Example - create a custom column editor with validation
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "num",
+        editor: function(container, options) {
+         //create input element and add the validation attribute
+         var input = $('<input name="' + options.field + '" required="required" />');
+         //append the editor
+         input.appendTo(container);
+         //enhance the input into NumericTextBox
+         input.kendoNumericTextBox();
+
+         //create tooltipElement element, NOTE: data-for attribute should match editor's name attribute
+         var tooltipElement = $('<span class="k-invalid-msg" data-for="' + options.field + '"></span>');
+         //append the tooltip element
+         tooltipElement.appendTo(container);
+       }
+      } ],
+      editable: true,
+      scrollable: false,
+      dataSource: {
+        data: [ { num: 1 }, { num: 2 } ],
+        schema: {
+          model: {
+            fields: {
+              num: { type: "number", validation: { required: true } }
+            }
+          }
+        }
+      }
+    });
+    </script>
+
+> Check [Editing custom editor](http://demos.telerik.com/kendo-ui/web/grid/editing-custom.html) for a live demo.
+
+### columns.encoded `Boolean` *(default: true)*
+
+If set to `true` the column value will be HTML-encoded before it is displayed. If set to `false` the column value will be displayed as is. By default the column value is HTML-encoded.
+
+#### Example - prevent HTML encoding
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name", encoded: false }
+      ],
+      dataSource: [ { name: "<strong>Jane Doe</strong>" } ]
+    });
+    </script>
+
+
+### columns.field `String`
+
+The field to which the column is bound. The value of this field is displayed by the column during data binding.
+**The field name should be a valid Javascript identifier and should contain no spaces, no special characters, and the first character should be a letter.**
+
+#### Example - specify the column field
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        // create a column bound to the "name" field
+        { field: "name" },
+        // create a column bound to the "age" field
+        { field: "age" }
+      ],
+      dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }]
+    });
+    </script>
+
+### columns.filterable `Boolean|Object` *(default: true)*
+
+If set to `true` a filter menu will be displayed for this column when filtering is enabled. If set to `false` the filter menu will not be displayed. By default a filter menu is displayed
+for all columns when filtering is enabled via the [filterable](#configuration-filterable) option.
+
+Can be set to a JavaScript object which represents the filter menu configuration.
+
+#### Example - disable filtering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name", filterable: false },
+        { field: "age" }
+      ],
+      filterable: true,
+      dataSource: [ { name: "Jane", age: 30 }, { name: "John", age: 33 }]
+    });
+    </script>
+
+### columns.filterable.ui `String|Function`
+
+The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
+
+#### Example - specify the filter UI as a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "date",
+        filterable: {
+          ui: "datetimepicker" // use Kendo UI DateTimePicker
+        }
+      } ],
+      filterable: true,
+      dataSource: [ { date: new Date() }, { date: new Date() } ]
+    });
+    </script>
+
+#### Example - initialize the filter UI
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "date",
+        filterable: {
+          ui: function(element) {
+            element.kendoDateTimePicker(); // initialize a Kendo UI DateTimePicker
+          }
+        }
+      } ],
+        filterable: true,
+        dataSource: [ { date: new Date() }, { date: new Date() } ]
+    });
+    </script>
+
+> Check [Filter menu customization](http://demos.telerik.com/kendo-ui/web/grid/filter-menu-customization.html) for a live demo.
+
+### columns.footerTemplate `String|Function`
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the footer table cell for the column.
+
+The fields which can be used in the template are:
+
+* average - the value of the "average" aggregate (if specified)
+* count - the value of the "count" aggregate (if specified)
+* max - the value of the "max" aggregate (if specified)
+* min - the value of the "min" aggregate (if specified)
+* sum - the value of the "sum" aggregate (if specified)
+
+#### Example - specify column footer template
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age",
+          footerTemplate: "Min: #: min # Max: #: max #"
+        }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        aggregate: [
+            { field: "age", aggregate: "min" },
+            { field: "age", aggregate: "max" }
+        ]
+      }
+    });
+    </script>
+
+### columns.format `String`
+
+The format that is applied to the value before it is displayed. Takes the form "{0:format}" where "format" is a [standard number format](/kendo-ui/api/framework/kendo#standard-number-formats),
+[custom number format](/kendo-ui/api/framework/kendo#custom-number-formats), [standard date format](/kendo-ui/api/framework/kendo#standard-date-formats) or a [custom date format](/kendo-ui/api/framework/kendo#custom-date-formats).
+
+> The [kendo.format](/kendo-ui/api/framework/kendo#methods-format) function is used to format the value.
+
+#### Example - specify the column format string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "date",
+        format: "{0: yyyy-MM-dd HH:mm:ss}"
+      }, {
+        field: "number",
+        format: "{0:c}"
+      } ],
+      filterable: true,
+      dataSource: [ { date: new Date(), number: 3.1415 } ]
+    });
+    </script>
+
+### columns.groupHeaderTemplate `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the group header when the grid is grouped by the column [field](#configuration-columns.field). By default the name of the field
+and the current group value is displayed.
+
+The fields which can be used in the template are:
+
+* value - the current group value
+* average - the value of the "average" aggregate (if specified)
+* count - the value of the "count" aggregate (if specified)
+* max - the value of the "max" aggregate (if specified)
+* min - the value of the "min" aggregate (if specified)
+* sum - the value of the "sum" aggregate (if specified)
+
+#### Example - set the group header template
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age",
+          groupHeaderTemplate: "Age: #= value # total: #= count #"
+        }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 30 }
+        ],
+        group: { field: "age", aggregates: [ { field: "age", aggregate: "count" }] }
+      }
+    });
+
+### columns.groupFooterTemplate `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the group footer when the grid is grouped by the column field. By default the group footer is not displayed.
+
+The fields which can be used in the template are:
+
+* average - the value of the "average" aggregate (if specified)
+* count - the value of the "count" aggregate (if specified)
+* max - the value of the "max" aggregate (if specified)
+* min - the value of the "min" aggregate (if specified)
+* sum - the value of the "sum" aggregate (if specified)
+
+#### Example - set the group header template
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age",
+          groupFooterTemplate: "Total: #= count #"
+        }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 30 }
+        ],
+        group: { field: "age", aggregates: [ { field: "age", aggregate: "count" }] }
+      }
+    });
+
+### columns.headerAttributes `Object`
+
+HTML attributes of the column header. The grid renders a table header cell (`<th>`) for every column. The `headerAttributes` option can be used to set the HTML attributes of that `th`.
+
+> HTML attributes which are JavaScript keywords (e.g. *class*) must be quoted.
+
+#### Example - set the column header HTML attributes
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [{
+        field: "name",
+        headerAttributes: {
+          "class": "table-header-cell",
+          style: "text-align: right; font-size: 14px"
+        }
+      }],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+The table header cell will look like this: `<th class="table-header-cell" style="text-align: right; font-size: 14px">name</th>`.
+
+### columns.headerTemplate `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the column header content. By default the value of the [title](#configuration-columns.title) column option
+is displayed in the column header cell.
+
+> If sorting is enabled, the column header content will be wrapped in a `<a>` element. As a result the template **must** contain only inline elements.
+
+#### Example - column header template as a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name",
+        headerTemplate: '<input type="checkbox" id="check-all" /><label for="check-all">Check All</label>'
+      }],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+### columns.hidden `Boolean` *(default: false)*
+
+If set to `true` the column will not be displayed in the grid. By default all columns are displayed.
+
+#### Example - hide columns
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { hidden: true, field: "id" },
+        { field: "name" }
+      ],
+      dataSource: [ { id: 1, name: "Jane Doe" }, { id: 2, name: "John Doe" } ]
+    });
+    </script>
+
+### columns.locked `Boolean` *(default: false)*
+
+If set to `true` the column will be displayed as locked in the grid.
+
+> Locking feature is supported only when scrolling is enabled. All of the columns should have width set,
+having at least one non locked column with width greater than twice the scrollbar width.
+> Row template and detail features are not supported in combination with column locking.
+
+#### Example - locked columns
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { locked: true, field: "id" },
+        { field: "name" }
+      ],
+      dataSource: [ { id: 1, name: "Jane Doe" }, { id: 2, name: "John Doe" } ]
+    });
+    </script>
+
+### columns.lockable `Boolean` *(default: true)*
+
+If set to `false` the column will remain in the side of the grid into which its own locked configuration placed it.
+
+> This option is meaningful when the grid has columns which are configured with a [locked](#configuration-columns.locked) value. Setting it explicitly to `false` will
+prevent the user from locking or unlocking this column using the user interface.
+
+#### Example - lockable columns
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { locked: true, field: "id", lockable: false },
+        { locked: true, field: "age" },
+        { field: "name" },
+        { field: "city", lockable: false }
+      ],
+      dataSource: [
+          { id: 1, name: "Jane Doe", age: 31, city: "Boston" },
+          { id: 2, name: "John Doe", age: 55, city: "New York" }
+      ]
+    });
+    </script>
+
+### columns.sortable `Boolean|Object` *(default: true)*
+
+If set to `true` the user can click the column header and sort the grid by the column [field](#configuration-columns.field) when sorting is enabled. If set to `false` sorting will
+be disabled for this column. By default all columns are sortable if sorting is enabled via the [sortable](#configuration-sortable) option.
+
+#### Example - disable sorting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { sortable: false, field: "id" },
+        { field: "name" }
+      ],
+      sortable: true,
+      dataSource: [ { id: 1, name: "Jane Doe" }, { id: 2, name: "John Doe" } ]
+    });
+    </script>
+
+### columns.sortable.compare `Function`
+
+A JavaScript function which is used to compare the values - should return -1 if first argument is less than second one, 0 if both are the same or +1 if the second one is greater that then first one.
+
+#### Example - define custom compare function
+
+    <div id="grid"></div>
+    <script>
+        var numbers = {
+            "one"  : 1,
+            "two"  : 2,
+            "three": 3
+        };
+
+        var dataSource = new kendo.data.DataSource({
+            data: [
+                { id: 1, item: "two" },
+                { id: 2, item: "one" },
+                { id: 3, item: "three" }
+            ]
+        });
+
+        $("#grid").kendoGrid({
+            dataSource: dataSource,
+            sortable: true,
+            columns: [{
+                field: "item",
+                sortable: {
+                    compare: function(a, b) {
+                        return numbers[a.item] - numbers[b.item];
+                    }
+                }
+            }]
+        });
+
+    </script>
+
+### columns.template `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the column content. The grid renders table rows (`<tr>`) which represent the data source items.
+Each table row consists of table cells (`<td>`) which represent the grid columns. By default the HTML-encoded value of the [field](#configuration-columns.field) is displayed in the column.
+
+> Use the `template` to customize the way the column displays its value.
+
+#### Example - set the template as a string (wrap the column value in HTML)
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name",
+        template: "<strong>#: name # </strong>"
+      }],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+#### Example - set the template as a function returned by kendo.template
+
+    <div id="grid"></div>
+    <script id="name-template" type="text/x-kendo-template">
+      <strong>#: name #</strong>
+    </script>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name",
+        template: kendo.template($("#name-template").html())
+      }],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+#### Example - set the template as a function which returns a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ {
+        field: "name",
+        template: function(dataItem) {
+          return "<strong>" + kendo.htmlEncode(dataItem.name) + "</strong>";
+        }
+      }],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
 
 ### columns.title `String`
 
-The text that will be displayed in the column header.
+The text that is displayed in the column header cell. If not set the [field](#configuration-columns.field) is used.
 
-### columns.width `String`
+#### Example - set the title of the column
 
-The width of the column.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [ { field: "name", title: "Name" } ],
+      dataSource: [ { name: "Jane Doe" }, { name: "John Doe" } ]
+    });
+    </script>
+
+### columns.width `String|Number`
+
+The width of the column. Numeric values are treated as pixels. **For more important information, please refer to [Column Widths](/kendo-ui/getting-started/web/grid/walkthrough#column-widths)**.
+
+#### Example - set the column width as a string
+     <div id="grid"></div>
+     <script>
+     $("#grid").kendoGrid({
+       columns: [
+         { field: "name", width: "200px" },
+         { field: "age" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ]
+     });
+     </script>
+
+#### Example - set the column width as a number
+     <div id="grid"></div>
+     <script>
+     $("#grid").kendoGrid({
+       columns: [
+         { field: "name", width: 200 },
+         { field: "age" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ]
+     });
+     </script>
+
+### columns.values `Array`
+
+An array of values that will be displayed instead of the bound value. Each item in the array must have a `text` and `value` fields.
+
+> Use the `values` option to display user-friendly text instead of database values.
+
+#### Example - specify column values
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+          { text: "Beverages", value: 1 },
+          { text: "Food", value: 2 }
+        ] }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ]
+    });
+    </script>
+
+This example displays "Beverages" and "Food" in the "category" column instead of "1" and "2".
+
+> Check [ForeignKey column](http://demos.telerik.com/kendo-ui/web/grid/foreignkeycolumn.html) for a live demo.
 
 ### columns.menu `Boolean`
 
-Indicates whether the column should be visible in column menu.
+If set to `true` the column will be visible in the grid column menu. By default the column menu includes all data-bound columns (ones that have their [field](#configuration-columns.field) set).
 
-### columnMenu `Boolean | Object`
-
-Enables column header menu
-
-### columnMenu.sortable `Boolean`
-
-Enable/disable sorting section in column header menu.
-
-### columnMenu.filterable `Boolean`
-
-Enable/disable filter section in column header menu.
-
-### dataSource `kendo.data.DataSource | Object`
-
-Instance of DataSource or Object with DataSource configuration.
-
-#### Example
-
-    var sharedDataSource = new kendo.data.DataSource({
-         data: [{title: "Star Wars: A New Hope", year: 1977}, {title: "Star Wars: The Empire Strikes Back", year: 1980}],
-         pageSize: 1
+#### Example - hide a column from the column menu
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "id", menu: false },
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: true,
+      dataSource: [
+        { id: 1, name: "Jane Doe", age: 30 },
+        { id: 2, name: "John Doe", age: 33 }
+      ]
     });
+    </script>
 
+### columnMenu `Boolean|Object` *(default: false)*
+
+If set to `true` the grid will display the column menu when the user clicks the chevron icon in the column headers. The column menu allows the user to show and hide columns, filter and sort (if filtering and sorting are enabled).
+By default the column menu is not enabled.
+
+Can be set to a JavaScript object which represents the column menu configuration.
+
+#### Example - enable the column menu
+
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: sharedDataSource
-     });
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
 
-#### Example
+> Check [Column menu](http://demos.telerik.com/kendo-ui/web/grid/column-menu.html) for a live demo.
 
+### columnMenu.columns `Boolean` *(default: true)*
+
+If set to `true` the column menu would allow the user to select (show and hide) grid columns. By default the column menu allows column selection.
+
+#### Example - disable column selection
+
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: [{title: "Star Wars: A New Hope", year: 1977}, {title: "Star Wars: The Empire Strikes Back", year: 1980}],
-             pageSize: 1
-         }
-     });
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        columns: false
+      },
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
 
-### detailTemplate `Function`
+### columnMenu.filterable `Boolean` *(default: true)*
 
-Template to be used for rendering the detail rows in the grid.
-See the [**Detail Template**](http://demos.kendoui.com/web/grid/detailtemplate.html) example.
+If set to `true` the column menu would allow the user to filter the grid. By default the column menu allows the user to filter if filtering is enabled via the [filterable](#configuration-filterable).
+
+#### Example - disable column menu filtering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        filterable: false
+      },
+      filterable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.sortable `Boolean` *(default: true)*
+
+If set to `true` the column menu would allow the user to sort the grid by the column field. By default the column menu allows the user to sort if sorting is enabled via the [sortable](#configuration-sortable) option.
+
+> If this option is set to `false` the user could still sort by clicking the column header cell.
+
+#### Example - disable column menu sorting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        sortable: false
+      },
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages `Object`
+
+The text messages displayed in the column menu. Use it to customize or localize the column menu messages.
+
+#### Example - customize column menu messages
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          columns: "Choose columns",
+          filter: "Apply filter",
+          sortAscending: "Sort (asc)",
+          sortDescending: "Sort (desc)"
+        }
+      },
+      sortable: true,
+      filterable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.columns `String` *(default: "Columns")*
+
+The text message displayed for the column selection menu item.
+
+#### Example - set the column selection message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          columns: "Choose columns"
+        }
+      },
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.filter `String` *(default: "Filter")*
+
+The text message displayed for the filter menu item.
+
+#### Example - set the filter message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          filter: "Apply filter",
+        }
+      },
+      filterable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.sortAscending `String` *(default: "Sort Ascending")*
+
+The text message displayed for the menu item which performs ascending sort.
+
+#### Example - set the sort ascending message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          sortAscending: "Sort (asc)",
+        }
+      },
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.sortDescending `String` *(default: "Sort Descending")*
+
+The text message displayed for the menu item which performs descending sort.
+
+#### Example - set the sort descending message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          sortDescending: "Sort (desc)",
+        }
+      },
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.settings `String` *(default: "Column Settings")*
+
+The text message displayed in the menu header (available in mobile mode only).
+
+#### Example - mobile column menu header
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          settings: "Column Options",
+        }
+      },
+      mobile: "phone",
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.done `String` *(default: "Done")*
+
+The text message displayed in the menu header button (available in mobile mode only).
+
+#### Example - mobile column menu header button text
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          done: "Ok",
+        }
+      },
+      mobile: "phone",
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.lock `String` *(default: "Lock")*
+
+The text message displayed in the column menu for locking a column.
+
+#### Example - column menu lock button text
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name", lockable: true },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          lock: "Pin this column"
+        }
+      },
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### columnMenu.messages.unlock `String` *(default: "Unlock")*
+
+The text message displayed in the column menu for unlocking a column.
+
+#### Example - column menu unlock button text
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name", lockable: true },
+        { field: "age" }
+      ],
+      columnMenu: {
+        messages: {
+          unlock: "Unpin this column"
+        }
+      },
+      sortable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### dataSource `Object|Array|kendo.data.DataSource`
+
+The data source of the widget which is used render table rows. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.DataSource](/kendo-ui/api/framework/datasource)
+instance.
+
+If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.DataSource](/kendo-ui/api/framework/datasource) instance using that value as data source configuration.
+
+If the `dataSource` option is an existing [kendo.data.DataSource](/kendo-ui/api/framework/datasource) instance the widget will use that instance and will **not** initialize a new one.
+
+#### Example - set dataSource as a JavaScript object
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ]
+      }
+    });
+    </script>
+
+#### Example - set dataSource as a JavaScript array
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+#### Example - set dataSource as an existing kendo.data.DataSource instance
+
+    <div id="grid"></div>
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.telerik.com/kendo-ui/service/products",
+          dataType: "jsonp"
+        }
+      },
+      pageSize: 10
+    });
+    $("#grid").kendoGrid({
+      dataSource: dataSource,
+      pageable: true
+    });
+    </script>
+
+> Check [Binding to local data](http://demos.telerik.com/kendo-ui/web/grid/local-data.html) and [Binding to remote data](http://demos.telerik.com/kendo-ui/web/grid/remote-data.html) for live demos.
+
+### detailTemplate `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the detail rows.
+
+
+#### Example - specify detail template as a function
+    <script id="detail-template">
+      <div>
+        Name: #: name #
+      </div>
+      <div>
+        Age: #: age #
+      </div>
+    </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: kendo.template($("#detail-template").html())
+    });
+    </script>
+
+#### Example - specify detail template as a string
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    </script>
+
+> The detail template content cannot be wider than the total width of all master columns, unless the detail template is scrollable.
+Check [Detail Template](http://demos.telerik.com/kendo-ui/web/grid/detailtemplate.html) for a live demo.
 
 ### editable `Boolean|Object` *(default: false)*
 
-Indicates whether editing is enabled/disabled.
+If set to `true` the user would be able to edit the data to which the grid is bound to. By default editing is disabled.
 
-#### Example
+Can be set to a string ("inline", "incell" or "popup") to specify the editing mode. The default editing mode is "incell".
 
+Can be set to a JavaScript object which represents the editing configuration.
+
+> The "inline" and "popup" editing modes are triggered by the "edit" column command. Thus it is required to have a column with an "edit" command.
+
+#### Example - enable editing
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ]
-         toolbar: [
-             "create",
-             { name: "save", text: "Save This Record" },
-             { name: "cancel", template: "<img src="icons/cancel.png' rel='cancel' />" }
-         ],
-         editable: {
-             update: true, // puts the row in edit mode when it is clicked
-             destroy: false, // does not remove the row when it is deleted, but marks it for deletion
-             confirmation: "Are you sure you want to remove this item?"
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      editable: true
+    });
+    </script>
+
+#### Example - enable popup editing
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      editable: "popup"
+    });
+    </script>
+
+> Check [Batch editing](http://demos.telerik.com/kendo-ui/web/grid/editing.html), [Inline editing](http://demos.telerik.com/kendo-ui/web/grid/editing-inline.html) and [Popup editing](http://demos.telerik.com/kendo-ui/web/grid/editing-popup.html) for live demos.
+
+### editable.confirmation `Boolean|String|Function` *(default: true)*
+
+If set to `true` the grid will display a confirmation dialog when the user clicks the "destroy" command button.
+
+Can be set to a string which will be used as the confirmation text.
+
+Can be set to a function which will be called, passing the model instance, to return the confirmation text.
+
+#### Example - disable delete confirmation
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       editable: {
+         confirmation: false
+       }
+    });
+    </script>
+
+#### Example - set delete confirmation text
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       editable: {
+         confirmation: "Are you sure that you want to delete this record?"
+       }
+    });
+    </script>
+
+#### Example - set delete confirmation as function
+   <div id="grid"></div>
+   <script>
+     $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       editable: {
+         confirmation: function(e) {
+           return "Are you sure that you want to delete the record for " + e.name + "?";
          }
+       }
      });
+   </script>
 
-### editable.confirmation `Boolean | String`
+### editable.cancelDelete `String` *(default: "Cancel")*
 
-Defines the text that will be used in confirmation box when delete an item.
+If confirmation is enabled the grid will display a confirmation dialog when the user clicks the "destroy" command button.
+If the grid is in mobile mode this text will be used for the cancel button.
 
-### editable.destroy `Boolean`
-
-Indicates whether item should be deleted when click on delete button.
-
-### editable.mode `String`
-
-Indicates which of the available edit modes(incell(default)/inline/popup) will be used
-
-### editable.template `String`
-
-Template which will be use during popup editing
-
-### editable.update `Boolean`
-
-Indicates whether item should be switched to edit mode on click.
-
-### filterable `Boolean`*(default: false)*
-
- Indicates whether filtering is enabled/disabled.
-
-### reorderable `Boolean`*(default:false)*
-
- Indicates whether column reordering is enabled/disable.
-
-### resizable `Boolean`*(default:false)*
-
- Indicates whether column resizing is enabled/disable.
-
-### groupable `Boolean | Object`*(default: false)*
-
- Indicates whether grouping is enabled/disabled.
-
-#### Example
-
+#### Example - change the cancel delete button text
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         filterable: true
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       mobile: "phone",
+       editable: {
+         confirmation: true,
+         cancelDelete: "No"
+       }
     });
+    </script>
 
-#### Example
+### editable.confirmDelete `String` *(default: "Delete")*
+
+If confirmation is enabled the grid will display a confirmation dialog when the user clicks the "destroy" command button.
+If the grid is in mobile mode this text will be used for the confirm button.
+
+#### Example - change the cofirm delete button text
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       mobile: "phone",
+       editable: {
+         confirmation: true,
+         confirmDelete: "Yes"
+       }
+    });
+    </script>
+
+### editable.createAt `String` *(default: "top")*
+
+The position at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
+
+#### Example - insert new data items at the bottom
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      editable: {
+        createAt: "bottom"
+      },
+      toolbar: ["create"]
+    });
+    </script>
+
+### editable.destroy `Boolean` *(default: true)*
+
+If set to `true` the user can delete data items from the grid by clicking the "destroy" command button. Deleting is enabled by default.
+
+#### Example - disable deleting
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      editable: {
+        destroy: false
+      },
+      toolbar: ["create"]
+    });
+    </script>
+
+### editable.mode `String` *(default: "incell")*
+
+The editing mode to use. The supported editing modes are "incell", "inline" and "popup".
+
+> The "inline" and "popup" editing modes are triggered by the "edit" column command. Thus it is required to have a column with an "edit" command.
+
+#### Example - specify inline editing mode
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "inline"
+      }
+    });
+    </script>
+
+### editable.template `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders popup editor.
+
+The template should contain elements whose `name` HTML attributes are set as the editable fields. This is how the grid will know
+which field to update. The other option is to use [MVVM](/kendo-ui/getting-started/framework/mvvm/overview) bindings in order to bind HTML elements to data item fields.
+
+> Use the `role` data attribute to initialize Kendo UI widgets in the template. Check [data attribute initialization](/kendo-ui/getting-started/data-attribute-initialization) for more info.
+
+#### Example - customize the popup editor
+
+    <script id="popup-editor" type="text/x-kendo-template">
+      <h3>Edit Person</h3>
+      <p>
+        <label>Name:<input name="name" /></label>
+      </p>
+      <p>
+        <label>Age: <input data-role="numerictextbox" name="age" /></label>
+      </p>
+    </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "popup",
+        template: kendo.template($("#popup-editor").html())
+      }
+    });
+    </script>
+
+#### Example - using MVVM in the popup editor template
+
+    <script id="popup-editor" type="text/x-kendo-template">
+      <h3>Edit Person</h3>
+      <p>
+        <label>Name:<input data-bind="value: name" /></label>
+      </p>
+      <p>
+        <label>Age:<input data-role="numerictextbox" data-bind="value:age" /></label>
+      </p>
+    </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: {
+        mode: "popup",
+        template: kendo.template($("#popup-editor").html())
+      }
+    });
+    </script>
+
+### editable.update `Boolean` *(default: true)*
+
+If set to `true` the user can edit data items when editing is enabled.
+
+#### Example - enable only deleting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+      ],
+      editable: {
+        mode: "incell",
+        update: false
+      }
+    });
+    </script>
+
+### editable.window `Object`
+
+Configures the Kendo UI Window instance, which is used when the Grid edit mode is `"popup"`. The configuration is optional.
+
+For more information, please refer to the [Window configuration API](/kendo-ui/api/web/window).
+
+#### Example - Grid popup Window configuration
+
+    <div id="grid"></div>
+    <script>
+
+    function myOpenEventHandler(e) {
+        // ...
+    }
 
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
+      editable: {
+        mode: "popup",
+        window: {
+            title: "My Custom Title",
+            animation: false,
+            open: myOpenEventHandler
+        }
+      }
+    });
+    </script>
+
+### filterable `Boolean|Object` *(default: false)*
+
+If set to `true` the user can filter the data source using the grid filter menu. Filtering is disabled by default.
+
+Can be set to a JavaScript object which represents the filter menu configuration.
+
+#### Example - enable the filtering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      filterable: true,
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### filterable.extra `Boolean` *(default: true)*
+
+If set to `true` the filter menu allows the user to input a second criteria.
+
+#### Example - disable the extra filtering criteria
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      filterable: {
+        extra: false
+      },
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+### filterable.messages `Object`
+
+The text messages displayed in the filter menu. Use it to customize or localize the filter menu messages.
+
+#### Example - customize filter menu messages
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          and: "and",
+          or: "or",
+          filter: "Apply filter",
+          clear: "Clear filter"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.and `String` *(default: "And")*
+
+The text of the option which represents the "and" logical operation.
+
+#### Example - set the "and" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          and: "and"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.clear `String` *(default: "Clear")*
+
+The text of the button which clears the filter.
+
+#### Example - set the "clear" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          clear: "Clear filter"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.filter `String` *(default: "Filter")*
+
+The text of the button which applies the filter.
+
+#### Example - set the "filter" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          filter: "Apply filter"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.info `String` *(default: "Show items with value that: ")*
+
+The text of the information message on the top of the filter menu.
+
+#### Example - set the "info" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          info: "Filter by: "
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.isFalse `String` *(default: "is false")*
+
+The text of the radio button for `false` values. Displayed when filtering `Boolean` fields.
+
+#### Example - set the "isFalse" message
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "active" }
+      ],
+      dataSource: {
+        data: [
+          { active: true },
+          { active: false }
+        ],
+        schema: {
+          model: {
+            fields: {
+              active: { type: "boolean" }
             }
-         ],
-         groupable: true
+          }
+        }
+      },
+      filterable: {
+        messages: {
+          isFalse: "False"
+        }
+      }
     });
+    </script>
+
+### filterable.messages.isTrue `String` *(default: "is true")*
+
+The text of the radio button for `true` values. Displayed when filtering `Boolean` fields.
+
+#### Example - set the "isTrue" message
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "active" }
+      ],
+      dataSource: {
+        data: [
+          { active: true },
+          { active: false }
+        ],
+        schema: {
+          model: {
+            fields: {
+              active: { type: "boolean" }
+            }
+          }
+        }
+      },
+      filterable: {
+        messages: {
+          isTrue: "True"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.or `String` *(default: "Or")*
+
+The text of the option which represents the "or" logical operation.
+
+#### Example - set the "or" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      filterable: {
+        messages: {
+          or: "or"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.selectValue `String` *(default: "-Select value-")*
+
+The text of the dropdownlist displayed in the filter menu for columns whose [values](#configuration-columns.values) option is set.
+
+#### Example - set the "selectValue" message
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            { text: "Beverages", value: 1 },
+            { text: "Food", value: 2 },
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      filterable: {
+        messages: {
+          selectValue: "Select category"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.cancel `String` *(default: "Cancel")*
+
+The text of the cancel button in the filter menu header (available in mobile mode only).
+
+#### Example - set the cancel button text
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            { text: "Beverages", value: 1 },
+            { text: "Food", value: 2 },
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      mobile: "phone",
+      filterable: {
+        messages: {
+          cancel: "Reject"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.operator `String` *(default: "Operator")*
+
+The text of the operator item in filter menu (available in mobile mode only).
+
+#### Example - set the text of operator item
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            { text: "Beverages", value: 1 },
+            { text: "Food", value: 2 },
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      mobile: "phone",
+      filterable: {
+        messages: {
+          operator: "Choose operator"
+        }
+      }
+    });
+    </script>
+
+### filterable.messages.value `String` *(default: "Value")*
+
+The text of the value item in filter menu (available in mobile mode only).
+
+#### Example - set the text of value item
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            { text: "Beverages", value: 1 },
+            { text: "Food", value: 2 },
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      mobile: "phone",
+      filterable: {
+        messages: {
+          value: "Choose value"
+        }
+      }
+    });
+    </script>
+
+### filterable.operators `Object`
+
+The text of the filter operators displayed in the filter menu.
+
+### filterable.operators.string `Object`
+
+The texts of the filter operators displayed for columns bound to string fields.
+
+> Omitting an operator will exclude it from the dropdown list with the available operators.
+
+#### Example - set string operators
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            eq: "Equal to",
+            neq: "Not equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+In this example only two operators would be displayed in the dropdown list - "Equal to" and "Not equal to".
+
+### filterable.operators.string.eq `String` *(default: "Is equal to")*
+
+The text of the "equal" filter operator.
+
+#### Example - set the string "equal" operator
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            eq: "Equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.string.neq `String` *(default: "Is not equal to")*
+
+The text of the "not equal" filter operator.
+
+#### Example - set the string "not equal" operator
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            neq: "Not equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.string.startswith `String` *(default: "Starts with")*
+
+The text of the "starts with" filter operator.
+
+#### Example - set the string "starts with" operator
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            startswith: "Starts"
+          }
+        }
+      }
+    });
+    </script>
+
+
+### filterable.operators.string.contains `String` *(default: "Contains")*
+
+The text of the "contains" filter operator.
+
+#### Example - set the string "contains" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            contains: "Contains"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.string.doesnotcontain `String` *(default: "Does not contain")*
+
+The text of the "does not contain" filter operator.
+
+#### Example - set the string "does not contain" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            doesnotcontain: "Doesn't contain"
+          }
+        }
+      }
+    });
+    </script>
+
+
+### filterable.operators.string.endswith `String` *(default: "Ends with")*
+
+The text of the "ends with" filter operator.
+
+#### Example - set the string "ends with" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe" },
+        { name: "John Doe" }
+      ],
+      filterable: {
+        operators: {
+          string: {
+            endswith: "Ends"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.number `Object`
+
+The texts of the filter operators displayed for columns bound to number fields.
+
+> Omitting an operator will exclude it from the dropdown list with the available operators.
+
+#### Example - set number operators
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            eq: "Equal to",
+            neq: "Not equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+In this example only two operators would be displayed in the dropdown list - "Equal to" and "Not equal to".
+
+### filterable.operators.number.eq `String` *(default: "Is equal to")*
+
+The text of the "equal" filter operator.
+
+#### Example - set the number "equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            eq: "Equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+
+### filterable.operators.number.neq `String` *(default: "Is not equal to")*
+
+The text of the "not equal" filter operator.
+
+#### Example - set the number "not equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            neq: "Not equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.number.gte `String` *(default: "Is greater than or equal to")*
+
+The text of the "greater than or equal" filter operator.
+
+#### Example - set the number "greater than or equal to" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            gte: "Greater than or equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.number.gt `String` *(default: "Is greater than")*
+
+The text of the "greater than" filter operator.
+
+#### Example - set the number "greater than" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            gt: "Greater than"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.number.lte `String` *(default: "Is less than or equal to")*
+
+The text of the "less than or equal" filter operator.
+
+#### Example - set the number "less than or equal to" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            lte: "Less than or equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.number.lt `String` *(default: "Is less than")*
+
+The text of the "less than" filter operator.
+
+#### Example - set the number "less than" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            fields: {
+              age: { type: "number" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          number: {
+            lt: "Less than"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.date `Object`
+
+The texts of the filter operators displayed for columns bound to date fields.
+
+> Omitting an operator will exclude it from the dropdown list with the available operators.
+
+#### Example - set date operators
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            gt: "After",
+            lt: "Before"
+          }
+        }
+      }
+    });
+    </script>
+
+In this example only two operators would be displayed in the dropdown list - "Equal to" and "Not equal to".
+
+### filterable.operators.date.eq `String` *(default: "Is equal to")*
+
+The text of the "equal" filter operator.
+
+#### Example - set the date "equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            eq: "Equal"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.date.neq `String` *(default: "Is not equal to")*
+
+The text of the "not equal" filter operator.
+
+#### Example - set the date "not equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            neq: "Not equal"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.date.gte `String` *(default: "Is after or equal to")*
+
+The text of the "greater than or equal" filter operator.
+
+#### Example - set the date "greater than or equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            gte: "After or equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.date.gt `String` *(default: "Is after")*
+
+The text of the "greater than" filter operator.
+
+#### Example - set the date "greater than" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            gt: "After"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.date.lte `String` *(default: "Is before or equal to")*
+
+The text of the "less than or equal" filter operator.
+
+#### Example - set the date "less than or equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            lte: "Before or equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.date.lt `String` *(default: "Is before")*
+
+The text of the "less than" filter operator.
+
+#### Example - set the date "less than" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "date", format: "{0:yyyy-MM-dd}" }
+      ],
+      dataSource: {
+        data: [
+          { date: kendo.parseDate("2000-10-10") },
+          { date: new Date() }
+        ],
+        schema: {
+          model: {
+            fields: {
+              date: { type: "date" }
+            }
+          }
+        }
+      },
+      filterable: {
+        operators: {
+          date: {
+            lt: "Before"
+          }
+        }
+      }
+    });
+    </script>
+
+
+### filterable.operators.enums `Object`
+
+The texts of the filter operators displayed for columns which have their [values](#configuration-columns.values) option set.
+
+> Omitting an operator will exclude it from the dropdown list with the available operators.
+
+#### Example - set enum operators
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            {text: "Beverages", value: 1 },
+            {text: "Food", value: 2 }
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      filterable: {
+        operators: {
+          enums: {
+            eq: "Equal to",
+            neq: "Not equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.enums.eq `String` *(default: "Is equal to")*
+
+The text of the "equal" filter operator.
+
+#### Example - set the enum "equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            {text: "Beverages", value: 1 },
+            {text: "Food", value: 2 }
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      filterable: {
+        operators: {
+          enums: {
+            eq: "Equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### filterable.operators.enums.neq `String` *(default: "Is not equal to")*
+
+The text of the "not equal" filter operator.
+
+#### Example - set the enum "not equal" operator
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category", values: [
+            {text: "Beverages", value: 1 },
+            {text: "Food", value: 2 }
+          ]
+        }
+      ],
+      dataSource: [
+        { productName: "Tea", category: 1 },
+        { productName: "Ham", category: 2 }
+      ],
+      filterable: {
+        operators: {
+          enums: {
+            neq: "Not equal to"
+          }
+        }
+      }
+    });
+    </script>
+
+### groupable `Boolean|Object` *(default: false)*
+
+If set to `true` the user could group the grid by dragging the column header cells. By default grouping is disabled.
+
+Can be set to a JavaScript object which represents the grouping configuration.
+
+#### Example - enable grouping
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      groupable: true
+    });
+    </script>
+
+> Check [Basic usage](http://demos.telerik.com/kendo-ui/web/grid/index.html) for a live demo.
 
 ### groupable.messages `Object`
 
- Sets the messages displayed during grouping.
+The text messages displayed during grouping.
 
-### groupable.messages.empty `String`
+### groupable.messages.empty `String` *(default: "Drag a column header and drop it here to group by that column")*
 
- Sets the text of the empty grouping area message
+The text displayed in the grouping drop area.
 
-#### Example
-
+#### Example - set the "empty" grouping message
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-        groupable: {
-            messages: {
-                empty: "Custom message text"
-            }
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      groupable: {
+        messages: {
+          empty: "Drop columns here"
         }
+      }
     });
+    </script>
 
 ### height `Number|String`
 
- Sets the height of the grid.
+The height of the grid. Numeric values are treated as pixels.
 
-### navigatable `Boolean`*(default: false)*
+#### Example - set the height as a number
 
- Indicates whether keyboard navigation is enabled/disabled.
-
-#### Example
-
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ],
-         navigatable: true
-     });
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      height: 100
+    });
+    </script>
 
-### pageable `Boolean | Object`*(default: false)*
+#### Example - set the height as a string
 
- Indicates whether paging is enabled/disabled.
-
-#### Example
-
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ],
-         pageable: true
-     });
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      height: "10em"
+    });
+    </script>
+
+### navigatable `Boolean` *(default: false)*
+
+If set to `true` the use could navigate the widget using the keyboard navigation. By default keyboard navigation is disabled.
+
+#### Example - enable keyboard navigation
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      navigatable: true,
+      selectable: true
+    });
+    </script>
+
+> Check [Keyboard navigation](http://demos.telerik.com/kendo-ui/web/grid/navigation.html) for a live demo.
+
+### pageable `Boolean|Object` *(default: false)*
+
+If set to `true` the grid will display a pager. By default paging is disabled.
+
+Can be set to a JavaScript object which represents the pager configuration.
+
+#### Example - enable paging
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2
+      }
+    });
+    </script>
 
 ### pageable.pageSize `Number`
 
-  Defines the number of records which will be displyed.
+The number of data items which will be displayed in the grid.
 
-### pageable.previousNext `Boolean`*(default: true)*
+#### Example - set page size
 
-  Defines if buttons for navigating to the first, last, previous and next pages will be shown.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2
+      }
+    });
+    </script>
 
-### pageable.numeric `Boolean`*(default: true)*
+### pageable.previousNext `Boolean` *(default: true)*
 
-  Defines if numeric portion of the pager will be shown.
+If set to `true` the pager will display buttons for going to the first, previous, next and last pages. By default those buttons are displayed.
 
-### pageable.buttonCount `Number`*(default: 10)*
+#### Example - hide the first, previous, next, and last buttons
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        previousNext: false
+      }
+    });
+    </script>
 
-  Defines the number of buttons displayed in the numeric pager.
+### pageable.numeric `Boolean` *(default: true)*
 
-### pageable.input `Boolean`*(default: false)*
+If set to `true` the pager will display buttons for navigating to specific pages. By default those buttons are displayed.
 
-  Defines if an input element which allows the user to navigate to given page will be displayed.
+#### Example - hide the numeric pager buttons
 
-### pageable.pageSizes `Boolean | Array`*(default: false | [5,10,20])*
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        numeric: false
+      }
+    });
+    </script>
 
-  Displayes a list with predefined page sizes. An array of values to be displayed can be provided.
+### pageable.buttonCount `Number` *(default: 10)*
 
-### pageable.refresh `Boolean`*(default: false)*
+The maximum number of buttons displayed in the numeric pager. The pager will display ellipsis (...) if there are more pages than the specified number.
 
-  Defines if a refresh button will be displayed.
+#### Example - set pager button count
 
-### pageable.info `Boolean`*(default: true)*
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        buttonCount: 1
+      }
+    });
+    </script>
 
-  Defines if a label showing current paging information will be displayed.
+### pageable.input `Boolean` *(default: false)*
+
+If set to `true` the pager will display an input element which allows the user to type a specific page number. By default the page input is not displayed.
+
+#### Example - show the pager input
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        input: true
+      }
+    });
+    </script>
+
+### pageable.pageSizes `Boolean|Array` *(default: false)*
+
+If set to `true` the pager will display a dropdown list which allows the user to pick a page size. By default the page size dropdown list is not displayed.
+
+Can be set to an array with the available page sizes.
+
+#### Example - show the page size dropdown
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        pageSizes: true
+      }
+    });
+    </script>
+
+#### Example - specify the page sizes as array
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        pageSizes: [2, 3, 4]
+      }
+    });
+    </script>
+
+### pageable.refresh `Boolean` *(default: false)*
+
+If set to `true` the pager will display the refresh button. Clicking the refresh button will refresh the grid. By default the refresh button is not displayed.
+
+#### Example - show the refresh button
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        refresh: true
+      }
+    });
+    </script>
+
+### pageable.info `Boolean` *(default: true)*
+
+If set to `true` the pager will display information about the current page and total number of data items. By default the paging information is displayed.
+
+##### Example - hide the paging information
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        info: false
+      }
+    });
+    </script>
 
 ### pageable.messages `Object`
 
-  Defines texts shown within the pager.
+The text messages displayed in pager. Use this option to customize or localize the pager messages.
 
-### pageable.messages.display `String`*(default: "{0} - {1} of {2} items")*,
+### pageable.messages.display `String` *(default: "{0} - {1} of {2} items")*,
 
-  Defines the info text.
+The pager info text. Uses [kendo.format](/kendo-ui/api/framework/kendo#methods-format).
 
-### pageable.messages.empty `String`*(default: "No items to display")*,
+Contains three placeholders:
+- {0} - the first data item index
+- {1} - the last data item index
+- {2} - the total number of data items
 
-  Defines the info text shown when there are no records to be displayed.
+#### Example - set the "display" pager message
 
-### pageable.messages.page `String`*(default: "Page")*,
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        messages: {
+          display: "Showing {0}-{1} from {2} data items"
+        }
+      }
+    });
+    </script>
 
-  Defines the first part of the text of the input option.
+### pageable.messages.empty `String` *(default: "No items to display")*,
 
-### pageable.messages.of `String`*(default: "of {0}")*,
+The text displayed when the grid is empty.
 
-  Defines the last part of the text of the input option.
+#### Example - set the "empty" pager message
 
-### pageable.messages.itemsPerPage `String`*(default: "items per page")*,
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+      ],
+      pageable: {
+        pageSize: 2,
+        messages: {
+          empty: "No data"
+        }
+      }
+    });
+    </script>
 
-  Defines the text displayed after the select element of the pageSizes mode.
+### pageable.messages.page `String` *(default: "Page")*,
 
-### pageable.messages.first `String`*(default: "Go to the first page")*,
+The label displayed before the pager input.
 
-  Defines the text of the first page button tooltip.
+#### Example - set the label before the pager input
 
-### pageable.messages.previous `String`*(default: "Go to the previous page")*,
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        input: true,
+        messages: {
+          page: "Enter page"
+        }
+      }
+    });
+    </script>
 
-  Defines the text of the previous page button tooltip.
+### pageable.messages.of `String` *(default: "of {0}")*,
 
-### pageable.messages.next `String`*(default: "Go to the next page")*,
+The label displayed before the pager input. Uses [kendo.format](/kendo-ui/api/framework/kendo#methods-format). Contains one optional placeholder {0} which represents the total number of pages.
 
-  Defines the text of the next page button tooltip.
+#### Example - set the label after the pager input
 
-### pageable.messages.last `String`*(default: "Go to the last page")*,
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        input: true,
+        messages: {
+          of: "from {0}"
+        }
+      }
+    });
+    </script>
 
-  Defines the text of the last page button tooltip.
+### pageable.messages.itemsPerPage `String` *(default: "items per page")*,
 
-### pageable.messages.refresh `String`*(default: "Refresh")*,
+The label displayed after the page size dropdown list.
 
-  Defines the text of the refresh button tooltip.
+#### Example - set the label after the page size dropdown list
 
-### rowTemplate `Function`
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        pageSizes: true,
+        messages: {
+          itemsPerPage: "data items per page"
+        }
+      }
+    });
+    </script>
 
-Template to be used for rendering the rows in the grid.
+### pageable.messages.first `String` *(default: "Go to the first page")*,
 
-#### Example
+The tooltip of the button which goes to the first page.
 
-    //template
-     <script id="rowTemplate" type="text/x-kendo-tmpl">
-         <tr>
-             <td>
-                 <img src="${ BoxArt.SmallUrl }" alt="${ Name }" />
-             </td>
-             <td>
-                 ${ Name }
-             </td>
-             <td>
-                 ${ AverageRating }
-             </td>
-         </tr>
-     </script>
+#### Example - set the tooltip of the first page button
 
-     //grid intialization
-     <script>PO details informaiton
-         $("#grid").kendoGrid({
-             dataSource: dataSource,
-             rowTemplate: kendo.template($("#rowTemplate").html()),
-             height: 200
-         });
-     </script>
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        messages: {
+          first: "First page"
+        }
+      }
+    });
+    </script>
 
-### scrollable `Boolean | Object`*(default: true)*
+### pageable.messages.last `String` *(default: "Go to the last page")*,
 
- Enable/disable grid scrolling.
+The tooltip of the button which goes to the last page.
+
+#### Example - set the tooltip of the last page button
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        messages: {
+          last: "Last page"
+        }
+      }
+    });
+    </script>
+
+### pageable.messages.next `String` *(default: "Go to the next page")*,
+
+The tooltip of the button which goes to the next page.
+
+#### Example - set the tooltip of the next page button
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        messages: {
+          next: "Next page"
+        }
+      }
+    });
+    </script>
+
+### pageable.messages.previous `String` *(default: "Go to the previous page")*,
+
+The tooltip of the button which goes to the previous page.
+
+#### Example - set the tooltip of the previous page button
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        messages: {
+          previous: "Previous page"
+        }
+      }
+    });
+    </script>
+
+### pageable.messages.refresh `String` *(default: "Refresh")*,
+
+The tooltip of the refresh button.
+
+#### Example - set the tooltip of the refresh button
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 2,
+        refresh: true,
+        messages: {
+          refresh: "Refresh the grid"
+        }
+      }
+    });
+    </script>
+
+### pageable.messages.morePages `String` *(default: "More pages")*,
+
+The tooltip of the ellipsis ("...") button, which appears when the number of pages is greater than the buttonCount.
+
+#### Example - set the tooltip of the ellipsis button
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: [
+        { productName: "Tea", category: "Beverages" },
+        { productName: "Coffee", category: "Beverages" },
+        { productName: "Ham", category: "Food" },
+        { productName: "Bread", category: "Food" }
+      ],
+      pageable: {
+        pageSize: 1,
+        buttonCount: 2,
+        refresh: true,
+        messages: {
+          morePages: "More pages"
+        }
+      }
+    });
+    </script>
+
+### reorderable `Boolean` *(default:false)*
+
+If set to `true` the user could reorder the columns by dragging their header cells. By default reordering is disabled.
+
+#### Example - enable column reordering
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      reorderable: true
+    });
+    </script>
+
+> Check [Column reordering](http://demos.telerik.com/kendo-ui/web/grid/column-reordering.html) for a live demo.
+
+### resizable `Boolean` *(default:false)*
+
+If set to `true` the user could resize the columns by dragging the edges of their header cells. By default resizing is disabled.
+
+#### Example - enable column resizing
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      resizable: true
+    });
+    </script>
+
+> Check [Column resizing](http://demos.telerik.com/kendo-ui/web/grid/column-resizing.html) for a live demo.
+
+### rowTemplate `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders rows. Be default renders a table row (`<tr>`) for every data source item.
+
+> The outermost HTML element in the template must be a table row (`<tr>`). That table row must have the `uid` data attribute set to `#= uid #`. The grid uses the `uid` data attribute to determine the data to which a table row is bound to.
+
+#### Example - specify row template as a function
+
+    <div id="grid"></div>
+    <script id="template" type="text/x-kendo-template">
+        <tr data-uid="#= uid #">
+            <td colspan="2">
+                <strong>#: name #</strong>
+                <strong>#: age #</strong>
+            </td>
+        </tr>
+    </script>
+    <script>
+    $("#grid").kendoGrid({
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      rowTemplate: kendo.template($("#template").html())
+    });
+    </script>
+
+#### Example - specify row template as a string
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      dataSource: [ { name: "Jane Doe", age: 30 }, { name: "John Doe", age: 33 } ],
+      rowTemplate: '<tr data-uid="#= uid #"><td colspan="2"><strong>#: name #</strong><strong>#: age #</strong></td></tr>'
+    });
+    </script>
+
+> Check [Row template](http://demos.telerik.com/kendo-ui/web/grid/rowtemplate.html) for a live demo.
+
+### scrollable `Boolean|Object` *(default: true)*
+
+If set to `true` the grid will display a scrollbar when the total row height (or width) exceeds the grid height (or width). By default scrolling is enabled.
+
+Can be set to a JavaScript object which represents the scrolling configuration.
+
+#### Example - disable scrolling
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      scrollable: false
+    });
+    </script>
 
 ### scrollable.virtual `Boolean` *(default: false)*
 
- Enable/disable virtual scrolling. When enabled the grid will display only a single page of data (configured via `dataSource.pageSize`).
+If set to `true` the grid will always display a single page of data. Scrolling would just change the data which is currently displayed.
 
-#### Example
+> Check [Virtualization of local data](http://demos.telerik.com/kendo-ui/web/grid/virtualization-local-data.html) and [Virtualization of remote data](http://demos.telerik.com/kendo-ui/web/grid/virtualization-remote-data.html) for live demos.
 
+### selectable `Boolean|String` *(default: false)*
+
+If set to `true` the user would be able to select grid rows. By default selection is disabled.
+
+Can also be set to the following string values:
+
+- "row" - the user can select a single row.
+- "cell" - the user can select a single cell.
+- "multiple, row" - the user can select multiple rows.
+- "multiple, cell" - the user can select multiple cells.
+
+#### Example - set selectable as a boolean
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         scrollable: {
-             virtual: true //false
-         }
-     });
-
-### selectable `String`*(default: undefined)*
-
- Indicates whether selection is enabled/disabled. Possible values:
-
-
-#### *"row"*
-
-Single row selection.
-
-#### *"cell"*
-
-Single cell selection.
-
-#### *"multiple, row"*
-
-Multiple row selection.
-
-#### *"multiple, cell"*
-
-Multiple cell selection.
-
-### sortable `Boolean|Object`
-
-Defines whether grid columns are sortable.
-
-#### Example
-
-    $("#grid").kendoGrid({
-        sortable: true
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      selectable: true
     });
-    //
-    // or
-    //
+    </script>
+
+#### Example - set selectable as a string
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-        sortable: {
-            mode: "multiple", // enables multi-column sorting
-            allowUnsort: true
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, row"
     });
+    </script>
 
-### sortable.allowUnsort `Boolean`*(default: false)*
+> Check [Selection](http://demos.telerik.com/kendo-ui/web/grid/selection.html) for a live demo.
 
-  Defines whether column can have unsorted state.
+### sortable `Boolean|Object` *(default: false)*
 
-### sortable.mode `String`*(default: "single")*
+If set to `true` the user could sort the grid by clicking the column header cells. By default sorting is disabled.
 
- Defines sorting mode. Possible values:
+Can be set to a JavaScript object which represents the sorting configuration.
 
+#### Example - enable sorting
 
-#### *"single"*
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      sortable: true
+    });
+    </script>
 
-Defines that only once column can be sorted at a time.
+> Check [Sorting](http://demos.telerik.com/kendo-ui/web/grid/sorting.html) for a live demo.
 
-#### *"multiple"*
+### sortable.allowUnsort `Boolean` *(default: true)*
 
-Defines that multiple columns can be sorted at a time.
+If set to `true` the user can get the grid in unsorted state by clicking the sorted column header.
+
+#### Example - do not allow unsorting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      sortable: {
+        allowUnsort: false
+      }
+    });
+    </script>
+
+### sortable.mode `String` *(default: "single")*
+
+The sorting mode. If set to "single" the user can sort by one column. If set to "multiple" the user can sort by one column.
+
+#### Example - allow multiple column sorting
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      sortable: {
+        mode: "multiple"
+      }
+    });
+    </script>
 
 ### toolbar `Array`
 
-This is a list of commands for which the corresponding buttons will be rendered.
-The supported built-in commands are: "create", "cancel", "save", "destroy".
-Or template to be used for rendering the toolbar content.
+The list of commands displayed in the grid toolbar. Commands can be custom or built-in ("cancel", "create", "save").
 
-#### Example
+The "cancel" built-in command reverts any data changes done by the end user.
 
+The "create" command adds an empty data item to the grid.
+
+The "save" command persists any data changes done by the end user.
+
+#### Example - configure the grid toolbar
+    <div id="grid"></div>
+    <script>
     $("#grid").kendoGrid({
-         dataSource: {
-             data: createRandomData(50),
-             pageSize: 10
-         },
-         columns: [
-             {
-                 field: "Name"
-             },
-             {
-                 field: "BirthDate",
-                 title: "Birth Date",
-                 template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
-            }
-         ]
-         toolbar: [
-             "create",
-             { name: "save", text: "Save This Record" },
-             { name: "cancel", template: '<img src="icons/cancel.png' rel='cancel' />" }
-         ],
-         editable: true
-      });
+      toolbar: [
+        { name: "create" },
+        { name: "save" },
+        { name: "cancel" }
+      ],
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33},
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    </script>
 
 ### toolbar.name `String`
 
-The name of the command. One of the predefined or a custom.
+The name of the toolbar command. Either a built-in ("cancel", "create" and "save") or custom. The `name` is reflected in one of the CSS classes, which is applied to the button - `k-grid-name`.
+This class can be used to obtain reference to the button after Grid initialization and attach click handlers.
 
-### toolbar.template `String`
+#### Example - specify the name of the command
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      toolbar: [
+        { name: "create" },
+        { name: "save" },
+        { name: "custom" }
+      ],
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
 
-The template for the command button.
+    $(".k-grid-custom").click(function(e){
+        // handler body
+    });
+    </script>
+
+### toolbar.template `String|Function`
+
+The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the command. Be default renders a button.
+
+#### Example - set the template as a function
+
+    <div id="grid"></div>
+    <script id="template" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return toolbar_click()">Command</a>
+    </script>
+    <script>
+    function toolbar_click() {
+      console.log("Toolbar command is clicked!");
+      return false;
+    }
+    $("#grid").kendoGrid({
+      toolbar: [
+        { template: kendo.template($("#template").html()) }
+      ],
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
+
+> Check [Toolbar template](http://demos.telerik.com/kendo-ui/web/grid/toolbar-template.html) for a live demo.
+
+#### Example - set the template as a string
+
+    <div id="grid"></div>
+    <script>
+    function toolbar_click() {
+      console.log("Toolbar command is clicked!");
+      return false;
+    }
+    $("#grid").kendoGrid({
+      toolbar: [
+        {
+          template: '<a class="k-button" href="\\#" onclick="return toolbar_click()">Command</a>'
+        }
+      ],
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    </script>
 
 ### toolbar.text `String`
 
-The text of the command that will be set on the button.
+The text displayed by the command button. If not set the [name](#configuration-toolbar.name)` option would be used as the button text instead.
+
+#### Example - set the text of the toolbar button
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      toolbar: [
+        { name: "create", text: "Add new" }
+      ],
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { id: 1, name: "Jane Doe", age: 30 },
+        { id: 2, name: "John Doe", age: 33 }
+      ],
+      editable: true
+    });
+    </script>
+
+### mobile `Boolean|String` *(default: false)*
+
+If set to `true` and the grid is viewed on mobile browser it will use adaptive rendering.
+
+Can be set to a string `phone` or `tablet` which will force the widget to use adaptive rendering regardless of browser type.
+The grid uses same layout for both `phone` and `tablet`.
+
+#### Example - enable adaptive rendering auto detect
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       filterable: true,
+       columnMenu: true,
+       mobile: true
+    });
+    </script>
+
+#### Example - force adaptive rendering
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       filterable: true,
+       columnMenu: true,
+       mobile: "phone"
+    });
+    </script>
+
+## Fields
+
+### columns `Array`
+
+The columns of the grid initialized from the [columns](#configuration-columns) option. Every item from the `columns` array has the same fields as the corresponding [columns](#configuration-columns) option.
+
+#### Example - iterate the grid columns
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    for (var i = 0; i < grid.columns.length; i++) {
+      console.log(grid.columns[i].field); // displays "name" and then "age"
+    }
+    </script>
+### dataSource `kendo.data.DataSource`
+
+The [data source](/kendo-ui/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
+
+> Changes of the data source will be reflected in the widget.
+
+> Assigning a new data source would have no effect. Use the [setDataSource](#methods-setDataSource) method instead.
+
+#### Example - add a data item to the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30}
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.dataSource.add({ name: "John Doe", age: 33 });
+    </script>
+
+#### Example - update a data item in the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataSource.at(0);
+    data.set("name", "John Doe");
+    </script>
+
+#### Example - remove a data item from the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33},
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataSource.at(1);
+    grid.dataSource.remove(data);
+    </script>
+
+### footer `jQuery`
+
+The jQuery object which represents the grid footer element.
+
+### pager `kendo.ui.Pager`
+
+The [Pager widget](/kendo-ui/api/web/pager) attached to the Grid.
+
+### table `jQuery`
+
+The jQuery object which represents the grid table element.
+
+### tbody `jQuery`
+
+The jQuery object which represents the table body. Contains all grid table rows.
+
+#### Example - get the first table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33},
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var row = grid.tbody.find("tr:eq(0)");
+    var data = grid.dataItem(row);
+    console.log(data.name); // displays "Jane Doe"
+    </script>
+
+### thead `jQuery`
+
+The jQuery object which represents the grid table header element.
 
 ## Methods
 
 ### addRow
 
-Adds a new empty table row in edit mode. The addRow method triggers edit event.
+Adds an empty data item to the grid. In "incell" and "inline" editing mode a table row will be appended. Popup window will be displayed in "popup" editing mode.
 
-#### Example
+Fires the [edit](#events-edit) event.
 
-    // get a reference to the grid widget
+#### Example - add a new data item
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      toolbar: ["save"]
+    });
     var grid = $("#grid").data("kendoGrid");
     grid.addRow();
 
 ### cancelChanges
 
-Cancels any pending changes during. Deleted rows are restored. Inserted rows are removed. Updated rows are restored to their original values.
+Cancels any pending changes in the data source. Deleted data items are restored, new data items are removed and updated data items are restored to their initial state.
 
-#### Example
+#### Example - cancel any changes
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.addRow();
     grid.cancelChanges();
+    </script>
 
 ### cancelRow
 
-Switch the current edited row into display mode and revert changes made to the data
+Cancels editing for the table row which is in edit mode. Reverts any changes made.
 
-#### Example
+#### Example - cancel editing
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.addRow();
     grid.cancelRow();
+    </script>
 
 ### cellIndex
 
-Returns the index of the cell in the grid item skipping group and hierarchy cells.
-
-#### Example
-
-     // get a reference to the grid widget
-     var grid = $("#grid").data("kendoGrid");
-     // get the index of the row
-     // TODO: add specific function call here
+Returns the index of the specified table cell. Skips group and detail table cells.
 
 #### Parameters
 
-##### cell `Selector | DOM Element`
+##### cell `String|Element|jQuery`
 
-Target cell.
+A string, DOM element or jQuery object which represents the table cell. A string is treated as a jQuery selector.
+
+#### Returns
+
+`Number` the index of the specified table cell.
+
+#### Example - find the cell index when the cell is a jQuery object
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var cell = $("#grid td:eq(1)");
+    console.log(grid.cellIndex(cell));
+    </script>
+
+#### Example - find the cell index when the cell is a string
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    console.log(grid.cellIndex("td:eq(1)"));
+    </script>
 
 ### clearSelection
 
-Clears currently selected items.
+Clears the currently selected table rows or cells (depending on the current selection [mode](#configuration-selectable)).
 
-#### Example
+#### Example - clear selection
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      selectable: true
+    });
     var grid = $("#grid").data("kendoGrid");
-    // clear the selection of items in the grid
+    // select the first table row
+    grid.select("tr:eq(1)");
     grid.clearSelection();
+    </script>
 
 ### closeCell
 
-Closes current edited cell.
+Stops editing the table cell which is in edit mode. Requires "incell" [edit mode](#configuration-editable.mode).
 
-#### Example
+#### Parameters
 
-    // get a reference to the grid widget
+##### isCancel `Boolean` *optional*
+
+A flag specifying whether to fire the `cancel` event. By default the event is not fired.
+
+#### Example - cancel cell editing
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 },
+      ],
+      editable: "incell"
+    });
     var grid = $("#grid").data("kendoGrid");
-    // close the cell being edited
+    grid.addRow();
     grid.closeCell();
+    </script>
 
 ### collapseGroup
 
-Collapses specified group.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // collapses first group item
-    grid.collapseGroup(grid.tbody.find(">tr.k-grouping-row:first"));
+Collapses the specified group. This hides the group items.
 
 #### Parameters
 
-##### group `Selector | DOM Element`
+##### row `String|Element|jQuery`
 
-Target group item to collapse.
+A string, DOM element or jQuery object which represents the group table row. A string is treated as a jQuery selector.
+
+#### Example - collapse the first group
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: {
+        data: [
+          { productName: "Tea", category: "Beverages" },
+          { productName: "Coffee", category: "Beverages" },
+          { productName: "Ham", category: "Food" },
+          { productName: "Bread", category: "Food" }
+        ],
+        group: { field: "category" }
+      },
+      groupable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.collapseGroup(".k-grouping-row:contains(Beverages)");
+    </script>
 
 ### collapseRow
 
-Collapses specified master row.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // collapses first master row
-    grid.collapseRow(grid.tbody.find(">tr.k-master-row:first"));
+Collapses the specified master table row. This hides its detail table row.
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `String|Element|jQuery`
 
-Target master row to collapse.
+A string, DOM element or jQuery object which represents the master table row. A string is treated as a jQuery selector.
+
+#### Example - collapse the first master table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    // first expand the first master table row
+    grid.expandRow(".k-master-row:first");
+    grid.collapseRow(".k-master-row:first");
+    </script>
+
+### current
+
+Gets or sets the current cell for keyboard navigation.
+
+#### Parameters
+
+##### cell `jQuery`
+
+DOM element or jQuery object which represents the navigatable cell.
+
+#### Returns
+
+`jQuery` the current cell.
+
+#### Example - select last cell for keyboard navigation
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+        { field: "name" },
+        { field: "age" }
+        ],
+        dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+        ],
+        navigatable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+
+    //get the last cell of the Grid
+    var lastCell = grid.tbody.find("tr:last td:last");
+    //select the cell for navigation
+    grid.current(lastCell);
+    //optional: focus the grid table
+    grid.table.focus();
+    </script>
 
 ### dataItem
 
-Returns the data item to which a given table row (tr DOM element) is bound.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // returns the data item for first row
-    grid.dataItem(grid.tbody.find(">tr:first"));
+Returns the data item to which the specified table row is bound.
 
 #### Parameters
 
-##### tr `Selector | DOM Element`
+##### row `String|Element|jQuery`
 
-Target row.
+A string, DOM element or jQuery object which represents the table row. A string is treated as a jQuery selector.
+
+#### Returns
+
+`kendo.data.ObservableObject` the data item to which the specified table row is bound. [More information about the ObservableObject type...](/kendo-ui/api/framework/observableobject)
+
+#### Example - get the data item to which the first table row is bound
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    var data = grid.dataItem("tr:eq(1)");
+    console.log(data.name); // displays "Jane Doe"
+    </script>
 
 ### destroy
-Prepares the **Grid** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
-> **Important:** This method does not remove the Grid element from DOM.
+Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> This method does not remove the widget element from DOM.
 
 #### Example
 
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
     var grid = $("#grid").data("kendoGrid");
-
-    // detach events
     grid.destroy();
+    </script>
 
 ### editCell
 
-Puts the specified table cell in edit mode. It requires a jQuery object representing the cell. The editCell method triggers edit event.
+Switches the specified table cell in edit mode. Requires "incell" [edit mode](#configuration-editable.mode).
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // edit first table cell
-    grid.editCell(grid.tbody.find(">tr>td:first"));
+Fires the [edit](#events-edit) event.
 
 #### Parameters
 
-##### cell `Selector`
+##### cell `jQuery`
 
-Cell to be edited.
+The jQuery object which represents the table cell.
+
+#### Example - switch the first cell to edit mode
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "incell"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.editCell($("#grid td:eq(0)"));
+    </script>
 
 ### editRow
 
-Switches the specified row from the grid into edit mode. The editRow method triggers edit event.
+Switches the specified table row in edit mode. Requires "inline" or "popup" [edit mode](#configuration-editable.mode).
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // edit first table row
-    grid.editRow(grid.tbody.find(">tr:first"));
+Fires the [edit](#events-edit) event.
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `jQuery`
 
-Row to be edited.
+The jQuery object which represents the table row.
+
+#### Example - switch the first row in edit mode
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "inline"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.editRow($("#grid tr:eq(1)"));
+    </script>
 
 ### expandGroup
 
-Expands specified group.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // expands first group item
-    grid.expandGroup(grid.tbody.find(">tr.k-grouping-row:first"));
+Expands the specified group. This shows the group items.
 
 #### Parameters
 
-##### group `Selector | DOM Element`
+##### row `String|Element|jQuery`
 
-Target group item to expand.
+A string, DOM element or jQuery object which represents the group table row. A string is treated as a jQuery selector.
+Expands specified group.
+
+#### Example - expand the first group
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "productName" },
+        { field: "category" }
+      ],
+      dataSource: {
+        data: [
+          { productName: "Tea", category: "Beverages" },
+          { productName: "Coffee", category: "Beverages" },
+          { productName: "Ham", category: "Food" },
+          { productName: "Bread", category: "Food" }
+        ],
+        group: { field: "category" }
+      },
+      groupable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    // first collapse the group
+    grid.collapseGroup(".k-grouping-row:contains(Beverages)");
+    grid.expandGrup(".k-grouping-row:contains(Beverages)");
+    </script>
 
 ### expandRow
 
-Expands specified master row.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // expands first master row
-    grid.expandRow(grid.tbody.find(">tr.k-master-row:first"));
+Expands the specified master table row. This shows its detail table row.
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `String|Element|jQuery`
 
-Target master row to expand.
+A string, DOM element or jQuery object which represents the master table row. A string is treated as a jQuery selector.
+Expands specified master row.
+
+#### Example - expand the first master table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.expandRow(".k-master-row:first");
+    </script>
 
 ### hideColumn
 
-Hides the specified column.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-
-    // hide the "id" column
-    grid.hideColumn("id");
-
-    // hide the 3rd column
-    grid.hideColumn(2);
+Hides the specified grid column.
 
 #### Parameters
 
-##### column `Number | String`
+##### column `Number|String`
 
-The index or the bound field of the column to hide.
+The index of the column or the [field](#configuration-columns.field) to which the columns is bound.
+
+#### Example - hide a column by index
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.hideColumn(1);
+    </script>
+
+#### Example - hide a column by field
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.hideColumn("age");
+    </script>
 
 ### refresh
 
-Redraws the grid using the current data of the DataSource.
+Renders all table rows using the current data items.
 
-#### Example
+#### Example - refresh the widget
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
     var grid = $("#grid").data("kendoGrid");
-    // refreshes the grid
     grid.refresh();
-
+    </script>
 
 ### removeRow
 
-Removes the specified row from the grid. The removeRow method triggers remove event.
-(Note: In inline or popup edit modes the changes will be automatically synced)
+Removes the specified table row from the grid. Also removes the corresponding data item from the data source.
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // remove first table row
-    grid.removeRow(grid.tbody.find(">tr:first"));
+Fires the [remove](#events-remove) event.
 
 #### Parameters
 
-##### row `Selector | DOM Element`
+##### row `String|Element|jQuery`
 
-Row to be removed.
+A string, DOM element or jQuery object which represents the table row. A string is treated as a jQuery selector.
+
+#### Example - remove the first table row
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.removeRow("tr:eq(1)");
+    </script>
+
+### reorderColumn
+
+Changes the position of the specified column.
+
+#### Parameters
+
+##### destIndex `Number`
+
+The new position of the column. The destination index should be calculated with regard to all columns, including the hidden ones.
+
+##### column `Object`
+
+The column whose position should be changed.
+
+#### Example - move a column
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.reorderColumn(1, grid.columns[0]);
+    </script>
 
 ### saveChanges
 
-Calls DataSource sync to submit any pending changes if state is valid. The saveChanges method triggers saveChanges event.
+Saves any pending changes by calling the [sync](/kendo-ui/api/framework/datasource#methods-sync) method.
 
-#### Example
+Fires the [saveChanges](#events-saveChanges) event.
 
-    // get a reference to the grid widget
+#### Example - save changes
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.addRow();
     grid.saveChanges();
+    </script>
 
 ### saveRow
 
-Switch the current edited row into dislay mode and save changes made to the data
-(Note: the changes will be automatically synced)
+Switches the table row which is in edit mode and saves any changes made by the user.
 
-#### Example
+#### Example - save row
 
-    // get a reference to the grid widget
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "inline"
+    });
     var grid = $("#grid").data("kendoGrid");
+    grid.editRow($("#grid tr:eq(1)"));
     grid.saveRow();
+    </script>
 
 ### select
 
-Selects the specified Grid rows/cells. If called without arguments - returns the selected rows/cells.
-
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-    // selects first grid item
-    grid.select(grid.tbody.find(">tr:first"));
+Gets or sets the table rows (or cells) which are selected.
 
 #### Parameters
 
-##### items `Selector | Array`
+##### rows `String|Element|jQuery`
 
-Items to select.
+A string, DOM element or jQuery object which represents the table row(s) or cell(s). A string is treated as a jQuery selector.
+
+#### Returns
+
+`jQuery` the selected table rows or cells.
+
+#### Example - select the first and second table rows
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, row"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.select("tr:eq(1), tr:eq(2)");
+    </script>
+
+#### Example - select the first table cell
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      selectable: "cell"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.select("td:eq(0)");
+    </script>
+
+#### Example - get the selected table row
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ],
+      selectable: "row"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.select("tr:eq(1)");
+    var row = grid.select();
+    var data = grid.dataItem(row);
+    console.log(data.name); // displays "Jane Doe"
+    </script>
+
+### setDataSource
+
+Sets the data source of the widget.
+
+#### Parameters
+
+##### dataSource `kendo.data.DataSource`
+
+The data source to which the widget should be bound.
+
+#### Example - set the data source
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 }
+      ]
+    });
+    var dataSource = new kendo.data.DataSource({
+      data: [
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.setDataSource(dataSource);
+    </script>
 
 ### showColumn
 
 Shows the specified column.
 
-#### Example
-
-    // get a reference to the grid widget
-    var grid = $("#grid").data("kendoGrid");
-
-    // show the "id" column
-    grid.showColumn("id");
-
-    // show the 3rd column
-    grid.showColumn(2);
-
 #### Parameters
 
-##### column `Number | String`
+##### column `Number|String`
 
-The index or the bound field of the column to show.
+The index of the column or the [field](#configuration-columns.field) to which the columns is bound.
+
+#### Example - show a hidden column by index
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age", hidden: true }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.showColumn(1);
+    </script>
+
+#### Example - show a hidden column by field
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age", hidden: true }
+      ],
+      dataSource: [
+          { name: "Jane Doe", age: 30 },
+          { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.showColumn("age");
+    </script>
 
 ## Events
 
+### cancel
+
+Fired when the user clicks the "cancel" button (in inline or popup [editing mode](#configuration-editable.mode)) or closes the popup window.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.container `jQuery`
+
+The jQuery object that represents the edit form container element.
+
+##### e.model `kendo.data.Model`
+
+The data item to which the table row is bound.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the cancel action. The table row remains in edit mode.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "cancel" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "popup",
+      cancel: function(e) {
+        e.preventDefault()
+      }
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.editRow($("#grid tr:eq(1)"));
+    </script>
+
+#### Example - subscribe to the "cancel" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_cancel(e) {
+      e.preventDefault()
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: "popup"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("cancel", grid_cancel);
+    grid.editRow($("#grid tr:eq(1)"));
+    </script>
+
 ### change
 
-Fires when the grid selection has changed.
+Fired when the user selects a table row or cell in the grid.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-     $("#grid").kendoGrid({
-         change: function(e) {
-             // handle event
-         }
-     });
+#### Event Data
 
-#### To set after initialization
+##### e.sender `kendo.ui.Grid`
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the change event
-     grid.bind("change", function(e) {
-         // handle event
-     });
+The widget instance which fired the event.
 
-### columnResize
+#### Example - get the selected data item(s) when using row selection
 
-Fires when the user resizes a column.
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, row",
+      change: function(e) {
+        var selectedRows = this.select();
+        var selectedDataItems = [];
+        for (var i = 0; i < selectedRows.length; i++) {
+          var dataItem = this.dataItem(selectedRows[i]);
+          selectedDataItems.push(dataItem);
+        }
+        // selectedDataItems contains all selected data items
+      }
+    });
+    </script>
 
-#### Example
+#### Example - get the selected data item(s) when using cell selection
+    <div id="grid"></div>
+    <script>
+    function grid_change(e) {
+      var selectedCells = this.select();
+      var selectedDataItems = [];
+      for (var i = 0; i < selectedCells.length; i++) {
+        var dataItem = this.dataItem(selectedCells[i].parentNode);
+        if ($.inArray(dataItem, selectedDataItems) < 0) {
+          selectedDataItems.push(dataItem);
+        }
+      }
+      // selectedDataItems contains all selected data items
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      selectable: "multiple, cell"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("change", grid_change);
+    </script>
 
-     $("#grid").kendoGrid({
-         columnResize: function(e) {
-             // handle event
-         }
-     });
+### columnHide
 
-#### To set after initialization
+Fired when the user hides a column.
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the columnResize event
-     grid.bind("columnResize", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
 ##### e.column `Object`
 
-The column object with its properties, e.g. `encoded`, `field` and `title`.
+A JavaScript object which represents the [column](#configuration-columns) configuration.
 
-##### e.oldWidth `Number`
+##### e.sender `kendo.ui.Grid`
 
-The previous column width.
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnHide" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true,
+      columnHide: function(e) {
+        console.log(e.column.field); // displays the field of the hidden column
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnHide" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_columnHide(e) {
+      console.log(e.column.field); // displays the field of the hidden column
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnHide", grid_columnHide);
+    </script>
+
+### columnMenuInit
+
+Fired when the column menu is initialized.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.container `jQuery`
+
+The jQuery object representing column menu form element.
+
+##### e.field `String`
+
+The field of the column for which the column menu is initialized.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnMenuInit" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33}
+      ],
+      columnMenu: true,
+      columnMenuInit: function(e) {
+        var menu = e.container.find(".k-menu").data("kendoMenu");
+        var field = e.field;
+        menu.append({ text: "Custom" });
+        menu.bind("select", function(e) {
+          if ($(e.item).text() == "Custom") {
+            console.log("Custom button for", field);
+          }
+        });
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnMenuInit" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_columnMenuInit(e) {
+      var menu = e.container.find(".k-menu").data("kendoMenu");
+      var field = e.field;
+      menu.append({ text: "Custom" });
+      menu.bind("select", function(e) {
+        if ($(e.item).text() == "Custom") {
+          console.log("Custom button for", field);
+        }
+      });
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30},
+        { name: "John Doe", age: 33}
+      ],
+      columnMenu: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnMenuInit", grid_columnMenuInit);
+    </script>
+
+### columnReorder
+
+Fired when the user changes the order of a column.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.column `Object`
+
+A JavaScript object which represents the [column](#configuration-columns) configuration.
+
+##### e.newIndex `Number`
+
+The new column index.
+
+##### e.oldIndex `Number`
+
+The previous column index.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnReorder" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      reorderable: true,
+      columnReorder: function(e) {
+        console.log(e.column.field, e.newIndex, e.oldIndex);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnReorder" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_columnReorder(e) {
+      console.log(e.column.field, e.newIndex, e.oldIndex);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      reorderable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnReorder", grid_columnReorder);
+    </script>
+
+### columnResize
+
+Fired when the user resizes a column.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.column `Object`
+
+A JavaScript object which represents the [column](#configuration-columns) configuration.
 
 ##### e.newWidth `Number`
 
 The new column width.
 
-### dataBound
+##### e.oldWidth `Number`
 
-Fires when the grid has received data from the data source.
+The previous column width.
 
-#### Example
+##### e.sender `kendo.ui.Grid`
 
-     $("#grid").kendoGrid({
-         dataBound: function(e) {
-             // handle event
-         }
-     });
+The widget instance which fired the event.
 
-#### To set after initialization
+#### Example - subscribe to the "columnResize" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      resizable: true,
+      columnResize: function(e) {
+        console.log(e.column.field, e.newWidth, e.oldWidth);
+      }
+    });
+    </script>
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the dataBound event
-     grid.bind("dataBound", function(e) {
-         // handle event
-     });
+#### Example - subscribe to the "columnResize" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_columnResize(e) {
+      console.log(e.column.field, e.newWidth, e.oldWidth);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      resizable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnResize", grid_columnResize);
+    </script>
+
+### columnShow
+
+Fired when the user shows a column.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.column `Object`
+
+A JavaScript object which represents the [column](#configuration-columns) configuration.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "columnShow" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true,
+      columnShow: function(e) {
+        console.log(e.column.field); // displays the field of the hidden column
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "columnShow" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_columnShow(e) {
+      console.log(e.column.field); // displays the field of the hidden column
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      columnMenu: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("columnShow", grid_columnShow);
+    </script>
 
 ### dataBinding
 
-Fires when the grid is about to be rendered.
+Fired before the widget binds to its data source.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-     $("#grid").kendoGrid({
-         dataBinding: function(e) {
-             // handle event
-         }
-     });
+#### Event Data
 
-#### To set after initialization
+##### e.sender `kendo.ui.Grid`
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the dataBound event
-     grid.bind("dataBound", function(e) {
-         // handle event
-     });
+The widget instance which fired the event.
 
+##### e.preventDefault `Function`
+
+If invoked prevents the data bind action. The table rows will remain unchanged and `dataBound` event will not fire.
+
+#### Example - subscribe to the "dataBinding" event before initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      dataBinding: function(e) {
+        console.log("dataBinding");
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dataBinding" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_dataBinding(e) {
+      console.log("dataBinding");
+    }
+    $("#grid").kendoGrid({
+      autoBind: false,
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("dataBinding", grid_dataBinding);
+    grid.dataSource.fetch();
+    </script>
+
+### dataBound
+
+Fired when the widget is bound to data from its data source.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "dataBound" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      dataBound: function(e) {
+        console.log("dataBound");
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dataBound" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_dataBound(e) {
+      console.log("dataBound");
+    }
+    $("#grid").kendoGrid({
+      autoBind: false,
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("dataBound", grid_dataBound);
+    grid.dataSource.fetch();
+    </script>
 
 ### detailCollapse
 
-Fires when the grid detail row is collapsed.
+Fired when the user collapses a detail table row.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         detailCollapse: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailCollapse event
-     grid.bind("detailCollapse", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.masterRow `Object`
+##### e.detailRow `jQuery`
 
-The jQuery element representing master row.
+The jQuery object which represents the detail table row.
 
-##### e.detailRow `Object`
+##### e.masterRow `jQuery`
 
-The jQuery element representing detail row.
+The jQuery object which represents the master table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "detailCollapse" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>",
+      detailCollapse: function(e) {
+        console.log(e.masterRow, e.detailRow);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "detailCollapse" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_detailCollapse(e) {
+      console.log(e.masterRow, e.detailRow);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("detailCollapse", grid_detailCollapse);
+    </script>
 
 ### detailExpand
 
-Fires when the grid detail row is expanded.
+Fired when the user expands a detail table row.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         detailExpand: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailExpand event
-     grid.bind("detailExpand", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.masterRow `Object`
+##### e.detailRow `jQuery`
 
-The jQuery element representing master row.
+The jQuery object which represents the detail table row.
 
-##### e.detailRow `Object`
+##### e.masterRow `jQuery`
 
-The jQuery element representing detail row.
+The jQuery object which represents the master table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "detailExpand" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>",
+      detailExpand: function(e) {
+        console.log(e.masterRow, e.detailRow);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "detailExpand" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_detailExpand(e) {
+      console.log(e.masterRow, e.detailRow);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" }
+      ],
+      dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+      ],
+      detailTemplate: "<div>Name: #: name #</div><div>Age: #: age #</div>"
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("detailExpand", grid_detailExpand);
+    </script>
 
 ### detailInit
 
-Fires when the grid detail is initialized.
+Fired when a detail table row is initialized.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         detailInit: function(e) {
-             // handle event
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the detailInit event
-     grid.bind("detailInit", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.masterRow `Object`
+##### e.data `kendo.data.ObservableObject`
 
-The jQuery element representing master row.
+The data item to which the master table row is bound.
 
-##### e.detailRow `Object`
+##### e.detailCell `jQuery`
 
-The jQuery element representing detail row.
+The jQuery object which represents the detail table cell.
 
-##### e.detailCell `Object`
+##### e.detailRow `jQuery`
 
-The jQuery element representing detail cell.
+The jQuery object which represents the detail table row.
 
-##### e.data `Object`
+##### e.masterRow `jQuery`
 
-The data for the master row.
+The jQuery object which represents the master table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "detailInit" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        {
+          name: "Beverages",
+          products: [
+            { name: "Tea" },
+            { name: "Coffee" }
+          ]
+        },
+        {
+          name: "Food",
+          products: [
+            { name: "Ham" },
+            { name: "Bread" }
+          ]
+        }
+      ],
+      detailTemplate: 'Products: <div class="grid"></div>',
+      detailInit: function(e) {
+        e.detailRow.find(".grid").kendoGrid({
+          dataSource: e.data.products
+        });
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "detailInit" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_detailInit(e) {
+      e.detailRow.find(".grid").kendoGrid({
+        dataSource: e.data.products
+      });
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        {
+          name: "Beverages",
+          products: [
+            { name: "Tea" },
+            { name: "Coffee" }
+          ]
+        },
+        {
+          name: "Food",
+          products: [
+            { name: "Ham" },
+            { name: "Bread" }
+          ]
+        }
+      ],
+      detailTemplate: 'Products: <div class="grid"></div>'
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("detailInit", grid_detailInit);
+    </script>
 
 ### edit
 
-Fires when the grid enters edit mode.
+Fired when the user edits or creates a data item.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         edit: function(e) {
-             // handle event
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the edit event
-     grid.bind("edit", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.container `Object`
+##### e.container `jQuery`
 
-The jQuery element to be edited.
+The jQuery object representing the container element. That element contains the editing UI.
 
-##### e.model `Object`
+##### e.model `kendo.data.Model`
 
-The model to be edited.
+The data item which is going to be edited. Use its [isNew](/kendo-ui/api/framework/model#methods-isNew) method to check if the data item is new (created) or not (edited).
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "edit" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "id" },
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            id: "id",
+            fields: {
+              "id": { type: "number" }
+            }
+          }
+        }
+      },
+      editable: "popup",
+      toolbar:["create"],
+      edit: function(e) {
+        if (!e.model.isNew()) {
+          // Disable the editor of the "id" column when editing data items
+          var numeric = e.container.find("input[name=id]").data("kendoNumericTextBox");
+          numeric.enable(false);
+        }
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "edit" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_edit(e) {
+      if (!e.model.isNew()) {
+        // Disable the editor of the "id" column when editing data items
+        var numeric = e.container.find("input[name=id]").data("kendoNumericTextBox");
+        numeric.enable(false);
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "id" },
+        { field: "name" },
+        { field: "age" },
+        { command: "edit" }
+      ],
+      dataSource: {
+        data: [
+          { id: 1, name: "Jane Doe", age: 30 },
+          { id: 2, name: "John Doe", age: 33 }
+        ],
+        schema: {
+          model: {
+            id: "id",
+            fields: {
+              "id": { type: "number" }
+            }
+          }
+        }
+      },
+      editable: "popup",
+      toolbar:["create"]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("edit", grid_edit);
+    </script>
+
+### filterMenuInit
+
+Fired when the grid filter menu is initialized.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.container `jQuery`
+
+The jQuery object representing filter menu form element.
+
+##### e.field `String`
+
+The field of the column for which the filter menu is initialized.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "filterMenuInit" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe"},
+        { name: "John Doe"}
+      ],
+      filterable: true,
+      filterMenuInit: function(e) {
+        if (e.field == "name") {
+          var firstValueDropDown = e.container.find("select:eq(0)").data("kendoDropDownList");
+          firstValueDropDown.value("contains");
+          firstValueDropDown.trigger("change");
+
+          var logicDropDown = e.container.find("select:eq(1)").data("kendoDropDownList");
+          logicDropDown.value("or");
+          logicDropDown.trigger("change");
+
+          var secondValueDropDown = e.container.find("select:eq(2)").data("kendoDropDownList");
+          secondValueDropDown.value("contains");
+          secondValueDropDown.trigger("change");
+        }
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "filterMenuInit" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_filterMenuInit(e) {
+      if (e.field == "name") {
+        var firstValueDropDown = e.container.find("select:eq(0)").data("kendoDropDownList");
+        firstValueDropDown.value("contains");
+        var logicDropDown = e.container.find("select:eq(1)").data("kendoDropDownList");
+        logicDropDown.value("or");
+        var secondValueDropDown = e.container.find("select:eq(2)").data("kendoDropDownList");
+        secondValueDropDown.value("contains");
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" }
+      ],
+      dataSource: [
+        { name: "Jane Doe"},
+        { name: "John Doe"}
+      ],
+      filterable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("filterMenuInit", grid_filterMenuInit);
+    </script>
 
 ### remove
 
-Fires before the grid item is removed.
+Fired when the user clicks the "destroy" command button.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         remove: function(e) {
-             // handle event
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the remove event
-     grid.bind("remove", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
-##### e.row `Object`
+##### e.model `kendo.data.Model`
 
-The row element to be deleted.
+The data item to which the table row is bound.
 
-##### e.model `Object`
+##### e.row `jQuery`
 
-The model which to be deleted.
+The jQuery object representing the current table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "remove" event during initialization
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      remove: function(e) {
+        console.log("Removing", e.model.name);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "remove" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_remove(e) {
+      console.log("Removing", e.model.name);
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("remove", grid_remove);
+    </script>
 
 ### save
 
-Fires before the grid item is changed.
+Fired when a data item is saved.
 
-#### Example
-
-     $("#grid").kendoGrid({
-         save: function(e) {
-             // handle event
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the save event
-     grid.bind("save", function(e) {
-         // handle event
-     });
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
 #### Event Data
 
+##### e.model `kendo.data.Model`
+
+The data item to which the table row is bound.
+
+##### e.row `jQuery`
+
+The jQuery object representing the current table row.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
 ##### e.values `Object`
 
-The values entered by the user.
+The values entered by the user. **Available only when the [editable.mode](#configuration-editable.mode) option is set to "incell".**
 
-##### e.container `Object`
+#### Example - subscribe to the "save" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      save: function(e) {
+        if (e.values.name) {
+          // the user changed the name field
+          if (e.values.name != e.model.name) {
+            console.log("name is modified");
+          }
+        }
+      }
+    });
+    </script>
 
-The jQuery element which is in edit mode.
-
-##### e.model `Object`
-
-The edited model.
+#### Example - subscribe to the "save" event after initialization
+    <div id="grid"></div>
+    <script>
+    function grid_save(e) {
+      if (e.values.name) {
+        // the user changed the name field
+        if (e.values.name != e.model.name) {
+          console.log("name is modified");
+        }
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("save", grid_save);
+    </script>
 
 ### saveChanges
 
-Fires before the grid calls DataSource sync.
+Fired when the user clicks the "save" command button.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-     $("#grid").kendoGrid({
-         saveChanges: function(e) {
-             // handle event
-     });
+#### Event Data
 
-#### To set after initialization
+##### e.preventDefault `Function`
 
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the saveChanges event
-     grid.bind("saveChanges", function(e) {
-         // handle event
-     });
+If invoked the grid will not call the [sync](/kendo-ui/api/framework/datasource#methods-sync) method of the data source.
+
+##### e.sender `kendo.ui.Grid`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "saveChanges" event during initialization
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true,
+      saveChanges: function(e) {
+        if (!confirm("Are you sure you want to save all changes?")) {
+           e.preventDefault();
+        }
+      },
+      toolbar: ["save"]
+    });
+    </script>
+
+#### Example - subscribe to the "saveChanges" event after initialization
+
+    <div id="grid"></div>
+    <script>
+    function grid_saveChanges(e) {
+      if (!confirm("Are you sure you want to save all changes?")) {
+         e.preventDefault();
+      }
+    }
+    $("#grid").kendoGrid({
+      columns: [
+        { field: "name" },
+        { field: "age" },
+        { command: "destroy" }
+      ],
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      editable: true
+      toolbar: ["save"]
+    });
+    var grid = $("#grid").data("kendoGrid");
+    grid.bind("saveChanges", grid_saveChanges);
+    </script>

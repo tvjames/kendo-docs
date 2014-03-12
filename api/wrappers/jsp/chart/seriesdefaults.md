@@ -205,7 +205,7 @@ The default options for all vertical line series. For more details see the serie
 
 The border of the series.
 
-More documentation is available at [kendo:chart-seriesDefaults-border](/api/wrappers/jsp/chart/seriesdefaults-border).
+More documentation is available at [kendo:chart-seriesDefaults-border](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-border).
 
 #### Example
 
@@ -217,7 +217,7 @@ More documentation is available at [kendo:chart-seriesDefaults-border](/api/wrap
 
 Configures the series data labels.
 
-More documentation is available at [kendo:chart-seriesDefaults-labels](/api/wrappers/jsp/chart/seriesdefaults-labels).
+More documentation is available at [kendo:chart-seriesDefaults-labels](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-labels).
 
 #### Example
 
@@ -229,7 +229,7 @@ More documentation is available at [kendo:chart-seriesDefaults-labels](/api/wrap
 
 The data point tooltip configuration options.
 
-More documentation is available at [kendo:chart-seriesDefaults-tooltip](/api/wrappers/jsp/chart/seriesdefaults-tooltip).
+More documentation is available at [kendo:chart-seriesDefaults-tooltip](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-tooltip).
 
 #### Example
 

@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:chart-tooltip-border\>
-A JSP tag representing Kendo Border.
+
+The border configuration options.
 
 #### Example
     <kendo:chart-tooltip>
         <kendo:chart-tooltip-border></kendo:chart-tooltip-border>
     </kendo:chart-tooltip>
 
-
 ## Configuration Attributes
 
-
-### color `String`
+### color `java.lang.String`
 
 The color of the border.
 
 #### Example
-    <kendo:chart color="color">
-    </kendo:chart>
-
-
+    <kendo:chart-tooltip-border color="color">
+    </kendo:chart-tooltip-border>
 
 ### width `float`
 
-The width of the border.
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
 
 #### Example
-    <kendo:chart width="width">
-    </kendo:chart>
-
+    <kendo:chart-tooltip-border width="width">
+    </kendo:chart-tooltip-border>
 

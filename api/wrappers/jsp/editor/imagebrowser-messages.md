@@ -1,108 +1,98 @@
 ---
-title: editor-imagebrowser-messages
-slug: jsp-editor-imagebrowser-messages
+title: editor-imageBrowser-messages
+slug: jsp-editor-imageBrowser-messages
 tags: api, java
 publish: true
 ---
 
-# \<kendo:editor-imagebrowser-messages\>
-A JSP tag representing Kendo Messages.
+# \<kendo:editor-imageBrowser-messages\>
+
+Defines texts shown within the image browser.
 
 #### Example
-    <kendo:editor-imagebrowser>
-        <kendo:editor-imagebrowser-messages></kendo:editor-imagebrowser-messages>
-    </kendo:editor-imagebrowser>
-
+    <kendo:editor-imageBrowser>
+        <kendo:editor-imageBrowser-messages></kendo:editor-imageBrowser-messages>
+    </kendo:editor-imageBrowser>
 
 ## Configuration Attributes
 
-
-### uploadFile `String`
-
-Defines text for upload button.
-
-#### Example
-    <kendo:editor uploadFile="uploadFile">
-    </kendo:editor>
-
-
-
-### orderBy `String`
-
-Defines text for order by label.
-
-#### Example
-    <kendo:editor orderBy="orderBy">
-    </kendo:editor>
-
-
-
-### orderByName `String`
-
-Defines text for Name item of order by drop down list.
-
-#### Example
-    <kendo:editor orderByName="orderByName">
-    </kendo:editor>
-
-
-
-### orderBySize `String`
-
-Defines text for Size item of order by drop down list.
-
-#### Example
-    <kendo:editor orderBySize="orderBySize">
-    </kendo:editor>
-
-
-
-### directoryNotFound `String`
-
-Defines text for dialog shown when the directory not found error occurs.
-
-#### Example
-    <kendo:editor directoryNotFound="directoryNotFound">
-    </kendo:editor>
-
-
-
-### emptyFolder `String`
-
-Defines text displayed when folder does not contain items.
-
-#### Example
-    <kendo:editor emptyFolder="emptyFolder">
-    </kendo:editor>
-
-
-
-### deleteFile `String`
+### deleteFile `java.lang.String`
 
 Defines text for dialog shown when the file or directory is deleted.
 
 #### Example
-    <kendo:editor deleteFile="deleteFile">
-    </kendo:editor>
+    <kendo:editor-imageBrowser-messages deleteFile="deleteFile">
+    </kendo:editor-imageBrowser-messages>
 
+### directoryNotFound `java.lang.String`
 
+Defines text for dialog shown when the directory not found error occurs.
 
-### invalidFileType `String`
+#### Example
+    <kendo:editor-imageBrowser-messages directoryNotFound="directoryNotFound">
+    </kendo:editor-imageBrowser-messages>
+
+### emptyFolder `java.lang.String`
+
+Defines text displayed when folder does not contain items.
+
+#### Example
+    <kendo:editor-imageBrowser-messages emptyFolder="emptyFolder">
+    </kendo:editor-imageBrowser-messages>
+
+### invalidFileType `java.lang.String`
 
 Defines text for dialog shown when an invalid file is set for upload.
 
 #### Example
-    <kendo:editor invalidFileType="invalidFileType">
-    </kendo:editor>
+    <kendo:editor-imageBrowser-messages invalidFileType="invalidFileType">
+    </kendo:editor-imageBrowser-messages>
 
+### orderBy `java.lang.String`
 
+Defines text for order by label.
 
-### overwriteFile `String`
+#### Example
+    <kendo:editor-imageBrowser-messages orderBy="orderBy">
+    </kendo:editor-imageBrowser-messages>
+
+### orderByName `java.lang.String`
+
+Defines text for Name item of order by drop down list.
+
+#### Example
+    <kendo:editor-imageBrowser-messages orderByName="orderByName">
+    </kendo:editor-imageBrowser-messages>
+
+### orderBySize `java.lang.String`
+
+Defines text for Size item of order by drop down list.
+
+#### Example
+    <kendo:editor-imageBrowser-messages orderBySize="orderBySize">
+    </kendo:editor-imageBrowser-messages>
+
+### overwriteFile `java.lang.String`
 
 Defines text for dialog shown when an already existing file is set for upload.
 
 #### Example
-    <kendo:editor overwriteFile="overwriteFile">
-    </kendo:editor>
+    <kendo:editor-imageBrowser-messages overwriteFile="overwriteFile">
+    </kendo:editor-imageBrowser-messages>
 
+### search `java.lang.String`
+
+Defines text for search box pleaceholder.
+
+#### Example
+    <kendo:editor-imageBrowser-messages search="search">
+    </kendo:editor-imageBrowser-messages>
+
+### uploadFile `java.lang.String`
+
+Defines text for upload button.
+
+#### Example
+    <kendo:editor-imageBrowser-messages uploadFile="uploadFile">
+    </kendo:editor-imageBrowser-messages>
 

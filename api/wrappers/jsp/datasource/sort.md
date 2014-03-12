@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:dataSource-sort\>
-A JSP tag representing Kendo Sort.
+
+The sort order which will be applied over the data items. By default the data items are not sorted.
 
 #### Example
     <kendo:dataSource>
         <kendo:dataSource-sort></kendo:dataSource-sort>
     </kendo:dataSource>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:dataSource-sortItem
 
-Sets initial sort order
+The sort order which will be applied over the data items. By default the data items are not sorted.
 
-More documentation is available at [kendo:dataSource-sortItem](/api/wrappers/jsp/datasource/sortitem).
+More documentation is available at [kendo:dataSource-sortItem](/kendo-ui/api/wrappers/jsp/datasource/sortitem).
 
 #### Example
 
     <kendo:dataSource-sort>
         <kendo:dataSource-sortItem></kendo:dataSource-sortItem>
     </kendo:dataSource-sort>
- 
+

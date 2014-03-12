@@ -1,104 +1,187 @@
 ---
 title: kendo.ui.TimePicker
-slug: web-kendo.ui.timepicker
+meta_title: Configuration, methods and events of Kendo UI TimePicker
+meta_description: What type of animations you can use in TimePicker UI widget, find supported methods and see which events are triggered once the value is changed.
+slug: api-web-timepicker
+relatedDocs: gs-web-timepicker-overview
 tags: api,web
 publish: true
 ---
 
 # kendo.ui.TimePicker
 
+Represents the Kendo UI TimePicker. Inherits from [Widget](/kendo-ui/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`
 
-Animations to be used for opening/closing the popup. Setting to false will turn of the animation.
+Configures the opening and closing animations of the popup. Setting the `animation` option to `false` will disable the opening and closing animations. As a result the popup will open and close instantly.
+
+#### Example - disable open and close animations
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+      animation: false
+    });
+    </script>
+
+#### Example - configure the animation
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+      animation: {
+       close: {
+         effects: "fadeOut zoom:out",
+         duration: 300
+       },
+       open: {
+         effects: "fadeIn zoom:in",
+         duration: 300
+       }
+      }
+    });
+    </script>
 
 ### animation.close `Object`
 
-Animation to be used for closing of the popup.
+The animation played when the popup is closed.
 
-#### Example
+#### Example - configure the close animation
 
+    <input id="timepicker" />
+    <script>
     $("#timepicker").kendoTimePicker({
-        animation: {
-            close: {
-                effects: "fadeOut",
-                duration: 300,
-                hide: true
-                show: false
-            }
-        }
+      animation: {
+       close: {
+         effects: "zoom:out",
+         duration: 300
+       }
+      }
     });
+    </script>
 
 ### animation.close.effects `String`
 
-Effect to be used for closing of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.
+
+[Complete list of available animations](/kendo-ui/api/framework/fx#effects)
 
 ### animation.close.duration `Number`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 ### animation.open `Object`
 
-Animation to be used for opening of the popup.
+The animation played when the calendar popup is opened.
 
-#### Example
+#### Example - configure the open animation
 
-    $("#timePicker").kendoTimePicker({
-        animation: {
-            open: {
-                effects: "fadeIn",
-                duration: 300,
-                show: true
-            }
-        }
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+      animation: {
+       open: {
+         effects: "zoom:in",
+         duration: 300
+       }
+      }
     });
+    </script>
 
 ### animation.open.effects `String`
 
-Effect to be used for opening of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.
+
+[Complete list of available animations](/kendo-ui/api/framework/fx#effects)
 
 ### animation.open.duration `Number`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
-### culture `String`*(default: en-US)*
+### culture `String`*(default: "en-US")*
 
  Specifies the culture info used by the widget.
 
-#### Example
+#### Example - specify German culture internationalization
 
-    // specify on widget initialization
+    <input id="timepicker" />
+    <script>
     $("#timepicker").kendoTimePicker({
         culture: "de-DE"
     });
+    </script>
 
 ### dates `Array`
 
- Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
+ Specifies a list of dates, which are shown in the time drop-down list. If not set, the TimePicker will auto-generate the available times.
 
 
 #### Example
 
-    $("#timePicker").kendoTimePicker({
-        dates: [new Date(2000, 10, 10, 10, 0, 0), new Date(2000, 10, 10, 30, 0)] //the drop-down list will consist only two entries - "10:00 AM" and "10:30 AM"
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        dates: [
+            new Date(2000, 10, 10, 10, 0, 0),
+            new Date(2000, 10, 10, 30, 0)
+        ] //the drop-down list will consist only two entries - "10:00 AM" and "10:30 AM"
     });
+    </script>
 
-### format `String`*(default: h:mm tt)*
+### format `String`*(default: "h:mm tt")*
 
  Specifies the format, which is used to format the value of the TimePicker displayed in the input. The format also will be used to parse the input.
 
-### interval `Number`*(default: 30)*
+#### Example - specify a custom time format
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        format: "HH:mm"
+    });
+    </script>
+
+### interval `Number`*(default: "30")*
 
 Specifies the interval, between values in the popup list, in minutes.
 
-### max `Date`*(default: 00:00)*
+#### Example - specify a time interval
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        interval: 15
+    });
+    </script>
+
+### max `Date`*(default: "00:00")*
 
 Specifies the end value in the popup list.
 
-### min `Date`*(default: 00:00)*
+#### Example - specify a maximum selectable time
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        max: new Date(2000, 0, 1, 22, 0, 0) //date part is ignored
+    });
+    </script>
+
+### min `Date`*(default: "00:00")*
 
 Specifies the start value in the popup list.
+
+#### Example - specify a minimum selectable time
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        min: new Date(2000, 0, 1, 8, 0, 0) //date part is ignored
+    });
+    </script>
 
 ### parseFormats `Array`
 
@@ -106,14 +189,42 @@ Specifies the start value in the popup list.
 
 #### Example
 
-    $("#timePicker").kendoTimePicker({
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
         format: "h:mm tt",
         parseFormats: ["HH:mm"] //format also will be added to parseFormats
     });
+    </script>
 
 ### value `Date`*(default: null)*
 
 Specifies the selected time.
+
+#### Example
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        value: new Date(2011, 0, 1, 10, 30)
+    });
+    </script>
+
+## Fields
+
+### options `Object`
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var options = timepicker.options;
+    <script>
 
 ## Methods
 
@@ -121,9 +232,19 @@ Specifies the selected time.
 
 Closes the drop-down list of a TimePicker.
 
-#### Close the time drop-down list of a TimePicker.
+#### Example
 
-    $("timepicker").data("kendoTimePicker").close();
+    <input id="timepicker" />
+    <button id="close">Close</button>
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    $("#close").click(function() {
+        timepicker.close();
+    });
+    </script>
 
 ### destroy
 Prepares the **TimePicker** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
@@ -132,26 +253,19 @@ Prepares the **TimePicker** for safe removal from DOM. Detaches all event handle
 
 #### Example
 
-    var timePicker = $("#timePicker").data("kendoTimePicker");
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
 
     // detach events
-    timePicker.destroy();
+    timepicker.destroy();
+    </script>
 
 ### enable
 
 Enables or disables a TimePicker.
-
-#### Enable a TimePicker
-
-    $("timepicker").data("kendoTimePicker").enable();
-
-#### Enable a TimePicker
-
-    $("timepicker").data("kendoTimePicker").enable(true);
-
-#### Disable a TimePicker
-
-    $("timepicker").data("kendoTimePicker").enable(false);
 
 #### Parameters
 
@@ -159,19 +273,65 @@ Enables or disables a TimePicker.
 
 Enables (**true** or undefined) or disables (**false**) a TimePicker.
 
+#### Example - disable TimePicker widget
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.enable(false);
+    </script>
+
+#### Example - enable TimePicker widget
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.enable();
+    </script>
+
+### readonly
+
+Toggles the readonly state of the widget. When the widget is readonly it doesn't allow user input.
+
+> There is a difference between disabled and readonly mode. The value of a disabled widget is **not** posted as part of a `form` whereas the value of a readonly widget is posted.
+
+#### Parameters
+
+##### readonly `Boolean`
+
+The argument, which defines whether the timepicker should be readonly or editable.
+
+#### Example - make TimePicker widget readonly
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.readonly();
+    </script>
+
+#### Example - make TimePicker widget editable
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.readonly(false);
+    </script>
+
 ### max
 
 Gets or sets the maximum value of the TimePicker.
-
-#### Get the maximum value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    var maximum = timePicker.max();
-
-#### Set the maximum value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    timePicker.max(new Date(1900, 0, 1, 10, 0, 0));
 
 #### Parameters
 
@@ -183,19 +343,33 @@ The maximum time value to set for a TimePicker, expressed as a Date object or as
 
 `Date` The maximum time value of a TimePicker.
 
+#### Example - get the max value of the timepicker
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var max = timepicker.max();
+
+    console.log(max);
+    </script>
+
+#### Example - set the max value of the timepicker
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.max(new Date(2000, 0, 1, 22, 0, 0));
+    </script>
+
 ### min
 
 Gets or sets the minimum value of the TimePicker.
-
-#### Get the minimum value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    var minimum = timePicker.min();
-
-#### Set the minimum value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    timePicker.min(new Date(1900, 0, 1, 10, 0, 0));
 
 #### Parameters
 
@@ -207,27 +381,78 @@ The minimum time value to set for a TimePicker, expressed as a Date object or as
 
 `Date` The minimum time value of a TimePicker.
 
+#### Example - get the min value of the timepicker
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var min = timepicker.min();
+
+    console.log(min);
+    </script>
+
+#### Example - set the min value of the timepicker
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.min(new Date(2000, 0, 1, 8, 0, 0));
+    </script>
+
 ### open
 
 Opens the drop-down list of a TimePicker.
 
-#### Open the time drop-down list of a TimePicker.
+#### Example
 
-    $("timepicker").data("kendoTimePicker").open();
+    <input id="timepicker" />
+    <button id="open">Open</button>
+    <script>
+    $("#timepicker").kendoTimePicker();
 
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    $("#open").click(function() {
+        timepicker.open();
+    });
+    </script>
+
+### setOptions
+
+Changes the initial TimePicker configuration. **Will be included in Q3 2013 SP1. Currently available in Q3 2013 internal builds only.**
+
+#### Parameters
+
+##### options `Object`
+
+The new configuration options.
+
+#### Example
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        min: new Date(2001, 0, 1, 8, 0, 0),
+        max: new Date(2013, 0, 1, 18, 0 0)
+    });
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.setOptions({
+        min: new Date(2013, 0, 1, 11, 30, 0),
+        max: new Date(2013, 0, 1, 16, 30, 0)
+    });
+    </script>    
+    
 ### value
 
 Gets or sets the value of the TimePicker.
-
-#### Get the value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    var timePickerValue = timePicker.value();
-
-#### Set the value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    timePicker.value("10:00 AM");
 
 #### Parameters
 
@@ -239,78 +464,133 @@ The time value to set for a TimePicker, expressed as a Date object or as a strin
 
 `Date` The time value of a TimePicker.
 
+#### Example - gets the value of the widget
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        value: "10:00 AM"
+    });
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var value = timepicker.value();
+    console.log(value);
+    </script>
+
+#### Example - sets the value of the widget
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.value("10:00 AM");
+    </script>
+
 ## Events
 
 ### change
 
-Triggered when the underlying value of a TimePicker is changed.
+Fires when the selected date is changed
 
-#### Attach change event handler during initialization; detach via unbind()
+#### Event Data
 
-    // event change for expand
-    var onChange = function(e) {
-        // ...
-    };
+##### e.sender `kendo.ui.TimePicker`
 
-    // attach change event handler during initialization
-    var timePicker = $("#timePicker").kendoTimePicker({
-        change: onChange
+The widget instance which fired the event.
+
+#### Example - subscribe to the "change" event during initialization
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
+        change: function() {
+            var value = this.value();
+            console.log(value); //value is the selected date in the timepicker
+        }
     });
+    </script>
 
-    // detach change event handler via unbind()
-    timePicker.data("kendoTimePicker").unbind("change", onChange);
+#### Example - subscribe to the "change" event after initialization
 
-#### Attach change event handler via bind(); detach via unbind()
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
 
-    // event change for expand
-    var onChange = function(e) {
-        // ...
-    };
+    var timepicker = $("#timepicker").data("kendoTimePicker");
 
-    // attach change event handler via bind()
-    $("#timePicker").data("kendoTimePicker").bind("change", onChange);
-
-    // detach change event handler via unbind()
-    $("#timePicker").data("kendoTimePicker").unbind("change", onChange);
+    timepicker.bind("change", function() {
+        var value = this.value();
+        console.log(value); //value is the selected date in the timepicker
+    });
+    </script>
 
 ### close
 
 Fires when the time drop-down list is closed
 
-#### Example
+#### Event Data
 
-    $("#timePicker").kendoTimePicker({
+##### e.sender `kendo.ui.TimePicker`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "close" event during initialization
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
         close: function(e) {
-            // handle event
+            e.preventDefault(); //prevent popup closing
         }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "close" event after initialization
 
-    // get a reference to the timePicker widget
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    // bind to the close event
-    timePicker.bind("close", function(e) {
-        // handle event
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").timepicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.bind("close", function(e) {
+        e.preventDefault(); //prevent popup closing
     });
+    </script>
 
 ### open
 
 Fires when the time drop-down list is opened
 
-#### Example
+#### Event Data
 
-    $("#timePicker").kendoTimePicker({
+##### e.sender `kendo.ui.TimePicker`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "open" event during initialization
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker({
         open: function(e) {
-            // handle event
+            e.preventDefault(); //prevent popup opening
         }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "open" event after initialization
 
-    // get a reference to the timePicker widget
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    // bind to the open event
-    timePicker.bind("open", function(e) {
-        // handle event
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    timepicker.bind("open", function(e) {
+        e.preventDefault(); //prevent popup opening
     });
+    </script>

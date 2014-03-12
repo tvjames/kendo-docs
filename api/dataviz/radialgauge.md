@@ -1,6 +1,9 @@
 ---
 title: kendo.dataviz.ui.RadialGauge
-slug: dataviz-kendo.dataviz.ui.radialgauge
+meta_title: Configuration, methods and events of Kendo UI DataViz RadialGauge
+meta_description: Learn the configuration options for Radial Gauge widget, set the color and size of the border, use methods properly.
+slug: api-dataviz-radialgauge
+relatedDocs: gs-dataviz-radialgauge-overview
 tags: api,dataviz
 publish: true
 ---
@@ -64,9 +67,10 @@ Specifies a line consisting of a repeating pattern of long-dash-dot-dot.
 
  The width of the border.
 
-### gaugeArea.height `Number`*(default: vertical gauge is 200px; horizontal gauge is 60px)*
+### gaugeArea.height `Number`
 
-The height of the gauge area.
+The height of the gauge area.  By default, the vertical gauge is 200px and
+the horizontal one is 60px.
 
 ### gaugeArea.margin `Number|Object`*(default: 5)*
 
@@ -81,9 +85,10 @@ The height of the gauge area.
     // margin right and bottom are with 5px (by default)
     margin: { top: 1, left: 1 }
 
-### gaugeArea.width `Number`*(default: vertical gauge is 60px; horizontal gauge is 200px)*
+### gaugeArea.width `Number`
 
-The width of the gauge area.
+The width of the gauge area.  By default the vertical gauge is 60px
+and horizontal gauge is 200px.
 
 ### pointer `Object`
 
@@ -111,13 +116,34 @@ Any valid CSS color string will work here, including hex and rgb.
 
 The value of the gauge.
 
-### rangeSize `Number`
+### renderAs `String`
 
-The width of the range indicators.
+Sets the preferred rendering engine.
+If it is not supported by the browser, the Gauge will switch to the first available mode.
 
-### rangeDistance `Number`
+The supported values are:
 
-The distance from the range indicators to the ticks.
+* "svg" - renders the widget as inline SVG document, if available
+* "vml" - renders the widget as VML, if available
+* "canvas" - renders the widget as a Canvas element, if available.
+
+> Using Canvas rendering disables most interactive features.
+
+### Example - Render as Canvas, if supported
+
+    <div id="gauge"></div>
+    <script>
+    $("#gauge").kendoRadialGauge({
+        renderAs: "canvas",
+        pointer: {
+            value: 50
+        },
+        scale: {
+            min: 0,
+            max: 100
+        }
+    });
+    </script>
 
 ### scale `Object`
 
@@ -237,7 +263,7 @@ Template variables:
 
 #### Example
 
-    // chart intialization
+    // chart initialization
     $("#radial-gauge").kendoRadialGauge({
          scale: {
              labels: {
@@ -314,21 +340,6 @@ The interval between minor divisions.
 ### scale.ranges `Array`
 
 The ranges of the scale.
-The range fields:
-
-
-#### *"from"*
-
-The start position of the range in scale units.
-
-#### *"to"*
-
-The end position of the range in scale units.
-
-#### *"color"*
-
-The color of the range.
-Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
 
@@ -341,6 +352,35 @@ Any valid CSS color string will work here, including hex and rgb.
             }]
         }
      });
+
+### scale.ranges.from `Number`
+
+The start position of the range in scale units.
+
+### scale.ranges.to `Number`
+
+The end position of the range in scale units.
+
+### scale.ranges.opacity `Number`
+
+The opacity of the range.
+
+### scale.ranges.color `String`
+
+The color of the range.
+Any valid CSS color string will work here, including hex and rgb.
+
+### scale.rangePlaceholderColor `String`
+
+The default color for the ranges.
+
+### scale.rangeSize `Number`
+
+The width of the range indicators.
+
+### scale.rangeDistance `Number`
+
+The distance from the range indicators to the ticks.
 
 ### scale.reverse `Boolean`*(default: false)*
 
@@ -379,18 +419,57 @@ Redraws the gauge.
 
 ### svg
 
-Returns the SVG representation of the current gauge.
-The returned string is a self-contained SVG document
-that can be used as is or converted to other formats
-using tools like [Inkscape](http://inkscape.org/) and
+Returns the [SVG](http://www.w3.org/Graphics/SVG/) representation of the gauge.
+The returned string is a self-contained SVG document that can be used as is or
+converted to other formats using tools like [Inkscape](http://inkscape.org/) and
 [ImageMagick](http://www.imagemagick.org/).
-Both programs provide command-line interface
-suitable for backend processing.
+Both programs provide command-line interface suitable for server-side processing.
 
 #### Example
 
-    var gauge = $("#radial-gauge").data("kendoRadialGauge");
-    var svgText = gauge.svg();
+    <div id="gauge"></div>
+    <script>
+    $("#gauge").kendoRadialGauge({
+        pointer: {
+            value: 50
+        },
+        scale: {
+            min: 0,
+            max: 100
+        }
+    });
+    var gauge = $("#gauge").data("kendoRadialGauge");
+    var svg = gauge.svg();
+    console.log(svg); // displays the SVG string
+    </script>
+
+### imageDataURL
+
+Returns a PNG image of the gauge encoded as a [Data URL](https://developer.mozilla.org/en-US/docs/data_URIs).
+
+#### Returns
+
+`String` A data URL with `image/png` MIME type. Will be `null` if the browser does not support the `canvas` element.
+
+#### Example - show a snapshot of the gauge
+
+    <div id="gauge"></div>
+    <script>
+    $("#gauge").kendoRadialGauge({
+        pointer: {
+            value: 50
+        },
+        scale: {
+            min: 0,
+            max: 100
+        }
+    });
+    var gauge = $("#gauge").data("kendoRadialGauge");
+    var image = gauge.imageDataURL();
+    if (!window.open(image)) {
+        document.location.href = image;
+    }
+    </script>
 
 ### value
 
@@ -398,5 +477,4 @@ Change the value of the gauge.
 
 #### Example
 
-    var gauge = $("#radial-gauge").data("kendoRadialGauge");
-    gauge.redraw();
+    $("#radial-gauge").data("kendoRadialGauge").value(20);

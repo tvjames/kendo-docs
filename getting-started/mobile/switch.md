@@ -1,6 +1,9 @@
 ---
 title: Switch
+meta_title: User Manual for Kendo UI Mobile Switch widget
+meta_description: How to display two exclusive choices with Mobile Switch widget, check/uncheck the mobile switch and tailor on/off labels of the mobile switch.
 slug: gs-mobile-switch
+relatedDocs: api-mobile-switch
 tags: getting-started,mobile
 publish: true
 ---
@@ -26,12 +29,12 @@ Alternatively, it can be initialized using jQuery plugin syntax in the containin
     <input type="checkbox" id="switch" />
 
     <script>
-        var switchWidget = $("#switch").kendoMobileSwitch();
+        var switchInstance = $("#switch").kendoMobileSwitch();
     </script>
 
 ## Checking/Unchecking the Mobile Switch
 
-The checked state of the mobile Switch depends on the [`checked` configuration option](/api/mobile/switch#checked)
+The checked state of the mobile Switch depends on the [`checked` configuration option](/kendo-ui/api/mobile/switch#checked)
 or the `checked` attribute of the widget element.
 
 ### Initialize Kendo mobile Switch from checked `input`
@@ -39,7 +42,7 @@ or the `checked` attribute of the widget element.
     <input type="checkbox" id="switch" checked="checked" />
 
     <script>
-        var switchWidget = $("#switch").kendoMobileSwitch();
+        var switchInstance = $("#switch").kendoMobileSwitch();
     </script>
 
 ### Initialize checked mobile Switch using jQuery plugin syntax
@@ -47,7 +50,7 @@ or the `checked` attribute of the widget element.
     <input type="checkbox" id="switch" />
 
     <script>
-        var switchWidget = $("#switch").kendoMobileSwitch({ checked: true });
+        var switchInstance = $("#switch").kendoMobileSwitch({ checked: true });
     </script>
 
 ## Specifying the Text of the Labels
@@ -57,6 +60,6 @@ or the `checked` attribute of the widget element.
     <input type="checkbox" id="switch" />
 
     <script>
-        var switchWidget = $("#switch").kendoMobileSwitch({ onLabel: "YES", offLabel: "NO" });
+        var switchInstance = $("#switch").kendoMobileSwitch({ onLabel: "YES", offLabel: "NO" });
     </script>
 

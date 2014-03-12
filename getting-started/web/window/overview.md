@@ -1,6 +1,9 @@
 ---
-title: Window Overview
+title: Overview
+meta_title: Overview of Kendo UI Window widget
+meta_description: Learn how to get started with Kendo UI Window widget, load content via Ajax, access an existing window.
 slug: gs-web-window-overview
+relatedDocs: api-web-window
 tags: getting-started,web
 publish: true
 ---
@@ -41,17 +44,24 @@ Among the properties that can be controlled:
 
 
 *   Minimum height/width
-*   Available user actions (close/refresh/maximize/minimize) and ability to define custom ones
+*   Available user actions (close/refresh/maximize/minimize/pin) and ability to define custom ones
 *   Title
 *   Draggable and resizable behaviors
+*	Initial position in pixels, with regard to the page top-left corner
+*	Pinned state - whether the Window moves together with the rest of the page content during scrolling
 
-### Create a modal Window with all user actions enabled
+### Create a modal Window with all user actions enabled and a predefined position
 
     $("#window").kendoWindow({
-        actions: ["Custom", "Refresh", "Maximize", "Minimize", "Close"],
+        actions: ["Custom", "Pin", "Refresh", "Maximize", "Minimize", "Close"],
         draggable: false,
         height: "300px",
         modal: true,
+		pinned: false,
+		position: {
+			top: 100,
+			left: 100
+		},
         resizable: false,
         title: "Modal Window",
         width: "500px"
@@ -62,10 +72,9 @@ in the title of a **Window**. The maximize action serves both as a button for ex
 **Window** to fill the screen and as a button to restore a **Window** to its previous
 size. The minimize action collapses a **Window** to its title.
 
-
-If a non-recognized action name is supplied, it is treated as a custom action - **k-icon** and **k-actionname**
-CSS classes are rendered for it and no click event handler is attached automatically. The Kendo stylesheets have a supplied icon for
-actions with the name "Custom", but any name can be used. Click events can be captured and handled in a standard way:
+If a non-recognized action name is supplied, it is treated as a custom action and the following CSS classes are rendered for it - **k-icon** and **k-i-actionname** (all letters lowercase).
+No click event handler is attached automatically either. The Kendo stylesheets have a supplied icon for actions with the name "custom", but any name can be used.
+Click events can be captured and handled in a standard way:
 
 ### Custom actions
 
@@ -111,7 +120,6 @@ actions with the name "Custom", but any name can be used. Click events can be ca
 
 ## Loading Window content via AJAX
 
-
 A **Window** provides built-in support for asynchronously loading content from a URL. This URL
 should return a HTML fragment that can be loaded in a Window content area.
 
@@ -128,8 +136,39 @@ should return a HTML fragment that can be loaded in a Window content area.
         });
     });
 
-## Accessing an Existing Window
+## Using iframes
 
+The Window creates an `iframe` for its content if the content URL contains a protocol, i.e. it is assumed that in this case the nested page resides on another domain.
+If the URL does not contain s protocol, the assumption is that it is a local URL that will load a partial view (not a full page), so an iframe is not created.
+This behavior can be controlled explicitly via the widget configuration.
+
+> Loading full pages inside the Window without an iframe is incorrect. This will break the page HTML markup and will cause undesired side effects and Javascript errors.
+
+> Loading partial content inside an iframe is incorrect as well.
+
+### Accessing the `window` and `document` objects inside the `iframe`
+
+In order to access content and script objects inside the Kendo UI Window `iframe`, the nested page must belong to the **same domain** as the main page.
+
+    <div id="window"></div>
+
+    <script>
+    
+    var windowElement = $("#window").kendoWindow({
+        iframe: true,
+        content: "http://docs.telerik.com/kendo-ui/"
+    });
+
+    var iframeDomElement = windowElement.children("iframe")[0];
+    var iframeWindowObject = iframeDomElement.contentWindow;
+    var iframeDocumentObject = iframeDomElement.contentDocument;
+    // which is equivalent to
+    // var iframeDocumentObject = iframeWindowObject.document;
+    var iframejQuery = iframeWindowObject.$; // if jQuery is registered inside the iframe page, of course
+    
+    </script>
+
+## Accessing an Existing Window
 
 You can reference an existing **Window** instance via
 [jQuery.data()](http://api.jquery.com/jQuery.data/). Once a reference has been established, you can
@@ -139,4 +178,66 @@ use the API to control its behavior.
 
     var win = $("#window").data("kendoWindow");
 
+### Accessing an existing Window instance from its non-iframe content
 
+An easy way to obtain reference to a Kendo UI Window instance from within its non-iframe content is to use DOM traversal.
+
+    var win = elementInsideWindow.closest(".k-window-content").data("kendoWindow");
+
+`elementInsideWindow` is a jQuery object containing and element inside the Window content area.
+
+### Accessing an existing Window instance from within an iframe
+
+If the Window is displaying a page in an iframe and the page needs to access the widget, this can be achieved by using `window.parent` from within the iframe.
+
+    var win = window.parent.$("#window").data("kendoWindow");
+
+> Please note that iframe-parent access is possible only if the iframe and the parent page belong to the same domain.
+	
+## Using Kendo UI Window with a form
+
+By default, the Window widget is moved in the DOM and placed as a child of the `body` element after initialization. This facilitates positioning the widget on top of everything else,
+but may lead to undesired side effects if the Window is created from an element inside a form, as the moved form fields will not be submitted. There are two ways to avoid this:
+
+1. the whole form including its opening and closing tags should be inside the element, from which the Window is created;
+1. if the Window is created from an element inside the form, then the [appendTo](/kendo-ui/api/web/window#configuration-appendTo) property should be used, so that the Window is not moved outside the form;
+
+If form data is validated on the server, we recommend submitting via AJAX, so that the Window remains visible and any validation messages are displayed seamlessly.
+
+The above remarks only apply to the case when the Window is *not* using an `iframe`.
+
+## Destroying a Kendo UI Window
+
+Unlike most other widgets, the Kendo UI Window is **completely removed from the DOM** when [destroyed](/kendo-ui/getting-started/widgets#destroying-kendo-ui-widgets).
+This means that the element, from which it was initialized, no longer exists on the page, so a new Window instance can be created only from another element.
+
+## Printing the Window contents
+
+The CSS code below can be used to hide all the page content and leave only the Window content visible during printing.
+The code assumes that only one Window instance exists on the page and it is a child of the `body`, i.e. the `appendTo` option is **not** used.
+If there are multiple Window instances on the page and only one should be printed, then the `.k-window` class below should be replaced by a custom CSS class, which is applied to the Window wrapper element manually.
+
+    @media print
+    {
+        body > *
+        {
+            display: none !important;
+        }
+        
+        body > .k-window
+        {
+            display: block !important;
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            width: auto !important;
+            height: auto !important;
+            border-width: 0;
+            box-shadow: none !important;
+        }
+        
+        .k-window .k-window-titlebar
+        {
+            display: none;
+        }
+    }

@@ -1,6 +1,9 @@
 ---
 title: Metadata
+meta_title: Documentation guide for using metadata in File Upload UI widget
+meta_description: How to send metadata to the save handler and receive metadata in Kendo UI Upload widget.
 slug: upload-metadata
+ordinal: 3
 publish: true
 ---
 
@@ -57,7 +60,7 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             echo json_encode($data);
         ?>
 
-2. Declare a handler for the [success event](http://www.kendoui.com/documentation/ui-widgets/upload/events.aspx#success) and process the response
+2. Declare a handler for the [success event](/kendo-ui/api/web/upload/events.aspx#success) and process the response
 
         function onSuccess(e) {
             alert("Status: " + e.response.status);
@@ -73,4 +76,4 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             success: onSuccess
         });
 
-The same approach is applicable for the remove handler as well.
+> The same approach of sending and receiving metadata is applicable for the **remove** handler as well.

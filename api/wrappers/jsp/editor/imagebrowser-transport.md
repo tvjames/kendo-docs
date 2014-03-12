@@ -1,78 +1,173 @@
 ---
-title: editor-imagebrowser-transport
-slug: jsp-editor-imagebrowser-transport
+title: editor-imageBrowser-transport
+slug: jsp-editor-imageBrowser-transport
 tags: api, java
 publish: true
 ---
 
-# \<kendo:editor-imagebrowser-transport\>
-A JSP tag representing Kendo Transport.
+# \<kendo:editor-imageBrowser-transport\>
+
+Specifies the settings for loading and saving data.
 
 #### Example
-    <kendo:editor-imagebrowser>
-        <kendo:editor-imagebrowser-transport></kendo:editor-imagebrowser-transport>
-    </kendo:editor-imagebrowser>
-
+    <kendo:editor-imageBrowser>
+        <kendo:editor-imageBrowser-transport></kendo:editor-imageBrowser-transport>
+    </kendo:editor-imageBrowser>
 
 ## Configuration Attributes
 
+### create `java.lang.String`
 
-### read `Object`
-
-Options or URL for remote image retrieval.
+Options or URL which will handle the directory creation. If not specified that create new folder button will not be present. Further configuration is available via [kendo:editor-imageBrowser-transport-create](#kendo-editor-imageBrowser-transport-create). 
 
 #### Example
-    <kendo:editor read="read">
-    </kendo:editor>
+    <kendo:editor-imageBrowser-transport create="create">
+    </kendo:editor-imageBrowser-transport>
 
+### destroy `java.lang.String`
 
+Options or URL which will handle the file and directory deletion. If not specified the delete button will not be present. Further configuration is available via [kendo:editor-imageBrowser-transport-destroy](#kendo-editor-imageBrowser-transport-destroy). 
 
-### thumbnailUrl `String`
+#### Example
+    <kendo:editor-imageBrowser-transport destroy="destroy">
+    </kendo:editor-imageBrowser-transport>
+
+### imageUrl `java.lang.String`
+
+The URL responsible for serving the original image. A file name placeholder should be specified.
+
+#### Example
+    <kendo:editor-imageBrowser-transport imageUrl="imageUrl">
+    </kendo:editor-imageBrowser-transport>
+
+### read `java.lang.String`
+
+Options or URL for remote image retrieval. Further configuration is available via [kendo:editor-imageBrowser-transport-read](#kendo-editor-imageBrowser-transport-read). 
+
+#### Example
+    <kendo:editor-imageBrowser-transport read="read">
+    </kendo:editor-imageBrowser-transport>
+
+### thumbnailUrl `java.lang.String`
 
 The URL for retrieving the thumbnail version of the image. If not specified a default image icon will be shown.
+If function is assigned, the current path and image name will be provided.
 
 #### Example
-    <kendo:editor thumbnailUrl="thumbnailUrl">
-    </kendo:editor>
+    <kendo:editor-imageBrowser-transport thumbnailUrl="thumbnailUrl">
+    </kendo:editor-imageBrowser-transport>
 
-
-
-### uploadUrl `String`
+### uploadUrl `java.lang.String`
 
 The URL which will handle the upload of the new images. If not specified the Upload button will not be displayed.
 
 #### Example
-    <kendo:editor uploadUrl="uploadUrl">
-    </kendo:editor>
+    <kendo:editor-imageBrowser-transport uploadUrl="uploadUrl">
+    </kendo:editor-imageBrowser-transport>
 
 
+##  Configuration JSP Tags
 
-### imageUrl `String`
-
-The URL responsible for serving the original image. A file name placeholder should be specifed.
-
-#### Example
-    <kendo:editor imageUrl="imageUrl">
-    </kendo:editor>
-
-
-
-### destroy `Object`
-
-Options or URL which will handle the file and directory deletion. If not specified the delete button will not be present.
-
-#### Example
-    <kendo:editor destroy="destroy">
-    </kendo:editor>
-
-
-
-### create `Object`
+### kendo:editor-imageBrowser-transport-create
 
 Options or URL which will handle the directory creation. If not specified that create new folder button will not be present.
 
-#### Example
-    <kendo:editor create="create">
-    </kendo:editor>
+More documentation is available at [kendo:editor-imageBrowser-transport-create](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport-create).
 
+#### Example
+
+    <kendo:editor-imageBrowser-transport>
+        <kendo:editor-imageBrowser-transport-create></kendo:editor-imageBrowser-transport-create>
+    </kendo:editor-imageBrowser-transport>
+
+### kendo:editor-imageBrowser-transport-destroy
+
+Options or URL which will handle the file and directory deletion. If not specified the delete button will not be present.
+
+More documentation is available at [kendo:editor-imageBrowser-transport-destroy](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport-destroy).
+
+#### Example
+
+    <kendo:editor-imageBrowser-transport>
+        <kendo:editor-imageBrowser-transport-destroy></kendo:editor-imageBrowser-transport-destroy>
+    </kendo:editor-imageBrowser-transport>
+
+### kendo:editor-imageBrowser-transport-read
+
+Options or URL for remote image retrieval.
+
+More documentation is available at [kendo:editor-imageBrowser-transport-read](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport-read).
+
+#### Example
+
+    <kendo:editor-imageBrowser-transport>
+        <kendo:editor-imageBrowser-transport-read></kendo:editor-imageBrowser-transport-read>
+    </kendo:editor-imageBrowser-transport>
+
+
+## Event Attributes
+
+### thumbnailUrl `String`
+
+The URL for retrieving the thumbnail version of the image. If not specified a default image icon will be shown.
+If function is assigned, the current path and image name will be provided.
+
+
+#### Example
+    <kendo:editor-imageBrowser-transport thumbnailUrl="handle_thumbnailUrl">
+    </kendo:editor-imageBrowser-transport>
+    <script>
+        function handle_thumbnailUrl(e) {
+            // Code to handle the thumbnailUrl event.
+        }
+    </script>
+
+### imageUrl `String`
+
+The URL responsible for serving the original image. A file name placeholder should be specified.
+
+
+#### Example
+    <kendo:editor-imageBrowser-transport imageUrl="handle_imageUrl">
+    </kendo:editor-imageBrowser-transport>
+    <script>
+        function handle_imageUrl(e) {
+            // Code to handle the imageUrl event.
+        }
+    </script>
+
+## Event Tags
+
+### kendo:editor-imageBrowser-transport-thumbnailUrl
+
+The URL for retrieving the thumbnail version of the image. If not specified a default image icon will be shown.
+If function is assigned, the current path and image name will be provided.
+
+
+#### Example
+    <kendo:editor-imageBrowser-transport>
+        <kendo:editor-imageBrowser-transport-thumbnailUrl>
+            <script>
+                function(e) {
+                    // Code to handle the thumbnailUrl event.
+                }
+            </script>
+        </kendo:editor-imageBrowser-transport-thumbnailUrl>
+    </kendo:editor-imageBrowser-transport>
+
+### kendo:editor-imageBrowser-transport-imageUrl
+
+The URL responsible for serving the original image. A file name placeholder should be specified.
+
+
+#### Example
+    <kendo:editor-imageBrowser-transport>
+        <kendo:editor-imageBrowser-transport-imageUrl>
+            <script>
+                function(e) {
+                    // Code to handle the imageUrl event.
+                }
+            </script>
+        </kendo:editor-imageBrowser-transport-imageUrl>
+    </kendo:editor-imageBrowser-transport>
 

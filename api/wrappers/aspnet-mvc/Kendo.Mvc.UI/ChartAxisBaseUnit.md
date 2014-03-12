@@ -5,19 +5,27 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.ChartAxisBaseUnit
-
 The base time interval for the axis.
 
 ## Fields
-
+### Seconds
+Seconds
+### Minutes
+Minutes
 ### Hours
-Hours.
-
+Hours
 ### Days
-Days.
-
+Days
 ### Months
-Months.
-
+Months
+### Weeks
+Weeks
 ### Years
-Years.
+Years
+### Fit
+Automatic base unit based on limit set from MaxDataGroups.
+            Note that the BaseUnitStep setting will be disregarded.
+
+
+
+

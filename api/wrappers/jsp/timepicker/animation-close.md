@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:timePicker-animation-close\>
-A JSP tag representing Kendo Close.
+
+The animation played when the popup is closed.
 
 #### Example
     <kendo:timePicker-animation>
         <kendo:timePicker-animation-close></kendo:timePicker-animation-close>
     </kendo:timePicker-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for closing of the popup.
-
-#### Example
-    <kendo:timePicker effects="effects">
-    </kendo:timePicker>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
-    <kendo:timePicker duration="duration">
-    </kendo:timePicker>
+    <kendo:timePicker-animation-close duration="duration">
+    </kendo:timePicker-animation-close>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:timePicker-animation-close effects="effects">
+    </kendo:timePicker-animation-close>
 

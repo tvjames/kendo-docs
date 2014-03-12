@@ -8,11 +8,11 @@ publish: true
 
 Kendo MVVM provides the ability to create custom bindings.
 
-> **Important:** The custom binding should be registered **before** `kendo.bind` is called.
+> **Important:** The custom binding should be registered **before**  `kendo.bind` is called.
 
 ## Registering a custom binding
 
-A custom binding is registered by extending the `kendo.data.Binder` object.
+A custom binding is registered by extending the [`kendo.data.Binder`](/kendo-ui/api/framework/binder) object.
 
 #### Example: one-way binding (the HTML element will be updated when the view-model changes)
 
@@ -20,7 +20,7 @@ A custom binding is registered by extending the `kendo.data.Binder` object.
         kendo.data.binders.slide = kendo.data.Binder.extend({
             refresh: function() {
                 var value = this.bindings["slide"].get();
-            
+
                 if (value) {
                     $(this.element).slideDown();
                 } else {
@@ -28,11 +28,11 @@ A custom binding is registered by extending the `kendo.data.Binder` object.
                 }
             }
         });
-    
+
         var viewModel = kendo.observable({
             slideValue: true
         });
-        
+
         kendo.bind(document.body, viewModel);
     </script>
 
@@ -47,7 +47,7 @@ A custom binding is registered by extending the `kendo.data.Binder` object.
             init: function(element, bindings, options) {
                 //call the base constructor
                 kendo.data.Binder.fn.init.call(this, element, bindings, options);
-    
+
                 var that = this;
                 //listen for the change event of the element
                 $(that.element).on("change", function() {
@@ -68,18 +68,36 @@ A custom binding is registered by extending the `kendo.data.Binder` object.
                 }
             }
         });
-    
+
         //View-Model source
         var viewModel = kendo.observable({
             number: 10
         });
-    
+
         kendo.bind(document.body, viewModel);
     </script>
 
     <!-- View source -->
     <input data-bind="numericValue: number" />
     Input value: <span data-bind="text: number" />
+
+#### Example: custom widget binding (the widget will be updated when the view-model changes)
+
+    //the following example demonstrates how to bind the max value of a NumericTextBox widget
+    kendo.data.binders.widget.max = kendo.data.Binder.extend({
+        init: function(widget, bindings, options) {
+            //call the base constructor
+            kendo.data.Binder.fn.init.call(this, widget.element[0], bindings, options);
+        },
+        refresh: function() {
+            var that = this,
+            value = that.bindings["max"].get(); //get the value from the View-Model
+            $(that.element).data("kendoNumericTextBox").max(value); //update the widget
+        }
+    });
+
+    <!-- View source -->
+    <input data-role="numerictextbox" id="numeric" data-bind="value: value, max: max" />​
 
 ### init
 

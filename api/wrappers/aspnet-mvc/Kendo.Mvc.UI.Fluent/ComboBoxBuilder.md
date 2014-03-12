@@ -5,131 +5,219 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.ComboBoxBuilder
-
 Defines the fluent interface for configuring the ComboBox component.
+
+
 
 ## Methods
 
-### AutoBind(System.Boolean)
+### AutoBind(`System.Boolean`)
 Controls whether to bind the widget to the DataSource on initialization.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .AutoBind(false)
-        %>
 
-### DataValueField(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .AutoBind(false)
+    %>
+
+
+### DataValueField(`System.String`)
 Sets the field of the data item that provides the value content of the list items.
 
-#### Example
+
+
+
+#### Example (ASPX)
     <%= Html.Kendo().DropDownList()
-        .Name("DropDownList")
-        .DataTextField("Text")
-        .DataValueField("Value")
-        %>
+    .Name("DropDownList")
+    .DataTextField("Text")
+    .DataValueField("Value")
+    %>
 
-### Filter(System.String)
-Use it to enable filtering of items.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Filter("startswith");
-        %>
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.ComboBoxEventBuilder>`)
+Configures the client-side events.
 
-### Filter(Kendo.Mvc.UI.FilterType)
-Use it to enable filtering of items.
-
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Filter(FilterType.Contains);
-        %>
-
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.DropDownListItemFactory\>)
-Defines the items in the ComboBox
-
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Items(items =>
-        {
-        items.Add().Text("First Item");
-        items.Add().Text("Second Item");
-        })
-        %>
 
 #### Parameters
 
-##### addAction System.Action\<[Kendo.Mvc.UI.Fluent.DropDownListItemFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/DropDownListItemFactory)\>
+##### clientEventsAction System.Action<[Kendo.Mvc.UI.Fluent.ComboBoxEventBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ComboBoxEventBuilder)>
+The client events action.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .Events(events =>
+        events.Change("change")
+    )
+    %>
+
+
+### Filter(`System.String`)
+Use it to enable filtering of items.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .Filter("startswith");
+    %>
+
+
+### Filter(`Kendo.Mvc.UI.FilterType`)
+Use it to enable filtering of items.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .Filter(FilterType.Contains);
+    %>
+
+
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.DropDownListItemFactory>`)
+Defines the items in the ComboBox
+
+
+#### Parameters
+
+##### addAction System.Action<[Kendo.Mvc.UI.Fluent.DropDownListItemFactory](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/DropDownListItemFactory)>
 The add action.
 
-### HighlightFirst(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Telerik().ComboBox()
+    .Name("ComboBox")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
+    %>
+
+
+### HighlightFirst(`System.Boolean`)
 Use it to enable highlighting of first matched item.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .HighlightFirst(true)
-        %>
 
-### MinLength(System.Int32)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .HighlightFirst(true)
+    %>
+
+
+### MinLength(`System.Int32`)
 Specifies the minimum number of characters that should be typed before the widget queries the dataSource.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .MinLength(3)
-        %>
 
-### SelectedIndex(System.Int32)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .MinLength(3)
+    %>
+
+
+### SelectedIndex(`System.Int32`)
 Use it to set selected item index
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .SelectedIndex(0);
-        %>
 
 #### Parameters
 
 ##### index `System.Int32`
 Item index.
 
-### Suggest(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .SelectedIndex(0);
+    %>
+
+
+### Suggest(`System.Boolean`)
 Controls whether the ComboBox should automatically auto-type the rest of text.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Suggest(true)
-        %>
 
-### Placeholder(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .Suggest(true)
+    %>
+
+
+### Placeholder(`System.String`)
 A string that appears in the textbox when it has no value.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Placeholder("Select country...")
-        %>
 
-### CascadeFrom(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().ComboBox()
+    .Name("ComboBox")
+    .Placeholder("Select country...")
+    %>
+
+
+### CascadeFrom(`System.String`)
 Use it to set the Id of the parent ComboBox.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox2")
-        .CascadeFrom("ComboBox1")
-        %>
 
-### Text(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Telerik().ComboBox()
+    .Name("ComboBox2")
+    .CascadeFrom("ComboBox1")
+    %>
+
+
+### CascadeFromField(`System.String`)
+Use it to set the field used to filter the data source.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Telerik().ComboBox()
+    .Name("ComboBox2")
+    .CascadeFrom("ComboBox1")
+    .CascadeFromField("ParentID")
+    %>
+
+
+### Text(`System.String`)
 Define the text of the widget, when the autoBind is set to false.
 
-#### Example
-    <%= Html.Kendo().ComboBox()
-        .Name("ComboBox")
-        .Text("Chai")
-        .AutoBind(false)
-        %>
+
+
+
+#### Example (ASPX)
+    <%= Html.Telerik().ComboBox()
+    .Name("ComboBox")
+    .Text("Chai")
+    .AutoBind(false)
+    %>
+
+
+

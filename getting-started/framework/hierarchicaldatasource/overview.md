@@ -1,12 +1,14 @@
 ---
 title: Overview
+meta_title: HierarchicalDataSource component in Kendo UI framework
+meta_description: See how to represent hierarchical data using HierarchicalDataSource component, an extension of Kendo UI DataSource.
 slug: hierarchicaldatasource-overview
 publish: true
 ---
 
 # Overview
 
-The HierarchicalDataSource component extends the [DataSource component](/api/framework/datasource), allowing
+The HierarchicalDataSource component extends the [DataSource component](/kendo-ui/api/framework/datasource), allowing
 representation of hierarchical data. This help topic assumes that you are familiar with the
 Kendo UI DataSource, and builds upon that knowledge with information that is specific to
 hierarchical data.
@@ -39,7 +41,7 @@ hierarchical data.
     var homogeneous = new kendo.data.HierarchicalDataSource({
         transport: {
             read: {
-                url: "http://demos.kendoui.com/service/Employees",
+                url: "http://demos.telerik.com/kendo-ui/service/Employees",
                 dataType: "json"
             }
         },
@@ -55,11 +57,11 @@ The above snippet will target the HierarchicalDataSource to a single service end
 The data service is homogeneous, i.e. it always returns objects of the same type.
 After executing `homogeneous.read()`, the service end-point is hit without a EmployeeId parameter:
 
-    GET http://demos.kendoui.com/service/Employees
+    GET http://demos.telerik.com/kendo-ui/service/Employees
 
     => [ { "EmployeeId": 2, "Name": "Andrew", "HasEmployees": true } ]
 
-Reading the children of the returned item is achieved by calling the [`load` method](/api/framework/node#load) of the data item:
+Reading the children of the returned item is achieved by calling the [`load` method](/kendo-ui/api/framework/node#load) of the data item:
 
     var ceo = homogeneous.view()[0];
 
@@ -67,7 +69,7 @@ Reading the children of the returned item is achieved by calling the [`load` met
 
 This will hit the service end-point and will supply the id of the data item:
 
-    GET http://demos.kendoui.com/service/Employees?EmployeeId=2
+    GET http://demos.telerik.com/kendo-ui/service/Employees?EmployeeId=2
 
     => [
           { "EmployeeId": 3, "Name": "Bob", "HasEmployees": false },
@@ -102,7 +104,7 @@ You can either hard-code it, map it to another property, or compute it with a fu
     var Products = {
             transport: {
                 read: {
-                    url: "http://demos.kendoui.com/service/Products",
+                    url: "http://demos.telerik.com/kendo-ui/service/Products",
                     dataType: "json"
                 }
             },
@@ -119,7 +121,7 @@ You can either hard-code it, map it to another property, or compute it with a fu
     var Categories = new kendo.data.HierarchicalDataSource({
         transport: {
             read: {
-                url: "http://demos.kendoui.com/service/Categories",
+                url: "http://demos.telerik.com/kendo-ui/service/Categories",
                 dataType: "json"
             }
         },
@@ -138,7 +140,7 @@ You can either hard-code it, map it to another property, or compute it with a fu
     });
 
 The configuration above creates a two-level HierarchicalDataSource (categories and products) that
-fetches data from two different end-points (/service/Categories and /service/Products, respectively).
+fetches data from two different end-points (/kendo-ui/service/Categories and /service/Products, respectively).
 
 ## Binding UI widgets to HierarchicalDataSource
 
@@ -151,7 +153,7 @@ the hierarchy with any DataSource-enabled component.
     var Categories = new kendo.data.HierarchicalDataSource({
         transport: {
             read: {
-                url: "http://demos.kendoui.com/service/Categories"
+                url: "http://demos.telerik.com/kendo-ui/service/Categories"
             }
         },
         schema: {
@@ -161,7 +163,7 @@ the hierarchy with any DataSource-enabled component.
                 children: {
                     transport: {
                         read: {
-                            url: "http://demos.kendoui.com/service/Products"
+                            url: "http://demos.telerik.com/kendo-ui/service/Products"
                         }
                     },
                     schema: {

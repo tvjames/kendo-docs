@@ -6,43 +6,30 @@ publish: true
 ---
 
 # \<kendo:tabStrip-animation-open\>
-A JSP tag representing Kendo Open.
+
+The visual animation(s) that will be used when the new tab is shown.
 
 #### Example
     <kendo:tabStrip-animation>
         <kendo:tabStrip-animation-open></kendo:tabStrip-animation-open>
     </kendo:tabStrip-animation>
 
-
 ## Configuration Attributes
-
 
 ### duration `float`
 
 The number of milliseconds used for the visual animation when a new tab is shown.
 
 #### Example
-    <kendo:tabStrip duration="duration">
-    </kendo:tabStrip>
+    <kendo:tabStrip-animation-open duration="duration">
+    </kendo:tabStrip-animation-open>
 
-
-
-### effects `String`
+### effects `java.lang.String`
 
 A whitespace-separated string of animation effects that are used when a new tab is shown. Options include
+"expand:vertical" and "fadeIn".
 
 #### Example
-    <kendo:tabStrip effects="effects">
-    </kendo:tabStrip>
-
-
-
-### show `boolean`
-
-Specifies whether the TabStrip should be able to collapse completely when clicking an expanded tab.
-
-#### Example
-    <kendo:tabStrip show="show">
-    </kendo:tabStrip>
-
+    <kendo:tabStrip-animation-open effects="effects">
+    </kendo:tabStrip-animation-open>
 

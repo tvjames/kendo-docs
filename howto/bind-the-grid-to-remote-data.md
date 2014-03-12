@@ -1,5 +1,7 @@
 ---
 title: Bind the Grid to Remote Data
+meta_title: Bind Kendo UI jQuery grid to remote data | Kendo UI Grid Documentation
+meta_description: This article will explain how to use Kendo UI Grid widget in your web application and bind it to remote data.
 slug: howto-bind-the-grid-to-remote-data
 tags: How-To
 publish: true
@@ -11,15 +13,15 @@ Love them or hate them, grids are a staple of user interfaces. While jQuery has 
 
 I have used jqGrid in the past on a few projects. While I was fundamentally satisfied with it, I was always a bit taken back at how much code it took to create a simple grid. I also experienced serious lag in the browser when dealing with larger recordsets. I'm also not a huge fan of composing html inside your JavaScript, which is the standard way to render a row in most jQuery grids.
 
-Fortunately, the [Grid](http://demos.kendoui.com/grid/index.html) makes this much easier on us. With to the rapid templating engine that is included with Kendo UI, and the built-in datasource, we can get up and running with our grid very quickly.
+Fortunately, the [Grid](http://demos.telerik.com/kendo-ui/web/grid/index.html) makes this much easier on us. With to the rapid templating engine that is included with Kendo UI, and the built-in datasource, we can get up and running with our grid very quickly.
 
-To start with, we need a data source. Due to my work on [instasharp.org](http://instasharp.org/) recently, I have become quite familiar with the Instagram API. We can use their "Popular" feeds endpoint without having to go through an authorization process. We still need a client_id, but it is easy to sign up for one of those at [http://instagram.com/developer/manage/](http://instagram.com/developer/manage/).
+To start with, we need a data source. Due to my work on [instasharp.org](http://instasharp.org/) recently, I have become quite familiar with the Instagram API. We can use their "Popular" feeds endpoint without having to go through an authorization process. We still need a client_id, but it is easy to sign up for one of those at [http://instagram.com/developer/register/#](http://instagram.com/developer/register/#).
 
 ##Create The Grid
 
 First we need a grid on our page. A simple table describing the column headers will do just fine. This makes sense. If you were making a grid yourself, you would start with a table.
 
-<p><iframe style="width: 700px; height: 300px;" src="http://jsfiddle.net/65kWY/13/embedded/html"></iframe></p>
+<iframe style="width: 700px; height: 300px;" src="http://jsfiddle.net/65kWY/13/embedded/html"></iframe>
 
 Now we need to make our div into a grid. First we need to download the Kendo UI or we can use the static CDN references.
 
@@ -35,7 +37,7 @@ We can turn the div into a grid in the document.ready() jQuery function.
 
 ## Add Some Awesome Data
 
-It's not much to look at, so lets add some data to it. Kendo UI provides a very powerful [data binding framework](http://demos.kendoui.com/datasource/index.html) we can use right inline with our grid. We simply need to define the data source of the grid and supply our remote endpoint. Kendo UI is still in beta so some of the naming may change slightly, but I'll explain what each one of these attributes / objects does.</p>
+It's not much to look at, so lets add some data to it. Kendo UI provides a very powerful [data binding framework](http://demos.telerik.com/kendo-ui/framework/datasource/index.html) we can use right inline with our grid. We simply need to define the data source of the grid and supply our remote endpoint. Kendo UI is still in beta so some of the naming may change slightly, but I'll explain what each one of these attributes / objects does.</p>
 
 <iframe style="width: 700px; height: 350px;" src="http://jsfiddle.net/65kWY/12/embedded/js,html,css,result"></iframe>
 
@@ -43,10 +45,10 @@ It's not much to look at, so lets add some data to it. Kendo UI provides a very 
 
 * The **dataSource** object creates a new Kendo UI data source and assigns it as the data source for the grid.
 * The **transport** object defines how we will communicate with our remote data source.
-	* **read**
-	* **url** is pretty self explanatory.
-		* **dataType** tells the data source the format that we expect the response to be in. In this case, it's JSOP. JSONP is a way of returning json from a cross-browser request without getting blocked. It's also a way to get malicious code injected into your page. It basically wraps the json response in a callback to fool the browser. Don't do it unless you fully trust your data. I think the fine folks at Instagram are quite trustworthy enough for this demo!
-	* **schema** tells the grid what the schema of our response is. Or you could think of it as the "json element to repeat on". Kendo UI will look for this element to represent each row in the grid. Instagram returns an array of "data" elements so our repeating item is just "data". </li>
+    * **read**
+    * **url** is pretty self explanatory.
+        * **dataType** tells the data source the format that we expect the response to be in. In this case, it's JSOP. JSONP is a way of returning json from a cross-browser request without getting blocked. It's also a way to get malicious code injected into your page. It basically wraps the json response in a callback to fool the browser. Don't do it unless you fully trust your data. I think the fine folks at Instagram are quite trustworthy enough for this demo!
+    * **schema** tells the grid what the schema of our response is. Or you could think of it as the "json element to repeat on". Kendo UI will look for this element to represent each row in the grid. Instagram returns an array of "data" elements so our repeating item is just "data". </li>
 
 Now if you run the above example (if you haven't already), you will see a grid with nothing in it. That's because we haven't told the grid what to render in each column. We can do this by simply specifying which element off the "data" tag in the Instagram response we want to show in that particular column. I have specified the "field" attribute in the columns array so now our grid will display the actual data from our response.
 
@@ -66,10 +68,10 @@ We have now moved all markup removed from our JavaScript (very clean). We add a 
 
 ## A Note About Templates
 
-If you check out the "html" tab on the previous fiddle, you can see the templating syntax for [Kendo UI Templates](http://docs.kendoui.com/getting-started/framework/templates/overview). Templates are HTML inside of special script blocks. If you notice, I have also mixed in JavaScript right along with the html. The syntax will feel very familiar if you have ever done any PHP, Razor or other server side templating engine.
+If you check out the "html" tab on the previous fiddle, you can see the templating syntax for [Kendo UI Templates](/kendo-ui/getting-started/framework/templates/overview). Templates are HTML inside of special script blocks. If you notice, I have also mixed in JavaScript right along with the html. The syntax will feel very familiar if you have ever done any PHP, Razor or other server side templating engine.
 
 ## Wrap Up
 
-I hope you were able to see the power of the Kendo UI [Grid](http://demos.kendoui.com/grid/index.html), [Data Source](http://demos.kendoui.com/datasource/index.html) and [Templating](http://demos.kendoui.com/templates/index.html) engine in this article. As well as providing you with a complete toolkit for your jQuery / HTML5 development, it helps you write cleaner JavaScript and lets the markup remain where it belongs.
+I hope you were able to see the power of the Kendo UI [Grid](http://demos.telerik.com/kendo-ui/grid/index.html), [Data Source](http://demos.telerik.com/kendo-ui/datasource/index.html) and [Templating](http://demos.telerik.com/kendo-ui/framework/templates/index.html) engine in this article. As well as providing you with a complete toolkit for your jQuery / HTML5 development, it helps you write cleaner JavaScript and lets the markup remain where it belongs.
 
-Download the toolkit [here](http://www.kendoui.com/download.aspx), or use the CDN references. Make sure you also hit up the [forums](http://www.kendoui.com/forums.aspx) if you have any questions or suggestions for Kendo UI.
+Download the toolkit [here](http://www.telerik.com/download/kendo-ui-complete), or use the CDN references. Make sure you also hit up the [forums](http://www.telerik.com/forums/kendo-ui-framework) if you have any questions or suggestions for Kendo UI.

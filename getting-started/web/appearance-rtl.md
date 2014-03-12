@@ -21,8 +21,7 @@ The `k-rtl` class has the following effects:
 
 ## Notes on layout
 
-* Vertical scrollbar position may be on the left or right side, depending on the used browser. This cannot be controlled with CSS or script.
-* The Pager widget and the Grid pager do not reverse the order of the page number buttons.
-* The ListView layout depends entirely on the defined template. The widgets does nothing to convert an existing LTR template to RTL layout. If a `k-rtl` CSS class
+* Vertical scrollbar position may be on the left or right side, depending on the used browser. This cannot be controlled via CSS or script.
+* The ListView layout depends entirely on the defined template. The widget itself does nothing to convert an existing LTR template to RTL layout. If a `k-rtl` CSS class
 is present and applied to a wrapper element, text direction will be reversed, but not floats, margins, paddings, etc.
 * The Splitter does not reverse the order of its panes in RTL mode.

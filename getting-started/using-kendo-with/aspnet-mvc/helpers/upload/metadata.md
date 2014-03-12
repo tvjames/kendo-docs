@@ -1,10 +1,12 @@
 ---
 title: Metadata
+meta_title: Asynchronous uploading of metadata | Kendo UI Helpers for ASP.NET MVC
+meta_description: Explanatory notes about asynchronous uploading of metadata in Telerik UI for ASP.NET MVC Helpers.
 slug: mvc-upload-metadata
 publish: true
 ---
 
-Asynchronous uploading usually means that you lose the association betwen the files and the context that they originate from.
+Asynchronous uploading usually means that you lose the association between the files and the context that they originate from.
 
 Take an e-mail application for example. The save handler must associate the uploaded files to a particular message.
 
@@ -87,10 +89,10 @@ You can also add metadata directly on the client. This is useful when the data i
             <%= Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
-                .ClientEvents(c => c
-                    .OnUpload("onUpload")
+                .Events(c => c
+                    .Upload("onUpload")
                 )
             %>
     - Razor
@@ -98,10 +100,10 @@ You can also add metadata directly on the client. This is useful when the data i
             @(Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
-                .ClientEvents(c => c
-                    .OnUpload("onUpload")
+                .Events(c => c
+                    .Upload("onUpload")
                 )
             )
 
@@ -142,7 +144,7 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             return Json(new { status = "OK" }, "text/plain");
         }
 
-2. Declare a handler for the [success event](http://www.kendoui.com/documentation/ui-widgets/upload/events.aspx#success) and process the response
+2. Declare a handler for the [success event](/kendo-ui/api/web/upload#success) and process the response
 
         function onSuccess(e) {
             alert("Status: " + e.response.status);
@@ -154,10 +156,10 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             <%= Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
-                .ClientEvents(c => c
-                    .OnSuccess("onSuccess")
+                .Events(c => c
+                    .Success("onSuccess")
                 )
             %>
     - Razor
@@ -165,10 +167,10 @@ The Upload requires the response to be in JSON format with Content-Type set to "
             @(Html.Kendo().Upload()
                 .Name("attachments")
                 .Async(async => async
-                    .Save("Save", "Home" })
+                    .Save("Save", "Home")
                 )
-                .ClientEvents(c => c
-                    .OnSuccess("onSuccess")
+                .Events(c => c
+                    .Success("onSuccess")
                 )
             )
 

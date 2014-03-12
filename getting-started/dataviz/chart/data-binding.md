@@ -1,6 +1,9 @@
 ---
 title: Data Binding
+meta_title: Overview of data binding in Kendo UI Javascript Chart widget
+meta_description: How to handle binding to inline data, binding to a data source in Chart UI widget.
 slug: chart-data-binding
+ordinal: 2
 publish: true
 ---
 
@@ -11,20 +14,15 @@ publish: true
 * [Binding to inline data](#binding-to-inline-data)
 
     * [Categorical series](#categorical-series)
-    * [Pie series](#pie-series)
     * [Scatter series](#scatter-series)
 
 * [Binding to a Data Source](#binding-to-a-data-source)
 
-    * [Specifying a Data Source](#specifying-a-data-source)
+    * [Setting a Data Source](#specifying-a-data-source)
     * [Binding to local data](#binding-to-local-data)
     * [Binding to remote data](#binding-to-remote-data)
-
-* [Data-bound Series](#data-bound-series)
-
-    * [Categorical series](#data-bound-categorical-series)
-    * [Pie series](#data-bound-pie-series)
-    * [Scatter series](#data-bound-scatter-series)
+    * [Data-bound categorical series](#data-bound-categorical-series)
+    * [Data-bound scatter series](#data-bound-scatter-series)
 
 ## Binding to inline data
 
@@ -33,90 +31,92 @@ The chart data points can be specified as part of the series definitions. The ty
 ### Categorical series
 
 Categorical series such as bar, line, area, etc. expect a data point of type Number.
+The category names are populated independently in the category axis.
 
+> All series must contain the same number of points in order identical .
+
+#### Example: Inline binding of column series
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
         series: [{
-            name: "Example Series",
+            name: "Series 1",
             type: "column",
-            data: [200, 450, 300, 125]
-       }]
+            data: [200, 450, 300, 125, 100]
+        }, {
+            name: "Series 2",
+            type: "column",
+            data: [210, null, 200, 100, null]
+        }],
+        categoryAxis: {
+            categories: ["Mon", "Tue", "Wed", "Thu", "Fri"]
+        }
     });
-
-
-### Pie series
-
-Series of type pie can also be bound to Number data points as above. These series also accept objects that fully describe each point:
-
-    $("#chart").kendoChart({
-        series: [{
-            name: "Example Series",
-            type: "pie",
-            data:[{
-                value: 40,
-                category: "Apples"
-            }, {
-                value: 60,
-                category: "Oranges",
-                color: "#ff6103"
-            }]
-           }]
-    });
+    </script>
 
 ### Scatter series
 
 This category includes the two-dimensional scatter and scatter line series. The data point should be an array containing two values - X and Y.
 
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
-        series:[{
+        series: [{
             name: "Example Series",
             type: "scatterLine",
-            data:[[1, 1], [1, 2]]
+            data:[[0, 0], [1, 1]]
         }]
     });
-
-
+    </script>
 
 ## Binding to a Data Source
 
-The DataSource component can be used to bind the Chart to both local and remote data. It supports variety of formats, including JSON, JSONP, XML, and OData.
+The DataSource component can be used to bind the Chart to both local and remote data.
+It supports variety of formats, including JSON, JSONP, XML, and OData.
 
-### Specifying a Data Source
+### Setting a Data Source
 
 The Chart will accept either a DataSource instance or an object with the DataSource options.
 
-For example:
+#### Example: Set Data Source configuration
 
-    $("#chart").kendoChart({
-        dataSource:{
-            data: chartData
-        }
-    });
+    <div id="chart"></div>
+    <script>
+        var seriesData = [
+            { sales: 200 }, { sales: 450 },
+            { sales: 300 }, { sales: 125 }
+        ];
 
+        $("#chart").kendoChart({
+            dataSource:{
+                data: seriesData
+            },
+            series: [{
+                field: "sales"
+            }]
+        });
+    </script>
 
-is the same as:
+#### Example: Set Data Source instance
 
-    var ds = new kendo.data.DataSource({
-         data: chartData
-    });
+    <div id="chart"></div>
+    <script>
+        var seriesData = [
+            { sales: 200 }, { sales: 450 },
+            { sales: 300 }, { sales: 125 }
+        ];
 
-    $("#chart").kendoChart({
-        dataSource: ds
-    });
+        var ds = new kendo.data.DataSource({
+             data: seriesData
+        });
 
-### Binding to local data
-
-The chart can use existing objects as data points. For example, define the following array of objects.
-
-    var seriesData = [ { year: "2000", sales: 200 },
-               { year: "2001", sales: 450 },
-               { year: "2002", sales: 300 },
-               { year: "2003", sales: 125 } ];
-
-    $("#chart").kendoChart({
-        dataSource: {
-            data: seriesData
-        }
-    });
+        $("#chart").kendoChart({
+            dataSource: ds,
+            series: [{
+                field: "sales"
+            }]
+        });
+    </script>
 
 ### Binding to remote data
 
@@ -124,15 +124,17 @@ The chart can be bound to remote data by configuring the DataSource `transport`.
 
 In the below example, the following JSON string is returned from the "/sales" service.
 
-    [ { "year": "2000", "sales": 200 },
+#### Example: Sample JSON
+    [{ "year": "2000", "sales": 200 },
       { "year": "2001", "sales": 450 },
       { "year": "2002", "sales": 300 },
-      { "year": "2003", "sales": 125 }
-    ]
-
+      { "year": "2003", "sales": 125 }]
 
 We will bind the data source to this service and sort it by year.
 
+#### Example: Remote binding
+    <div id="chart"></div>
+    <script>
     $("#chart").kendoChart({
         dataSource: {
             transport: {
@@ -147,72 +149,108 @@ We will bind the data source to this service and sort it by year.
             }
         }
     });
-
-## Data-bound Series
-
-Some or all series can be bound to the data source items. The configuration is specific to the series type.
+    </script>
 
 ### Data-bound categorical series
 
-Categorical series such as bar, line, area, etc. require a value "field". Categories are bound through the categoryAxis options.
+Categorical series such as bar, line and area are bound to a value field.
+The category names are populated independently by binding the category axis.
 
-    var seriesData = [ { year: "2000", sales: 200 } ];
+> All series must contain the same number of points in order identical to the category order.
+
+#### Example: Data-bound categorical series
+    <div id="chart"></div>
+    <script>
+    var seriesData = [{
+        year: "2000",
+        sold: 100,
+        produced: 200
+    }, {
+        year: "2001",
+        sold: 250,
+        produced: 280
+    }];
 
     $("#chart").kendoChart({
-        title: {
-            text: "Kendo Chart Example"
-        },
         dataSource: {
             data: seriesData
         },
         series: [{
-            name: "Sales",
-            field: "sales"
+            name: "Sold",
+            field: "sold"
+        }, {
+            name: "Producted",
+            field: "produced"
         }],
         categoryAxis: {
             field: "year"
         }
     });
+    </script>
 
+#### Category binding
 
+In addition to value field(s), each series can specify a category field.
 
-### Data-bound pie series
+The category values from all series will be concatenated and each point will be mapped to its category.
+Point order is not significant.
 
-In addition to the value "field", series of type pie accept fields for each point property - "categoryField", "colorField", etc.
+Series points will be [aggregated](/kendo-ui/api/dataviz/chart#configuration-series.aggregate) to produce one value per category.
 
-    var seriesData = [ { year: "2000", sales: 200 } ];
+##### Example: Binding with categoryField
+    <div id="chart"></div>
+    <script>
+    var seriesData = [{
+        year: "2000",
+        sold: 100,
+        product: "A"
+    }, {
+        year: "2001",
+        sold: 150,
+        product: "A"
+    }, {
+        year: "2000",
+        sold: 200,
+        product: "B"
+    }];
 
     $("#chart").kendoChart({
         title: {
-            text: "Kendo Chart Example"
+            text: "Sales summary"
         },
         dataSource: {
             data: seriesData
         },
         series: [{
-            type: "pie",
-            field: "sales",
-            categoryField: "year"
+            field: "sold",
+            categoryField: "year",
+            aggregate: "sum"
         }]
     });
+    </script>
 
 ### Data-bound scatter series
 
-Scatter and scatter line series accept "xField" and "yField" options.
+Scatter series are bound to the fields specified as "xField" and "yField".
 
-    var xyData = [ { x: 10, y: 20 } ];
+#### Example: Binding scatter series
+    <div id="chart"></div>
+    <script>
+    var xyData = [{
+        x: 10, y: 20,
+    }, {
+        x: 100, y: 200
+    } ];
 
     $("#chart").kendoChart({
-        title: {
-            text: "Kendo Chart Example"
-        },
         dataSource: {
             data: xyData
         },
         series: [{
-            name: "Plot",
+            type: "scatter",
             xField: "x",
             yField: "y"
         }]
     });
+    </script>
 

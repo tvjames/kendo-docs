@@ -5,370 +5,569 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.TreeViewBuilder
-
 Defines the fluent interface for configuring the TreeView component.
+
+
 
 ## Methods
 
-### AutoBind(System.Boolean)
+### AutoBind(`System.Boolean`)
 Controls whether to bind the widget to the DataSource on initialization.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .AutoBind(false)
-        %>
 
-### CheckboxTemplate(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .AutoBind(false)
+    %>
+
+
+### CheckboxTemplate(`System.String`)
 Template to be used for rendering the item checkboxes in the treeview.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .CheckboxTemplate("#= data #")
-        %>
 
-### CheckboxTemplateId(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .CheckboxTemplate("#= data #")
+    %>
+
+
+### CheckboxTemplateId(`System.String`)
 Id of the template element to be used for rendering the item checkboxes in the treeview.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .CheckboxTemplateId("widgetTemplateId")
-        %>
 
-### Template(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .CheckboxTemplateId("widgetTemplateId")
+    %>
+
+
+### Template(`System.String`)
 Template to be used for rendering the items in the treeview.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Template("#= data #")
-        %>
 
-### TemplateId(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Template("#= data #")
+    %>
+
+
+### TemplateId(`System.String`)
 Id of the template element to be used for rendering the items in the treeview.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .TemplateId("widgetTemplateId")
-        %>
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewItemFactory\>)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .TemplateId("widgetTemplateId")
+    %>
+
+
+### Checkboxes(`System.Boolean`)
+Enable/disable rendering of checkboxes in the treeview.
+
+
+#### Parameters
+
+##### enabled `System.Boolean`
+Whether checkboxes should be rendered.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Checkboxes(true)
+    %>
+
+
+### Checkboxes(`System.Action<Kendo.Mvc.UI.Fluent.TreeViewCheckboxesBuilder>`)
+Configures rendering of checkboxes in the treeview.
+
+
+#### Parameters
+
+##### configure System.Action<[Kendo.Mvc.UI.Fluent.TreeViewCheckboxesBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/TreeViewCheckboxesBuilder)>
+Builder of the treeview checkboxes configuration.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Checkboxes(config => config
+        .CheckChildren(true)
+    )
+    %>
+
+
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.TreeViewItemFactory>`)
 Defines the items in the TreeView
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Items(items =>
-        {
-        items.Add().Text("First Item");
-        items.Add().Text("Second Item");
-        })
-        %>
 
 #### Parameters
 
-##### addAction System.Action\<[Kendo.Mvc.UI.Fluent.TreeViewItemFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/TreeViewItemFactory)\>
+##### addAction System.Action<[Kendo.Mvc.UI.Fluent.TreeViewItemFactory](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/TreeViewItemFactory)>
 The add action.
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.TreeViewEventBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
+    %>
+
+
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.TreeViewEventBuilder>`)
 Configures the client-side events.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Events(events =>
-        .OnDataBinding("onDataBinding")
-        .OnItemDataBound("onItemDataBound")
-        )
-        %>
 
 #### Parameters
 
-##### clientEventsAction System.Action\<[Kendo.Mvc.UI.Fluent.TreeViewEventBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/TreeViewEventBuilder)\>
+##### clientEventsAction System.Action<[Kendo.Mvc.UI.Fluent.TreeViewEventBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/TreeViewEventBuilder)>
 The client events action.
 
-### BindTo(System.String,System.Action\<Kendo.Mvc.UI.TreeViewItem,Kendo.Mvc.SiteMapNode\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Events(events =>
+        .OnDataBinding("onDataBinding")
+        .OnItemDataBound("onItemDataBound")
+    )
+    %>
+
+
+### BindTo(`System.String,System.Action<Kendo.Mvc.UI.TreeViewItem,Kendo.Mvc.SiteMapNode>`)
 Binds the TreeView to a sitemap
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo("examples", (item, siteMapNode) =>
-        {
-        })
-        %>
 
 #### Parameters
 
 ##### viewDataKey `System.String`
 The view data key.
 
-##### siteMapAction System.Action\<[Kendo.Mvc.UI.TreeViewItem](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItem),Kendo.Mvc.SiteMapNode\>
+##### siteMapAction System.Action<[Kendo.Mvc.UI.TreeViewItem](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItem),Kendo.Mvc.SiteMapNode>
 The action to configure the item.
 
-### BindTo(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .BindTo("examples", (item, siteMapNode) =>
+    {
+    })
+    %>
+
+
+### BindTo(`System.String`)
 Binds the TreeView to a sitemap.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo("examples")
-        %>
 
 #### Parameters
 
 ##### viewDataKey `System.String`
 The view data key.
 
-### BindTo(System.Collections.Generic.IEnumerable\<Kendo.Mvc.UI.TreeViewItemModel\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .BindTo("examples")
+    %>
+
+
+### BindTo(`System.Collections.Generic.IEnumerable<Kendo.Mvc.UI.TreeViewItemModel>`)
 Binds the TreeView to a list of items.
             Use if a hierarchy of items is being sent from the controller; to bind the TreeView declaratively, use the Items() method.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo(model)
-        %>
 
 #### Parameters
 
-##### items System.Collections.Generic.IEnumerable\<[Kendo.Mvc.UI.TreeViewItemModel](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItemModel)\>
+##### items System.Collections.Generic.IEnumerable<[Kendo.Mvc.UI.TreeViewItemModel](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItemModel)>
 The list of items
 
-### BindTo\<T1\>(System.Collections.Generic.IEnumerable\<T1\>,System.Action\<Kendo.Mvc.UI.TreeViewItem,T1\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .BindTo(model)
+    %>
+
+
+### BindTo(`System.Collections.Generic.IEnumerable<T1>,System.Action<Kendo.Mvc.UI.TreeViewItem,T1>`)
 Binds the TreeView to a list of objects. The TreeView will be "flat" which means a TreeView item will be created for
             every item in the data source.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo(new []{"First", "Second"}, (item, value)
-        {
-        item.Text = value;
-        })
-        %>
 
 #### Parameters
 
 ##### dataSource `System.Collections.Generic.IEnumerable<T1>`
 The data source.
 
-##### itemDataBound System.Action\<[Kendo.Mvc.UI.TreeViewItem](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItem),T1\>
+##### itemDataBound System.Action<[Kendo.Mvc.UI.TreeViewItem](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItem),T1>
 The action executed for every data bound item.
 
-### BindTo(System.Collections.IEnumerable,System.Action\<Kendo.Mvc.UI.Fluent.NavigationBindingFactory\<Kendo.Mvc.UI.TreeViewItem\>\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .BindTo(new []{"First", "Second"}, (item, value) =>
+    {
+        item.Text = value;
+    })
+    %>
+
+
+### BindTo(`System.Collections.IEnumerable,System.Action<Kendo.Mvc.UI.Fluent.NavigationBindingFactory<Kendo.Mvc.UI.TreeViewItem>>`)
 Binds the TreeView to a list of objects. The TreeView will create a hierarchy of items using the specified mappings.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .BindTo(Model, mapping => mapping
-        .For<Customer>(binding => binding
-        .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
-        .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to TreeViewItem properties
-        )
-        .For<Order<(binding => binding
-        .Children(o => null) // "Orders" do not have child objects so return "null"
-        .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to TreeViewItem properties
-        )
-        )
-        %>
 
 #### Parameters
 
 ##### dataSource `System.Collections.IEnumerable`
 The data source.
 
-##### factoryAction System.Action\<[Kendo.Mvc.UI.Fluent.NavigationBindingFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/NavigationBindingFactory)\<Kendo.Mvc.UI.TreeViewItem\>\>
+##### factoryAction System.Action<[Kendo.Mvc.UI.Fluent.NavigationBindingFactory](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/NavigationBindingFactory)<Kendo.Mvc.UI.TreeViewItem>>
 The action which will configure the mappings
 
-### ItemAction(System.Action\<Kendo.Mvc.UI.TreeViewItem\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .BindTo(Model, mapping => mapping
+        .For<Customer>(binding => binding
+            .Children(c => c.Orders) // The "child" items will be bound to the the "Orders" property
+            .ItemDataBound((item, c) => item.Text = c.ContactName) // Map "Customer" properties to TreeViewItem properties
+        )
+        .For<Order<(binding => binding
+            .Children(o => null) // "Orders" do not have child objects so return "null"
+            .ItemDataBound((item, o) => item.Text = o.OrderID.ToString()) // Map "Order" properties to TreeViewItem properties
+        )
+    )
+    %>
+
+
+### ItemAction(`System.Action<Kendo.Mvc.UI.TreeViewItem>`)
 Callback for each item.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .ItemAction(item =>
-        {
-        item
-        .Text(...)
-        .HtmlAttributes(...);
-        })
-        %>
 
 #### Parameters
 
-##### action System.Action\<[Kendo.Mvc.UI.TreeViewItem](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItem)\>
+##### action System.Action<[Kendo.Mvc.UI.TreeViewItem](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/TreeViewItem)>
 Action, which will be executed for each item.
 
-### HighlightPath(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .ItemAction(item =>
+    {
+        item
+        .Text(...)
+        .HtmlAttributes(...);
+    })
+    %>
+
+
+### HighlightPath(`System.Boolean`)
 Select item depending on the current URL.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .HighlightPath(true)
-        %>
 
 #### Parameters
 
 ##### value `System.Boolean`
 If true the item will be highlighted.
 
-### Animation(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .HighlightPath(true)
+    %>
+
+
+### Animation(`System.Boolean`)
 Use to enable or disable animation of the TreeView.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        	           .Name("TreeView")
-        	           .Animation(false) //toggle effect
-        	%>
 
 #### Parameters
 
 ##### enable `System.Boolean`
 The boolean value.
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Animation(false) //toggle effect
+    %>
+
+
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder>`)
 Configures the animation effects of the widget.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        	           .Name("TreeView")
-        	           .Animation(animation =>
-        	           {
-        		            animation.Expand(open =>
-        		            {
-        		                open.SlideIn(SlideDirection.Down);
-        		            }
-        	           })
-        	%>
 
 #### Parameters
 
-##### animationAction System.Action\<[Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ExpandableAnimationBuilder)\>
+##### animationAction System.Action<[Kendo.Mvc.UI.Fluent.ExpandableAnimationBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ExpandableAnimationBuilder)>
 The action which configures the animation effects.
 
-### ExpandAll(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Animation(animation =>
+    {
+        animation.Expand(open =>
+        {
+            open.SlideIn(SlideDirection.Down);
+            });
+        })
+    %>
+
+
+### ExpandAll(`System.Boolean`)
 Expand all the items.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .ExpandAll(true)
-        %>
 
 #### Parameters
 
 ##### value `System.Boolean`
 If true all the items will be expanded.
 
-### DragAndDrop(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .ExpandAll(true)
+    %>
+
+
+### DragAndDrop(`System.Boolean`)
 Enables drag & drop between treeview nodes.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .Items(items =>
-        {
-        items.Add().Text("First Item");
-        items.Add().Text("Second Item");
-        })
-        .DragAndDrop(true)
-        %>
 
 #### Parameters
 
 ##### value `System.Boolean`
 If true, drag & drop is enabled.
 
-### SecurityTrimming(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .Items(items =>
+    {
+        items.Add().Text("First Item");
+        items.Add().Text("Second Item");
+    })
+    .DragAndDrop(true)
+    %>
+
+
+### SecurityTrimming(`System.Boolean`)
 Enable/disable security trimming functionality of the component.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .SecurityTrimming(false)
-        %>
 
 #### Parameters
 
 ##### value `System.Boolean`
 If true security trimming is enabled.
 
-### DataTextField(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .SecurityTrimming(false)
+    %>
+
+
+### SecurityTrimming(`System.Action<Kendo.Mvc.UI.SecurityTrimmingBuilder>`)
+Defines the security trimming functionality of the component
+
+
+#### Parameters
+
+##### securityTrimmingAction System.Action<[Kendo.Mvc.UI.SecurityTrimmingBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/SecurityTrimmingBuilder)>
+The securityTrimming action.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .SecurityTrimming(builder =>
+    {
+        builder.Enabled(true).HideParent(true);
+    })
+    %>
+
+
+### DataTextField(`System.String`)
 Sets the name of the field that will supply the item text.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataTextField("Name")
-        %>
 
 #### Parameters
 
 ##### field `System.String`
 The field name.
 
-### DataUrlField(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .DataTextField("Name")
+    %>
+
+
+### DataUrlField(`System.String`)
 Sets the name of the field that will supply the item URL.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataUrlField("LinksTo")
-        %>
 
 #### Parameters
 
 ##### field `System.String`
 The field name.
 
-### DataSpriteCssClassField(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .DataUrlField("LinksTo")
+    %>
+
+
+### DataSpriteCssClassField(`System.String`)
 Sets the name of the field that will supply the CSS class for the item sprite image.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataSpriteCssClassField("IconSprite")
-        %>
 
 #### Parameters
 
 ##### field `System.String`
 The field name.
 
-### DataImageUrlField(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .DataSpriteCssClassField("IconSprite")
+    %>
+
+
+### DataImageUrlField(`System.String`)
 Sets the name of the field that will supply the URL for the item image.
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataImageUrlField("ImageURL")
-        %>
 
 #### Parameters
 
 ##### field `System.String`
 The field name.
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.ReadOnlyDataSourceBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .DataImageUrlField("ImageURL")
+    %>
+
+
+### DataSource(`System.Action<Kendo.Mvc.UI.Fluent.HierarchicalDataSourceBuilder>`)
 Configure the DataSource of the component
 
-#### Example
-    <%= Html.Kendo().TreeView()
-        .Name("TreeView")
-        .DataSource(dataSource => dataSource
-        .Read(read => read
-        .Action("Employees", "TreeView")
-        )
-        )
-        %>
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.ReadOnlyDataSourceBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ReadOnlyDataSourceBuilder)\>
-The action that configures the DataSource.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.HierarchicalDataSourceBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/HierarchicalDataSourceBuilder)>
+The action that configures the M:Kendo.Mvc.UI.Fluent.TreeViewBuilder.DataSource(System.Action{Kendo.Mvc.UI.Fluent.HierarchicalDataSourceBuilder}).
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .DataSource(dataSource => dataSource
+        .Read(read => read
+            .Action("Employees", "TreeView")
+        )
+    )
+    %>
+
+
+### LoadOnDemand(`System.Boolean`)
+Allows the treeview to fetch the entire datasource at initialization time.
+
+
+#### Parameters
+
+##### field `System.Boolean`
+Whether the datasource should be loaded on demand.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().TreeView()
+    .Name("TreeView")
+    .LoadOnDemand(false)
+    %>
+
+
+

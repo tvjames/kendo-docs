@@ -1,6 +1,9 @@
 ---
-title: TabStrip Overview
+title: Overview
+meta_title: Overview of Tabstrip UI widget | Kendo UI Documentation
+meta_description: This documentation helps you get started with TabStrip, initialize the widget and how to load the content with AJAX.
 slug: gs-web-tabstrip-overview
+relatedDocs: api-web-tabstrip
 tags: getting-started,web
 publish: true
 ---
@@ -47,7 +50,7 @@ that initialization the **TabStrip** occur within a handler is provided to $(doc
             dataSource:
             [{
                 text: "Item 1",
-                url: "http://www.kendoui.com"               // Link URL if navigation is needed, optional.
+                url: "http://www.telerik.com"               // Link URL if navigation is needed, optional.
             },
             {
                 text: "Item 2",
@@ -59,7 +62,7 @@ that initialization the **TabStrip** occur within a handler is provided to $(doc
             },
             {
                 text: "Item 4",
-                imageUrl: "http://www.kendoui.com/test.jpg" // Item image URL, optional.
+                imageUrl: "http://www.telerik.com/test.jpg" // Item image URL, optional.
             },
             {
                 text: "Item 5",
@@ -155,7 +158,7 @@ Both approaches produce the same result.
 
     $(document).ready(function(){
         var tabstrip = $("#tabstrip").kendoTabStrip().data("kendoTabStrip");
-        tabstrip.select(1);
+        tabstrip.select(0);
     });
 
 ## Accessing an Existing TabStrip

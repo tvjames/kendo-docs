@@ -5,17 +5,23 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.AjaxDataSourceBuilder
-
 Defines the fluent interface for configuring the DataSource AJAX create/update/destroy operation bindings.
+
+
 
 ## Methods
 
-### Update(System.Action&lt;Kendo.Mvc.UI.Fluent.CrudOperationBuilder&gt;)
+### Update(`System.Action<Kendo.Mvc.UI.Fluent.CrudOperationBuilder>`)
 Configures the URL for Update operation.
 
-### Update(System.String,System.String)
+
+
+
+
+### Update(`System.String,System.String`)
 Sets controller and action for Update operation.
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -24,9 +30,14 @@ Action name
 ##### controllerName `System.String`
 Controller Name
 
-### Update(System.String,System.String,System.Object)
+
+
+
+
+### Update(`System.String,System.String,System.Object`)
 Sets controller, action and routeValues for Update operation.
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -38,12 +49,21 @@ Controller Name
 ##### routeValues `System.Object`
 Route values
 
-### Create(System.Action\<Kendo.Mvc.UI.Fluent.CrudOperationBuilder\>)
+
+
+
+
+### Create(`System.Action<Kendo.Mvc.UI.Fluent.CrudOperationBuilder>`)
 Configures the URL for Create operation.
 
-### Create(System.String,System.String)
+
+
+
+
+### Create(`System.String,System.String`)
 Sets controller and action for Create operation.
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -52,9 +72,14 @@ Action name
 ##### controllerName `System.String`
 Controller Name
 
-### Create(System.String,System.String,System.Object)
+
+
+
+
+### Create(`System.String,System.String,System.Object`)
 Sets controller, action and routeValues for Create operation.
 
+
 #### Parameters
 
 ##### actionName `System.String`
@@ -66,11 +91,20 @@ Controller Name
 ##### routeValues `System.Object`
 Route values
 
-### Destroy(System.Action\<Kendo.Mvc.UI.Fluent.CrudOperationBuilder\>)
+
+
+
+
+### Destroy(`System.Action<Kendo.Mvc.UI.Fluent.CrudOperationBuilder>`)
 Configures the URL for Destroy operation.
 
-### Destroy(System.String,System.String)
+
+
+
+
+### Destroy(`System.String,System.String`)
 Sets controller and action for Destroy operation.
+
 
 #### Parameters
 
@@ -80,8 +114,13 @@ Action name
 ##### controllerName `System.String`
 Controller Name
 
-### Destroy(System.String,System.String,System.Object)
+
+
+
+
+### Destroy(`System.String,System.String,System.Object`)
 Sets controller, action and routeValues for Destroy operation.
+
 
 #### Parameters
 
@@ -94,13 +133,34 @@ Controller Name
 ##### routeValues `System.Object`
 Route values
 
-### Model(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceModelDescriptorFactory\<T\>\>)
-Configures Model properties
 
-### Batch(System.Boolean)
+
+
+
+### Batch(`System.Boolean`)
 Determines if modifications will be sent to the server in batches or as individually requests.
+
 
 #### Parameters
 
 ##### enabled `System.Boolean`
 If true changes will be batched, otherwise false.
+
+
+
+
+
+### AutoSync(`System.Boolean`)
+Determines if data source would automatically sync any changes to its data items. By default changes are not automatically sync-ed.
+
+
+#### Parameters
+
+##### enabled `System.Boolean`
+If true changes will be automatically synced, otherwise false.
+
+
+
+
+
+

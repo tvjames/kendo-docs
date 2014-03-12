@@ -6,103 +6,101 @@ publish: true
 ---
 
 # \<kendo:upload-localization\>
-A JSP tag representing Kendo Localization.
+
+Sets the strings rendered by the Upload.
 
 #### Example
     <kendo:upload>
         <kendo:upload-localization></kendo:upload-localization>
     </kendo:upload>
 
-
 ## Configuration Attributes
 
+### cancel `java.lang.String`
 
-### cancel `String`
-
-Sets the text of the cancel button text. Further configuration is available via [kendo:upload-cancel](#kendo-upload-cancel). 
+Sets the text of the cancel button text.
 
 #### Example
-    <kendo:upload cancel="cancel">
-    </kendo:upload>
+    <kendo:upload-localization cancel="cancel">
+    </kendo:upload-localization>
 
-
-
-### dropFilesHere `String`
+### dropFilesHere `java.lang.String`
 
 Sets the drop zone hint.
 
 #### Example
-    <kendo:upload dropFilesHere="dropFilesHere">
-    </kendo:upload>
+    <kendo:upload-localization dropFilesHere="dropFilesHere">
+    </kendo:upload-localization>
 
+### headerStatusUploaded `java.lang.String`
 
-
-### remove `String`
-
-Sets the text of the remove button text. Further configuration is available via [kendo:upload-remove](#kendo-upload-remove). 
+Sets the header status message for uploaded files.
 
 #### Example
-    <kendo:upload remove="remove">
-    </kendo:upload>
+    <kendo:upload-localization headerStatusUploaded="headerStatusUploaded">
+    </kendo:upload-localization>
 
+### headerStatusUploading `java.lang.String`
 
+Sets the header status message for files that are being uploaded.
 
-### retry `String`
+#### Example
+    <kendo:upload-localization headerStatusUploading="headerStatusUploading">
+    </kendo:upload-localization>
+
+### remove `java.lang.String`
+
+Sets the text of the remove button text.
+
+#### Example
+    <kendo:upload-localization remove="remove">
+    </kendo:upload-localization>
+
+### retry `java.lang.String`
 
 Sets the text of the retry button text.
 
 #### Example
-    <kendo:upload retry="retry">
-    </kendo:upload>
+    <kendo:upload-localization retry="retry">
+    </kendo:upload-localization>
 
+### select `java.lang.String`
 
-
-### select `String`
-
-Sets the "Select..." button text. Further configuration is available via [kendo:upload-select](#kendo-upload-select). 
+Sets the "Select..." button text.
 
 #### Example
-    <kendo:upload select="select">
-    </kendo:upload>
+    <kendo:upload-localization select="select">
+    </kendo:upload-localization>
 
-
-
-### statusFailed `String`
+### statusFailed `java.lang.String`
 
 Sets the status message for failed uploads.
 
 #### Example
-    <kendo:upload statusFailed="statusFailed">
-    </kendo:upload>
+    <kendo:upload-localization statusFailed="statusFailed">
+    </kendo:upload-localization>
 
-
-
-### statusUploaded `String`
+### statusUploaded `java.lang.String`
 
 Sets the status message for uploaded files.
 
 #### Example
-    <kendo:upload statusUploaded="statusUploaded">
-    </kendo:upload>
+    <kendo:upload-localization statusUploaded="statusUploaded">
+    </kendo:upload-localization>
 
-
-
-### statusUploading `String`
+### statusUploading `java.lang.String`
 
 Sets the status message for files that are being uploaded.
 
 #### Example
-    <kendo:upload statusUploading="statusUploading">
-    </kendo:upload>
+    <kendo:upload-localization statusUploading="statusUploading">
+    </kendo:upload-localization>
 
-
-
-### uploadSelectedFiles `String`
+### uploadSelectedFiles `java.lang.String`
 
 Sets the text of the "Upload files" button.
 
 #### Example
-    <kendo:upload uploadSelectedFiles="uploadSelectedFiles">
-    </kendo:upload>
-
+    <kendo:upload-localization uploadSelectedFiles="uploadSelectedFiles">
+    </kendo:upload-localization>
 

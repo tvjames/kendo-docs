@@ -1,18 +1,20 @@
 ---
 title: Overview
+meta_title: Upload HtmlHelper extension | Kendo UI Upload widget documentation
+meta_description: Get familiar with Upload HtmlHelper server-side wrapper, learn how to setup an asynchronous upload and handle Kendo UI Upload events.
 slug: mvc-upload-overview
 publish: true
 ---
 
 # Upload
 
-The Upload HtmlHelper extension is a server-side wrapper for the [Kendo UI Upload](http://www.kendoui.com/documentation/ui-widgets/upload/overview.aspx) widget.
+The Upload HtmlHelper extension is a server-side wrapper for the [Kendo UI Upload](/kendo-ui/getting-started/web/upload/overview) widget.
 
 ## Getting Started
 
 The following example shows how to setup an asynchronous upload that saves the uploaded files in the App_Data folder.:
 
-1.  Make sure you have followed all the steps from the [Introduction](http://www.kendoui.com/documentation/asp-net-mvc/introduction.aspx) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create a new action method which renders the view:
 
@@ -39,8 +41,8 @@ The following example shows how to setup an asynchronous upload that saves the u
                     )
             )
 
-    The Name is used to specify the unique name of the Upload component. It is used to set the id and name HTML attributes.
-    Setting the name is mandatory and exception would be thrown otherwise.
+    The name attribute is required and must be unique.
+	It will be used as a form field name in the requests to the server.
 
 4. Implement the Save controller action:
 
@@ -65,7 +67,7 @@ The following example shows how to setup an asynchronous upload that saves the u
 ## Accessing an Existing Upload
 
 You can reference an existing Upload instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the [API](http://www.kendoui.com/documentation/ui-widgets/upload/methods.aspx) to control its behavior.
+Once a reference has been established, you can use the [API](/kendo-ui/api/web/upload#methods) to control its behavior.
 
 ### Accessing an existing Upload instance
 
@@ -80,7 +82,7 @@ Once a reference has been established, you can use the [API](http://www.kendoui.
 
 ## Handling Kendo UI Upload events
 
-You can subscribe to all [events](http://www.kendoui.com/documentation/ui-widgets/upload/events.aspx) exposed by Kendo UI Upload:
+You can subscribe to all [events](/kendo-ui/api/web/upload) exposed by Kendo UI Upload:
 
 ### WebForms - subscribe by handler name
 

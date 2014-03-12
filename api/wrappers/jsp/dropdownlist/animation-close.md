@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:dropDownList-animation-close\>
-A JSP tag representing Kendo Close.
+
+
 
 #### Example
     <kendo:dropDownList-animation>
         <kendo:dropDownList-animation-close></kendo:dropDownList-animation-close>
     </kendo:dropDownList-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for closing of the popup.
-
-#### Example
-    <kendo:dropDownList effects="effects">
-    </kendo:dropDownList>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
-    <kendo:dropDownList duration="duration">
-    </kendo:dropDownList>
+    <kendo:dropDownList-animation-close duration="duration">
+    </kendo:dropDownList-animation-close>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:dropDownList-animation-close effects="effects">
+    </kendo:dropDownList-animation-close>
 

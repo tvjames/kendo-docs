@@ -1,6 +1,9 @@
 ---
-title: DateTimePicker Overview
+title: Overview
+meta_title: How-to for jQuery UI DateTimePicker widget in Kendo UI Web framework
+meta_description: Overview of Kendo UI DateTimePicker widget. Get familiar with the configuration options of the control and define the interval between values in the time drop-down list.
 slug: gs-web-datetimepicker-overview
+relatedDocs: api-web-datetimepicker
 tags: getting-started,web
 publish: true
 ---
@@ -29,6 +32,7 @@ of the calendar, start view and the depth of the navigation.
 When a **DateTimePicker** is initialized, it will be displayed at the
 location of the target HTML element.
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
 
 ## Configuring DateTimePicker Behaviors
 
@@ -63,6 +67,13 @@ within the defined range.
     $("#dateTimePicker").kendoDateTimePicker({
         format: "MM/dd/yyyy hh:mm tt" //format is used to format the value of the widget and to parse the input.
     });
+
+The DateTimePicker textbox content is always parsed from scratch when the user changes it via typing. This means that if, for example, the format contains only a time portion, the date will be reset to today.
+To support such a DateTimePicker format, you should make the widget textbox readonly, but **after the widget is initialized** and **not via the widget readonly() method** (otherwise the Date and Time popups will be disabled).
+
+    $("#dateTimePicker").kendoDateTimePicker({
+        /*...*/
+    }).attr("readonly", "readonly");
 
 ### Define the time format
 
@@ -107,4 +118,3 @@ its behavior.
 ### Accessing an existing DateTimePicker instance
 
     var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-

@@ -1,88 +1,148 @@
 ---
 title: kendo.ui.DateTimePicker
-slug: web-kendo.ui.datetimepicker
+meta_title: Configuration, methods and events of Kendo UI DateTimePicker
+meta_description: Learn how to configure the UI DateTimePicker widget. Use methods to open, close, remove, enable, disable, set maximum or minimum values and more.
+slug: api-web-datetimepicker
+relatedDocs: gs-web-datetimepicker-overview
 tags: api,web
 publish: true
 ---
 
 # kendo.ui.DateTimePicker
 
+Represents the Kendo UI DateTimePicker widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
+
 ## Configuration
 
 ### animation `Object`
 
-The animation(s) used for opening and/or closing the pop-ups. Setting this value to **false**
-will disable the animation(s).
+Configures the opening and closing animations of the popups. Setting the `animation` option to `false` will disable the opening and closing animations. As a result the popup will open and close instantly.
+
+#### Example - disable open and close animations
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+      animation: false
+    });
+    </script>
+
+#### Example - configure the animation
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+      animation: {
+       close: {
+         effects: "fadeOut zoom:out",
+         duration: 300
+       },
+       open: {
+         effects: "fadeIn zoom:in",
+         duration: 300
+       }
+      }
+    });
+    </script>
 
 ### animation.close `Object`
 
-The animation(s) used for hiding of the pop-up.
+The animation played when a popup is closed.
 
-#### Example
+#### Example - configure the close animation
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        animation: {
-            close: {
-                effects: "fadeOut",
-                duration: 300,
-                show: false,
-                hide: true
-            }
-        }
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+      animation: {
+       close: {
+         effects: "zoom:out",
+         duration: 300
+       }
+      }
     });
+    </script>
 
 ### animation.close.effects `String`
 
-Effect to be used for closing of the popup.
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.
+
+[Complete list of available animations](/kendo-ui/api/framework/fx#effects)
 
 ### animation.close.duration `Number`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 ### animation.open `Object`
 
-The animation(s) used for displaying of the pop-up.
+The animation played when the popup is opened.
 
-#### Example
+#### Example - configure the open animation
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        animation: {
-            open: {
-                effects: "fadeIn",
-                duration: 300,
-                show: true
-            }
-        }
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+      animation: {
+       open: {
+         effects: "zoom:in",
+         duration: 300
+       }
+      }
     });
+    </script>
 
 ### animation.open.effects `String`
 
-Effect to be used for opening of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.
+
+[Complete list of available animations](/kendo-ui/api/framework/fx#effects)
 
 ### animation.open.duration `Number`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
-### culture `String`*(default: en-US)*
+### ARIATemplate `String`*(default: "Current focused date is #=kendo.toString(data.current, 'G')#")*
 
- Specifies the culture info used by the widget.
+ Specifies a template used to populate value of the aria-label attribute.
 
 #### Example
 
-    // specify on widget initialization
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        ARIATemplate: "Date: #=kendo.toString(data.current, 'G')#"
+    });
+    </script>
+
+### culture `String`*(default: "en-US")*
+
+ Specifies the culture info used by the widget.
+
+#### Example - specify German culture internationalization
+
+    <input id="datetimepicker" />
+    <script>
     $("#datetimepicker").kendoDateTimePicker({
         culture: "de-DE"
     });
+    </script>
 
 ### dates `Array`
 
  Specifies a list of dates, which will be passed to the month template of the DateView. All dates, which match the date portion of the selected date will be used to re-bind the TimeView.
 
-#### Example
+#### Example - specify a list of dates
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        dates: [new Date(2000, 10, 10, 10, 0, 0), new Date(2000, 10, 10, 10, 30, 0)] //the drop-down list will consist only two entries ("10:00 AM", "10:30 AM") if selected date is 10/10/2000
-    });
+    <input id="datetimepicker" />
+    <script>
+        $("#datetimepicker").kendoDateTimePicker({
+            value: new Date(2000, 10, 1),
+            dates: [
+                new Date(2000, 10, 10, 10, 0, 0),
+                new Date(2000, 10, 12, 10, 30, 0)
+            ] //can manipulate month template depending on this array.
+        });
+    </script>
 
 ### depth `String`
 
@@ -104,81 +164,93 @@ shows the years of the decade
 
 #### *"century"*
 
-shows the decades from the centery
+shows the decades from the century
 
-#### Example
+#### Example - set navigation depth of the calendar popup
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        start: "decade",
-        depth: "year" // the dateTimePicker will only go to the year level
+    <div id="datetimepicker"></div>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        depth: "year"
     });
+    </script>
 
 ### footer `String`
 
- Template to be used for rendering the footer of the calendar.
+ The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the footer of the calendar. If false, the footer will not be rendered.
 
-#### Example
+#### Example - specify footer template as a function
 
-    // DateTimePicker initialization
-     <script>
-         $("#dateTimePicker").kendoDateTimePicker({
-             footer: "Today - #=kendo.toString(data, 'd') #"
-         });
-     </script>
+    <input id="datetimepicker" />
+    <script id="footer-template" type="text/x-kendo-template">
+        Today - #: kendo.toString(data, "d") #
+    </script>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        footer: kendo.template($("#footer-template").html())
+    });
+    </script>
 
-### format `String`*(default: MM/dd/yyyy h:mm tt)*
+#### Example - specify footer template as a string
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        footer: "Today - #: kendo.toString(data, 'd') #"
+    });
+    </script>
+
+### format `String`*(default: "MM/dd/yyyy h:mm tt")*
 
  Specifies the format, which is used to format the value of the DateTimePicker displayed in the input. The format also will be used to parse the input.
 
-#### Example
+#### Example - specify a custom date format
 
-    $("#dateTimePicker").kendoDateTimePicker({
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
         format: "yyyy/MM/dd hh:mm tt"
     });
+    </script>
 
 ### interval `Number`*(default: 30)*
 
  Specifies the interval, between values in the popup list, in minutes.
 
-#### Example
+#### Example - specify a time interval
 
+    <input id="datetimepicker" />
+    <script>
     $("#dateTimePicker").kendoDateTimePicker({
         interval: 15
     });
+    </script>
 
 ### max `Date`*(default: Date(2099, 11, 31))*
 
  Specifies the maximum date, which the calendar can show.
 
-#### Example
+#### Example - specify the maximum date
 
-    $("#dateTimePicker").kendoDateTimePicker({
-     max: new Date(2013, 0, 1) // sets max date to Jan 1st, 2013 12:00 AM
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        max: new Date(2013, 0, 1, 22, 0, 0)
     });
-
-#### Example
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    // set the max date to Jan 1st, 2013 12:00 AM
-    dateTimePicker.max(new Date(2013,0, 1));
+    </script>
 
 ### min `Date`*(default: Date(1900, 0, 1))*
 
  Specifies the minimum date that the calendar can show.
 
-#### Example
+#### Example - specify the minimum date
 
-    // set the min date to Jan 1st, 2011
-    $("#dateTimePicker").kendoDateTimePicker({
-     min: new Date(2011, 0, 1)
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        min: new Date(2011, 0, 1, 8, 0, 0)
     });
-
-#### Example
-
-    // get a reference to the dateTimePicker widget
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    // set the min date to Jan 1st, 2011 12:00 AM
-    dateTimePicker.min(new Date(2011, 0, 1));
+    </script>
 
 ### month `Object`
 
@@ -188,28 +260,46 @@ shows the decades from the centery
 
  Template to be used for rendering the cells in the calendar "month" view, which are in range.
 
-#### Example
+#### Example - specify cell template as a string
 
-    //template
-    <script id="cellTemplate" type="text/x-kendo-tmpl">
-         <div class="${ data.value < 10 ? exhibition : party }">
-         </div>
-         ${ data.value }
-     </script>
-
-     //dateTimePicker initialization
-     <script>
-         $("#dateTimePicker").kendoDateTimePicker({
-             month: {
-                content:  kendo.template($("#cellTemplate").html()),
-             }
-         });
-     </script>
+    <input id="datetimepicker" />
+    <script id="cell-template" type="text/x-kendo-template">
+        <div class="#= data.value < 10 ? 'exhibition' : 'party' #"></div>
+        #= data.value #
+    </script>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        month: {
+           content: $("#cell-template").html()
+        }
+    });
+    </script>
 
 ### month.empty `String`
 
-The template used for rendering the cells in the calendar "month" view, which are not in the range between
-the minimum and maximum values.
+The template used for rendering cells in the calendar "month" view, which are outside the min/max range.
+
+#### Example - specify an empty cell template as a string
+
+    <input id="datetimepicker1" />
+    <script>
+    $("#datetimepicker1").kendoDateTimePicker({
+        month: {
+           empty: '-'
+        }
+    });
+    </script>
+    
+#### Example - add date value to the out-of-range cells
+
+    <input id="datetimepicker2" />
+    <script>
+    $("#datetimepicker2").kendoDateTimePicker({
+        month: {
+           empty: '<span style="color:\\#ccc;padding:0 .45em 0 .1em;">#= data.value #</span>'
+        }
+    });
+    </script>
 
 ### parseFormats `Array`
 
@@ -217,16 +307,18 @@ the minimum and maximum values.
 
 #### Example
 
-    $("#datePicker").kendoDatePicker({
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
         format: "yyyy/MM/dd hh:mm tt",
         parseFormats: ["MMMM yyyy", "HH:mm"] //format also will be added to parseFormats
     });
+    </script>
 
-### start `String`*(default: month)*
+### start `String`*(default: "month")*
 
  Specifies the start view of the calendar.
-The following settings are available for the **start** value:
-
+ The following settings are available for the **start** value:
 
 #### *"month"*
 
@@ -242,23 +334,30 @@ shows the years of the decade
 
 #### *"century"*
 
-shows the decades from the centery
+shows the decades from the century
 
-#### Example
 
-    $("#dateTimePicker").kendoDateTimePicker({
-        start: "decade" // the dateTimePicker will start with a decade display
-    });
+#### Example - specify the initial view, which calendar renders
 
-### timeFormat `String`*(default: h:mm tt)*
+    <input id="datetimepicker" />
+    <script>
+        $("#datetimepicker").kendoDateTimePicker({
+            start: "year"
+        });
+    </script>
+
+### timeFormat `String`*(default: "h:mm tt")*
 
  Specifies the format, which is used to format the values in the time drop-down list.
 
 #### Example
 
-    $("#dateTimePicker").kendoDateTimePicker({
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
         timeFormat: "HH:mm" //24 hours format
     });
+    </script>
 
 ### value `Date`*(default: null)*
 
@@ -266,35 +365,34 @@ shows the decades from the centery
 
 #### Example
 
-    // set the selected value to January 1st, 2011 12:00 AM
-    $("#dateTimePicker").kendoDateTimePicker({
-     value: new Date(2011, 0, 1)
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        value: new Date(2011, 0, 1)
     });
+    </script>
 
-#### Example
+## Fields
 
-    // get a reference to the dateTimePicker widget
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    // set the selected value on the dateTimePicker to January 1st, 2011
-    dateTimePicker.value(new Date(2011, 0, 1));
+### options `Object`
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("datetimepicker");
+
+    var options = datetimepicker.options;
+    <script>
 
 ## Methods
 
 ### close
 
 Closes the calendar or the time drop-down list.
-
-#### Close the calendar of the DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").close();
-
-#### Close the calendar of the DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").close("date");
-
-#### Close the time drop-down list of a DateTimePicker.
-
-    $("dateTimePicker").data("kendoDateTimePicker").close("time");
 
 #### Parameters
 
@@ -303,6 +401,34 @@ Closes the calendar or the time drop-down list.
 The view of the DateTimePicker, expressed as a string.
 Available views are "time" and "date".
 
+#### Example - close the calendar popup
+
+    <input id="datetimepicker" />
+    <button id="close">Close</button>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    $("#close").click(function() {
+        datetimepicker.close("date");
+    });
+    </script>
+
+#### Example - close the time popup
+
+    <input id="datetimepicker" />
+    <button id="close">Close</button>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    $("#close").click(function() {
+        datetimepicker.close("time");
+    });
+    </script>
+
 ### destroy
 Prepares the **DateTimePicker** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
@@ -310,26 +436,19 @@ Prepares the **DateTimePicker** for safe removal from DOM. Detaches all event ha
 
 #### Example
 
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
 
     // detach events
-    dateTimePicker.destroy();
+    datetimepicker.destroy();
+    </script>
 
 ### enable
 
 Enables or disables a DateTimePicker.
-
-#### Enable a DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").enable();
-
-#### Enable a dateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").enable(true);
-
-#### Disable a dateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").enable(false);
 
 #### Parameters
 
@@ -337,19 +456,65 @@ Enables or disables a DateTimePicker.
 
 Enables (**true** or undefined) or disables (**false**) a DateTimePicker.
 
+#### Example - disable DateTimePicker widget
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.enable(false);
+    </script>
+
+#### Example - enable DateTimePicker widget
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.enable();
+    </script>
+
+### readonly
+
+Toggles the readonly state of the widget. When the widget is readonly it doesn't allow user input.
+
+> There is a difference between disabled and readonly mode. The value of a disabled widget is **not** posted as part of a `form` whereas the value of a readonly widget is posted.
+
+#### Parameters
+
+##### readonly `Boolean`
+
+The argument, which defines whether the datetimepicker should be readonly or editable.
+
+#### Example - make DateTimePicker widget readonly
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.readonly();
+    </script>
+
+#### Example - make DateTimePicker widget editable
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.readonly(false);
+    </script>
+
 ### max
 
 Gets or sets the maximum value of the DateTimePicker.
-
-#### Get the maximum value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    var maximum = dateTimePicker.max();
-
-#### Set the maximum value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    dateTimePicker.max(new Date(1900, 0, 1, 10, 0, 0));
 
 #### Parameters
 
@@ -361,19 +526,33 @@ The maximum time value to set for a DateTimePicker, expressed as a Date object o
 
 `Date` The maximum time value of a DateTimePicker.
 
+#### Example - get the max value of the datetimepicker
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var max = datetimepicker.max();
+
+    console.log(max);
+    </script>
+
+#### Example - set the max value of the datetimepicker
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.max(new Date(2100, 0, 1));
+    </script>
+
 ### min
 
 Gets or sets the minimum value of the DateTimePicker.
-
-#### Get the minimum value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    var minimum = dateTimePicker.min();
-
-#### Set the minimum value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    dateTimePicker.min(new Date(1900, 0, 1, 10, 0, 0));
 
 #### Parameters
 
@@ -385,21 +564,33 @@ The minimum time value to set for a DateTimePicker, expressed as a Date object o
 
 `Date` The minimum time value of a DateTimePicker.
 
+#### Example - get the min value of the datetimepicker
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var min = datetimepicker.min();
+
+    console.log(min);
+    </script>
+
+#### Example - set the min value of the datetimepicker
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.min(new Date(2000, 0, 1));
+    </script>
+
 ### open
 
 Opens the calendar or the time drop-down list.
-
-#### Open the calendar of the DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").open();
-
-#### Open the calendar of the DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").open("date");
-
-#### Open the time drop-down list of a DateTimePicker.
-
-    $("dateTimePicker").data("kendoDateTimePicker").open("time");
 
 #### Parameters
 
@@ -407,23 +598,65 @@ Opens the calendar or the time drop-down list.
 
 The view of the DateTimePicker, expressed as a string.
 Available views are "time" and "date".
+
+#### Example - open the calendar popup
+
+    <input id="datetimepicker" />
+    <button id="open">Open</button>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    $("#open").click(function() {
+        datetimepicker.open("date");
+    });
+    </script>
+
+#### Example - open the time popup
+
+    <input id="datetimepicker" />
+    <button id="open">Open</button>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    $("#open").click(function() {
+        datetimepicker.open("time");
+    });
+    </script>
+
+### setOptions
+
+#### Parameters
+
+Changes the initial DateTimePicker configuration. **Will be included in Q3 2013 SP1. Currently available in Q3 2013 internal builds only.**
+
+##### options `Object`
+
+The new configuration options.
+
+#### Example
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        min: new Date(2001, 0, 1),
+        max: new Date()
+    });
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.setOptions({
+        min: new Date(2010, 5, 6)
+    });
+    </script>
 
 ### toggle
 
 Toggles the calendar or the time drop-down list.
 
-#### Toggle the calendar of the DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").toggle();
-
-#### Toggle the calendar of the DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").toggle("date");
-
-#### Toggle the time drop-down list of a DateTimePicker.
-
-    $("dateTimePicker").data("kendoDateTimePicker").toggle("time");
-
 #### Parameters
 
 ##### view `String`
@@ -431,19 +664,37 @@ Toggles the calendar or the time drop-down list.
 The view of the DateTimePicker, expressed as a string.
 Available views are "time" and "date".
 
+#### Example - toggle the calendar popup
+
+    <input id="datetimepicker" />
+    <button id="toggle">Toggle</button>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    $("#toggle").click(function() {
+        datetimepicker.toggle("date");
+    });
+    </script>
+
+#### Example - toggle the time popup
+
+    <input id="datetimepicker" />
+    <button id="toggle">Toggle</button>
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    $("#toggle").click(function() {
+        datetimepicker.toggle("time");
+    });
+    </script>
+
 ### value
 
 Gets or sets the value of the DateTimePicker.
-
-#### Get the value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    var timePickerValue = dateTimePicker.value();
-
-#### Set the value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    dateTimePicker.value("2/23/2000 10:00 AM");
 
 #### Parameters
 
@@ -455,60 +706,74 @@ The time value to set for a DateTimePicker, expressed as a Date object or as a s
 
 `Date` The time value of a DateTimePicker.
 
+#### Example - gets the value of the widget
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        value: new Date(2013, 10, 10)
+    });
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var value = datetimepicker.value();
+    console.log(value);
+    </script>
+
+#### Example - sets the value of the widget
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        value: new Date(2013, 10, 10)
+    });
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.value(new Date());
+    </script>
+
 ## Events
 
 ### change
 
 Triggered when the underlying value of a DateTimePicker is changed.
 
-#### Attach change event handler during initialization; detach via unbind()
+#### Event Data
 
-    // event change for expand
-    var onChange = function(e) {
-        // ...
-    };
+##### e.sender `kendo.ui.DateTimePicker`
 
-    // attach change event handler during initialization
-    var dateTimePicker = $("#dateTimePicker").kendoDateTimePicker({
-        change: onChange
+The widget instance which fired the event.
+
+#### Example - subscribe to the "change" event during initialization
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        change: function() {
+            var value = this.value();
+            console.log(value); //value is the selected date in the datetimepicker
+        }
     });
+    </script>
 
-    // detach change event handler via unbind()
-    dateTimePicker.data("kendoDateTimePicker").unbind("change", onChange);
+#### Example - subscribe to the "change" event after initialization
 
-#### Attach change event handler via bind(); detach via unbind()
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
 
-    // event change for expand
-    var onChange = function(e) {
-        // ...
-    };
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
 
-    // attach change event handler via bind()
-    $("#dateTimePicker").data("kendoDateTimePicker").bind("change", onChange);
-
-    // detach change event handler via unbind()
-    $("#dateTimePicker").data("kendoDateTimePicker").unbind("change", onChange);
+    datetimepicker.bind("change", function() {
+        var value = this.value();
+        console.log(value); //value is the selected date in the datetimepicker
+    });
+    </script>
 
 ### close
 
 Fires when the calendar or the time drop-down list is closed
-
-#### Example
-
-    $("#dateTimePicker").kendoDateTimePicker({
-        close: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    // get a reference to the dateTimePicker widget
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    // bind to the close event
-    dateTimePicker.bind("close", function(e) {
-        // handle event
-    });
 
 #### Event Data
 
@@ -516,29 +781,76 @@ Fires when the calendar or the time drop-down list is closed
 
 The view which is closed. Possible values are "date" and "time".
 
+##### e.sender `kendo.ui.DateTimePicker`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "close" event during initialization
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        close: function(e) {
+            if (e.view === "date") {
+                e.preventDefault(); //prevent popup closing
+            }
+        }
+    });
+    </script>
+
+#### Example - subscribe to the "close" event after initialization
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.bind("close", function(e) {
+        if (e.view === "date") {
+            e.preventDefault(); //prevent popup closing
+        }
+    });
+    </script>
+
 ### open
 
 Fires when the calendar or the time drop-down list is opened
-
-#### Example
-
-    $("#dateTimePicker").kendoDateTimePicker({
-        open: function(e) {
-            // handle event
-        }
-    });
-
-#### To set after initialization
-
-    // get a reference to the dateTimePicker widget
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    // bind to the open event
-    dateTimePicker.bind("open", function(e) {
-        // handle event
-    });
 
 #### Event Data
 
 ##### e.view `String`
 
 The view which is opened. Possible values are "date" and "time".
+
+##### e.sender `kendo.ui.DateTimePicker`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "open" event during initialization
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker({
+        open: function(e) {
+            if (e.view === "time") {
+                e.preventDefault(); //prevent popup opening
+            }
+        }
+    });
+    </script>
+
+#### Example - subscribe to the "open" event after initialization
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    datetimepicker.bind("open", function(e) {
+        if (e.view === "time") {
+            e.preventDefault(); //prevent popup opening
+        }
+    });
+    </script>

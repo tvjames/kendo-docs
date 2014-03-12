@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:menu-animation-close\>
-A JSP tag representing Kendo Close.
+
+The animation that will be used when closing sub menus.
 
 #### Example
     <kendo:menu-animation>
         <kendo:menu-animation-close></kendo:menu-animation-close>
     </kendo:menu-animation>
 
-
 ## Configuration Attributes
 
+### duration `float`
 
-### effects `String`
+Defines the animation duration in milliseconds.
+
+#### Example
+    <kendo:menu-animation-close duration="duration">
+    </kendo:menu-animation-close>
+
+### effects `java.lang.String`
 
 Effect to be used for closing of the popup.
 
 #### Example
-    <kendo:menu effects="effects">
-    </kendo:menu>
-
-
-
-### duration `float`
-
-Difines the animation duration.
-
-#### Example
-    <kendo:menu duration="duration">
-    </kendo:menu>
-
+    <kendo:menu-animation-close effects="effects">
+    </kendo:menu-animation-close>
 

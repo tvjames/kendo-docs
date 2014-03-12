@@ -5,39 +5,37 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.GaugeRadialPointerBuilder
+Defines the fluent interface for configuring the GaugeRadialPointerBuilder.
 
-Defines the fluent interface for configuring the GaugeRadialPointer.
+
 
 ## Methods
 
-### Color(System.String)
+### Color(`System.String`)
 Sets the pointer color.
 
-#### Example
-    <% Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Pointer(pointer => pointer
-        .Color("red")
-        )
-        .Render();
-        %>
 
 #### Parameters
 
 ##### color `System.String`
 The pointer color.
 
-### Opacity(System.Double)
-Sets the pointer opacity.
 
-#### Example
+
+
+#### Example (ASPX)
     <% Html.Kendo().RadialGauge()
         .Name("radialGauge")
         .Pointer(pointer => pointer
-        .Opacity(0.5)
+            .Color("red")
         )
         .Render();
-        %>
+    %>
+
+
+### Opacity(`System.Double`)
+Sets the pointer opacity.
+
 
 #### Parameters
 
@@ -45,36 +43,61 @@ Sets the pointer opacity.
 The pointer opacity in the range from 0 (transparent) to 1 (opaque).
             The default value is 1.
 
-### Value(System.Double)
-Sets the pointer value.
 
-#### Example
+
+
+#### Example (ASPX)
     <% Html.Kendo().RadialGauge()
         .Name("radialGauge")
         .Pointer(pointer => pointer
-        .Value(25)
+            .Opacity(0.5)
         )
         .Render();
-        %>
+    %>
+
+
+### Value(`System.Double`)
+Sets the pointer value.
+
 
 #### Parameters
 
 ##### value `System.Double`
 The pointer value.
 
-### Cap(System.Action\<Kendo.Mvc.UI.Fluent.GaugeRadialCapBuilder\>)
-Configures the pointer cap.
 
-#### Example
+
+
+#### Example (ASPX)
     <% Html.Kendo().RadialGauge()
         .Name("radialGauge")
         .Pointer(pointer => pointer
-        .Cap(cap => cap.Color("red"))
+            .Value(25)
         )
         .Render();
-        %>
+    %>
+
+
+### Cap(`System.Action<Kendo.Mvc.UI.Fluent.GaugeRadialCapBuilder>`)
+Configures the pointer cap.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GaugeRadialCapBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeRadialCapBuilder)\>
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GaugeRadialCapBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeRadialCapBuilder)>
 The configuration action.
+
+
+
+
+#### Example (ASPX)
+    <% Html.Kendo().RadialGauge()
+        .Name("radialGauge")
+        .Pointer(pointer => pointer
+            .Cap(cap => cap.Color("red"))
+        )
+        .Render();
+    %>
+
+
+

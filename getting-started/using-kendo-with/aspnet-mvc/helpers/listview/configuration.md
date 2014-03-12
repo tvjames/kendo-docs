@@ -1,5 +1,7 @@
 ---
 title: Configuration
+meta_title: Configuration of Kendo jQuery ListView widget for ASP.NET MVC
+meta_description: How to configure the TagName of Kendo ListView for ASP.NET MVC and set Client Template ID of the script element.
 slug: mvc-listview-configuration
 publish: true
 ---
@@ -26,28 +28,28 @@ The `ClientTemplateId` is mandatory for the listview widget. It contains the `id
 ## Common DataSource Settings
 
 The `DataSource` of the Kendo ListView for ASP.NET MVC contains configuration used by
-the [Kendo DataSource](http://docs.kendoui.com/api/framework/datasource) object.
+the [Kendo DataSource](/kendo-ui/api/framework/datasource) object.
 
 Kendo ListView for ASP.NET MVC supports
-[ajax](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/helpers/listview/binding) type of data source.
+[ajax](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/helpers/listview/binding) type of data source.
 
 
 ###   Create
 Specify the action method which will create new model
 
     .DataSource(dataSource => dataSource
-        .Create(create => create.Action(/### action ###/ "Create", /### controller ###/ "Home"))
+        .Create(create => create.Action(/kendo-ui/### action ###/ "Create", /### controller ###/ "Home"))
     )
 
 ###   Destroy
 Specify the action method which will destroy existing models.
 
     .DataSource(dataSource => dataSource
-        .Destroy(destroy =>  destroy.Destroy(/### action ###/ "Destroy", /### controller ###/ "Home"))
+        .Destroy(destroy =>  destroy.Destroy(/kendo-ui/### action ###/ "Destroy", /### controller ###/ "Home"))
     )
 
 ###   Events
-Handle the [events](http://docs.kendoui.com/api/framework/datasource#events) of the Kendo DataSource object.
+Handle the [events](/kendo-ui/api/framework/datasource#events) of the Kendo DataSource object.
 
     .DataSource(dataSource => dataSource
         .Events(events => events
@@ -101,7 +103,7 @@ Set the page size used during paging. The default page size is 10.
 Specify the action method which will read existing models and return them as JSON:
 
     .DataSource(dataSource => dataSource
-        .Read(read =>  read.Read(/### action ###/ "Read", /### controller ###/ "Home"))
+        .Read(read =>  read.Read(/kendo-ui/### action ###/ "Read", /### controller ###/ "Home"))
     )
 
 ###   Sort
@@ -121,5 +123,5 @@ Set the initial sort.
 Specify the action method which will update existing models:
 
     .DataSource(dataSource => dataSource
-        .Update(update =>  update.Update(/### action ###/ "Update", /### controller ###/ "Home"))
+        .Update(update =>  update.Update(/kendo-ui/### action ###/ "Update", /### controller ###/ "Home"))
     )

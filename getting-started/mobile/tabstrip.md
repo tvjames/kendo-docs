@@ -1,6 +1,9 @@
 ---
 title: TabStrip
+meta_title: General documentation for Kendo UI Mobile Tabstrip widget
+meta_description: How to initialize Kendo Mobile TabStrip widget and create custom icons.
 slug: gs-mobile-tabstrip
+relatedDocs: api-mobile-tabstrip
 tags: getting-started,mobile
 publish: true
 ---
@@ -26,64 +29,62 @@ The tabs of the TabStrip navigate to the mobile application's views. When the mo
         <a href="#featured">Featured</a>
     </div>
 
+## Tab Badges
+
+Every tab can have a badge, which is set using the `badge` data attribute of the Tab's `a` element.
+
+### Setting badges to tabs
+
+    <div data-role="tabstrip">
+        <a data-badge="5" href="#index">Home</a>
+        <a data-badge="105" href="#featured">Featured</a>
+    </div>
+
 ## Tab icons
 
 A tab icon can be set in two ways - either by adding an `img` element inside the `a` element, or by setting an `icon` data attribute to the `a` element.
 Kendo mobile TabStrip ships with several ready to use icons:
 
-*   <span class="km-icon km-about"></span>about
-*   <span class="km-icon km-action"></span>action
-*   <span class="km-icon km-add"></span>add
-*   <span class="km-icon km-bookmarks"></span>bookmarks
-*   <span class="km-icon km-camera"></span>camera
-*   <span class="km-icon km-cart"></span>cart
-*   <span class="km-icon km-compose"></span>compose
-*   <span class="km-icon km-contacts"></span>contacts
-*   <span class="km-icon km-details"></span>details
-*   <span class="km-icon km-downloads"></span>downloads
-*   <span class="km-icon km-fastforward"></span>fastforward
-*   <span class="km-icon km-favorites"></span>favorites
-*   <span class="km-icon km-featured"></span>featured
-*   <span class="km-icon km-toprated"></span>toprated
-*   <span class="km-icon km-globe"></span>globe
-*   <span class="km-icon km-history"></span>history
-*   <span class="km-icon km-home"></span>home
-*   <span class="km-icon km-info"></span>info
-*   <span class="km-icon km-more"></span>more
-*   <span class="km-icon km-mostrecent"></span>mostrecent
-*   <span class="km-icon km-mostviewed"></span>mostviewed
-*   <span class="km-icon km-organize"></span>organize
-*   <span class="km-icon km-pause"></span>pause
-*   <span class="km-icon km-play"></span>play
-*   <span class="km-icon km-recents"></span>recents
-*   <span class="km-icon km-refresh"></span>refresh
-*   <span class="km-icon km-reply"></span>reply
-*   <span class="km-icon km-rewind"></span>rewind
-*   <span class="km-icon km-search"></span>search
-*   <span class="km-icon km-settings"></span>settings
-*   <span class="km-icon km-share"></span>share
-*   <span class="km-icon km-stop"></span>stop
-*   <span class="km-icon km-trash"></span>trash
+<ul class="icon-block">
+    <li><span class="km-icon km-about"></span><br/>about</li>
+    <li><span class="km-icon km-action"></span><br/>action</li>
+    <li><span class="km-icon km-add"></span><br/>add</li>
+    <li><span class="km-icon km-bookmarks"></span><br/>bookmarks</li>
+    <li><span class="km-icon km-camera"></span><br/>camera</li>
+    <li><span class="km-icon km-cart"></span><br/>cart</li>
+    <li><span class="km-icon km-compose"></span><br/>compose</li>
+    <li><span class="km-icon km-contacts"></span><br/>contacts</li>
+    <li><span class="km-icon km-delete"></span><br/>delete</li>
+    <li><span class="km-icon km-details"></span><br/>details</li>
+    <li><span class="km-icon km-downloads"></span><br/>downloads</li>
+    <li><span class="km-icon km-fastforward"></span><br/>fastforward</li>
+    <li><span class="km-icon km-favorites"></span><br/>favorites</li>
+    <li><span class="km-icon km-featured"></span><br/>featured</li>
+    <li><span class="km-icon km-globe"></span><br/>globe</li>
+    <li><span class="km-icon km-history"></span><br/>history</li>
+    <li><span class="km-icon km-home"></span><br/>home</li>
+    <li><span class="km-icon km-info"></span><br/>info</li>
+    <li><span class="km-icon km-more"></span><br/>more</li>
+    <li><span class="km-icon km-mostrecent"></span><br/>mostrecent</li>
+    <li><span class="km-icon km-mostviewed"></span><br/>mostviewed</li>
+    <li><span class="km-icon km-organize"></span><br/>organize</li>
+    <li><span class="km-icon km-pause"></span><br/>pause</li>
+    <li><span class="km-icon km-play"></span><br/>play</li>
+    <li><span class="km-icon km-recents"></span><br/>recents</li>
+    <li><span class="km-icon km-refresh"></span><br/>refresh</li>
+    <li><span class="km-icon km-reply"></span><br/>reply</li>
+    <li><span class="km-icon km-rewind"></span><br/>rewind</li>
+    <li><span class="km-icon km-search"></span><br/>search</li>
+    <li><span class="km-icon km-settings"></span><br/>settings</li>
+    <li><span class="km-icon km-share"></span><br/>share</li>
+    <li><span class="km-icon km-sounds"></span><br/>sounds</li>
+    <li><span class="km-icon km-stop"></span><br/>stop</li>
+    <li><span class="km-icon km-toprated"></span><br/>toprated</li>
+    <li><span class="km-icon km-trash"></span><br/>trash</li>
+    <li><span class="km-icon km-volume"></span><br/>volume</li>
+    <li><span class="km-icon km-wifi"></span><br/>wifi</li>
+</ul>
 
 Additional icons may be added by defining the respective CSS tab class.
 
-## Creating Custom Icons
-
-In order to create colorizable icons like the default ones in Kendo UI Mobile, specify the icon image as a **box mask**
-(either as dataURI or as a separate image). The image should be **PNG8** or **PNG24** with alpha channel (**PNG8+Alpha** is supported by
-only few graphic editors, so **better stick with PNG24**). The image color is not important - it will be used as a mask only.
-
-**Note**: **BlackBerry 7.0** has a bug that renders its masks as background-image, so it is recommended to use white in order to support it. The bug is fixed in **7.1**.
-
-### Define custom tab icon
-
-    <style>
-    .km-custom {
-      -webkit-mask-box-image: url("foo.png");
-    }
-    </style>
-
-    <div data-role="tabstrip">
-      <a href="#index" data-icon="custom">Home</a>
-    </div>
-
+> **Important:** Check the [Icons](./icons) article for more information and how you can use custom icons in Kendo UI Mobile.

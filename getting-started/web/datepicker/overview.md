@@ -1,6 +1,9 @@
 ---
-title: DatePicker Overview
+title: Overview
+meta_title: Overview of DatePicker UI widget
+meta_description: Help guide for the basics of Kendo UI DatePicker widget.
 slug: gs-web-datepicker-overview
+relatedDocs: api-web-datepicker
 tags: getting-started,web
 publish: true
 ---
@@ -28,6 +31,7 @@ depth of the navigation.
 When a **DatePicker** is initialized, it will be displayed at the
 location of the target HTML element.
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
 
 ## Configuring DatePicker Behaviors
 
@@ -87,4 +91,3 @@ its behavior.
 ### Accessing an existing DatePicker instance
 
     var datePicker = $("#datePicker").data("kendoDatePicker");
-

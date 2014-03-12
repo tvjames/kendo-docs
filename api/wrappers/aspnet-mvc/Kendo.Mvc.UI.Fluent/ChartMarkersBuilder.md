@@ -5,85 +5,90 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.ChartMarkersBuilder
-
 Defines the fluent interface for configuring the chart data labels.
+
+
 
 ## Methods
 
-### Type(Kendo.Mvc.UI.ChartMarkerShape)
+### Type(`Kendo.Mvc.UI.ChartMarkerShape`)
 Sets the markers shape type.
 
-#### Example
-    <% Html.Kendo().Chart()
-        .Name("Chart")
-        .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(markers => markers
-        .Type(ChartMarkerShape.Triangle)
-        );
-        )
-        .Render();
-        %>
 
 #### Parameters
 
-##### type [Kendo.Mvc.UI.ChartMarkerShape](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartMarkerShape)
+##### type [Kendo.Mvc.UI.ChartMarkerShape](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartMarkerShape)
 The markers shape type.
 
-### Size(System.Int32)
-Sets the markers size.
 
-#### Example
+
+
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(markers => markers
-        .Size(10)
-        );
-        )
-        .Render();
-        %>
+            .Line(s => s.Sales)
+            .Markers(markers => markers
+                .Type(ChartMarkerShape.Triangle)
+                );
+            )
+            .Render();
+            %>
+
+
+### Size(`System.Int32`)
+Sets the markers size.
+
 
 #### Parameters
 
 ##### size `System.Int32`
 The markers size.
 
-### Visible(System.Boolean)
-Sets the markers visibility
 
-#### Example
+
+
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(markers => markers
-        .Visible(true)
-        );
-        )
-        .Render();
-        %>
+            .Line(s => s.Sales)
+            .Markers(markers => markers
+                .Size(10)
+                );
+            )
+            .Render();
+            %>
+
+
+### Visible(`System.Boolean`)
+Sets the markers visibility
+
 
 #### Parameters
 
 ##### visible `System.Boolean`
 The markers visibility.
 
-### Border(System.Int32,System.String,Kendo.Mvc.UI.ChartDashType)
-Sets the markers border
 
-#### Example
+
+
+#### Example (ASPX)
     <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(markers => markers
-        .Border(1, "Red", ChartDashType.Dot)
-        );
-        )
-        .Render();
-        %>
+            .Line(s => s.Sales)
+            .Markers(markers => markers
+                .Visible(true)
+                );
+            )
+            .Render();
+            %>
+
+
+### Border(`System.Int32,System.String,Kendo.Mvc.UI.ChartDashType`)
+Sets the markers border
+
 
 #### Parameters
 
@@ -93,25 +98,87 @@ The markers border width.
 ##### color `System.String`
 The markers border color (CSS syntax).
 
-##### dashType [Kendo.Mvc.UI.ChartDashType](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartDashType)
+##### dashType [Kendo.Mvc.UI.ChartDashType](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartDashType)
 The markers border dash type.
 
-### Background(System.String)
-The background color of the current series markers.
 
-#### Example
-    <%= Html.Kendo().Chart()
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
         .Name("Chart")
         .Series(series => series
-        .Line(s => s.Sales)
-        .Markers(markers => markers
-        .Background("Red");
-        );
-        )
-        .Render();
-        %>
+            .Line(s => s.Sales)
+            .Markers(markers => markers
+                .Border(1, "Red", ChartDashType.Dot)
+                );
+            )
+            .Render();
+            %>
+
+
+### Border(`System.Action<Kendo.Mvc.UI.Fluent.ChartBorderBuilder>`)
+Configures the markers border
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.ChartBorderBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/ChartBorderBuilder)>
+The border configuration action
+
+
+
+
+
+### Background(`System.String`)
+The background color of the current series markers.
+
 
 #### Parameters
 
 ##### backgorund `System.String`
 The background color of the current series markers. The background color is series color.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Chart()
+    .Name("Chart")
+    .Series(series => series
+        .Line(s => s.Sales)
+        .Markers(markers => markers
+            .Background("Red");
+            );
+        )
+        .Render();
+    %>
+
+
+### Rotation(`System.Int32`)
+Sets the markers rotation angle.
+
+
+#### Parameters
+
+##### size `System.Int32`
+The markers rotation angle.
+
+
+
+
+#### Example (ASPX)
+    <% Html.Kendo().Chart()
+        .Name("Chart")
+        .Series(series => series
+            .Line(s => s.Sales)
+            .Markers(markers => markers
+                .Type(ChartMarkerShape.Triangle)
+                .Rotation(10)
+                );
+            )
+            .Render();
+            %>
+
+
+

@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:dropDownList-animation-open\>
-A JSP tag representing Kendo Open.
+
+The animation played when the suggestion popup is opened.
 
 #### Example
     <kendo:dropDownList-animation>
         <kendo:dropDownList-animation-open></kendo:dropDownList-animation-open>
     </kendo:dropDownList-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for opening of the popup.
-
-#### Example
-    <kendo:dropDownList effects="effects">
-    </kendo:dropDownList>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
 #### Example
-    <kendo:dropDownList duration="duration">
-    </kendo:dropDownList>
+    <kendo:dropDownList-animation-open duration="duration">
+    </kendo:dropDownList-animation-open>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:dropDownList-animation-open effects="effects">
+    </kendo:dropDownList-animation-open>
 

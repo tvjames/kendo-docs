@@ -6,43 +6,37 @@ publish: true
 ---
 
 # \<kendo:linearGauge-pointer-track-border\>
-A JSP tag representing Kendo Border.
+
+The border of the track.
 
 #### Example
     <kendo:linearGauge-pointer-track>
         <kendo:linearGauge-pointer-track-border></kendo:linearGauge-pointer-track-border>
     </kendo:linearGauge-pointer-track>
 
-
 ## Configuration Attributes
 
-
-### color `String`
+### color `java.lang.String`
 
 The color of the border. Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
-    <kendo:linearGauge color="color">
-    </kendo:linearGauge>
+    <kendo:linearGauge-pointer-track-border color="color">
+    </kendo:linearGauge-pointer-track-border>
 
-
-
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 
 #### Example
-    <kendo:linearGauge dashType="dashType">
-    </kendo:linearGauge>
-
-
+    <kendo:linearGauge-pointer-track-border dashType="dashType">
+    </kendo:linearGauge-pointer-track-border>
 
 ### width `float`
 
 The width of the border.
 
 #### Example
-    <kendo:linearGauge width="width">
-    </kendo:linearGauge>
-
+    <kendo:linearGauge-pointer-track-border width="width">
+    </kendo:linearGauge-pointer-track-border>
 

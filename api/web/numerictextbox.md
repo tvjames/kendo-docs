@@ -1,24 +1,31 @@
 ---
 title: kendo.ui.NumericTextBox
-slug: web-kendo.ui.numerictextbox
+meta_title: Configuration, methods and events of Kendo UI NumericTextBox
+meta_description: Code examples and tips how to configure NumericTextBox widget, use available methods and events.
+slug: api-web-numerictextbox
+relatedDocs: gs-web-numerictextbox-overview
 tags: api,web
 publish: true
 ---
 
 # kendo.ui.NumericTextBox
 
+Represents the Kendo UI NumericTextBox widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
+
 ## Configuration
 
-### culture `String`*(default: en-US)*
+### culture `String`*(default: "en-US")*
 
- Specifies the culture info used by the NumericTextBox widget.
+ Specifies the culture info used by the widget.
 
-#### Example
+#### Example - specify German culture internationalization
 
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
         culture: "de-DE"
     });
+    </script>
 
 ### decimals `Number`*(default: null)*
 
@@ -26,144 +33,173 @@ publish: true
 
 #### Example
 
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 1,
-        step: 0.1,
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
         decimals: 1
     });
+    </script>
 
-### downArrowText `String`*(default: Decrease value)*
+### downArrowText `String`*(default: "Decrease value")*
 
  Specifies the text of the tooltip on the down arrow.
 
 #### Example
 
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 100,
-        value: 50,
-        upArrowText: "More",
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
         downArrowText: "Less"
     });
+    </script>
 
-### format `String`*(default: n)*
+### format `String`*(default: "n")*
 
  Specifies the format of the number. Any valid number format is allowed.
 
 #### Example
 
-    $("#numeric").kendoNumericTextBox({
-       format: "p0", // format as percentage with % sign
-       min: 0,
-       max: 1,
-       step: 0.01
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+       format: "c0"
     });
+    </script>
 
 ### max `Number`*(default: null)*
 
  Specifies the largest value the user can enter.
 
-#### Example
+#### Example - specify max option
 
-    // specify in the HTML
-    <input id="numeric" value="10" type="number" min="-100" max="100" step="10"/>
-    <br />
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 100,
-        value: 50
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+        max: 100
     });
+    </script>
+
+#### Example - specify max option as a HTML attribute
+
+    <input id="numerictextbox" max="100" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+    </script>
 
 ### min `Number`*(default: null)*
 
  Specifies the smallest value the user can enter.
 
-#### Example
+#### Example - specify max option
 
-    // specify in the HTML
-    <input id="numeric" value="10" type="number" min="-100" max="100" step="10"/>
-    <br />
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 100,
-        value: 50
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+        min: -100
     });
+    </script>
+
+#### Example - specify min option as a HTML attribute
+
+    <input id="numerictextbox" min="-100" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+    </script>
 
 ### placeholder `String`*(default: "")*
 
- Specifies the text displayed when the input is empty.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Example
 
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 100,
-        value: 50,
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
         placeholder: "Select A Value"
     });
+    </script>
 
 ### spinners `Boolean`*(default: true)*
 
- Specifies whether the up/down spin buttons should be rendered
+ Specifies whether the up and down spin buttons should be rendered
 
-#### Don't show the up/down spin buttons
+#### Example - hide spin buttons
 
-    $("#numeric").kendoNumericTextBox({
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
         spinners: false
     });
+    </script>
 
 ### step `Number`*(default: 1)*
 
- Specifies the increment/decrement step.
+ Specifies the value used to increment or decrement widget value.
 
-#### Example
+#### Example - specify step option
 
-    // specify in the HTML
-    <input id="numeric" value="10" type="number" />
-    <br />
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 1,
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
         step: 0.1
     });
+    </script>
 
-### upArrowText `String`*(default: Increase value)*
+#### Example - specify step option as a HTML attribute
+
+    <input id="numerictextbox" step="0.1" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+    </script>
+
+### upArrowText `String`*(default: "Increase value")*
 
  Specifies the text of the tooltip on the up arrow.
 
 #### Example
 
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 100,
-        value: 50,
-        upArrowText: "More",
-        downArrowText: "Less"
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+        upArrowText: "More"
     });
+    </script>
 
 ### value `Number`*(default: null)*
 
  Specifies the value of the NumericTextBox widget.
 
-#### Example
+#### Example - specify value option
 
-    // specify in the HTML
-    <input id="numeric" value="10" type="number" min="-100" max="100" step="10"/>
-
-    // specify on widget initialization
-    $("#numeric").kendoNumericTextBox({
-        min: 0,
-        max: 100,
-        value: 50
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+        value: 10
     });
+    </script>
+
+#### Example - specify value option as a HTML attribute
+
+    <input id="numerictextbox" value="10" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+    </script>
+
+## Fields
+
+### options `Object`
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var options = numerictextbox.options;
+    <script>
 
 ## Methods
 
@@ -174,58 +210,77 @@ Prepares the **NumericTextBox** for safe removal from DOM. Detaches all event ha
 
 #### Example
 
-    var textbox = $("#textbox").data("kendoNumericTextBox");
-    
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
     // detach events
-    textbox.destroy();
+    numerictextbox.destroy();
+    <script>
 
 ### enable
 
-Enable/Disable the numerictextbox widget.
-
-#### Example
-
-    // get a reference to the numeric textbox
-    var textbox = $("#textbox").data("kendoNumericTextBox");
-
-    // disables the numerictextbox
-    numerictextbox.enable(false);
-
-    // enables the numerictextbox
-    numerictextbox.enable(true);
+Enables or disables the widget.
 
 #### Parameters
 
 ##### enable `Boolean`
 
-The argument, which defines whether to enable/disable tha numerictextbox.
+If set to `true` the widget will be enabled. If set to `false` the widget will be disabled.
+
+#### Example - enable the widget
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+      enable: false
+    });
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+    numerictextbox.enable(true);
+    </script>
+
+### readonly
+
+Toggles the readonly state of the widget. When the widget is readonly it doesn't allow user input.
+
+> There is a difference between disabled and readonly mode. The value of a disabled widget is **not** posted as part of a `form` whereas the value of a readonly widget is posted.
+
+#### Parameters
+
+##### readonly `Boolean`
+
+If set to `true` the widget will not allow user input. If set to `false` the widget will allow user input.
+
+#### Example - make the widget readonly
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+    numerictextbox.readonly();
+    </script>
 
 ### focus
 
-Focuses the numerictextbox widget.
+Focuses the widget.
 
 #### Example
 
-    // get a reference to the numeric textbox
-    var textbox = $("#textbox").data("kendoNumericTextBox");
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
 
-    // focus the numerictextbox
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
     numerictextbox.focus();
+    </script>
 
 ### max
 
-Gets/Sets the max value of the NumericTextBox.
-
-#### Example
-
-    // get a reference to the NumericTextBox widget
-    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-
-    // get the max value of the numerictextbox.
-    var max = numerictextbox.max();
-
-    // set the max value of the numerictextbox.
-    numerictextbox.max(10);
+Gets or sets the max value of the widget.
 
 #### Parameters
 
@@ -235,22 +290,37 @@ The max value to set.
 
 #### Returns
 
-`Number` The max value of the NumericTextBox.
+`Number` The max value of the widget.
+
+#### Example - get the max value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var max = numerictextbox.max();
+
+    console.log(max);
+    </script>
+
+#### Example - set the max value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var max = numerictextbox.max();
+
+    numerictextbox.max(10);
+    </script>
 
 ### min
 
-Gets/Sets the min value of the NumericTextBox.
-
-#### Example
-
-    // get a reference to the NumericTextBox widget
-    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-
-    // get the min value of the numerictextbox.
-    var min = numerictextbox.min();
-
-    // set the min value of the numerictextbox.
-    numerictextbox.min(-10);
+Gets or sets the min value of the widget.
 
 #### Parameters
 
@@ -260,22 +330,37 @@ The min value to set.
 
 #### Returns
 
-`Number` The min value of the NumericTextBox.
+`Number` The min value of the widget.
+
+#### Example - get the min value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var min = numerictextbox.min();
+
+    console.log(min);
+    </script>
+
+#### Example - set the min value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var min = numerictextbox.min();
+
+    numerictextbox.min(10);
+    </script>
 
 ### step
 
-Gets/Sets the step value of the NumericTextBox.
-
-#### Example
-
-    // get a reference to the NumericTextBox widget
-    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-
-    // get the step value of the numerictextbox.
-    var step = numerictextbox.step();
-
-    // set the step value of the numerictextbox.
-    numerictextbox.step(0.1);
+Gets or sets the step value of the widget.
 
 #### Parameters
 
@@ -285,22 +370,37 @@ The step value to set.
 
 #### Returns
 
-`Number` The step value of the NumericTextBox.
+`Number` The step value of the widget.
+
+#### Example - get the step value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var step = numerictextbox.step();
+
+    console.log(step);
+    </script>
+
+#### Example - set the step value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var step = numerictextbox.step();
+
+    numerictextbox.step(0.5);
+    </script>
 
 ### value
 
-Gets/Sets the value of the numerictextbox.
-
-#### Example
-
-    // get a referene to the numeric textbox
-    var numerictextbox = $("#textbox").data("kendoNumericTextBox");
-
-    // get the value of the numerictextbox.
-    var value = numerictextbox.value();
-
-    // set the value of the numerictextbox.
-    numerictextbox.value("10.20");
+Gets or sets the value of the numerictextbox.
 
 #### Parameters
 
@@ -310,7 +410,33 @@ The value to set.
 
 #### Returns
 
-`Number` The value of the numerictextbox.
+`Number` The value of the widget.
+
+#### Example - get the value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var value = numerictextbox.value();
+
+    console.log(value);
+    </script>
+
+#### Example - set the value of the numerictextbox
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    var value = numerictextbox.value();
+
+    numerictextbox.value(0.5);
+    </script>
 
 ## Events
 
@@ -318,40 +444,70 @@ The value to set.
 
 Fires when the value is changed
 
-#### Example
+#### Event Data
 
-    $("#numeric").kendoNumericTextBox({
-        change: function(e) {
-            // handle event
+##### e.sender `kendo.ui.NumericTextBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "change" event during initialization
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+        change: function() {
+            var value = this.value();
+            console.log(value); //value is the selected date in the numerictextbox
         }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "change" event after initialization
 
-    // get a reference to the numeric textbox widget
-    var numeric = $("#numeric").data("kendoNumericTextBox");
-    // bind to the change event
-    numeric.bind("change", function(e) {
-        // handle event
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    numerictextbox.bind("change", function() {
+        var value = this.value();
+        console.log(value); //value is the selected date in the numerictextbox
     });
+    </script>
 
 ### spin
 
 Fires when the value is changed from the spin buttons
 
-#### Example
+#### Event Data
 
-    $("#numeric").kendoNumericTextBox({
-        spin: function(e) {
-            // handle event
+##### e.sender `kendo.ui.NumericTextBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "spin" event during initialization
+
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox({
+        spin: function() {
+            var value = this.value();
+            console.log(value); //value is the selected date in the numerictextbox
         }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "spin" event after initialization
 
-    // get a reference to the numeric textbox widget
-    var numeric = $("#numeric").data("kendoNumericTextBox");
-    // bind to the spin event
-    numeric.bind("spin", function(e) {
-        // handle event
+    <input id="numerictextbox" />
+    <script>
+    $("#numerictextbox").kendoNumericTextBox();
+
+    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
+
+    numerictextbox.bind("spin", function() {
+        var value = this.value();
+        console.log(value); //value is the selected date in the numerictextbox
     });
+    </script>

@@ -1,5 +1,7 @@
 ---
 title: Source
+meta_title: Source Binding in Model View ViewModel | Kendo UI Documentation
+meta_description: How to use source binding in Kendo UI MVVM to set the HTML5 content of the target element by rendering a Kendo template with a View-Model value.
 slug: mvvm-source-binding
 publish: true
 ---
@@ -19,6 +21,35 @@ When the View-Model value is an array the `source` binding will iterate all arra
 will be set as the HTML content of the target element. The context inside the template will be the current array item.
 
 Adding or removing items from the array will update the HTML contents of the target element.
+
+> *Important:* A single root element should be used in the template when binding to an array. Having two first level DOM elements will result in an erratic behavior.
+
+### Correct: template with a single root element
+    <ul data-template="ul-template" data-bind="source: products">
+    </ul>
+    <script id="ul-template" type="text/x-kendo-template">
+        <li>
+            id: <span data-bind="text: id"></span>
+        </li>
+    </script>
+    <script>
+        var viewModel = kendo.observable({ products: [ { id: 1 }, { id: 2 }, { id: 3 } ] });
+        kendo.bind($("ul"), viewModel);
+    </script>
+
+#### Unsupported: template with multiple first level DOM elements.
+    <ul data-template="ul-template" data-bind="source: products">
+    </ul>
+    <!-- Bindings will not work as expected -->
+    <script id="ul-template" type="text/x-kendo-template">
+        <li> id: <span data-bind="text: id"></span> </li>
+        <li> details: <span data-bind="text: id"></span> </li>
+    </script>
+
+    <script>
+        var viewModel = kendo.observable({ products: [ { id: 1 }, { id: 2 }, { id: 3 } ] });
+        kendo.bind($("ul"), viewModel);
+    </script>
 
 ### Source binding to array of objects
 

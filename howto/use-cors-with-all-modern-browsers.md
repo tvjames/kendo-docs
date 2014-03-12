@@ -1,12 +1,14 @@
 ---
 title: Use CORS with All Browsers
+meta_title: Using Cross-origin resource sharing with modern browsers | Kendo UI Docs
+meta_description: This how-to article explains how you can use CORS technology for the web.
 slug: howto-use-cors-with-all-modern-browsers
 tags: How-To
 publish: true
 ---
 # How To: Use CORS with All (Modern) Browsers
 
-CORS is cool. [Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) is a (slowly) emerging technology for the web that finally gives async web operations a way to directly grab resources from different domains. In fact, we've talked about CORS a couple of times on the Kendo UI blogs [here](http://www.kendoui.com/blogs/teamblog/posts/11-08-25/shields_up_web_service_abstraction_with_kendo_ui.aspx) and [here](http://www.kendoui.com/blogs/teamblog/posts/11-08-23/cross-domain_queries_to_odata_services_with_jquery.aspx).
+CORS is cool. [Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) is a (slowly) emerging technology for the web that finally gives async web operations a way to directly grab resources from different domains. In fact, we've talked about CORS a couple of times on the Kendo UI blogs [here](http://blogs.telerik.com/kendoui/posts/11-08-25/shields_up_web_service_abstraction_with_kendo_ui) and [here](http://blogs.telerik.com/kendoui/posts/11-08-24/cross-domain_queries_to_odata_services_with_jquery).
 
 By default, the "[same origin](https://developer.mozilla.org/En/Same_origin_policy_for_JavaScript)" security sandbox built-in to all browsers does not allow XHR (Ajax) calls across different domains. You can try, but you'll get an error that looks something like this:
 
@@ -19,11 +21,11 @@ CORS works by adding a special header to responses from a server to the client. 
 
 Why just a chance?
 
-The header is capable of specifying *which* remote sites are allowed to load the cross-origin resources. For example, consider the following CORS header in a hypothetical response from kendoui.com:
+The header is capable of specifying *which* remote sites are allowed to load the cross-origin resources. For example, consider the following CORS header in a hypothetical response:
 
 **Access-Control-Allow-Origin: [http://htmlui.com](http://htmlui.com/)**
 
-With this configuration, only scripts that originate from [http://htmlui.com](http://htmlui.com/) are allowed to load resources from kendoui.com. Any other domain trying to use Ajax to load resources from kendoui.com will be given the standard security error message. In this way, site owners can limit which domains are allowed to load their resources with CORS.
+With this configuration, only scripts that originate from [http://htmlui.com](http://htmlui.com/) are allowed to load resources from telerik.com. Any other domain trying to use Ajax to load resources from telerik.com will be given the standard security error message. In this way, site owners can limit which domains are allowed to load their resources with CORS.
 
 Alternatively, site owners can grant wide-open access with the always ready to party asterisk:
 
@@ -99,7 +101,7 @@ The most draconian of your choices, but given *most* browsers *do* support CORS,
 The choice is yours, but clearly, you have *some* choice that should still make CORS appealing.
 
 ## Putting It All Together
-In the [Kendo UI Feed Reader demo](http://www.kendoui.com/blogs/teamblog/posts/11-09-29/rss_feed_reader_built_with_kendo_ui_yql_amp_less.aspx), we use [YQL](http://developer.yahoo.com/yql/) to feed RSS XML directly to the browser. YQL supports CORS, so we elected to send XML to the browser instead of JSONP to highlight [Kendo UI's data source support for XML](http://demos.kendoui.com/web/datasource/xml-data.html).
+In the [Kendo UI Feed Reader demo](http://blogs.telerik.com/kendoui/posts/11-09-29/rss_feed_reader_built_with_kendo_ui_yql_amp_less), we use [YQL](http://developer.yahoo.com/yql/) to feed RSS XML directly to the browser. YQL supports CORS, so we elected to send XML to the browser instead of JSONP to highlight [Kendo UI's data source support for XML](http://demos.telerik.com/kendo-ui/web/datasource/xml-data.html).
 
 Version 1 of this demo did not support non-CORS browsers. To add support for these browsers, we modified the code to use XDR with IE and YQL JSONP with Opera and all non-CORS browsers.
 
@@ -136,7 +138,7 @@ We elected to use the later approach in the Feed Reader demo since it also helps
                 dialect: function (options) {
                     var result = ["callback=?","format=json"],
                         data = options || {};
-                  
+
                     return result.join("&");
                 }
             },
@@ -150,9 +152,7 @@ We elected to use the later approach in the Feed Reader demo since it also helps
 
 Now, Opera (any other non-CORS browser) will use an alternate configuration of the Kendo UI data source pointed at a JSONP endpoint and expecting a JSON response. Not pretty code, but it's functional. Sometimes, that's what it takes to build software that runs in *every major browser and platform.*
 
-You can see everything in action by [visiting the updated Feed Reader demo](http://htmlui.com/demos/kendo/feedreader/index.html). Full source and context are a right-click, view source away.
-
 ## Bottom Line on CORS
 Hopefully this post helps highlight the value of CORS and how it can be used with most modern browsers. As more app code moves to the client, the need for CORS will only grow. Start playing with it today and help push web standards to the next level.
 
-*[This article was [original published on the Kendo UI Blogs](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx) on October 3rd, 2011. Updated July 2012.]*
+*[This article was [original published on the Kendo UI Blogs](http://blogs.telerik.com/kendoui/posts/11-10-03/using_cors_with_all_modern_browsers) on October 3rd, 2011. Updated July 2012.]*

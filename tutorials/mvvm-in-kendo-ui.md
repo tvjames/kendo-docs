@@ -1,5 +1,7 @@
 ---
 title: MVVM Features in Kendo UI
+meta_title: Tutorial for building HTML5 apps with Kendo UI MVVM
+meta_description: This in-depth tutorial will guide you in the process of creating apps and mobile websites with Kendo UI framework MVVM features.
 slug: gs-mvvm-features-in-kendo-ui
 tags: tutorial, mvvm
 related: mvvm-overview
@@ -8,7 +10,7 @@ publish: true
 
 # MVVM in Kendo UI Walkthrough
 
-This document provides an in-depth look on creating Kendo UI apps that use [framework MVVM features](/getting-started/framework/mvvm/overview). For those not familiar with the term **MVVM**, we'll start by setting some context.
+This document provides an in-depth look on creating Kendo UI apps that use [framework MVVM features](/kendo-ui/getting-started/framework/mvvm/overview). For those not familiar with the term **MVVM**, we'll start by setting some context.
 
 ## A Brief MVVM Primer
 
@@ -24,7 +26,7 @@ By and large, developers are dealing with these complex applications with differ
 
 Of the patterns listed above, Model View View-Model, or MVVM, is the most popular. And though there are several great MVVM libraries available to front-end devs, Kendo UI also has a full MVVM framework baked right into its core. Let's take a look at how MVVM works seamlessly with Kendo UI.
 
-> If you have been using MVVM and Knockout for some time and have questions about why we decided to make MVVM part of the Kendo UI core, please read [this post](http://www.kendoui.com/blogs/teamblog/posts/12-02-16/kendo_ui_mvvm_and_knockoutjs.aspx).
+> If you have been using MVVM and Knockout for some time and have questions about why we decided to make MVVM part of the Kendo UI core, please read [this post](http://blogs.telerik.com/kendoui/posts/12-02-16/kendo_ui_mvvm_and_knockoutjs).
 
 ## MVVM In Kendo UI
 
@@ -40,7 +42,7 @@ This is typical on the web today, and has been for some time. We bind the button
 
 But MVVM makes all of this not only easier, but more maintainable.
 
-### Developing With MMVM
+### Developing With MVVM
 
 To starting using the MVVM pattern, we need to create a **view model.** A view model is an observable object. This object has properties and methods. Each property will be bound to something in the HTML. In MVVM, this binding is two way, meaning that if the binding changes on the UI, the model changes, and vice versa.
 
@@ -115,14 +117,14 @@ The **select** element now has no options. Instead, it has some new **data** att
 		<input id="merchant" type="text" class='k-textbox' data-bind="value: merchant" />
 	</dd>
 
-The **merchant** input has a new binding. The **data-bind=”value: merchant”** says that we want to bind the value of this input to the **merchant** variable in the view model. I also added a “**k-textbox**” css class to it to style it using [Kendo UI styles](/getting-started/ui-widgets/appearance-styling).
+The **merchant** input has a new binding. The **data-bind=”value: merchant”** says that we want to bind the value of this input to the **merchant** variable in the view model. I also added a “**k-textbox**” css class to it to style it using [Kendo UI styles](/kendo-ui/getting-started/ui-widgets/appearance-styling).
 
 	<dt>Amount</dt> 
 	<dd>
 		<input data-role="numerictextbox" data-bind="value: amount" id="amount" type="text" />
 	</dd>
 
-The **amount** input has two new bindings: **data-role** sets the input to a [Kendo UI NumericTextBox](/getting-started/web/numerictextbox/overview) and **data-bind** which binds the value to our **amount** variable.
+The **amount** input has two new bindings: **data-role** sets the input to a [Kendo UI NumericTextBox](/kendo-ui/getting-started/web/numerictextbox/overview) and **data-bind** which binds the value to our **amount** variable.
 
 	<button id="create" data-bind="click: create" class="k-button">Add</button>
 
@@ -131,7 +133,7 @@ The **Add** button has only one new change. It now has a **data-bind=”click: c
 	<div data-role="grid" data-sortable="true" data-bind="source: expenses"
     	 data-columns='["Type", "Merchant", "Amount"]' ></div>
 
-This last one is the grid. Yes, this one line creates a [Kendo UI Grid](/getting-started/ui-widgets/grid/walkthrough).
+This last one is the grid. Yes, this one line creates a [Kendo UI Grid](/kendo-ui/getting-started/ui-widgets/grid/walkthrough).
 
 ### The Final Result
 
@@ -141,4 +143,4 @@ Here is the finished product. Kendo UI bindings are keeping the UI and the model
 
 Not only does MVVM keep you from having to worry about many of the manual details, it also dramatically simplifies your code so that in your JavaScript you are only working with model objects. The DOM simply reflects the changes that you make to the model.
 
-To explore Kendo UI MVVM Features more, visit the [MVVM Overview Page](/getting-started/framework/mvvm/overview) and related docs.
+To explore Kendo UI MVVM Features more, visit the [MVVM Overview Page](/kendo-ui/getting-started/framework/mvvm/overview) and related docs.

@@ -6,23 +6,21 @@ publish: true
 ---
 
 # \<kendo:chart-seriesItem-overlay\>
-A JSP tag representing Kendo Overlay.
+
+The chart series overlay options.
 
 #### Example
     <kendo:chart-seriesItem>
         <kendo:chart-seriesItem-overlay></kendo:chart-seriesItem-overlay>
     </kendo:chart-seriesItem>
 
-
 ## Configuration Attributes
 
+### gradient `java.lang.String`
 
-### gradient `String`
-
-The gradient name.
+The chart series gradient.The supported values are:
 
 #### Example
-    <kendo:chart gradient="gradient">
-    </kendo:chart>
-
+    <kendo:chart-seriesItem-overlay gradient="gradient">
+    </kendo:chart-seriesItem-overlay>
 

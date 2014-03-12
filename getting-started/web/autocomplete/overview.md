@@ -1,6 +1,9 @@
 ---
-title: AutoComplete Overview
+title: Overview
+meta_title: Documentation for Autocomplete UI widget in Kendo UI framework
+meta_description: How to provide AutoComplete Suggestions, guide to Autocomplete UI widget.
 slug: gs-web-autocomplete-overview
+relatedDocs: api-web-autocomplete
 tags: getting-started,web
 publish: true
 ---
@@ -23,6 +26,17 @@ the **AutoComplete** can come from a local Array or from a remote data service.
     $(document).ready(function() {
      $("#autoComplete").kendoAutoComplete(["Item1", "Item2"]);
     });
+
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
+
+    <input id="autoComplete" class="myClass" />
+
+    results to:
+
+    <span class="k-widget k-autocomplete k-header k-state-default myClass">
+        <input id="autoComplete" class="myClass" />
+    </span>
+
 
 ## AutoComplete Suggestions
 
@@ -122,6 +136,18 @@ suggestions
      })
     });
 
+## Customizing the width of the drop-down list
+
+
+Width of AutoComplete's drop-down list can be changed via jQuery width method.
+
+### Example
+
+    var autoComplete = $("#autoComplete").data("kendoAutoComplete");
+
+    // set width of the drop-down list
+    autoComplete.list.width(400);
+
 ## Accessing an Existing AutoComplete
 
 
@@ -133,5 +159,3 @@ its behavior.
 ### Accessing an existing AutoComplete instance
 
     var autoComplete = $("#autoComplete").data("kendoAutoComplete");
-
-

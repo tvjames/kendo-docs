@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: DateTimePicker HtmlHelper extension | Kendo UI documentation
+meta_description: Configure Kendo UI DateTimePicker for ASP.NET MVC widget, add DataTimePicker HtmlHelper extension and handle events.
 slug: mvc-datetimepicker-overview
 publish: true
 ---
@@ -12,7 +14,7 @@ The DateTimePicker HtmlHelper extension is a server-side wrapper for the Kendo U
 
 Here is how to configure a simple Kendo DateTimePicker:
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create a new action method which renders the view:
 
@@ -125,3 +127,13 @@ You can subscribe to all events exposed by Kendo UI DateTimePicker:
       )
     )
 
+## Troubleshooting
+
+### Display [DateTimeOffset](http://msdn.microsoft.com/en-us/library/system.datetimeoffset.aspx) value in widget
+The DateTimePicker widget supports only DateTime structure. You will need to convert DateTimeOffset into DatePicker in order to show date and time correctly.
+
+### Client validation fails with invalid date
+By default ASP.NET MVC project uses jQuery validate framework, which does not provide support for internationalized dates.
+In other words, every string which [Date.parse](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date/parse) cannot define as valid date will be reported as invalid. As extending open source libraries is beyond of our product,
+you will need to resolve this issue manually - check this [link](http://www.dotnet-programming.com/post/2011/12/14/Globalization-Validation-and-DateNumber-Formats-in-AspNet-MVC.aspx) for more information.
+You can also use [Kendo Validator](http://demos.telerik.com/kendo-ui/web/validator/index.html), which supports validating internationalized dates.

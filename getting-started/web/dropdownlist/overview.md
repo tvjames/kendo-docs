@@ -1,7 +1,11 @@
 ---
-title: DropDownList Overview
+title: Overview
+meta_title: Overview of DropDownList widget - primary uses
+meta_description: Quickly explore all features of Kendo UI DropDown control and how to use them.
 slug: gs-web-dropdownlist-overview
+relatedDocs: api-web-dropdownlist
 tags: getting-started,web
+ordinal: 1
 publish: true
 ---
 
@@ -31,6 +35,8 @@ created.
 Initialization of a **DropDownList** should occur after the DOM is fully loaded. It is recommended
 that initialization the **DropDownList** occur within a handler is provided to
 $(document).ready().
+
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
 
 ### Initialize a DropDownList using a selector within $(document).ready()
 
@@ -90,7 +96,7 @@ larger data sets. With remote data-binding, items will be loaded on-demand; when
 
 The **DropDownList** uses Kendo UI templates to enable you to control how items are rendered. For
 a detailed description of the capabilities and syntax of the Kendo UI templates, please refer to the
-[documentation](http://www.kendoui.com/documentation/framework/templates/overview.aspx "Kendo UI Template").
+[documentation](/kendo-ui/getting-started/framework/templates/overview).
 
 ### Basic item template customization
 
@@ -126,6 +132,18 @@ a detailed description of the capabilities and syntax of the Kendo UI templates,
         });
     </script>
 
+## Customizing the width of the drop-down list
+
+
+Width of widget's drop-down list can be changed via jQuery width method.
+
+### Example
+
+    var dropdownlist = $("#dropdown").data("kendoDropDownList");
+
+    // set width of the drop-down list
+    dropdownlist.list.width(400);
+
 ## Accessing an Existing DropDownList
 
 
@@ -136,4 +154,3 @@ use the API to control its behavior.
 ### Accessing an existing DropDownList instance
 
     var dropDownList = $("#dropDownList").data("kendoDropDownList");
-

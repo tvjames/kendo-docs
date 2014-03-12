@@ -6,44 +6,38 @@ publish: true
 ---
 
 # \<kendo:rangeSlider-tooltip\>
-A JSP tag representing Kendo Tooltip.
+
+Configuration of the RangeSlider tooltip.
 
 #### Example
     <kendo:rangeSlider>
         <kendo:rangeSlider-tooltip></kendo:rangeSlider-tooltip>
     </kendo:rangeSlider>
 
-
 ## Configuration Attributes
-
 
 ### enabled `boolean`
 
-Disables (
+Disables (false) or enables (true) the tooltip of the RangeSlider.
 
 #### Example
-    <kendo:rangeSlider enabled="enabled">
-    </kendo:rangeSlider>
+    <kendo:rangeSlider-tooltip enabled="enabled">
+    </kendo:rangeSlider-tooltip>
 
-
-
-### format `String`
+### format `java.lang.String`
 
 Format string for the text of the tooltip. Note: The applied format will also influence the appearance of
-the
+the RangeSlider tick labels.
 
 #### Example
-    <kendo:rangeSlider format="format">
-    </kendo:rangeSlider>
+    <kendo:rangeSlider-tooltip format="format">
+    </kendo:rangeSlider-tooltip>
 
-
-
-### template `String`
+### template `java.lang.String`
 
 Template of the tooltip.
 
 #### Example
-    <kendo:rangeSlider template="template">
-    </kendo:rangeSlider>
-
+    <kendo:rangeSlider-tooltip template="template">
+    </kendo:rangeSlider-tooltip>
 

@@ -5,50 +5,63 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.PanelBarItemBuilder
-
 Defines the fluent interface for configuring child panelbar items.
+
+
 
 ## Methods
 
-### Items(System.Action\<Kendo.Mvc.UI.Fluent.PanelBarItemFactory\>)
+### Items(`System.Action<Kendo.Mvc.UI.Fluent.PanelBarItemFactory>`)
 Configures the child items of a PanelBarItem.
 
-#### Example
-    <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
-        {
-        items.Add().Text("First Item").Items(firstItemChildren =>
-        {
-        firstItemChildren.Add().Text("Child Item 1");
-        firstItemChildren.Add().Text("Child Item 2");
-        });
-        })
-        %>
 
 #### Parameters
 
-##### addAction System.Action\<[Kendo.Mvc.UI.Fluent.PanelBarItemFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PanelBarItemFactory)\>
+##### addAction System.Action<[Kendo.Mvc.UI.Fluent.PanelBarItemFactory](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PanelBarItemFactory)>
 The add action.
 
-### Expanded(System.Boolean)
-Define when the item will be expanded on intial render.
 
-#### Example
+
+
+#### Example (ASPX)
     <%= Html.Kendo().PanelBar()
-        .Name("PanelBar")
-        .Items(items =>
-        {
+    .Name("PanelBar")
+    .Items(items =>
+    {
         items.Add().Text("First Item").Items(firstItemChildren =>
         {
-        firstItemChildren.Add().Text("Child Item 1");
-        firstItemChildren.Add().Text("Child Item 2");
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
+            });
         })
-        .Expanded(true);
-        })
-        %>
+    %>
+
+
+### Expanded(`System.Boolean`)
+Define when the item will be expanded on intial render.
+
 
 #### Parameters
 
 ##### value `System.Boolean`
 If true the item will be expanded.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().PanelBar()
+    .Name("PanelBar")
+    .Items(items =>
+    {
+        items.Add().Text("First Item").Items(firstItemChildren =>
+        {
+            firstItemChildren.Add().Text("Child Item 1");
+            firstItemChildren.Add().Text("Child Item 2");
+        })
+        .Expanded(true);
+    })
+    %>
+
+
+

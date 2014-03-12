@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:dataSource-aggregateItem\>
-A JSP tag representing Kendo AggregateItem.
+
+The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
     <kendo:dataSource-aggregate>
         <kendo:dataSource-aggregateItem></kendo:dataSource-aggregateItem>
     </kendo:dataSource-aggregate>
 
-
 ## Configuration Attributes
 
+### aggregate `java.lang.String`
 
-### field `String`
-
-Specifies the field on which the aggregate will be calculated.
-
-#### Example
-    <kendo:dataSource field="field">
-    </kendo:dataSource>
-
-
-
-### aggregate `String`
-
-Specifies the aggregate function. Possible values are: "min", "max", "count", "sum", "average" Further configuration is available via [kendo:dataSource-aggregate](#kendo-dataSource-aggregate). 
+The name of the aggregate function. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
-    <kendo:dataSource aggregate="aggregate">
-    </kendo:dataSource>
+    <kendo:dataSource-aggregateItem aggregate="aggregate">
+    </kendo:dataSource-aggregateItem>
 
+### field `java.lang.String`
+
+The data item field which will be used to calculate the aggregates.
+
+#### Example
+    <kendo:dataSource-aggregateItem field="field">
+    </kendo:dataSource-aggregateItem>
 

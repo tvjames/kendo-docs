@@ -6,11 +6,9 @@ publish: true
 ---
 
 # \<kendo:rangeSlider\>
-A JSP tag representing Kendo RangeSlider.
-
+A JSP wrapper for Kendo UI [RangeSlider](/kendo-ui/api/web/rangeslider).
 
 ## Configuration Attributes
-
 
 ### largeStep `float`
 
@@ -21,82 +19,90 @@ handle must be focused). Note: The allied largeStep will also set large tick for
     <kendo:rangeSlider largeStep="largeStep">
     </kendo:rangeSlider>
 
-
-
 ### max `float`
 
-The maximum value of the
+The maximum value of the RangeSlider.
 
 #### Example
     <kendo:rangeSlider max="max">
     </kendo:rangeSlider>
 
-
-
 ### min `float`
 
-The minimum value of the
+The minimum value of the RangeSlider.
 
 #### Example
     <kendo:rangeSlider min="min">
     </kendo:rangeSlider>
 
-
-
-### orientation `String`
+### orientation `java.lang.String`
 
 F
-The orientation of a
+The orientation of a RangeSlider; "horizontal" or
+"vertical".
 
 #### Example
     <kendo:rangeSlider orientation="orientation">
     </kendo:rangeSlider>
 
-
-
 ### selectionEnd `float`
 
-The selection end value of the
+The selection end value of the RangeSlider.
 
 #### Example
     <kendo:rangeSlider selectionEnd="selectionEnd">
     </kendo:rangeSlider>
 
-
-
 ### selectionStart `float`
 
-The selection start value of the
+The selection start value of the RangeSlider.
 
 #### Example
     <kendo:rangeSlider selectionStart="selectionStart">
     </kendo:rangeSlider>
 
-
-
 ### smallStep `float`
 
-The small step value of the
+The small step value of the RangeSlider. The underlying value will be changed when the end
+user (1) clicks on the increase or decrease buttons of the RangeSlider, (2) presses the
+arrow keys (the drag handle must be focused), or (3) drags the drag handle.
 
 #### Example
     <kendo:rangeSlider smallStep="smallStep">
     </kendo:rangeSlider>
 
+### tickPlacement `java.lang.String`
 
-
-### tickPlacement `String`
-
-Denotes the location of the tick marks in the
+Denotes the location of the tick marks in the RangeSlider. The available options are:
 
 #### Example
     <kendo:rangeSlider tickPlacement="tickPlacement">
     </kendo:rangeSlider>
 
 
+##  Configuration JSP Tags
+
+### kendo:rangeSlider-tooltip
+
+Configuration of the RangeSlider tooltip.
+
+More documentation is available at [kendo:rangeSlider-tooltip](/kendo-ui/api/wrappers/jsp/rangeslider/tooltip).
+
+#### Example
+
+    <kendo:rangeSlider>
+        <kendo:rangeSlider-tooltip></kendo:rangeSlider-tooltip>
+    </kendo:rangeSlider>
+
+
+## Event Attributes
 
 ### change `String`
 
 Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
+
+
+For additional information check the [change](/kendo-ui/api/web/rangeslider#events-change) event documentation.
 
 #### Example
     <kendo:rangeSlider change="handle_change">
@@ -107,11 +113,12 @@ Fires when the rangeSlider value changes as a result of selecting a new value wi
         }
     </script>
 
-
-
 ### slide `String`
 
 Fires when the user drags the drag handle to a new position.
+
+
+For additional information check the [slide](/kendo-ui/api/web/rangeslider#events-slide) event documentation.
 
 #### Example
     <kendo:rangeSlider slide="handle_slide">
@@ -121,47 +128,15 @@ Fires when the user drags the drag handle to a new position.
             // Code to handle the slide event.
         }
     </script>
-
-
-
-### Event Attributes
-
-
-### change `String`
-
-Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
-
-#### Example
-    <kendo:rangeSlider change="handle_change">
-    </kendo:rangeSlider>
-    <script>
-        function handle_change(e) {
-            // Code to handle the change event.
-        }
-    </script>
-
-
-
-### slide `String`
-
-Fires when the user drags the drag handle to a new position.
-
-#### Example
-    <kendo:rangeSlider slide="handle_slide">
-    </kendo:rangeSlider>
-    <script>
-        function handle_slide(e) {
-            // Code to handle the slide event.
-        }
-    </script>
-
 
 ## Event Tags
- 
 
 ### kendo:rangeSlider-change
 
 Fires when the rangeSlider value changes as a result of selecting a new value with one of the drag handles or the keyboard.
+
+
+For additional information check the [change](/kendo-ui/api/web/rangeslider#events-change) event documentation.
 
 #### Example
     <kendo:rangeSlider>
@@ -174,11 +149,12 @@ Fires when the rangeSlider value changes as a result of selecting a new value wi
         </kendo:rangeSlider-change>
     </kendo:rangeSlider>
 
- 
-
 ### kendo:rangeSlider-slide
 
 Fires when the user drags the drag handle to a new position.
+
+
+For additional information check the [slide](/kendo-ui/api/web/rangeslider#events-slide) event documentation.
 
 #### Example
     <kendo:rangeSlider>
@@ -191,19 +167,3 @@ Fires when the user drags the drag handle to a new position.
         </kendo:rangeSlider-slide>
     </kendo:rangeSlider>
 
- 
-
-## Child JSP Tags
-
-### kendo:rangeSlider-tooltip
-
-Configuration of the
-
-More documentation is available at [kendo:rangeSlider-tooltip](/api/wrappers/jsp/rangeslider/tooltip).
-
-#### Example
-
-    <kendo:rangeSlider>
-        <kendo:rangeSlider-tooltip></kendo:rangeSlider-tooltip>
-    </kendo:rangeSlider>
-   

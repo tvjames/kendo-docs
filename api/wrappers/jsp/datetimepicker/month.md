@@ -6,34 +6,29 @@ publish: true
 ---
 
 # \<kendo:dateTimePicker-month\>
-A JSP tag representing Kendo Month.
+
+Templates for the cells rendered in the calendar "month" view.
 
 #### Example
     <kendo:dateTimePicker>
         <kendo:dateTimePicker-month></kendo:dateTimePicker-month>
     </kendo:dateTimePicker>
 
-
 ## Configuration Attributes
 
-
-### content `String`
+### content `java.lang.String`
 
 Template to be used for rendering the cells in the calendar "month" view, which are in range.
 
 #### Example
-    <kendo:dateTimePicker content="content">
-    </kendo:dateTimePicker>
+    <kendo:dateTimePicker-month content="content">
+    </kendo:dateTimePicker-month>
 
+### empty `java.lang.String`
 
-
-### empty `String`
-
-The template used for rendering the cells in the calendar "month" view, which are not in the range between
-the minimum and maximum values.
+The template used for rendering cells in the calendar "month" view, which are outside the min/max range.
 
 #### Example
-    <kendo:dateTimePicker empty="empty">
-    </kendo:dateTimePicker>
-
+    <kendo:dateTimePicker-month empty="empty">
+    </kendo:dateTimePicker-month>
 

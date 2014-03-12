@@ -1,12 +1,14 @@
 ---
 title: Overview
+meta_title: DropDownList HtmlHelper extension for Kendo UI DropDownList | Kendo UI documentation
+meta_description: How to bind a Kendo UI DropDownList for ASP.NET MVC, configure a server-side wrapper for Kendo UI DropDownlist Widget.
 slug: mvc-dropdownlist-overview
 publish: true
 ---
 
 # DropDownList
 
-The DropDownList HtmlHelper extension is a server-side wrapper for the [Kendo UI DropDownList](http://docs.kendoui.com/api/web/dropdownlist) widget.
+The DropDownList HtmlHelper extension is a server-side wrapper for the [Kendo UI DropDownList](/kendo-ui/api/web/dropdownlist) widget.
 
 ## Getting Started
 
@@ -19,7 +21,7 @@ There are two ways to bind a Kendo DropDownList for ASP.NET MVC:
 
 Here is how to configure the Kendo DropDownList  for server binding to the Northwind Products table using Linq to SQL:
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create a new action method and pass the Products table as the model:
 
@@ -61,7 +63,7 @@ Here is how to configure the Kendo DropDownList  for server binding to the North
 
 Here is how to configure the Kendo DropDownList for ajax binding to the Northwind Products table using Linq to SQL:
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create an action method which renders the view:
 
@@ -75,7 +77,7 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
         {
             NorthwindDataContext northwind = new NorthwindDataContext();
 
-            return Json(northwind.Products);
+            return Json(northwind.Products, JsonRequestBehavior.AllowGet);
         }
 4.  Add a ajax bound dropdownlist:
     - WebForms
@@ -111,10 +113,12 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
                 .SelectedIndex(0) //Select first item.
             )
 
+> **Important:** **ToDataSourceResult()** extension method will modify structure of the result and the widget will not be able to bind to it. Please return simple array of data in this case.
+
 ## Accessing an Existing DropDownList
 
 You can reference an existing DropDownList instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/dropdownlist#methods) to control its behavior.
+Once a reference has been established, you can use the [API](/kendo-ui/api/web/dropdownlist#methods) to control its behavior.
 
 
 ### Accessing an existing DropDownList instance
@@ -130,7 +134,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ## Handling Kendo UI DropDownList events
 
-You can subscribe to all [events](http://docs.kendoui.com/api/web/dropdownlist#events) exposed by Kendo UI DropDownList:
+You can subscribe to all [events](/kendo-ui/api/web/dropdownlist#events) exposed by Kendo UI DropDownList:
 
 
 ### WebForms - subscribe by handler name

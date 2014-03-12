@@ -1,6 +1,9 @@
 ---
 title: ActionSheet
+meta_title: Intuitive choices with mobile ActionSheet widget | Kendo UI Documentation
+meta_description: The user of HTML5 mobile app initiates a task and the mobile ActionSheet widget displays a set of choices.
 slug: gs-mobile-actionsheet
+relatedDocs: api-mobile-actionsheet
 tags: getting-started,mobile
 publish: true
 ---
@@ -23,7 +26,7 @@ The actionsheet element should contain one or more `li` elements, each with an `
       <li><a data-action="bar">Bar</a></li>
     </ul>
 
-In iOS, the ActionSheet slides in from the bottom of the screen; It also acts like a modal dialog - tapping the background does not close it.
+In iOS, the ActionSheet slides in from the bottom of the screen; In *iOS6*,  It also acts like a modal dialog - tapping the background does not close it.
 
 In Android and Blackberry, the available actions are centered in the middle of the screen, and tapping the background closes it.
 

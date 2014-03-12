@@ -6,165 +6,185 @@ publish: true
 ---
 
 # \<kendo:dataSource\>
-A JSP tag representing Kendo DataSource.
-
+A JSP wrapper for Kendo UI [DataSource](/kendo-ui/api/framework/datasource).
 
 ## Configuration Attributes
 
-
-### aggregate `Object`
-
-Sets fields on which initial aggregates should be calculated Further configuration is available via [kendo:dataSource-aggregate](#kendo-dataSource-aggregate). 
-
-#### Example
-    <kendo:dataSource aggregate="aggregate">
-    </kendo:dataSource>
-
-
-
 ### autoSync `boolean`
 
-Enables (
+If set to true the data source would automatically save any changed data items by calling the sync method. By default changes are not automatically saved.
 
 #### Example
     <kendo:dataSource autoSync="autoSync">
     </kendo:dataSource>
 
-
-
 ### batch `boolean`
 
-Enables (
+If set to true the data source will batch CRUD operation requests. For example updating two data items would cause one HTTP request instead of two. By default the data source
+makes a HTTP request for every CRUD operation.
 
 #### Example
     <kendo:dataSource batch="batch">
     </kendo:dataSource>
 
+### data `java.lang.Object`
 
-
-### data `Object`
-
-Specifies the local JavaScript object to use for the data source.
+The array of data items which the data source contains. The data source will wrap those items as kendo.data.ObservableObject or kendo.data.Model (if schema.model is set).Can be set to a string value if the schema.type option is set to "xml".
 
 #### Example
     <kendo:dataSource data="data">
     </kendo:dataSource>
 
-
-
-### filter `Object`
-
-Sets the initial filter. Further configuration is available via [kendo:dataSource-filter](#kendo-dataSource-filter). 
-
-#### Example
-    <kendo:dataSource filter="filter">
-    </kendo:dataSource>
-
-
-
-### group `Object`
-
-Sets initial grouping Further configuration is available via [kendo:dataSource-group](#kendo-dataSource-group). 
-
-#### Example
-    <kendo:dataSource group="group">
-    </kendo:dataSource>
-
-
-
 ### page `float`
 
-Sets the index of the displayed page of data.
+The page of data which the data source will return when the view method is invoked or request from the remote service.
 
 #### Example
     <kendo:dataSource page="page">
     </kendo:dataSource>
 
-
-
 ### pageSize `float`
 
-Sets the number of records which contains a given page of data.
+The number of data items per page.
 
 #### Example
     <kendo:dataSource pageSize="pageSize">
     </kendo:dataSource>
 
-
-
 ### serverAggregates `boolean`
 
-Determines if aggregates are calculated on the server or not. By default aggregates are calculated client-side.
+If set to true the data source will leave the aggregate calculation to the remote service. By default the data source calculates aggregates client-side.
 
 #### Example
     <kendo:dataSource serverAggregates="serverAggregates">
     </kendo:dataSource>
 
-
-
 ### serverFiltering `boolean`
 
-Determines if filtering of the data is handled on the server. By default filtering is performed client-side.
+If set to true the data source will leave the filtering implementation to the remote service. By default the data source performs filtering client-side.By default the filter is sent to the server following jQuery's conventions.For example the filter { logic: "and", filters: [ { field: "name", operator: "startswith", value: "Jane" } ] } is sent as:Use the parameterMap option to send the filter option in a different format.
 
 #### Example
     <kendo:dataSource serverFiltering="serverFiltering">
     </kendo:dataSource>
 
-
-
 ### serverGrouping `boolean`
 
-Determines if grouping of the data is handled on the server. By default grouping is performed client-side.
+If set to true the data source will leave the grouping implementation to the remote service. By default the data source performs grouping client-side.By default the group is sent to the server following jQuery's conventions.For example the group { field: "category", dir: "desc" } is sent as:Use the parameterMap option to send the group option in a different format.
 
 #### Example
     <kendo:dataSource serverGrouping="serverGrouping">
     </kendo:dataSource>
 
-
-
 ### serverPaging `boolean`
 
-Determines if paging of the data is on the server. By default paging is performed client-side. If
+If set to true the data source will leave the data item paging implementation to the remote service. By default the data source performs paging client-side.The following options are sent to the server when server paging is enabled:Use the parameterMap option to send the paging options in a different format.
 
 #### Example
     <kendo:dataSource serverPaging="serverPaging">
     </kendo:dataSource>
 
-
-
 ### serverSorting `boolean`
 
-Determines if sorting of the data should is handled on the server. By default sorting is performed client-side.
+If set to true the data source will leave the data item sorting implementation to the remote service. By default the data source performs sorting client-side.By default the sort is sent to the server following jQuery's conventions.For example the sort { field: "age", dir: "desc" } is sent as:Use the parameterMap option to send the paging options in a different format.
 
 #### Example
     <kendo:dataSource serverSorting="serverSorting">
     </kendo:dataSource>
 
+### type `java.lang.String`
 
-
-### sort `Object`
-
-Sets initial sort order Further configuration is available via [kendo:dataSource-sort](#kendo-dataSource-sort). 
-
-#### Example
-    <kendo:dataSource sort="sort">
-    </kendo:dataSource>
-
-
-
-### type `String`
-
-Loads transport with preconfigured settings. Currently supports only "odata" (Requires kendo.data.odata.js to be included).
+If set the data source will use a predefined transport and/or schema.
+The supported values are "odata" which supports the OData v.2 protocol and "signalr".
 
 #### Example
     <kendo:dataSource type="type">
     </kendo:dataSource>
 
 
+##  Configuration JSP Tags
+
+### kendo:dataSource-aggregate
+
+The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
+
+More documentation is available at [kendo:dataSource-aggregate](/kendo-ui/api/wrappers/jsp/datasource/aggregate).
+
+#### Example
+
+    <kendo:dataSource>
+        <kendo:dataSource-aggregate></kendo:dataSource-aggregate>
+    </kendo:dataSource>
+
+### kendo:dataSource-filter
+
+The filter(s) which is (are) applied over the data items. By default no filter is applied.
+
+More documentation is available at [kendo:dataSource-filter](/kendo-ui/api/wrappers/jsp/datasource/filter).
+
+#### Example
+
+    <kendo:dataSource>
+        <kendo:dataSource-filter></kendo:dataSource-filter>
+    </kendo:dataSource>
+
+### kendo:dataSource-group
+
+The grouping configuration of the data source. If set the data items will be grouped when the data source is populated. By default grouping is not applied.
+
+More documentation is available at [kendo:dataSource-group](/kendo-ui/api/wrappers/jsp/datasource/group).
+
+#### Example
+
+    <kendo:dataSource>
+        <kendo:dataSource-group></kendo:dataSource-group>
+    </kendo:dataSource>
+
+### kendo:dataSource-schema
+
+The configuration used to parse the remote service response.
+
+More documentation is available at [kendo:dataSource-schema](/kendo-ui/api/wrappers/jsp/datasource/schema).
+
+#### Example
+
+    <kendo:dataSource>
+        <kendo:dataSource-schema></kendo:dataSource-schema>
+    </kendo:dataSource>
+
+### kendo:dataSource-sort
+
+The sort order which will be applied over the data items. By default the data items are not sorted.
+
+More documentation is available at [kendo:dataSource-sort](/kendo-ui/api/wrappers/jsp/datasource/sort).
+
+#### Example
+
+    <kendo:dataSource>
+        <kendo:dataSource-sort></kendo:dataSource-sort>
+    </kendo:dataSource>
+
+### kendo:dataSource-transport
+
+The configuration used to load and save the data items. A data source is remote or local based on the way of it retrieves data items.Remote data sources load and save data items from and to a remote end-point (a.k.a. remote service or server). The transport option describes the remote service configuration - URL, HTTP verb, HTTP headers etc.
+The transport option can also be used to implement custom data loading and saving.Local data sources are bound to a JavaScript array via the data option.
+
+More documentation is available at [kendo:dataSource-transport](/kendo-ui/api/wrappers/jsp/datasource/transport).
+
+#### Example
+
+    <kendo:dataSource>
+        <kendo:dataSource-transport></kendo:dataSource-transport>
+    </kendo:dataSource>
+
+
+## Event Attributes
 
 ### change `String`
 
-Fires when data is changed or read from the transport.
+Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [change](/kendo-ui/api/framework/datasource#events-change) event documentation.
 
 #### Example
     <kendo:dataSource change="handle_change">
@@ -175,11 +195,12 @@ Fires when data is changed or read from the transport.
         }
     </script>
 
-
-
 ### error `String`
 
-Fires when an error occurs during data read or sync. The event arguments are the same as the ones of the error event of $.ajax().
+Fired when a request to the remote service fails.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [error](/kendo-ui/api/framework/datasource#events-error) event documentation.
 
 #### Example
     <kendo:dataSource error="handle_error">
@@ -190,41 +211,28 @@ Fires when an error occurs during data read or sync. The event arguments are the
         }
     </script>
 
+### push `String`
+
+Fired when the data source receives a push notification or the pushCreate, pushUpdate or pushDestroy methods are called.
 
 
-### sync `String`
-
-Fires after changes are synced.
-
-#### Example
-    <kendo:dataSource sync="handle_sync">
-    </kendo:dataSource>
-    <script>
-        function handle_sync(e) {
-            // Code to handle the sync event.
-        }
-    </script>
-
-
-
-### requestStart `String`
-
-Fires when data request is to be made.
+For additional information check the [push](/kendo-ui/api/framework/datasource#events-push) event documentation.
 
 #### Example
-    <kendo:dataSource requestStart="handle_requestStart">
+    <kendo:dataSource push="handle_push">
     </kendo:dataSource>
     <script>
-        function handle_requestStart(e) {
-            // Code to handle the requestStart event.
+        function handle_push(e) {
+            // Code to handle the push event.
         }
     </script>
-
-
 
 ### requestEnd `String`
 
-Fires when a data request is received. Raised after a Create, Read, Update or Destroy request is performed.
+Fired when a remote service request is finished.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [requestEnd](/kendo-ui/api/framework/datasource#events-requestEnd) event documentation.
 
 #### Example
     <kendo:dataSource requestEnd="handle_requestEnd">
@@ -235,59 +243,12 @@ Fires when a data request is received. Raised after a Create, Read, Update or De
         }
     </script>
 
-
-
-### Event Attributes
-
-
-### change `String`
-
-Fires when data is changed or read from the transport.
-
-#### Example
-    <kendo:dataSource change="handle_change">
-    </kendo:dataSource>
-    <script>
-        function handle_change(e) {
-            // Code to handle the change event.
-        }
-    </script>
-
-
-
-### error `String`
-
-Fires when an error occurs during data read or sync. The event arguments are the same as the ones of the error event of $.ajax().
-
-#### Example
-    <kendo:dataSource error="handle_error">
-    </kendo:dataSource>
-    <script>
-        function handle_error(e) {
-            // Code to handle the error event.
-        }
-    </script>
-
-
-
-### sync `String`
-
-Fires after changes are synced.
-
-#### Example
-    <kendo:dataSource sync="handle_sync">
-    </kendo:dataSource>
-    <script>
-        function handle_sync(e) {
-            // Code to handle the sync event.
-        }
-    </script>
-
-
-
 ### requestStart `String`
 
-Fires when data request is to be made.
+Fired when the data source makes a remote service request.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [requestStart](/kendo-ui/api/framework/datasource#events-requestStart) event documentation.
 
 #### Example
     <kendo:dataSource requestStart="handle_requestStart">
@@ -298,28 +259,30 @@ Fires when data request is to be made.
         }
     </script>
 
+### sync `String`
+
+Fired after the data source saves data item changes. The data source saves the data item changes when the sync method is called.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-### requestEnd `String`
-
-Fires when a data request is received. Raised after a Create, Read, Update or Destroy request is performed.
+For additional information check the [sync](/kendo-ui/api/framework/datasource#events-sync) event documentation.
 
 #### Example
-    <kendo:dataSource requestEnd="handle_requestEnd">
+    <kendo:dataSource sync="handle_sync">
     </kendo:dataSource>
     <script>
-        function handle_requestEnd(e) {
-            // Code to handle the requestEnd event.
+        function handle_sync(e) {
+            // Code to handle the sync event.
         }
     </script>
-
 
 ## Event Tags
-      
 
 ### kendo:dataSource-change
 
-Fires when data is changed or read from the transport.
+Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [change](/kendo-ui/api/framework/datasource#events-change) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -332,11 +295,12 @@ Fires when data is changed or read from the transport.
         </kendo:dataSource-change>
     </kendo:dataSource>
 
- 
-
 ### kendo:dataSource-error
 
-Fires when an error occurs during data read or sync. The event arguments are the same as the ones of the error event of $.ajax().
+Fired when a request to the remote service fails.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [error](/kendo-ui/api/framework/datasource#events-error) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -349,45 +313,30 @@ Fires when an error occurs during data read or sync. The event arguments are the
         </kendo:dataSource-error>
     </kendo:dataSource>
 
- 
+### kendo:dataSource-push
 
-### kendo:dataSource-sync
+Fired when the data source receives a push notification or the pushCreate, pushUpdate or pushDestroy methods are called.
 
-Fires after changes are synced.
 
-#### Example
-    <kendo:dataSource>
-        <kendo:dataSource-sync>
-            <script>
-                function(e) {
-                    // Code to handle the sync event.
-                }
-            </script>
-        </kendo:dataSource-sync>
-    </kendo:dataSource>
-
- 
-
-### kendo:dataSource-requestStart
-
-Fires when data request is to be made.
+For additional information check the [push](/kendo-ui/api/framework/datasource#events-push) event documentation.
 
 #### Example
     <kendo:dataSource>
-        <kendo:dataSource-requestStart>
+        <kendo:dataSource-push>
             <script>
                 function(e) {
-                    // Code to handle the requestStart event.
+                    // Code to handle the push event.
                 }
             </script>
-        </kendo:dataSource-requestStart>
+        </kendo:dataSource-push>
     </kendo:dataSource>
-
- 
 
 ### kendo:dataSource-requestEnd
 
-Fires when a data request is received. Raised after a Create, Read, Update or Destroy request is performed.
+Fired when a remote service request is finished.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [requestEnd](/kendo-ui/api/framework/datasource#events-requestEnd) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -400,79 +349,39 @@ Fires when a data request is received. Raised after a Create, Read, Update or De
         </kendo:dataSource-requestEnd>
     </kendo:dataSource>
 
- 
+### kendo:dataSource-requestStart
 
-## Child JSP Tags
+Fired when the data source makes a remote service request.The event handler function context (available via the this keyword) will be set to the data source instance.
 
-### kendo:dataSource-aggregate
 
-Sets fields on which initial aggregates should be calculated
-
-More documentation is available at [kendo:dataSource-aggregate](/api/wrappers/jsp/datasource/aggregate).
+For additional information check the [requestStart](/kendo-ui/api/framework/datasource#events-requestStart) event documentation.
 
 #### Example
-
     <kendo:dataSource>
-        <kendo:dataSource-aggregate></kendo:dataSource-aggregate>
+        <kendo:dataSource-requestStart>
+            <script>
+                function(e) {
+                    // Code to handle the requestStart event.
+                }
+            </script>
+        </kendo:dataSource-requestStart>
     </kendo:dataSource>
- 
-### kendo:dataSource-filter
 
-Sets the initial filter.
+### kendo:dataSource-sync
 
-More documentation is available at [kendo:dataSource-filter](/api/wrappers/jsp/datasource/filter).
+Fired after the data source saves data item changes. The data source saves the data item changes when the sync method is called.The event handler function context (available via the this keyword) will be set to the data source instance.
+
+
+For additional information check the [sync](/kendo-ui/api/framework/datasource#events-sync) event documentation.
 
 #### Example
-
     <kendo:dataSource>
-        <kendo:dataSource-filter></kendo:dataSource-filter>
+        <kendo:dataSource-sync>
+            <script>
+                function(e) {
+                    // Code to handle the sync event.
+                }
+            </script>
+        </kendo:dataSource-sync>
     </kendo:dataSource>
- 
-### kendo:dataSource-group
 
-Sets initial grouping
-
-More documentation is available at [kendo:dataSource-group](/api/wrappers/jsp/datasource/group).
-
-#### Example
-
-    <kendo:dataSource>
-        <kendo:dataSource-group></kendo:dataSource-group>
-    </kendo:dataSource>
- 
-### kendo:dataSource-schema
-
-Set the object responsible for describing the raw data format.
-
-More documentation is available at [kendo:dataSource-schema](/api/wrappers/jsp/datasource/schema).
-
-#### Example
-
-    <kendo:dataSource>
-        <kendo:dataSource-schema></kendo:dataSource-schema>
-    </kendo:dataSource>
- 
-### kendo:dataSource-sort
-
-Sets initial sort order
-
-More documentation is available at [kendo:dataSource-sort](/api/wrappers/jsp/datasource/sort).
-
-#### Example
-
-    <kendo:dataSource>
-        <kendo:dataSource-sort></kendo:dataSource-sort>
-    </kendo:dataSource>
- 
-### kendo:dataSource-transport
-
-Specifies the settings for loading and saving data. This can be a remote or local/in-memory data.
-
-More documentation is available at [kendo:dataSource-transport](/api/wrappers/jsp/datasource/transport).
-
-#### Example
-
-    <kendo:dataSource>
-        <kendo:dataSource-transport></kendo:dataSource-transport>
-    </kendo:dataSource>
-      

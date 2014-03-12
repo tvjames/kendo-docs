@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:panelBar-items\>
-A JSP tag representing Kendo Items.
+
+Contains the items of the panelbar widget
 
 #### Example
     <kendo:panelBar>
         <kendo:panelBar-items></kendo:panelBar-items>
     </kendo:panelBar>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:panelBar-item
 
-Contains items of PanelBar
+Contains the items of the panelbar widget
 
-More documentation is available at [kendo:panelBar-item](/api/wrappers/jsp/panelbar/item).
+More documentation is available at [kendo:panelBar-item](/kendo-ui/api/wrappers/jsp/panelbar/item).
 
 #### Example
 
     <kendo:panelBar-items>
         <kendo:panelBar-item></kendo:panelBar-item>
     </kendo:panelBar-items>
- 
+

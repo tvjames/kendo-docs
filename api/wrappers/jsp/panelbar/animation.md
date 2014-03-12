@@ -6,37 +6,41 @@ publish: true
 ---
 
 # \<kendo:panelBar-animation\>
-A JSP tag representing Kendo Animation.
+
+A collection of visual animations used when PanelBar items are expand or collapsed through
+user interactions. Setting this option to false will disable all animations.
 
 #### Example
     <kendo:panelBar>
         <kendo:panelBar-animation></kendo:panelBar-animation>
     </kendo:panelBar>
 
+## Configuration Attributes
 
-## Child JSP Tags
 
-### kendo:panelBar-animation-close
+##  Configuration JSP Tags
 
-The visual animation(s) that will be used when
+### kendo:panelBar-animation-collapse
 
-More documentation is available at [kendo:panelBar-animation-close](/api/wrappers/jsp/panelbar/animation-close).
+The visual animation(s) that will be used when PanelBar items are closed.
+
+More documentation is available at [kendo:panelBar-animation-collapse](/kendo-ui/api/wrappers/jsp/panelbar/animation-collapse).
 
 #### Example
 
     <kendo:panelBar-animation>
-        <kendo:panelBar-animation-close></kendo:panelBar-animation-close>
+        <kendo:panelBar-animation-collapse></kendo:panelBar-animation-collapse>
     </kendo:panelBar-animation>
- 
-### kendo:panelBar-animation-open
+
+### kendo:panelBar-animation-expand
 
 The visual animation(s) that will be used when opening items.
 
-More documentation is available at [kendo:panelBar-animation-open](/api/wrappers/jsp/panelbar/animation-open).
+More documentation is available at [kendo:panelBar-animation-expand](/kendo-ui/api/wrappers/jsp/panelbar/animation-expand).
 
 #### Example
 
     <kendo:panelBar-animation>
-        <kendo:panelBar-animation-open></kendo:panelBar-animation-open>
+        <kendo:panelBar-animation-expand></kendo:panelBar-animation-expand>
     </kendo:panelBar-animation>
- 
+

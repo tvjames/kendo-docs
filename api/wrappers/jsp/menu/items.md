@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:menu-items\>
-A JSP tag representing Kendo Items.
+
+Contains the items of the menu widget
 
 #### Example
     <kendo:menu>
         <kendo:menu-items></kendo:menu-items>
     </kendo:menu>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:menu-item
 
-Contains items of Menu
+Contains the items of the menu widget
 
-More documentation is available at [kendo:menu-item](/api/wrappers/jsp/menu/item).
+More documentation is available at [kendo:menu-item](/kendo-ui/api/wrappers/jsp/menu/item).
 
 #### Example
 
     <kendo:menu-items>
         <kendo:menu-item></kendo:menu-item>
     </kendo:menu-items>
- 
+

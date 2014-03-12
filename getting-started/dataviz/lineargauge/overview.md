@@ -1,6 +1,9 @@
 ---
-title: Linear Gauge Overview
-slug: linear-gauge-overview
+title: Overview
+meta_title: User Guide for Linear Gauge widget
+meta_description: Step-by-step help guide how to initialize Kendo UI DataViz Linear Gauge.
+slug: gs-dataviz-lineargauge-overview
+relatedDocs: api-dataviz-lineargauge
 publish: true
 ---
 
@@ -34,5 +37,5 @@ All graphics are rendered on the client using SVG with a fallback to VML for leg
             }
         });
 
-To see all available configuration options, see the [linear gauge API section](/api/dataviz/lineargauge).
+To see all available configuration options, see the [linear gauge API section](/kendo-ui/api/dataviz/lineargauge).
 

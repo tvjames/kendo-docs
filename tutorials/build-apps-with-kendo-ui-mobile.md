@@ -1,5 +1,7 @@
 ---
 title: Intro to Building Apps with Kendo UI Mobile
+meta_title: Tutorial for building mobile apps with Kendo UI HTML5 Mobile framework
+meta_description: This tutorial helps you get familiar with the principles of building apps with Kendo UI Mobile framework.
 slug: tutorial-intro-building-apps-with-kendo-ui-mobile
 tags: Tutorial
 publish: true
@@ -7,7 +9,7 @@ publish: true
 
 # Tutorial: Intro to Building Apps With Kendo UI Mobile
 
-In this tutorial, we'll examine the basics of building apps with [Kendo UI Mobile](http://www.kendoui.com/mobile.aspx). You will learn:
+In this tutorial, we'll examine the basics of building apps with [Kendo UI Mobile](http://www.telerik.com/kendo-ui-mobile). You will learn:
 
 - What makes Kendo UI Mobile unique
 - How to use Kendo UI Mobile to build a basic app
@@ -36,10 +38,10 @@ Apps do not need to be "cross compiled" in to a native SDK language. Your HTML a
 
 There are a few key, "non-visual" pieces of Kendo UI Mobile used in virtually all apps:
 
-1. **[Application](http://demos.kendoui.com/mobile/application/index.html)**:
+1. **[Application](http://demos.telerik.com/kendo-ui/mobile/application/index.html)**:
 The shell of a Kendo UI Mobile app. Application manages all navigation, application history, loading views, rendering mobile meta tags, and other essential mobile app tasks.
-2. **[Layout](http://demos.kendoui.com/mobile/layout/index.html)**: Defines the reusable portions of a mobile app, similar to a MasterPage or template. Layouts are often used improve app maintainability by defining things used across multiple views, like navigation. Layouts are not required, but encouraged.
-3. **[Views](http://demos.kendoui.com/mobile/view/index.html)**: Individual pages of a mobile app. Views contain the majority of an app's content. Every app will have one or more views.
+2. **[Layout](http://demos.telerik.com/kendo-ui/mobile/layout/index.html)**: Defines the reusable portions of a mobile app, similar to a MasterPage or template. Layouts are often used improve app maintainability by defining things used across multiple views, like navigation. Layouts are not required, but encouraged.
+3. **[Views](http://demos.telerik.com/kendo-ui/mobile/view/index.html)**: Individual pages of a mobile app. Views contain the majority of an app's content. Every app will have one or more views.
 
 Layouts and Views are defined with HTML; the Application is simply JavaScript. There is no markup associated with an Application. Let's create the basic structure of a Kendo UI Mobile app using these building blocks.
 
@@ -101,7 +103,7 @@ The layout is your app's template. All content from views (that we'll create lat
 			<!--View content will render here-->
 			<footer data-role="footer">
 				<div data-role="tabstrip">
-					<a href="#">Home</a>		
+					<a href="#home">Home</a>		
 				</div> 
 			</footer>
 		</section>
@@ -132,8 +134,8 @@ Now that the app's layout is defined, we need at least one view that can be disp
 		<link href="css/kendo.mobile.all.min.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div data-role="view" data-layout="default">
-		Hello Mobile World!
+		<div id="home" data-role="view" data-layout="default">
+		    Hello Mobile World!
 		</div>
 
 		<section data-role="layout" data-id="default">
@@ -143,7 +145,7 @@ Now that the app's layout is defined, we need at least one view that can be disp
 			<!--View content will render here-->
 			<footer data-role="footer">
 				<div data-role="tabstrip">
-					<a href="#">Home</a>		
+					<a href="#home">Home</a>		
 				</div> 
 			</footer>
 		</section>
@@ -186,8 +188,8 @@ To add a second view to your app, create a new page called "about.html" with the
 		<title>About</title>
 	</head>
 	<body>
-		<div data-role="view" data-layout="default">
-		All About My App
+		<div id="about" data-role="view" data-layout="default">
+		    All About My App
 		</div>
 	</body>
 	</html>
@@ -198,7 +200,7 @@ To enable our app to navigate to this page, let's update the **TabStrip** added 
 
 	<footer data-role="footer">
 		<div data-role="tabstrip">
-			<a href="#">Home</a>
+			<a href="#home">Home</a>
 			<a href="about.html">About</a>		
 		</div> 
 	</footer>
@@ -209,14 +211,16 @@ When Kendo UI Mobile encounters a link to an external view, it will automaticall
 
 If we did want to maintain multiple views in a single page, we would simply navigate the `id` of the view, like this:
 	
-	<div data-role="anotherView" id="view2">...</div>
-	<footer data-role="footer">
-		<div data-role="tabstrip">
-			<a href="#">Home</a>
-			<a href="about.html">About</a>
-			<a href="#view2">More</a>		
-		</div> 
-	</footer>
+	<div data-role="view" id="foo">
+        <span>foo</span>
+	    <footer data-role="footer">
+    		<div data-role="tabstrip">
+    			<a href="#home">Home</a>
+    			<a href="about.html">About</a>
+    			<a href="#foo">More</a>		
+    		</div> 
+    	</footer>
+    </div>
 
 Finally, as you've probably noticed if you're testing as we go, your navigation is now working, but the views all appear instantly with no animation transition. To really give your app that native mobile feeling, we can add a default transition for all views by modifying the Application initalization script:
 

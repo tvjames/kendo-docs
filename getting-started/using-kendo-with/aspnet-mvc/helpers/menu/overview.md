@@ -1,12 +1,14 @@
 ---
 title: Overview
+meta_title: Menu HtmlHelper extension for Kendo UI Menu for ASP.NET MVC widget documentation
+meta_description: How to add and bind Menu HtmlHelper extension for Kendo UI Menu for ASP.NET MVC widget.
 slug: mvc-menu-overview
 publish: true
 ---
 
 # Menu
 
-The Menu HtmlHelper extension is a server-side wrapper for the [Kendo UI Menu](http://docs.kendoui.com/api/web/menu) widget.
+The Menu HtmlHelper extension is a server-side wrapper for the [Kendo UI Menu](/kendo-ui/api/web/menu) widget.
 
 ## Getting Started
 
@@ -18,7 +20,7 @@ There are several ways to define items of the Kendo Menu for ASP.NET MVC
 
 ### Define items of the Kendo Menu
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create a new action method which renders the view:
 
@@ -50,7 +52,7 @@ There are several ways to define items of the Kendo Menu for ASP.NET MVC
 
 ### Bind Kendo Menu to a sitemap
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create a simple sitemap with **sample.sitemap** file name at the root of the project:
 
@@ -73,7 +75,7 @@ There are several ways to define items of the Kendo Menu for ASP.NET MVC
         {
             if (!SiteMapManager.SiteMaps.ContainsKey("sample"))
             {
-                SiteMapManager.SiteMaps.Register<xmlsitemap>("sample", sitmap => sitmap.LoadFrom("~/sample.sitemap"));
+                SiteMapManager.SiteMaps.Register<XmlSiteMap>("sample", sitmap => sitmap.LoadFrom("~/sample.sitemap"));
             }
             return View();
         }
@@ -93,7 +95,7 @@ There are several ways to define items of the Kendo Menu for ASP.NET MVC
 
 ### Bind Kendo Menu to a hierarchical model
 
-1.  Make sure you have followed all the steps from the [Introduction](http://docs.kendoui.com/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
+1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 
 2.  Create a new action method and pass the Categories table as the model. Note that the Categories should have association to the Products table:
 
@@ -151,10 +153,26 @@ There are several ways to define items of the Kendo Menu for ASP.NET MVC
                 })
             )
 
+## Security trimming
+
+The Menu widget has built-in security trimming functionality, which is enabled by default. If the URL, which Menu item points to is not authorized then it is hidden.
+Security trimming depends on the [ASP.NET MVC Authorization authorization](http://www.asp.net/mvc/tutorials/mvc-music-store/mvc-music-store-part-7).
+Every Action method decorated with [AuthorizeAttribute](http://msdn.microsoft.com/en-us/library/system.web.mvc.authorizeattribute.aspx) will check whether the user is authorized and will allow/forbid the request.
+Check this [link](http://weblogs.asp.net/jgalloway/archive/2011/04/28/looking-at-how-asp-net-mvc-authorize-interacts-with-asp-net-forms-authorization.aspx)
+for more information about ASP.NET MVC Authorization. The Menu will hide the menu item if the [OnAuthorization](http://msdn.microsoft.com/en-us/library/system.web.mvc.authorizeattribute.onauthorization.aspx) method returns
+[HttpUnauthorizedResult](http://msdn.microsoft.com/en-us/library/system.web.mvc.httpunauthorizedresult.aspx). If you need to use custom AuthorizeAttribute check this
+[link](https://github.com/telerik/kendo-examples-asp-net-mvc/tree/master/kendo-menu-with-custom-authorization-attribute), which shows how to achieve your goal.
+
+When Menu items are removed as a result of missing permissions, a parent item can be left without any children. For such cases the Menu provides an option to remove the "orphaned" parent items.
+
+    Html.Kendo().Menu()
+        .Name("MainMenu")
+        .SecurityTrimming(s => s.HideParent(true))
+
 ## Accessing an Existing Menu
 
 You can reference an existing Menu instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the [API](http://docs.kendoui.com/api/web/menu#methods) to control its behavior.
+Once a reference has been established, you can use the [API](/kendo-ui/api/web/menu#methods) to control its behavior.
 
 
 ### Accessing an existing Menu instance
@@ -170,7 +188,7 @@ Once a reference has been established, you can use the [API](http://docs.kendoui
 
 ## Handling Kendo UI Menu events
 
-You can subscribe to all [events](http://docs.kendoui.com/api/web/menu#events) exposed by Kendo UI Menu:
+You can subscribe to all [events](/kendo-ui/api/web/menu#events) exposed by Kendo UI Menu:
 
 ### WebForms - subscribe by handler name
 

@@ -6,11 +6,18 @@ publish: true
 ---
 
 # \<kendo:linearGauge\>
-A JSP tag representing Kendo LinearGauge.
-
+A JSP wrapper for Kendo UI [LinearGauge](/kendo-ui/api/dataviz/lineargauge).
 
 ## Configuration Attributes
 
+### renderAs `java.lang.String`
+
+Sets the preferred rendering engine.
+If it is not supported by the browser, the Gauge will switch to the first available mode.The supported values are:
+
+#### Example
+    <kendo:linearGauge renderAs="renderAs">
+    </kendo:linearGauge>
 
 ### transitions `boolean`
 
@@ -21,43 +28,42 @@ A value indicating if transition animations should be played.
     </kendo:linearGauge>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:linearGauge-gaugeArea
 
 The gauge area configuration options.
 This is the entire visible area of the gauge.
 
-More documentation is available at [kendo:linearGauge-gaugeArea](/api/wrappers/jsp/lineargauge/gaugearea).
+More documentation is available at [kendo:linearGauge-gaugeArea](/kendo-ui/api/wrappers/jsp/lineargauge/gaugearea).
 
 #### Example
 
     <kendo:linearGauge>
         <kendo:linearGauge-gaugeArea></kendo:linearGauge-gaugeArea>
     </kendo:linearGauge>
- 
+
 ### kendo:linearGauge-pointer
 
 The pointer configuration options.
 
-More documentation is available at [kendo:linearGauge-pointer](/api/wrappers/jsp/lineargauge/pointer).
+More documentation is available at [kendo:linearGauge-pointer](/kendo-ui/api/wrappers/jsp/lineargauge/pointer).
 
 #### Example
 
     <kendo:linearGauge>
         <kendo:linearGauge-pointer></kendo:linearGauge-pointer>
     </kendo:linearGauge>
- 
+
 ### kendo:linearGauge-scale
 
 Configures the scale.
 
-More documentation is available at [kendo:linearGauge-scale](/api/wrappers/jsp/lineargauge/scale).
+More documentation is available at [kendo:linearGauge-scale](/kendo-ui/api/wrappers/jsp/lineargauge/scale).
 
 #### Example
 
     <kendo:linearGauge>
         <kendo:linearGauge-scale></kendo:linearGauge-scale>
     </kendo:linearGauge>
- 
+

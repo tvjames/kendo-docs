@@ -6,108 +6,92 @@ publish: true
 ---
 
 # \<kendo:grid-pageable\>
-A JSP tag representing Kendo Pageable.
+
+If set to true the grid will display a pager. By default paging is disabled.Can be set to a JavaScript object which represents the pager configuration.
 
 #### Example
     <kendo:grid>
         <kendo:grid-pageable></kendo:grid-pageable>
     </kendo:grid>
 
-
 ## Configuration Attributes
-
-
-### pageSize `float`
-
-Defines the number of records which will be displyed.
-
-#### Example
-    <kendo:grid pageSize="pageSize">
-    </kendo:grid>
-
-
-
-### previousNext `boolean`
-
-Defines if buttons for navigating to the first, last, previous and next pages will be shown.
-
-#### Example
-    <kendo:grid previousNext="previousNext">
-    </kendo:grid>
-
-
-
-### numeric `boolean`
-
-Defines if numeric portion of the pager will be shown.
-
-#### Example
-    <kendo:grid numeric="numeric">
-    </kendo:grid>
-
-
 
 ### buttonCount `float`
 
-Defines the number of buttons displayed in the numeric pager.
+The maximum number of buttons displayed in the numeric pager. The pager will display ellipsis (...) if there are more pages than the specified number.
 
 #### Example
-    <kendo:grid buttonCount="buttonCount">
-    </kendo:grid>
-
-
-
-### input `boolean`
-
-Defines if an input element which allows the user to navigate to given page will be displayed.
-
-#### Example
-    <kendo:grid input="input">
-    </kendo:grid>
-
-
-
-### pageSizes `boolean`
-
-Displayes a list with predefined page sizes. An array of values to be displayed can be provided.
-
-#### Example
-    <kendo:grid pageSizes="pageSizes">
-    </kendo:grid>
-
-
-
-### refresh `boolean`
-
-Defines if a refresh button will be displayed.
-
-#### Example
-    <kendo:grid refresh="refresh">
-    </kendo:grid>
-
-
+    <kendo:grid-pageable buttonCount="buttonCount">
+    </kendo:grid-pageable>
 
 ### info `boolean`
 
-Defines if a label showing current paging information will be displayed.
+If set to true the pager will display information about the current page and total number of data items. By default the paging information is displayed.
 
 #### Example
-    <kendo:grid info="info">
-    </kendo:grid>
+    <kendo:grid-pageable info="info">
+    </kendo:grid-pageable>
+
+### input `boolean`
+
+If set to true the pager will display an input element which allows the user to type a specific page number. By default the page input is not displayed.
+
+#### Example
+    <kendo:grid-pageable input="input">
+    </kendo:grid-pageable>
+
+### numeric `boolean`
+
+If set to true the pager will display buttons for navigating to specific pages. By default those buttons are displayed.
+
+#### Example
+    <kendo:grid-pageable numeric="numeric">
+    </kendo:grid-pageable>
+
+### pageSize `float`
+
+The number of data items which will be displayed in the grid.
+
+#### Example
+    <kendo:grid-pageable pageSize="pageSize">
+    </kendo:grid-pageable>
+
+### pageSizes `java.lang.Object`
+
+If set to true the pager will display a dropdown list which allows the user to pick a page size. By default the page size dropdown list is not displayed.Can be set to an array with the available page sizes.
+
+#### Example
+    <kendo:grid-pageable pageSizes="pageSizes">
+    </kendo:grid-pageable>
+
+### previousNext `boolean`
+
+If set to true the pager will display buttons for going to the first, previous, next and last pages. By default those buttons are displayed.
+
+#### Example
+    <kendo:grid-pageable previousNext="previousNext">
+    </kendo:grid-pageable>
+
+### refresh `boolean`
+
+If set to true the pager will display the refresh button. Clicking the refresh button will refresh the grid. By default the refresh button is not displayed.
+
+#### Example
+    <kendo:grid-pageable refresh="refresh">
+    </kendo:grid-pageable>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:grid-pageable-messages
 
-Defines texts shown within the pager.
+The text messages displayed in pager. Use this option to customize or localize the pager messages.
 
-More documentation is available at [kendo:grid-pageable-messages](/api/wrappers/jsp/grid/pageable-messages).
+More documentation is available at [kendo:grid-pageable-messages](/kendo-ui/api/wrappers/jsp/grid/pageable-messages).
 
 #### Example
 
     <kendo:grid-pageable>
         <kendo:grid-pageable-messages></kendo:grid-pageable-messages>
     </kendo:grid-pageable>
- 
+

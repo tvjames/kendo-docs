@@ -5,56 +5,107 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.GridEditingSettingsBuilder
-
 Defines the fluent interface for configuring grid editing.
+
+
 
 ## Methods
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Enables or disables grid editing.
 
-#### Example
-    <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.Enabled(true))
-        %>
 
-### TemplateName(System.String)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Order>()
+    .Name("Orders")
+    .Editable(settings => settings.Enabled(true))
+    %>
+
+
+### TemplateName(`System.String`)
 Specify an editor template which to be used for InForm or PopUp modes
+
 
 #### Parameters
 
 ##### templateName `System.String`
 name of the editor template
 
-### AdditionalViewData(System.Object)
+
+
+
+
+### AdditionalViewData(`System.Object`)
 Provides additional view data in the editor template.
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Editable(editing => editing.AdditionalViewData(new { customers = Model.Customers }))
-        %>
 
 #### Parameters
 
 ##### additionalViewData `System.Object`
 An anonymous object which contains the additional data
 
-### DisplayDeleteConfirmation(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Editable(editing => editing.AdditionalViewData(new { customers = Model.Customers }))
+    %>
+
+
+### DisplayDeleteConfirmation(`System.Boolean`)
 Enables or disables delete confirmation.
 
-#### Example
-    <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.DisplayDeleteConfirmation(true))
-        %>
 
-### CreateAt(Kendo.Mvc.UI.GridInsertRowPosition)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Order>()
+    .Name("Orders")
+    .Editable(settings => settings.DisplayDeleteConfirmation(true))
+    %>
+
+
+### ConfirmDelete(`System.String`)
+Change default text for confirm delete button. Note: Available only on mobile devices.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Order>()
+    .Name("Orders")
+    .Editable(settings => settings.ConfirmDelete("Yes"))
+    %>
+
+
+### CancelDelete(`System.String`)
+Change default text for cancel delete button. Note: Available only on mobile devices.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Order>()
+    .Name("Orders")
+    .Editable(settings => settings.ConfirmDelete("No"))
+    %>
+
+
+### CreateAt(`Kendo.Mvc.UI.GridInsertRowPosition`)
 Sets insert row position.
 
-#### Example
+
+
+
+#### Example (ASPX)
     <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.CreateAt(GridInsertRowPosition.Bottom))
-        %>
+    .Name("Orders")
+    .Editable(settings => settings.CreateAt(GridInsertRowPosition.Bottom))
+    %>
+
+
+

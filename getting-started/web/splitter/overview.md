@@ -1,6 +1,9 @@
 ---
-title: Splitter Overview
+title: Overview
+meta_title: Summary of Splitter UI widget primary functions
+meta_description: Find out how to use the Splitter UI widget and achieve complex layouts.
 slug: gs-web-splitter-overview
+relatedDocs: api-web-splitter
 tags: getting-started,web
 publish: true
 ---
@@ -84,13 +87,17 @@ To achieve complex layouts, the **Splitter** supports nested layouts.
     $("#horizontalSplitter").kendoSplitter();
     $("#verticalSplitter").kendoSplitter({ orientation: "vertical" });
 
+> Using the same DIV element for a Splitter pane and for a nested Splitter is not recommended.
+Nested Splitters will be sized automatically to match the parent pane's height if the nested Splitter has 100% width and height styles.
+We recommend using a nested Splitter, which is a direct child of the parent Splitter's pane.
+
 ## Loading Content with AJAX
 
 
 While any valid technique for loading content via AJAX may be used, **Splitter** provides built-in
 support for asynchronously loading content from URLs. These URLs should return HTML fragments that can be
 loaded in the pane of a **Splitter**. If you want to load a whole page in an IFRAME, you may do so
-by specifying the complete URL (i.e. http://kendoui.com/).
+by specifying the complete URL (i.e. http://telerik.com/).
 
 ### Loading Splitter content asynchronously
 
@@ -107,7 +114,7 @@ by specifying the complete URL (i.e. http://kendoui.com/).
             panes: [
                 {},
                 { contentUrl: "html-content-snippet.html" },
-                { contentUrl: "http://kendoui.com/" }
+                { contentUrl: "http://telerik.com/" }
             ]
         });
     });
@@ -126,7 +133,8 @@ use the API to control its behavior.
 
 When making the Splitter 100% high, one should keep in mind that web standards require elements with percentage height to have a parent element with an explicit height.
 In this case the parent of the Splitter is the `body`, so it receives a `height:100%` style, which in turn results in the `html` element obtaining the style as well. If the requirement is not met,
-the Splitter's computed height will fallback to `auto` and the widget may collapse completely, depending ot its content.
+the Splitter's computed height will fallback to `auto` and the widget may collapse completely, depending ot its content. In addition, the Splitter should have its border removed, as 100% high elements
+cannot have borders, margins or paddings. In a nested Splitters scenario, the inner Splitters remove their borders automatically, given that each Splitter is a direct child of a parent pane.
 
 ### HTML Markup
 
@@ -160,7 +168,7 @@ the Splitter's computed height will fallback to `auto` and the widget may collap
             </p>
         </div>
     </div>
-      
+
     </body>
 
 ### Javascript code
@@ -198,3 +206,29 @@ the Splitter's computed height will fallback to `auto` and the widget may collap
     {
         height:100%;
     }
+
+    #vertical
+    {
+        border-width: 0;
+    }
+
+## Resizing a Splitter manually
+
+The Splitter `div` can be resized manually by applying new width or height style with Javascript. Afterwards, the [`resize()`](/kendo-ui/getting-started/using-kendo-with/using-kendo-in-responsive-web-pages) method
+should be executed, so that the widget readjusts its layout and pane sizes.
+
+    var splitterElement = $("#SplitterID"),
+        splitterObject = splitterElement.data("kendoSplitter");
+
+    splitterElement.css({width: "800px", height: "600px" });
+    splitterObject.resize();
+
+    // for versions Q2 2013 SP1 and older use this instead:
+    //splitterObject.trigger("resize");
+
+If the Splitter layout needs readjusting, but the dimensions of the Splitter wrapper `<div>` have not changed, the `resize` method must be executed with a parameter in order to take effect.
+This is useful when the Splitter has been initialized in an invisible container and the panes' dimensions and position have not been calculated correctly.
+
+    splitterObject.resize(true);
+    
+On a side note, changing the pane sizes manually is not recommended. Use the [`size()`](/kendo-ui/api/web/splitter#methods-size) method for that.

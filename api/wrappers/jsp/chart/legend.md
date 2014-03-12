@@ -6,114 +6,116 @@ publish: true
 ---
 
 # \<kendo:chart-legend\>
-A JSP tag representing Kendo Legend.
+
+The chart legend configuration options.
 
 #### Example
     <kendo:chart>
         <kendo:chart-legend></kendo:chart-legend>
     </kendo:chart>
 
-
 ## Configuration Attributes
 
+### background `java.lang.String`
 
-### background `String`
-
-The background color of the legend. Any valid CSS color string will work here, including hex and rgb.
+The background color of the legend. Accepts a valid CSS color string, including hex and rgb.
 
 #### Example
-    <kendo:chart background="background">
-    </kendo:chart>
-
-
+    <kendo:chart-legend background="background">
+    </kendo:chart-legend>
 
 ### margin `float`
 
-The margin of the legend.
+The margin of the chart legend. A numeric value will set all paddings. Further configuration is available via [kendo:chart-legend-margin](#kendo-chart-legend-margin). 
 
 #### Example
-    <kendo:chart margin="margin">
-    </kendo:chart>
-
-
+    <kendo:chart-legend margin="margin">
+    </kendo:chart-legend>
 
 ### offsetX `float`
 
-The X offset from its position.  The offset is relative to the current position of the legend.
-For instance, a value of 20 will move the legend 20 pixels to the right of it's initial position.  A negative value will move the legend
-to the left of the current position.
+The X offset of the chart legend. The offset is relative to the default position of the legend.
+For instance, a value of 20 will move the legend 20 pixels to the right of its initial position.
+A negative value will move the legend to the left of its current position.
 
 #### Example
-    <kendo:chart offsetX="offsetX">
-    </kendo:chart>
-
-
+    <kendo:chart-legend offsetX="offsetX">
+    </kendo:chart-legend>
 
 ### offsetY `float`
 
-The Y offset from its position.  The offset is relative to the current position of the legend.
-For instance, a value of 20 will move the legend 20 pixels down from it's initial position.  A negative value will move the legend
-upwards from the current position.
+The Y offset of the chart legend.  The offset is relative to the current position of the legend.
+For instance, a value of 20 will move the legend 20 pixels down from its initial position.
+A negative value will move the legend upwards from its current position.
 
 #### Example
-    <kendo:chart offsetY="offsetY">
-    </kendo:chart>
+    <kendo:chart-legend offsetY="offsetY">
+    </kendo:chart-legend>
 
+### position `java.lang.String`
 
-
-### padding `float`
-
-The padding of the legend.
+The positions of the chart legend.The supported values are:
 
 #### Example
-    <kendo:chart padding="padding">
-    </kendo:chart>
-
-
-
-### position `String`
-
-The positions of the legend.
-
-#### Example
-    <kendo:chart position="position">
-    </kendo:chart>
-
-
+    <kendo:chart-legend position="position">
+    </kendo:chart-legend>
 
 ### visible `boolean`
 
-The visibility of the legend.
+If set to true the chart will display the legend. By default the chart legend is visible.
 
 #### Example
-    <kendo:chart visible="visible">
-    </kendo:chart>
+    <kendo:chart-legend visible="visible">
+    </kendo:chart-legend>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:chart-legend-border
 
 The border of the legend.
 
-More documentation is available at [kendo:chart-legend-border](/api/wrappers/jsp/chart/legend-border).
+More documentation is available at [kendo:chart-legend-border](/kendo-ui/api/wrappers/jsp/chart/legend-border).
 
 #### Example
 
     <kendo:chart-legend>
         <kendo:chart-legend-border></kendo:chart-legend-border>
     </kendo:chart-legend>
- 
+
+### kendo:chart-legend-inactiveItems
+
+The chart inactive legend items configuration.
+
+More documentation is available at [kendo:chart-legend-inactiveItems](/kendo-ui/api/wrappers/jsp/chart/legend-inactiveitems).
+
+#### Example
+
+    <kendo:chart-legend>
+        <kendo:chart-legend-inactiveItems></kendo:chart-legend-inactiveItems>
+    </kendo:chart-legend>
+
 ### kendo:chart-legend-labels
 
-Configures the legend labels.
+The chart legend label configuration.
 
-More documentation is available at [kendo:chart-legend-labels](/api/wrappers/jsp/chart/legend-labels).
+More documentation is available at [kendo:chart-legend-labels](/kendo-ui/api/wrappers/jsp/chart/legend-labels).
 
 #### Example
 
     <kendo:chart-legend>
         <kendo:chart-legend-labels></kendo:chart-legend-labels>
     </kendo:chart-legend>
- 
+
+### kendo:chart-legend-margin
+
+The margin of the chart legend. A numeric value will set all paddings.
+
+More documentation is available at [kendo:chart-legend-margin](/kendo-ui/api/wrappers/jsp/chart/legend-margin).
+
+#### Example
+
+    <kendo:chart-legend>
+        <kendo:chart-legend-margin></kendo:chart-legend-margin>
+    </kendo:chart-legend>
+

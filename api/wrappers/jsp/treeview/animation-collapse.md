@@ -6,33 +6,30 @@ publish: true
 ---
 
 # \<kendo:treeView-animation-collapse\>
-A JSP tag representing Kendo Collapse.
+
+The animation that will be used when collapsing items.
 
 #### Example
     <kendo:treeView-animation>
         <kendo:treeView-animation-collapse></kendo:treeView-animation-collapse>
     </kendo:treeView-animation>
 
-
 ## Configuration Attributes
-
 
 ### duration `float`
 
 The number of milliseconds used for the animation when a node is expanded.
 
 #### Example
-    <kendo:treeView duration="duration">
-    </kendo:treeView>
+    <kendo:treeView-animation-collapse duration="duration">
+    </kendo:treeView-animation-collapse>
 
+### effects `java.lang.String`
 
-
-### effects `String`
-
-A whitespace-delimited string of animation effects that are utilized when a
+A whitespace-delimited string of animation effects that are used when collapsing nodes.
+The supported effects are fadeOut and collapseVertical.
 
 #### Example
-    <kendo:treeView effects="effects">
-    </kendo:treeView>
-
+    <kendo:treeView-animation-collapse effects="effects">
+    </kendo:treeView-animation-collapse>
 

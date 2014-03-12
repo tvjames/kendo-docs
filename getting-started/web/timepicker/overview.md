@@ -1,6 +1,9 @@
 ---
-title: TimePicker Overview
+title: Overview
+meta_title: Overview of TimePicker UI widget
+meta_description: How to create, initialize and use TimePicker UI widget.
 slug: gs-web-timepicker-overview
+relatedDocs: api-web-timepicker
 tags: getting-started,web
 publish: true
 ---
@@ -27,6 +30,7 @@ interval between predefined values in the list.
 When a **TimePicker** is initialized, it will automatically be displayed near the location of the
 used HTML element.
 
+> Widget copies any styles and CSS classes from the input element to the wrapper element.
 
 ## Configuring TimePicker Behaviors
 
@@ -73,4 +77,3 @@ use the API to control its behavior.
 ### Accessing an existing TimePicker instance
 
     var timePicker = $("#timePicker").data("kendoTimePicker");
-

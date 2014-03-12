@@ -6,48 +6,44 @@ publish: true
 ---
 
 # \<kendo:dataSource-groupItem\>
-A JSP tag representing Kendo GroupItem.
+
+The grouping configuration of the data source. If set the data items will be grouped when the data source is populated. By default grouping is not applied.
 
 #### Example
     <kendo:dataSource-group>
         <kendo:dataSource-groupItem></kendo:dataSource-groupItem>
     </kendo:dataSource-group>
 
-
 ## Configuration Attributes
 
+### dir `java.lang.String`
 
-### field `String`
-
-Specifies the field to group by.
-
-#### Example
-    <kendo:dataSource field="field">
-    </kendo:dataSource>
-
-
-
-### dir `String`
-
-Specifies the order of the groupped items.
+The sort order of the group. The supported values are "asc" (ascending order) and "desc" (descending order). The default sort order is ascending.
 
 #### Example
-    <kendo:dataSource dir="dir">
-    </kendo:dataSource>
+    <kendo:dataSource-groupItem dir="dir">
+    </kendo:dataSource-groupItem>
+
+### field `java.lang.String`
+
+The data item field to group by.
+
+#### Example
+    <kendo:dataSource-groupItem field="field">
+    </kendo:dataSource-groupItem>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:dataSource-groupItem-aggregates
 
-Specifies the aggregate function for this group.
+The aggregate(s) which are calculated during grouping. The supported aggregates are "average", "count", "max", "min" and "sum".
 
-More documentation is available at [kendo:dataSource-groupItem-aggregates](/api/wrappers/jsp/datasource/groupitem-aggregates).
+More documentation is available at [kendo:dataSource-groupItem-aggregates](/kendo-ui/api/wrappers/jsp/datasource/groupitem-aggregates).
 
 #### Example
 
     <kendo:dataSource-groupItem>
         <kendo:dataSource-groupItem-aggregates></kendo:dataSource-groupItem-aggregates>
     </kendo:dataSource-groupItem>
- 
+

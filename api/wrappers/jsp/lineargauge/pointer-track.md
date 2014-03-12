@@ -6,68 +6,61 @@ publish: true
 ---
 
 # \<kendo:linearGauge-pointer-track\>
-A JSP tag representing Kendo Track.
+
+The element arround/under the pointer.
+(available only for 'barIndicator' shape)
 
 #### Example
     <kendo:linearGauge-pointer>
         <kendo:linearGauge-pointer-track></kendo:linearGauge-pointer-track>
     </kendo:linearGauge-pointer>
 
-
 ## Configuration Attributes
 
-
-### color `String`
+### color `java.lang.String`
 
 The color of the track.
 
 #### Example
-    <kendo:linearGauge color="color">
-    </kendo:linearGauge>
-
-
+    <kendo:linearGauge-pointer-track color="color">
+    </kendo:linearGauge-pointer-track>
 
 ### opacity `float`
 
 The opacity of the track.
 
 #### Example
-    <kendo:linearGauge opacity="opacity">
-    </kendo:linearGauge>
-
-
+    <kendo:linearGauge-pointer-track opacity="opacity">
+    </kendo:linearGauge-pointer-track>
 
 ### size `float`
 
 The size of the track.
 
 #### Example
-    <kendo:linearGauge size="size">
-    </kendo:linearGauge>
-
-
+    <kendo:linearGauge-pointer-track size="size">
+    </kendo:linearGauge-pointer-track>
 
 ### visible `boolean`
 
 The visibility of the track.
 
 #### Example
-    <kendo:linearGauge visible="visible">
-    </kendo:linearGauge>
+    <kendo:linearGauge-pointer-track visible="visible">
+    </kendo:linearGauge-pointer-track>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:linearGauge-pointer-track-border
 
 The border of the track.
 
-More documentation is available at [kendo:linearGauge-pointer-track-border](/api/wrappers/jsp/lineargauge/pointer-track-border).
+More documentation is available at [kendo:linearGauge-pointer-track-border](/kendo-ui/api/wrappers/jsp/lineargauge/pointer-track-border).
 
 #### Example
 
     <kendo:linearGauge-pointer-track>
         <kendo:linearGauge-pointer-track-border></kendo:linearGauge-pointer-track-border>
     </kendo:linearGauge-pointer-track>
- 
+

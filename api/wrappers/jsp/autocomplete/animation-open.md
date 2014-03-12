@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:autoComplete-animation-open\>
-A JSP tag representing Kendo Open.
+
+The animation played when the suggestion popup is opened.
 
 #### Example
     <kendo:autoComplete-animation>
         <kendo:autoComplete-animation-open></kendo:autoComplete-animation-open>
     </kendo:autoComplete-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for opening of the popup.
-
-#### Example
-    <kendo:autoComplete effects="effects">
-    </kendo:autoComplete>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
 #### Example
-    <kendo:autoComplete duration="duration">
-    </kendo:autoComplete>
+    <kendo:autoComplete-animation-open duration="duration">
+    </kendo:autoComplete-animation-open>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:autoComplete-animation-open effects="effects">
+    </kendo:autoComplete-animation-open>
 

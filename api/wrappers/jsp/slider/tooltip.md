@@ -6,44 +6,40 @@ publish: true
 ---
 
 # \<kendo:slider-tooltip\>
-A JSP tag representing Kendo Tooltip.
+
+Configuration of the Slider tooltip.
 
 #### Example
     <kendo:slider>
         <kendo:slider-tooltip></kendo:slider-tooltip>
     </kendo:slider>
 
-
 ## Configuration Attributes
-
 
 ### enabled `boolean`
 
-Disables (
+Disables (false) or enables (true) the tooltip of
+the Slider.
 
 #### Example
-    <kendo:slider enabled="enabled">
-    </kendo:slider>
+    <kendo:slider-tooltip enabled="enabled">
+    </kendo:slider-tooltip>
 
-
-
-### format `String`
+### format `java.lang.String`
 
 Format string for the text of the tooltip. Note: The applied
-format will also influence the appearance of the
+format will also influence the appearance of the Slider
+tick labels.
 
 #### Example
-    <kendo:slider format="format">
-    </kendo:slider>
+    <kendo:slider-tooltip format="format">
+    </kendo:slider-tooltip>
 
+### template `java.lang.String`
 
-
-### template `String`
-
-Template of the tooltip.
+Template of the tooltip. The following variables are passed by the Slider and are ready to be used inside the template:
 
 #### Example
-    <kendo:slider template="template">
-    </kendo:slider>
-
+    <kendo:slider-tooltip template="template">
+    </kendo:slider-tooltip>
 

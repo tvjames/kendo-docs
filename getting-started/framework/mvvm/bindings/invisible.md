@@ -1,5 +1,7 @@
 ---
 title: Invisible
+meta_title: Invisible binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: How to hide or show the target DOM element, depending on the View-Model Value by using the invisible binding.
 slug: mvvm-invisible-binding
 publish: true
 ---
@@ -14,8 +16,8 @@ If the value is `false` the target DOM element will be shown.
 
     <div id="view">
         <div data-bind="invisible: isInvisible">some content
-            <button data-bind="click: show">Show</button>
         </div>
+        <button data-bind="click: show">Show</button>
     </div>
     <script>
     var viewModel = kendo.observable({
@@ -25,7 +27,7 @@ If the value is `false` the target DOM element will be shown.
         }
     });
 
-    kendo.bind($("#div"), viewModel);
+    kendo.bind($("#view"), viewModel);
     </script>
 
 In this example the `div` element will be initially hidden because the value of the `isInvisible` field is `true`.

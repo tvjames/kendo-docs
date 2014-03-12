@@ -1,11 +1,16 @@
 ---
 title: kendo.ui.Slider
-slug: web-kendo.ui.slider
+meta_title: Configuration, methods and events of Kendo UI Slider
+meta_description: Configuration of Slider UI control, different methods, and events, triggered when the slider value changes upon specific conditions.
+slug: api-web-slider
+relatedDocs: gs-web-slider-overview
 tags: api,web
 publish: true
 ---
 
 # kendo.ui.Slider
+
+Represents the Kendo UI Slider widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
 
 ## Configuration
 
@@ -85,9 +90,26 @@ tick labels.
 
 ### tooltip.template `String`
 
-Template of the tooltip.
+Template of the tooltip. The following variables are passed by the Slider and are ready to be used inside the template:
 
-*   **value** - the current value.
+*   **value** - the current value when using a regular slider
+*   **selectionStart** and **selectionEnd** - the current values when using a range slider
+
+#### Example - using RangeSlider template
+
+	// the following template definitions are identical and represent the default RangeSlider template
+
+	var templateString = "#= selectionStart # - #= selectionEnd #";
+	// or
+	// var templateString = "# return selectionStart  + ' - ' + selectionEnd #";
+
+	$("#rangeslider").kendoRangeSlider({
+		min: 0,
+		max: 100,
+		tooltip: {
+			template: kendo.template(templateString)
+		}
+	});
 
 ### value `Number`
 
@@ -105,7 +127,7 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
 
 	// deatach events
 	$("#slider").data("kendoSlider").destroy();
-	
+
 	// remove slider html from DOM
     $("#slider").closest(".k-slider").remove();
 
@@ -117,10 +139,10 @@ Enable/Disable the **Slider** widget.
 
     // get a reference to the slider widget
     var slider = $("#slider").data("kendoSlider");
-    
+
     // disables the slider
     slider.enable(false);
-    
+
     // enables the slider
     slider.enable(true);
 
@@ -142,11 +164,15 @@ a number representing the underlying value.
 
 #### Parameters
 
-##### value `String`
+##### value `Number`
 
 _optional, default: _
 
 The value to be set for a Slider.
+
+#### Returns
+
+`Number` The value of the Slider.
 
 ## Events
 

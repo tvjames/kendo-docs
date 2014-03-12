@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:comboBox-animation-close\>
-A JSP tag representing Kendo Close.
+
+
 
 #### Example
     <kendo:comboBox-animation>
         <kendo:comboBox-animation-close></kendo:comboBox-animation-close>
     </kendo:comboBox-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for closing of the popup.
-
-#### Example
-    <kendo:comboBox effects="effects">
-    </kendo:comboBox>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
-    <kendo:comboBox duration="duration">
-    </kendo:comboBox>
+    <kendo:comboBox-animation-close duration="duration">
+    </kendo:comboBox-animation-close>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:comboBox-animation-close effects="effects">
+    </kendo:comboBox-animation-close>
 

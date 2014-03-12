@@ -94,7 +94,7 @@ A value indicating if the tooltip should be displayed.
 
 The border configuration options.
 
-More documentation is available at [kendo:chart-seriesDefaults-tooltip-border](/api/wrappers/jsp/chart/seriesdefaults-tooltip-border).
+More documentation is available at [kendo:chart-seriesDefaults-tooltip-border](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-tooltip-border).
 
 #### Example
 

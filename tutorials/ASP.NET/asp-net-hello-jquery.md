@@ -1,5 +1,7 @@
 ---
 title: Part 1 - Hello jQuery
+meta_title: Tutorial series for HTML5 development with ASP.NET: Hello jQuery
+meta_description: This tutorial for HTML5 development with ASP.NET will help you learn how to install jQuery, then use it with WebForms and IE F12 Developer Tools.
 slug: tutorial-html5-development-with-asp-net-part-1-hello-jquery
 tags: Tutorial
 publish: true
@@ -144,22 +146,22 @@ need to install them separately.
 This will put the latest version of [jQuery](http://jquery.com/) in the **Scripts **folder.
 There will be 3 files there.
 
-**1. jquery-1.7.2.js** – This is the full [jQuery][2] source file.
+**1. jquery-1.9.1.js** – This is the full [jQuery][2] source file.
 
-**2. jquery-1.7.2.min.js – **This is the minified version of [jQuery][2],
+**2. jquery-1.9.1.min.js – **This is the minified version of [jQuery][2],
 which removes all whitespace and comments, as well as “[minifying][21]” the
 script to make it as small as possible.  This version is identical to the
 first one in every way except that it is unreadable for debugging.  This is
 generally the file used when an application is in production.  For
 development, use the full [jQuery][2] version.
 
-**3. jquery-1.7.2-vsdoc.js** – This file provides Intellisense inside of
+**3. jquery-1.9.1-vsdoc.js** – This file provides Intellisense inside of
 Visual Studio for [jQuery][2].  As long as this file is named in the same way
 as the [jQuery][2] file, Intellisense will work.
 
 Open up the **Site.Master** page.  Drag the full [jQuery][2] source into the
 **head** of the page, directly below the **link** tag to **Site.css**.  This
-will create a new **link** tag pointing to the jQuery-1.7.2.js file.
+will create a new **link** tag pointing to the jQuery-1.9.1.js file.
 [JQuery][2] has now been added to the project.
 
 ![jQuery Added To The Master Page](images/hello-jquery-jquery-added-to-master.png)

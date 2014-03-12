@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:dataSource-groupItem-aggregates\>
-A JSP tag representing Kendo Aggregates.
+
+The aggregate(s) which are calculated during grouping. The supported aggregates are "average", "count", "max", "min" and "sum".
 
 #### Example
     <kendo:dataSource-groupItem>
         <kendo:dataSource-groupItem-aggregates></kendo:dataSource-groupItem-aggregates>
     </kendo:dataSource-groupItem>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:dataSource-groupItem-aggregate
 
-Specifies the aggregate function for this group.
+The aggregate(s) which are calculated during grouping. The supported aggregates are "average", "count", "max", "min" and "sum".
 
-More documentation is available at [kendo:dataSource-groupItem-aggregate](/api/wrappers/jsp/datasource/groupitem-aggregate).
+More documentation is available at [kendo:dataSource-groupItem-aggregate](/kendo-ui/api/wrappers/jsp/datasource/groupitem-aggregate).
 
 #### Example
 
     <kendo:dataSource-groupItem-aggregates>
         <kendo:dataSource-groupItem-aggregate></kendo:dataSource-groupItem-aggregate>
     </kendo:dataSource-groupItem-aggregates>
- 
+

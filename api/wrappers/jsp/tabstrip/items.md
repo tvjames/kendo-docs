@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:tabStrip-items\>
-A JSP tag representing Kendo Items.
+
+Contains the items of the tabstrip widget
 
 #### Example
     <kendo:tabStrip>
         <kendo:tabStrip-items></kendo:tabStrip-items>
     </kendo:tabStrip>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:tabStrip-item
 
-Contains items of TabStrip
+Contains the items of the tabstrip widget
 
-More documentation is available at [kendo:tabStrip-item](/api/wrappers/jsp/tabstrip/item).
+More documentation is available at [kendo:tabStrip-item](/kendo-ui/api/wrappers/jsp/tabstrip/item).
 
 #### Example
 
     <kendo:tabStrip-items>
         <kendo:tabStrip-item></kendo:tabStrip-item>
     </kendo:tabStrip-items>
- 
+

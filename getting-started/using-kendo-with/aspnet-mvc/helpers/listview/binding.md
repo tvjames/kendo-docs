@@ -1,5 +1,7 @@
 ---
 title: Binding
+meta_title: Ajax Binding of Kendo jQuery ListView widget
+meta_description: Learn the steps to configure Kendo UI ListView component for AJAX binding and easily enable client data processing during AJAX binding.
 slug: mvc-listview-binding
 publish: true
 ---
@@ -47,25 +49,25 @@ Decorate that parameter with the `Kendo.UI.DataSourceRequestAttribute`. That att
             return Json(result);
         }
 5.  In the view configure the listview to use the action method created in the previous steps:
-	- ListView item template
+    - ListView item template
 
-		  	<script type="text/x-kendo-tmpl" id="template">
-    			<div class="product">
-			        <img src="@Url.Content("~/content/web/foods/")${ProductID}.jpg" alt="${ProductName} image" />
-			        <h3>${ProductName}</h3>
-			        <dl>
-			            <dt>Price:</dt>
-			            <dd>${kendo.toString(UnitPrice, "c")}</dd>
-			        </dl>
-			    </div>
-			</script>
+            <script type="text/x-kendo-tmpl" id="template">
+                <div class="product">
+                    <img src="@Url.Content("~/content/web/foods/")${ProductID}.jpg" alt="${ProductName} image" />
+                    <h3>${ProductName}</h3>
+                    <dl>
+                        <dt>Price:</dt>
+                        <dd>${kendo.toString(UnitPrice, "c")}</dd>
+                    </dl>
+                </div>
+            </script>
     - WebForms
 
             <%: Html.Kendo().ListView<MvcApplication1.Models.Product>()
                 .Name("ListView")
                 .TagName("div")
-				.ClientTemplateId("template")
-                .DataSource(dataSource => dataSource                    
+                .ClientTemplateId("template")
+                .DataSource(dataSource => dataSource
                     .Read(read => read.Action("Products_Read", "Home")) // Specify the action method and controller name
                 )
                 .Pageable()
@@ -75,8 +77,8 @@ Decorate that parameter with the `Kendo.UI.DataSourceRequestAttribute`. That att
             @(Html.Kendo().ListView<MvcApplication1.Models.Product>()
                 .Name("ListView")
                 .TagName("div")
-				.ClientTemplateId("template")
-                .DataSource(dataSource => dataSource                    
+                .ClientTemplateId("template")
+                .DataSource(dataSource => dataSource
                     .Read(read => read.Action("Products_Read", "Home")) // Specify the action method and controller name
                 )
                 .Pageable()
@@ -106,9 +108,10 @@ containing the additional data:
     <%: Html.Kendo().ListView<MvcApplication1.Models.Product>()
             .Name("ListView")
             .TagName("div")
-			.ClientTemplateId("template")
-            .DataSource(dataSource => dataSource                    
-                .Read(read => read.Action("Products_Read", "Home")) // Specify the action method and controller name
+            .ClientTemplateId("template")
+            .DataSource(dataSource => dataSource
+                .Read(read => read.Action("Products_Read", "Home")
+                                  .Data("additionalData")) // Specify the name of the JavaScript function that returns the data
             )
             .Pageable()
     %>
@@ -125,13 +128,14 @@ containing the additional data:
 ### Razor - Send additional data
 
     @(Html.Kendo().ListView<MvcApplication1.Models.Product>()
-		.Name("ListView")
-	    .TagName("div")
-		.ClientTemplateId("template")
-	    .DataSource(dataSource => dataSource                    
-	        .Read(read => read.Action("Products_Read", "Home")) // Specify the action method and controller name
-	    )
-	    .Pageable()
+        .Name("ListView")
+        .TagName("div")
+        .ClientTemplateId("template")
+        .DataSource(dataSource => dataSource
+            .Read(read => read.Action("Products_Read", "Home")
+                .Data("additionalData")) // Specify the name of the JavaScript function that returns the data
+        )
+        .Pageable()
     )
     <script>
     function additionalData() {
@@ -148,7 +152,7 @@ containing the additional data:
 By default Kendo ListView for ASP.NET MVC will request data from the server every time the user changes the page, filters the grid, sorts or groups. This behavior
 can be changed by disabling `ServerOperation`:
 
-    .DataSource(dataSource => dataSource        
+    .DataSource(dataSource => dataSource
         .ServerOperation(false) // paging will be applied client-side
         .Read(read => read.Action("Products_Read", "Home"))
     )

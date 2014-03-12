@@ -1,5 +1,7 @@
 ---
 title: Load Templates from External Files
+meta_title: Load local and remote templates |Kendo UI Template
+meta_description: How to load templates in large projects, built with Kendo UI. Learn how to remove templates from HTML pages and manage them in external files.
 slug: howto-load-templates-external-files
 publish: true
 ---
@@ -39,7 +41,7 @@ This is the most common and simplest approach to defining templates. With this p
 		</body>
 		</html>
 
-This approach should be familiar. It is a simple Kendo UI Template defined in an HTML page. For more basic Kendo UI Template information, [please review the Getting Started doc](http://docs.kendoui.com/getting-started/framework/templates/overview).
+This approach should be familiar. It is a simple Kendo UI Template defined in an HTML page. For more basic Kendo UI Template information, [please review the Getting Started doc](/kendo-ui/getting-started/framework/templates/overview).
 
 #### PROS
 - Simple, easy to create
@@ -196,7 +198,7 @@ This documenat has demonstrated the following:
 - How to initlize an external template after it has loaded
 - How to name and organize external template files in a project
 
-Following these steps will help create a more maintainable and DRY JavaScript application. The pattern outlined in this document can be seen live in the [Kendo UI Feed Reader demo](http://www.kendoui.com/blogs/teamblog/posts/11-09-29/rss_feed_reader_built_with_kendo_ui_yql_amp_less.aspx).
+Following these steps will help create a more maintainable and DRY JavaScript application. The pattern outlined in this document can be seen live in the [Kendo UI Feed Reader demo](http://blogs.telerik.com/kendoui/posts/11-09-29/rss_feed_reader_built_with_kendo_ui_yql_amp_less).
 
 
 

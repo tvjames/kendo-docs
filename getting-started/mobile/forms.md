@@ -1,5 +1,7 @@
 ---
 title: Forms
+meta_title: User guide to supported and styled Kendo UI Mobile forms
+meta_description: Detailed steps how to use Kendo UI Mobile Forms in mobile app development.
 slug: mobile-forms
 publish: true
 ---
@@ -19,6 +21,22 @@ Select elements are also automatically styled for each platform and will use the
 
 ## Known browser issues and possible workarounds:
 
+> **Important:** To avoid many Android and WP8 form issues, please use native scroller in all Views that require text entry! Check the example below.
+
+> **Native scrolling is only enabled on platforms that support it**: iOS > 5+, Android > 3+, WP8. BlackBerry devices do support it, but the native scroller is flaky.
+
+    <div data-role="view" data-use-native-scrolling="true">
+        <form action="./index.html">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <label>Type text
+                        <input type="text" value="Text" />
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+
 *   Select element touch target in Android 2.x remains in the same place when a transformation is applied on a parent.
 Select element text can't be right-aligned in WebKit, which is needed for iOS styling.
 A work around for both is to use the Kendo DropDownList widget.
@@ -30,7 +48,7 @@ To do so, include **kendo.dropdownlist.js** and its requirements
 
 *   Input with type search shows **reset icon** in Chrome and Safari, which is not present on a mobile device.
 
-*   All input and select elements in Android 4.x default browser render a fake input when focused.
+*   All input elements in Android 4.x default browser render a fake input when focused.
 This focused input can't be styled and is not part of the page flow so it won't scroll
 resulting in 2 identical but differently styled input elements at some point.
 **There is a workaround for this issue integrated in Kendo UI Mobile since Q2 2012, which unfortunately has the following negative effects:**
@@ -47,19 +65,24 @@ if you encounter such issues and want to work around them, you can disable the i
         -webkit-user-modify: inherit;
     }
 
-    .km-android .km-list > li
-    {
-        bottom: auto;
-        -webkit-transform: none;
-        -moz-transform: none;
-    }
-
 As of Q3 2012, the rules needed should have more specificity and different selectors:
 
     .km-root .km-on-android input
     {
         -webkit-user-modify: inherit;
     }
+
+> **Important:** As of Q2 2013, the Android 2 fake input workaround has been removed from the common CSS as it causes multiple issues with phone keyboards. Add this rule to your CSS in order to return it:
+
+    .km-on-android.km-2 .km-list > li,
+    .km-on-android.km-3 .km-list > li
+    {
+        bottom: 10000px;
+        -webkit-transform: translatey(10000px);
+        transform: translatey(10000px);
+    }
+
+Older releases than Q2 2013, will require the following rule to disable the Android 2 workaround:
 
     .km-root .km-on-android .km-list > li
     {
@@ -68,3 +91,11 @@ As of Q3 2012, the rules needed should have more specificity and different selec
         -moz-transform: none;
     }
 
+and if older than Q3 2012, this rule instead:
+
+    .km-android .km-list > li
+    {
+        bottom: auto;
+        -webkit-transform: none;
+        -moz-transform: none;
+    }

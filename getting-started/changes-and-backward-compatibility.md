@@ -1,22 +1,200 @@
 ---
 title: Changes and Backward Compatibility
-meta_title: Changes and Backwards Compatibility
-meta_description: A list of breaking changes made for each release of Kendo UI
+meta_title: Changes and Backward Compatibility in Kendo UI
+meta_description: Find all changes which are effective in Kendo UI 2012 Q2 from previous releases
 slug: gs-changes-and-backward-compatibility
 publish: true
 ---
 
 # Kendo UI Framework Changes and Backwards Compatibility
 
-## KendoUI 2012 Q3
+## Kendo UI 2014 Q1
 
-### Changes from 2012 Q1 SP1 (2011.1.515)
+### Changes from 2013 Q3 SP2 (2013.3.1324)
+
+#### Breaking changes
+
+* **Flat Theme**: Button background is now gray. The previous outcome can be achieved using **.k-primary** class.
+
+### Changes from 2013 Q3 (2013.3.1119)
+
+#### Breaking changes
+
+* **Supporting libs**: Kendo UI LESS fork is now updated to LESS 1.6.0. Kendo UI CSS files are built with it (no breaking changes in the LESS files themselves).
+
+## Kendo UI 2013 Q3
+
+### Changes from 2013 Q2 SP1 (2013.2.918)
+
+#### Breaking changes
+
+* **Core**: kendo.support.pointers now only shows support for IE11 pointer events - kendo.support.msPointers was added to indicate that IE10 pointer events are supported too.
+* **Splitter**: the internal method `trigger("resize")`, which has been provided as a workaround in certain scenarios, no longer works.
+It has been replaced with a [public API method `resize()`](/kendo-ui/getting-started/using-kendo-with/using-kendo-in-responsive-web-pages), which now all Kendo UI widgets have.
+Also see [`kendo.resize()`](/kendo-ui/api/framework/kendo/#methods-resize).
+* **Splitter**: the `layoutChange` event is now obsolete and will be removed in the future. Please use the `resize` event instead.
+* **Kendo UI Scheduler for ASP.NET MVC**: "ISchedulerEvent" interface now includes two additional fields - "StartTimezone" and "EndTimezone" which stores the timezone information of the event.
+* **Scheduler**: Changes in `recurrenceEditor` messages:
+ -  `daily.days` becomes `daily.interval`
+ -  `weekly.weeks` becomes `weekly.interval`
+ -  `monthly.months` becomes `monthly.interval`
+ -  `yearly.years` becomes `yearly.interval`
+ -  `end.endLabel` becomes `end.label`
+ -  `end.endNever` becomes `end.never`
+ -  `end.endCountAfter` becomes `end.after`
+ -  `end.endCountOccurrence` becomes `end.occurrence`
+ -  `end.endUntilOn` becomes `end.on`
+
+* **MVC DataSource**: The MVC DataSource transport now serializes numbers based on the used Kendo culture. As a result, if you are using an invariant culture number model binder, the numbers will not be parsed correctly. You should either use the the same culture to parse the numbers in the model binder or remove the model binder in order for numbers with a decimal separator to be parsed correctly.
+
+## Kendo UI 2013 Q2
+
+### Changes from 2013 Q1 SP1 (2013.1.514)
+
+#### Breaking changes
+
+* **Editor**: The default tool set now includes the newly introduced table editing. Toolbar tools are now grouped, so their dimensions have been increased by 2px. On the other hand,
+the "Font name" and "Font size" tools no longer appear by default. The idea is to encourage developers (and users respectively) to use the formatting dropdown, which provides a predefined (and customizable) set of options.
+This will ultimately lead to better structured, formatted and consistent rich text documents, compared to the case when the user has the ability to apply arbitrary font styles.
+
+If you need the old tool set, use the configuration below.
+
+        $("#editor").kendoEditor({
+            tools: [
+                "bold", "italic", "underline", "strikethrough",
+                "fontName", "fontSize", "foreColor", "backColor",
+                "justifyLeft", "justifyCenter", "justifyRight", "justifyFull",
+                "insertUnorderedList", "insertOrderedList",
+                "indent", "outdent",
+                "formatBlock",
+                "createLink", "unlink", "insertImage"
+            ]
+        });
+
+* **Editor**: Initializing the editor from a `div` element triggers the [inline editing mode](http://demos.telerik.com/kendo-ui/web/editor/inline-editing.html). If you need to revert to the old behavior, initialize it from a `<textarea>` element.
+
+* **Mobile ListView**:
+
+Enabling endless scrolling or press to load more configuration options now puts the listview in a virtual mode, which has different behavior than Q1 2013 and previous releases.
+
+1. `endlessScrollParameters` and `loadMoreParameters` configuration options are not available anymore. Endless scrolling uses on the dataSource paging configuration to issue subsequent requests.
+
+1. `scrollTreshold` option is not available anymore. The listvew automatically prefetches the next page when 2/3 of the current page is reached.
+
+1. `stopEndlessScrolling` and `stopLoadMore` methods are no longer available. The listview automatically hides the button and loading indicator when the items loaded reach the number returned by the `schema.total` method of the bound DataSource.
+
+1. `lastPageReached` event is no longer triggered, due to the same reasons.
+
+#### Deprecated functionality
+
+* **Editor**: The **formatBlock** and **style** tools have been deprecated in favor of the unified **formatting** tool. The new tool supports the functionality of both old tools, as well as new styling options. If you need to keep the styles and block formats in different drop-downs, you can use two formatting tools in paralel. The old tool declarations work, yielding a console.warn about the deprecation, and will be removed with a future official release.
+    - Old
+
+            $("#editor").kendoEditor({
+                tools: [
+                    { name: "style", items: [
+                        // applies class "foo"
+                        { text: "foo", value: "foo" }
+                    ] },
+
+                    { name: "formatBlock", items: [
+                        // changes wrapping block to paragraph
+                        { text: "paragraph", value: "p" }
+                    ] }
+                ]
+            });
+    - New
+
+            $("#editor").kendoEditor({
+                tools: [
+                    { name: "formatting", items: [
+                        // applies class "foo"
+                        { text: "foo", value: ".foo" },
+
+                        // changes wrapping block to paragraph
+                        { text: "paragraph", value: "p" },
+
+                        // changes wrapping block to paragraph with class "fine-print"
+                        { text: "fine print", value: "p.fine-print" }
+                    ] }
+                ]
+            });
+
+
+## Kendo UI 2013 Q1
+
+### Changes from 2012 Q3 SP1 (2012.3.1315)
+
+#### Breaking changes
+
+* jQuery is updated to 1.9.1.
+* **Mobile:** Rename scrollTreshold option of the ListView to **scrollThreshold**.
+* **AutoComplete/ComboBox/DropDownList:** Rename enable option to **enabled**.
+* **TreeView/HierarchicalDataSource/Node:** The `children` field is initialized depending on the `hasChildren` field, as previously documented. Use the `append` and `load` methods to initialize it, and if accessing the children field directly, verify if it is present.
+
+#### ASP.NET MVC
+
+Some ASP.NET MVC applications may be broken if using other libraries incompatible with jQuery 1.9.1. Further details available in the [troubleshooting guide](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/troubleshooting#javascript-error-that-live-method-is-unavailable,-undefined-or-unsupported)
+
+## Kendo UI 2012 Q3 SP1
+
+### Changes from 2012 Q3 (2011.3.1114)
+
+#### Breaking changes
+
+* **Cascading ComboBoxes/DropDownLists:** The parameterMap of the child widget's dataSource is called before the change event of the parent widget.
+Use [cascade](/kendo-ui/api/web/combobox#cascade) event instead of change event.
+
+* Telerik UI for ASP.NET MVC: Remove Slide effect. Use SlideIn instead.
+
+## Kendo UI 2012 Q3
+
+### Changes from 2012 Q2 SP1 (2011.2.913)
 
 #### Breaking changes
 
 * **Mobile:** the kendoMobileSwipe plugin is obsolete - replace its usage with the **touch** widget.
 
-## KendoUI 2012 Q2
+* **Mobile:** WebKit mask icons are now deprecated and font icons are used instead. If you have custom icons, they might break after the upgrade.
+Add the following CSS rule to fix them /if you have data-icon="custom" on them, or use .km-icon to remove all non-custom icons/:
+
+        .km-root .km-pane .km-view .km-custom {
+            background-size: 100% 100%;
+            -webkit-background-clip: border-box;
+            background-color: currentcolor;
+        }
+
+        .km-root .km-pane .km-view .km-custom:after,
+        .km-root .km-pane .km-view .km-custom:before
+        {
+            visibility: hidden;
+        }
+
+Additionally it should be noted that the mask icons used **background-color** for colorization, while the font ones use **color**
+and custom colorization (but not on custom icons) **should be updated** after the upgrade. For example a rule like this:
+
+        .km-ios .km-tabstrip .km-icon {
+            background-color: rgb(20, 30, 40);
+        }
+
+should be changed to this:
+
+        .km-ios .km-tabstrip .km-icon {
+            color: rgb(20, 30, 40);
+        }
+
+* **DataViz:** Widgets now require theme-specific stylesheets. For example:
+
+        <link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+
+if using the Default skin, should be updated to:
+
+        <link href="styles/kendo.dataviz.min.css" rel="stylesheet" />
+        <link href="styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+
+* **DataViz:** missingValues defaults to "zero" for area, stacked area and stacked line series. The previous default was "gap" which can lead to incorrect results.
+
+## Kendo UI 2012 Q2
 
 ### Changes from 2012 Q1 SP1 (2012.1.322)
 
@@ -41,7 +219,7 @@ publish: true
             .k-i-arrow-w
             .k-i-seek-w
             .k-i-seek-e
-    for more information check the [Styling Icons demo](http://demos.kendoui.com/web/styling/icons.html).
+    for more information check the [Styling Icons demo](http://demos.telerik.com/kendo-ui/web/styling/icons.html).
 
 *  **Popup:** Popup based widgets nested in other Popup based widgets create their Popup container inside the Popup parent. This means that a DropDownList created inside an already
     initialized Menu will create its list inside the Menu item's parent Popup.
@@ -73,7 +251,7 @@ publish: true
             var chart = $("#chart").data("kendoChart");
             chart.dataSource.read();
 
-## KendoUI 2012 Q1 (2012.1.322)
+## Kendo UI 2012 Q1 (2012.1.322)
 
 ### Changes from 2011 Q3 SP1 (2011.3.1407)
 

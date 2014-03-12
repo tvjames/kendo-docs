@@ -18,7 +18,7 @@ The albums will be limited to 20 per page, and display paging navigation at both
 
 This view is contained in **Views/Store/Browse.cshtml**.
 
-We start with a [Kendo ListView](http://demos.kendoui.com/web/listview/index.html) widget that will
+We start with a [Kendo ListView](http://demos.telerik.com/kendo-ui/web/listview/index.html) widget that will
 become the container for the Albums.
 
     <div data-role="listview" data-bind="source: albums" data-template="album-template"></div>
@@ -69,8 +69,7 @@ This code is contained in **Scripts/App/store-browse.js**.
 
 Our viewModel contains 3 major pieces. The **albums** property is a Kendo DataSource that will read the Albums from the server.
 In the code, there is a lot of configuration information passed to the DataSource constructor that sets up
-server-side filtering and paging using OData. More information on the specifics of this code can be found in the
-Kendo Blog post [Using Kendo UI With MVC4, WebAPI, OData And EF](http://www.kendoui.com/blogs/teamblog/posts/12-10-25/using_kendo_ui_with_mvc4_webapi_odata_and_ef.aspx).
+server-side filtering and paging using OData.
 
 The **viewAlbumDetails** property contains a function that will be bound to the click on each Album.
 This is used to show the album details window.
@@ -97,7 +96,7 @@ This is done with a standard jQuery AJAX call, instead of using a Kendo DataSour
 
 On successful response from the server, the **genre** property is set on the viewModel.
 This will cause the view to update and show the genre's name.
-Note that is actually happens asynchronously. The page initially displays an empty &lt;h3&gt; tag
+Note that actually happens asynchronously. The page initially displays an empty &lt;h3&gt; tag
 and when the JavaScript is run the element is bound to the viewModel.genre property.
 If the jQuery AJAX request has not finished, this will still be null. Once the AJAX request finishes
 it calls the **.set()** method on the viewModel to set the genre.

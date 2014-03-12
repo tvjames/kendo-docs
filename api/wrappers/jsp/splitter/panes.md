@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:splitter-panes\>
-A JSP tag representing Kendo Panes.
+
+Defines the panes of the splitter
 
 #### Example
     <kendo:splitter>
         <kendo:splitter-panes></kendo:splitter-panes>
     </kendo:splitter>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:splitter-pane
 
-An array of pane definitions.
+Defines the panes of the splitter
 
-More documentation is available at [kendo:splitter-pane](/api/wrappers/jsp/splitter/pane).
+More documentation is available at [kendo:splitter-pane](/kendo-ui/api/wrappers/jsp/splitter/pane).
 
 #### Example
 
     <kendo:splitter-panes>
         <kendo:splitter-pane></kendo:splitter-pane>
     </kendo:splitter-panes>
- 
+

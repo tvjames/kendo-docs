@@ -5,81 +5,123 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.LinearGaugeBuilder
-
 Defines the fluent interface for configuring the LinearGauge component.
+
+
 
 ## Methods
 
-### Theme(System.String)
+### Theme(`System.String`)
 Sets the theme of the linear gauge.
 
-#### Example
-    <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Theme("Black")
-        %>
 
 #### Parameters
 
 ##### theme `System.String`
 The linear gauge theme.
 
-### GaugeArea(System.Action\<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().RadialGauge()
+    .Name("radialGauge")
+    .Theme("Black")
+    %>
+
+
+### RenderAs(`Kendo.Mvc.UI.RenderingMode`)
+Sets the preferred rendering engine.
+            If it is not supported by the browser, the Chart will switch to the first available mode.
+
+
+#### Parameters
+
+##### renderAs [Kendo.Mvc.UI.RenderingMode](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/RenderingMode)
+The preferred rendering engine.
+
+
+
+
+
+### GaugeArea(`System.Action<Kendo.Mvc.UI.Fluent.GaugeAreaBuilder>`)
 Sets the linear gauge area.
 
-#### Example
-    <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .ChartArea(chartArea => chartArea.margin(20))
-        %>
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GaugeAreaBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeAreaBuilder)\>
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GaugeAreaBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeAreaBuilder)>
 The linear gauge area.
 
-### Scale(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().RadialGauge()
+    .Name("radialGauge")
+    .ChartArea(chartArea => chartArea.margin(20))
+    %>
+
+
+### Scale(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder>`)
 Configures the scale
 
-#### Example
-    <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Scale(scale => scale
-        .Min(10)
-        )
-        %>
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeLinearScaleBuilder)\>
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GaugeLinearScaleBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeLinearScaleBuilder)>
 The configurator
 
-### Pointer(System.Action\<Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().RadialGauge()
+    .Name("radialGauge")
+    .Scale(scale => scale
+        .Min(10)
+    )
+    %>
+
+
+### Pointer(`System.Action<Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder>`)
 Configures the pointer
 
-#### Example
-    <%= Html.Kendo().RadialGauge()
-        .Name("radialGauge")
-        .Pointer(pointer => pointer
-        .Value(10)
-        )
-        %>
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeLinearPointerBuilder)\>
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GaugeLinearPointerBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GaugeLinearPointerBuilder)>
 The configurator
 
-### Transitions(System.Boolean)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().RadialGauge()
+    .Name("radialGauge")
+    .Pointer(pointer => pointer
+        .Value(10)
+    )
+    %>
+
+
+### Transitions(`System.Boolean`)
 Enables or disabled animated transitions on initial load and refresh.
 
-#### Example
-    <%= Html.Kendo().RadialGauge()
-        .Name("radialScale")
-        .Transitions(false)
-        %>
 
 #### Parameters
 
 ##### transitions `System.Boolean`
 A value indicating if transition animations should be played.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().RadialGauge()
+    .Name("radialScale")
+    .Transitions(false)
+    %>
+
+
+

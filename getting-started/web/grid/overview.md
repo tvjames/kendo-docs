@@ -1,7 +1,11 @@
 ---
-title: Grid Overview
+title: Overview
+meta_title: Overview of Grid UI widget | Kendo UI Documentation
+meta_description: Quick steps to help you create Kendo UI Grid, initialization and enabling of Grid UI virtualization.
 slug: gs-web-grid-overview
+relatedDocs: api-web-grid
 tags: getting-started,web
+ordinal: 1
 publish: true
 ---
 
@@ -44,6 +48,10 @@ There are two primary ways to create a Kendo Grid:
       </tbody>
      </table>
 
+> The Grid data field names are either created from the header cell content or the `data-field` attributes.
+The data field names should be valid Javascript identifiers, that's why using data-field attributes is highly recommended.
+Otherwise there would be limitations imposed on the header cell content (e.g. no special characters and spaces).
+	 
 ### Initialize the Kendo Grid
 
       $(document).ready(function(){
@@ -123,7 +131,7 @@ for highly optimized binding to large data sets. Enabling UI virtualization is d
 ## Accessing an Existing Grid
 
 You can reference an existing **Grid** instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
-Once a reference has been established, you can use the [Grid API](/api/web/grid) to control its behavior.
+Once a reference has been established, you can use the [Grid API](/kendo-ui/api/web/grid) to control its behavior.
 
 ### Accessing an existing Grid instance
 

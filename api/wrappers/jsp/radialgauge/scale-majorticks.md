@@ -6,26 +6,23 @@ publish: true
 ---
 
 # \<kendo:radialGauge-scale-majorTicks\>
-A JSP tag representing Kendo MajorTicks.
+
+Configures the scale major ticks.
 
 #### Example
     <kendo:radialGauge-scale>
         <kendo:radialGauge-scale-majorTicks></kendo:radialGauge-scale-majorTicks>
     </kendo:radialGauge-scale>
 
-
 ## Configuration Attributes
 
-
-### color `String`
+### color `java.lang.String`
 
 The color of the major ticks.
 
 #### Example
-    <kendo:radialGauge color="color">
-    </kendo:radialGauge>
-
-
+    <kendo:radialGauge-scale-majorTicks color="color">
+    </kendo:radialGauge-scale-majorTicks>
 
 ### size `float`
 
@@ -33,10 +30,8 @@ The major tick size.
 This is the length of the line in pixels that is drawn to indicate the tick on the scale.
 
 #### Example
-    <kendo:radialGauge size="size">
-    </kendo:radialGauge>
-
-
+    <kendo:radialGauge-scale-majorTicks size="size">
+    </kendo:radialGauge-scale-majorTicks>
 
 ### visible `boolean`
 
@@ -44,17 +39,14 @@ The visibility of the major ticks.
 Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
-    <kendo:radialGauge visible="visible">
-    </kendo:radialGauge>
-
-
+    <kendo:radialGauge-scale-majorTicks visible="visible">
+    </kendo:radialGauge-scale-majorTicks>
 
 ### width `float`
 
 The width of the major ticks.
 
 #### Example
-    <kendo:radialGauge width="width">
-    </kendo:radialGauge>
-
+    <kendo:radialGauge-scale-majorTicks width="width">
+    </kendo:radialGauge-scale-majorTicks>
 

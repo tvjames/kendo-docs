@@ -1,5 +1,7 @@
 ---
 title: Universal Mobile Apps with HTML5 & Kendo UI Mobile
+meta_title: HTML5 cross-platform apps and mobile frameworks | Kendo UI Mobile documentation
+meta_description: How to build universal HTML5 and Javascript mobile apps with Kendo UI Mobile framework.
 slug: howto-universal-mobile-apps-html5-kendoui-mobile
 tags: How-To
 publish: true
@@ -87,12 +89,12 @@ Conceptually, the prior code snippet is doing this:
 2. If the device is a tablet, we grab the HTML element containing our initial tablet app view. If it’s not a tablet, we grab the container for our phone app view.
 3. Since the tablet view uses a SplitView, we do not need a app layout element. If it’s a phone, we specify our default view layout.
 4. Finally, we initialize the Kendo UI Mobile Application using the configured variables.
-5. And for a little extra polish, we use some CSS to [avoid FOUJUI](http://www.kendoui.com/blogs/archive/11-10-06/foujui_flash_of_uninitialized_javascript_ui.aspx) (more on this in a minute)
+5. And for a little extra polish, we use some CSS to [avoid FOUJUI](http://blogs.telerik.com/kendoui/posts/11-10-06/foujui_flash_of_uninitialized_javascript_ui) (more on this in a minute)
 
 **The net effect is a single app containing all of the HTML, CSS, and JavaScript for both tablet and phone users that can be “universally” packaged and deployed via the browser or in hybrid app containers (like PhoneGap).**
 
 ##Universal App and FOUJUI
-When using the universal app approach, the [“Flash of Uninitialized JavaScript UI”](http://www.kendoui.com/blogs/archive/11-10-06/foujui_flash_of_uninitialized_javascript_ui.aspx) (or FOUJUI) can be particularly distracting because the initial HTML page contains markup for both the tablet and mobile views. To provide a polished loading experience and avoid displaying unsightly HTML, it is important to address FOUJUI with some simple CSS and JavaScript.
+When using the universal app approach, the [“Flash of Uninitialized JavaScript UI”](http://blogs.telerik.com/kendoui/posts/11-10-06/foujui_flash_of_uninitialized_javascript_ui) (or FOUJUI) can be particularly distracting because the initial HTML page contains markup for both the tablet and mobile views. To provide a polished loading experience and avoid displaying unsightly HTML, it is important to address FOUJUI with some simple CSS and JavaScript.
 
 In the example linked above, this technique is used:
 

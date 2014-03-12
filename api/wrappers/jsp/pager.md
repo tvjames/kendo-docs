@@ -6,11 +6,9 @@ publish: true
 ---
 
 # \<kendo:pager\>
-A JSP tag representing Kendo Pager.
-
+A JSP wrapper for Kendo UI [Pager](/kendo-ui/api/web/pager).
 
 ## Configuration Attributes
-
 
 ### autoBind `boolean`
 
@@ -20,8 +18,6 @@ Indicates whether the pager refresh method will be called within its initializat
     <kendo:pager autoBind="autoBind">
     </kendo:pager>
 
-
-
 ### buttonCount `float`
 
 Defines the number of buttons displayed in the numeric pager.
@@ -29,28 +25,6 @@ Defines the number of buttons displayed in the numeric pager.
 #### Example
     <kendo:pager buttonCount="buttonCount">
     </kendo:pager>
-
-
-
-### selectTemplate `String`
-
-The template for selectbox with predefined page sizes.
-
-#### Example
-    <kendo:pager selectTemplate="selectTemplate">
-    </kendo:pager>
-
-
-
-### linkTemplate `String`
-
-The template for page number links.
-
-#### Example
-    <kendo:pager linkTemplate="linkTemplate">
-    </kendo:pager>
-
-
 
 ### info `boolean`
 
@@ -60,8 +34,6 @@ Defines if a label showing current paging information will be displayed.
     <kendo:pager info="info">
     </kendo:pager>
 
-
-
 ### input `boolean`
 
 Defines if an input element which allows the user to navigate to given page will be displayed.
@@ -70,7 +42,13 @@ Defines if an input element which allows the user to navigate to given page will
     <kendo:pager input="input">
     </kendo:pager>
 
+### linkTemplate `java.lang.String`
 
+The template for page number links.
+
+#### Example
+    <kendo:pager linkTemplate="linkTemplate">
+    </kendo:pager>
 
 ### numeric `boolean`
 
@@ -80,17 +58,13 @@ Defines if numeric portion of the pager will be shown.
     <kendo:pager numeric="numeric">
     </kendo:pager>
 
+### pageSizes `java.lang.Object`
 
-
-### pageSizes `boolean`
-
-Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automaticaly selected in created selectbox.
+Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automatically selected in created selectbox.
 
 #### Example
     <kendo:pager pageSizes="pageSizes">
     </kendo:pager>
-
-
 
 ### previousNext `boolean`
 
@@ -100,8 +74,6 @@ Defines if buttons for navigating to the first, last, previous and next pages wi
     <kendo:pager previousNext="previousNext">
     </kendo:pager>
 
-
-
 ### refresh `boolean`
 
 Defines if a refresh button will be displayed. Click on that button will call DataSource read() method to get actual data.
@@ -110,11 +82,38 @@ Defines if a refresh button will be displayed. Click on that button will call Da
     <kendo:pager refresh="refresh">
     </kendo:pager>
 
+### selectTemplate `java.lang.String`
 
+The template for selected page number link.
+
+#### Example
+    <kendo:pager selectTemplate="selectTemplate">
+    </kendo:pager>
+
+
+##  Configuration JSP Tags
+
+### kendo:pager-messages
+
+Defines texts shown within the pager. Use this option to customize or localize the pager messages.
+
+More documentation is available at [kendo:pager-messages](/kendo-ui/api/wrappers/jsp/pager/messages).
+
+#### Example
+
+    <kendo:pager>
+        <kendo:pager-messages></kendo:pager-messages>
+    </kendo:pager>
+
+
+## Event Attributes
 
 ### change `String`
 
 Fires when the current page has changed.
+
+
+For additional information check the [change](/kendo-ui/api/web/pager#events-change) event documentation.
 
 #### Example
     <kendo:pager change="handle_change">
@@ -124,32 +123,15 @@ Fires when the current page has changed.
             // Code to handle the change event.
         }
     </script>
-
-
-
-### Event Attributes
-
-
-### change `String`
-
-Fires when the current page has changed.
-
-#### Example
-    <kendo:pager change="handle_change">
-    </kendo:pager>
-    <script>
-        function handle_change(e) {
-            // Code to handle the change event.
-        }
-    </script>
-
 
 ## Event Tags
- 
 
 ### kendo:pager-change
 
 Fires when the current page has changed.
+
+
+For additional information check the [change](/kendo-ui/api/web/pager#events-change) event documentation.
 
 #### Example
     <kendo:pager>
@@ -162,19 +144,3 @@ Fires when the current page has changed.
         </kendo:pager-change>
     </kendo:pager>
 
- 
-
-## Child JSP Tags
-
-### kendo:pager-messages
-
-Defines texts shown within the pager.
-
-More documentation is available at [kendo:pager-messages](/api/wrappers/jsp/pager/messages).
-
-#### Example
-
-    <kendo:pager>
-        <kendo:pager-messages></kendo:pager-messages>
-    </kendo:pager>
-  

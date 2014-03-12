@@ -1,7 +1,11 @@
 ---
-title: ComboBox Overview
+title: Overview
+meta_title: Overview of jQuery UI combobox | Kendo UI Documentation
+meta_description: Create ComboBox UI widget, use Kendo UI templates, instructions how to use ComboBox.
 slug: gs-web-combobox-overview
+relatedDocs: api-web-combobox
 tags: getting-started,web
+ordinal: 1
 publish: true
 ---
 
@@ -33,6 +37,8 @@ A **ComboBox** will look and operate consistently regardless of the way in which
 Initialization of a **ComboBox** should occur after the DOM is fully loaded. It is recommended
 that initialization the **ComboBox** occur within a handler is provided to
 $(document).ready().
+
+> Widget copies any styles and CSS classes from the input element to the visible input and the wrapper element.
 
 ### Initialize a ComboBox using a selector within $(document).ready()
 
@@ -94,7 +100,7 @@ larger data sets. With remote data-binding, items will be loaded on-demand; when
 
 The **ComboBox** uses Kendo UI templates to enable you to control how items are rendered. For a
 detailed description of the capabilities and syntax of the Kendo UI templates, please refer to the
-[documentation](http://www.kendoui.com/documentation/framework/templates/overview.aspx "Kendo UI Template").
+[documentation](/kendo-ui/getting-started/framework/templates/overview).
 
 ### Basic item template customization
 
@@ -131,6 +137,22 @@ detailed description of the capabilities and syntax of the Kendo UI templates, p
         });
     </script>
 
+## Customizing the width of the drop-down list
+
+Width of ComboBox' drop-down list can be changed via jQuery width method.
+
+### Example
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    // set width of the drop-down list
+    combobox.list.width(400);
+
+## Support for label element
+
+Because of the complex rendering of the widget, focusing of the widget using label element will require additional implementation.
+Check [this jsFiddle demo](http://jsfiddle.net/krustev/6mHKF/), which shows how to achieve this.
+
 ## Accessing an Existing ComboBox
 
 
@@ -141,4 +163,3 @@ can use the API to control its behavior.
 ### Accessing an existing ComboBox instance
 
     var comboBox = $("#comboBox").data("kendoComboBox");
-

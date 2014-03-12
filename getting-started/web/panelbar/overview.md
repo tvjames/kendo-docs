@@ -1,6 +1,9 @@
 ---
-title: PanelBar Overview
+title: Overview
+meta_title: Overview of PanelBar UI widget documentation
+meta_description: Read when the initialization of PanelBar UI widget should occur and how to load the content with AJAX.
 slug: gs-web-panelbar-overview
+relatedDocs: api-web-panelbar
 tags: getting-started,web
 publish: true
 ---
@@ -63,7 +66,8 @@ A **PanelBar** will preserve the content defined within an item.
         dataSource: [
             {
                 text: "Item 1",
-                url: "http://www.kendoui.com/"                  // link URL if navigation is needed (optional)
+                cssClass: "myClass",                            // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
+                url: "http://www.telerik.com/"                  // link URL if navigation is needed (optional)
             },
             {
                 text: "<b>Item 2</b>",
@@ -76,7 +80,7 @@ A **PanelBar** will preserve the content defined within an item.
             },
             {
                 text: "Item 4",
-                imageUrl: "http://www.kendoui.com/test.jpg",    // item image URL, optional
+                imageUrl: "http://www.telerik.com/test.jpg",    // item image URL, optional
                 expanded: true,                                 // item is rendered expanded
                 items: [{                                       // Sub item collection.
                     text: "Sub Item 1"

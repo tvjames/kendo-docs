@@ -1,5 +1,7 @@
 ---
 title: Kendo Widget CSS Styles
+meta_title: Appearance and Styling of Kendo UI HTML5 widgets
+meta_description: Define CSS classes of Kendo UI Widgets to change their appearance. Learn how to easily customize Kendo components by overriding the styling of a given widget.
 slug: widget-appearance-and-styling
 publish: true
 ---
@@ -42,9 +44,32 @@ The appearance of a component may also depend on its state, which is also tied t
 *   **k-state-selected** - selected items receive this class to apply their selected look, like in PanelBar and TabStrip
 *   **k-state-disabled** - this class is set on disabled items
 
+## LESS structure
+
+**The following LESS-related information is applicable only to the case when you want to modify the Kendo UI CSS source code.**
+
+In Q1 2014 we split the Kendo UI Web common LESS file to separate LESS files for each widget. We also split all Kendo UI Mobile platform themes to file per widget.
+The LESS command-line compiler can be used to build source LESS files to CSS skins and themes. The LESS files that can be passed to the compiler are located in the first level folders inside styles/ folder -
+styles/web/ and styles/mobile/. Kendo UI Mobile files are self explanatory - except meego.less, which is deprecated, the rest of the files can be built with [our fork of LESS, located in GitHub](https://github.com/telerik/less.js)
+and produce all platform themes and several special use CSS files (including kendo.mobile.all.css).
+The Kendo UI Web LESS files' naming is listed below:
+
+*   **kendo.[skin-name].less** - skin variables file, builds with compiler - produces the skin;
+*   **kendo.[skin-name].mobile.less** - mobile widgets styling for the corresponding skin, references the variables file above, builds - produces the mobile skin;
+*   **kendo.common.core.less** - core Common LESS file, references only the common core, builds - produces the common core CSS;
+*   **kendo.common.less** - full Common LESS file, builds - produces the common Web CSS;
+*   **kendo.common-bootstrap.core.less** - core Bootstrap common, builds - produces the core common Bootstrap CSS;
+*   **kendo.common-bootstrap.less** - full Bootstrap common, builds - produces the common Bootstrap CSS;
+*   **kendo.rtl.css** - RTL styles, CSS only;
+*   **kendo.winjs.less** - WinJS specific styles, builds;
+*   **theme-template.less** - common skin template, referenced by all skins, doesn't build;
+*   **type-metro.less** - common metro skin template, referenced by all metro skins, doesn't build;
+
+The Kendo UI Web LESS files (including the Kendo UI Web mobile widgets styling) can be built using the upstream LESS, version 1.5.0 or newer.
+
 ## Customizing Appearance
 
-Usually, a CSS property defined by a primitive class is used by all widgets that use that  class, unless overridden by a higher specificity selector. For example:
+Usually, a CSS property defined by a primitive class is used by all widgets that use that class, unless overridden by a higher specificity selector. For example:
 
     .k-link
     {
@@ -64,11 +89,36 @@ because the latter uses a descendant selector and thus, is more specific (20 ver
 
 For more information about CSS specificity, check out [this excellent article in Smashing Magazine](http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/).
 
-If you want to override the styling of a given widget, you can use a CSS selector with the widget's own CSS class:
+If you want to override the styling for a given **widget type**, you can use a CSS selector with the widget's own CSS class:
 
     .k-menu .k-link
     {
         color: red;
     }
 
-When you do, make sure to specify override rules after the inclusion of the respective theme CSS files.
+When you do this, make sure to register the custom rules after the respective theme CSS files. Otherwise you will need to use higher specificity and longer complex CSS selectors.
+
+In order to customize the appearance of a **particular widget instance**, you will need a custom CSS class or ID, and include it in the CSS selectors. For example the following Menu...
+
+	<ul id="menu1" class="k-widget k-menu">
+		<!-- menu items here -->
+	</ul>
+	
+can be styled by using its ID:
+
+	#menu1 .k-link
+	{
+		color: red;
+	}
+
+The above CSS rule will not affect any other widget instances, which are outside `#menu1`.
+	
+## Browser-specific CSS
+
+While most of the CSS code is cross-browser compatible, some layouts require different styles for different browsers. Kendo UI targets specific browsers by adding browser-specific classes to the document root element instead of relying on CSS parsing hacks. You can take advantage of these classes in the following manner:
+
+    .k-ie { /* styles to be applied to all versions of Internet Explorer */ }
+    .k-ie7 { /* styles to be applied to IE7 only */ }
+    .k-ff { /* styles to be applied to all versions of Firefox */ }
+
+The syntax of the generated classes is `k-[browser] k-[browser][majorVersion]`.

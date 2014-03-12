@@ -1,5 +1,7 @@
 ---
 title: Part 2 - Hello Services
+meta_title: Tutorial for HTML5 development with ASP.NET WebAPI and RESTful services
+meta_description: In this HTML5 development tutorial you will learn how to install ASP.NET WebAPI, create service, supporting CRUD operations, and debug WebAPI Services.
 slug: tutorial-html5-development-with-asp-net-part-2-hello-services
 tags: Tutorial
 publish: true
@@ -119,7 +121,7 @@ class **EmployeesController.cs**.
 
 ![Employees Controller](images/hello-services-employees-controller.png)
 
-In order to designate the **EmployeesControllers.cs** class that was just
+In order to designate the **EmployeesController.cs** class that was just
 added as a WebAPI controller that will respond to requests, inherit from the
 **ApiController **class. If **ApiController **is not recognized for you, hover
 over the word until you get the context menu. This will give you the option to
@@ -212,7 +214,7 @@ is passed, it will be handed off to the proper method.  If nothing is passed,
 it will be ignored.
 
 This means that the route for the **EmployeesController **will be something
-like [**http://localhost:3593/api/employees**][30].
+like [**http://your-server/api/employees**][30].
 
 ### Test The Application
 
@@ -313,7 +315,7 @@ displaying each employee in an HTML table row.
 
 Open the **Site.Master** file and drag the **jquery.min** file over to the
 page just below the **Site.css** link tag in the head of the page. At the time
-of this writing, the current version of jQuery is **jquery-1.7.2.min.js**.
+of this writing, the current version of jQuery is **jquery-1.9.1.min.js**.
 
 ![Add jQuery To Master Page](images/hello-services-add-jquery-to-master-page.png)
 
@@ -816,11 +818,11 @@ The completed application used in this project is available on the course
 
 ![][63]
 
-   [1]: http://www.kendoui.com/blogs/teamblog/posts/12-05-02/html5_development_for_asp_net_developers.aspx
+   [1]: http://blogs.telerik.com/kendoui/posts/12-05-02/html5_development_for_asp_net_developers
 
    [2]: http://www.asp.net/web-api
 
-   [3]: http://msdn.microsoft.com/en-us/library/dd565622(v=vs.85
+   [3]: http://msdn.microsoft.com/en-US/library/gg589512%28v=vs.85%29.aspx
 
    [4]: https://github.com/telerik/html5-dev-for-aspnet-devs
 
@@ -838,7 +840,7 @@ The completed application used in this project is available on the course
 
    [27]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
-   [30]: http://localhost:3593/api/employees
+   [30]: http://yourserver/api/employees
 
    [39]: http://en.wikipedia.org/wiki/Ajax_(programming
 
@@ -848,7 +850,7 @@ The completed application used in this project is available on the course
 
    [44]: http://api.jquery.com/id-selector/ (ID Selector (“#id”) – jQuery API)
 
-   [45]: http://msdn.microsoft.com/en-us/library/system.json(v=vs.95
+   [45]: http://msdn.microsoft.com/en-us/library/system.json%28v=vs.95%29.aspx
 
    [46]: http://jquery.com/
 

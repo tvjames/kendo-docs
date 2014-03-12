@@ -6,49 +6,45 @@ publish: true
 ---
 
 # \<kendo:radialGauge-pointer\>
-A JSP tag representing Kendo Pointer.
+
+The pointer configuration options.
 
 #### Example
     <kendo:radialGauge>
         <kendo:radialGauge-pointer></kendo:radialGauge-pointer>
     </kendo:radialGauge>
 
-
 ## Configuration Attributes
 
-
-### color `String`
+### color `java.lang.String`
 
 The color of the pointer.
 Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
-    <kendo:radialGauge color="color">
-    </kendo:radialGauge>
-
-
+    <kendo:radialGauge-pointer color="color">
+    </kendo:radialGauge-pointer>
 
 ### value `float`
 
 The value of the gauge.
 
 #### Example
-    <kendo:radialGauge value="value">
-    </kendo:radialGauge>
+    <kendo:radialGauge-pointer value="value">
+    </kendo:radialGauge-pointer>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:radialGauge-pointer-cap
 
 The cap configuration options.
 
-More documentation is available at [kendo:radialGauge-pointer-cap](/api/wrappers/jsp/radialgauge/pointer-cap).
+More documentation is available at [kendo:radialGauge-pointer-cap](/kendo-ui/api/wrappers/jsp/radialgauge/pointer-cap).
 
 #### Example
 
     <kendo:radialGauge-pointer>
         <kendo:radialGauge-pointer-cap></kendo:radialGauge-pointer-cap>
     </kendo:radialGauge-pointer>
- 
+

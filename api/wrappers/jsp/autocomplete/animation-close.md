@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:autoComplete-animation-close\>
-A JSP tag representing Kendo Close.
+
+The animation played when the suggestion popup is closed.
 
 #### Example
     <kendo:autoComplete-animation>
         <kendo:autoComplete-animation-close></kendo:autoComplete-animation-close>
     </kendo:autoComplete-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for closing of the popup.
-
-#### Example
-    <kendo:autoComplete effects="effects">
-    </kendo:autoComplete>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
-    <kendo:autoComplete duration="duration">
-    </kendo:autoComplete>
+    <kendo:autoComplete-animation-close duration="duration">
+    </kendo:autoComplete-animation-close>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:autoComplete-animation-close effects="effects">
+    </kendo:autoComplete-animation-close>
 

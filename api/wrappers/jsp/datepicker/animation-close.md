@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:datePicker-animation-close\>
-A JSP tag representing Kendo Close.
+
+The animation played when the calendar popup is closed.
 
 #### Example
     <kendo:datePicker-animation>
         <kendo:datePicker-animation-close></kendo:datePicker-animation-close>
     </kendo:datePicker-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for closing of the popup.
-
-#### Example
-    <kendo:datePicker effects="effects">
-    </kendo:datePicker>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
-    <kendo:datePicker duration="duration">
-    </kendo:datePicker>
+    <kendo:datePicker-animation-close duration="duration">
+    </kendo:datePicker-animation-close>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:datePicker-animation-close effects="effects">
+    </kendo:datePicker-animation-close>
 

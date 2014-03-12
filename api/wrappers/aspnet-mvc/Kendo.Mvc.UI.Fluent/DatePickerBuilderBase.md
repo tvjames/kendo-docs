@@ -5,78 +5,137 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.DatePickerBuilderBase
-
 Defines the fluent interface for configuring the DatePickerBase component.
+
+
 
 ## Methods
 
-### Animation(System.Boolean)
+### Animation(`System.Boolean`)
 Use to enable or disable animation of the popup element.
 
-#### Example
-    <%= Html.Kendo().DatePicker()
-        	           .Name("DatePicker")
-        	           .Animation(false) //toggle effect
-        	%>
 
 #### Parameters
 
 ##### enable `System.Boolean`
 The boolean value.
 
-### Animation(System.Action\<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+    .Name("DatePicker")
+    .Animation(false) //toggle effect
+    %>
+
+
+### Animation(`System.Action<Kendo.Mvc.UI.Fluent.PopupAnimationBuilder>`)
 Configures the animation effects of the widget.
 
-#### Example
-    <%= Html.Kendo().DatePicker()
-        	           .Name("DatePicker")
-        	           .Animation(animation =>
-        	           {
-        		            animation.Open(open =>
-        		            {
-        		                open.SlideIn(SlideDirection.Down);
-        		            }
-        	           })
-        	%>
 
 #### Parameters
 
-##### animationAction System.Action\<[Kendo.Mvc.UI.Fluent.PopupAnimationBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PopupAnimationBuilder)\>
+##### animationAction System.Action<[Kendo.Mvc.UI.Fluent.PopupAnimationBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PopupAnimationBuilder)>
 The action which configures the animation effects.
 
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase\>)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+    .Name("DatePicker")
+    .Animation(animation =>
+    {
+        animation.Open(open =>
+        {
+            open.SlideIn(SlideDirection.Down);
+        })
+    })
+    %>
+
+
+### Culture(`System.String`)
+Specifies the culture info used by the widget.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+    .Name("DatePicker")
+    .Culture("de-DE")
+    %>
+
+
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase>`)
 Configures the client-side events.
 
-#### Example
-    <%= Html.Kendo().DatePicker()
-        .Name("DatePicker")
-        .Events(events =>
-        events.Open("open").Change("change")
-        )
-        %>
 
 #### Parameters
 
-##### clientEventsAction System.Action\<[Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/DatePickerEventBuilderBase)\>
+##### clientEventsAction System.Action<[Kendo.Mvc.UI.Fluent.DatePickerEventBuilderBase](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/DatePickerEventBuilderBase)>
 The client events action.
 
-### Format(System.String)
-Sets the date format, which will be used to parse and format the machine date.
 
-### ParseFormats(System.Collections.Generic.IEnumerable\<System.String\>)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().DatePicker()
+    .Name("DatePicker")
+    .Events(events =>
+        events.Open("open").Change("change")
+    )
+    %>
+
+
+### Format(`System.String`)
+Sets the date format, which will be used to parse and format the machine date. Defaults to CultureInfo.DateTimeFormat.ShortDatePattern.
+
+
+
+
+
+### ParseFormats(`System.Collections.Generic.IEnumerable<System.String>`)
 Specifies the formats, which are used to parse the value set with value() method or by direct input.
 
-### Enable(System.Boolean)
+
+
+
+
+### Enable(`System.Boolean`)
 Enables or disables the picker.
 
-### Min(System.DateTime)
+
+
+
+
+### Min(`System.DateTime`)
 Sets the minimal date, which can be selected in picker.
 
-### Max(System.DateTime)
+
+
+
+
+### Max(`System.DateTime`)
 Sets the maximal date, which can be selected in picker.
 
-### Value(System.Nullable\<System.DateTime\>)
+
+
+
+
+### Value(`System.Nullable<System.DateTime>`)
 Sets the value of the picker input
 
-### Value(System.String)
+
+
+
+
+### Value(`System.String`)
 Sets the value of the picker input
+
+
+
+
+
+

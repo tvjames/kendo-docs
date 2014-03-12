@@ -6,185 +6,197 @@ publish: true
 ---
 
 # \<kendo:comboBox\>
-A JSP tag representing Kendo ComboBox.
-
+A JSP wrapper for Kendo UI [ComboBox](/kendo-ui/api/web/combobox).
 
 ## Configuration Attributes
 
-
 ### autoBind `boolean`
 
-Controls whether to bind the widget to the DataSource on initialization.
+Controls whether to bind the widget to the data source on initialization.
 
 #### Example
     <kendo:comboBox autoBind="autoBind">
     </kendo:comboBox>
 
+### cascadeFrom `java.lang.String`
 
-
-### cascadeFrom `String`
-
-Use it to set the Id of the parent DropDownList.
+Use it to set the Id of the parent ComboBox widget.
+Help topic showing how cascading functionality works
 
 #### Example
     <kendo:comboBox cascadeFrom="cascadeFrom">
     </kendo:comboBox>
 
+### cascadeFromField `java.lang.String`
 
+Defines the field to be used to filter the data source. If not defiend the parent's dataValueField option will be used.
+Help topic showing how cascading functionality works
 
-### dataTextField `String`
+#### Example
+    <kendo:comboBox cascadeFromField="cascadeFromField">
+    </kendo:comboBox>
 
-Sets the field of the data item that provides the text content of the list items.
+### dataTextField `java.lang.String`
+
+The field of the data item that provides the text content of the list items. The widget will filter the data source based on this field.
 
 #### Example
     <kendo:comboBox dataTextField="dataTextField">
     </kendo:comboBox>
 
+### dataValueField `java.lang.String`
 
-
-### dataValueField `String`
-
-Sets the field of the data item that provides the value content of the list items.
+The field of the data item that provides the value of the widget.
 
 #### Example
     <kendo:comboBox dataValueField="dataValueField">
     </kendo:comboBox>
 
-
-
 ### delay `float`
 
-Specifies the delay in ms after which the ComboBox will start filtering dataSource.
+The delay in milliseconds between a keystroke and when the widget displays the popup.
 
 #### Example
     <kendo:comboBox delay="delay">
     </kendo:comboBox>
 
-
-
 ### enable `boolean`
 
-Controls whether the ComboBox should be initially enabled.
+If set to false the widget will be disabled and will not allow user input. The widget is enabled by default and allows user input.
 
 #### Example
     <kendo:comboBox enable="enable">
     </kendo:comboBox>
 
+### filter `java.lang.String`
 
-
-### filter `String`
-
-Defines the type of filtration. If "none" the ComboBox will not filter the items.
+The filtering method used to determine the suggestions for the current value. Filtration is turned of by default.
+The supported filter values are startswith, endswith and contains.
 
 #### Example
     <kendo:comboBox filter="filter">
     </kendo:comboBox>
 
+### headerTemplate `java.lang.String`
 
+Specifies a static HTML content, which will be rendered as a header of the popup element.
+
+#### Example
+    <kendo:comboBox headerTemplate="headerTemplate">
+    </kendo:comboBox>
 
 ### height `float`
 
-Define the height of the drop-down list in pixels.
+The height of the suggestion popup in pixels. The default value is 200 pixels.
 
 #### Example
     <kendo:comboBox height="height">
     </kendo:comboBox>
 
-
-
 ### highlightFirst `boolean`
 
-Controls whether the first item will be automatically highlighted.
+If set to true the first suggestion will be automatically highlighted.
 
 #### Example
     <kendo:comboBox highlightFirst="highlightFirst">
     </kendo:comboBox>
 
+### ignoreCase `java.lang.String`
 
-
-### ignoreCase `String`
-
-Defines whether the filtration should be case sensitive.
+If set to false case-sensitive search will be performed to find suggestions. The widget performs case-insensitive searching by default.
 
 #### Example
     <kendo:comboBox ignoreCase="ignoreCase">
     </kendo:comboBox>
 
-
-
 ### index `float`
 
-Defines the initial selected item.
+The index of the initially selected item. The index is 0 based.
 
 #### Example
     <kendo:comboBox index="index">
     </kendo:comboBox>
 
-
-
 ### minLength `float`
 
-Specifies the minimum characters that should be typed before the ComboBox activates
+The minimum number of characters the user must type before a search is performed. Set to higher value than 1 if the search could match a lot of items.
 
 #### Example
     <kendo:comboBox minLength="minLength">
     </kendo:comboBox>
 
+### placeholder `java.lang.String`
 
-
-### placeholder `String`
-
-A string that appears in the textbox when the combobox has no value.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Example
     <kendo:comboBox placeholder="placeholder">
     </kendo:comboBox>
 
-
-
 ### suggest `boolean`
 
-Controls whether the ComboBox should automatically auto-type the rest of text.
+If set to true the widget will automatically use the first suggestion as its value.
 
 #### Example
     <kendo:comboBox suggest="suggest">
     </kendo:comboBox>
 
+### template `java.lang.String`
 
-
-### template `String`
-
-Template to be used for rendering the items in the list.
+The template used to render the items. By default the widget displays only the text of the data item (configured via dataTextField).
 
 #### Example
     <kendo:comboBox template="template">
     </kendo:comboBox>
 
+### text `java.lang.String`
 
-
-### text `String`
-
-Define the text of the widget, when the autoBind is set to false.
+The text of the widget used when the autoBind is set to false.
 
 #### Example
     <kendo:comboBox text="text">
     </kendo:comboBox>
 
+### value `java.lang.String`
 
-
-### value `String`
-
-Define the value of the widget
+The value of the widget.
 
 #### Example
     <kendo:comboBox value="value">
     </kendo:comboBox>
 
+### valuePrimitive `boolean`
 
+Specifies the value binding behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+
+#### Example
+    <kendo:comboBox valuePrimitive="valuePrimitive">
+    </kendo:comboBox>
+
+
+##  Configuration JSP Tags
+
+### kendo:comboBox-animation
+
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
+
+More documentation is available at [kendo:comboBox-animation](/kendo-ui/api/wrappers/jsp/combobox/animation).
+
+#### Example
+
+    <kendo:comboBox>
+        <kendo:comboBox-animation></kendo:comboBox-animation>
+    </kendo:comboBox>
+
+
+## Event Attributes
 
 ### change `String`
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [change](/kendo-ui/api/web/combobox#events-change) event documentation.
 
 #### Example
     <kendo:comboBox change="handle_change">
@@ -195,11 +207,12 @@ Fires when the value has been changed.
         }
     </script>
 
-
-
 ### close `String`
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [close](/kendo-ui/api/web/combobox#events-close) event documentation.
 
 #### Example
     <kendo:comboBox close="handle_close">
@@ -210,11 +223,12 @@ Fires when the drop-down list is closed
         }
     </script>
 
-
-
 ### dataBound `String`
 
-Fires when the ComboBox has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [dataBound](/kendo-ui/api/web/combobox#events-dataBound) event documentation.
 
 #### Example
     <kendo:comboBox dataBound="handle_dataBound">
@@ -225,11 +239,12 @@ Fires when the ComboBox has received data from the data source.
         }
     </script>
 
-
-
 ### open `String`
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [open](/kendo-ui/api/web/combobox#events-open) event documentation.
 
 #### Example
     <kendo:comboBox open="handle_open">
@@ -240,11 +255,12 @@ Fires when the drop-down list is opened
         }
     </script>
 
-
-
 ### select `String`
 
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
+
+
+For additional information check the [select](/kendo-ui/api/web/combobox#events-select) event documentation.
 
 #### Example
     <kendo:comboBox select="handle_select">
@@ -255,91 +271,30 @@ Triggered when a Li element is selected.
         }
     </script>
 
+### cascade `String`
+
+Fired when the value of the widget is changed via API or user interaction.
 
 
-### Event Attributes
-
-
-### change `String`
-
-Fires when the value has been changed.
+For additional information check the [cascade](/kendo-ui/api/web/combobox#events-cascade) event documentation.
 
 #### Example
-    <kendo:comboBox change="handle_change">
+    <kendo:comboBox cascade="handle_cascade">
     </kendo:comboBox>
     <script>
-        function handle_change(e) {
-            // Code to handle the change event.
+        function handle_cascade(e) {
+            // Code to handle the cascade event.
         }
     </script>
-
-
-
-### close `String`
-
-Fires when the drop-down list is closed
-
-#### Example
-    <kendo:comboBox close="handle_close">
-    </kendo:comboBox>
-    <script>
-        function handle_close(e) {
-            // Code to handle the close event.
-        }
-    </script>
-
-
-
-### dataBound `String`
-
-Fires when the ComboBox has received data from the data source.
-
-#### Example
-    <kendo:comboBox dataBound="handle_dataBound">
-    </kendo:comboBox>
-    <script>
-        function handle_dataBound(e) {
-            // Code to handle the dataBound event.
-        }
-    </script>
-
-
-
-### open `String`
-
-Fires when the drop-down list is opened
-
-#### Example
-    <kendo:comboBox open="handle_open">
-    </kendo:comboBox>
-    <script>
-        function handle_open(e) {
-            // Code to handle the open event.
-        }
-    </script>
-
-
-
-### select `String`
-
-Triggered when a Li element is selected.
-
-#### Example
-    <kendo:comboBox select="handle_select">
-    </kendo:comboBox>
-    <script>
-        function handle_select(e) {
-            // Code to handle the select event.
-        }
-    </script>
-
 
 ## Event Tags
- 
 
 ### kendo:comboBox-change
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [change](/kendo-ui/api/web/combobox#events-change) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -352,11 +307,12 @@ Fires when the value has been changed.
         </kendo:comboBox-change>
     </kendo:comboBox>
 
- 
-
 ### kendo:comboBox-close
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [close](/kendo-ui/api/web/combobox#events-close) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -369,11 +325,12 @@ Fires when the drop-down list is closed
         </kendo:comboBox-close>
     </kendo:comboBox>
 
- 
-
 ### kendo:comboBox-dataBound
 
-Fires when the ComboBox has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [dataBound](/kendo-ui/api/web/combobox#events-dataBound) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -386,11 +343,12 @@ Fires when the ComboBox has received data from the data source.
         </kendo:comboBox-dataBound>
     </kendo:comboBox>
 
- 
-
 ### kendo:comboBox-open
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [open](/kendo-ui/api/web/combobox#events-open) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -403,11 +361,12 @@ Fires when the drop-down list is opened
         </kendo:comboBox-open>
     </kendo:comboBox>
 
- 
-
 ### kendo:comboBox-select
 
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
+
+
+For additional information check the [select](/kendo-ui/api/web/combobox#events-select) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -420,19 +379,21 @@ Triggered when a Li element is selected.
         </kendo:comboBox-select>
     </kendo:comboBox>
 
- 
+### kendo:comboBox-cascade
 
-## Child JSP Tags
+Fired when the value of the widget is changed via API or user interaction.
 
-### kendo:comboBox-animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn off the animation.
-
-More documentation is available at [kendo:comboBox-animation](/api/wrappers/jsp/combobox/animation).
+For additional information check the [cascade](/kendo-ui/api/web/combobox#events-cascade) event documentation.
 
 #### Example
-
     <kendo:comboBox>
-        <kendo:comboBox-animation></kendo:comboBox-animation>
+        <kendo:comboBox-cascade>
+            <script>
+                function(e) {
+                    // Code to handle the cascade event.
+                }
+            </script>
+        </kendo:comboBox-cascade>
     </kendo:comboBox>
-      
+

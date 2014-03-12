@@ -6,34 +6,30 @@ publish: true
 ---
 
 # \<kendo:radialGauge-pointer-cap\>
-A JSP tag representing Kendo Cap.
+
+The cap configuration options.
 
 #### Example
     <kendo:radialGauge-pointer>
         <kendo:radialGauge-pointer-cap></kendo:radialGauge-pointer-cap>
     </kendo:radialGauge-pointer>
 
-
 ## Configuration Attributes
 
-
-### color `String`
+### color `java.lang.String`
 
 The color of the cap.
 Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
-    <kendo:radialGauge color="color">
-    </kendo:radialGauge>
-
-
+    <kendo:radialGauge-pointer-cap color="color">
+    </kendo:radialGauge-pointer-cap>
 
 ### size `float`
 
 The size of the cap in percents. (from 0 to 1)
 
 #### Example
-    <kendo:radialGauge size="size">
-    </kendo:radialGauge>
-
+    <kendo:radialGauge-pointer-cap size="size">
+    </kendo:radialGauge-pointer-cap>
 

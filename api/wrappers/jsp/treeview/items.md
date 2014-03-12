@@ -6,25 +6,28 @@ publish: true
 ---
 
 # \<kendo:treeView-items\>
-A JSP tag representing Kendo Items.
+
+Contains the items of the treeview widget
 
 #### Example
     <kendo:treeView>
         <kendo:treeView-items></kendo:treeView-items>
     </kendo:treeView>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:treeView-item
 
-Contains items of TreeView
+Contains the items of the treeview widget
 
-More documentation is available at [kendo:treeView-item](/api/wrappers/jsp/treeview/item).
+More documentation is available at [kendo:treeView-item](/kendo-ui/api/wrappers/jsp/treeview/item).
 
 #### Example
 
     <kendo:treeView-items>
         <kendo:treeView-item></kendo:treeView-item>
     </kendo:treeView-items>
- 
+

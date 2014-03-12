@@ -5,44 +5,61 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.GridScrollSettingsBuilder
-
 Defines the fluent interface for configuring Scrollable
+
+
 
 ## Methods
 
-### Enabled(System.Boolean)
+### Enabled(`System.Boolean`)
 Enables or disables scrolling.
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Scrolling(scrolling => scrolling.Enabled((bool)ViewData["enableScrolling"]))
-        %>
 
-### Height(System.Int32)
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Scrollable(s => s.Enabled((bool)ViewData["enableScrolling"]))
+    %>
+
+
+### Height(`System.Int32`)
 Sets the height of the scrollable area in pixels.
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Scrolling(scrolling => scrolling.Height(400))
-        %>
 
 #### Parameters
 
 ##### pixelHeight `System.Int32`
 The height in pixels.
 
-### Height(System.String)
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Scrollable(s => s.Height(400))
+    %>
+
+
+### Height(`System.String`)
 Sets the height of the scrollable.
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .Name("Grid")
-        .Scrolling(scrolling => scrolling.Height("20em"))
-        %>
 
 #### Parameters
 
 ##### value `System.String`
 The height in pixels.
+
+
+
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Scrollable(s => s.Height("20em")) // use "auto" to remove the default height and make the Grid expand automatically
+    %>
+
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Contents>
+    <Section Title="API Reference" URL="api" />
+    <Section Title="Getting Started" URL="getting-started" />
+    <Section Title="How Do I?" URL="howto" />
+    <Section Title="Tutorials" URL="tutorials" />
+</Contents>

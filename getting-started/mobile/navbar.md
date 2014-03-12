@@ -1,6 +1,9 @@
 ---
 title: NavBar
+meta_title: User Guide for Kendo UI Mobile NavBar widget
+meta_description: Step-by-step instructions how to use Mobile NavBar widget, align the widgets inside the NavBar and customize Mobile NavBar appearance.
 slug: gs-mobile-navbar
+relatedDocs: api-mobile-navbar
 tags: getting-started,mobile
 publish: true
 ---

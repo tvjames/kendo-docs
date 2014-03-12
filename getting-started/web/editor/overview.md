@@ -1,7 +1,11 @@
 ---
-title: Editor Overview
+title: Overview
+meta_title: Overview of Editor UI widget | Kendo UI Documentation
+meta_description: The documentation guide will help you initialize Kendo web editor and proceed with its configuration.
 slug: gs-web-editor-overview
+relatedDocs: api-web-editor
 tags: getting-started,web
+ordinal: 1
 publish: true
 ---
 
@@ -23,7 +27,7 @@ The Editor allows users to create rich text content by means of a WYSIWYG interf
 
 ## Configuring the Editor
 
-The editor tools can be configured through the [`tools` configuration option](/api/web/editor#tools).
+The editor tools can be configured through the [`tools` configuration option](/kendo-ui/api/web/editor#tools).
 
 ### Specifying a set of Editor tools
 
@@ -60,5 +64,29 @@ The Editor functionality can be extended through custom tools, defined in the `t
            ]
        });
 
-The custom buttons get a **k-toolName** CSS class to allow styling. (where `toolName` is the name specified in the custom tool configuration)
+The custom buttons get a **k-toolName** CSS class to allow styling (where `toolName` is the name specified in the custom tool configuration). **Please note that "undo" and "redo" are reserved tool names.**
 
+## Sizing
+
+Until version **2012.3.1114 (Q3 2012)** the Editor assumed the pixel offset width of the `textarea` from which it was created. From this moment on, the widget behaves in the following way:
+
+* If explicit width or height is set to the `textarea` via inline style, the Editor will apply the same
+* Otherwise, the Editor will be 100% wide and will apply its default height of 250px
+
+If the `textarea` has width and height applied via external CSS styles, a similar approach should be used for the Editor, e.g. by using its `k-editor` CSS class.
+
+Textarea `cols` and `rows` attributes are required and they also can incluence the dimensions of a `textarea` element, however, these attributes are not applied in a consistent manner by browsers,
+so the Editor ignores them when determining its size.
+
+## Making the Editor readonly
+
+The Editor can be made temporarily readonly by using the following approach:
+
+    var editor = $("#editor").data("kendoEditor"),
+        editorBody = $(editor.body);
+     
+    // make readonly
+    editorBody.add("td", editorBody).removeAttr("contenteditable");
+     
+    // make editable
+    editorBody.add("td", editorBody).attr("contenteditable", true);

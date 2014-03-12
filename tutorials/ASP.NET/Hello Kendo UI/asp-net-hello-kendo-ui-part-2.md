@@ -1,5 +1,7 @@
 ---
 title: Part 5 - Hello Kendo UI  - Grid CRUD
+meta_title: Second tutorial for HTML5 development with ASP.NET - Crud Operations
+meta_description: Learn how to enable CRUD operations in Kendo UI Grid widget, handle editing the grid and failed requests.
 slug: tutorial-html5-development-with-asp-net-part-5-hello-kendo-ui
 tags: Tutorial
 publish: true
@@ -11,6 +13,7 @@ to the browser.
 
 ## Screencast
 
+<iframe height="360" src="http://www.youtube.com/embed/BRv7Gvf1w6A?rel=0" frameborder="0" width="640"></iframe>
 
 ## Written Content
 
@@ -507,12 +510,12 @@ code for this module [**here**][3].
    [3]: https://github.com/telerik/html5-dev-for-aspnet-devs/tree/master
 /hello-kendo-ui-part-2
 
-   [4]: http://demos.kendoui.com/web/grid/editing-popup.html
+   [4]: http://demos.telerik.com/kendo-ui/web/grid/editing-popup.html
 
-   [5]: http://demos.kendoui.com/web/grid/editing-inline.html
+   [5]: http://demos.telerik.com/kendo-ui/web/grid/editing-inline.html
 
-   [6]: http://demos.kendoui.com/web/grid/editing-custom.html
+   [6]: http://demos.telerik.com/kendo-ui/web/grid/editing-custom.html
 
-   [9]: http://docs.kendoui.com/api/framework/model
+   [9]: http:///api/framework/model
 
-   [10]: http://demos.kendoui.com/web/datepicker
+   [10]: http://demos.telerik.com/kendo-ui/web/datepicker

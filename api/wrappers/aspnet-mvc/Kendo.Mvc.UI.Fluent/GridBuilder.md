@@ -5,571 +5,1501 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.GridBuilder
+The fluent API for configuring Kendo UI Grid for ASP.NET MVC.
 
-Defines the fluent interface for configuring the !:Grid{T} component.
+
 
 ## Methods
 
-### DataSource(System.Action\<Kendo.Mvc.UI.Fluent.DataSourceBuilder\<T\>\>)
-Configures the grid DataSource
+### DataSource(`System.Action<Kendo.Mvc.UI.Fluent.DataSourceBuilder<T>>`)
+Sets the data source configuration of the grid.
 
-### DetailTemplate(System.Action\<T\>)
-Sets the detail template of the grid
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.DataSourceBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/DataSourceBuilder)<T>>
+The lambda which configures the data source
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+
+### DetailTemplate(`System.Action<T>`)
+Sets the server-side detail template of the grid in ASPX views.
+
 
 #### Parameters
 
 ##### codeBlockTemplate `System.Action<T>`
-The template
+The template as a code block
 
-### DetailTemplate(System.Func\<T,System.Object\>)
-Sets the detail template of the grid using Razor syntax
+
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <% Html.Kendo().Grid(Model)
+        .Name("grid")
+        .DetailTemplate(product => {
+            %>
+            Product Details:
+            <div>Product Name: <%: product.ProductName %></div>
+            <div>Units In Stock: <%: product.UnitsInStock %></div>
+            <%
+        })
+        .Render();
+    %>
+
+
+### DetailTemplate(`System.Func<T,System.Object>`)
+Sets the server-side detail template of the grid in Razor views.
+
 
 #### Parameters
 
 ##### inlineTemplate `System.Func<T,System.Object>`
 The template
 
-### RowTemplate(System.Action\<T,Kendo.Mvc.UI.Grid\<T\>\>)
-Sets the row template of the grid
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .RowTemplate(o =>
-        {
-        %>
-        <%= o.Name %>
-        <%= o.Age %>
-        <%
-        })
-        %>
 
-#### Parameters
 
-##### codeBlockTemplate System.Action\<T,[Kendo.Mvc.UI.Grid](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/Grid)\<T\>\>
-The template
-
-### RowTemplate(System.Action\<T\>)
-Sets the row template of the grid
-
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .RowTemplate(o =>
-        {
-        %>
-        <%= o.Name %>
-        <%= o.Age %>
-        <%
-        })
-        %>
-
-#### Parameters
-
-##### codeBlockTemplate `System.Action<T>`
-The template
-
-### RowTemplate(System.Func\<T,System.Object\>)
-Sets the row template of the grid using Razor syntax
-
-#### Example
-    <%= Html.Kendo().Grid(Model)
-        .RowTemplate(@<text>
-        @item.Name
-        @item.Age
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .DetailTemplate(@<text>
+            Product Details:
+            <div>Product Name: @product.ProductName</div>
+            <div>Units In Stock: @product.UnitsInStock</div>
         </text>)
-        %>
+    )
+
+
+### ClientDetailTemplateId(`System.String`)
+Sets the id of the script element which contains the client-side detail template of the grid.
+
+
+#### Parameters
+
+##### id `System.String`
+The id
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientDetailTemplateId("detail-template")
+    )
+    <script id="detail-template" type="text/x-kendo-template">
+    Product Details:
+    <div>Product Name: #: ProductName # </div>
+    <div>Units In Stock: #: UnitsInStock #</div>
+    </script>
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientDetailTemplateId("detail-template")
+    %>
+    <script id="detail-template" type="text/x-kendo-template">
+    Product Details:
+    <div>Product Name: #: ProductName # </div>
+    <div>Units In Stock: #: UnitsInStock #</div>
+    </script>
+
+
+### RowTemplate(`System.Action<T,Kendo.Mvc.UI.Grid<T>>`)
+Sets the server-side row template of the grid in ASPX views.
+
+
+#### Parameters
+
+##### codeBlockTemplate System.Action<T,[Kendo.Mvc.UI.Grid](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/Grid)<T>>
+The template as a code block
+
+
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%: Html.Kendo().Grid(Model)
+        .Name("grid")
+        .RowTemplate((product, grid) =>
+        {
+            %>
+            <div>Product Name: <%: product.ProductName %></div>
+            <div>Units In Stock: <%: product.UnitsInStock %></div>
+            <%
+        })
+    %>
+
+
+### RowTemplate(`System.Action<T>`)
+Sets the server-side row template of the grid in ASPX views.
+
+
+#### Parameters
+
+##### codeBlockTemplate `System.Action<T>`
+The template as a code block
+
+
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%: Html.Kendo().Grid(Model)
+        .Name("grid")
+        .RowTemplate(product =>
+        {
+            %>
+            <div>Product Name: <%: product.ProductName %></div>
+            <div>Units In Stock: <%: product.UnitsInStock %></div>
+            <%
+        })
+    %>
+
+
+### RowTemplate(`System.Func<T,System.Object>`)
+Sets the server-side row template of the grid in Razor views.
+
 
 #### Parameters
 
 ##### inlineTemplate `System.Func<T,System.Object>`
 The template
 
-### ClientRowTemplate(System.String)
-Sets the client row template
+
+
+
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .RowTemplate(@<text>
+            <div>Product Name: @product.ProductName</div>
+            <div>Units In Stock: @product.UnitsInStock</div>
+        </text>)
+    )
+
+
+### RowTemplate(`System.Func<Kendo.Mvc.UI.Grid<T>,System.Func<T,System.Object>>`)
+Sets the server-side row template of the grid in Razor views.
+
+
+#### Parameters
+
+##### inlineTemplate System.Func<[Kendo.Mvc.UI.Grid](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/Grid)<T>,System.Func<T,System.Object>>
+The template
+
+
+
+
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .RowTemplate(grid => @<text>
+                <div>Product Name: @product.ProductName</div>
+                <div>Units In Stock: @product.UnitsInStock</div>
+            </text>)
+        )
+
+
+### ClientRowTemplate(`System.String`)
+Sets the client-side row template of the grid. The client-side row template must contain a table row element (tr).
+
 
 #### Parameters
 
 ##### template `System.String`
 The template
 
-### ClientRowTemplate(System.Func\<Kendo.Mvc.UI.Grid\<T\>,System.String\>)
-Sets the client row template
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientRowTemplate(
+            "<tr>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientRowTemplate(
+            "<tr>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    %>
+
+
+### ClientAltRowTemplate(`System.String`)
+Sets the client-side alt row template of the grid. The client-side alt row template must contain a table row element (tr).
+
 
 #### Parameters
 
-##### template System.Func\<[Kendo.Mvc.UI.Grid](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/Grid)\<T\>,System.String\>
+##### template `System.String`
 The template
 
-### AutoBind(System.Boolean)
-Specifies if the Grid should be automatically bound on initial load.
-            This is only possible if AJAX binding is used, and widget is not initialy populated on the server.
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientAltRowTemplate(
+            "<tr class='k-alt'>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientAltRowTemplate(
+            "<tr class='k-alt'>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    %>
+
+
+### ClientRowTemplate(`System.Func<Kendo.Mvc.UI.Grid<T>,System.String>`)
+Sets the client-side row template of the grid. The client-side row template must contain a table row element (tr).
+
+
+#### Parameters
+
+##### template System.Func<[Kendo.Mvc.UI.Grid](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/Grid)<T>,System.String>
+The template
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientRowTemplate(grid =>
+            "<tr>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientRowTemplate(grid =>
+            "<tr>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    %>
+
+
+### AutoBind(`System.Boolean`)
+If set to false the widget will not bind to the data source during initialization; the default value is true.
+            Setting AutoBind to false is supported in ajax-bound mode.
+
 
 #### Parameters
 
 ##### value `System.Boolean`
-If true Grid will be automatically data bound, otherwise false
+If true the grid will be automatically data bound, otherwise false
 
-### Resizable(System.Action\<Kendo.Mvc.UI.Fluent.GridResizingSettingsBuilder\>)
-Configures the grid resizing settings
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .AutoBind(false)
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .AutoBind(false)
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+
+### Resizable(`System.Action<Kendo.Mvc.UI.Fluent.GridResizingSettingsBuilder>`)
+Sets the resizing configuration of the grid.
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridResizingSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridResizingSettingsBuilder)>
+The lambda which configures the resizing
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
         .Name("Grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
         .Resizable(resizing => resizing.Columns(true))
-        %>
+    )
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Product>()
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
+    )
+    .Resizable(resizing => resizing.Columns(true))
+    %>
+
+
+### ColumnResizeHandleWidth(`System.Int32`)
+Sets the width of the column resize handle. Apply a larger value for easier grasping.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridResizingSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridResizingSettingsBuilder)\>
-Resizing settings configurator method
+##### width `System.Int32`
+width in pixels
 
-### Reorderable(System.Action\<Kendo.Mvc.UI.Fluent.GridReorderingSettingsBuilder\>)
-Configures the grid reordering settings
 
-#### Example
-    <%= Html.Kendo().Grid(Model)
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
         .Name("Grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ColumnResizeHandleWidth(8)
+    )
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Product>()
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
+    )
+    .ColumnResizeHandleWidth(8)
+    %>
+
+
+### Reorderable(`System.Action<Kendo.Mvc.UI.Fluent.GridReorderingSettingsBuilder>`)
+Sets the reordering configuration of the grid.
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridReorderingSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridReorderingSettingsBuilder)>
+The lambda which configures the reordering
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("Grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
         .Reorderable(reordering => reordering.Columns(true))
-        %>
+    )
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Product>()
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
+    )
+    .Reorderable(reordering => reordering.Columns(true))
+    %>
+
+
+### Editable(`System.Action<Kendo.Mvc.UI.Fluent.GridEditingSettingsBuilder<T>>`)
+Sets the editing configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridReorderingSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridReorderingSettingsBuilder)\>
-Resizing settings configurator method
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridEditingSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridEditingSettingsBuilder)<T>>
+The lambda which configures the editing
 
-### Editable(System.Action\<Kendo.Mvc.UI.Fluent.GridEditingSettingsBuilder\<T\>\>)
-Configures the grid editing settings.
 
-#### Example
-    <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Editable(settings => settings.Enabled(true))
-        %>
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("Grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .Editable(editing => editing.Mode(GridEditMode.PopUp))
+    )
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Product>()
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
+    )
+    .Editable(editing => editing.Mode(GridEditMode.PopUp))
+    %>
+
+
+### Editable
+Enables grid editing.
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("Grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .Editable()
+    )
+
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Product>()
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
+    )
+    .Editable()
+    %>
+
+
+### ToolBar(`System.Action<Kendo.Mvc.UI.Fluent.GridToolBarCommandFactory<T>>`)
+Sets the toolbar configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridEditingSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridEditingSettingsBuilder)\<T\>\>
-Configurator for the edit settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridToolBarCommandFactory](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridToolBarCommandFactory)<T>>
+The lambda which configures the toolbar
 
-### ToolBar(System.Action\<Kendo.Mvc.UI.Fluent.GridToolBarCommandFactory\<T\>\>)
-Configures the toolbar of the grid.
 
-#### Example
-    <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("Grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
         .ToolBar(commands => commands.Create())
-        %>
+    )
 
-#### Parameters
+#### Example (ASPX)
+    <%= Html.Kendo().Grid<Product>()
+    .Name("Grid")
+    .DataSource(dataSource =>
+        // configure the data source
+        dataSource
+        .Ajax()
+        .Read(read => read.Action("Products_Read", "Home"))
+    )
+    .ToolBar(commands => commands.Create())
+    %>
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridToolBarCommandFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridToolBarCommandFactory)\<T\>\>
-ToolBar configurator.
 
-### BindTo(System.Collections.Generic.IEnumerable\<T\>)
+### BindTo(`System.Collections.Generic.IEnumerable<T>`)
 Binds the grid to a list of objects
 
-#### Example
-    <%= Html.Kendo().Grid<Order>()
-        .Name("Orders")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"]);
-        %>
 
 #### Parameters
 
 ##### dataSource `System.Collections.Generic.IEnumerable<T>`
 The data source.
 
-### RowAction(System.Action\<Kendo.Mvc.UI.GridRow\<T\>\>)
-Callback for each row.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .RowAction(row =>
-        {
-        // "DataItem" is the Order object to which the current row is bound to
-        if (row.DataItem.Freight > 10)
-        {
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    &lt;%: Html.Kendo().Grid<Product>()
+    .Name("grid")
+    .BindTo(Model)
+    %>
+
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .BindTo(Model)
+    )
+
+
+### BindTo(`System.Collections.IEnumerable`)
+Binds the grid to a list of objects
+
+
+#### Parameters
+
+##### dataSource `System.Collections.IEnumerable`
+The data source.
+
+
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
+    &lt;%: Html.Kendo().Grid<Product>()
+    .Name("grid")
+    .BindTo(Model)
+    %>
+
+#### Example (Razor)
+    @model IEnumerable;
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .BindTo(Model)
+    )
+
+
+### RowAction(`System.Action<Kendo.Mvc.UI.GridRow<T>>`)
+Sets a lambda which is executed for every table row rendered server-side by the grid.
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.GridRow](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/GridRow)<T>>
+The lambda which will be executed for every table row
+
+
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
+    &lt;%: Html.Kendo().Grid(Model)
+    .Name("grid")
+    .RowAction(row =>
+    {
+        // "DataItem" is the Product instance to which the current row is bound
+        if (row.DataItem.UnitsInStock > 10)
+    {
         //Set the background of the entire row
         row.HtmlAttributes["style"] = "background:red;";
         }
         });
-        %>
+    %>
+
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .RowAction(row =>
+        {
+            // "DataItem" is the Product instance to which the current row is bound
+            if (row.DataItem.UnitsInStock > 10)
+        {
+            //Set the background of the entire row
+            row.HtmlAttributes["style"] = "background:red;";
+            }
+            });
+        )
+
+
+### CellAction(`System.Action<Kendo.Mvc.UI.GridCell<T>>`)
+Sets a lambda which is executed for every table cell rendered server-side by the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.GridRow](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/GridRow)\<T\>\>
-Action, which will be executed for each row.
-            You can format the entire row
+##### configurator System.Action<[Kendo.Mvc.UI.GridCell](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/GridCell)<T>>
+The lambda which will be executed for every table cell
 
-### CellAction(System.Action\<Kendo.Mvc.UI.GridCell\<T\>\>)
-Callback for each cell.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .CellAction(cell =>
-        {
-        if (cell.Column.Name == "Freight")
-        {
-        if (cell.DataItem.Freight > 10)
-        {
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable>" %>
+    &lt;%: Html.Kendo().Grid(Model)
+    .Name("grid")
+    .CellAction(cell =>
+    {
+        if (cell.Column.Name == "UnitsInStock")
+    {
+        if (cell.DataItem.UnitsInStock > 10)
+    {
         //Set the background of this cell only
         cell.HtmlAttributes["style"] = "background:red;";
         }
         }
-        });
-        %>
+    })
+    %>
 
-#### Parameters
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .CellAction(cell =>
+        {
+            if (cell.Column.Name == "UnitsInStock")
+        {
+            if (cell.DataItem.UnitsInStock > 10)
+        {
+            //Set the background of this cell only
+            cell.HtmlAttributes["style"] = "background:red;";
+            }
+            }
+        })
+    )
 
-##### configurator System.Action\<[Kendo.Mvc.UI.GridCell](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/GridCell)\<T\>\>
-Action, which will be executed for each cell.
-            You can format a concrete cell.
 
-### EnableCustomBinding(System.Boolean)
-Enables or disables the custom binding of the grid.
+### EnableCustomBinding(`System.Boolean`)
+If set to true the grid will perform custom binding.
+
 
 #### Parameters
 
 ##### value `System.Boolean`
 If true enables custom binding.
 
-### Columns(System.Action\<Kendo.Mvc.UI.Fluent.GridColumnFactory\<T\>\>)
-Defines the columns of the grid.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"]);
-        %>
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .EnableCustomBinding(true)
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .EnableCustomBinding(true)
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+
+### Columns(`System.Action<Kendo.Mvc.UI.Fluent.GridColumnFactory<T>>`)
+Sets the column configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridColumnFactory](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridColumnFactory)\<T\>\>
-The add action.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridColumnFactory](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridColumnFactory)<T>>
+The lambda which configures columns
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(product => product.ProductName).Title("Product Name");
+            columns.Command(command => command.Destroy());
+        })
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(product => product.ProductName).Title("Product Name");
+            columns.Command(command => command.Destroy());
+        })
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Destroy(destroy => destroy.Action("Products_Destroy", "Home"))
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
 
 ### Sortable
-Allows sorting of the columns.
+Enables grid column sorting.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Sortable();
-        %>
 
-### Sortable(System.Action\<Kendo.Mvc.UI.Fluent.GridSortSettingsBuilder\<T\>\>)
-Allows sorting of the columns.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn)
-        %>
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Sortable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Sortable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Sortable(`System.Action<Kendo.Mvc.UI.Fluent.GridSortSettingsBuilder<T>>`)
+Sets the sorting configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridSortSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridSortSettingsBuilder)\<T\>\>
-Use builder to define sort settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridSortSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridSortSettingsBuilder)<T>>
+The lambda which configures the sorting
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Sortable(sorting => sorting.SortMode(GridSortMode.MultipleColumn))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
 
 ### Selectable
-Enables row selection.
+Enables grid row selection.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
         .Selectable()
-        %>
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
 
-### Selectable(System.Action\<Kendo.Mvc.UI.Fluent.GridSelectionSettingsBuilder\>)
-Enables row selection.
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Selectable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Selectable(selection => selection.Enabled(true))
-        %>
+
+### Selectable(`System.Action<Kendo.Mvc.UI.Fluent.GridSelectionSettingsBuilder>`)
+Sets the selection configuration of the grid.
+
 
 #### Parameters
 
-##### selectionAction System.Action\<[Kendo.Mvc.UI.Fluent.GridSelectionSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridSelectionSettingsBuilder)\>
-Use builder to define the selection settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridSelectionSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridSelectionSettingsBuilder)>
+The lambda which configures the selection
 
-### PrefixUrlParameters(System.Boolean)
-Put grid name as a prefix.
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Selectable(selection => selection.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Selectable(selection => selection.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### PrefixUrlParameters(`System.Boolean`)
+If set to true the grid will prefix the query string parameters with its name during server binding.
+            By default the grid will prefix the query string parameters.
+
+
+
+
+#### Example (ASPX)
+    <%@Page Inherits="System.Web.Mvc.ViewPage<IEnumerable<Product>>" %>
+    <%: Html.Kendo().Grid(Model)
+        .Name("grid")
+        .PrefixUrlParameters(false)
+    %>
+
+#### Example (Razor)
+    @model IEnumerable<Product>
+    @(Html.Kendo().Grid(Model)
+        .Name("grid")
+        .PrefixUrlParameters(false)
+    )
+
 
 ### Pageable
-Allows paging of the data.
+Enables grid paging.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Pageable();
-        %>
 
-### Pageable(System.Action\<Kendo.Mvc.UI.Fluent.PageableBuilder\>)
-Allows paging of the data.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Pageable(paging =>
-        paging.Refresh(true)
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Pageable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
         )
-        %>
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Pageable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Pageable(`System.Action<Kendo.Mvc.UI.Fluent.PageableBuilder>`)
+Sets the paging configuration of the grid.
+
 
 #### Parameters
 
-##### pagerAction System.Action\<[Kendo.Mvc.UI.Fluent.PageableBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PageableBuilder)\>
-Use builder to define paging settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.PageableBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/PageableBuilder)>
+The lambda which configures the paging
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Pageable(paging =>
+            paging.Refresh(true)
+        )
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Pageable(paging =>
+            paging.Refresh(true)
+        )
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
 
 ### Filterable
-Allows filtering of the columns.
+Enables grid filtering.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Filterable();
-        %>
 
-### Filterable(System.Action\<Kendo.Mvc.UI.Fluent.GridFilterableSettingsBuilder\>)
-Allows filtering of the columns.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Filterable(filtering => filtering.Enabled(true);
-        %>
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Filterable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Filterable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Filterable(`System.Action<Kendo.Mvc.UI.Fluent.GridFilterableSettingsBuilder>`)
+Sets the filtering configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridFilterableSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridFilterableSettingsBuilder)\>
-Use builder to define filtering settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridFilterableSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridFilterableSettingsBuilder)>
+The lambda which configures the filtering
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Filterable(filtering => filtering.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Filterable(filtering => filtering.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
 
 ### ColumnMenu
-Enables/disables header column menu.
+Enables the grid column menu.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .ColumnMenu();
-        %>
 
-### ColumnMenu(System.Action\<Kendo.Mvc.UI.Fluent.GridColumnMenuSettingsBuilder\>)
-Enables/disables header column menu.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .ColumnMenu(menu => menu.Enabled(true);
-        %>
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ColumnMenu()
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ColumnMenu()
+    )
+
+
+### ColumnMenu(`System.Action<Kendo.Mvc.UI.Fluent.GridColumnMenuSettingsBuilder>`)
+Sets the column menu configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridColumnMenuSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridColumnMenuSettingsBuilder)\>
-Use builder to define column menu settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridColumnMenuSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridColumnMenuSettingsBuilder)>
+The lambda which configures the column menu
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ColumnMenu(columnMenu => columnMenu.Enabled(true))
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ColumnMenu(columnMenu => columnMenu.Enabled(true))
+    )
+
 
 ### Scrollable
-Show scrollbar if there are many items.
+Enables grid scrolling.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Scrollable();
-        %>
 
-### Scrollable(System.Action\<Kendo.Mvc.UI.Fluent.GridScrollSettingsBuilder\>)
-Show scrollbar if there are many items.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Scrollable(scrolling => scrolling.Enabled(true);
-        %>
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Scrollable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Scrollable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Scrollable(`System.Action<Kendo.Mvc.UI.Fluent.GridScrollSettingsBuilder>`)
+Sets the scrolling configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridScrollSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridScrollSettingsBuilder)\>
-Use builder to define scrolling settings.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridScrollSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridScrollSettingsBuilder)>
+The lambda which configures the scrolling
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Scrollable(scrolling => scrolling.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Scrollable(scrolling => scrolling.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
 
 ### Navigatable
-Enables keyboard navigation.
+Enables grid keyboard navigation.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Navigatable();
-        %>
 
-### Navigatable(System.Action\<Kendo.Mvc.UI.Fluent.GridNavigatableSettingsBuilder\>)
-Enables keyboard navigation.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Navigatable(navigation => navigation.Enabled(true));
-        %>
 
-#### Parameters
-
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridNavigatableSettingsBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridNavigatableSettingsBuilder)\>
-Use builder to define keyboard navigation settings.
-
-### Events(System.Action\<Kendo.Mvc.UI.Fluent.GridEventBuilder\>)
-Configures the client-side events.
-
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Events(events => events
-        .DataBinding("onDataBinding")
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Navigatable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
         )
-        %>
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Navigatable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Navigatable(`System.Action<Kendo.Mvc.UI.Fluent.GridNavigatableSettingsBuilder>`)
+Sets the keyboard navigation configuration of the grid.
+
 
 #### Parameters
 
-##### configurator System.Action\<[Kendo.Mvc.UI.Fluent.GridEventBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridEventBuilder)\>
-The client events action.
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridNavigatableSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridNavigatableSettingsBuilder)>
+The lambda which configures the keyboard navigation
 
-### Groupable(System.Action\<Kendo.Mvc.UI.Fluent.GridGroupingSettingsBuilder\>)
-Use it to configure grouping.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Groupable(grouping => grouping.Enabled(true);
-        %>
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Navigatable(navigation => navigation.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Navigatable(navigation => navigation.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Events(`System.Action<Kendo.Mvc.UI.Fluent.GridEventBuilder>`)
+Sets the event configuration of the grid.
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridEventBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridEventBuilder)>
+The lambda which configures the events
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .Events(events => events.DataBound("grid_dataBound"))
+    %>
+    <script>
+    function grid_dataBound(e) {
+    // handle the dataBound event
+    }
+    </script>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .Events(events => events.DataBound("grid_dataBound"))
+    )
+    <script>
+    function grid_dataBound(e) {
+    // handle the dataBound event
+    }
+    </script>
+
+
+### Groupable(`System.Action<Kendo.Mvc.UI.Fluent.GridGroupingSettingsBuilder>`)
+Sets the grouping configuration of the grid.
+
+
+#### Parameters
+
+##### configurator System.Action<[Kendo.Mvc.UI.Fluent.GridGroupingSettingsBuilder](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridGroupingSettingsBuilder)>
+The lambda which configures the grouping
+
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Groupable(grouping => grouping.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Groupable(grouping => grouping.Enabled(true))
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
 
 ### Groupable
-Allows grouping.
+Enables grid grouping.
 
-#### Example
-    <%= Html.Kendo().Grid()
-        .Name("Grid")
-        .Columns(columns=>
-        {
-        columns.Add(c => c.OrderID).Width(100);
-        columns.Add(c => c.OrderDate).Width(200).Format("{0:dd/MM/yyyy}");
-        columns.Add(c => c.ShipAddress);
-        columns.Add(c => c.ShipCity).Width(200);
-        })
-        .BindTo((IEnumerable<Order>)ViewData["Orders"])
-        .Groupable();
-        %>
+
+
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Groupable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    %>
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .Groupable()
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+    )
+
+
+### Mobile
+Enables the adaptive rendering when viewed on mobile browser
+
+
+
+
+
+### Mobile(`Kendo.Mvc.UI.MobileMode`)
+Used to determine if adaptive rendering should be used when viewed on mobile browser
+
+
+#### Parameters
+
+##### type [Kendo.Mvc.UI.MobileMode](/kendo-ui/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/MobileMode)
+
+
+
+
+
+
+

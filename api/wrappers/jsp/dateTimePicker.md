@@ -6,13 +6,19 @@ publish: true
 ---
 
 # \<kendo:dateTimePicker\>
-A JSP tag representing Kendo DateTimePicker.
-
+A JSP wrapper for Kendo UI [DateTimePicker](/kendo-ui/api/web/datetimepicker).
 
 ## Configuration Attributes
 
+### ARIATemplate `java.lang.String`
 
-### culture `String`
+Specifies a template used to populate value of the aria-label attribute.
+
+#### Example
+    <kendo:dateTimePicker ARIATemplate="ARIATemplate">
+    </kendo:dateTimePicker>
+
+### culture `java.lang.String`
 
 Specifies the culture info used by the widget.
 
@@ -20,48 +26,38 @@ Specifies the culture info used by the widget.
     <kendo:dateTimePicker culture="culture">
     </kendo:dateTimePicker>
 
+### dates `java.lang.Object`
 
-
-### dates `Object`
-
-Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
+Specifies a list of dates, which will be passed to the month template of the DateView. All dates, which match the date portion of the selected date will be used to re-bind the TimeView.
 
 #### Example
     <kendo:dateTimePicker dates="dates">
     </kendo:dateTimePicker>
 
-
-
-### depth `String`
+### depth `java.lang.String`
 
 Specifies the navigation depth of the calendar. The following
-settings are available for the
+settings are available for the depth value:
 
 #### Example
     <kendo:dateTimePicker depth="depth">
     </kendo:dateTimePicker>
 
+### footer `java.lang.String`
 
-
-### footer `String`
-
-Template to be used for rendering the footer of the calendar.
+The template which renders the footer of the calendar. If false, the footer will not be rendered.
 
 #### Example
     <kendo:dateTimePicker footer="footer">
     </kendo:dateTimePicker>
 
-
-
-### format `String`
+### format `java.lang.String`
 
 Specifies the format, which is used to format the value of the DateTimePicker displayed in the input. The format also will be used to parse the input.
 
 #### Example
     <kendo:dateTimePicker format="format">
     </kendo:dateTimePicker>
-
-
 
 ### interval `float`
 
@@ -71,8 +67,6 @@ Specifies the interval, between values in the popup list, in minutes.
     <kendo:dateTimePicker interval="interval">
     </kendo:dateTimePicker>
 
-
-
 ### max `java.util.Date`
 
 Specifies the maximum date, which the calendar can show.
@@ -80,8 +74,6 @@ Specifies the maximum date, which the calendar can show.
 #### Example
     <kendo:dateTimePicker max="max">
     </kendo:dateTimePicker>
-
-
 
 ### min `java.util.Date`
 
@@ -91,9 +83,7 @@ Specifies the minimum date that the calendar can show.
     <kendo:dateTimePicker min="min">
     </kendo:dateTimePicker>
 
-
-
-### parseFormats `Object`
+### parseFormats `java.lang.Object`
 
 Specifies the formats, which are used to parse the value set with value() method or by direct input. If not set the value of the options.format and options.timeFormat will be used. Note that value of the format option is always used.
 
@@ -101,28 +91,22 @@ Specifies the formats, which are used to parse the value set with value() method
     <kendo:dateTimePicker parseFormats="parseFormats">
     </kendo:dateTimePicker>
 
-
-
-### start `String`
+### start `java.lang.String`
 
 Specifies the start view of the calendar.
-The following settings are available for the
+ The following settings are available for the start value:
 
 #### Example
     <kendo:dateTimePicker start="start">
     </kendo:dateTimePicker>
 
-
-
-### timeFormat `String`
+### timeFormat `java.lang.String`
 
 Specifies the format, which is used to format the values in the time drop-down list.
 
 #### Example
     <kendo:dateTimePicker timeFormat="timeFormat">
     </kendo:dateTimePicker>
-
-
 
 ### value `java.util.Date`
 
@@ -133,10 +117,41 @@ Specifies the selected value.
     </kendo:dateTimePicker>
 
 
+##  Configuration JSP Tags
+
+### kendo:dateTimePicker-animation
+
+Configures the opening and closing animations of the popups. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
+
+More documentation is available at [kendo:dateTimePicker-animation](/kendo-ui/api/wrappers/jsp/datetimepicker/animation).
+
+#### Example
+
+    <kendo:dateTimePicker>
+        <kendo:dateTimePicker-animation></kendo:dateTimePicker-animation>
+    </kendo:dateTimePicker>
+
+### kendo:dateTimePicker-month
+
+Templates for the cells rendered in the calendar "month" view.
+
+More documentation is available at [kendo:dateTimePicker-month](/kendo-ui/api/wrappers/jsp/datetimepicker/month).
+
+#### Example
+
+    <kendo:dateTimePicker>
+        <kendo:dateTimePicker-month></kendo:dateTimePicker-month>
+    </kendo:dateTimePicker>
+
+
+## Event Attributes
 
 ### change `String`
 
 Triggered when the underlying value of a DateTimePicker is changed.
+
+
+For additional information check the [change](/kendo-ui/api/web/datetimepicker#events-change) event documentation.
 
 #### Example
     <kendo:dateTimePicker change="handle_change">
@@ -147,11 +162,12 @@ Triggered when the underlying value of a DateTimePicker is changed.
         }
     </script>
 
-
-
 ### close `String`
 
 Fires when the calendar or the time drop-down list is closed
+
+
+For additional information check the [close](/kendo-ui/api/web/datetimepicker#events-close) event documentation.
 
 #### Example
     <kendo:dateTimePicker close="handle_close">
@@ -162,11 +178,12 @@ Fires when the calendar or the time drop-down list is closed
         }
     </script>
 
-
-
 ### open `String`
 
 Fires when the calendar or the time drop-down list is opened
+
+
+For additional information check the [open](/kendo-ui/api/web/datetimepicker#events-open) event documentation.
 
 #### Example
     <kendo:dateTimePicker open="handle_open">
@@ -176,62 +193,15 @@ Fires when the calendar or the time drop-down list is opened
             // Code to handle the open event.
         }
     </script>
-
-
-
-### Event Attributes
-
-
-### change `String`
-
-Triggered when the underlying value of a DateTimePicker is changed.
-
-#### Example
-    <kendo:dateTimePicker change="handle_change">
-    </kendo:dateTimePicker>
-    <script>
-        function handle_change(e) {
-            // Code to handle the change event.
-        }
-    </script>
-
-
-
-### close `String`
-
-Fires when the calendar or the time drop-down list is closed
-
-#### Example
-    <kendo:dateTimePicker close="handle_close">
-    </kendo:dateTimePicker>
-    <script>
-        function handle_close(e) {
-            // Code to handle the close event.
-        }
-    </script>
-
-
-
-### open `String`
-
-Fires when the calendar or the time drop-down list is opened
-
-#### Example
-    <kendo:dateTimePicker open="handle_open">
-    </kendo:dateTimePicker>
-    <script>
-        function handle_open(e) {
-            // Code to handle the open event.
-        }
-    </script>
-
 
 ## Event Tags
-  
 
 ### kendo:dateTimePicker-change
 
 Triggered when the underlying value of a DateTimePicker is changed.
+
+
+For additional information check the [change](/kendo-ui/api/web/datetimepicker#events-change) event documentation.
 
 #### Example
     <kendo:dateTimePicker>
@@ -244,11 +214,12 @@ Triggered when the underlying value of a DateTimePicker is changed.
         </kendo:dateTimePicker-change>
     </kendo:dateTimePicker>
 
- 
-
 ### kendo:dateTimePicker-close
 
 Fires when the calendar or the time drop-down list is closed
+
+
+For additional information check the [close](/kendo-ui/api/web/datetimepicker#events-close) event documentation.
 
 #### Example
     <kendo:dateTimePicker>
@@ -261,11 +232,12 @@ Fires when the calendar or the time drop-down list is closed
         </kendo:dateTimePicker-close>
     </kendo:dateTimePicker>
 
- 
-
 ### kendo:dateTimePicker-open
 
 Fires when the calendar or the time drop-down list is opened
+
+
+For additional information check the [open](/kendo-ui/api/web/datetimepicker#events-open) event documentation.
 
 #### Example
     <kendo:dateTimePicker>
@@ -278,31 +250,3 @@ Fires when the calendar or the time drop-down list is opened
         </kendo:dateTimePicker-open>
     </kendo:dateTimePicker>
 
- 
-
-## Child JSP Tags
-
-### kendo:dateTimePicker-animation
-
-The animation(s) used for opening and/or closing the pop-ups. Setting this value to
-
-More documentation is available at [kendo:dateTimePicker-animation](/api/wrappers/jsp/datetimepicker/animation).
-
-#### Example
-
-    <kendo:dateTimePicker>
-        <kendo:dateTimePicker-animation></kendo:dateTimePicker-animation>
-    </kendo:dateTimePicker>
- 
-### kendo:dateTimePicker-month
-
-Templates for the cells rendered in the calendar "month" view.
-
-More documentation is available at [kendo:dateTimePicker-month](/api/wrappers/jsp/datetimepicker/month).
-
-#### Example
-
-    <kendo:dateTimePicker>
-        <kendo:dateTimePicker-month></kendo:dateTimePicker-month>
-    </kendo:dateTimePicker>
-    

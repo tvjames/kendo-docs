@@ -5,37 +5,41 @@ publish:true
 ---
 
 # Kendo.Mvc.UI.Fluent.DataSourceModelDescriptorFactory
-
 Defines the fluent interface for configuring the DataSource Model definition.
+
+
 
 ## Methods
 
-### Id\<T1\>(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+### Id(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Specify the member used to identify an unique Model instance.
+
 
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
 Member access expression which describes the member
 
-### Id(System.String)
-Specify the member used to identify an unique Model instance.
 
-#### Parameters
 
-##### fieldName `System.String`
-The member name.
 
-### Field\<T1\>(System.Linq.Expressions.Expression\<System.Func\<T,T1\>\>)
+
+### Field(`System.Linq.Expressions.Expression<System.Func<T,T1>>`)
 Describes a Model field
+
 
 #### Parameters
 
 ##### expression `System.Linq.Expressions.Expression<System.Func<T,T1>>`
 Member access expression which describes the field
 
-### Field(System.String,System.Type)
+
+
+
+
+### Field(`System.String,System.Type`)
 Describes a Model field
+
 
 #### Parameters
 
@@ -45,10 +49,21 @@ Field name
 ##### memberType `System.Type`
 Field type
 
-### Field\<T1\>(System.String)
+
+
+
+
+### Field(`System.String`)
 Describes a Model field
+
 
 #### Parameters
 
 ##### memberName `System.String`
 Member name
+
+
+
+
+
+

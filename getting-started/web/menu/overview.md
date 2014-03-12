@@ -1,6 +1,9 @@
 ---
-title: Menu Overview
+title: Overview
+meta_title: Overview of Menu UI widget | Kendo UI Documentation
+meta_description: Steps that help you initialize the Menu widget using JSON data object and customize animation.
 slug: gs-web-menu-overview
+relatedDocs: api-web-menu
 tags: getting-started,web
 publish: true
 ---
@@ -17,13 +20,19 @@ initialized from HTML, or the API can be used to add and remove items.
 ### Create a HTML hierarchical list of items
 
     <ul id="menu">
-        <li>Item 1
+        <li>Normal Item
             <ul>
-                <li>Item 1.1</li>
-                <li>Item 1.2</li>
+                <li><span class="k-sprite icon-class"></span>Item with a Sprite</li>
+                <li><img src="Icons/contacts.gif" />Item with an Icon</li>
             </ul>
         </li>
-        <li>Item 2</li>
+        <li><a href="http://www.google.com">Navigation Item</a></li>
+        <li class="k-state-active">Active Item</li>
+        <li>Template Item
+            <div class="k-group k-content">
+                Test button - <a class="k-button">Button</a>
+            </div>
+        </li>
     </ul>
 
 Initialization of a **Menu** should occur after the DOM is fully loaded. It is recommended that
@@ -42,16 +51,17 @@ initialization the **Menu** occur within a handler is provided to $(document).re
       dataSource:
         [{
             text: "Item 1",
-            url: "http://www.kendoui.com"                // Link URL if navigation is needed, optional.
+            cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
+            url: "http://www.telerik.com"                // Link URL if navigation is needed, optional.
         },
         {
             text: "<b>Item 2</b>",
-            encoded: false,                                 // Allows use of HTML for item text
-            content: "text"                                 // content within an item
+            encoded: false,                              // Allows use of HTML for item text
+            content: "text"                              // content within an item
         },
         {
             text: "Item 3",
-            imageUrl: "http://www.kendoui.com/test.jpg", // Item image URL, optional.
+            imageUrl: "http://www.telerik.com/test.jpg", // Item image URL, optional.
             items: [{                                    // Sub item collection
                  text: "Sub Item 1"
             },
@@ -80,7 +90,7 @@ instead of on hover.
     $("#menu").kendoMenu({
         animation: {
             open: { effects: "fadeIn" },
-            hoverDelay: 500
+            duration: 500
         },
         openOnClick: true
     });
@@ -98,7 +108,7 @@ placement in the hierarchy.
 A reference item is simply a target Menu Item HTML element that
 already exists in the Menu. Any valid jQuery selector can be used to
 obtain a reference to the target item. For examples, see the
-[Menu API demos](../menu/api.html "Menu API demos").
+[Menu API demos](http://demos.telerik.com/kendo-ui/web/menu/api.html).
 Removing an item only requires a reference to the target element that
 should be removed.
 
@@ -135,3 +145,25 @@ The following keys and user actions are supported:
 * Right arrow moves the active state to the next root item of a horizontal Menu, if the previous active item has been inside an item group.
 * Escape closes an item group.
 * (Shift+) Tab blurs the Menu and moves focus to the next (previous) focusable page element.
+
+## Shrink the Menu to exactly fit the root items
+
+The Menu renders as an `<ul>`, which is a [block element](http://quirksmode.org/css/css2/display.html) and expands horizontally by default.
+If a horizontal Menu is wider than then total width of its root items, a blank space will remain visible on the right. In order to remove this space, you can use CSS:
+
+
+    #menu-id /* for a specific menu instance */
+    ,
+    .k-menu-horizontal /* for all horizontal menus */
+    {
+       display: inline-block;
+    }
+
+Shrinking the horizontal Menu will make the last root item's border touch the Menu's right border (in left-to-right layouts). The last item border can be removed with:
+
+    #menu-id > .k-last /* for a specific menu instance */
+    ,
+    .k-menu-horizontal > .k-last /* for all horizontal menus */
+    {
+       border-width: 0;
+    }

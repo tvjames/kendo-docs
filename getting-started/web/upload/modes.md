@@ -1,6 +1,9 @@
 ---
 title: Modes
+meta_title: Modes in Kendo UI jQuery-based file Upload widget
+meta_description: How to use different modes in Kendo UI Upload widget, initialization of the Upload from an existing file and further async, implemented by using the HTML5 File API.
 slug: upload-modes
+ordinal: 4
 publish: true
 ---
 # Upload Modes
@@ -63,12 +66,13 @@ The handler should return either:
 *   Any other response to signify failure.
 
 ### Remove handler
-The remove handler should accept DELETE requests (configurable). The requests will contain one or more text fields with name "fileNames". In this case, we change it to "fileNames[]" using the removeField option.
+The remove handler should accept POST requests (configurable via the [removeVerb](/kendo-ui/api/web/upload#configuration-async.removeVerb) option).
+The requests will contain one or more text fields with name "fileNames". In this case, we change it to "fileNames[]" using the removeField option.
 
 The handler should return either:
 
 *   An empty response to signify success.
-*   A JSON string with "text/plain" content encoding. The de-serialized object is available in the **success **event handler.
+*   A JSON string with "text/plain" content encoding. The de-serialized object is available in the [success](/kendo-ui/api/web/upload#events-success) event handler.
 *   Any other response to signify failure.
 
 ### Asynchronous mode fallback

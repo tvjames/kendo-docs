@@ -1,5 +1,7 @@
 ---
 title: Use the DataSource
+meta_title: Using DataSource component in Kendo UI framework | Kendo UI Documentation
+meta_description: In this how-to tutorial we provide a quick introduction of Kendo UI DataSource component and guide you how to use it in your project.
 slug: howto-use-the-datasource
 tags: How-To
 publish: true
@@ -21,7 +23,7 @@ The DataSource plays a central role in the applications and sites built with Ken
 * calculating and maintaining aggregates, sorting order, and page sizes;
 * and, providing a query mechanism via filter expressions.
 
-> To learn more about the capabilities of the DataSource, make sure to check out its [API reference](http://docs.kendoui.com/api/framework/datasource) or [demos](http://demos.kendoui.com/web/datasource/index.html).
+> To learn more about the capabilities of the DataSource, make sure to check out its [API reference](/kendo-ui/api/framework/datasource) or [demos](http://demos.telerik.com/kendo-ui/web/datasource/index.html).
 
 ## Creating a DataSource for Local Data
 

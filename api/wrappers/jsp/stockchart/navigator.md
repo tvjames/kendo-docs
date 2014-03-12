@@ -6,38 +6,102 @@ publish: true
 ---
 
 # \<kendo:stockChart-navigator\>
-A JSP tag representing Kendo Navigator.
+
+The data navigator configuration options.
 
 #### Example
     <kendo:stockChart>
         <kendo:stockChart-navigator></kendo:stockChart-navigator>
     </kendo:stockChart>
 
-
 ## Configuration Attributes
 
+### autoBind `boolean`
 
-### series `Object`
-
-Array of series definitions.
+Indicates whether the navigator will call read on the data source initially.
+Applicable only when using a dedicated navigator data source.
 
 #### Example
-    <kendo:stockChart series="series">
-    </kendo:stockChart>
+    <kendo:stockChart-navigator autoBind="autoBind">
+    </kendo:stockChart-navigator>
+
+### dateField `java.lang.String`
+
+The field containing the point date.
+It is used as a default field for the navigator axis.The data item field value must be either:
+
+#### Example
+    <kendo:stockChart-navigator dateField="dateField">
+    </kendo:stockChart-navigator>
+
+### visible `boolean`
+
+The visibility of the navigator.
+
+#### Example
+    <kendo:stockChart-navigator visible="visible">
+    </kendo:stockChart-navigator>
 
 
+##  Configuration JSP Tags
 
-## Child JSP Tags
+### kendo:stockChart-navigator-categoryAxis
+
+The category axis configuration options.
+
+More documentation is available at [kendo:stockChart-navigator-categoryAxis](/kendo-ui/api/wrappers/jsp/stockchart/navigator-categoryaxis).
+
+#### Example
+
+    <kendo:stockChart-navigator>
+        <kendo:stockChart-navigator-categoryAxis></kendo:stockChart-navigator-categoryAxis>
+    </kendo:stockChart-navigator>
+
+### kendo:stockChart-navigator-hint
+
+Default options for the navigator hint.
+
+More documentation is available at [kendo:stockChart-navigator-hint](/kendo-ui/api/wrappers/jsp/stockchart/navigator-hint).
+
+#### Example
+
+    <kendo:stockChart-navigator>
+        <kendo:stockChart-navigator-hint></kendo:stockChart-navigator-hint>
+    </kendo:stockChart-navigator>
+
+### kendo:stockChart-navigator-pane
+
+The navigator pane configuration.
+
+More documentation is available at [kendo:stockChart-navigator-pane](/kendo-ui/api/wrappers/jsp/stockchart/navigator-pane).
+
+#### Example
+
+    <kendo:stockChart-navigator>
+        <kendo:stockChart-navigator-pane></kendo:stockChart-navigator-pane>
+    </kendo:stockChart-navigator>
 
 ### kendo:stockChart-navigator-select
 
-Specifies the initially selected range.
+Specifies the initially selected range.The full range of values is shown if no range is specified.
 
-More documentation is available at [kendo:stockChart-navigator-select](/api/wrappers/jsp/stockchart/navigator-select).
+More documentation is available at [kendo:stockChart-navigator-select](/kendo-ui/api/wrappers/jsp/stockchart/navigator-select).
 
 #### Example
 
     <kendo:stockChart-navigator>
         <kendo:stockChart-navigator-select></kendo:stockChart-navigator-select>
     </kendo:stockChart-navigator>
- 
+
+### kendo:stockChart-navigator-series
+
+Array of series definitions.Accepts the same options as the root series collection.Omitting the array and specifying a single series is also acceptable.
+
+More documentation is available at [kendo:stockChart-navigator-series](/kendo-ui/api/wrappers/jsp/stockchart/navigator-series).
+
+#### Example
+
+    <kendo:stockChart-navigator>
+        <kendo:stockChart-navigator-series></kendo:stockChart-navigator-series>
+    </kendo:stockChart-navigator>
+

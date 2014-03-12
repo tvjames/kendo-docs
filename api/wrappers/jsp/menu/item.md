@@ -6,43 +6,61 @@ publish: true
 ---
 
 # \<kendo:menu-item\>
-A JSP tag representing Kendo Item.
+
+Contains the items of the menu widget
 
 #### Example
     <kendo:menu-items>
         <kendo:menu-item></kendo:menu-item>
     </kendo:menu-items>
 
-
 ## Configuration Attributes
 
+### enabled `boolean`
 
-### text `String`
-
-Specifies the text displayed by the item
+Specifies whether the item is initially enabled
 
 #### Example
-    <kendo:menu text="text">
-    </kendo:menu>
+    <kendo:menu-item enabled="enabled">
+    </kendo:menu-item>
 
+### imageUrl `java.lang.String`
 
+Specifies the URL of the image displayed by the item
 
-### spriteCssClass `String`
+#### Example
+    <kendo:menu-item imageUrl="imageUrl">
+    </kendo:menu-item>
+
+### selected `boolean`
+
+Specifies whether the item is initially selected
+
+#### Example
+    <kendo:menu-item selected="selected">
+    </kendo:menu-item>
+
+### spriteCssClass `java.lang.String`
 
 Specifies the class name for the sprite image displayed by the item
 
 #### Example
-    <kendo:menu spriteCssClass="spriteCssClass">
-    </kendo:menu>
+    <kendo:menu-item spriteCssClass="spriteCssClass">
+    </kendo:menu-item>
 
+### text `java.lang.String`
 
-
-### expanded `boolean`
-
-Specifies whether the item is initially expanded
+Specifies the text displayed by the item
 
 #### Example
-    <kendo:menu expanded="expanded">
-    </kendo:menu>
+    <kendo:menu-item text="text">
+    </kendo:menu-item>
 
+### url `java.lang.String`
+
+Specifies the URL that the item links to
+
+#### Example
+    <kendo:menu-item url="url">
+    </kendo:menu-item>
 

@@ -1,5 +1,7 @@
 ---
 title: Use Kendo UI Declarative Initialization
+meta_title: Kendo UI Declarative Initialization | Kendo UI Docs
+meta_description: Learn how to use Kendo UI Declarative Initialization both with and without the MVVM framework.
 slug: howto-use-kendo-ui-declarative-initialization
 tags: How-To
 publish: true
@@ -49,33 +51,33 @@ the **h2**.
 
 But the question now becomes, what else can I bind and how do I do it?
 
-This is well documented in our [Getting Started](http://docs.kendoui.com/getting-started/framework/mvvm/overview) section of the documentation.
+This is well documented in our [Getting Started](/kendo-ui/getting-started/framework/mvvm/overview) section of the documentation.
 On the *mvvm* section, you will find a high level explanation of how to
-bind with the Kendo UI MVVM framework.  Under the [Bindings](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/attr) sub-topic, you
+bind with the Kendo UI MVVM framework.  Under the [Bindings](/kendo-ui/getting-started/framework/mvvm/bindings/attr) sub-topic, you
 will find a complete list of what you can bind to.  For reference, I have
 included that list here as well.
 
-  * [Attr](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/attr)
+  * [Attr](/kendo-ui/getting-started/framework/mvvm/bindings/attr)
 
-  * [Checked](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/checked)
-  
-  * [Click](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/click)
+  * [Checked](/kendo-ui/getting-started/framework/mvvm/bindings/checked)
 
-  * [Disabled](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/disabled)
+  * [Click](/kendo-ui/getting-started/framework/mvvm/bindings/click)
 
-  * [Enabled](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/enabled)
+  * [Disabled](/kendo-ui/getting-started/framework/mvvm/bindings/disabled)
 
-  * [Event](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/event)
+  * [Enabled](/kendo-ui/getting-started/framework/mvvm/bindings/enabled)
 
-  * [Html](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/html)
+  * [Events](/kendo-ui/getting-started/framework/mvvm/bindings/events)
 
-  * [Source](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/source)
+  * [Html](/kendo-ui/getting-started/framework/mvvm/bindings/html)
 
-  * [Style](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/style)
+  * [Source](/kendo-ui/getting-started/framework/mvvm/bindings/source)
 
-  * [Text](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/text)
+  * [Style](/kendo-ui/getting-started/framework/mvvm/bindings/style)
 
-  * [Value](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/value)
+  * [Text](/kendo-ui/getting-started/framework/mvvm/bindings/text)
+
+  * [Value](/kendo-ui/getting-started/framework/mvvm/bindings/value)
 
 We have provided samples with each of these binding declarations to help you
 understand how and when you can use them.
@@ -96,7 +98,7 @@ yourself in the above fiddle.
 
 Whenever you are referencing a css property that has a dash, you eliminate the
 dash and use lower camel case notation (i.e. fontSize instead of font-size) as
-is documented [here](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/style#using-style-attributes-which-contain-a-dash).
+is documented [here](/kendo-ui/getting-started/framework/mvvm/bindings/style#using-style-attributes-which-contain-a-dash).
 
 ## Declarative Initialization
 
@@ -158,7 +160,7 @@ the **h2** tag.
 
 That won’t work.  You should be doing that in your view model.  If you aren’t
 using a view model and you have a good use case for sticking JavaScript into
-your markup, consider using a [Kendo UI Template](http://demos.kendoui.com/web/templates/index.html) instead.
+your markup, consider using a [Kendo UI Template](http://demos.telerik.com/kendo-ui/web/templates/index.html) instead.
 
 2. Kendo UI is not the only framework that uses data attributes for binding.
 In fact, its pretty common.  If you find yourself in a situation where you
@@ -166,7 +168,7 @@ need to mitigate collisions with Kendo UI and some other JS library, you can
 provide a namespace for Kendo UI and then reference that namespace instead.
 
 
-    kendo.ns="kendo";
+    kendo.ns="kendo-";
 
     // then
     data-bind="value: someValue"
@@ -179,7 +181,7 @@ provide a namespace for Kendo UI and then reference that namespace instead.
 
 It’s easy when you start using these bindings to try and guess what you can
 and can’t do.  Instead, refer to the docs for the MVVM framework bindings
-[here](http://docs.kendoui.com/getting-started/framework/mvvm/overview), and the standard widget declarative bindings [here](http://docs.kendoui.com/getting-started/framework/mvvm/bindings/attr).  When
+[here](/kendo-ui/getting-started/framework/mvvm/overview), and the standard widget declarative bindings [here](/kendo-ui/getting-started/framework/mvvm/bindings/attr).  When
 doing initialization of widgets using configuration attributes in the
 declarative bindings, simply look up the configuration values so you know what
 you can and can’t use to configure the widget.

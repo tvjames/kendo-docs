@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting
+meta_title: Troubleshooting guide for Kendo UI Upload HtmlHelper server-side wrapper
+meta_description: Find suggested solutions and explanations for most common issues which may occur while using Kendo UI Upload HtmlHelper extension.
 slug: mvc-upload-troubleshooting
 publish: true
 ---
@@ -54,4 +56,4 @@ See [Concurrent Requests In ASP.NET MVC](http://weblogs.asp.net/imranbaloch/arch
 
 ### See Also
 
-[Upload Troubleshooting (all platforms)](/getting-started/ui-widgets/upload/troubleshooting)
+[Upload Troubleshooting (all platforms)](/kendo-ui/getting-started/web/upload/troubleshooting)

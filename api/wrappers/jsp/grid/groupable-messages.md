@@ -6,23 +6,21 @@ publish: true
 ---
 
 # \<kendo:grid-groupable-messages\>
-A JSP tag representing Kendo Messages.
+
+The text messages displayed during grouping.
 
 #### Example
     <kendo:grid-groupable>
         <kendo:grid-groupable-messages></kendo:grid-groupable-messages>
     </kendo:grid-groupable>
 
-
 ## Configuration Attributes
 
+### empty `java.lang.String`
 
-### empty `String`
-
-Sets the text of the empty grouping area message
+The text displayed in the grouping drop area.
 
 #### Example
-    <kendo:grid empty="empty">
-    </kendo:grid>
-
+    <kendo:grid-groupable-messages empty="empty">
+    </kendo:grid-groupable-messages>
 

@@ -1,5 +1,7 @@
 ---
-title: Validator Overview
+title: Overview
+meta_title: Overview of Validator UI in Kendo UI framework
+meta_description: How to initialize jQuery Validator UI and trigger elements' validation.
 slug: getting-started-validator-overview
 publish: true
 ---
@@ -7,7 +9,7 @@ publish: true
 # Kendo UI Validator Overview
 The Kendo UI Validator offers an easy way to do client-side form validation. Built around the HTML5 form validation attributes, it supports variety of built-in validation rules, but also provides a convenient way for setting custom rules handling.
 
-For a complete overview of the Validator's methods and configuration options, [review the Validator API Reference](http://docs.kendoui.com/api/framework/validator).
+For a complete overview of the Validator's methods and configuration options, [review the Validator API Reference](/kendo-ui/api/framework/validator).
 
 ## HTML5 form validation
 One of the highly anticipated features in HTML5 is the arrival of new [HTML5 form validation attributes](https://developer.mozilla.org/en/HTML/Forms_in_HTML#Constraint_Validation). When used, these attributes set constraints on HTML inputs that will be enforced by the browser. Available constraints include:
@@ -59,13 +61,7 @@ Next, a Kendo UI Validator needs to be added to the page. In a JavaScript block 
         }
     });
 
-With this simple configuration, the unchanged HTML5 form validation attributes will now work in old and new browsers, and an applicaiton will have complete control over the content and styling of validation error messages. When the "Save" button is clicked, if any inputs do not pass all constraints, the Kendo UI Validator will display the appropriate valdiation error message. [View the Kendo UI Validator live demo](http://demos.kendoui.com/web/validator/index.html).
-
-Each indvidual HTML input can also define a custom validation error message using the validationMessage attribute:
-
-    <input type="tel" pattern="\d{10}" validationMessage="Plase enter a ten digit phone number" />
-
-This message will override any Validator defaults and be dispalyed in the Validator error tooltip.
+With this simple configuration, the unchanged HTML5 form validation attributes will now work in old and new browsers, and an applicaiton will have complete control over the content and styling of validation error messages. When the "Save" button is clicked, if any inputs do not pass all constraints, the Kendo UI Validator will display the appropriate valdiation error message. [View the Kendo UI Validator live demo](http://demos.telerik.com/kendo-ui/web/validator/index.html).
 
 ## Default Validation Rules
 
@@ -93,17 +89,134 @@ This message will override any Validator defaults and be dispalyed in the Valida
 
      <input type="email" name="email" />
 
-Beside the built-in validation rules, KendoUI Validator you can set custom rules through the [rules configuration option](/api/framework/validator#rules).
+## Custom Validation Rules
+
+Beside the built-in validation rules, with KendoUI Validator you can set custom rules through the [rules configuration option](/kendo-ui/api/framework/validator#rules).
 
 Important things to note about custom validation rules and messages:
 
-- **Each custom rule will be run for each element in a form.** If there are multiple inputs in the form and the validation should only apply to a specific input, the custom validation code should check the input before validating. For example: `return input.is("[name=firstName") && input.val() === "Test"`
+- **Each custom rule will be run for each element in a form.** If there are multiple inputs in the form and the validation should only apply to a specific input, the custom validation code should check the input before validating. For example:
+
+        custom: function (input) {
+            if (input.is("[name=firstName]")) {
+                return input.val() === "Test"
+            } else {
+                return true;
+            }
+        }
+
 - If the custom validation returns `true`, the validation will pass (and vice versa)
 - If there are multiple custom rules, the rules will run in order. The validation will stop at the first rule that fails and display the validation error message associated with that rule. A form will be valid only if all custom validation rules pass in addition to the standard HTML5 constraints.
 - **Any HTML5 constraints applied to a form (required, type, etc.) will be checked *before* custom rules are evaluated.** Custom rules will not run until a input passes the basic HTML5 constraints.
 - Custom messages must match the name of the custom rule. If a custom message is not provided for a custom rule, a simple error icon will be displayed.
 
 > HTML5 also provides a way to set custom validation rules via `setCustomValidity()`, but as with other parts of HTML5, this will only work in modern browsers. To create custom rules that work in all browsers, use the Kendo UI Validator custom rule definitions.
+
+## Error Messages
+
+The KendoUI Validator provides a default messages which maps to the built-in validation rules. However, defining a custom messages as well as overriding the built-in ones is also possible.
+
+> Note that it is required that the input element has a name attribute set, in order error messages to work correctly.
+
+### Defining custom messages
+    <form id="myform">
+        <input name="username" required /> <br />
+        <input type="email" name="userEmail" required data-message="My custom email message" /> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator({
+             messages: {
+                 // defines a message for the 'custom' validation rule
+                 custom: "Please enter valid value for my custom rule",
+
+                 // overrides the built-in message for the required rule
+                 required: "My custom required message",
+
+                 // overrides the built-in message for the email rule
+                 // with a custom function that returns the actual message
+                 email: function(input) {
+                     return getMessage(input);
+                 }
+             },
+             rules: {
+               custom: function(input) {
+                 if (input.is("[name=username]")) {
+                     return input.val() === "Tom";
+                 }
+                 return true;
+               }
+             }
+        });
+
+        function getMessage(input) {
+          return input.data("message");
+        }
+    </script>
+
+Beside that build-in messages a custom messages can also be defined on a per-component basis, via the following attributes (in that order):
+
+    1. `data-[rule]-msg` -- where [rule] is the failing validation rule
+    2. `validationMessage`
+    3. `title`
+
+These attributes will be checked before applying the message from the `messages` configuration option.
+
+#### Setting multiple `data-[rule]-msg` attributes allows a field to have different messages for each different validation rule.
+
+    <form id="myform">
+        <input type="url" required data-required-msg="You need to enter a URL" data-url-msg="This url is invalid">
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator();
+    </script>
+
+#### Using validationMessage attribute to specify a custom validation message
+
+    <form id="myform">
+        <input type="tel" pattern="\d{10}" validationMessage="Plase enter a ten digit phone number" value="123"> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator();
+    </script>
+
+Validation messages can also be defined for custom rules.
+
+#### Defining validation messages for custom rules
+
+    <form id="myform">
+        <input name="username" /> <br />
+        <input name="town" /> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator({
+            rules: {
+              customRule1: function(input) {
+                  if (input.is("[name=username]")) {
+                    return input.val() === "Tom";
+                  }
+                  return true;
+              },
+              customRule2: function(input){
+                  if (input.is("[name=town]")) {
+                    return input.val() === "New York";
+                  }
+                  return true;
+              }
+            },
+            messages: {
+                customRule1: "Your UserName must be Tom",
+                customRule2: "Your town must be New York"
+            }
+        });
+    </script>
 
 ### Customizing the tooltip position
 
@@ -127,5 +240,7 @@ adding a span with data-for attribute set to the validated input name and a clas
          $("#myform").kendoValidator();
      </script>
 
-The Kendo UI Validator is a powerful framework component and essential for any application that collects user input. [Review the API Docs](/api/framework/validator) for more configuration details and options.
+> The validation toolip element is bound to the input's **name** via data-for attribute.
+
+The Kendo UI Validator is a powerful framework component and essential for any application that collects user input. [Review the API Docs](/kendo-ui/api/framework/validator) for more configuration details and options.
 

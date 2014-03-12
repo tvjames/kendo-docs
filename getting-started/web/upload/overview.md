@@ -1,7 +1,11 @@
 ---
-title: Upload Overview
+title: Overview
+meta_title: Overview of Kendo UI Upload widget
+meta_description: How to use File Upload UI widget, initialize Upload and access and existing Upload instance.
 slug: gs-web-upload-overview
+relatedDocs: api-web-upload
 tags: getting-started,web
+ordinal: 1
 publish: true
 ---
 
@@ -46,7 +50,7 @@ Please consult the documentation of your specific server technology regarding th
 
 ## See Also
 
-[Upload Modes](http://www.kendoui.com/documentation/ui-widgets/upload/modes.aspx)
+[Upload Modes](/kendo-ui/getting-started/web/upload/modes)
 
 ## Accessing an Existing Upload
 

@@ -6,121 +6,140 @@ publish: true
 ---
 
 # \<kendo:radialGauge-scale-labels\>
-A JSP tag representing Kendo Labels.
+
+Configures the scale labels.
 
 #### Example
     <kendo:radialGauge-scale>
         <kendo:radialGauge-scale-labels></kendo:radialGauge-scale-labels>
     </kendo:radialGauge-scale>
 
-
 ## Configuration Attributes
 
-
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels.
 Any valid CSS color string will work here, including hex and rgb
 
 #### Example
-    <kendo:radialGauge background="background">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels background="background">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
 
 #### Example
-    <kendo:radialGauge color="color">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels color="color">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
 #### Example
-    <kendo:radialGauge font="font">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels font="font">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
 #### Example
-    <kendo:radialGauge format="format">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels format="format">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### margin `float`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
 #### Example
-    <kendo:radialGauge margin="margin">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels margin="margin">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### padding `float`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
 #### Example
-    <kendo:radialGauge padding="padding">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels padding="padding">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### position `String`
+### position `java.lang.String`
 
 The labels positions.
 
 #### Example
-    <kendo:radialGauge position="position">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels position="position">
+    </kendo:radialGauge-scale-labels>
 
-
-
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:
 
 #### Example
-    <kendo:radialGauge template="template">
-    </kendo:radialGauge>
-
-
+    <kendo:radialGauge-scale-labels template="template">
+    </kendo:radialGauge-scale-labels>
 
 ### visible `boolean`
 
 The visibility of the labels.
 
 #### Example
-    <kendo:radialGauge visible="visible">
-    </kendo:radialGauge>
+    <kendo:radialGauge-scale-labels visible="visible">
+    </kendo:radialGauge-scale-labels>
 
 
-
-## Child JSP Tags
+##  Configuration JSP Tags
 
 ### kendo:radialGauge-scale-labels-border
 
 The border of the labels.
 
-More documentation is available at [kendo:radialGauge-scale-labels-border](/api/wrappers/jsp/radialgauge/scale-labels-border).
+More documentation is available at [kendo:radialGauge-scale-labels-border](/kendo-ui/api/wrappers/jsp/radialgauge/scale-labels-border).
 
 #### Example
 
     <kendo:radialGauge-scale-labels>
         <kendo:radialGauge-scale-labels-border></kendo:radialGauge-scale-labels-border>
     </kendo:radialGauge-scale-labels>
- 
+
+
+## Event Attributes
+
+### template `String`
+
+The label template.
+Template variables:
+
+
+#### Example
+    <kendo:radialGauge-scale-labels template="handle_template">
+    </kendo:radialGauge-scale-labels>
+    <script>
+        function handle_template(e) {
+            // Code to handle the template event.
+        }
+    </script>
+
+## Event Tags
+
+### kendo:radialGauge-scale-labels-template
+
+The label template.
+Template variables:
+
+
+#### Example
+    <kendo:radialGauge-scale-labels>
+        <kendo:radialGauge-scale-labels-template>
+            <script>
+                function(e) {
+                    // Code to handle the template event.
+                }
+            </script>
+        </kendo:radialGauge-scale-labels-template>
+    </kendo:radialGauge-scale-labels>
+

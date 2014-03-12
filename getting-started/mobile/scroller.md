@@ -1,6 +1,9 @@
 ---
 title: Scroller
+meta_title: Documentation for Kendo UI Mobile Scroller widget 
+meta_description: How to achieve touch-friendly scrolling of the contents of a given DOM element by using Kendo UI Mobile Scroller Widget.
 slug: gs-mobile-scroller
+relatedDocs: api-mobile-scroller
 tags: getting-started,mobile
 publish: true
 ---
@@ -44,8 +47,10 @@ For the scroller to work, its element should have fixed dimensions (width and/or
         }
     </script>
 
+### Scroller Properties
+
 The mobile Scroller widget exposes the following fields:
 
+*   **scrollElement** - the inner Scroller element that holds the scrolling content. Use this field if you wish to change the element contents after the Scroller is initialized on it.
 *   **scrollTop** - the number of pixels that are hidden from view above the scrollable area.
 *   **scrollLeft** - the number of pixels that are hidden from view to the left of the scrollable area.
-

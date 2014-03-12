@@ -1,5 +1,7 @@
 ---
 title: Grid
+meta_title: Server-side API documentation for Kendo UI jQuery Grid widget for ASP.NET MVC
+meta_description: Documentation and code examples about server-side and client-side API for Kendo UI Grid component.
 slug: grid
 publish: true
 ---
@@ -474,9 +476,10 @@ If you want to be notified when an ajax request is being made use the following 
 
     dataSource => dataSource.Ajax().Events(e => e.RequestStart("onRequestStart"))
 
-If you need to send custom data to the action method use .Data() on the DataSource:
+If you need to send custom data to the action method use .Data() on the DataSource's operation:
 
-    dataSource => dataSource.Ajax().Data("sendData")
+    dataSource => dataSource.Ajax()
+        .Read(read=>read.Action("Action","Controller").Data("sendData"))
     
     function sendData() {
         return { foo: "bar" };

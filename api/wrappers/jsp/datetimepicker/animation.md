@@ -6,37 +6,40 @@ publish: true
 ---
 
 # \<kendo:dateTimePicker-animation\>
-A JSP tag representing Kendo Animation.
+
+Configures the opening and closing animations of the popups. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
 
 #### Example
     <kendo:dateTimePicker>
         <kendo:dateTimePicker-animation></kendo:dateTimePicker-animation>
     </kendo:dateTimePicker>
 
+## Configuration Attributes
 
-## Child JSP Tags
+
+##  Configuration JSP Tags
 
 ### kendo:dateTimePicker-animation-close
 
-The animation(s) used for hiding of the pop-up.
+The animation played when a popup is closed.
 
-More documentation is available at [kendo:dateTimePicker-animation-close](/api/wrappers/jsp/datetimepicker/animation-close).
+More documentation is available at [kendo:dateTimePicker-animation-close](/kendo-ui/api/wrappers/jsp/datetimepicker/animation-close).
 
 #### Example
 
     <kendo:dateTimePicker-animation>
         <kendo:dateTimePicker-animation-close></kendo:dateTimePicker-animation-close>
     </kendo:dateTimePicker-animation>
- 
+
 ### kendo:dateTimePicker-animation-open
 
-The animation(s) used for displaying of the pop-up.
+The animation played when the popup is opened.
 
-More documentation is available at [kendo:dateTimePicker-animation-open](/api/wrappers/jsp/datetimepicker/animation-open).
+More documentation is available at [kendo:dateTimePicker-animation-open](/kendo-ui/api/wrappers/jsp/datetimepicker/animation-open).
 
 #### Example
 
     <kendo:dateTimePicker-animation>
         <kendo:dateTimePicker-animation-open></kendo:dateTimePicker-animation-open>
     </kendo:dateTimePicker-animation>
- 
+

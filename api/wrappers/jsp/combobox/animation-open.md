@@ -6,33 +6,29 @@ publish: true
 ---
 
 # \<kendo:comboBox-animation-open\>
-A JSP tag representing Kendo Open.
+
+The animation played when the suggestion popup is opened.
 
 #### Example
     <kendo:comboBox-animation>
         <kendo:comboBox-animation-open></kendo:comboBox-animation-open>
     </kendo:comboBox-animation>
 
-
 ## Configuration Attributes
-
-
-### effects `String`
-
-Effect to be used for opening of the popup.
-
-#### Example
-    <kendo:comboBox effects="effects">
-    </kendo:comboBox>
-
-
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
 #### Example
-    <kendo:comboBox duration="duration">
-    </kendo:comboBox>
+    <kendo:comboBox-animation-open duration="duration">
+    </kendo:comboBox-animation-open>
 
+### effects `java.lang.String`
+
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
+
+#### Example
+    <kendo:comboBox-animation-open effects="effects">
+    </kendo:comboBox-animation-open>
 

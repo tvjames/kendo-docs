@@ -1,5 +1,7 @@
 ---
 title: Using Kendo With Rails
+meta_title: Examples of using Kendo UI in Ruby on Rails apps
+meta_description: Learn how to quickly add Kendo UI to your Ruby on Rails application with the kendoui-rails Gem.
 slug: gs-using-kendo-with-rails
 tags: 101, Getting Started, Rails
 related: gs-what-is-kendo, gs-downloading-kendo
@@ -101,4 +103,4 @@ Using Kendo UI with Rails in your apps is simple with the kendo-rails gem. If yo
 [2]: https://github.com/telerik/kendoui_rails "kendoui_rails on GitHub"
 [3]: http://www.youtube.com/watch?v=7_KlxiCMQe8 "Demo of the kendoui-rails Gem on YouTube"
 [4]: http://guides.rubyonrails.org/asset_pipeline.html "Rails 3.1 Asset Pipeline"
-[5]: /api/web/autocomplete "AutoComplete Reference"
+[5]: http://docs.telerik.com/kendo-ui/api/web/autocomplete "AutoComplete Reference"

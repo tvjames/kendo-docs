@@ -1,6 +1,9 @@
 ---
-title: NumericTextBox Overview
+title: Overview
+meta_title: NumericTextBox UI widget - documentation overview
+meta_description: How to create NumericTextBox widget and deal with proper configuration of its behaviors.
 slug: gs-web-numerictextbox-overview
+relatedDocs: api-web-numerictextbox
 tags: getting-started,web
 publish: true
 ---
@@ -46,10 +49,7 @@ controlled:
 *   Precision of the number
 *   Number format (any valid number format is allowed)
 
-
-
-To see a full list of available properties and values, review the
-Slider Configuration API documentation tab.
+For a complete overview of the NumericTextBox's methods and configuration options, [review the NumericTextBox API Reference](/kendo-ui/api/web/numerictextbox).
 
 ### Customizing NumericTextBox defaults
 
@@ -78,6 +78,11 @@ Slider Configuration API documentation tab.
          format: "p",
          value: 0.15 // 15 %
      });
+
+## Support for label element
+
+Because of the complex rendering of the widget, focusing of the widget using label element will require additional implementation.
+Check [this jsFiddle demo](http://jsfiddle.net/krustev/6mHKF/), which shows how to achieve this.
 
 ## Accessing an Existing NumericTextBox
 

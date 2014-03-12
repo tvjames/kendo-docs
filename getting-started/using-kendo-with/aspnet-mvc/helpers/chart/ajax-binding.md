@@ -1,5 +1,7 @@
 ---
 title: Ajax Binding
+meta_title: Configuration of Kendo UI Chart for ASP.NET MVC for Ajax binding
+meta_description: How to configure Kendo UI Chart for ASP.NET MVC for Ajax binding in quick steps.
 slug: mav-chart-ajax-binding
 publish: true
 ---
@@ -56,68 +58,4 @@ To configure the Kendo Chart for ajax binding follow these steps:
                       .Categories(model => model.Year)
                   )
             )
-
-## Pass Additional Data to Action Method
-
-To pass additional parameters to the action method use the `Data` setting. Provide the name of a JavaScript function which will return an object
-containing the additional data:
-
-### Action method
-
-    public ActionResult InternetUsers_Read(string country)
-    {
-        //Implementation omitted
-    }
-
-
-### WebForms - Send additional data
-
-    <%: Html.Kendo().Chart<MvcApplication1.Models.InternetUsers>()
-            .Name("internetUsersChart")
-            .DataSource(dataSource => dataSource
-                .Read(read => read.Action("InternetUsers_Read", "Home"))
-                .Data("additionalData")
-            )
-            .Series(series => {
-                series.Bar(d => d.Value)
-                      .Name("United States");
-            })
-            .CategoryAxis(axis => axis
-                .Categories(model => model.Year)
-            )
-    %>
-
-    <script>
-        function additionalData() {
-            return {
-                country: "United States"
-            };
-        }
-    </script>
-
-
-### Razor - Send additional data
-
-    @(Html.Kendo().Chart<MvcApplication1.Models.InternetUsers>()
-          .Name("internetUsersChart")
-          .DataSource(dataSource => dataSource
-              .Read(read => read.Action("InternetUsers_Read", "Home"))
-              .Data("additionalData")
-          )
-          .Series(series => {
-              series.Bar(d => d.Value)
-                  .Name("United States");
-          })
-          .CategoryAxis(axis => axis
-              .Categories(model => model.Year)
-          )
-    )
-
-    <script>
-        function additionalData() {
-            return {
-                country: "United States"
-            };
-        }
-    </script>
 
