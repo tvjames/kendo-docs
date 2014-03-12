@@ -1,6 +1,6 @@
 ---
 title: Overview
-slug: jsp-colorpalatte-overview
+slug: jsp-colorpalatte-editor-overview
 publish: true
 ---
 
