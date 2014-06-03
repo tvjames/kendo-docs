@@ -9,8 +9,7 @@ publish: true
 An abstract class representing the top-level drawing surface.
 This class can't be instantiated directly.
 
-Specific implementations are created with the static `create` method.
-
+Specific implementations are created via the static `create` method.
 The implementations for SVG, Canvas and VML inherit from this base class.
 
 ## Example - Creating a drawing surface
@@ -37,6 +36,10 @@ The height of the surface element.
 By default it will expand to fill the height of the container.
 
 ## Methods
+
+### clear
+
+Clears the drawing surface.
 
 ### create
 
@@ -74,6 +77,16 @@ This parameter will be ignored if the preferred surface is unavailable.
 #### Returns
 
 `kendo.dataviz.drawing.Surface` An implementation matching the browser capabilities or caller preference; undefined if none is available.
+
+### draw
+
+Draws the shape on the surface.
+
+#### Parameters
+
+##### shape `kendo.dataviz.drawing.Element`
+
+The shape to draw.
 
 ### resize
 
