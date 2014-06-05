@@ -47,7 +47,23 @@ Creates a drawing surface matching the browser capabilities.
 
 > This is a static method exposed as Surface.create
 
-## Example - Specifyin a preferred implementation
+#### Example - Creating a surface with any available implementation
+
+        <div id="container"></div>
+        <script>
+            var d = kendo.dataviz.drawing;
+            var surface = d.Surface.create($("#container"));
+        </script>
+
+#### Example - Specifying a preferred implementation
+
+        <div id="container"></div>
+        <script>
+            var d = kendo.dataviz.drawing;
+            var surface = d.Surface.create($("#container"), "canvas");
+        </script>
+
+#### Example - Specifying user options and preferred implementation
 
         <div id="container"></div>
         <script>
@@ -68,6 +84,7 @@ The DOM element that will host the surface.
 ##### options `Object`
 
 The options to pass to the surface.
+This parameter can be omitted.
 
 ##### preferred `String`
 
