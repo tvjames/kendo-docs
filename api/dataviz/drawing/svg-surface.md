@@ -10,7 +10,7 @@ A [Surface](./surface) implementation that renders as SVG document.
 
 > Use [Surface.create](./surface#methods-create) to create a drawing surface based on browser capabilities.
 
-## Example - Creating an SVG drawing surface
+## Example - Creating a SVG drawing surface
 
         <div id="container" style="position: relative; width: 600px; height: 400px;"></div>
         <script>
