@@ -29,6 +29,12 @@ navigation:
         title: "Using Kendo With"
     "*asp.net":
         title: "ASP.NET"
+    "*widgets":
+        title: "Widgets"
+    "*helpers":
+        title: "View Helpers"
+    "*tags":
+        title: "Tags"
     "*accessibility":
         title: "Accessibility"
     "*aspnet-mvc":
@@ -37,8 +43,40 @@ navigation:
         title: "PHP"
     "*jsp":
         title: "JSP"
+    "*mobileactionsheet":
+        title: "MobileActionSheet"
+    "*mobileapplication":
+        title: "MobileApplication"
+    "*mobilebuttongroup":
+        title: "MobileButtonGroup"
+    "*mobiledrawer":
+        title: "MobileDrawer"
+    "*mobilenavbar":
+        title: "MobileNavBar"
+    "*mobilelayout":
+        title: "MobileLayout"
+    "*mobilemodalview":
+        title: "MobileModalView"
+    "*mobilepopover":
+        title: "MobilePopOver"
+    "*mobilescrollview":
+        title: "MobileScrollView"
+    "*mobilesplitview":
+        title: "MobileSplitView"
+    "*mobileswitch":
+        title: "MobileSwitch"
+    "*mobiletabstrip":
+        title: "MobileTabStrip"
+    "*mobilelistview":
+        title: "MobileListView"
+    "*mobileview":
+        title: "MobileView"
+    "*mobilebutton":
+        title: "MobileButton"
     "*barcode":
         title: "Barcode"
+    "*stockchart":
+        title: "Stock Chart"
     "*chart":
         title: "Chart"
     "*diagram":
@@ -79,6 +117,10 @@ navigation:
         title: "Button"
     "*calendar":
         title: "Calendar"
+    "*colorpalette":
+        title: "ColorPalette"
+    "*flatcolorpicker":
+        title: "FlatColorPicker"
     "*colorpicker":
         title: "ColorPicker"
     "*combobox":
@@ -93,6 +135,8 @@ navigation:
         title: "Editor"
     "*gantt":
         title: "Gantt"
+    "*pivotgrid":
+        title: "PivotGrid"
     "*grid":
         title: "Grid"
     "*listview":
