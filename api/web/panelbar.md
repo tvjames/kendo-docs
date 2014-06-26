@@ -815,8 +815,7 @@ The **PanelBar** item(s) to be removed, expressed as a selector string, DOM elem
 
 ### select
 
-Selects the specified item of the **PanelBar**. If this method is invoked without arguments, it
-returns the currently selected item.
+Gets or sets the selected item.
 
 #### Example
 
@@ -845,10 +844,14 @@ returns the currently selected item.
 
 #### Parameters
 
-##### element `String|Element|jQuery`
+##### element `String|Element|jQuery` *(optional)*
 
 The **PanelBar** item to be selected, expressed as a string containing a selector expression or
 represented by a [jQuery selector](http://api.jquery.com/category/selectors/).
+
+#### Returns
+
+`jQuery` the selected item if called without arguments. `kendo.ui.PanelBar` if called with arguments.
 
 ## Events
 
