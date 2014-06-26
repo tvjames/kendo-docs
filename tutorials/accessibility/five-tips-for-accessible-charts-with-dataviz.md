@@ -45,7 +45,12 @@ In the next section, we'll look at five steps you can take to improve the access
 		<figure>
 		    <div id="chart" role="img" title="Sources of Electricity Produced in Spain, 2008"></div>
 		    <figcaption>
-		    	In 2008, Spain produced electricity for its residents in four ways. Chief among these was Nuclear power, which accounted for approximately 49% of production. Next were Wind and Hydro-electric power, which produced 27% and 22% of the nation's electricity, respectively. In a distant fourth was solor power, which accounted for only 2% of all electricity produced by the country.
+		    	In 2008, Spain produced electricity for its residents in four ways.
+                Chief among these was Nuclear power, which accounted for approximately 49% of production.
+                Next were Wind and Hydro-electric power, which produced
+                27% and 22% of the nation's electricity, respectively.
+                In a distant fourth was solor power,
+                which accounted for only 2% of all electricity produced by the country.
 		    </figcaption>
 	    </figure>
 
