@@ -100,7 +100,7 @@ Defines the y-coordinate of the shape when added to the diagram.
 
 Defines the connectors the shape owns.You can easily define your own custom connectors or mix-match with the above defined custom connectors.Example - custom shape with custom connectorsThe following defines a custom shape with connectors adapted to the shape's outline. Note in particular the various helpful methods (right(), left(), top()) to define positions relative to the shape.
 
-More documentation is available at [kendo:diagram-shapeDefaults-connectors](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults-connectors).
+More documentation is available at [kendo:diagram-shapeDefaults-connectors](/api/wrappers/jsp/diagram/shapedefaults-connectors).
 
 #### Example
 
@@ -112,7 +112,7 @@ More documentation is available at [kendo:diagram-shapeDefaults-connectors](/ken
 
 Defines the shapes content settings.
 
-More documentation is available at [kendo:diagram-shapeDefaults-content](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults-content).
+More documentation is available at [kendo:diagram-shapeDefaults-content](/api/wrappers/jsp/diagram/shapedefaults-content).
 
 #### Example
 
@@ -124,7 +124,7 @@ More documentation is available at [kendo:diagram-shapeDefaults-content](/kendo-
 
 Defines the hover configuration.
 
-More documentation is available at [kendo:diagram-shapeDefaults-hover](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults-hover).
+More documentation is available at [kendo:diagram-shapeDefaults-hover](/api/wrappers/jsp/diagram/shapedefaults-hover).
 
 #### Example
 
@@ -136,7 +136,7 @@ More documentation is available at [kendo:diagram-shapeDefaults-hover](/kendo-ui
 
 
 
-More documentation is available at [kendo:diagram-shapeDefaults-rotation](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults-rotation).
+More documentation is available at [kendo:diagram-shapeDefaults-rotation](/api/wrappers/jsp/diagram/shapedefaults-rotation).
 
 #### Example
 
@@ -148,7 +148,7 @@ More documentation is available at [kendo:diagram-shapeDefaults-rotation](/kendo
 
 Defines the stroke configuration.
 
-More documentation is available at [kendo:diagram-shapeDefaults-stroke](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults-stroke).
+More documentation is available at [kendo:diagram-shapeDefaults-stroke](/api/wrappers/jsp/diagram/shapedefaults-stroke).
 
 #### Example
 

@@ -20,7 +20,7 @@ Configures the legend inactive items.
 
 Configures the legend labels.
 
-More documentation is available at [kendo:stockChart-legend-inactiveItems-labels](/kendo-ui/api/wrappers/jsp/stockchart/legend-inactiveitems-labels).
+More documentation is available at [kendo:stockChart-legend-inactiveItems-labels](/api/wrappers/jsp/stockchart/legend-inactiveitems-labels).
 
 #### Example
 
@@ -32,7 +32,7 @@ More documentation is available at [kendo:stockChart-legend-inactiveItems-labels
 
 Configures the legend markers.
 
-More documentation is available at [kendo:stockChart-legend-inactiveItems-markers](/kendo-ui/api/wrappers/jsp/stockchart/legend-inactiveitems-markers).
+More documentation is available at [kendo:stockChart-legend-inactiveItems-markers](/api/wrappers/jsp/stockchart/legend-inactiveitems-markers).
 
 #### Example
 

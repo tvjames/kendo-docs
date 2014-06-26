@@ -4,14 +4,14 @@ title: ListView
 
 # \Kendo\UI\ListView
 
-A PHP wrapper for Kendo UI [ListView](/kendo-ui/api/web/listview).
+A PHP wrapper for Kendo UI [ListView](/api/web/listview).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use ListView in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo ListView
 
@@ -69,7 +69,7 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### cancel
 Fired when the user clicks the "cancel" button.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [cancel](/kendo-ui/api/web/listview#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/listview#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -96,7 +96,7 @@ For additional information check the [cancel](/kendo-ui/api/web/listview#events-
     $listView->cancel('onCancel');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -105,7 +105,7 @@ For additional information check the [cancel](/kendo-ui/api/web/listview#events-
 
 ### change
 Fires when the list view selection has changed.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [change](/kendo-ui/api/web/listview#events-change) event documentation.
+For additional information check the [change](/api/web/listview#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -132,7 +132,7 @@ For additional information check the [change](/kendo-ui/api/web/listview#events-
     $listView->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -141,7 +141,7 @@ For additional information check the [change](/kendo-ui/api/web/listview#events-
 
 ### dataBinding
 Fires when the list view is about to be rendered.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBinding](/kendo-ui/api/web/listview#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/listview#events-dataBinding) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -168,7 +168,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/listview#ev
     $listView->dataBinding('onDataBinding');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -177,7 +177,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/listview#ev
 
 ### dataBound
 Fires when the list view has received data from the data source and it is already rendered.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBound](/kendo-ui/api/web/listview#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/listview#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -204,7 +204,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/listview#even
     $listView->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -222,7 +222,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -240,7 +240,7 @@ Sets the data source of the dataSource.
 
 ### edit
 Fires when the list view enters edit mode.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [edit](/kendo-ui/api/web/listview#events-edit) event documentation.
+For additional information check the [edit](/api/web/listview#events-edit) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -267,7 +267,7 @@ For additional information check the [edit](/kendo-ui/api/web/listview#events-ed
     $listView->edit('onEdit');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -331,7 +331,7 @@ Indicates whether paging is enabled/disabled.
     ?>
 
 
-#### Example - using [\Kendo\UI\ListViewPageable](/kendo-ui/api/wrappers/php/Kendo/UI/ListViewPageable)
+#### Example - using [\Kendo\UI\ListViewPageable](/api/wrappers/php/Kendo/UI/ListViewPageable)
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
     $pageable = new \Kendo\UI\ListViewPageable();
@@ -350,7 +350,7 @@ Indicates whether paging is enabled/disabled.
 
 ### remove
 Fires before the list view item is removed. If it is not prevented will call DataSource sync method.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [remove](/kendo-ui/api/web/listview#events-remove) event documentation.
+For additional information check the [remove](/api/web/listview#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -377,7 +377,7 @@ For additional information check the [remove](/kendo-ui/api/web/listview#events-
     $listView->remove('onRemove');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');
@@ -386,7 +386,7 @@ For additional information check the [remove](/kendo-ui/api/web/listview#events-
 
 ### save
 Fired when a data item is saved.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [save](/kendo-ui/api/web/listview#events-save) event documentation.
+For additional information check the [save](/api/web/listview#events-save) event documentation.
 
 #### Returns
 `\Kendo\UI\ListView`
@@ -413,7 +413,7 @@ For additional information check the [save](/kendo-ui/api/web/listview#events-sa
     $listView->save('onSave');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $listView = new \Kendo\UI\ListView('ListView');

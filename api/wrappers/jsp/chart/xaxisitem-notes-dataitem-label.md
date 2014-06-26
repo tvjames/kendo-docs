@@ -92,7 +92,7 @@ If set to true the chart will display the x axis notes label. By default the x a
 
 The border of the label.
 
-More documentation is available at [kendo:chart-xAxisItem-notes-dataItem-label-border](/kendo-ui/api/wrappers/jsp/chart/xaxisitem-notes-dataitem-label-border).
+More documentation is available at [kendo:chart-xAxisItem-notes-dataItem-label-border](/api/wrappers/jsp/chart/xaxisitem-notes-dataitem-label-border).
 
 #### Example
 

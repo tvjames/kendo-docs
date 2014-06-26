@@ -3,7 +3,7 @@ title: comboBox
 ---
 
 # \<kendo:comboBox\>
-A JSP wrapper for Kendo UI [ComboBox](/kendo-ui/api/web/combobox).
+A JSP wrapper for Kendo UI [ComboBox](/api/web/combobox).
 
 ## Configuration Attributes
 
@@ -177,7 +177,7 @@ Specifies the value binding behavior for the widget when the initial model value
 
 Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
-More documentation is available at [kendo:comboBox-animation](/kendo-ui/api/wrappers/jsp/combobox/animation).
+More documentation is available at [kendo:comboBox-animation](/api/wrappers/jsp/combobox/animation).
 
 #### Example
 
@@ -193,7 +193,7 @@ More documentation is available at [kendo:comboBox-animation](/kendo-ui/api/wrap
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/combobox#events-change) event documentation.
+For additional information check the [change](/api/web/combobox#events-change) event documentation.
 
 #### Example
     <kendo:comboBox change="handle_change">
@@ -209,7 +209,7 @@ For additional information check the [change](/kendo-ui/api/web/combobox#events-
 Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [close](/kendo-ui/api/web/combobox#events-close) event documentation.
+For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Example
     <kendo:comboBox close="handle_close">
@@ -225,7 +225,7 @@ For additional information check the [close](/kendo-ui/api/web/combobox#events-c
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/combobox#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
 
 #### Example
     <kendo:comboBox dataBound="handle_dataBound">
@@ -241,7 +241,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/combobox#even
 Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [open](/kendo-ui/api/web/combobox#events-open) event documentation.
+For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Example
     <kendo:comboBox open="handle_open">
@@ -257,7 +257,7 @@ For additional information check the [open](/kendo-ui/api/web/combobox#events-op
 Fired when an item from the popup is selected by the user.
 
 
-For additional information check the [select](/kendo-ui/api/web/combobox#events-select) event documentation.
+For additional information check the [select](/api/web/combobox#events-select) event documentation.
 
 #### Example
     <kendo:comboBox select="handle_select">
@@ -273,7 +273,7 @@ For additional information check the [select](/kendo-ui/api/web/combobox#events-
 Fired when the value of the widget is changed via API or user interaction.
 
 
-For additional information check the [cascade](/kendo-ui/api/web/combobox#events-cascade) event documentation.
+For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Example
     <kendo:comboBox cascade="handle_cascade">
@@ -291,7 +291,7 @@ For additional information check the [cascade](/kendo-ui/api/web/combobox#events
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/combobox#events-change) event documentation.
+For additional information check the [change](/api/web/combobox#events-change) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -309,7 +309,7 @@ For additional information check the [change](/kendo-ui/api/web/combobox#events-
 Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [close](/kendo-ui/api/web/combobox#events-close) event documentation.
+For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -327,7 +327,7 @@ For additional information check the [close](/kendo-ui/api/web/combobox#events-c
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/combobox#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -345,7 +345,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/combobox#even
 Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [open](/kendo-ui/api/web/combobox#events-open) event documentation.
+For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -363,7 +363,7 @@ For additional information check the [open](/kendo-ui/api/web/combobox#events-op
 Fired when an item from the popup is selected by the user.
 
 
-For additional information check the [select](/kendo-ui/api/web/combobox#events-select) event documentation.
+For additional information check the [select](/api/web/combobox#events-select) event documentation.
 
 #### Example
     <kendo:comboBox>
@@ -381,7 +381,7 @@ For additional information check the [select](/kendo-ui/api/web/combobox#events-
 Fired when the value of the widget is changed via API or user interaction.
 
 
-For additional information check the [cascade](/kendo-ui/api/web/combobox#events-cascade) event documentation.
+For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Example
     <kendo:comboBox>

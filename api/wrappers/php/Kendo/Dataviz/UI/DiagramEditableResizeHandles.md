@@ -57,7 +57,7 @@ Set the handles hover styles.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableResizeHandlesHover|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandlesHover](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandlesHover)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandlesHover](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandlesHover)
     <?php
     $handles = new \Kendo\Dataviz\UI\DiagramEditableResizeHandles();
     $hover = new \Kendo\Dataviz\UI\DiagramEditableResizeHandlesHover();
@@ -86,7 +86,7 @@ Specifies the handles stroke styles.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableResizeHandlesStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandlesStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandlesStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandlesStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandlesStroke)
     <?php
     $handles = new \Kendo\Dataviz\UI\DiagramEditableResizeHandles();
     $stroke = new \Kendo\Dataviz\UI\DiagramEditableResizeHandlesStroke();

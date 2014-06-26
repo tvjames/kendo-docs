@@ -30,7 +30,7 @@ The field which contains the name of the file/directory
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFieldsName](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFieldsName)
+#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFieldsName](/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFieldsName)
     <?php
     $fields = new \Kendo\UI\EditorFileBrowserSchemaModelFields();
     $name = new \Kendo\UI\EditorFileBrowserSchemaModelFieldsName();
@@ -68,7 +68,7 @@ The field which contains the size of file.
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFieldsSize](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFieldsSize)
+#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFieldsSize](/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFieldsSize)
     <?php
     $fields = new \Kendo\UI\EditorFileBrowserSchemaModelFields();
     $size = new \Kendo\UI\EditorFileBrowserSchemaModelFieldsSize();
@@ -106,7 +106,7 @@ The field which contains the type of the entry. Either f for file or d for direc
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFieldsType](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFieldsType)
+#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFieldsType](/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFieldsType)
     <?php
     $fields = new \Kendo\UI\EditorFileBrowserSchemaModelFields();
     $type = new \Kendo\UI\EditorFileBrowserSchemaModelFieldsType();

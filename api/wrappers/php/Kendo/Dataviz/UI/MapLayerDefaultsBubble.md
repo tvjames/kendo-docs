@@ -93,7 +93,7 @@ The default style for bubble layer symbols.
 ##### $value `\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyle|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsBubbleStyle)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyle](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsBubbleStyle)
     <?php
     $bubble = new \Kendo\Dataviz\UI\MapLayerDefaultsBubble();
     $style = new \Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyle();

@@ -4,14 +4,14 @@ title: Scheduler
 
 # \Kendo\UI\Scheduler
 
-A PHP wrapper for Kendo UI [Scheduler](/kendo-ui/api/web/scheduler).
+A PHP wrapper for Kendo UI [Scheduler](/api/web/scheduler).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Scheduler in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Scheduler
 
@@ -93,7 +93,7 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### cancel
 Fired when the user cancels editing by clicking the "cancel" button.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [cancel](/kendo-ui/api/web/scheduler#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/scheduler#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -120,7 +120,7 @@ For additional information check the [cancel](/kendo-ui/api/web/scheduler#events
     $scheduler->cancel('onCancel');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -129,7 +129,7 @@ For additional information check the [cancel](/kendo-ui/api/web/scheduler#events
 
 ### change
 Fired when the user selects a cell or event in the scheduler.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [change](/kendo-ui/api/web/scheduler#events-change) event documentation.
+For additional information check the [change](/api/web/scheduler#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -156,7 +156,7 @@ For additional information check the [change](/kendo-ui/api/web/scheduler#events
     $scheduler->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -184,7 +184,7 @@ If set to false the "current time" marker of the scheduler would not be displaye
     ?>
 
 
-#### Example - using [\Kendo\UI\SchedulerCurrentTimeMarker](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerCurrentTimeMarker)
+#### Example - using [\Kendo\UI\SchedulerCurrentTimeMarker](/api/wrappers/php/Kendo/UI/SchedulerCurrentTimeMarker)
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
     $currentTimeMarker = new \Kendo\UI\SchedulerCurrentTimeMarker();
@@ -203,7 +203,7 @@ If set to false the "current time" marker of the scheduler would not be displaye
 
 ### dataBinding
 Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBinding](/kendo-ui/api/web/scheduler#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/scheduler#events-dataBinding) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -230,7 +230,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/scheduler#e
     $scheduler->dataBinding('onDataBinding');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -239,7 +239,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/scheduler#e
 
 ### dataBound
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBound](/kendo-ui/api/web/scheduler#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/scheduler#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -266,7 +266,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/scheduler#eve
     $scheduler->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -284,7 +284,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -346,7 +346,7 @@ If the developer wants to control the day and month order then one needs to defi
 
 ### edit
 Fired when the user opens a scheduler event in edit mode by or creates a new event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [edit](/kendo-ui/api/web/scheduler#events-edit) event documentation.
+For additional information check the [edit](/api/web/scheduler#events-edit) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -373,7 +373,7 @@ For additional information check the [edit](/kendo-ui/api/web/scheduler#events-e
     $scheduler->edit('onEdit');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -401,7 +401,7 @@ If set to true the user would be able to create new scheduler events and modify 
     ?>
 
 
-#### Example - using [\Kendo\UI\SchedulerEditable](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerEditable)
+#### Example - using [\Kendo\UI\SchedulerEditable](/api/wrappers/php/Kendo/UI/SchedulerEditable)
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
     $editable = new \Kendo\UI\SchedulerEditable();
@@ -481,7 +481,7 @@ If set to false the footer of the scheduler would not be displayed.
     ?>
 
 
-#### Example - using [\Kendo\UI\SchedulerFooter](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerFooter)
+#### Example - using [\Kendo\UI\SchedulerFooter](/api/wrappers/php/Kendo/UI/SchedulerFooter)
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
     $footer = new \Kendo\UI\SchedulerFooter();
@@ -510,7 +510,7 @@ The configuration of the scheduler resource(s) grouping.
 ##### $value `\Kendo\UI\SchedulerGroup|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerGroup](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerGroup)
+#### Example - using [\Kendo\UI\SchedulerGroup](/api/wrappers/php/Kendo/UI/SchedulerGroup)
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
     $group = new \Kendo\UI\SchedulerGroup();
@@ -623,7 +623,7 @@ The configuration of the scheduler messages. Use this option to customize or loc
 ##### $value `\Kendo\UI\SchedulerMessages|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessages](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessages)
+#### Example - using [\Kendo\UI\SchedulerMessages](/api/wrappers/php/Kendo/UI/SchedulerMessages)
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
     $messages = new \Kendo\UI\SchedulerMessages();
@@ -726,7 +726,7 @@ If set to true and the scheduler is viewed on mobile browser it will use adaptiv
 
 ### move
 Fired when the user is moving an event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [move](/kendo-ui/api/web/scheduler#events-move) event documentation.
+For additional information check the [move](/api/web/scheduler#events-move) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -753,7 +753,7 @@ For additional information check the [move](/kendo-ui/api/web/scheduler#events-m
     $scheduler->move('onMove');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -762,7 +762,7 @@ For additional information check the [move](/kendo-ui/api/web/scheduler#events-m
 
 ### moveEnd
 Fired when the user stops moving an event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [moveEnd](/kendo-ui/api/web/scheduler#events-moveEnd) event documentation.
+For additional information check the [moveEnd](/api/web/scheduler#events-moveEnd) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -789,7 +789,7 @@ For additional information check the [moveEnd](/kendo-ui/api/web/scheduler#event
     $scheduler->moveEnd('onMoveEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -798,7 +798,7 @@ For additional information check the [moveEnd](/kendo-ui/api/web/scheduler#event
 
 ### moveStart
 Fired when the user starts to drag an event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [moveStart](/kendo-ui/api/web/scheduler#events-moveStart) event documentation.
+For additional information check the [moveStart](/api/web/scheduler#events-moveStart) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -825,7 +825,7 @@ For additional information check the [moveStart](/kendo-ui/api/web/scheduler#eve
     $scheduler->moveStart('onMoveStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -834,7 +834,7 @@ For additional information check the [moveStart](/kendo-ui/api/web/scheduler#eve
 
 ### navigate
 Fired when the user changes the selected date, or view of the schedulerThe event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [navigate](/kendo-ui/api/web/scheduler#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/scheduler#events-navigate) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -861,7 +861,7 @@ For additional information check the [navigate](/kendo-ui/api/web/scheduler#even
     $scheduler->navigate('onNavigate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -870,7 +870,7 @@ For additional information check the [navigate](/kendo-ui/api/web/scheduler#even
 
 ### remove
 Fired when the user clicks the "destroy" button.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [remove](/kendo-ui/api/web/scheduler#events-remove) event documentation.
+For additional information check the [remove](/api/web/scheduler#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -897,7 +897,7 @@ For additional information check the [remove](/kendo-ui/api/web/scheduler#events
     $scheduler->remove('onRemove');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -906,7 +906,7 @@ For additional information check the [remove](/kendo-ui/api/web/scheduler#events
 
 ### resize
 Fired when the user is resizing an event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [resize](/kendo-ui/api/web/scheduler#events-resize) event documentation.
+For additional information check the [resize](/api/web/scheduler#events-resize) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -933,7 +933,7 @@ For additional information check the [resize](/kendo-ui/api/web/scheduler#events
     $scheduler->resize('onResize');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -942,7 +942,7 @@ For additional information check the [resize](/kendo-ui/api/web/scheduler#events
 
 ### resizeEnd
 Fired when the user releases the mouse after resizing an event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [resizeEnd](/kendo-ui/api/web/scheduler#events-resizeEnd) event documentation.
+For additional information check the [resizeEnd](/api/web/scheduler#events-resizeEnd) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -969,7 +969,7 @@ For additional information check the [resizeEnd](/kendo-ui/api/web/scheduler#eve
     $scheduler->resizeEnd('onResizeEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -978,7 +978,7 @@ For additional information check the [resizeEnd](/kendo-ui/api/web/scheduler#eve
 
 ### resizeStart
 Fired when the user starts to resize an event.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [resizeStart](/kendo-ui/api/web/scheduler#events-resizeStart) event documentation.
+For additional information check the [resizeStart](/api/web/scheduler#events-resizeStart) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -1005,7 +1005,7 @@ For additional information check the [resizeStart](/kendo-ui/api/web/scheduler#e
     $scheduler->resizeStart('onResizeStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');
@@ -1052,7 +1052,7 @@ Adds one or more SchedulerResource to the Scheduler.
 
 ### save
 Fired when the user saves a scheduler event by clicking the "save" button.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [save](/kendo-ui/api/web/scheduler#events-save) event documentation.
+For additional information check the [save](/api/web/scheduler#events-save) event documentation.
 
 #### Returns
 `\Kendo\UI\Scheduler`
@@ -1079,7 +1079,7 @@ For additional information check the [save](/kendo-ui/api/web/scheduler#events-s
     $scheduler->save('onSave');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $scheduler = new \Kendo\UI\Scheduler('Scheduler');

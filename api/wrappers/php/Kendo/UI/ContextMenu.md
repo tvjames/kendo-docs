@@ -4,14 +4,14 @@ title: ContextMenu
 
 # \Kendo\UI\ContextMenu
 
-A PHP wrapper for Kendo UI [ContextMenu](/kendo-ui/api/web/contextmenu).
+A PHP wrapper for Kendo UI [ContextMenu](/api/web/contextmenu).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use ContextMenu in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo ContextMenu
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### activate
 Fires when a sub menu or the ContextMenu gets opened and its animation finished.
-For additional information check the [activate](/kendo-ui/api/web/contextmenu#events-activate) event documentation.
+For additional information check the [activate](/api/web/contextmenu#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\ContextMenu`
@@ -59,7 +59,7 @@ For additional information check the [activate](/kendo-ui/api/web/contextmenu#ev
     $contextMenu->activate('onActivate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
@@ -97,7 +97,7 @@ by setting the close animation. Each animation also has a direction which can be
 ##### $value `\Kendo\UI\ContextMenuAnimation|array`
 
 
-#### Example - using [\Kendo\UI\ContextMenuAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/ContextMenuAnimation)
+#### Example - using [\Kendo\UI\ContextMenuAnimation](/api/wrappers/php/Kendo/UI/ContextMenuAnimation)
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
     $animation = new \Kendo\UI\ContextMenuAnimation();
@@ -116,7 +116,7 @@ by setting the close animation. Each animation also has a direction which can be
 
 ### close
 Fires before a sub menu or the ContextMenu gets closed. You can cancel this event to prevent closure.
-For additional information check the [close](/kendo-ui/api/web/contextmenu#events-close) event documentation.
+For additional information check the [close](/api/web/contextmenu#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\ContextMenu`
@@ -143,7 +143,7 @@ For additional information check the [close](/kendo-ui/api/web/contextmenu#event
     $contextMenu->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
@@ -179,7 +179,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
@@ -197,7 +197,7 @@ Sets the data source of the dataSource.
 
 ### deactivate
 Fires when a sub menu or the ContextMenu gets closed and its animation finished.
-For additional information check the [deactivate](/kendo-ui/api/web/contextmenu#events-deactivate) event documentation.
+For additional information check the [deactivate](/api/web/contextmenu#events-deactivate) event documentation.
 
 #### Returns
 `\Kendo\UI\ContextMenu`
@@ -224,7 +224,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/contextmenu#
     $contextMenu->deactivate('onDeactivate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
@@ -326,7 +326,7 @@ Adds one or more ContextMenuItem to the ContextMenu.
 
 ### open
 Fires before a sub menu or the ContextMenu gets opened. You can cancel this event to prevent opening the sub menu.
-For additional information check the [open](/kendo-ui/api/web/contextmenu#events-open) event documentation.
+For additional information check the [open](/api/web/contextmenu#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\ContextMenu`
@@ -353,7 +353,7 @@ For additional information check the [open](/kendo-ui/api/web/contextmenu#events
     $contextMenu->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');
@@ -400,7 +400,7 @@ its parent horizontally. You can also switch off the screen boundary detection c
 
 ### select
 Fires when a menu item gets selected.
-For additional information check the [select](/kendo-ui/api/web/contextmenu#events-select) event documentation.
+For additional information check the [select](/api/web/contextmenu#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\ContextMenu`
@@ -427,7 +427,7 @@ For additional information check the [select](/kendo-ui/api/web/contextmenu#even
     $contextMenu->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $contextMenu = new \Kendo\UI\ContextMenu('ContextMenu');

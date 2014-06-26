@@ -124,7 +124,7 @@ If set to true the chart will display the y axis labels. By default the y axis l
 
 The border of the labels.
 
-More documentation is available at [kendo:chart-yAxisItem-labels-border](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-labels-border).
+More documentation is available at [kendo:chart-yAxisItem-labels-border](/api/wrappers/jsp/chart/yaxisitem-labels-border).
 
 #### Example
 
@@ -136,7 +136,7 @@ More documentation is available at [kendo:chart-yAxisItem-labels-border](/kendo-
 
 The format used to display the labels when the x values are dates. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
-More documentation is available at [kendo:chart-yAxisItem-labels-dateFormats](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-labels-dateformats).
+More documentation is available at [kendo:chart-yAxisItem-labels-dateFormats](/api/wrappers/jsp/chart/yaxisitem-labels-dateformats).
 
 #### Example
 
@@ -148,7 +148,7 @@ More documentation is available at [kendo:chart-yAxisItem-labels-dateFormats](/k
 
 The margin of the labels. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-yAxisItem-labels-margin](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-labels-margin).
+More documentation is available at [kendo:chart-yAxisItem-labels-margin](/api/wrappers/jsp/chart/yaxisitem-labels-margin).
 
 #### Example
 
@@ -160,7 +160,7 @@ More documentation is available at [kendo:chart-yAxisItem-labels-margin](/kendo-
 
 The padding of the labels. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-yAxisItem-labels-padding](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-labels-padding).
+More documentation is available at [kendo:chart-yAxisItem-labels-padding](/api/wrappers/jsp/chart/yaxisitem-labels-padding).
 
 #### Example
 

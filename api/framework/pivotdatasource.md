@@ -6,13 +6,13 @@ description: Learn more about the configuration of Kendo UI PivotDataSource, met
 
 # kendo.data.PivotDataSource
 
-The data source used by the [kendo.ui.PivotGrid](/kendo-ui/api/web/pivotgrid) widget.
-Inherits from [kendo.data.DataSource](/kendo-ui/api/framework/datasource).
+The data source used by the [kendo.ui.PivotGrid](/api/web/pivotgrid) widget.
+Inherits from [kendo.data.DataSource](/api/framework/datasource).
 
 
 ## Configuration
 
-See the [DataSource configuration](/kendo-ui/api/framework/datasource#configuration) for all inherited configuration options.
+See the [DataSource configuration](/api/framework/datasource#configuration) for all inherited configuration options.
 
 ### columns `Array`
 
@@ -774,7 +774,7 @@ The result should have the following format:
 
 ## Methods
 
-See the [DataSource methods](/kendo-ui/api/framework/datasource#methods) for all inherited methods.
+See the [DataSource methods](/api/framework/datasource#methods) for all inherited methods.
 
 ### axes
 

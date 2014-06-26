@@ -75,7 +75,7 @@ The text messages displayed in pager. Use this option to customize or localize t
 ##### $value `\Kendo\UI\GridPageableMessages|array`
 
 
-#### Example - using [\Kendo\UI\GridPageableMessages](/kendo-ui/api/wrappers/php/Kendo/UI/GridPageableMessages)
+#### Example - using [\Kendo\UI\GridPageableMessages](/api/wrappers/php/Kendo/UI/GridPageableMessages)
     <?php
     $pageable = new \Kendo\UI\GridPageable();
     $messages = new \Kendo\UI\GridPageableMessages();

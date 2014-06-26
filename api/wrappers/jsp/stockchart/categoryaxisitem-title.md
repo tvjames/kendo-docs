@@ -85,7 +85,7 @@ The visibility of the title.
 
 The border of the title.
 
-More documentation is available at [kendo:stockChart-categoryAxisItem-title-border](/kendo-ui/api/wrappers/jsp/stockchart/categoryaxisitem-title-border).
+More documentation is available at [kendo:stockChart-categoryAxisItem-title-border](/api/wrappers/jsp/stockchart/categoryaxisitem-title-border).
 
 #### Example
 

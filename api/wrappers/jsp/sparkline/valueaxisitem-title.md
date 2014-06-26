@@ -93,7 +93,7 @@ The visibility of the title.
 
 The border of the title.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-title-border](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-title-border).
+More documentation is available at [kendo:sparkline-valueAxisItem-title-border](/api/wrappers/jsp/sparkline/valueaxisitem-title-border).
 
 #### Example
 

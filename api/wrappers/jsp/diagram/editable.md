@@ -44,7 +44,7 @@ Specifyes the select style. Further configuration is available via [kendo:diagra
 
 Specifies the shape resizing.
 
-More documentation is available at [kendo:diagram-editable-resize](/kendo-ui/api/wrappers/jsp/diagram/editable-resize).
+More documentation is available at [kendo:diagram-editable-resize](/api/wrappers/jsp/diagram/editable-resize).
 
 #### Example
 
@@ -56,7 +56,7 @@ More documentation is available at [kendo:diagram-editable-resize](/kendo-ui/api
 
 Specifyes the rotate style.
 
-More documentation is available at [kendo:diagram-editable-rotate](/kendo-ui/api/wrappers/jsp/diagram/editable-rotate).
+More documentation is available at [kendo:diagram-editable-rotate](/api/wrappers/jsp/diagram/editable-rotate).
 
 #### Example
 
@@ -68,7 +68,7 @@ More documentation is available at [kendo:diagram-editable-rotate](/kendo-ui/api
 
 Specifyes the select style.
 
-More documentation is available at [kendo:diagram-editable-select](/kendo-ui/api/wrappers/jsp/diagram/editable-select).
+More documentation is available at [kendo:diagram-editable-select](/api/wrappers/jsp/diagram/editable-select).
 
 #### Example
 

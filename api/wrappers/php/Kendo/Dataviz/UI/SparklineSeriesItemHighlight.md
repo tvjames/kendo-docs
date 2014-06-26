@@ -21,7 +21,7 @@ The border of highlighted points. The color is computed automatically from the b
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemHighlightBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemHighlightBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemHighlightBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemHighlightBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemHighlightBorder)
     <?php
     $highlight = new \Kendo\Dataviz\UI\SparklineSeriesItemHighlight();
     $border = new \Kendo\Dataviz\UI\SparklineSeriesItemHighlightBorder();

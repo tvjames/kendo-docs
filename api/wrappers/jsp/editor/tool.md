@@ -54,7 +54,7 @@ The text which will be displayed when the end-user hovers the tool button with t
 
 For tools that display a list of items (fontName, fontSize, formatting), this option specifies the items in the shown list.
 
-More documentation is available at [kendo:editor-tool-items](/kendo-ui/api/wrappers/jsp/editor/tool-items).
+More documentation is available at [kendo:editor-tool-items](/api/wrappers/jsp/editor/tool-items).
 
 #### Example
 

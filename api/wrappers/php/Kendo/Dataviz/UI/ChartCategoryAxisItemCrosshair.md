@@ -57,7 +57,7 @@ The crosshar tooltip options.
 ##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemCrosshairTooltip)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemCrosshairTooltip)
     <?php
     $crosshair = new \Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshair();
     $tooltip = new \Kendo\Dataviz\UI\ChartCategoryAxisItemCrosshairTooltip();

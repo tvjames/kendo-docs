@@ -88,7 +88,7 @@ The visibility of the labels.
 
 The border of the labels.
 
-More documentation is available at [kendo:stockChart-seriesDefaults-labels-border](/kendo-ui/api/wrappers/jsp/stockchart/seriesdefaults-labels-border).
+More documentation is available at [kendo:stockChart-seriesDefaults-labels-border](/api/wrappers/jsp/stockchart/seriesdefaults-labels-border).
 
 #### Example
 

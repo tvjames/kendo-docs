@@ -84,7 +84,7 @@ If set to true the chart will display the title. By default the title is not dis
 
 The border of the series.
 
-More documentation is available at [kendo:chart-title-border](/kendo-ui/api/wrappers/jsp/chart/title-border).
+More documentation is available at [kendo:chart-title-border](/api/wrappers/jsp/chart/title-border).
 
 #### Example
 
@@ -96,7 +96,7 @@ More documentation is available at [kendo:chart-title-border](/kendo-ui/api/wrap
 
 The margin of the title. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-title-margin](/kendo-ui/api/wrappers/jsp/chart/title-margin).
+More documentation is available at [kendo:chart-title-margin](/api/wrappers/jsp/chart/title-margin).
 
 #### Example
 
@@ -108,7 +108,7 @@ More documentation is available at [kendo:chart-title-margin](/kendo-ui/api/wrap
 
 The padding of the title. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-title-padding](/kendo-ui/api/wrappers/jsp/chart/title-padding).
+More documentation is available at [kendo:chart-title-padding](/api/wrappers/jsp/chart/title-padding).
 
 #### Example
 

@@ -57,7 +57,7 @@ The margin of the text
 ##### $value `\Kendo\Dataviz\UI\BarcodeTextMargin|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\BarcodeTextMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/BarcodeTextMargin)
+#### Example - using [\Kendo\Dataviz\UI\BarcodeTextMargin](/api/wrappers/php/Kendo/Dataviz/UI/BarcodeTextMargin)
     <?php
     $text = new \Kendo\Dataviz\UI\BarcodeText();
     $margin = new \Kendo\Dataviz\UI\BarcodeTextMargin();

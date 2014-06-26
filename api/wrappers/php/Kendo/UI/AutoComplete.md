@@ -4,14 +4,14 @@ title: AutoComplete
 
 # \Kendo\UI\AutoComplete
 
-A PHP wrapper for Kendo UI [AutoComplete](/kendo-ui/api/web/autocomplete).
+A PHP wrapper for Kendo UI [AutoComplete](/api/web/autocomplete).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use AutoComplete in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo AutoComplete
 
@@ -42,7 +42,7 @@ Configures the opening and closing animations of the suggestion popup. Setting t
 ##### $value `\Kendo\UI\AutoCompleteAnimation|array`
 
 
-#### Example - using [\Kendo\UI\AutoCompleteAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/AutoCompleteAnimation)
+#### Example - using [\Kendo\UI\AutoCompleteAnimation](/api/wrappers/php/Kendo/UI/AutoCompleteAnimation)
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
     $animation = new \Kendo\UI\AutoCompleteAnimation();
@@ -61,7 +61,7 @@ Configures the opening and closing animations of the suggestion popup. Setting t
 
 ### change
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [change](/kendo-ui/api/web/autocomplete#events-change) event documentation.
+For additional information check the [change](/api/web/autocomplete#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -88,7 +88,7 @@ For additional information check the [change](/kendo-ui/api/web/autocomplete#eve
     $autoComplete->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
@@ -97,7 +97,7 @@ For additional information check the [change](/kendo-ui/api/web/autocomplete#eve
 
 ### close
 Fired when the suggestion popup of the widget is closed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [close](/kendo-ui/api/web/autocomplete#events-close) event documentation.
+For additional information check the [close](/api/web/autocomplete#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -124,7 +124,7 @@ For additional information check the [close](/kendo-ui/api/web/autocomplete#even
     $autoComplete->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
@@ -133,7 +133,7 @@ For additional information check the [close](/kendo-ui/api/web/autocomplete#even
 
 ### dataBound
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBound](/kendo-ui/api/web/autocomplete#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/autocomplete#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -160,7 +160,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/autocomplete#
     $autoComplete->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
@@ -178,7 +178,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
@@ -365,7 +365,7 @@ The minimum number of characters the user must type before a search is performed
 
 ### open
 Fired when the suggestion popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [open](/kendo-ui/api/web/autocomplete#events-open) event documentation.
+For additional information check the [open](/api/web/autocomplete#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -392,7 +392,7 @@ For additional information check the [open](/kendo-ui/api/web/autocomplete#event
     $autoComplete->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
@@ -419,7 +419,7 @@ The hint displayed by the widget when it is empty. Not set by default.
 
 ### select
 Fired when an item from the suggestion popup is selected by the user.
-For additional information check the [select](/kendo-ui/api/web/autocomplete#events-select) event documentation.
+For additional information check the [select](/api/web/autocomplete#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\AutoComplete`
@@ -446,7 +446,7 @@ For additional information check the [select](/kendo-ui/api/web/autocomplete#eve
     $autoComplete->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');

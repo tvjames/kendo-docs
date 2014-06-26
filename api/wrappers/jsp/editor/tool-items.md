@@ -20,7 +20,7 @@ For tools that display a list of items (fontName, fontSize, formatting), this op
 
 For tools that display a list of items (fontName, fontSize, formatting), this option specifies the items in the shown list.
 
-More documentation is available at [kendo:editor-tool-item](/kendo-ui/api/wrappers/jsp/editor/tool-item).
+More documentation is available at [kendo:editor-tool-item](/api/wrappers/jsp/editor/tool-item).
 
 #### Example
 

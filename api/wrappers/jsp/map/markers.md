@@ -20,7 +20,7 @@ Static markers to display on the map.
 
 Static markers to display on the map.
 
-More documentation is available at [kendo:map-marker](/kendo-ui/api/wrappers/jsp/map/marker).
+More documentation is available at [kendo:map-marker](/api/wrappers/jsp/map/marker).
 
 #### Example
 

@@ -21,7 +21,7 @@ A PHP class representing the model setting of EditorImageBrowserSchema.
 ##### $value `\Kendo\UI\EditorImageBrowserSchemaModelFields|array`
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFields](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFields)
+#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFields](/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFields)
     <?php
     $model = new \Kendo\UI\EditorImageBrowserSchemaModel();
     $fields = new \Kendo\UI\EditorImageBrowserSchemaModelFields();

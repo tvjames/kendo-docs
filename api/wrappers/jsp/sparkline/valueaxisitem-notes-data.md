@@ -20,7 +20,7 @@ The items of the notes.
 
 The items of the notes.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-notes-dataItem](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-notes-dataitem).
+More documentation is available at [kendo:sparkline-valueAxisItem-notes-dataItem](/api/wrappers/jsp/sparkline/valueaxisitem-notes-dataitem).
 
 #### Example
 

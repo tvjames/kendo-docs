@@ -20,7 +20,7 @@ Defines the hover configuration.
 
 Defines the hover stroke configuration.
 
-More documentation is available at [kendo:diagram-connectionDefaults-hover-stroke](/kendo-ui/api/wrappers/jsp/diagram/connectiondefaults-hover-stroke).
+More documentation is available at [kendo:diagram-connectionDefaults-hover-stroke](/api/wrappers/jsp/diagram/connectiondefaults-hover-stroke).
 
 #### Example
 

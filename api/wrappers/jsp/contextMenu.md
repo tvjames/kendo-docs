@@ -3,7 +3,7 @@ title: contextMenu
 ---
 
 # \<kendo:contextMenu\>
-A JSP wrapper for Kendo UI [ContextMenu](/kendo-ui/api/web/contextmenu).
+A JSP wrapper for Kendo UI [ContextMenu](/api/web/contextmenu).
 
 ## Configuration Attributes
 
@@ -91,7 +91,7 @@ Specifies the element on which ContextMenu should open. The default element is t
 A collection of Animation objects, used to change default animations. A value of false will disable all animations in the widget.Available animations for the ContextMenu are listed below.  Each animation has a reverse options which is used for the close effect by default, but can be over-ridden
 by setting the close animation. Each animation also has a direction which can be set off the animation (i.e. slideIn:Down).
 
-More documentation is available at [kendo:contextMenu-animation](/kendo-ui/api/wrappers/jsp/contextmenu/animation).
+More documentation is available at [kendo:contextMenu-animation](/api/wrappers/jsp/contextmenu/animation).
 
 #### Example
 
@@ -103,7 +103,7 @@ More documentation is available at [kendo:contextMenu-animation](/kendo-ui/api/w
 
 Contains the items of the menu widget
 
-More documentation is available at [kendo:contextMenu-items](/kendo-ui/api/wrappers/jsp/contextmenu/items).
+More documentation is available at [kendo:contextMenu-items](/api/wrappers/jsp/contextmenu/items).
 
 #### Example
 
@@ -119,7 +119,7 @@ More documentation is available at [kendo:contextMenu-items](/kendo-ui/api/wrapp
 Fires before a sub menu or the ContextMenu gets closed. You can cancel this event to prevent closure.
 
 
-For additional information check the [close](/kendo-ui/api/web/contextmenu#events-close) event documentation.
+For additional information check the [close](/api/web/contextmenu#events-close) event documentation.
 
 #### Example
     <kendo:contextMenu close="handle_close">
@@ -135,7 +135,7 @@ For additional information check the [close](/kendo-ui/api/web/contextmenu#event
 Fires before a sub menu or the ContextMenu gets opened. You can cancel this event to prevent opening the sub menu.
 
 
-For additional information check the [open](/kendo-ui/api/web/contextmenu#events-open) event documentation.
+For additional information check the [open](/api/web/contextmenu#events-open) event documentation.
 
 #### Example
     <kendo:contextMenu open="handle_open">
@@ -151,7 +151,7 @@ For additional information check the [open](/kendo-ui/api/web/contextmenu#events
 Fires when a sub menu or the ContextMenu gets opened and its animation finished.
 
 
-For additional information check the [activate](/kendo-ui/api/web/contextmenu#events-activate) event documentation.
+For additional information check the [activate](/api/web/contextmenu#events-activate) event documentation.
 
 #### Example
     <kendo:contextMenu activate="handle_activate">
@@ -167,7 +167,7 @@ For additional information check the [activate](/kendo-ui/api/web/contextmenu#ev
 Fires when a sub menu or the ContextMenu gets closed and its animation finished.
 
 
-For additional information check the [deactivate](/kendo-ui/api/web/contextmenu#events-deactivate) event documentation.
+For additional information check the [deactivate](/api/web/contextmenu#events-deactivate) event documentation.
 
 #### Example
     <kendo:contextMenu deactivate="handle_deactivate">
@@ -183,7 +183,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/contextmenu#
 Fires when a menu item gets selected.
 
 
-For additional information check the [select](/kendo-ui/api/web/contextmenu#events-select) event documentation.
+For additional information check the [select](/api/web/contextmenu#events-select) event documentation.
 
 #### Example
     <kendo:contextMenu select="handle_select">
@@ -201,7 +201,7 @@ For additional information check the [select](/kendo-ui/api/web/contextmenu#even
 Fires before a sub menu or the ContextMenu gets closed. You can cancel this event to prevent closure.
 
 
-For additional information check the [close](/kendo-ui/api/web/contextmenu#events-close) event documentation.
+For additional information check the [close](/api/web/contextmenu#events-close) event documentation.
 
 #### Example
     <kendo:contextMenu>
@@ -219,7 +219,7 @@ For additional information check the [close](/kendo-ui/api/web/contextmenu#event
 Fires before a sub menu or the ContextMenu gets opened. You can cancel this event to prevent opening the sub menu.
 
 
-For additional information check the [open](/kendo-ui/api/web/contextmenu#events-open) event documentation.
+For additional information check the [open](/api/web/contextmenu#events-open) event documentation.
 
 #### Example
     <kendo:contextMenu>
@@ -237,7 +237,7 @@ For additional information check the [open](/kendo-ui/api/web/contextmenu#events
 Fires when a sub menu or the ContextMenu gets opened and its animation finished.
 
 
-For additional information check the [activate](/kendo-ui/api/web/contextmenu#events-activate) event documentation.
+For additional information check the [activate](/api/web/contextmenu#events-activate) event documentation.
 
 #### Example
     <kendo:contextMenu>
@@ -255,7 +255,7 @@ For additional information check the [activate](/kendo-ui/api/web/contextmenu#ev
 Fires when a sub menu or the ContextMenu gets closed and its animation finished.
 
 
-For additional information check the [deactivate](/kendo-ui/api/web/contextmenu#events-deactivate) event documentation.
+For additional information check the [deactivate](/api/web/contextmenu#events-deactivate) event documentation.
 
 #### Example
     <kendo:contextMenu>
@@ -273,7 +273,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/contextmenu#
 Fires when a menu item gets selected.
 
 
-For additional information check the [select](/kendo-ui/api/web/contextmenu#events-select) event documentation.
+For additional information check the [select](/api/web/contextmenu#events-select) event documentation.
 
 #### Example
     <kendo:contextMenu>

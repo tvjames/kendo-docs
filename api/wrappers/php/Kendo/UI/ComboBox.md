@@ -4,14 +4,14 @@ title: ComboBox
 
 # \Kendo\UI\ComboBox
 
-A PHP wrapper for Kendo UI [ComboBox](/kendo-ui/api/web/combobox).
+A PHP wrapper for Kendo UI [ComboBox](/api/web/combobox).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use ComboBox in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo ComboBox
 
@@ -42,7 +42,7 @@ Configures the opening and closing animations of the suggestion popup. Setting t
 ##### $value `\Kendo\UI\ComboBoxAnimation|array`
 
 
-#### Example - using [\Kendo\UI\ComboBoxAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/ComboBoxAnimation)
+#### Example - using [\Kendo\UI\ComboBoxAnimation](/api/wrappers/php/Kendo/UI/ComboBoxAnimation)
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
     $animation = new \Kendo\UI\ComboBoxAnimation();
@@ -79,7 +79,7 @@ Controls whether to bind the widget to the data source on initialization.
 
 ### cascade
 Fired when the value of the widget is changed via API or user interaction.
-For additional information check the [cascade](/kendo-ui/api/web/combobox#events-cascade) event documentation.
+For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -106,7 +106,7 @@ For additional information check the [cascade](/kendo-ui/api/web/combobox#events
     $comboBox->cascade('onCascade');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
@@ -153,7 +153,7 @@ Help topic showing how cascading functionality works
 
 ### change
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [change](/kendo-ui/api/web/combobox#events-change) event documentation.
+For additional information check the [change](/api/web/combobox#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -180,7 +180,7 @@ For additional information check the [change](/kendo-ui/api/web/combobox#events-
     $comboBox->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
@@ -189,7 +189,7 @@ For additional information check the [change](/kendo-ui/api/web/combobox#events-
 
 ### close
 Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [close](/kendo-ui/api/web/combobox#events-close) event documentation.
+For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -216,7 +216,7 @@ For additional information check the [close](/kendo-ui/api/web/combobox#events-c
     $comboBox->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
@@ -225,7 +225,7 @@ For additional information check the [close](/kendo-ui/api/web/combobox#events-c
 
 ### dataBound
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBound](/kendo-ui/api/web/combobox#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -252,7 +252,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/combobox#even
     $comboBox->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
@@ -270,7 +270,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
@@ -493,7 +493,7 @@ The minimum number of characters the user must type before a search is performed
 
 ### open
 Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [open](/kendo-ui/api/web/combobox#events-open) event documentation.
+For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -520,7 +520,7 @@ For additional information check the [open](/kendo-ui/api/web/combobox#events-op
     $comboBox->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
@@ -547,7 +547,7 @@ The hint displayed by the widget when it is empty. Not set by default.
 
 ### select
 Fired when an item from the popup is selected by the user.
-For additional information check the [select](/kendo-ui/api/web/combobox#events-select) event documentation.
+For additional information check the [select](/api/web/combobox#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -574,7 +574,7 @@ For additional information check the [select](/kendo-ui/api/web/combobox#events-
     $comboBox->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');

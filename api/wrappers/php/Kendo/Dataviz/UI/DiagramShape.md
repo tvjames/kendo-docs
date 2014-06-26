@@ -77,7 +77,7 @@ Defines the shapes content settings.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeContent|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeContent](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeContent)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeContent](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeContent)
     <?php
     $shape = new \Kendo\Dataviz\UI\DiagramShape();
     $content = new \Kendo\Dataviz\UI\DiagramShapeContent();
@@ -124,7 +124,7 @@ Defines the hover configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeHover|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeHover](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeHover)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeHover](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeHover)
     <?php
     $shape = new \Kendo\Dataviz\UI\DiagramShape();
     $hover = new \Kendo\Dataviz\UI\DiagramShapeHover();
@@ -225,7 +225,7 @@ The function that positions the connector.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeRotation|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeRotation](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeRotation)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeRotation](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeRotation)
     <?php
     $shape = new \Kendo\Dataviz\UI\DiagramShape();
     $rotation = new \Kendo\Dataviz\UI\DiagramShapeRotation();
@@ -254,7 +254,7 @@ Defines the stroke configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeStroke)
     <?php
     $shape = new \Kendo\Dataviz\UI\DiagramShape();
     $stroke = new \Kendo\Dataviz\UI\DiagramShapeStroke();

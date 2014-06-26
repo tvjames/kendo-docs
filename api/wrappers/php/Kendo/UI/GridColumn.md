@@ -155,7 +155,7 @@ for all columns when filtering is enabled via the filterable option.Can be set t
     ?>
 
 
-#### Example - using [\Kendo\UI\GridColumnFilterable](/kendo-ui/api/wrappers/php/Kendo/UI/GridColumnFilterable)
+#### Example - using [\Kendo\UI\GridColumnFilterable](/api/wrappers/php/Kendo/UI/GridColumnFilterable)
     <?php
     $column = new \Kendo\UI\GridColumn();
     $filterable = new \Kendo\UI\GridColumnFilterable();
@@ -413,7 +413,7 @@ be disabled for this column. By default all columns are sortable if sorting is e
     ?>
 
 
-#### Example - using [\Kendo\UI\GridColumnSortable](/kendo-ui/api/wrappers/php/Kendo/UI/GridColumnSortable)
+#### Example - using [\Kendo\UI\GridColumnSortable](/api/wrappers/php/Kendo/UI/GridColumnSortable)
     <?php
     $column = new \Kendo\UI\GridColumn();
     $sortable = new \Kendo\UI\GridColumnSortable();

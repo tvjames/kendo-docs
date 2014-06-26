@@ -4,14 +4,14 @@ title: TreeMap
 
 # \Kendo\Dataviz\UI\TreeMap
 
-A PHP wrapper for Kendo UI [TreeMap](/kendo-ui/api/dataviz/treemap).
+A PHP wrapper for Kendo UI [TreeMap](/api/dataviz/treemap).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use TreeMap in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo TreeMap
 
@@ -87,7 +87,7 @@ The default colors for the treemap tiles. When all colors are used, new colors a
 
 ### dataBound
 Fired when the widget is bound to data from its dataSource.
-For additional information check the [dataBound](/kendo-ui/api/dataviz/treemap#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/dataviz/treemap#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\TreeMap`
@@ -114,7 +114,7 @@ For additional information check the [dataBound](/kendo-ui/api/dataviz/treemap#e
     $treeMap->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeMap = new \Kendo\Dataviz\UI\TreeMap('TreeMap');
@@ -132,7 +132,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $treeMap = new \Kendo\Dataviz\UI\TreeMap('TreeMap');
@@ -150,7 +150,7 @@ Sets the data source of the dataSource.
 
 ### itemCreated
 Fired when a tile has been created.
-For additional information check the [itemCreated](/kendo-ui/api/dataviz/treemap#events-itemCreated) event documentation.
+For additional information check the [itemCreated](/api/dataviz/treemap#events-itemCreated) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\TreeMap`
@@ -177,7 +177,7 @@ For additional information check the [itemCreated](/kendo-ui/api/dataviz/treemap
     $treeMap->itemCreated('onItemCreated');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeMap = new \Kendo\Dataviz\UI\TreeMap('TreeMap');

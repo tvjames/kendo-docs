@@ -136,7 +136,7 @@ If set to true the chart will display the y axis. By default the y axis is visib
 
 The crosshair configuration options.
 
-More documentation is available at [kendo:chart-yAxisItem-crosshair](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-crosshair).
+More documentation is available at [kendo:chart-yAxisItem-crosshair](/api/wrappers/jsp/chart/yaxisitem-crosshair).
 
 #### Example
 
@@ -148,7 +148,7 @@ More documentation is available at [kendo:chart-yAxisItem-crosshair](/kendo-ui/a
 
 The axis labels configuration.
 
-More documentation is available at [kendo:chart-yAxisItem-labels](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-labels).
+More documentation is available at [kendo:chart-yAxisItem-labels](/api/wrappers/jsp/chart/yaxisitem-labels).
 
 #### Example
 
@@ -160,7 +160,7 @@ More documentation is available at [kendo:chart-yAxisItem-labels](/kendo-ui/api/
 
 The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
-More documentation is available at [kendo:chart-yAxisItem-line](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-line).
+More documentation is available at [kendo:chart-yAxisItem-line](/api/wrappers/jsp/chart/yaxisitem-line).
 
 #### Example
 
@@ -173,7 +173,7 @@ More documentation is available at [kendo:chart-yAxisItem-line](/kendo-ui/api/wr
 The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
-More documentation is available at [kendo:chart-yAxisItem-majorGridLines](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-majorgridlines).
+More documentation is available at [kendo:chart-yAxisItem-majorGridLines](/api/wrappers/jsp/chart/yaxisitem-majorgridlines).
 
 #### Example
 
@@ -185,7 +185,7 @@ More documentation is available at [kendo:chart-yAxisItem-majorGridLines](/kendo
 
 The configuration of the scatter chart y axis major ticks.
 
-More documentation is available at [kendo:chart-yAxisItem-majorTicks](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-majorticks).
+More documentation is available at [kendo:chart-yAxisItem-majorTicks](/api/wrappers/jsp/chart/yaxisitem-majorticks).
 
 #### Example
 
@@ -198,7 +198,7 @@ More documentation is available at [kendo:chart-yAxisItem-majorTicks](/kendo-ui/
 The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
 body of the chart.
 
-More documentation is available at [kendo:chart-yAxisItem-minorGridLines](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-minorgridlines).
+More documentation is available at [kendo:chart-yAxisItem-minorGridLines](/api/wrappers/jsp/chart/yaxisitem-minorgridlines).
 
 #### Example
 
@@ -210,7 +210,7 @@ More documentation is available at [kendo:chart-yAxisItem-minorGridLines](/kendo
 
 The configuration of the y axis minor ticks.
 
-More documentation is available at [kendo:chart-yAxisItem-minorTicks](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-minorticks).
+More documentation is available at [kendo:chart-yAxisItem-minorTicks](/api/wrappers/jsp/chart/yaxisitem-minorticks).
 
 #### Example
 
@@ -222,7 +222,7 @@ More documentation is available at [kendo:chart-yAxisItem-minorTicks](/kendo-ui/
 
 The y axis notes configuration.
 
-More documentation is available at [kendo:chart-yAxisItem-notes](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-notes).
+More documentation is available at [kendo:chart-yAxisItem-notes](/api/wrappers/jsp/chart/yaxisitem-notes).
 
 #### Example
 
@@ -234,7 +234,7 @@ More documentation is available at [kendo:chart-yAxisItem-notes](/kendo-ui/api/w
 
 The plot bands of the y axis.
 
-More documentation is available at [kendo:chart-yAxisItem-plotBands](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-plotbands).
+More documentation is available at [kendo:chart-yAxisItem-plotBands](/api/wrappers/jsp/chart/yaxisitem-plotbands).
 
 #### Example
 
@@ -246,7 +246,7 @@ More documentation is available at [kendo:chart-yAxisItem-plotBands](/kendo-ui/a
 
 The title configuration of the scatter chart y axis.
 
-More documentation is available at [kendo:chart-yAxisItem-title](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-title).
+More documentation is available at [kendo:chart-yAxisItem-title](/api/wrappers/jsp/chart/yaxisitem-title).
 
 #### Example
 

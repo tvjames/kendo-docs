@@ -10,12 +10,12 @@ description: Learn how to configure Kendo UI Javascript TreeMap widget in a few 
 
 ### dataSource `Object|Array|kendo.data.HierarchicalDataSource`
 
-The data source of the treeMap which is used to display the tiles and titles. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.HierarchicalDataSource](/kendo-ui/api/framework/hierarchicaldatasource)
+The data source of the treeMap which is used to display the tiles and titles. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.HierarchicalDataSource](/api/framework/hierarchicaldatasource)
 instance.
 
-If the `HierarchicalDataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.HierarchicalDataSource](/kendo-ui/api/framework/hierarchicaldatasource) instance using that value as data source configuration.
+If the `HierarchicalDataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.HierarchicalDataSource](/api/framework/hierarchicaldatasource) instance using that value as data source configuration.
 
-If the `HierarchicalDataSource` option is an existing [kendo.data.HierarchicalDataSource](/kendo-ui/api/framework/HierarchicalDataSource) instance the widget will use that instance and will **not** initialize a new one.
+If the `HierarchicalDataSource` option is an existing [kendo.data.HierarchicalDataSource](/api/framework/HierarchicalDataSource) instance the widget will use that instance and will **not** initialize a new one.
 
 ### autoBind `Boolean` *(default: true)*
 
@@ -58,7 +58,7 @@ The data item field which contains the tile title.
 
 ### template `String|Function`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template) which renders the treeMap tile content.
+The [template](/api/framework/kendo#methods-template) which renders the treeMap tile content.
 
 The fields which can be used in the template are:
 

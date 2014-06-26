@@ -20,7 +20,7 @@ The y axis configuration options of the scatter chart. Supports all valueAxis op
 
 The y axis configuration options of the scatter chart. Supports all valueAxis options.
 
-More documentation is available at [kendo:chart-yAxisItem](/kendo-ui/api/wrappers/jsp/chart/yaxisitem).
+More documentation is available at [kendo:chart-yAxisItem](/api/wrappers/jsp/chart/yaxisitem).
 
 #### Example
 

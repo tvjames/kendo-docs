@@ -6,7 +6,7 @@ description: Documentation how to get started with the GanttDependency.
 
 # kendo.data.GanttDependency
 
-The `kendo.data.GanttDependency` class represents a data item from the [kendo.data.GanttDependencyDataSource](/kendo-ui/api/framework/ganttdependencydatasource). Inherits from [kendo.data.Model](/kendo-ui/api/framework/model).
+The `kendo.data.GanttDependency` class represents a data item from the [kendo.data.GanttDependencyDataSource](/api/framework/ganttdependencydatasource). Inherits from [kendo.data.Model](/api/framework/model).
 
 ## Configuration
 
@@ -138,7 +138,7 @@ The type of the dependency.
 
 ## Methods
 
-See the [Model methods](/kendo-ui/api/framework/model#methods) for all inherited methods.
+See the [Model methods](/api/framework/model#methods) for all inherited methods.
 
 ### GanttDependency.define
 
@@ -184,7 +184,7 @@ Specifies the the type of the field. The available options are `"string"`, `"num
 
 ##### options.fields.fieldName.validation `Object`
 
-Specifies the validation options which will be used by [Kendo Validator](/kendo-ui/api/framework/validator).
+Specifies the validation options which will be used by [Kendo Validator](/api/framework/validator).
 
 #### Example - define custom gantt dependency
 
@@ -200,4 +200,4 @@ Specifies the validation options which will be used by [Kendo Validator](/kendo-
 
 ## Events
 
-See the [Model events](/kendo-ui/api/framework/model#events) for all inherited events.
+See the [Model events](/api/framework/model#events) for all inherited events.

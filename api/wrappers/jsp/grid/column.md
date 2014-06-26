@@ -205,7 +205,7 @@ The width of the column. Numeric values are treated as pixels. For more importan
 
 The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option.
 
-More documentation is available at [kendo:grid-column-command](/kendo-ui/api/wrappers/jsp/grid/column-command).
+More documentation is available at [kendo:grid-column-command](/api/wrappers/jsp/grid/column-command).
 
 #### Example
 
@@ -218,7 +218,7 @@ More documentation is available at [kendo:grid-column-command](/kendo-ui/api/wra
 If set to true a filter menu will be displayed for this column when filtering is enabled. If set to false the filter menu will not be displayed. By default a filter menu is displayed
 for all columns when filtering is enabled via the filterable option.Can be set to a JavaScript object which represents the filter menu configuration.
 
-More documentation is available at [kendo:grid-column-filterable](/kendo-ui/api/wrappers/jsp/grid/column-filterable).
+More documentation is available at [kendo:grid-column-filterable](/api/wrappers/jsp/grid/column-filterable).
 
 #### Example
 
@@ -231,7 +231,7 @@ More documentation is available at [kendo:grid-column-filterable](/kendo-ui/api/
 If set to true the user can click the column header and sort the grid by the column field when sorting is enabled. If set to false sorting will
 be disabled for this column. By default all columns are sortable if sorting is enabled via the sortable option.
 
-More documentation is available at [kendo:grid-column-sortable](/kendo-ui/api/wrappers/jsp/grid/column-sortable).
+More documentation is available at [kendo:grid-column-sortable](/api/wrappers/jsp/grid/column-sortable).
 
 #### Example
 

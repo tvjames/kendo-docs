@@ -39,7 +39,7 @@ The border configuration options.
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsTooltipBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsTooltipBorder)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\ChartSeriesDefaultsTooltip();
     $border = new \Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipBorder();
@@ -131,7 +131,7 @@ The padding of the tooltip. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsTooltipPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsTooltipPadding)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\ChartSeriesDefaultsTooltip();
     $padding = new \Kendo\Dataviz\UI\ChartSeriesDefaultsTooltipPadding();

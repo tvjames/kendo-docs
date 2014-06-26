@@ -60,7 +60,7 @@ The bubble layer symbol type. Supported symbols are "circle" and "square".
 
 The default style for bubble layer symbols.
 
-More documentation is available at [kendo:map-layerDefaults-bubble-style](/kendo-ui/api/wrappers/jsp/map/layerdefaults-bubble-style).
+More documentation is available at [kendo:map-layerDefaults-bubble-style](/api/wrappers/jsp/map/layerdefaults-bubble-style).
 
 #### Example
 

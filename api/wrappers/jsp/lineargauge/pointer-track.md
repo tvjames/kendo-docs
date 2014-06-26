@@ -53,7 +53,7 @@ The visibility of the track.
 
 The border of the track.
 
-More documentation is available at [kendo:linearGauge-pointer-track-border](/kendo-ui/api/wrappers/jsp/lineargauge/pointer-track-border).
+More documentation is available at [kendo:linearGauge-pointer-track-border](/api/wrappers/jsp/lineargauge/pointer-track-border).
 
 #### Example
 

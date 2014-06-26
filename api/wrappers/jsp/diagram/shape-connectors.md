@@ -20,7 +20,7 @@ Defines the connectors the shape owns.
 
 Defines the connectors the shape owns.
 
-More documentation is available at [kendo:diagram-shape-connector](/kendo-ui/api/wrappers/jsp/diagram/shape-connector).
+More documentation is available at [kendo:diagram-shape-connector](/api/wrappers/jsp/diagram/shape-connector).
 
 #### Example
 

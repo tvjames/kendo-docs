@@ -39,7 +39,7 @@ The border of the label.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesLabelBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesLabelBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemNotesLabelBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesLabelBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemNotesLabelBorder)
     <?php
     $label = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesLabel();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesLabelBorder();

@@ -39,7 +39,7 @@ The border of the icon.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesIconBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesIconBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemNotesIconBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesIconBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemNotesIconBorder)
     <?php
     $icon = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesIcon();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemNotesIconBorder();

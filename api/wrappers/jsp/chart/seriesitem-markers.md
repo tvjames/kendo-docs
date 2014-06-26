@@ -72,7 +72,7 @@ If set to true the chart will display the series markers. By default chart serie
 
 The border of the markers.
 
-More documentation is available at [kendo:chart-seriesItem-markers-border](/kendo-ui/api/wrappers/jsp/chart/seriesitem-markers-border).
+More documentation is available at [kendo:chart-seriesItem-markers-border](/api/wrappers/jsp/chart/seriesitem-markers-border).
 
 #### Example
 

@@ -84,7 +84,7 @@ If set to true the chart will display the series labels. By default chart series
 
 The border of the labels.
 
-More documentation is available at [kendo:chart-seriesDefaults-labels-border](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-labels-border).
+More documentation is available at [kendo:chart-seriesDefaults-labels-border](/api/wrappers/jsp/chart/seriesdefaults-labels-border).
 
 #### Example
 
@@ -96,7 +96,7 @@ More documentation is available at [kendo:chart-seriesDefaults-labels-border](/k
 
 The margin of the labels. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-seriesDefaults-labels-margin](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-labels-margin).
+More documentation is available at [kendo:chart-seriesDefaults-labels-margin](/api/wrappers/jsp/chart/seriesdefaults-labels-margin).
 
 #### Example
 
@@ -108,7 +108,7 @@ More documentation is available at [kendo:chart-seriesDefaults-labels-margin](/k
 
 The padding of the labels. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-seriesDefaults-labels-padding](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-labels-padding).
+More documentation is available at [kendo:chart-seriesDefaults-labels-padding](/api/wrappers/jsp/chart/seriesdefaults-labels-padding).
 
 #### Example
 

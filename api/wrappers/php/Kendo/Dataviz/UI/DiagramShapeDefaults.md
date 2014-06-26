@@ -77,7 +77,7 @@ Defines the shapes content settings.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeDefaultsContent|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsContent](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsContent)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsContent](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsContent)
     <?php
     $shapeDefaults = new \Kendo\Dataviz\UI\DiagramShapeDefaults();
     $content = new \Kendo\Dataviz\UI\DiagramShapeDefaultsContent();
@@ -124,7 +124,7 @@ Defines the hover configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeDefaultsHover|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsHover](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsHover)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsHover](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsHover)
     <?php
     $shapeDefaults = new \Kendo\Dataviz\UI\DiagramShapeDefaults();
     $hover = new \Kendo\Dataviz\UI\DiagramShapeDefaultsHover();
@@ -207,7 +207,7 @@ The path option of a Shape is a description of a custom geometry. The format fol
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeDefaultsRotation|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsRotation](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsRotation)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsRotation](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsRotation)
     <?php
     $shapeDefaults = new \Kendo\Dataviz\UI\DiagramShapeDefaults();
     $rotation = new \Kendo\Dataviz\UI\DiagramShapeDefaultsRotation();
@@ -236,7 +236,7 @@ Defines the stroke configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramShapeDefaultsStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramShapeDefaultsStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramShapeDefaultsStroke)
     <?php
     $shapeDefaults = new \Kendo\Dataviz\UI\DiagramShapeDefaults();
     $stroke = new \Kendo\Dataviz\UI\DiagramShapeDefaultsStroke();

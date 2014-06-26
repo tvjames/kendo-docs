@@ -84,7 +84,7 @@ If set to true the pager will display the refresh button. Clicking the refresh b
 
 The text messages displayed in pager. Use this option to customize or localize the pager messages.
 
-More documentation is available at [kendo:grid-pageable-messages](/kendo-ui/api/wrappers/jsp/grid/pageable-messages).
+More documentation is available at [kendo:grid-pageable-messages](/api/wrappers/jsp/grid/pageable-messages).
 
 #### Example
 

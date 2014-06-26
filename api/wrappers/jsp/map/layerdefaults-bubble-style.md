@@ -21,7 +21,7 @@ The default style for bubble layer symbols.
 The default fill for bubble layer symbols.
 Accepts a valid CSS color string or object with detailed configuration.
 
-More documentation is available at [kendo:map-layerDefaults-bubble-style-fill](/kendo-ui/api/wrappers/jsp/map/layerdefaults-bubble-style-fill).
+More documentation is available at [kendo:map-layerDefaults-bubble-style-fill](/api/wrappers/jsp/map/layerdefaults-bubble-style-fill).
 
 #### Example
 
@@ -34,7 +34,7 @@ More documentation is available at [kendo:map-layerDefaults-bubble-style-fill](/
 The default stroke for bubble layer symbols.
 Accepts a valid CSS color string or object with detailed configuration.
 
-More documentation is available at [kendo:map-layerDefaults-bubble-style-stroke](/kendo-ui/api/wrappers/jsp/map/layerdefaults-bubble-style-stroke).
+More documentation is available at [kendo:map-layerDefaults-bubble-style-stroke](/api/wrappers/jsp/map/layerdefaults-bubble-style-stroke).
 
 #### Example
 

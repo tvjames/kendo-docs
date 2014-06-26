@@ -3,7 +3,7 @@ title: menu
 ---
 
 # \<kendo:menu\>
-A JSP wrapper for Kendo UI [Menu](/kendo-ui/api/web/menu).
+A JSP wrapper for Kendo UI [Menu](/api/web/menu).
 
 ## Configuration Attributes
 
@@ -67,7 +67,7 @@ its parent horizontally. You can also switch off the screen boundary detection c
 A collection of Animation objects, used to change default animations. A value of false will disable all animations in the widget.Available animations for the Menu are listed below.  Each animation has a reverse options which is used for the close effect by default, but can be over-ridden
 by setting the close animation.  Each animation also has a direction which can be set off the animation (i.e. slideIn:Down).
 
-More documentation is available at [kendo:menu-animation](/kendo-ui/api/wrappers/jsp/menu/animation).
+More documentation is available at [kendo:menu-animation](/api/wrappers/jsp/menu/animation).
 
 #### Example
 
@@ -79,7 +79,7 @@ More documentation is available at [kendo:menu-animation](/kendo-ui/api/wrappers
 
 Contains the items of the menu widget
 
-More documentation is available at [kendo:menu-items](/kendo-ui/api/wrappers/jsp/menu/items).
+More documentation is available at [kendo:menu-items](/api/wrappers/jsp/menu/items).
 
 #### Example
 
@@ -95,7 +95,7 @@ More documentation is available at [kendo:menu-items](/kendo-ui/api/wrappers/jsp
 Fires before a sub menu gets closed. You can cancel this event to prevent closure.
 
 
-For additional information check the [close](/kendo-ui/api/web/menu#events-close) event documentation.
+For additional information check the [close](/api/web/menu#events-close) event documentation.
 
 #### Example
     <kendo:menu close="handle_close">
@@ -111,7 +111,7 @@ For additional information check the [close](/kendo-ui/api/web/menu#events-close
 Fires before a sub menu gets opened. You can cancel this event to prevent opening the sub menu.
 
 
-For additional information check the [open](/kendo-ui/api/web/menu#events-open) event documentation.
+For additional information check the [open](/api/web/menu#events-open) event documentation.
 
 #### Example
     <kendo:menu open="handle_open">
@@ -127,7 +127,7 @@ For additional information check the [open](/kendo-ui/api/web/menu#events-open) 
 Fires when a sub menu gets opened and its animation finished.
 
 
-For additional information check the [activate](/kendo-ui/api/web/menu#events-activate) event documentation.
+For additional information check the [activate](/api/web/menu#events-activate) event documentation.
 
 #### Example
     <kendo:menu activate="handle_activate">
@@ -143,7 +143,7 @@ For additional information check the [activate](/kendo-ui/api/web/menu#events-ac
 Fires when a sub menu gets closed and its animation finished.
 
 
-For additional information check the [deactivate](/kendo-ui/api/web/menu#events-deactivate) event documentation.
+For additional information check the [deactivate](/api/web/menu#events-deactivate) event documentation.
 
 #### Example
     <kendo:menu deactivate="handle_deactivate">
@@ -159,7 +159,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/menu#events-
 Fires when a menu item gets selected.
 
 
-For additional information check the [select](/kendo-ui/api/web/menu#events-select) event documentation.
+For additional information check the [select](/api/web/menu#events-select) event documentation.
 
 #### Example
     <kendo:menu select="handle_select">
@@ -177,7 +177,7 @@ For additional information check the [select](/kendo-ui/api/web/menu#events-sele
 Fires before a sub menu gets closed. You can cancel this event to prevent closure.
 
 
-For additional information check the [close](/kendo-ui/api/web/menu#events-close) event documentation.
+For additional information check the [close](/api/web/menu#events-close) event documentation.
 
 #### Example
     <kendo:menu>
@@ -195,7 +195,7 @@ For additional information check the [close](/kendo-ui/api/web/menu#events-close
 Fires before a sub menu gets opened. You can cancel this event to prevent opening the sub menu.
 
 
-For additional information check the [open](/kendo-ui/api/web/menu#events-open) event documentation.
+For additional information check the [open](/api/web/menu#events-open) event documentation.
 
 #### Example
     <kendo:menu>
@@ -213,7 +213,7 @@ For additional information check the [open](/kendo-ui/api/web/menu#events-open) 
 Fires when a sub menu gets opened and its animation finished.
 
 
-For additional information check the [activate](/kendo-ui/api/web/menu#events-activate) event documentation.
+For additional information check the [activate](/api/web/menu#events-activate) event documentation.
 
 #### Example
     <kendo:menu>
@@ -231,7 +231,7 @@ For additional information check the [activate](/kendo-ui/api/web/menu#events-ac
 Fires when a sub menu gets closed and its animation finished.
 
 
-For additional information check the [deactivate](/kendo-ui/api/web/menu#events-deactivate) event documentation.
+For additional information check the [deactivate](/api/web/menu#events-deactivate) event documentation.
 
 #### Example
     <kendo:menu>
@@ -249,7 +249,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/menu#events-
 Fires when a menu item gets selected.
 
 
-For additional information check the [select](/kendo-ui/api/web/menu#events-select) event documentation.
+For additional information check the [select](/api/web/menu#events-select) event documentation.
 
 #### Example
     <kendo:menu>

@@ -4,14 +4,14 @@ title: Calendar
 
 # \Kendo\UI\Calendar
 
-A PHP wrapper for Kendo UI [Calendar](/kendo-ui/api/web/calendar).
+A PHP wrapper for Kendo UI [Calendar](/api/web/calendar).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Calendar in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Calendar
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the selected date is changed.
-For additional information check the [change](/kendo-ui/api/web/calendar#events-change) event documentation.
+For additional information check the [change](/api/web/calendar#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Calendar`
@@ -59,7 +59,7 @@ For additional information check the [change](/kendo-ui/api/web/calendar#events-
     $calendar->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $calendar = new \Kendo\UI\Calendar('Calendar');
@@ -211,7 +211,7 @@ Templates for the cells rendered in "month" view.
 ##### $value `\Kendo\UI\CalendarMonth|array`
 
 
-#### Example - using [\Kendo\UI\CalendarMonth](/kendo-ui/api/wrappers/php/Kendo/UI/CalendarMonth)
+#### Example - using [\Kendo\UI\CalendarMonth](/api/wrappers/php/Kendo/UI/CalendarMonth)
     <?php
     $calendar = new \Kendo\UI\Calendar('Calendar');
     $month = new \Kendo\UI\CalendarMonth();
@@ -230,7 +230,7 @@ Templates for the cells rendered in "month" view.
 
 ### navigate
 Fires when calendar navigates.
-For additional information check the [navigate](/kendo-ui/api/web/calendar#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.
 
 #### Returns
 `\Kendo\UI\Calendar`
@@ -257,7 +257,7 @@ For additional information check the [navigate](/kendo-ui/api/web/calendar#event
     $calendar->navigate('onNavigate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $calendar = new \Kendo\UI\Calendar('Calendar');

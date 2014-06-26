@@ -3,7 +3,7 @@ title: slider
 ---
 
 # \<kendo:slider\>
-A JSP wrapper for Kendo UI [Slider](/kendo-ui/api/web/slider).
+A JSP wrapper for Kendo UI [Slider](/api/web/slider).
 
 ## Configuration Attributes
 
@@ -98,7 +98,7 @@ The underlying value of the Slider.
 
 Configuration of the Slider tooltip.
 
-More documentation is available at [kendo:slider-tooltip](/kendo-ui/api/wrappers/jsp/slider/tooltip).
+More documentation is available at [kendo:slider-tooltip](/api/wrappers/jsp/slider/tooltip).
 
 #### Example
 
@@ -114,7 +114,7 @@ More documentation is available at [kendo:slider-tooltip](/kendo-ui/api/wrappers
 Fires when the slider value changes as a result of selecting a new value with the drag handle, buttons or keyboard.
 
 
-For additional information check the [change](/kendo-ui/api/web/slider#events-change) event documentation.
+For additional information check the [change](/api/web/slider#events-change) event documentation.
 
 #### Example
     <kendo:slider change="handle_change">
@@ -130,7 +130,7 @@ For additional information check the [change](/kendo-ui/api/web/slider#events-ch
 Fires when the user drags the drag handle to a new position.
 
 
-For additional information check the [slide](/kendo-ui/api/web/slider#events-slide) event documentation.
+For additional information check the [slide](/api/web/slider#events-slide) event documentation.
 
 #### Example
     <kendo:slider slide="handle_slide">
@@ -148,7 +148,7 @@ For additional information check the [slide](/kendo-ui/api/web/slider#events-sli
 Fires when the slider value changes as a result of selecting a new value with the drag handle, buttons or keyboard.
 
 
-For additional information check the [change](/kendo-ui/api/web/slider#events-change) event documentation.
+For additional information check the [change](/api/web/slider#events-change) event documentation.
 
 #### Example
     <kendo:slider>
@@ -166,7 +166,7 @@ For additional information check the [change](/kendo-ui/api/web/slider#events-ch
 Fires when the user drags the drag handle to a new position.
 
 
-For additional information check the [slide](/kendo-ui/api/web/slider#events-slide) event documentation.
+For additional information check the [slide](/api/web/slider#events-slide) event documentation.
 
 #### Example
     <kendo:slider>

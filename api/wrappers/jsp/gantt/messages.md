@@ -20,7 +20,7 @@ The configuration of the gantt messages. Use this option to customize or localiz
 
 The configuration of the gantt action messages. Use this option to customize or localize the gantt action messages.
 
-More documentation is available at [kendo:gantt-messages-actions](/kendo-ui/api/wrappers/jsp/gantt/messages-actions).
+More documentation is available at [kendo:gantt-messages-actions](/api/wrappers/jsp/gantt/messages-actions).
 
 #### Example
 
@@ -32,7 +32,7 @@ More documentation is available at [kendo:gantt-messages-actions](/kendo-ui/api/
 
 The configuration of the gantt view messages. Use this option to customize or localize the gantt view messages.
 
-More documentation is available at [kendo:gantt-messages-views](/kendo-ui/api/wrappers/jsp/gantt/messages-views).
+More documentation is available at [kendo:gantt-messages-views](/api/wrappers/jsp/gantt/messages-views).
 
 #### Example
 

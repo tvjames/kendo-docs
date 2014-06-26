@@ -21,7 +21,7 @@ by setting the close animation.  Each animation also has a direction which can b
 
 The animation that will be used when closing sub menus.
 
-More documentation is available at [kendo:menu-animation-close](/kendo-ui/api/wrappers/jsp/menu/animation-close).
+More documentation is available at [kendo:menu-animation-close](/api/wrappers/jsp/menu/animation-close).
 
 #### Example
 
@@ -33,7 +33,7 @@ More documentation is available at [kendo:menu-animation-close](/kendo-ui/api/wr
 
 The animation that will be used when opening sub menus.
 
-More documentation is available at [kendo:menu-animation-open](/kendo-ui/api/wrappers/jsp/menu/animation-open).
+More documentation is available at [kendo:menu-animation-open](/api/wrappers/jsp/menu/animation-open).
 
 #### Example
 

@@ -20,7 +20,7 @@ The value axis configuration options.
 
 The value axis configuration options.
 
-More documentation is available at [kendo:chart-valueAxisItem](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem).
+More documentation is available at [kendo:chart-valueAxisItem](/api/wrappers/jsp/chart/valueaxisitem).
 
 #### Example
 

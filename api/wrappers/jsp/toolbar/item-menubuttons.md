@@ -20,7 +20,7 @@ Specifies the menu buttons of a SplitButton.
 
 Specifies the menu buttons of a SplitButton.
 
-More documentation is available at [kendo:toolBar-item-menuButton](/kendo-ui/api/wrappers/jsp/toolbar/item-menubutton).
+More documentation is available at [kendo:toolBar-item-menuButton](/api/wrappers/jsp/toolbar/item-menubutton).
 
 #### Example
 

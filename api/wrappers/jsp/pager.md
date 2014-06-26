@@ -3,7 +3,7 @@ title: pager
 ---
 
 # \<kendo:pager\>
-A JSP wrapper for Kendo UI [Pager](/kendo-ui/api/web/pager).
+A JSP wrapper for Kendo UI [Pager](/api/web/pager).
 
 ## Configuration Attributes
 
@@ -94,7 +94,7 @@ The template for selected page number link.
 
 Defines texts shown within the pager. Use this option to customize or localize the pager messages.
 
-More documentation is available at [kendo:pager-messages](/kendo-ui/api/wrappers/jsp/pager/messages).
+More documentation is available at [kendo:pager-messages](/api/wrappers/jsp/pager/messages).
 
 #### Example
 
@@ -110,7 +110,7 @@ More documentation is available at [kendo:pager-messages](/kendo-ui/api/wrappers
 Fires when the current page has changed.
 
 
-For additional information check the [change](/kendo-ui/api/web/pager#events-change) event documentation.
+For additional information check the [change](/api/web/pager#events-change) event documentation.
 
 #### Example
     <kendo:pager change="handle_change">
@@ -128,7 +128,7 @@ For additional information check the [change](/kendo-ui/api/web/pager#events-cha
 Fires when the current page has changed.
 
 
-For additional information check the [change](/kendo-ui/api/web/pager#events-change) event documentation.
+For additional information check the [change](/api/web/pager#events-change) event documentation.
 
 #### Example
     <kendo:pager>

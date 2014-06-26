@@ -52,7 +52,7 @@ The width of the crosshair in pixels.
 
 The crosshar tooltip options.
 
-More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-crosshair-tooltip](/kendo-ui/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-crosshair-tooltip).
+More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-crosshair-tooltip](/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-crosshair-tooltip).
 
 #### Example
 

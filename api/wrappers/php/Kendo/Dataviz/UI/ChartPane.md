@@ -39,7 +39,7 @@ The border of the chart pane.
 ##### $value `\Kendo\Dataviz\UI\ChartPaneBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPaneBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartPaneBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneBorder)
     <?php
     $pane = new \Kendo\Dataviz\UI\ChartPane();
     $border = new \Kendo\Dataviz\UI\ChartPaneBorder();
@@ -113,7 +113,7 @@ The margin of the pane. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPaneMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartPaneMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneMargin)
     <?php
     $pane = new \Kendo\Dataviz\UI\ChartPane();
     $margin = new \Kendo\Dataviz\UI\ChartPaneMargin();
@@ -169,7 +169,7 @@ The padding of the pane. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPanePadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPanePadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartPanePadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartPanePadding)
     <?php
     $pane = new \Kendo\Dataviz\UI\ChartPane();
     $padding = new \Kendo\Dataviz\UI\ChartPanePadding();
@@ -207,7 +207,7 @@ The title configuration of the chart pane.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPaneTitle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneTitle)
+#### Example - using [\Kendo\Dataviz\UI\ChartPaneTitle](/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneTitle)
     <?php
     $pane = new \Kendo\Dataviz\UI\ChartPane();
     $title = new \Kendo\Dataviz\UI\ChartPaneTitle();

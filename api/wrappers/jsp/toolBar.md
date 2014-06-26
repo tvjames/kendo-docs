@@ -3,7 +3,7 @@ title: toolBar
 ---
 
 # \<kendo:toolBar\>
-A JSP wrapper for Kendo UI [ToolBar](/kendo-ui/api/web/toolbar).
+A JSP wrapper for Kendo UI [ToolBar](/api/web/toolbar).
 
 ## Configuration Attributes
 
@@ -22,7 +22,7 @@ If resizable is set to true the widget will detect changes in the viewport width
 
 A JavaScript array that contains the ToolBar's commands configuration.
 
-More documentation is available at [kendo:toolBar-items](/kendo-ui/api/wrappers/jsp/toolbar/items).
+More documentation is available at [kendo:toolBar-items](/api/wrappers/jsp/toolbar/items).
 
 #### Example
 
@@ -38,7 +38,7 @@ More documentation is available at [kendo:toolBar-items](/kendo-ui/api/wrappers/
 Fires when the user clicks a command button.
 
 
-For additional information check the [click](/kendo-ui/api/web/toolbar#events-click) event documentation.
+For additional information check the [click](/api/web/toolbar#events-click) event documentation.
 
 #### Example
     <kendo:toolBar click="handle_click">
@@ -54,7 +54,7 @@ For additional information check the [click](/kendo-ui/api/web/toolbar#events-cl
 Fires when the SplitButton's popup closes.
 
 
-For additional information check the [close](/kendo-ui/api/web/toolbar#events-close) event documentation.
+For additional information check the [close](/api/web/toolbar#events-close) event documentation.
 
 #### Example
     <kendo:toolBar close="handle_close">
@@ -70,7 +70,7 @@ For additional information check the [close](/kendo-ui/api/web/toolbar#events-cl
 Fires when the Split Button's popup opens.
 
 
-For additional information check the [open](/kendo-ui/api/web/toolbar#events-open) event documentation.
+For additional information check the [open](/api/web/toolbar#events-open) event documentation.
 
 #### Example
     <kendo:toolBar open="handle_open">
@@ -86,7 +86,7 @@ For additional information check the [open](/kendo-ui/api/web/toolbar#events-ope
 Fires when the user changes the checked state of a toggle button.
 
 
-For additional information check the [toggle](/kendo-ui/api/web/toolbar#events-toggle) event documentation.
+For additional information check the [toggle](/api/web/toolbar#events-toggle) event documentation.
 
 #### Example
     <kendo:toolBar toggle="handle_toggle">
@@ -102,7 +102,7 @@ For additional information check the [toggle](/kendo-ui/api/web/toolbar#events-t
 Fires when the overflow popup container is about to close.
 
 
-For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#events-overflowClose) event documentation.
+For additional information check the [overflowClose](/api/web/toolbar#events-overflowClose) event documentation.
 
 #### Example
     <kendo:toolBar overflowClose="handle_overflowClose">
@@ -118,7 +118,7 @@ For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#e
 Fires when the overflow popup container is about to open.
 
 
-For additional information check the [overflowOpen](/kendo-ui/api/web/toolbar#events-overflowOpen) event documentation.
+For additional information check the [overflowOpen](/api/web/toolbar#events-overflowOpen) event documentation.
 
 #### Example
     <kendo:toolBar overflowOpen="handle_overflowOpen">
@@ -136,7 +136,7 @@ For additional information check the [overflowOpen](/kendo-ui/api/web/toolbar#ev
 Fires when the user clicks a command button.
 
 
-For additional information check the [click](/kendo-ui/api/web/toolbar#events-click) event documentation.
+For additional information check the [click](/api/web/toolbar#events-click) event documentation.
 
 #### Example
     <kendo:toolBar>
@@ -154,7 +154,7 @@ For additional information check the [click](/kendo-ui/api/web/toolbar#events-cl
 Fires when the SplitButton's popup closes.
 
 
-For additional information check the [close](/kendo-ui/api/web/toolbar#events-close) event documentation.
+For additional information check the [close](/api/web/toolbar#events-close) event documentation.
 
 #### Example
     <kendo:toolBar>
@@ -172,7 +172,7 @@ For additional information check the [close](/kendo-ui/api/web/toolbar#events-cl
 Fires when the Split Button's popup opens.
 
 
-For additional information check the [open](/kendo-ui/api/web/toolbar#events-open) event documentation.
+For additional information check the [open](/api/web/toolbar#events-open) event documentation.
 
 #### Example
     <kendo:toolBar>
@@ -190,7 +190,7 @@ For additional information check the [open](/kendo-ui/api/web/toolbar#events-ope
 Fires when the user changes the checked state of a toggle button.
 
 
-For additional information check the [toggle](/kendo-ui/api/web/toolbar#events-toggle) event documentation.
+For additional information check the [toggle](/api/web/toolbar#events-toggle) event documentation.
 
 #### Example
     <kendo:toolBar>
@@ -208,7 +208,7 @@ For additional information check the [toggle](/kendo-ui/api/web/toolbar#events-t
 Fires when the overflow popup container is about to close.
 
 
-For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#events-overflowClose) event documentation.
+For additional information check the [overflowClose](/api/web/toolbar#events-overflowClose) event documentation.
 
 #### Example
     <kendo:toolBar>
@@ -226,7 +226,7 @@ For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#e
 Fires when the overflow popup container is about to open.
 
 
-For additional information check the [overflowOpen](/kendo-ui/api/web/toolbar#events-overflowOpen) event documentation.
+For additional information check the [overflowOpen](/api/web/toolbar#events-overflowOpen) event documentation.
 
 #### Example
     <kendo:toolBar>

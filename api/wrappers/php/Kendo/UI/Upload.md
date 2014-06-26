@@ -4,14 +4,14 @@ title: Upload
 
 # \Kendo\UI\Upload
 
-A PHP wrapper for Kendo UI [Upload](/kendo-ui/api/web/upload).
+A PHP wrapper for Kendo UI [Upload](/api/web/upload).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Upload in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Upload
 
@@ -44,7 +44,7 @@ for more details.
 ##### $value `\Kendo\UI\UploadAsync|array`
 
 
-#### Example - using [\Kendo\UI\UploadAsync](/kendo-ui/api/wrappers/php/Kendo/UI/UploadAsync)
+#### Example - using [\Kendo\UI\UploadAsync](/api/wrappers/php/Kendo/UI/UploadAsync)
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
     $async = new \Kendo\UI\UploadAsync();
@@ -64,7 +64,7 @@ for more details.
 ### cancel
 Fires when the upload has been cancelled while in progress.Note: The cancel event fires only when the upload is in
 async mode.
-For additional information check the [cancel](/kendo-ui/api/web/upload#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/upload#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -91,7 +91,7 @@ For additional information check the [cancel](/kendo-ui/api/web/upload#events-ca
     $upload->cancel('onCancel');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -101,7 +101,7 @@ For additional information check the [cancel](/kendo-ui/api/web/upload#events-ca
 ### complete
 Fires when all active uploads have completed either successfully or with errors.Note: The complete event fires only when the upload is in
 async mode.
-For additional information check the [complete](/kendo-ui/api/web/upload#events-complete) event documentation.
+For additional information check the [complete](/api/web/upload#events-complete) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -128,7 +128,7 @@ For additional information check the [complete](/kendo-ui/api/web/upload#events-
     $upload->complete('onComplete');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -157,7 +157,7 @@ Upload may be re-enabled via enable().
 ### error
 Fires when an upload / remove operation has failed.Note: The error event fires only when the upload is in
 async mode.
-For additional information check the [error](/kendo-ui/api/web/upload#events-error) event documentation.
+For additional information check the [error](/api/web/upload#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -184,7 +184,7 @@ For additional information check the [error](/kendo-ui/api/web/upload#events-err
     $upload->error('onError');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -221,7 +221,7 @@ Sets the strings rendered by the Upload.
 ##### $value `\Kendo\UI\UploadLocalization|array`
 
 
-#### Example - using [\Kendo\UI\UploadLocalization](/kendo-ui/api/wrappers/php/Kendo/UI/UploadLocalization)
+#### Example - using [\Kendo\UI\UploadLocalization](/api/wrappers/php/Kendo/UI/UploadLocalization)
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
     $localization = new \Kendo\UI\UploadLocalization();
@@ -262,7 +262,7 @@ limit the total number of uploaded files in an asynchronous configuration.
 Fires when upload progress data is available.Note: The progress event fires only when the upload is in
 async mode.Note: The progress event is not fired in IE.
 See Supported Browsers
-For additional information check the [progress](/kendo-ui/api/web/upload#events-progress) event documentation.
+For additional information check the [progress](/api/web/upload#events-progress) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -289,7 +289,7 @@ For additional information check the [progress](/kendo-ui/api/web/upload#events-
     $upload->progress('onProgress');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -299,7 +299,7 @@ For additional information check the [progress](/kendo-ui/api/web/upload#events-
 ### remove
 Fires when an uploaded file is about to be removed.
 Cancelling the event will prevent the remove.
-For additional information check the [remove](/kendo-ui/api/web/upload#events-remove) event documentation.
+For additional information check the [remove](/api/web/upload#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -326,7 +326,7 @@ For additional information check the [remove](/kendo-ui/api/web/upload#events-re
     $upload->remove('onRemove');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -336,7 +336,7 @@ For additional information check the [remove](/kendo-ui/api/web/upload#events-re
 ### select
 Triggered when a file(s) is selected. Note: Cancelling this event will prevent the selection from
 occurring.
-For additional information check the [select](/kendo-ui/api/web/upload#events-select) event documentation.
+For additional information check the [select](/api/web/upload#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -363,7 +363,7 @@ For additional information check the [select](/kendo-ui/api/web/upload#events-se
     $upload->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -393,7 +393,7 @@ client-side events to build your own UI.
 ### success
 Fires when an upload / remove operation has been completed successfully.Note: The success event fires only when the upload is in
 async mode.
-For additional information check the [success](/kendo-ui/api/web/upload#events-success) event documentation.
+For additional information check the [success](/api/web/upload#events-success) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -420,7 +420,7 @@ For additional information check the [success](/kendo-ui/api/web/upload#events-s
     $upload->success('onSuccess');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');
@@ -455,7 +455,7 @@ The template used to render the files in the list
 Fires when one or more files are about to be uploaded.
 Cancelling the event will prevent the upload.Note: The upload event fires only when the upload is in
 async mode.
-For additional information check the [upload](/kendo-ui/api/web/upload#events-upload) event documentation.
+For additional information check the [upload](/api/web/upload#events-upload) event documentation.
 
 #### Returns
 `\Kendo\UI\Upload`
@@ -482,7 +482,7 @@ For additional information check the [upload](/kendo-ui/api/web/upload#events-up
     $upload->upload('onUpload');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $upload = new \Kendo\UI\Upload('Upload');

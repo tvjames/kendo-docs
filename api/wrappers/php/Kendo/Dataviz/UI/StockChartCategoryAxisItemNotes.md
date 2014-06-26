@@ -59,7 +59,7 @@ The icon of the notes.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesIcon|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesIcon](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotesIcon)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesIcon](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotesIcon)
     <?php
     $notes = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes();
     $icon = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesIcon();
@@ -88,7 +88,7 @@ The label of the notes.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLabel|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLabel](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotesLabel)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLabel](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotesLabel)
     <?php
     $notes = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes();
     $label = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLabel();
@@ -117,7 +117,7 @@ The line of the notes.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotesLine)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLine](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotesLine)
     <?php
     $notes = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes();
     $line = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotesLine();

@@ -21,7 +21,7 @@ The animation played when a popup is closed.
 ##### $value `\Kendo\UI\DateTimePickerAnimationClose|array`
 
 
-#### Example - using [\Kendo\UI\DateTimePickerAnimationClose](/kendo-ui/api/wrappers/php/Kendo/UI/DateTimePickerAnimationClose)
+#### Example - using [\Kendo\UI\DateTimePickerAnimationClose](/api/wrappers/php/Kendo/UI/DateTimePickerAnimationClose)
     <?php
     $animation = new \Kendo\UI\DateTimePickerAnimation();
     $close = new \Kendo\UI\DateTimePickerAnimationClose();
@@ -50,7 +50,7 @@ The animation played when the popup is opened.
 ##### $value `\Kendo\UI\DateTimePickerAnimationOpen|array`
 
 
-#### Example - using [\Kendo\UI\DateTimePickerAnimationOpen](/kendo-ui/api/wrappers/php/Kendo/UI/DateTimePickerAnimationOpen)
+#### Example - using [\Kendo\UI\DateTimePickerAnimationOpen](/api/wrappers/php/Kendo/UI/DateTimePickerAnimationOpen)
     <?php
     $animation = new \Kendo\UI\DateTimePickerAnimation();
     $open = new \Kendo\UI\DateTimePickerAnimationOpen();

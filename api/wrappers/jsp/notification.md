@@ -3,7 +3,7 @@ title: notification
 ---
 
 # \<kendo:notification\>
-A JSP wrapper for Kendo UI [Notification](/kendo-ui/api/web/notification).
+A JSP wrapper for Kendo UI [Notification](/api/web/notification).
 
 ## Configuration Attributes
 
@@ -89,7 +89,7 @@ This setting applies to popup notifications only, i.e. in cases when appendTo is
 It determines the position of the first notification on the screen, as well as whether the notifications will move together with the page content during scrolling.
 top takes precedence over bottom and left takes precedence over right.
 
-More documentation is available at [kendo:notification-position](/kendo-ui/api/wrappers/jsp/notification/position).
+More documentation is available at [kendo:notification-position](/api/wrappers/jsp/notification/position).
 
 #### Example
 
@@ -101,7 +101,7 @@ More documentation is available at [kendo:notification-position](/kendo-ui/api/w
 
 Describes the HTML markup of the different notification types as Kendo UI template strings. The built-in types are "info", "success", "warning" and "error".This documentation section assumes that you are familiar with Kendo UI templates.
 
-More documentation is available at [kendo:notification-templates](/kendo-ui/api/wrappers/jsp/notification/templates).
+More documentation is available at [kendo:notification-templates](/api/wrappers/jsp/notification/templates).
 
 #### Example
 
@@ -117,7 +117,7 @@ More documentation is available at [kendo:notification-templates](/kendo-ui/api/
 Fires when a notification's hiding animation starts.
 
 
-For additional information check the [hide](/kendo-ui/api/web/notification#events-hide) event documentation.
+For additional information check the [hide](/api/web/notification#events-hide) event documentation.
 
 #### Example
     <kendo:notification hide="handle_hide">
@@ -133,7 +133,7 @@ For additional information check the [hide](/kendo-ui/api/web/notification#event
 Fires when a notification's showing animation starts.
 
 
-For additional information check the [show](/kendo-ui/api/web/notification#events-show) event documentation.
+For additional information check the [show](/api/web/notification#events-show) event documentation.
 
 #### Example
     <kendo:notification show="handle_show">
@@ -151,7 +151,7 @@ For additional information check the [show](/kendo-ui/api/web/notification#event
 Fires when a notification's hiding animation starts.
 
 
-For additional information check the [hide](/kendo-ui/api/web/notification#events-hide) event documentation.
+For additional information check the [hide](/api/web/notification#events-hide) event documentation.
 
 #### Example
     <kendo:notification>
@@ -169,7 +169,7 @@ For additional information check the [hide](/kendo-ui/api/web/notification#event
 Fires when a notification's showing animation starts.
 
 
-For additional information check the [show](/kendo-ui/api/web/notification#events-show) event documentation.
+For additional information check the [show](/api/web/notification#events-show) event documentation.
 
 #### Example
     <kendo:notification>

@@ -21,7 +21,7 @@ The border of the track.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugePointerTrackBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugePointerTrackBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugePointerTrackBorder)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugePointerTrackBorder](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugePointerTrackBorder)
     <?php
     $track = new \Kendo\Dataviz\UI\LinearGaugePointerTrack();
     $border = new \Kendo\Dataviz\UI\LinearGaugePointerTrackBorder();

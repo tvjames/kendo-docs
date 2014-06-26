@@ -4,14 +4,14 @@ title: Grid
 
 # \Kendo\UI\Grid
 
-A PHP wrapper for Kendo UI [Grid](/kendo-ui/api/web/grid).
+A PHP wrapper for Kendo UI [Grid](/api/web/grid).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Grid in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Grid
 
@@ -69,7 +69,7 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### cancel
 Fired when the user clicks the "cancel" button (in inline or popup editing mode) or closes the popup window.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [cancel](/kendo-ui/api/web/grid#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/grid#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -96,7 +96,7 @@ For additional information check the [cancel](/kendo-ui/api/web/grid#events-canc
     $grid->cancel('onCancel');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -105,7 +105,7 @@ For additional information check the [cancel](/kendo-ui/api/web/grid#events-canc
 
 ### change
 Fired when the user selects a table row or cell in the grid.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [change](/kendo-ui/api/web/grid#events-change) event documentation.
+For additional information check the [change](/api/web/grid#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -132,7 +132,7 @@ For additional information check the [change](/kendo-ui/api/web/grid#events-chan
     $grid->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -141,7 +141,7 @@ For additional information check the [change](/kendo-ui/api/web/grid#events-chan
 
 ### columnHide
 Fired when the user hides a column.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnHide](/kendo-ui/api/web/grid#events-columnHide) event documentation.
+For additional information check the [columnHide](/api/web/grid#events-columnHide) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -168,7 +168,7 @@ For additional information check the [columnHide](/kendo-ui/api/web/grid#events-
     $grid->columnHide('onColumnHide');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -177,7 +177,7 @@ For additional information check the [columnHide](/kendo-ui/api/web/grid#events-
 
 ### columnLock
 Fired when the user lock a column.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnLock](/kendo-ui/api/web/grid#events-columnLock) event documentation.
+For additional information check the [columnLock](/api/web/grid#events-columnLock) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -204,7 +204,7 @@ For additional information check the [columnLock](/kendo-ui/api/web/grid#events-
     $grid->columnLock('onColumnLock');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -233,7 +233,7 @@ By default the column menu is not enabled.Can be set to a JavaScript object whic
     ?>
 
 
-#### Example - using [\Kendo\UI\GridColumnMenu](/kendo-ui/api/wrappers/php/Kendo/UI/GridColumnMenu)
+#### Example - using [\Kendo\UI\GridColumnMenu](/api/wrappers/php/Kendo/UI/GridColumnMenu)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $columnMenu = new \Kendo\UI\GridColumnMenu();
@@ -252,7 +252,7 @@ By default the column menu is not enabled.Can be set to a JavaScript object whic
 
 ### columnMenuInit
 Fired when the column menu is initialized.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnMenuInit](/kendo-ui/api/web/grid#events-columnMenuInit) event documentation.
+For additional information check the [columnMenuInit](/api/web/grid#events-columnMenuInit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -279,7 +279,7 @@ For additional information check the [columnMenuInit](/kendo-ui/api/web/grid#eve
     $grid->columnMenuInit('onColumnMenuInit');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -288,7 +288,7 @@ For additional information check the [columnMenuInit](/kendo-ui/api/web/grid#eve
 
 ### columnReorder
 Fired when the user changes the order of a column.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnReorder](/kendo-ui/api/web/grid#events-columnReorder) event documentation.
+For additional information check the [columnReorder](/api/web/grid#events-columnReorder) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -315,7 +315,7 @@ For additional information check the [columnReorder](/kendo-ui/api/web/grid#even
     $grid->columnReorder('onColumnReorder');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -324,7 +324,7 @@ For additional information check the [columnReorder](/kendo-ui/api/web/grid#even
 
 ### columnResize
 Fired when the user resizes a column.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnResize](/kendo-ui/api/web/grid#events-columnResize) event documentation.
+For additional information check the [columnResize](/api/web/grid#events-columnResize) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -351,7 +351,7 @@ For additional information check the [columnResize](/kendo-ui/api/web/grid#event
     $grid->columnResize('onColumnResize');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -378,7 +378,7 @@ Defines the width of the column resize handle in pixels. Apply a larger value fo
 
 ### columnShow
 Fired when the user shows a column.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnShow](/kendo-ui/api/web/grid#events-columnShow) event documentation.
+For additional information check the [columnShow](/api/web/grid#events-columnShow) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -405,7 +405,7 @@ For additional information check the [columnShow](/kendo-ui/api/web/grid#events-
     $grid->columnShow('onColumnShow');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -414,7 +414,7 @@ For additional information check the [columnShow](/kendo-ui/api/web/grid#events-
 
 ### columnUnlock
 Fired when the user unlock a column.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [columnUnlock](/kendo-ui/api/web/grid#events-columnUnlock) event documentation.
+For additional information check the [columnUnlock](/api/web/grid#events-columnUnlock) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -441,7 +441,7 @@ For additional information check the [columnUnlock](/kendo-ui/api/web/grid#event
     $grid->columnUnlock('onColumnUnlock');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -488,7 +488,7 @@ Adds one or more GridColumn to the Grid.
 
 ### dataBinding
 Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBinding](/kendo-ui/api/web/grid#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/grid#events-dataBinding) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -515,7 +515,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/grid#events
     $grid->dataBinding('onDataBinding');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -524,7 +524,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/grid#events
 
 ### dataBound
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [dataBound](/kendo-ui/api/web/grid#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/grid#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -551,7 +551,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/grid#events-d
     $grid->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -569,7 +569,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -587,7 +587,7 @@ Sets the data source of the dataSource.
 
 ### detailCollapse
 Fired when the user collapses a detail table row.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [detailCollapse](/kendo-ui/api/web/grid#events-detailCollapse) event documentation.
+For additional information check the [detailCollapse](/api/web/grid#events-detailCollapse) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -614,7 +614,7 @@ For additional information check the [detailCollapse](/kendo-ui/api/web/grid#eve
     $grid->detailCollapse('onDetailCollapse');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -623,7 +623,7 @@ For additional information check the [detailCollapse](/kendo-ui/api/web/grid#eve
 
 ### detailExpand
 Fired when the user expands a detail table row.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [detailExpand](/kendo-ui/api/web/grid#events-detailExpand) event documentation.
+For additional information check the [detailExpand](/api/web/grid#events-detailExpand) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -650,7 +650,7 @@ For additional information check the [detailExpand](/kendo-ui/api/web/grid#event
     $grid->detailExpand('onDetailExpand');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -659,7 +659,7 @@ For additional information check the [detailExpand](/kendo-ui/api/web/grid#event
 
 ### detailInit
 Fired when a detail table row is initialized.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [detailInit](/kendo-ui/api/web/grid#events-detailInit) event documentation.
+For additional information check the [detailInit](/api/web/grid#events-detailInit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -686,7 +686,7 @@ For additional information check the [detailInit](/kendo-ui/api/web/grid#events-
     $grid->detailInit('onDetailInit');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -713,7 +713,7 @@ The id of the template used for rendering the detail rows in the grid.
 
 ### edit
 Fired when the user edits or creates a data item.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [edit](/kendo-ui/api/web/grid#events-edit) event documentation.
+For additional information check the [edit](/api/web/grid#events-edit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -740,7 +740,7 @@ For additional information check the [edit](/kendo-ui/api/web/grid#events-edit) 
     $grid->edit('onEdit');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -768,7 +768,7 @@ If set to true the user would be able to edit the data to which the grid is boun
     ?>
 
 
-#### Example - using [\Kendo\UI\GridEditable](/kendo-ui/api/wrappers/php/Kendo/UI/GridEditable)
+#### Example - using [\Kendo\UI\GridEditable](/api/wrappers/php/Kendo/UI/GridEditable)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $editable = new \Kendo\UI\GridEditable();
@@ -787,7 +787,7 @@ If set to true the user would be able to edit the data to which the grid is boun
 
 ### filterMenuInit
 Fired when the grid filter menu is initialized.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [filterMenuInit](/kendo-ui/api/web/grid#events-filterMenuInit) event documentation.
+For additional information check the [filterMenuInit](/api/web/grid#events-filterMenuInit) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -814,7 +814,7 @@ For additional information check the [filterMenuInit](/kendo-ui/api/web/grid#eve
     $grid->filterMenuInit('onFilterMenuInit');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -842,7 +842,7 @@ If set to true the user can filter the data source using the grid filter menu. F
     ?>
 
 
-#### Example - using [\Kendo\UI\GridFilterable](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterable)
+#### Example - using [\Kendo\UI\GridFilterable](/api/wrappers/php/Kendo/UI/GridFilterable)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $filterable = new \Kendo\UI\GridFilterable();
@@ -880,7 +880,7 @@ If set to true the user could group the grid by dragging the column header cells
     ?>
 
 
-#### Example - using [\Kendo\UI\GridGroupable](/kendo-ui/api/wrappers/php/Kendo/UI/GridGroupable)
+#### Example - using [\Kendo\UI\GridGroupable](/api/wrappers/php/Kendo/UI/GridGroupable)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $groupable = new \Kendo\UI\GridGroupable();
@@ -985,7 +985,7 @@ If set to true the grid will display a pager. By default paging is disabled.Can 
     ?>
 
 
-#### Example - using [\Kendo\UI\GridPageable](/kendo-ui/api/wrappers/php/Kendo/UI/GridPageable)
+#### Example - using [\Kendo\UI\GridPageable](/api/wrappers/php/Kendo/UI/GridPageable)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $pageable = new \Kendo\UI\GridPageable();
@@ -1004,7 +1004,7 @@ If set to true the grid will display a pager. By default paging is disabled.Can 
 
 ### remove
 Fired when the user clicks the "destroy" command button.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [remove](/kendo-ui/api/web/grid#events-remove) event documentation.
+For additional information check the [remove](/api/web/grid#events-remove) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -1031,7 +1031,7 @@ For additional information check the [remove](/kendo-ui/api/web/grid#events-remo
     $grid->remove('onRemove');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -1094,7 +1094,7 @@ The id of the template used for rendering the rows in the grid.
 
 ### save
 Fired when a data item is saved.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [save](/kendo-ui/api/web/grid#events-save) event documentation.
+For additional information check the [save](/api/web/grid#events-save) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -1121,7 +1121,7 @@ For additional information check the [save](/kendo-ui/api/web/grid#events-save) 
     $grid->save('onSave');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -1130,7 +1130,7 @@ For additional information check the [save](/kendo-ui/api/web/grid#events-save) 
 
 ### saveChanges
 Fired when the user clicks the "save" command button.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [saveChanges](/kendo-ui/api/web/grid#events-saveChanges) event documentation.
+For additional information check the [saveChanges](/api/web/grid#events-saveChanges) event documentation.
 
 #### Returns
 `\Kendo\UI\Grid`
@@ -1157,7 +1157,7 @@ For additional information check the [saveChanges](/kendo-ui/api/web/grid#events
     $grid->saveChanges('onSaveChanges');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
@@ -1185,7 +1185,7 @@ If set to true the grid will display a scrollbar when the total row height (or w
     ?>
 
 
-#### Example - using [\Kendo\UI\GridScrollable](/kendo-ui/api/wrappers/php/Kendo/UI/GridScrollable)
+#### Example - using [\Kendo\UI\GridScrollable](/api/wrappers/php/Kendo/UI/GridScrollable)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $scrollable = new \Kendo\UI\GridScrollable();
@@ -1247,7 +1247,7 @@ If set to true the user could sort the grid by clicking the column header cells.
     ?>
 
 
-#### Example - using [\Kendo\UI\GridSortable](/kendo-ui/api/wrappers/php/Kendo/UI/GridSortable)
+#### Example - using [\Kendo\UI\GridSortable](/api/wrappers/php/Kendo/UI/GridSortable)
     <?php
     $grid = new \Kendo\UI\Grid('Grid');
     $sortable = new \Kendo\UI\GridSortable();

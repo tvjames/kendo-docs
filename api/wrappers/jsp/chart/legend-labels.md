@@ -60,7 +60,7 @@ The template which renders the labels.The fields which can be used in the templa
 
 The margin of the labels. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-legend-labels-margin](/kendo-ui/api/wrappers/jsp/chart/legend-labels-margin).
+More documentation is available at [kendo:chart-legend-labels-margin](/api/wrappers/jsp/chart/legend-labels-margin).
 
 #### Example
 
@@ -72,7 +72,7 @@ More documentation is available at [kendo:chart-legend-labels-margin](/kendo-ui/
 
 The padding of the labels. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-legend-labels-padding](/kendo-ui/api/wrappers/jsp/chart/legend-labels-padding).
+More documentation is available at [kendo:chart-legend-labels-padding](/api/wrappers/jsp/chart/legend-labels-padding).
 
 #### Example
 

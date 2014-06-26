@@ -28,7 +28,7 @@ The name of the field which acts as an identifier.
 
 
 
-More documentation is available at [kendo:editor-fileBrowser-schema-model-fields](/kendo-ui/api/wrappers/jsp/editor/filebrowser-schema-model-fields).
+More documentation is available at [kendo:editor-fileBrowser-schema-model-fields](/api/wrappers/jsp/editor/filebrowser-schema-model-fields).
 
 #### Example
 

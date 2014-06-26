@@ -22,7 +22,7 @@ By default the Kendo UI Scheduler widget displays "day" and "week" view.
 The views displayed by the scheduler and their configuration. The array items can be either objects specifying the view configuration or strings representing the view types (assuming default configuration).
 By default the Kendo UI Scheduler widget displays "day" and "week" view.
 
-More documentation is available at [kendo:scheduler-view](/kendo-ui/api/wrappers/jsp/scheduler/view).
+More documentation is available at [kendo:scheduler-view](/api/wrappers/jsp/scheduler/view).
 
 #### Example
 

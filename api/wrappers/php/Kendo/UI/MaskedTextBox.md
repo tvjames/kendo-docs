@@ -4,14 +4,14 @@ title: MaskedTextBox
 
 # \Kendo\UI\MaskedTextBox
 
-A PHP wrapper for Kendo UI [MaskedTextBox](/kendo-ui/api/web/maskedtextbox).
+A PHP wrapper for Kendo UI [MaskedTextBox](/api/web/maskedtextbox).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use MaskedTextBox in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo MaskedTextBox
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the value is changed
-For additional information check the [change](/kendo-ui/api/web/maskedtextbox#events-change) event documentation.
+For additional information check the [change](/api/web/maskedtextbox#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\MaskedTextBox`
@@ -59,7 +59,7 @@ For additional information check the [change](/kendo-ui/api/web/maskedtextbox#ev
     $maskedTextBox->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $maskedTextBox = new \Kendo\UI\MaskedTextBox('MaskedTextBox');

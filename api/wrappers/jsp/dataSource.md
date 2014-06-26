@@ -3,7 +3,7 @@ title: dataSource
 ---
 
 # \<kendo:dataSource\>
-A JSP wrapper for Kendo UI [DataSource](/kendo-ui/api/framework/datasource).
+A JSP wrapper for Kendo UI [DataSource](/api/framework/datasource).
 
 ## Configuration Attributes
 
@@ -104,7 +104,7 @@ The supported values are "odata" which supports the OData v.2 protocol and "sign
 
 The aggregate(s) which are calculated when the data source populates with data. The supported aggregates are "average", "count", "max", "min" and "sum".
 
-More documentation is available at [kendo:dataSource-aggregate](/kendo-ui/api/wrappers/jsp/datasource/aggregate).
+More documentation is available at [kendo:dataSource-aggregate](/api/wrappers/jsp/datasource/aggregate).
 
 #### Example
 
@@ -116,7 +116,7 @@ More documentation is available at [kendo:dataSource-aggregate](/kendo-ui/api/wr
 
 The filter(s) which is (are) applied over the data items. By default no filter is applied.
 
-More documentation is available at [kendo:dataSource-filter](/kendo-ui/api/wrappers/jsp/datasource/filter).
+More documentation is available at [kendo:dataSource-filter](/api/wrappers/jsp/datasource/filter).
 
 #### Example
 
@@ -128,7 +128,7 @@ More documentation is available at [kendo:dataSource-filter](/kendo-ui/api/wrapp
 
 The grouping configuration of the data source. If set the data items will be grouped when the data source is populated. By default grouping is not applied.
 
-More documentation is available at [kendo:dataSource-group](/kendo-ui/api/wrappers/jsp/datasource/group).
+More documentation is available at [kendo:dataSource-group](/api/wrappers/jsp/datasource/group).
 
 #### Example
 
@@ -140,7 +140,7 @@ More documentation is available at [kendo:dataSource-group](/kendo-ui/api/wrappe
 
 The configuration used to parse the remote service response.
 
-More documentation is available at [kendo:dataSource-schema](/kendo-ui/api/wrappers/jsp/datasource/schema).
+More documentation is available at [kendo:dataSource-schema](/api/wrappers/jsp/datasource/schema).
 
 #### Example
 
@@ -152,7 +152,7 @@ More documentation is available at [kendo:dataSource-schema](/kendo-ui/api/wrapp
 
 The sort order which will be applied over the data items. By default the data items are not sorted.
 
-More documentation is available at [kendo:dataSource-sort](/kendo-ui/api/wrappers/jsp/datasource/sort).
+More documentation is available at [kendo:dataSource-sort](/api/wrappers/jsp/datasource/sort).
 
 #### Example
 
@@ -165,7 +165,7 @@ More documentation is available at [kendo:dataSource-sort](/kendo-ui/api/wrapper
 The configuration used to load and save the data items. A data source is remote or local based on the way of it retrieves data items.Remote data sources load and save data items from and to a remote end-point (a.k.a. remote service or server). The transport option describes the remote service configuration - URL, HTTP verb, HTTP headers etc.
 The transport option can also be used to implement custom data loading and saving.Local data sources are bound to a JavaScript array via the data option.
 
-More documentation is available at [kendo:dataSource-transport](/kendo-ui/api/wrappers/jsp/datasource/transport).
+More documentation is available at [kendo:dataSource-transport](/api/wrappers/jsp/datasource/transport).
 
 #### Example
 
@@ -181,7 +181,7 @@ More documentation is available at [kendo:dataSource-transport](/kendo-ui/api/wr
 Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [change](/kendo-ui/api/framework/datasource#events-change) event documentation.
+For additional information check the [change](/api/framework/datasource#events-change) event documentation.
 
 #### Example
     <kendo:dataSource change="handle_change">
@@ -197,7 +197,7 @@ For additional information check the [change](/kendo-ui/api/framework/datasource
 Fired when a request to the remote service fails.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [error](/kendo-ui/api/framework/datasource#events-error) event documentation.
+For additional information check the [error](/api/framework/datasource#events-error) event documentation.
 
 #### Example
     <kendo:dataSource error="handle_error">
@@ -213,7 +213,7 @@ For additional information check the [error](/kendo-ui/api/framework/datasource#
 Fired when the data source receives a push notification or the pushCreate, pushUpdate or pushDestroy methods are called.
 
 
-For additional information check the [push](/kendo-ui/api/framework/datasource#events-push) event documentation.
+For additional information check the [push](/api/framework/datasource#events-push) event documentation.
 
 #### Example
     <kendo:dataSource push="handle_push">
@@ -229,7 +229,7 @@ For additional information check the [push](/kendo-ui/api/framework/datasource#e
 Fired when a remote service request is finished.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [requestEnd](/kendo-ui/api/framework/datasource#events-requestEnd) event documentation.
+For additional information check the [requestEnd](/api/framework/datasource#events-requestEnd) event documentation.
 
 #### Example
     <kendo:dataSource requestEnd="handle_requestEnd">
@@ -245,7 +245,7 @@ For additional information check the [requestEnd](/kendo-ui/api/framework/dataso
 Fired when the data source makes a remote service request.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [requestStart](/kendo-ui/api/framework/datasource#events-requestStart) event documentation.
+For additional information check the [requestStart](/api/framework/datasource#events-requestStart) event documentation.
 
 #### Example
     <kendo:dataSource requestStart="handle_requestStart">
@@ -261,7 +261,7 @@ For additional information check the [requestStart](/kendo-ui/api/framework/data
 Fired after the data source saves data item changes. The data source saves the data item changes when the sync method is called.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [sync](/kendo-ui/api/framework/datasource#events-sync) event documentation.
+For additional information check the [sync](/api/framework/datasource#events-sync) event documentation.
 
 #### Example
     <kendo:dataSource sync="handle_sync">
@@ -279,7 +279,7 @@ For additional information check the [sync](/kendo-ui/api/framework/datasource#e
 Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [change](/kendo-ui/api/framework/datasource#events-change) event documentation.
+For additional information check the [change](/api/framework/datasource#events-change) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -297,7 +297,7 @@ For additional information check the [change](/kendo-ui/api/framework/datasource
 Fired when a request to the remote service fails.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [error](/kendo-ui/api/framework/datasource#events-error) event documentation.
+For additional information check the [error](/api/framework/datasource#events-error) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -315,7 +315,7 @@ For additional information check the [error](/kendo-ui/api/framework/datasource#
 Fired when the data source receives a push notification or the pushCreate, pushUpdate or pushDestroy methods are called.
 
 
-For additional information check the [push](/kendo-ui/api/framework/datasource#events-push) event documentation.
+For additional information check the [push](/api/framework/datasource#events-push) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -333,7 +333,7 @@ For additional information check the [push](/kendo-ui/api/framework/datasource#e
 Fired when a remote service request is finished.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [requestEnd](/kendo-ui/api/framework/datasource#events-requestEnd) event documentation.
+For additional information check the [requestEnd](/api/framework/datasource#events-requestEnd) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -351,7 +351,7 @@ For additional information check the [requestEnd](/kendo-ui/api/framework/dataso
 Fired when the data source makes a remote service request.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [requestStart](/kendo-ui/api/framework/datasource#events-requestStart) event documentation.
+For additional information check the [requestStart](/api/framework/datasource#events-requestStart) event documentation.
 
 #### Example
     <kendo:dataSource>
@@ -369,7 +369,7 @@ For additional information check the [requestStart](/kendo-ui/api/framework/data
 Fired after the data source saves data item changes. The data source saves the data item changes when the sync method is called.The event handler function context (available via the this keyword) will be set to the data source instance.
 
 
-For additional information check the [sync](/kendo-ui/api/framework/datasource#events-sync) event documentation.
+For additional information check the [sync](/api/framework/datasource#events-sync) event documentation.
 
 #### Example
     <kendo:dataSource>

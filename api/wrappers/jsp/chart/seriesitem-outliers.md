@@ -64,7 +64,7 @@ The outliers shape.The supported values are:
 
 The border of the outliers.
 
-More documentation is available at [kendo:chart-seriesItem-outliers-border](/kendo-ui/api/wrappers/jsp/chart/seriesitem-outliers-border).
+More documentation is available at [kendo:chart-seriesItem-outliers-border](/api/wrappers/jsp/chart/seriesitem-outliers-border).
 
 #### Example
 

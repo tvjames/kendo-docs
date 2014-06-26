@@ -57,7 +57,7 @@ The text messages displayed in the column menu. Use it to customize or localize 
 ##### $value `\Kendo\UI\GridColumnMenuMessages|array`
 
 
-#### Example - using [\Kendo\UI\GridColumnMenuMessages](/kendo-ui/api/wrappers/php/Kendo/UI/GridColumnMenuMessages)
+#### Example - using [\Kendo\UI\GridColumnMenuMessages](/api/wrappers/php/Kendo/UI/GridColumnMenuMessages)
     <?php
     $columnMenu = new \Kendo\UI\GridColumnMenu();
     $messages = new \Kendo\UI\GridColumnMenuMessages();

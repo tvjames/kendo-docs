@@ -21,7 +21,7 @@ The animation played when the suggestion popup is closed.
 ##### $value `\Kendo\UI\AutoCompleteAnimationClose|array`
 
 
-#### Example - using [\Kendo\UI\AutoCompleteAnimationClose](/kendo-ui/api/wrappers/php/Kendo/UI/AutoCompleteAnimationClose)
+#### Example - using [\Kendo\UI\AutoCompleteAnimationClose](/api/wrappers/php/Kendo/UI/AutoCompleteAnimationClose)
     <?php
     $animation = new \Kendo\UI\AutoCompleteAnimation();
     $close = new \Kendo\UI\AutoCompleteAnimationClose();
@@ -50,7 +50,7 @@ The animation played when the suggestion popup is opened.
 ##### $value `\Kendo\UI\AutoCompleteAnimationOpen|array`
 
 
-#### Example - using [\Kendo\UI\AutoCompleteAnimationOpen](/kendo-ui/api/wrappers/php/Kendo/UI/AutoCompleteAnimationOpen)
+#### Example - using [\Kendo\UI\AutoCompleteAnimationOpen](/api/wrappers/php/Kendo/UI/AutoCompleteAnimationOpen)
     <?php
     $animation = new \Kendo\UI\AutoCompleteAnimation();
     $open = new \Kendo\UI\AutoCompleteAnimationOpen();

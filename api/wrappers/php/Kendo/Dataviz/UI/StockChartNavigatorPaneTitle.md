@@ -39,7 +39,7 @@ The border of the title.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorPaneTitleBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPaneTitleBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPaneTitleBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPaneTitleBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPaneTitleBorder)
     <?php
     $title = new \Kendo\Dataviz\UI\StockChartNavigatorPaneTitle();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorPaneTitleBorder();
@@ -113,7 +113,7 @@ The margin of the title. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPaneTitleMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPaneTitleMargin)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPaneTitleMargin](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPaneTitleMargin)
     <?php
     $title = new \Kendo\Dataviz\UI\StockChartNavigatorPaneTitle();
     $margin = new \Kendo\Dataviz\UI\StockChartNavigatorPaneTitleMargin();

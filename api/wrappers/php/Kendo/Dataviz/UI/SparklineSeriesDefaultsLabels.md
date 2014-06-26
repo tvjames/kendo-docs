@@ -40,7 +40,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesDefaultsLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesDefaultsLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesDefaultsLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesDefaultsLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesDefaultsLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\SparklineSeriesDefaultsLabels();
     $border = new \Kendo\Dataviz\UI\SparklineSeriesDefaultsLabelsBorder();

@@ -39,7 +39,7 @@ Defines the hover configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramConnectionDefaultsHover|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramConnectionDefaultsHover](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramConnectionDefaultsHover)
+#### Example - using [\Kendo\Dataviz\UI\DiagramConnectionDefaultsHover](/api/wrappers/php/Kendo/Dataviz/UI/DiagramConnectionDefaultsHover)
     <?php
     $connectionDefaults = new \Kendo\Dataviz\UI\DiagramConnectionDefaults();
     $hover = new \Kendo\Dataviz\UI\DiagramConnectionDefaultsHover();
@@ -86,7 +86,7 @@ Defines the stroke configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramConnectionDefaultsStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramConnectionDefaultsStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramConnectionDefaultsStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramConnectionDefaultsStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramConnectionDefaultsStroke)
     <?php
     $connectionDefaults = new \Kendo\Dataviz\UI\DiagramConnectionDefaults();
     $stroke = new \Kendo\Dataviz\UI\DiagramConnectionDefaultsStroke();

@@ -3,7 +3,7 @@ title: sortable
 ---
 
 # \<kendo:sortable\>
-A JSP wrapper for Kendo UI [Sortable](/kendo-ui/api/web/sortable).
+A JSP wrapper for Kendo UI [Sortable](/api/web/sortable).
 
 ## Configuration Attributes
 
@@ -106,7 +106,7 @@ If placeholder function is not provided the widget will clone dragged item, remo
 If set, specifies the offset of the hint relative to the mouse cursor/finger.
 By default, the hint is initially positioned on top of the draggable source offset. The option accepts an object with two keys: top and left.
 
-More documentation is available at [kendo:sortable-cursorOffset](/kendo-ui/api/wrappers/jsp/sortable/cursoroffset).
+More documentation is available at [kendo:sortable-cursorOffset](/api/wrappers/jsp/sortable/cursoroffset).
 
 #### Example
 
@@ -122,7 +122,7 @@ More documentation is available at [kendo:sortable-cursorOffset](/kendo-ui/api/w
 Fires when sortable item drag starts.
 
 
-For additional information check the [start](/kendo-ui/api/web/sortable#events-start) event documentation.
+For additional information check the [start](/api/web/sortable#events-start) event documentation.
 
 #### Example
     <kendo:sortable start="handle_start">
@@ -138,7 +138,7 @@ For additional information check the [start](/kendo-ui/api/web/sortable#events-s
 Fires when Sortable's placeholder changes its position.
 
 
-For additional information check the [move](/kendo-ui/api/web/sortable#events-move) event documentation.
+For additional information check the [move](/api/web/sortable#events-move) event documentation.
 
 #### Example
     <kendo:sortable move="handle_move">
@@ -154,7 +154,7 @@ For additional information check the [move](/kendo-ui/api/web/sortable#events-mo
 Fires when item dragging ends but before the item's position is changed in the DOM. This event is suitable for preventing the sort action.
 
 
-For additional information check the [end](/kendo-ui/api/web/sortable#events-end) event documentation.
+For additional information check the [end](/api/web/sortable#events-end) event documentation.
 
 #### Example
     <kendo:sortable end="handle_end">
@@ -170,7 +170,7 @@ For additional information check the [end](/kendo-ui/api/web/sortable#events-end
 Fires when item is sorted and the item's position is changed in the DOM.
 
 
-For additional information check the [change](/kendo-ui/api/web/sortable#events-change) event documentation.
+For additional information check the [change](/api/web/sortable#events-change) event documentation.
 
 #### Example
     <kendo:sortable change="handle_change">
@@ -186,7 +186,7 @@ For additional information check the [change](/kendo-ui/api/web/sortable#events-
 Fires when item sorting is canceled by pressing the Escape key.
 
 
-For additional information check the [cancel](/kendo-ui/api/web/sortable#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/sortable#events-cancel) event documentation.
 
 #### Example
     <kendo:sortable cancel="handle_cancel">
@@ -204,7 +204,7 @@ For additional information check the [cancel](/kendo-ui/api/web/sortable#events-
 Fires when sortable item drag starts.
 
 
-For additional information check the [start](/kendo-ui/api/web/sortable#events-start) event documentation.
+For additional information check the [start](/api/web/sortable#events-start) event documentation.
 
 #### Example
     <kendo:sortable>
@@ -222,7 +222,7 @@ For additional information check the [start](/kendo-ui/api/web/sortable#events-s
 Fires when Sortable's placeholder changes its position.
 
 
-For additional information check the [move](/kendo-ui/api/web/sortable#events-move) event documentation.
+For additional information check the [move](/api/web/sortable#events-move) event documentation.
 
 #### Example
     <kendo:sortable>
@@ -240,7 +240,7 @@ For additional information check the [move](/kendo-ui/api/web/sortable#events-mo
 Fires when item dragging ends but before the item's position is changed in the DOM. This event is suitable for preventing the sort action.
 
 
-For additional information check the [end](/kendo-ui/api/web/sortable#events-end) event documentation.
+For additional information check the [end](/api/web/sortable#events-end) event documentation.
 
 #### Example
     <kendo:sortable>
@@ -258,7 +258,7 @@ For additional information check the [end](/kendo-ui/api/web/sortable#events-end
 Fires when item is sorted and the item's position is changed in the DOM.
 
 
-For additional information check the [change](/kendo-ui/api/web/sortable#events-change) event documentation.
+For additional information check the [change](/api/web/sortable#events-change) event documentation.
 
 #### Example
     <kendo:sortable>
@@ -276,7 +276,7 @@ For additional information check the [change](/kendo-ui/api/web/sortable#events-
 Fires when item sorting is canceled by pressing the Escape key.
 
 
-For additional information check the [cancel](/kendo-ui/api/web/sortable#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/sortable#events-cancel) event documentation.
 
 #### Example
     <kendo:sortable>

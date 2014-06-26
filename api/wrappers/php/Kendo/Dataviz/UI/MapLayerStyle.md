@@ -22,7 +22,7 @@ Accepts a valid CSS color string or object with detailed configuration.
 ##### $value `\Kendo\Dataviz\UI\MapLayerStyleFill|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerStyleFill](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerStyleFill)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerStyleFill](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerStyleFill)
     <?php
     $style = new \Kendo\Dataviz\UI\MapLayerStyle();
     $fill = new \Kendo\Dataviz\UI\MapLayerStyleFill();
@@ -52,7 +52,7 @@ Accepts a valid CSS color string or object with detailed configuration.
 ##### $value `\Kendo\Dataviz\UI\MapLayerStyleStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerStyleStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerStyleStroke)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerStyleStroke](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerStyleStroke)
     <?php
     $style = new \Kendo\Dataviz\UI\MapLayerStyle();
     $stroke = new \Kendo\Dataviz\UI\MapLayerStyleStroke();

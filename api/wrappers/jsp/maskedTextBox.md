@@ -3,7 +3,7 @@ title: maskedTextBox
 ---
 
 # \<kendo:maskedTextBox\>
-A JSP wrapper for Kendo UI [MaskedTextBox](/kendo-ui/api/web/maskedtextbox).
+A JSP wrapper for Kendo UI [MaskedTextBox](/api/web/maskedtextbox).
 
 ## Configuration Attributes
 
@@ -55,7 +55,7 @@ Specifies the value of the MaskedTextBox widget.
 Fires when the value is changed
 
 
-For additional information check the [change](/kendo-ui/api/web/maskedtextbox#events-change) event documentation.
+For additional information check the [change](/api/web/maskedtextbox#events-change) event documentation.
 
 #### Example
     <kendo:maskedTextBox change="handle_change">
@@ -73,7 +73,7 @@ For additional information check the [change](/kendo-ui/api/web/maskedtextbox#ev
 Fires when the value is changed
 
 
-For additional information check the [change](/kendo-ui/api/web/maskedtextbox#events-change) event documentation.
+For additional information check the [change](/api/web/maskedtextbox#events-change) event documentation.
 
 #### Example
     <kendo:maskedTextBox>

@@ -146,7 +146,7 @@ The update interval of the "current time" marker, in milliseconds.
 
 ### currentTimeMarker.useLocalTimezone `Boolean` *(default: true)*
 
-If set to `false` the "current time" marker would be displayed using the scheduler [timezone](/kendo-ui/api/web/scheduler#configuration-timezone).
+If set to `false` the "current time" marker would be displayed using the scheduler [timezone](/api/web/scheduler#configuration-timezone).
 
 #### Example - set "current time" marker to use scheduler timezone
     <div id="scheduler"></div>

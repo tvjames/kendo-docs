@@ -4,14 +4,14 @@ title: TreeView
 
 # \Kendo\UI\TreeView
 
-A PHP wrapper for Kendo UI [TreeView](/kendo-ui/api/web/treeview).
+A PHP wrapper for Kendo UI [TreeView](/api/web/treeview).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use TreeView in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo TreeView
 
@@ -52,7 +52,7 @@ Setting this option to false will disable all animations.
     ?>
 
 
-#### Example - using [\Kendo\UI\TreeViewAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/TreeViewAnimation)
+#### Example - using [\Kendo\UI\TreeViewAnimation](/api/wrappers/php/Kendo/UI/TreeViewAnimation)
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
     $animation = new \Kendo\UI\TreeViewAnimation();
@@ -90,7 +90,7 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### change
 Triggered when the selection has changed (either by the user or through the select method).
-For additional information check the [change](/kendo-ui/api/web/treeview#events-change) event documentation.
+For additional information check the [change](/api/web/treeview#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -117,7 +117,7 @@ For additional information check the [change](/kendo-ui/api/web/treeview#events-
     $treeView->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -145,7 +145,7 @@ If true or an object, renders checkboxes beside each node.
     ?>
 
 
-#### Example - using [\Kendo\UI\TreeViewCheckboxes](/kendo-ui/api/wrappers/php/Kendo/UI/TreeViewCheckboxes)
+#### Example - using [\Kendo\UI\TreeViewCheckboxes](/api/wrappers/php/Kendo/UI/TreeViewCheckboxes)
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
     $checkboxes = new \Kendo\UI\TreeViewCheckboxes();
@@ -164,7 +164,7 @@ If true or an object, renders checkboxes beside each node.
 
 ### collapse
 Triggered before a subgroup gets collapsed.
-For additional information check the [collapse](/kendo-ui/api/web/treeview#events-collapse) event documentation.
+For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -191,7 +191,7 @@ For additional information check the [collapse](/kendo-ui/api/web/treeview#event
     $treeView->collapse('onCollapse');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -200,7 +200,7 @@ For additional information check the [collapse](/kendo-ui/api/web/treeview#event
 
 ### dataBound
 Triggered after the dataSource change event has been processed (adding/removing items);
-For additional information check the [dataBound](/kendo-ui/api/web/treeview#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -227,7 +227,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/treeview#even
     $treeView->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -263,7 +263,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\HierarchicalDataSource|array`
 
-#### Example - using [\Kendo\Data\HierarchicalDataSource](/kendo-ui/api/wrappers/php/kendo/data/hierarchicaldatasource)
+#### Example - using [\Kendo\Data\HierarchicalDataSource](/api/wrappers/php/kendo/data/hierarchicaldatasource)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -343,7 +343,7 @@ Sets the field of the data item that provides the link URL of the nodes.
 
 ### drag
 Triggered while a node is being dragged.
-For additional information check the [drag](/kendo-ui/api/web/treeview#events-drag) event documentation.
+For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -370,7 +370,7 @@ For additional information check the [drag](/kendo-ui/api/web/treeview#events-dr
     $treeView->drag('onDrag');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -397,7 +397,7 @@ Disables (false) or enables (true) drag-and-drop of the nodes.
 
 ### dragend
 Triggered after a node has been dropped.
-For additional information check the [dragend](/kendo-ui/api/web/treeview#events-dragend) event documentation.
+For additional information check the [dragend](/api/web/treeview#events-dragend) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -424,7 +424,7 @@ For additional information check the [dragend](/kendo-ui/api/web/treeview#events
     $treeView->dragend('onDragend');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -433,7 +433,7 @@ For additional information check the [dragend](/kendo-ui/api/web/treeview#events
 
 ### dragstart
 Triggered before the dragging of a node starts.
-For additional information check the [dragstart](/kendo-ui/api/web/treeview#events-dragstart) event documentation.
+For additional information check the [dragstart](/api/web/treeview#events-dragstart) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -460,7 +460,7 @@ For additional information check the [dragstart](/kendo-ui/api/web/treeview#even
     $treeView->dragstart('onDragstart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -469,7 +469,7 @@ For additional information check the [dragstart](/kendo-ui/api/web/treeview#even
 
 ### drop
 Triggered when a node is being dropped.
-For additional information check the [drop](/kendo-ui/api/web/treeview#events-drop) event documentation.
+For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -496,7 +496,7 @@ For additional information check the [drop](/kendo-ui/api/web/treeview#events-dr
     $treeView->drop('onDrop');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -505,7 +505,7 @@ For additional information check the [drop](/kendo-ui/api/web/treeview#events-dr
 
 ### expand
 Triggered before a subgroup gets expanded.
-For additional information check the [expand](/kendo-ui/api/web/treeview#events-expand) event documentation.
+For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -532,7 +532,7 @@ For additional information check the [expand](/kendo-ui/api/web/treeview#events-
     $treeView->expand('onExpand');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -609,7 +609,7 @@ The text messages displayed in the widget. Use it to customize or localize the m
 ##### $value `\Kendo\UI\TreeViewMessages|array`
 
 
-#### Example - using [\Kendo\UI\TreeViewMessages](/kendo-ui/api/wrappers/php/Kendo/UI/TreeViewMessages)
+#### Example - using [\Kendo\UI\TreeViewMessages](/api/wrappers/php/Kendo/UI/TreeViewMessages)
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
     $messages = new \Kendo\UI\TreeViewMessages();
@@ -628,7 +628,7 @@ The text messages displayed in the widget. Use it to customize or localize the m
 
 ### navigate
 Triggered when the user moves the focus on another node
-For additional information check the [navigate](/kendo-ui/api/web/treeview#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/treeview#events-navigate) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -655,7 +655,7 @@ For additional information check the [navigate](/kendo-ui/api/web/treeview#event
     $treeView->navigate('onNavigate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
@@ -664,7 +664,7 @@ For additional information check the [navigate](/kendo-ui/api/web/treeview#event
 
 ### select
 Triggered when a node is being selected by the user. Cancellable.
-For additional information check the [select](/kendo-ui/api/web/treeview#events-select) event documentation.
+For additional information check the [select](/api/web/treeview#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -691,7 +691,7 @@ For additional information check the [select](/kendo-ui/api/web/treeview#events-
     $treeView->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');

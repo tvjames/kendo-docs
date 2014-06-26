@@ -28,7 +28,7 @@ Set the handles backgorund.
 
 Specifies the handles stroke styles.
 
-More documentation is available at [kendo:diagram-editable-resize-handles-hover-stroke](/kendo-ui/api/wrappers/jsp/diagram/editable-resize-handles-hover-stroke).
+More documentation is available at [kendo:diagram-editable-resize-handles-hover-stroke](/api/wrappers/jsp/diagram/editable-resize-handles-hover-stroke).
 
 #### Example
 

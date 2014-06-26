@@ -4,7 +4,7 @@ title: DataSource
 
 # \Kendo\Data\DataSource
 
-A PHP wrapper for Kendo UI [DataSource](/kendo-ui/api/framework/datasource).
+A PHP wrapper for Kendo UI [DataSource](/api/framework/datasource).
 
 
 ## Methods
@@ -86,7 +86,7 @@ makes a HTTP request for every CRUD operation.
 
 ### change
 Fired when the data source is populated from a JavaScript array or a remote service, a data item is inserted, updated or removed, the data items are paged, sorted, filtered or grouped.The event handler function context (available via the this keyword) will be set to the data source instance.
-For additional information check the [change](/kendo-ui/api/framework/datasource#events-change) event documentation.
+For additional information check the [change](/api/framework/datasource#events-change) event documentation.
 
 #### Returns
 `\Kendo\Data\DataSource`
@@ -113,7 +113,7 @@ For additional information check the [change](/kendo-ui/api/framework/datasource
     $dataSource->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
@@ -146,7 +146,7 @@ The array of data items which the data source contains. The data source will wra
 
 ### error
 Fired when a request to the remote service fails.The event handler function context (available via the this keyword) will be set to the data source instance.
-For additional information check the [error](/kendo-ui/api/framework/datasource#events-error) event documentation.
+For additional information check the [error](/api/framework/datasource#events-error) event documentation.
 
 #### Returns
 `\Kendo\Data\DataSource`
@@ -173,7 +173,7 @@ For additional information check the [error](/kendo-ui/api/framework/datasource#
     $dataSource->error('onError');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
@@ -294,7 +294,7 @@ The number of data items per page.
 
 ### push
 Fired when the data source receives a push notification or the pushCreate, pushUpdate or pushDestroy methods are called.
-For additional information check the [push](/kendo-ui/api/framework/datasource#events-push) event documentation.
+For additional information check the [push](/api/framework/datasource#events-push) event documentation.
 
 #### Returns
 `\Kendo\Data\DataSource`
@@ -321,7 +321,7 @@ For additional information check the [push](/kendo-ui/api/framework/datasource#e
     $dataSource->push('onPush');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
@@ -330,7 +330,7 @@ For additional information check the [push](/kendo-ui/api/framework/datasource#e
 
 ### requestEnd
 Fired when a remote service request is finished.The event handler function context (available via the this keyword) will be set to the data source instance.
-For additional information check the [requestEnd](/kendo-ui/api/framework/datasource#events-requestEnd) event documentation.
+For additional information check the [requestEnd](/api/framework/datasource#events-requestEnd) event documentation.
 
 #### Returns
 `\Kendo\Data\DataSource`
@@ -357,7 +357,7 @@ For additional information check the [requestEnd](/kendo-ui/api/framework/dataso
     $dataSource->requestEnd('onRequestEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
@@ -366,7 +366,7 @@ For additional information check the [requestEnd](/kendo-ui/api/framework/dataso
 
 ### requestStart
 Fired when the data source makes a remote service request.The event handler function context (available via the this keyword) will be set to the data source instance.
-For additional information check the [requestStart](/kendo-ui/api/framework/datasource#events-requestStart) event documentation.
+For additional information check the [requestStart](/api/framework/datasource#events-requestStart) event documentation.
 
 #### Returns
 `\Kendo\Data\DataSource`
@@ -393,7 +393,7 @@ For additional information check the [requestStart](/kendo-ui/api/framework/data
     $dataSource->requestStart('onRequestStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
@@ -412,7 +412,7 @@ The configuration used to parse the remote service response.
 ##### $value `\Kendo\Data\DataSourceSchema|array`
 
 
-#### Example - using [\Kendo\Data\DataSourceSchema](/kendo-ui/api/wrappers/php/Kendo/Data/DataSourceSchema)
+#### Example - using [\Kendo\Data\DataSourceSchema](/api/wrappers/php/Kendo/Data/DataSourceSchema)
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
     $schema = new \Kendo\Data\DataSourceSchema();
@@ -559,7 +559,7 @@ Adds one or more DataSourceSortItem to the DataSource.
 
 ### sync
 Fired after the data source saves data item changes. The data source saves the data item changes when the sync method is called.The event handler function context (available via the this keyword) will be set to the data source instance.
-For additional information check the [sync](/kendo-ui/api/framework/datasource#events-sync) event documentation.
+For additional information check the [sync](/api/framework/datasource#events-sync) event documentation.
 
 #### Returns
 `\Kendo\Data\DataSource`
@@ -586,7 +586,7 @@ For additional information check the [sync](/kendo-ui/api/framework/datasource#e
     $dataSource->sync('onSync');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
@@ -606,7 +606,7 @@ The transport option can also be used to implement custom data loading and savin
 ##### $value `\Kendo\Data\DataSourceTransport|array`
 
 
-#### Example - using [\Kendo\Data\DataSourceTransport](/kendo-ui/api/wrappers/php/Kendo/Data/DataSourceTransport)
+#### Example - using [\Kendo\Data\DataSourceTransport](/api/wrappers/php/Kendo/Data/DataSourceTransport)
     <?php
     $dataSource = new \Kendo\Data\DataSource('DataSource');
     $transport = new \Kendo\Data\DataSourceTransport();

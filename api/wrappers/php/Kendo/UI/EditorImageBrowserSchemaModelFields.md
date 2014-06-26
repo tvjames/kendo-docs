@@ -30,7 +30,7 @@ The field which contains the name of the image/directory
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFieldsName](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFieldsName)
+#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFieldsName](/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFieldsName)
     <?php
     $fields = new \Kendo\UI\EditorImageBrowserSchemaModelFields();
     $name = new \Kendo\UI\EditorImageBrowserSchemaModelFieldsName();
@@ -68,7 +68,7 @@ The field which contains the size of image.
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFieldsSize](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFieldsSize)
+#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFieldsSize](/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFieldsSize)
     <?php
     $fields = new \Kendo\UI\EditorImageBrowserSchemaModelFields();
     $size = new \Kendo\UI\EditorImageBrowserSchemaModelFieldsSize();
@@ -106,7 +106,7 @@ The field which contains the type of the entry. Either f for image or d for dire
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFieldsType](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFieldsType)
+#### Example - using [\Kendo\UI\EditorImageBrowserSchemaModelFieldsType](/api/wrappers/php/Kendo/UI/EditorImageBrowserSchemaModelFieldsType)
     <?php
     $fields = new \Kendo\UI\EditorImageBrowserSchemaModelFields();
     $type = new \Kendo\UI\EditorImageBrowserSchemaModelFieldsType();

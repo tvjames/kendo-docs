@@ -36,7 +36,7 @@ The data item field to group by.
 
 The aggregate(s) which are calculated during grouping. The supported aggregates are "average", "count", "max", "min" and "sum".
 
-More documentation is available at [kendo:dataSource-groupItem-aggregates](/kendo-ui/api/wrappers/jsp/datasource/groupitem-aggregates).
+More documentation is available at [kendo:dataSource-groupItem-aggregates](/api/wrappers/jsp/datasource/groupitem-aggregates).
 
 #### Example
 

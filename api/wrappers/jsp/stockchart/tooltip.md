@@ -94,7 +94,7 @@ A value indicating if the tooltip should be displayed.
 
 The border configuration options.
 
-More documentation is available at [kendo:stockChart-tooltip-border](/kendo-ui/api/wrappers/jsp/stockchart/tooltip-border).
+More documentation is available at [kendo:stockChart-tooltip-border](/api/wrappers/jsp/stockchart/tooltip-border).
 
 #### Example
 

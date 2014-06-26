@@ -39,7 +39,7 @@ The border of the pane.
 ##### $value `\Kendo\Dataviz\UI\StockChartPaneBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartPaneBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartPaneBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartPaneBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartPaneBorder)
     <?php
     $pane = new \Kendo\Dataviz\UI\StockChartPane();
     $border = new \Kendo\Dataviz\UI\StockChartPaneBorder();
@@ -167,7 +167,7 @@ The pane title text or configuration.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartPaneTitle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartPaneTitle)
+#### Example - using [\Kendo\Dataviz\UI\StockChartPaneTitle](/api/wrappers/php/Kendo/Dataviz/UI/StockChartPaneTitle)
     <?php
     $pane = new \Kendo\Dataviz\UI\StockChartPane();
     $title = new \Kendo\Dataviz\UI\StockChartPaneTitle();

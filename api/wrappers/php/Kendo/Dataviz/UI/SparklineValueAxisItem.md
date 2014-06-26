@@ -70,7 +70,7 @@ The crosshair configuration options.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemCrosshair|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemCrosshair](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemCrosshair)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemCrosshair](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemCrosshair)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $crosshair = new \Kendo\Dataviz\UI\SparklineValueAxisItemCrosshair();
@@ -99,7 +99,7 @@ Configures the axis labels.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemLabels)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemLabels](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemLabels)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $labels = new \Kendo\Dataviz\UI\SparklineValueAxisItemLabels();
@@ -128,7 +128,7 @@ Configures the axis line. This will also affect the major and minor ticks, but n
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemLine)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemLine](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemLine)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $line = new \Kendo\Dataviz\UI\SparklineValueAxisItemLine();
@@ -158,7 +158,7 @@ body of the chart.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemMajorGridLines|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMajorGridLines](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMajorGridLines)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMajorGridLines](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMajorGridLines)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $majorGridLines = new \Kendo\Dataviz\UI\SparklineValueAxisItemMajorGridLines();
@@ -187,7 +187,7 @@ The major ticks of the axis.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemMajorTicks|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMajorTicks](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMajorTicks)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMajorTicks](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMajorTicks)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $majorTicks = new \Kendo\Dataviz\UI\SparklineValueAxisItemMajorTicks();
@@ -272,7 +272,7 @@ Configures the minor grid lines.  These are the lines that are an extension of t
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemMinorGridLines|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMinorGridLines](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMinorGridLines)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMinorGridLines](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMinorGridLines)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $minorGridLines = new \Kendo\Dataviz\UI\SparklineValueAxisItemMinorGridLines();
@@ -301,7 +301,7 @@ The minor ticks of the axis.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemMinorTicks|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMinorTicks](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMinorTicks)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemMinorTicks](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemMinorTicks)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $minorTicks = new \Kendo\Dataviz\UI\SparklineValueAxisItemMinorTicks();
@@ -379,7 +379,7 @@ The value axis notes configuration.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemNotes|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotes](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotes)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotes](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotes)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $notes = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotes();
@@ -465,7 +465,7 @@ The title of the value axis.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemTitle|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemTitle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemTitle)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemTitle](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemTitle)
     <?php
     $valueAxisItem = new \Kendo\Dataviz\UI\SparklineValueAxisItem();
     $title = new \Kendo\Dataviz\UI\SparklineValueAxisItemTitle();

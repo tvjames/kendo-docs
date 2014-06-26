@@ -28,7 +28,7 @@ The position of the value axis note.
 
 The items of the notes.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-notes-data](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-notes-data).
+More documentation is available at [kendo:sparkline-valueAxisItem-notes-data](/api/wrappers/jsp/sparkline/valueaxisitem-notes-data).
 
 #### Example
 
@@ -40,7 +40,7 @@ More documentation is available at [kendo:sparkline-valueAxisItem-notes-data](/k
 
 The icon of the notes.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-notes-icon](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-notes-icon).
+More documentation is available at [kendo:sparkline-valueAxisItem-notes-icon](/api/wrappers/jsp/sparkline/valueaxisitem-notes-icon).
 
 #### Example
 
@@ -52,7 +52,7 @@ More documentation is available at [kendo:sparkline-valueAxisItem-notes-icon](/k
 
 The label of the notes.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-notes-label](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-notes-label).
+More documentation is available at [kendo:sparkline-valueAxisItem-notes-label](/api/wrappers/jsp/sparkline/valueaxisitem-notes-label).
 
 #### Example
 
@@ -64,7 +64,7 @@ More documentation is available at [kendo:sparkline-valueAxisItem-notes-label](/
 
 The line of the notes.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-notes-line](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-notes-line).
+More documentation is available at [kendo:sparkline-valueAxisItem-notes-line](/api/wrappers/jsp/sparkline/valueaxisitem-notes-line).
 
 #### Example
 

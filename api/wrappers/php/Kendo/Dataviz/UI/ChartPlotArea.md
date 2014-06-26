@@ -39,7 +39,7 @@ The border of the chart plot area.
 ##### $value `\Kendo\Dataviz\UI\ChartPlotAreaBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPlotAreaBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPlotAreaBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartPlotAreaBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartPlotAreaBorder)
     <?php
     $plotArea = new \Kendo\Dataviz\UI\ChartPlotArea();
     $border = new \Kendo\Dataviz\UI\ChartPlotAreaBorder();
@@ -77,7 +77,7 @@ The margin of the chart plot area. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPlotAreaMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPlotAreaMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartPlotAreaMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartPlotAreaMargin)
     <?php
     $plotArea = new \Kendo\Dataviz\UI\ChartPlotArea();
     $margin = new \Kendo\Dataviz\UI\ChartPlotAreaMargin();
@@ -133,7 +133,7 @@ The padding of the chart plot area. A numeric value will set all paddings.The de
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPlotAreaPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPlotAreaPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartPlotAreaPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartPlotAreaPadding)
     <?php
     $plotArea = new \Kendo\Dataviz\UI\ChartPlotArea();
     $padding = new \Kendo\Dataviz\UI\ChartPlotAreaPadding();

@@ -144,7 +144,7 @@ If set to true the user would be able to create new scheduler events and modify 
     ?>
 
 
-#### Example - using [\Kendo\UI\SchedulerViewEditable](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerViewEditable)
+#### Example - using [\Kendo\UI\SchedulerViewEditable](/api/wrappers/php/Kendo/UI/SchedulerViewEditable)
     <?php
     $view = new \Kendo\UI\SchedulerView();
     $editable = new \Kendo\UI\SchedulerViewEditable();
@@ -257,7 +257,7 @@ The configuration of the view resource(s) grouping.
 ##### $value `\Kendo\UI\SchedulerViewGroup|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerViewGroup](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerViewGroup)
+#### Example - using [\Kendo\UI\SchedulerViewGroup](/api/wrappers/php/Kendo/UI/SchedulerViewGroup)
     <?php
     $view = new \Kendo\UI\SchedulerView();
     $group = new \Kendo\UI\SchedulerViewGroup();

@@ -156,7 +156,7 @@ The verticalLine chart series options. Accepts all values supported by the serie
 
 The border of the series.
 
-More documentation is available at [kendo:chart-seriesDefaults-border](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-border).
+More documentation is available at [kendo:chart-seriesDefaults-border](/api/wrappers/jsp/chart/seriesdefaults-border).
 
 #### Example
 
@@ -168,7 +168,7 @@ More documentation is available at [kendo:chart-seriesDefaults-border](/kendo-ui
 
 The chart series label configuration.
 
-More documentation is available at [kendo:chart-seriesDefaults-labels](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-labels).
+More documentation is available at [kendo:chart-seriesDefaults-labels](/api/wrappers/jsp/chart/seriesdefaults-labels).
 
 #### Example
 
@@ -180,7 +180,7 @@ More documentation is available at [kendo:chart-seriesDefaults-labels](/kendo-ui
 
 The seriesDefaults notes configuration.
 
-More documentation is available at [kendo:chart-seriesDefaults-notes](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-notes).
+More documentation is available at [kendo:chart-seriesDefaults-notes](/api/wrappers/jsp/chart/seriesdefaults-notes).
 
 #### Example
 
@@ -192,7 +192,7 @@ More documentation is available at [kendo:chart-seriesDefaults-notes](/kendo-ui/
 
 The chart series overlay options.
 
-More documentation is available at [kendo:chart-seriesDefaults-overlay](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-overlay).
+More documentation is available at [kendo:chart-seriesDefaults-overlay](/api/wrappers/jsp/chart/seriesdefaults-overlay).
 
 #### Example
 
@@ -204,7 +204,7 @@ More documentation is available at [kendo:chart-seriesDefaults-overlay](/kendo-u
 
 A boolean value indicating if the series should be stacked.
 
-More documentation is available at [kendo:chart-seriesDefaults-stack](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-stack).
+More documentation is available at [kendo:chart-seriesDefaults-stack](/api/wrappers/jsp/chart/seriesdefaults-stack).
 
 #### Example
 
@@ -216,7 +216,7 @@ More documentation is available at [kendo:chart-seriesDefaults-stack](/kendo-ui/
 
 The chart series tooltip configuration options.
 
-More documentation is available at [kendo:chart-seriesDefaults-tooltip](/kendo-ui/api/wrappers/jsp/chart/seriesdefaults-tooltip).
+More documentation is available at [kendo:chart-seriesDefaults-tooltip](/api/wrappers/jsp/chart/seriesdefaults-tooltip).
 
 #### Example
 

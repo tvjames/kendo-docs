@@ -20,7 +20,7 @@ Specifyes the rotate style.
 
 Specifyes the thumb style.
 
-More documentation is available at [kendo:diagram-editable-rotate-thumb](/kendo-ui/api/wrappers/jsp/diagram/editable-rotate-thumb).
+More documentation is available at [kendo:diagram-editable-rotate-thumb](/api/wrappers/jsp/diagram/editable-rotate-thumb).
 
 #### Example
 

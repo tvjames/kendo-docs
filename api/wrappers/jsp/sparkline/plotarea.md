@@ -44,7 +44,7 @@ The background opacity of the plot area.
 
 The border of the plot area.
 
-More documentation is available at [kendo:sparkline-plotArea-border](/kendo-ui/api/wrappers/jsp/sparkline/plotarea-border).
+More documentation is available at [kendo:sparkline-plotArea-border](/api/wrappers/jsp/sparkline/plotarea-border).
 
 #### Example
 

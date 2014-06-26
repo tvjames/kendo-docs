@@ -84,7 +84,7 @@ If set to true the chart will display the value axis notes label. By default the
 
 The border of the label.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-notes-label-border](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-notes-label-border).
+More documentation is available at [kendo:stockChart-valueAxisItem-notes-label-border](/api/wrappers/jsp/stockchart/valueaxisitem-notes-label-border).
 
 #### Example
 

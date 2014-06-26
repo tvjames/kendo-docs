@@ -34,7 +34,7 @@ The border of the series.
 ##### $value `\Kendo\Dataviz\UI\StockChartSeriesDefaultsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsBorder)
     <?php
     $seriesDefaults = new \Kendo\Dataviz\UI\StockChartSeriesDefaults();
     $border = new \Kendo\Dataviz\UI\StockChartSeriesDefaultsBorder();
@@ -107,7 +107,7 @@ Configures the series data labels.
 ##### $value `\Kendo\Dataviz\UI\StockChartSeriesDefaultsLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsLabels)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsLabels](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsLabels)
     <?php
     $seriesDefaults = new \Kendo\Dataviz\UI\StockChartSeriesDefaults();
     $labels = new \Kendo\Dataviz\UI\StockChartSeriesDefaultsLabels();
@@ -214,7 +214,7 @@ A boolean value indicating if the series should be stacked.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsStack](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsStack)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsStack](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsStack)
     <?php
     $seriesDefaults = new \Kendo\Dataviz\UI\StockChartSeriesDefaults();
     $stack = new \Kendo\Dataviz\UI\StockChartSeriesDefaultsStack();
@@ -243,7 +243,7 @@ The data point tooltip configuration options.
 ##### $value `\Kendo\Dataviz\UI\StockChartSeriesDefaultsTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsTooltip)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaultsTooltip](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaultsTooltip)
     <?php
     $seriesDefaults = new \Kendo\Dataviz\UI\StockChartSeriesDefaults();
     $tooltip = new \Kendo\Dataviz\UI\StockChartSeriesDefaultsTooltip();

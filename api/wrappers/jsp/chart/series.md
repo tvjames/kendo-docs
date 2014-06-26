@@ -22,7 +22,7 @@ If a type value is missing, the type is assumed to be the one specified in serie
 The configuration of the chart series.The series type is determined by the value of the type field.
 If a type value is missing, the type is assumed to be the one specified in seriesDefaults.
 
-More documentation is available at [kendo:chart-seriesItem](/kendo-ui/api/wrappers/jsp/chart/seriesitem).
+More documentation is available at [kendo:chart-seriesItem](/api/wrappers/jsp/chart/seriesitem).
 
 #### Example
 

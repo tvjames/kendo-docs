@@ -39,7 +39,7 @@ Defines texts shown within the file browser.
 ##### $value `\Kendo\UI\EditorFileBrowserMessages|array`
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserMessages](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserMessages)
+#### Example - using [\Kendo\UI\EditorFileBrowserMessages](/api/wrappers/php/Kendo/UI/EditorFileBrowserMessages)
     <?php
     $fileBrowser = new \Kendo\UI\EditorFileBrowser();
     $messages = new \Kendo\UI\EditorFileBrowserMessages();
@@ -86,7 +86,7 @@ Set the object responsible for describing the file raw data format.
 ##### $value `\Kendo\UI\EditorFileBrowserSchema|array`
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserSchema](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserSchema)
+#### Example - using [\Kendo\UI\EditorFileBrowserSchema](/api/wrappers/php/Kendo/UI/EditorFileBrowserSchema)
     <?php
     $fileBrowser = new \Kendo\UI\EditorFileBrowser();
     $schema = new \Kendo\UI\EditorFileBrowserSchema();
@@ -115,7 +115,7 @@ Specifies the settings for loading and saving data.
 ##### $value `\Kendo\UI\EditorFileBrowserTransport|array`
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserTransport](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserTransport)
+#### Example - using [\Kendo\UI\EditorFileBrowserTransport](/api/wrappers/php/Kendo/UI/EditorFileBrowserTransport)
     <?php
     $fileBrowser = new \Kendo\UI\EditorFileBrowser();
     $transport = new \Kendo\UI\EditorFileBrowserTransport();

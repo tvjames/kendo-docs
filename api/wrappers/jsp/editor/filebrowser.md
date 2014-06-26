@@ -36,7 +36,7 @@ Defines the initial folder to display, relative to the root.
 
 Defines texts shown within the file browser.
 
-More documentation is available at [kendo:editor-fileBrowser-messages](/kendo-ui/api/wrappers/jsp/editor/filebrowser-messages).
+More documentation is available at [kendo:editor-fileBrowser-messages](/api/wrappers/jsp/editor/filebrowser-messages).
 
 #### Example
 
@@ -48,7 +48,7 @@ More documentation is available at [kendo:editor-fileBrowser-messages](/kendo-ui
 
 Set the object responsible for describing the file raw data format.
 
-More documentation is available at [kendo:editor-fileBrowser-schema](/kendo-ui/api/wrappers/jsp/editor/filebrowser-schema).
+More documentation is available at [kendo:editor-fileBrowser-schema](/api/wrappers/jsp/editor/filebrowser-schema).
 
 #### Example
 
@@ -60,7 +60,7 @@ More documentation is available at [kendo:editor-fileBrowser-schema](/kendo-ui/a
 
 Specifies the settings for loading and saving data.
 
-More documentation is available at [kendo:editor-fileBrowser-transport](/kendo-ui/api/wrappers/jsp/editor/filebrowser-transport).
+More documentation is available at [kendo:editor-fileBrowser-transport](/api/wrappers/jsp/editor/filebrowser-transport).
 
 #### Example
 

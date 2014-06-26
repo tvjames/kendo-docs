@@ -22,7 +22,7 @@ Accepts a valid CSS color string or object with detailed configuration.
 ##### $value `\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleFill|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleFill](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsBubbleStyleFill)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleFill](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsBubbleStyleFill)
     <?php
     $style = new \Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyle();
     $fill = new \Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleFill();
@@ -52,7 +52,7 @@ Accepts a valid CSS color string or object with detailed configuration.
 ##### $value `\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsBubbleStyleStroke)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleStroke](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsBubbleStyleStroke)
     <?php
     $style = new \Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyle();
     $stroke = new \Kendo\Dataviz\UI\MapLayerDefaultsBubbleStyleStroke();

@@ -20,7 +20,7 @@ The sort order which will be applied over the data items. By default the data it
 
 The sort order which will be applied over the data items. By default the data items are not sorted.
 
-More documentation is available at [kendo:dataSource-sortItem](/kendo-ui/api/wrappers/jsp/datasource/sortitem).
+More documentation is available at [kendo:dataSource-sortItem](/api/wrappers/jsp/datasource/sortitem).
 
 #### Example
 

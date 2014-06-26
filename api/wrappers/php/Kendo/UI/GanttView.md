@@ -10,7 +10,7 @@ A PHP class representing the view setting of GanttViews.
 ## Methods
 
 ### dayHeaderTemplate
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
+The [template](/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
 
 #### Returns
 `\Kendo\UI\GanttView`
@@ -34,7 +34,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
     ?>
 
 ### monthHeaderTemplate
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the month slots in "month" views.
+The [template](/api/framework/kendo#methods-template used to render the month slots in "month" views.
 
 #### Returns
 `\Kendo\UI\GanttView`
@@ -100,7 +100,7 @@ The size of the time slot headers. Values are treated as pixels.
     ?>
 
 ### timeHeaderTemplate
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the time slots in "day" view
+The [template](/api/framework/kendo#methods-template used to render the time slots in "day" view
 
 #### Returns
 `\Kendo\UI\GanttView`
@@ -142,7 +142,7 @@ The view type. Supported types are "day", "week", and "month".
     ?>
 
 ### weekHeaderTemplate
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
+The [template](/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
 
 #### Returns
 `\Kendo\UI\GanttView`

@@ -20,7 +20,7 @@ Configures the opening and closing animations of the calendar popup. Setting the
 
 The animation played when the calendar popup is closed.
 
-More documentation is available at [kendo:datePicker-animation-close](/kendo-ui/api/wrappers/jsp/datepicker/animation-close).
+More documentation is available at [kendo:datePicker-animation-close](/api/wrappers/jsp/datepicker/animation-close).
 
 #### Example
 
@@ -32,7 +32,7 @@ More documentation is available at [kendo:datePicker-animation-close](/kendo-ui/
 
 The animation played when the calendar popup is opened.
 
-More documentation is available at [kendo:datePicker-animation-open](/kendo-ui/api/wrappers/jsp/datepicker/animation-open).
+More documentation is available at [kendo:datePicker-animation-open](/api/wrappers/jsp/datepicker/animation-open).
 
 #### Example
 

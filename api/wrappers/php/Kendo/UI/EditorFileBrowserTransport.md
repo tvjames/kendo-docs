@@ -30,7 +30,7 @@ Options or URL which will handle the directory creation. If not specified that c
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserTransportCreate](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserTransportCreate)
+#### Example - using [\Kendo\UI\EditorFileBrowserTransportCreate](/api/wrappers/php/Kendo/UI/EditorFileBrowserTransportCreate)
     <?php
     $transport = new \Kendo\UI\EditorFileBrowserTransport();
     $create = new \Kendo\UI\EditorFileBrowserTransportCreate();
@@ -68,7 +68,7 @@ Options or URL which will handle the file and directory deletion. If not specifi
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserTransportDestroy](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserTransportDestroy)
+#### Example - using [\Kendo\UI\EditorFileBrowserTransportDestroy](/api/wrappers/php/Kendo/UI/EditorFileBrowserTransportDestroy)
     <?php
     $transport = new \Kendo\UI\EditorFileBrowserTransport();
     $destroy = new \Kendo\UI\EditorFileBrowserTransportDestroy();
@@ -130,7 +130,7 @@ Options or URL for remote file retrieval.
     ?>
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserTransportRead](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserTransportRead)
+#### Example - using [\Kendo\UI\EditorFileBrowserTransportRead](/api/wrappers/php/Kendo/UI/EditorFileBrowserTransportRead)
     <?php
     $transport = new \Kendo\UI\EditorFileBrowserTransport();
     $read = new \Kendo\UI\EditorFileBrowserTransportRead();

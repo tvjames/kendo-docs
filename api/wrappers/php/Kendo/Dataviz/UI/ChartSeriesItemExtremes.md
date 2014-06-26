@@ -54,7 +54,7 @@ The border of the extremes.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemExtremesBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemExtremesBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemExtremesBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemExtremesBorder)
     <?php
     $extremes = new \Kendo\Dataviz\UI\ChartSeriesItemExtremes();
     $border = new \Kendo\Dataviz\UI\ChartSeriesItemExtremesBorder();

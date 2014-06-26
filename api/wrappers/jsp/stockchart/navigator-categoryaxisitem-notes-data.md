@@ -20,7 +20,7 @@ The items of the notes.
 
 The items of the notes.
 
-More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-notes-dataItem](/kendo-ui/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-notes-dataitem).
+More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-notes-dataItem](/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-notes-dataitem).
 
 #### Example
 

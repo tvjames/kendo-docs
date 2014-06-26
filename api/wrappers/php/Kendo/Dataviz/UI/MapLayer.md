@@ -57,7 +57,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $layer = new \Kendo\Dataviz\UI\MapLayer();
@@ -232,7 +232,7 @@ The default style for shapes.
 ##### $value `\Kendo\Dataviz\UI\MapLayerStyle|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerStyle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerStyle)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerStyle](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerStyle)
     <?php
     $layer = new \Kendo\Dataviz\UI\MapLayer();
     $style = new \Kendo\Dataviz\UI\MapLayerStyle();
@@ -317,7 +317,7 @@ The default Kendo UI Tooltip options for data-bound markers.
 ##### $value `\Kendo\Dataviz\UI\MapLayerTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerTooltip)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerTooltip](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerTooltip)
     <?php
     $layer = new \Kendo\Dataviz\UI\MapLayer();
     $tooltip = new \Kendo\Dataviz\UI\MapLayerTooltip();

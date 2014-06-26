@@ -3,7 +3,7 @@ title: radialGauge
 ---
 
 # \<kendo:radialGauge\>
-A JSP wrapper for Kendo UI [RadialGauge](/kendo-ui/api/dataviz/radialgauge).
+A JSP wrapper for Kendo UI [RadialGauge](/api/dataviz/radialgauge).
 
 ## Configuration Attributes
 
@@ -32,7 +32,7 @@ A value indicating if transition animations should be played.
 The gauge area configuration options.
 This is the entire visible area of the gauge.
 
-More documentation is available at [kendo:radialGauge-gaugeArea](/kendo-ui/api/wrappers/jsp/radialgauge/gaugearea).
+More documentation is available at [kendo:radialGauge-gaugeArea](/api/wrappers/jsp/radialgauge/gaugearea).
 
 #### Example
 
@@ -44,7 +44,7 @@ More documentation is available at [kendo:radialGauge-gaugeArea](/kendo-ui/api/w
 
 The pointer configuration options.
 
-More documentation is available at [kendo:radialGauge-pointer](/kendo-ui/api/wrappers/jsp/radialgauge/pointer).
+More documentation is available at [kendo:radialGauge-pointer](/api/wrappers/jsp/radialgauge/pointer).
 
 #### Example
 
@@ -56,7 +56,7 @@ More documentation is available at [kendo:radialGauge-pointer](/kendo-ui/api/wra
 
 Configures the scale.
 
-More documentation is available at [kendo:radialGauge-scale](/kendo-ui/api/wrappers/jsp/radialgauge/scale).
+More documentation is available at [kendo:radialGauge-scale](/api/wrappers/jsp/radialgauge/scale).
 
 #### Example
 

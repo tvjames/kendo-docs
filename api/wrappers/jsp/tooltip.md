@@ -3,7 +3,7 @@ title: tooltip
 ---
 
 # \<kendo:tooltip\>
-A JSP wrapper for Kendo UI [Tooltip](/kendo-ui/api/web/tooltip).
+A JSP wrapper for Kendo UI [Tooltip](/api/web/tooltip).
 
 ## Configuration Attributes
 
@@ -87,7 +87,7 @@ The width (in pixels) of the tooltip.
 A collection of {Animation} objects, used to change default animations. A value of false
 will disable all animations in the widget.
 
-More documentation is available at [kendo:tooltip-animation](/kendo-ui/api/wrappers/jsp/tooltip/animation).
+More documentation is available at [kendo:tooltip-animation](/api/wrappers/jsp/tooltip/animation).
 
 #### Example
 
@@ -103,7 +103,7 @@ More documentation is available at [kendo:tooltip-animation](/kendo-ui/api/wrapp
 Triggered when an AJAX request for content completes.
 
 
-For additional information check the [contentLoad](/kendo-ui/api/web/tooltip#events-contentLoad) event documentation.
+For additional information check the [contentLoad](/api/web/tooltip#events-contentLoad) event documentation.
 
 #### Example
     <kendo:tooltip contentLoad="handle_contentLoad">
@@ -119,7 +119,7 @@ For additional information check the [contentLoad](/kendo-ui/api/web/tooltip#eve
 Triggered when a Tooltip is shown.
 
 
-For additional information check the [show](/kendo-ui/api/web/tooltip#events-show) event documentation.
+For additional information check the [show](/api/web/tooltip#events-show) event documentation.
 
 #### Example
     <kendo:tooltip show="handle_show">
@@ -135,7 +135,7 @@ For additional information check the [show](/kendo-ui/api/web/tooltip#events-sho
 Triggered when a Tooltip is hidden
 
 
-For additional information check the [hide](/kendo-ui/api/web/tooltip#events-hide) event documentation.
+For additional information check the [hide](/api/web/tooltip#events-hide) event documentation.
 
 #### Example
     <kendo:tooltip hide="handle_hide">
@@ -151,7 +151,7 @@ For additional information check the [hide](/kendo-ui/api/web/tooltip#events-hid
 Triggered before an AJAX request started. Note that this event is triggered only when an AJAX request, instead of an iframe, is used.
 
 
-For additional information check the [requestStart](/kendo-ui/api/web/tooltip#events-requestStart) event documentation.
+For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.
 
 #### Example
     <kendo:tooltip requestStart="handle_requestStart">
@@ -167,7 +167,7 @@ For additional information check the [requestStart](/kendo-ui/api/web/tooltip#ev
 Triggered when an AJAX request for content fails.
 
 
-For additional information check the [error](/kendo-ui/api/web/tooltip#events-error) event documentation.
+For additional information check the [error](/api/web/tooltip#events-error) event documentation.
 
 #### Example
     <kendo:tooltip error="handle_error">
@@ -185,7 +185,7 @@ For additional information check the [error](/kendo-ui/api/web/tooltip#events-er
 Triggered when an AJAX request for content completes.
 
 
-For additional information check the [contentLoad](/kendo-ui/api/web/tooltip#events-contentLoad) event documentation.
+For additional information check the [contentLoad](/api/web/tooltip#events-contentLoad) event documentation.
 
 #### Example
     <kendo:tooltip>
@@ -203,7 +203,7 @@ For additional information check the [contentLoad](/kendo-ui/api/web/tooltip#eve
 Triggered when a Tooltip is shown.
 
 
-For additional information check the [show](/kendo-ui/api/web/tooltip#events-show) event documentation.
+For additional information check the [show](/api/web/tooltip#events-show) event documentation.
 
 #### Example
     <kendo:tooltip>
@@ -221,7 +221,7 @@ For additional information check the [show](/kendo-ui/api/web/tooltip#events-sho
 Triggered when a Tooltip is hidden
 
 
-For additional information check the [hide](/kendo-ui/api/web/tooltip#events-hide) event documentation.
+For additional information check the [hide](/api/web/tooltip#events-hide) event documentation.
 
 #### Example
     <kendo:tooltip>
@@ -239,7 +239,7 @@ For additional information check the [hide](/kendo-ui/api/web/tooltip#events-hid
 Triggered before an AJAX request started. Note that this event is triggered only when an AJAX request, instead of an iframe, is used.
 
 
-For additional information check the [requestStart](/kendo-ui/api/web/tooltip#events-requestStart) event documentation.
+For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.
 
 #### Example
     <kendo:tooltip>
@@ -257,7 +257,7 @@ For additional information check the [requestStart](/kendo-ui/api/web/tooltip#ev
 Triggered when an AJAX request for content fails.
 
 
-For additional information check the [error](/kendo-ui/api/web/tooltip#events-error) event documentation.
+For additional information check the [error](/api/web/tooltip#events-error) event documentation.
 
 #### Example
     <kendo:tooltip>

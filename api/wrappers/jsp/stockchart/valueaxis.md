@@ -20,7 +20,7 @@ The value axis configuration options.
 
 The value axis configuration options.
 
-More documentation is available at [kendo:stockChart-valueAxisItem](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem).
+More documentation is available at [kendo:stockChart-valueAxisItem](/api/wrappers/jsp/stockchart/valueaxisitem).
 
 #### Example
 

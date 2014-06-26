@@ -4,14 +4,14 @@ title: Barcode
 
 # \Kendo\Dataviz\UI\Barcode
 
-A PHP wrapper for Kendo UI [Barcode](/kendo-ui/api/dataviz/barcode).
+A PHP wrapper for Kendo UI [Barcode](/api/dataviz/barcode).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Barcode in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Barcode
 
@@ -61,7 +61,7 @@ The border of the barcode area.
 ##### $value `\Kendo\Dataviz\UI\BarcodeBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\BarcodeBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/BarcodeBorder)
+#### Example - using [\Kendo\Dataviz\UI\BarcodeBorder](/api/wrappers/php/Kendo/Dataviz/UI/BarcodeBorder)
     <?php
     $barcode = new \Kendo\Dataviz\UI\Barcode('Barcode');
     $border = new \Kendo\Dataviz\UI\BarcodeBorder();
@@ -145,7 +145,7 @@ The padding of the barcode.
 ##### $value `\Kendo\Dataviz\UI\BarcodePadding|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\BarcodePadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/BarcodePadding)
+#### Example - using [\Kendo\Dataviz\UI\BarcodePadding](/api/wrappers/php/Kendo/Dataviz/UI/BarcodePadding)
     <?php
     $barcode = new \Kendo\Dataviz\UI\Barcode('Barcode');
     $padding = new \Kendo\Dataviz\UI\BarcodePadding();
@@ -193,7 +193,7 @@ Can be set to a JavaScript object which represents the text configuration.
 ##### $value `\Kendo\Dataviz\UI\BarcodeText|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\BarcodeText](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/BarcodeText)
+#### Example - using [\Kendo\Dataviz\UI\BarcodeText](/api/wrappers/php/Kendo/Dataviz/UI/BarcodeText)
     <?php
     $barcode = new \Kendo\Dataviz\UI\Barcode('Barcode');
     $text = new \Kendo\Dataviz\UI\BarcodeText();

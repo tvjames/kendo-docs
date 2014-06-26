@@ -20,7 +20,7 @@ Defines the connectors the shape owns.You can easily define your own custom conn
 
 Defines the connectors the shape owns.You can easily define your own custom connectors or mix-match with the above defined custom connectors.Example - custom shape with custom connectorsThe following defines a custom shape with connectors adapted to the shape's outline. Note in particular the various helpful methods (right(), left(), top()) to define positions relative to the shape.
 
-More documentation is available at [kendo:diagram-shapeDefaults-connector](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults-connector).
+More documentation is available at [kendo:diagram-shapeDefaults-connector](/api/wrappers/jsp/diagram/shapedefaults-connector).
 
 #### Example
 

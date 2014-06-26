@@ -21,7 +21,7 @@ user interactions. Setting this option to false will disable all animations.
 
 The visual animation(s) that will be used when PanelBar items are closed.
 
-More documentation is available at [kendo:panelBar-animation-collapse](/kendo-ui/api/wrappers/jsp/panelbar/animation-collapse).
+More documentation is available at [kendo:panelBar-animation-collapse](/api/wrappers/jsp/panelbar/animation-collapse).
 
 #### Example
 
@@ -33,7 +33,7 @@ More documentation is available at [kendo:panelBar-animation-collapse](/kendo-ui
 
 The visual animation(s) that will be used when opening items.
 
-More documentation is available at [kendo:panelBar-animation-expand](/kendo-ui/api/wrappers/jsp/panelbar/animation-expand).
+More documentation is available at [kendo:panelBar-animation-expand](/api/wrappers/jsp/panelbar/animation-expand).
 
 #### Example
 

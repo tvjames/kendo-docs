@@ -224,7 +224,7 @@ The line width.** Available for line series **
 
 The border of the points.** Applicable to bar, column and pie series **
 
-More documentation is available at [kendo:sparkline-seriesItem-border](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-border).
+More documentation is available at [kendo:sparkline-seriesItem-border](/api/wrappers/jsp/sparkline/seriesitem-border).
 
 #### Example
 
@@ -236,7 +236,7 @@ More documentation is available at [kendo:sparkline-seriesItem-border](/kendo-ui
 
 The label connectors options.** Applicable to pie series. **
 
-More documentation is available at [kendo:sparkline-seriesItem-connectors](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-connectors).
+More documentation is available at [kendo:sparkline-seriesItem-connectors](/api/wrappers/jsp/sparkline/seriesitem-connectors).
 
 #### Example
 
@@ -248,7 +248,7 @@ More documentation is available at [kendo:sparkline-seriesItem-connectors](/kend
 
 Configures the appearance of highlighted points.
 
-More documentation is available at [kendo:sparkline-seriesItem-highlight](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-highlight).
+More documentation is available at [kendo:sparkline-seriesItem-highlight](/api/wrappers/jsp/sparkline/seriesitem-highlight).
 
 #### Example
 
@@ -260,7 +260,7 @@ More documentation is available at [kendo:sparkline-seriesItem-highlight](/kendo
 
 Configures the series data labels.
 
-More documentation is available at [kendo:sparkline-seriesItem-labels](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-labels).
+More documentation is available at [kendo:sparkline-seriesItem-labels](/api/wrappers/jsp/sparkline/seriesitem-labels).
 
 #### Example
 
@@ -272,7 +272,7 @@ More documentation is available at [kendo:sparkline-seriesItem-labels](/kendo-ui
 
 Line options.** Applicable to area series. **
 
-More documentation is available at [kendo:sparkline-seriesItem-line](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-line).
+More documentation is available at [kendo:sparkline-seriesItem-line](/api/wrappers/jsp/sparkline/seriesitem-line).
 
 #### Example
 
@@ -284,7 +284,7 @@ More documentation is available at [kendo:sparkline-seriesItem-line](/kendo-ui/a
 
 Marker options.** Applicable to area and line series **
 
-More documentation is available at [kendo:sparkline-seriesItem-markers](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-markers).
+More documentation is available at [kendo:sparkline-seriesItem-markers](/api/wrappers/jsp/sparkline/seriesitem-markers).
 
 #### Example
 
@@ -296,7 +296,7 @@ More documentation is available at [kendo:sparkline-seriesItem-markers](/kendo-u
 
 The series notes configuration.
 
-More documentation is available at [kendo:sparkline-seriesItem-notes](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-notes).
+More documentation is available at [kendo:sparkline-seriesItem-notes](/api/wrappers/jsp/sparkline/seriesitem-notes).
 
 #### Example
 
@@ -308,7 +308,7 @@ More documentation is available at [kendo:sparkline-seriesItem-notes](/kendo-ui/
 
 The effects overlay.
 
-More documentation is available at [kendo:sparkline-seriesItem-overlay](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-overlay).
+More documentation is available at [kendo:sparkline-seriesItem-overlay](/api/wrappers/jsp/sparkline/seriesitem-overlay).
 
 #### Example
 
@@ -321,7 +321,7 @@ More documentation is available at [kendo:sparkline-seriesItem-overlay](/kendo-u
 A boolean value indicating if the series should be stacked.
 A string value is interpreted as series.stack.group.
 
-More documentation is available at [kendo:sparkline-seriesItem-stack](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-stack).
+More documentation is available at [kendo:sparkline-seriesItem-stack](/api/wrappers/jsp/sparkline/seriesitem-stack).
 
 #### Example
 
@@ -333,7 +333,7 @@ More documentation is available at [kendo:sparkline-seriesItem-stack](/kendo-ui/
 
 The target of the bullet chart.
 
-More documentation is available at [kendo:sparkline-seriesItem-target](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-target).
+More documentation is available at [kendo:sparkline-seriesItem-target](/api/wrappers/jsp/sparkline/seriesitem-target).
 
 #### Example
 
@@ -345,7 +345,7 @@ More documentation is available at [kendo:sparkline-seriesItem-target](/kendo-ui
 
 The data point tooltip configuration options.
 
-More documentation is available at [kendo:sparkline-seriesItem-tooltip](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-tooltip).
+More documentation is available at [kendo:sparkline-seriesItem-tooltip](/api/wrappers/jsp/sparkline/seriesitem-tooltip).
 
 #### Example
 

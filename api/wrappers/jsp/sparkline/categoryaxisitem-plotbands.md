@@ -20,7 +20,7 @@ The plot bands of the category axis.
 
 The plot bands of the category axis.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-plotBand](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-plotband).
+More documentation is available at [kendo:sparkline-categoryAxisItem-plotBand](/api/wrappers/jsp/sparkline/categoryaxisitem-plotband).
 
 #### Example
 

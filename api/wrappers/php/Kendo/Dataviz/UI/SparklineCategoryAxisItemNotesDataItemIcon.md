@@ -39,7 +39,7 @@ The border of the icon.
 ##### $value `\Kendo\Dataviz\UI\SparklineCategoryAxisItemNotesDataItemIconBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineCategoryAxisItemNotesDataItemIconBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineCategoryAxisItemNotesDataItemIconBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineCategoryAxisItemNotesDataItemIconBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineCategoryAxisItemNotesDataItemIconBorder)
     <?php
     $icon = new \Kendo\Dataviz\UI\SparklineCategoryAxisItemNotesDataItemIcon();
     $border = new \Kendo\Dataviz\UI\SparklineCategoryAxisItemNotesDataItemIconBorder();

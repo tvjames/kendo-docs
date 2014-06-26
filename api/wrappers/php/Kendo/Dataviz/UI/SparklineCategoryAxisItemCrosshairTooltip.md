@@ -39,7 +39,7 @@ The border configuration options.
 ##### $value `\Kendo\Dataviz\UI\SparklineCategoryAxisItemCrosshairTooltipBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineCategoryAxisItemCrosshairTooltipBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineCategoryAxisItemCrosshairTooltipBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineCategoryAxisItemCrosshairTooltipBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineCategoryAxisItemCrosshairTooltipBorder)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\SparklineCategoryAxisItemCrosshairTooltip();
     $border = new \Kendo\Dataviz\UI\SparklineCategoryAxisItemCrosshairTooltipBorder();

@@ -58,7 +58,7 @@ The border of the points.** Applicable to bar, column and pie series **
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemBorder)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $border = new \Kendo\Dataviz\UI\SparklineSeriesItemBorder();
@@ -147,7 +147,7 @@ The label connectors options.** Applicable to pie series. **
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemConnectors|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemConnectors](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemConnectors)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemConnectors](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemConnectors)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $connectors = new \Kendo\Dataviz\UI\SparklineSeriesItemConnectors();
@@ -284,7 +284,7 @@ Configures the appearance of highlighted points.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemHighlight|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemHighlight](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemHighlight)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemHighlight](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemHighlight)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $highlight = new \Kendo\Dataviz\UI\SparklineSeriesItemHighlight();
@@ -313,7 +313,7 @@ Configures the series data labels.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemLabels)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemLabels](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemLabels)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $labels = new \Kendo\Dataviz\UI\SparklineSeriesItemLabels();
@@ -351,7 +351,7 @@ Line options.** Applicable to area series. **
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemLine)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemLine](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemLine)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $line = new \Kendo\Dataviz\UI\SparklineSeriesItemLine();
@@ -380,7 +380,7 @@ Marker options.** Applicable to area and line series **
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemMarkers|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemMarkers](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemMarkers)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemMarkers](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemMarkers)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $markers = new \Kendo\Dataviz\UI\SparklineSeriesItemMarkers();
@@ -463,7 +463,7 @@ The series notes configuration.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemNotes|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemNotes](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemNotes)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemNotes](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemNotes)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $notes = new \Kendo\Dataviz\UI\SparklineSeriesItemNotes();
@@ -510,7 +510,7 @@ The effects overlay.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemOverlay|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemOverlay](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemOverlay)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemOverlay](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemOverlay)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $overlay = new \Kendo\Dataviz\UI\SparklineSeriesItemOverlay();
@@ -610,7 +610,7 @@ A string value is interpreted as series.stack.group.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemStack](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemStack)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemStack](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemStack)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $stack = new \Kendo\Dataviz\UI\SparklineSeriesItemStack();
@@ -675,7 +675,7 @@ The target of the bullet chart.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemTarget|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemTarget](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemTarget)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemTarget](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemTarget)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $target = new \Kendo\Dataviz\UI\SparklineSeriesItemTarget();
@@ -722,7 +722,7 @@ The data point tooltip configuration options.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemTooltip)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemTooltip](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemTooltip)
     <?php
     $seriesItem = new \Kendo\Dataviz\UI\SparklineSeriesItem();
     $tooltip = new \Kendo\Dataviz\UI\SparklineSeriesItemTooltip();

@@ -20,7 +20,7 @@ The category axis configuration options.
 
 The category axis configuration options.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem).
+More documentation is available at [kendo:sparkline-categoryAxisItem](/api/wrappers/jsp/sparkline/categoryaxisitem).
 
 #### Example
 

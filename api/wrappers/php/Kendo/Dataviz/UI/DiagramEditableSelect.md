@@ -39,7 +39,7 @@ Specifies the select stroke styles.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableSelectStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableSelectStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableSelectStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableSelectStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableSelectStroke)
     <?php
     $select = new \Kendo\Dataviz\UI\DiagramEditableSelect();
     $stroke = new \Kendo\Dataviz\UI\DiagramEditableSelectStroke();

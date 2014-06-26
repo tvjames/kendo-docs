@@ -4,14 +4,14 @@ title: Button
 
 # \Kendo\UI\Button
 
-A PHP wrapper for Kendo UI [Button](/kendo-ui/api/web/button).
+A PHP wrapper for Kendo UI [Button](/api/web/button).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Button in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Button
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### click
 Fires when the Button is clicked with the mouse, touched on a touch device, or ENTER (or SPACE) is pressed while the Button is focused.
-For additional information check the [click](/kendo-ui/api/web/button#events-click) event documentation.
+For additional information check the [click](/api/web/button#events-click) event documentation.
 
 #### Returns
 `\Kendo\UI\Button`
@@ -59,7 +59,7 @@ For additional information check the [click](/kendo-ui/api/web/button#events-cli
     $button->click('onClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $button = new \Kendo\UI\Button('Button');

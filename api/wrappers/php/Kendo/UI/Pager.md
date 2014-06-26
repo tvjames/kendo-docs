@@ -4,14 +4,14 @@ title: Pager
 
 # \Kendo\UI\Pager
 
-A PHP wrapper for Kendo UI [Pager](/kendo-ui/api/web/pager).
+A PHP wrapper for Kendo UI [Pager](/api/web/pager).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Pager in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Pager
 
@@ -68,7 +68,7 @@ Defines the number of buttons displayed in the numeric pager.
 
 ### change
 Fires when the current page has changed.
-For additional information check the [change](/kendo-ui/api/web/pager#events-change) event documentation.
+For additional information check the [change](/api/web/pager#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Pager`
@@ -95,7 +95,7 @@ For additional information check the [change](/kendo-ui/api/web/pager#events-cha
     $pager->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $pager = new \Kendo\UI\Pager('Pager');
@@ -113,7 +113,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $pager = new \Kendo\UI\Pager('Pager');
@@ -195,7 +195,7 @@ Defines texts shown within the pager. Use this option to customize or localize t
 ##### $value `\Kendo\UI\PagerMessages|array`
 
 
-#### Example - using [\Kendo\UI\PagerMessages](/kendo-ui/api/wrappers/php/Kendo/UI/PagerMessages)
+#### Example - using [\Kendo\UI\PagerMessages](/api/wrappers/php/Kendo/UI/PagerMessages)
     <?php
     $pager = new \Kendo\UI\Pager('Pager');
     $messages = new \Kendo\UI\PagerMessages();

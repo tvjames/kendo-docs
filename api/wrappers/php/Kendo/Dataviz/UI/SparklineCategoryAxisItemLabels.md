@@ -39,7 +39,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\SparklineCategoryAxisItemLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineCategoryAxisItemLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineCategoryAxisItemLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineCategoryAxisItemLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineCategoryAxisItemLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\SparklineCategoryAxisItemLabels();
     $border = new \Kendo\Dataviz\UI\SparklineCategoryAxisItemLabelsBorder();

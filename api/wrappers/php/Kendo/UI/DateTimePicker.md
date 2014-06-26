@@ -4,14 +4,14 @@ title: DateTimePicker
 
 # \Kendo\UI\DateTimePicker
 
-A PHP wrapper for Kendo UI [DateTimePicker](/kendo-ui/api/web/datetimepicker).
+A PHP wrapper for Kendo UI [DateTimePicker](/api/web/datetimepicker).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use DateTimePicker in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo DateTimePicker
 
@@ -60,7 +60,7 @@ Configures the opening and closing animations of the popups. Setting the animati
 ##### $value `\Kendo\UI\DateTimePickerAnimation|array`
 
 
-#### Example - using [\Kendo\UI\DateTimePickerAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/DateTimePickerAnimation)
+#### Example - using [\Kendo\UI\DateTimePickerAnimation](/api/wrappers/php/Kendo/UI/DateTimePickerAnimation)
     <?php
     $dateTimePicker = new \Kendo\UI\DateTimePicker('DateTimePicker');
     $animation = new \Kendo\UI\DateTimePickerAnimation();
@@ -79,7 +79,7 @@ Configures the opening and closing animations of the popups. Setting the animati
 
 ### change
 Triggered when the underlying value of a DateTimePicker is changed.
-For additional information check the [change](/kendo-ui/api/web/datetimepicker#events-change) event documentation.
+For additional information check the [change](/api/web/datetimepicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -106,7 +106,7 @@ For additional information check the [change](/kendo-ui/api/web/datetimepicker#e
     $dateTimePicker->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dateTimePicker = new \Kendo\UI\DateTimePicker('DateTimePicker');
@@ -115,7 +115,7 @@ For additional information check the [change](/kendo-ui/api/web/datetimepicker#e
 
 ### close
 Fires when the calendar or the time drop-down list is closed
-For additional information check the [close](/kendo-ui/api/web/datetimepicker#events-close) event documentation.
+For additional information check the [close](/api/web/datetimepicker#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -142,7 +142,7 @@ For additional information check the [close](/kendo-ui/api/web/datetimepicker#ev
     $dateTimePicker->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dateTimePicker = new \Kendo\UI\DateTimePicker('DateTimePicker');
@@ -306,7 +306,7 @@ Templates for the cells rendered in the calendar "month" view.
 ##### $value `\Kendo\UI\DateTimePickerMonth|array`
 
 
-#### Example - using [\Kendo\UI\DateTimePickerMonth](/kendo-ui/api/wrappers/php/Kendo/UI/DateTimePickerMonth)
+#### Example - using [\Kendo\UI\DateTimePickerMonth](/api/wrappers/php/Kendo/UI/DateTimePickerMonth)
     <?php
     $dateTimePicker = new \Kendo\UI\DateTimePicker('DateTimePicker');
     $month = new \Kendo\UI\DateTimePickerMonth();
@@ -325,7 +325,7 @@ Templates for the cells rendered in the calendar "month" view.
 
 ### open
 Fires when the calendar or the time drop-down list is opened
-For additional information check the [open](/kendo-ui/api/web/datetimepicker#events-open) event documentation.
+For additional information check the [open](/api/web/datetimepicker#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -352,7 +352,7 @@ For additional information check the [open](/kendo-ui/api/web/datetimepicker#eve
     $dateTimePicker->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $dateTimePicker = new \Kendo\UI\DateTimePicker('DateTimePicker');

@@ -3,7 +3,7 @@ title: pivotGrid
 ---
 
 # \<kendo:pivotGrid\>
-A JSP wrapper for Kendo UI [PivotGrid](/kendo-ui/api/web/pivotgrid).
+A JSP wrapper for Kendo UI [PivotGrid](/api/web/pivotgrid).
 
 ## Configuration Attributes
 
@@ -39,7 +39,7 @@ If set to false the user will not be able to add/close/reorder current fields fo
 
 The text messages displayed in the fields sections.
 
-More documentation is available at [kendo:pivotGrid-messages](/kendo-ui/api/wrappers/jsp/pivotgrid/messages).
+More documentation is available at [kendo:pivotGrid-messages](/api/wrappers/jsp/pivotgrid/messages).
 
 #### Example
 
@@ -55,7 +55,7 @@ More documentation is available at [kendo:pivotGrid-messages](/kendo-ui/api/wrap
 Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBinding](/kendo-ui/api/web/pivotgrid#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/pivotgrid#events-dataBinding) event documentation.
 
 #### Example
     <kendo:pivotGrid dataBinding="handle_dataBinding">
@@ -71,7 +71,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/pivotgrid#e
 Fired after the widget is bound to the data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/pivotgrid#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/pivotgrid#events-dataBound) event documentation.
 
 #### Example
     <kendo:pivotGrid dataBound="handle_dataBound">
@@ -87,7 +87,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/pivotgrid#eve
 Fired before column or row field is expaneded.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [expandMember](/kendo-ui/api/web/pivotgrid#events-expandMember) event documentation.
+For additional information check the [expandMember](/api/web/pivotgrid#events-expandMember) event documentation.
 
 #### Example
     <kendo:pivotGrid expandMember="handle_expandMember">
@@ -103,7 +103,7 @@ For additional information check the [expandMember](/kendo-ui/api/web/pivotgrid#
 Fired before column or row field is collapsed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [collapseMember](/kendo-ui/api/web/pivotgrid#events-collapseMember) event documentation.
+For additional information check the [collapseMember](/api/web/pivotgrid#events-collapseMember) event documentation.
 
 #### Example
     <kendo:pivotGrid collapseMember="handle_collapseMember">
@@ -121,7 +121,7 @@ For additional information check the [collapseMember](/kendo-ui/api/web/pivotgri
 Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBinding](/kendo-ui/api/web/pivotgrid#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/pivotgrid#events-dataBinding) event documentation.
 
 #### Example
     <kendo:pivotGrid>
@@ -139,7 +139,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/pivotgrid#e
 Fired after the widget is bound to the data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/pivotgrid#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/pivotgrid#events-dataBound) event documentation.
 
 #### Example
     <kendo:pivotGrid>
@@ -157,7 +157,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/pivotgrid#eve
 Fired before column or row field is expaneded.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [expandMember](/kendo-ui/api/web/pivotgrid#events-expandMember) event documentation.
+For additional information check the [expandMember](/api/web/pivotgrid#events-expandMember) event documentation.
 
 #### Example
     <kendo:pivotGrid>
@@ -175,7 +175,7 @@ For additional information check the [expandMember](/kendo-ui/api/web/pivotgrid#
 Fired before column or row field is collapsed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [collapseMember](/kendo-ui/api/web/pivotgrid#events-collapseMember) event documentation.
+For additional information check the [collapseMember](/api/web/pivotgrid#events-collapseMember) event documentation.
 
 #### Example
     <kendo:pivotGrid>

@@ -44,7 +44,7 @@ The background opacity of the plot area.
 
 The border of the plot area.
 
-More documentation is available at [kendo:stockChart-plotArea-border](/kendo-ui/api/wrappers/jsp/stockchart/plotarea-border).
+More documentation is available at [kendo:stockChart-plotArea-border](/api/wrappers/jsp/stockchart/plotarea-border).
 
 #### Example
 

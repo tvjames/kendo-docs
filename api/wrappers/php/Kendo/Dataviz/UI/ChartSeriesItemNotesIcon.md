@@ -39,7 +39,7 @@ The border of the icon.
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesItemNotesIconBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemNotesIconBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemNotesIconBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemNotesIconBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemNotesIconBorder)
     <?php
     $icon = new \Kendo\Dataviz\UI\ChartSeriesItemNotesIcon();
     $border = new \Kendo\Dataviz\UI\ChartSeriesItemNotesIconBorder();

@@ -28,7 +28,7 @@ The position of the value axis note.
 
 The items of the notes.
 
-More documentation is available at [kendo:chart-valueAxisItem-notes-data](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-notes-data).
+More documentation is available at [kendo:chart-valueAxisItem-notes-data](/api/wrappers/jsp/chart/valueaxisitem-notes-data).
 
 #### Example
 
@@ -40,7 +40,7 @@ More documentation is available at [kendo:chart-valueAxisItem-notes-data](/kendo
 
 The icon of the notes.
 
-More documentation is available at [kendo:chart-valueAxisItem-notes-icon](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-notes-icon).
+More documentation is available at [kendo:chart-valueAxisItem-notes-icon](/api/wrappers/jsp/chart/valueaxisitem-notes-icon).
 
 #### Example
 
@@ -52,7 +52,7 @@ More documentation is available at [kendo:chart-valueAxisItem-notes-icon](/kendo
 
 The label of the notes.
 
-More documentation is available at [kendo:chart-valueAxisItem-notes-label](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-notes-label).
+More documentation is available at [kendo:chart-valueAxisItem-notes-label](/api/wrappers/jsp/chart/valueaxisitem-notes-label).
 
 #### Example
 
@@ -64,7 +64,7 @@ More documentation is available at [kendo:chart-valueAxisItem-notes-label](/kend
 
 The line of the notes.
 
-More documentation is available at [kendo:chart-valueAxisItem-notes-line](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-notes-line).
+More documentation is available at [kendo:chart-valueAxisItem-notes-line](/api/wrappers/jsp/chart/valueaxisitem-notes-line).
 
 #### Example
 

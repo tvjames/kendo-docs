@@ -39,7 +39,7 @@ The text messages displayed in the filter menu. Use it to customize or localize 
 ##### $value `\Kendo\UI\GridFilterableMessages|array`
 
 
-#### Example - using [\Kendo\UI\GridFilterableMessages](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterableMessages)
+#### Example - using [\Kendo\UI\GridFilterableMessages](/api/wrappers/php/Kendo/UI/GridFilterableMessages)
     <?php
     $filterable = new \Kendo\UI\GridFilterable();
     $messages = new \Kendo\UI\GridFilterableMessages();
@@ -68,7 +68,7 @@ The text of the filter operators displayed in the filter menu.
 ##### $value `\Kendo\UI\GridFilterableOperators|array`
 
 
-#### Example - using [\Kendo\UI\GridFilterableOperators](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterableOperators)
+#### Example - using [\Kendo\UI\GridFilterableOperators](/api/wrappers/php/Kendo/UI/GridFilterableOperators)
     <?php
     $filterable = new \Kendo\UI\GridFilterable();
     $operators = new \Kendo\UI\GridFilterableOperators();

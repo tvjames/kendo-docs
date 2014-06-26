@@ -3,7 +3,7 @@ title: autoComplete
 ---
 
 # \<kendo:autoComplete\>
-A JSP wrapper for Kendo UI [AutoComplete](/kendo-ui/api/web/autocomplete).
+A JSP wrapper for Kendo UI [AutoComplete](/api/web/autocomplete).
 
 ## Configuration Attributes
 
@@ -127,7 +127,7 @@ Spcifies the value binding behavior for the widget when the initial model value 
 
 Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
-More documentation is available at [kendo:autoComplete-animation](/kendo-ui/api/wrappers/jsp/autocomplete/animation).
+More documentation is available at [kendo:autoComplete-animation](/api/wrappers/jsp/autocomplete/animation).
 
 #### Example
 
@@ -143,7 +143,7 @@ More documentation is available at [kendo:autoComplete-animation](/kendo-ui/api/
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/autocomplete#events-change) event documentation.
+For additional information check the [change](/api/web/autocomplete#events-change) event documentation.
 
 #### Example
     <kendo:autoComplete change="handle_change">
@@ -159,7 +159,7 @@ For additional information check the [change](/kendo-ui/api/web/autocomplete#eve
 Fired when the suggestion popup of the widget is closed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [close](/kendo-ui/api/web/autocomplete#events-close) event documentation.
+For additional information check the [close](/api/web/autocomplete#events-close) event documentation.
 
 #### Example
     <kendo:autoComplete close="handle_close">
@@ -175,7 +175,7 @@ For additional information check the [close](/kendo-ui/api/web/autocomplete#even
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/autocomplete#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/autocomplete#events-dataBound) event documentation.
 
 #### Example
     <kendo:autoComplete dataBound="handle_dataBound">
@@ -191,7 +191,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/autocomplete#
 Fired when the suggestion popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [open](/kendo-ui/api/web/autocomplete#events-open) event documentation.
+For additional information check the [open](/api/web/autocomplete#events-open) event documentation.
 
 #### Example
     <kendo:autoComplete open="handle_open">
@@ -207,7 +207,7 @@ For additional information check the [open](/kendo-ui/api/web/autocomplete#event
 Fired when an item from the suggestion popup is selected by the user.
 
 
-For additional information check the [select](/kendo-ui/api/web/autocomplete#events-select) event documentation.
+For additional information check the [select](/api/web/autocomplete#events-select) event documentation.
 
 #### Example
     <kendo:autoComplete select="handle_select">
@@ -225,7 +225,7 @@ For additional information check the [select](/kendo-ui/api/web/autocomplete#eve
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/autocomplete#events-change) event documentation.
+For additional information check the [change](/api/web/autocomplete#events-change) event documentation.
 
 #### Example
     <kendo:autoComplete>
@@ -243,7 +243,7 @@ For additional information check the [change](/kendo-ui/api/web/autocomplete#eve
 Fired when the suggestion popup of the widget is closed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [close](/kendo-ui/api/web/autocomplete#events-close) event documentation.
+For additional information check the [close](/api/web/autocomplete#events-close) event documentation.
 
 #### Example
     <kendo:autoComplete>
@@ -261,7 +261,7 @@ For additional information check the [close](/kendo-ui/api/web/autocomplete#even
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/autocomplete#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/autocomplete#events-dataBound) event documentation.
 
 #### Example
     <kendo:autoComplete>
@@ -279,7 +279,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/autocomplete#
 Fired when the suggestion popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [open](/kendo-ui/api/web/autocomplete#events-open) event documentation.
+For additional information check the [open](/api/web/autocomplete#events-open) event documentation.
 
 #### Example
     <kendo:autoComplete>
@@ -297,7 +297,7 @@ For additional information check the [open](/kendo-ui/api/web/autocomplete#event
 Fired when an item from the suggestion popup is selected by the user.
 
 
-For additional information check the [select](/kendo-ui/api/web/autocomplete#events-select) event documentation.
+For additional information check the [select](/api/web/autocomplete#events-select) event documentation.
 
 #### Example
     <kendo:autoComplete>

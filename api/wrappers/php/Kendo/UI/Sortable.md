@@ -4,14 +4,14 @@ title: Sortable
 
 # \Kendo\UI\Sortable
 
-A PHP wrapper for Kendo UI [Sortable](/kendo-ui/api/web/sortable).
+A PHP wrapper for Kendo UI [Sortable](/api/web/sortable).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Sortable in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Sortable
 
@@ -50,7 +50,7 @@ Constrains the hint movement to either the horizontal (x) or vertical (y) axis. 
 
 ### cancel
 Fires when item sorting is canceled by pressing the Escape key.
-For additional information check the [cancel](/kendo-ui/api/web/sortable#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/sortable#events-cancel) event documentation.
 
 #### Returns
 `\Kendo\UI\Sortable`
@@ -77,7 +77,7 @@ For additional information check the [cancel](/kendo-ui/api/web/sortable#events-
     $sortable->cancel('onCancel');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sortable = new \Kendo\UI\Sortable('Sortable');
@@ -86,7 +86,7 @@ For additional information check the [cancel](/kendo-ui/api/web/sortable#events-
 
 ### change
 Fires when item is sorted and the item's position is changed in the DOM.
-For additional information check the [change](/kendo-ui/api/web/sortable#events-change) event documentation.
+For additional information check the [change](/api/web/sortable#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Sortable`
@@ -113,7 +113,7 @@ For additional information check the [change](/kendo-ui/api/web/sortable#events-
     $sortable->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sortable = new \Kendo\UI\Sortable('Sortable');
@@ -187,7 +187,7 @@ By default, the hint is initially positioned on top of the draggable source offs
 ##### $value `\Kendo\UI\SortableCursorOffset|array`
 
 
-#### Example - using [\Kendo\UI\SortableCursorOffset](/kendo-ui/api/wrappers/php/Kendo/UI/SortableCursorOffset)
+#### Example - using [\Kendo\UI\SortableCursorOffset](/api/wrappers/php/Kendo/UI/SortableCursorOffset)
     <?php
     $sortable = new \Kendo\UI\Sortable('Sortable');
     $cursorOffset = new \Kendo\UI\SortableCursorOffset();
@@ -224,7 +224,7 @@ Selector that determines which items are disabled. Disabled items cannot be drag
 
 ### end
 Fires when item dragging ends but before the item's position is changed in the DOM. This event is suitable for preventing the sort action.
-For additional information check the [end](/kendo-ui/api/web/sortable#events-end) event documentation.
+For additional information check the [end](/api/web/sortable#events-end) event documentation.
 
 #### Returns
 `\Kendo\UI\Sortable`
@@ -251,7 +251,7 @@ For additional information check the [end](/kendo-ui/api/web/sortable#events-end
     $sortable->end('onEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sortable = new \Kendo\UI\Sortable('Sortable');
@@ -358,7 +358,7 @@ Selector that determines which elements inside the sorted item's container will 
 
 ### move
 Fires when Sortable's placeholder changes its position.
-For additional information check the [move](/kendo-ui/api/web/sortable#events-move) event documentation.
+For additional information check the [move](/api/web/sortable#events-move) event documentation.
 
 #### Returns
 `\Kendo\UI\Sortable`
@@ -385,7 +385,7 @@ For additional information check the [move](/kendo-ui/api/web/sortable#events-mo
     $sortable->move('onMove');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sortable = new \Kendo\UI\Sortable('Sortable');
@@ -419,7 +419,7 @@ If placeholder function is not provided the widget will clone dragged item, remo
 
 ### start
 Fires when sortable item drag starts.
-For additional information check the [start](/kendo-ui/api/web/sortable#events-start) event documentation.
+For additional information check the [start](/api/web/sortable#events-start) event documentation.
 
 #### Returns
 `\Kendo\UI\Sortable`
@@ -446,7 +446,7 @@ For additional information check the [start](/kendo-ui/api/web/sortable#events-s
     $sortable->start('onStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sortable = new \Kendo\UI\Sortable('Sortable');

@@ -3,7 +3,7 @@ title: treeView
 ---
 
 # \<kendo:treeView\>
-A JSP wrapper for Kendo UI [TreeView](/kendo-ui/api/web/treeview).
+A JSP wrapper for Kendo UI [TreeView](/api/web/treeview).
 
 ## Configuration Attributes
 
@@ -101,7 +101,7 @@ Template for rendering each node.
 A collection of visual animations used when items are expanded or collapsed through user interaction.
 Setting this option to false will disable all animations.
 
-More documentation is available at [kendo:treeView-animation](/kendo-ui/api/wrappers/jsp/treeview/animation).
+More documentation is available at [kendo:treeView-animation](/api/wrappers/jsp/treeview/animation).
 
 #### Example
 
@@ -113,7 +113,7 @@ More documentation is available at [kendo:treeView-animation](/kendo-ui/api/wrap
 
 If true or an object, renders checkboxes beside each node.
 
-More documentation is available at [kendo:treeView-checkboxes](/kendo-ui/api/wrappers/jsp/treeview/checkboxes).
+More documentation is available at [kendo:treeView-checkboxes](/api/wrappers/jsp/treeview/checkboxes).
 
 #### Example
 
@@ -125,7 +125,7 @@ More documentation is available at [kendo:treeView-checkboxes](/kendo-ui/api/wra
 
 Contains the items of the treeview widget
 
-More documentation is available at [kendo:treeView-items](/kendo-ui/api/wrappers/jsp/treeview/items).
+More documentation is available at [kendo:treeView-items](/api/wrappers/jsp/treeview/items).
 
 #### Example
 
@@ -137,7 +137,7 @@ More documentation is available at [kendo:treeView-items](/kendo-ui/api/wrappers
 
 The text messages displayed in the widget. Use it to customize or localize the messages.
 
-More documentation is available at [kendo:treeView-messages](/kendo-ui/api/wrappers/jsp/treeview/messages).
+More documentation is available at [kendo:treeView-messages](/api/wrappers/jsp/treeview/messages).
 
 #### Example
 
@@ -153,7 +153,7 @@ More documentation is available at [kendo:treeView-messages](/kendo-ui/api/wrapp
 Triggered before a subgroup gets collapsed.
 
 
-For additional information check the [collapse](/kendo-ui/api/web/treeview#events-collapse) event documentation.
+For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
 
 #### Example
     <kendo:treeView collapse="handle_collapse">
@@ -169,7 +169,7 @@ For additional information check the [collapse](/kendo-ui/api/web/treeview#event
 Triggered after the dataSource change event has been processed (adding/removing items);
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/treeview#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeView dataBound="handle_dataBound">
@@ -185,7 +185,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/treeview#even
 Triggered while a node is being dragged.
 
 
-For additional information check the [drag](/kendo-ui/api/web/treeview#events-drag) event documentation.
+For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
 
 #### Example
     <kendo:treeView drag="handle_drag">
@@ -201,7 +201,7 @@ For additional information check the [drag](/kendo-ui/api/web/treeview#events-dr
 Triggered after a node has been dropped.
 
 
-For additional information check the [dragend](/kendo-ui/api/web/treeview#events-dragend) event documentation.
+For additional information check the [dragend](/api/web/treeview#events-dragend) event documentation.
 
 #### Example
     <kendo:treeView dragend="handle_dragend">
@@ -217,7 +217,7 @@ For additional information check the [dragend](/kendo-ui/api/web/treeview#events
 Triggered before the dragging of a node starts.
 
 
-For additional information check the [dragstart](/kendo-ui/api/web/treeview#events-dragstart) event documentation.
+For additional information check the [dragstart](/api/web/treeview#events-dragstart) event documentation.
 
 #### Example
     <kendo:treeView dragstart="handle_dragstart">
@@ -233,7 +233,7 @@ For additional information check the [dragstart](/kendo-ui/api/web/treeview#even
 Triggered when a node is being dropped.
 
 
-For additional information check the [drop](/kendo-ui/api/web/treeview#events-drop) event documentation.
+For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
 
 #### Example
     <kendo:treeView drop="handle_drop">
@@ -249,7 +249,7 @@ For additional information check the [drop](/kendo-ui/api/web/treeview#events-dr
 Triggered before a subgroup gets expanded.
 
 
-For additional information check the [expand](/kendo-ui/api/web/treeview#events-expand) event documentation.
+For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
 
 #### Example
     <kendo:treeView expand="handle_expand">
@@ -265,7 +265,7 @@ For additional information check the [expand](/kendo-ui/api/web/treeview#events-
 Triggered when the selection has changed (either by the user or through the select method).
 
 
-For additional information check the [change](/kendo-ui/api/web/treeview#events-change) event documentation.
+For additional information check the [change](/api/web/treeview#events-change) event documentation.
 
 #### Example
     <kendo:treeView change="handle_change">
@@ -281,7 +281,7 @@ For additional information check the [change](/kendo-ui/api/web/treeview#events-
 Triggered when a node is being selected by the user. Cancellable.
 
 
-For additional information check the [select](/kendo-ui/api/web/treeview#events-select) event documentation.
+For additional information check the [select](/api/web/treeview#events-select) event documentation.
 
 #### Example
     <kendo:treeView select="handle_select">
@@ -297,7 +297,7 @@ For additional information check the [select](/kendo-ui/api/web/treeview#events-
 Triggered when the user moves the focus on another node
 
 
-For additional information check the [navigate](/kendo-ui/api/web/treeview#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/treeview#events-navigate) event documentation.
 
 #### Example
     <kendo:treeView navigate="handle_navigate">
@@ -315,7 +315,7 @@ For additional information check the [navigate](/kendo-ui/api/web/treeview#event
 Triggered before a subgroup gets collapsed.
 
 
-For additional information check the [collapse](/kendo-ui/api/web/treeview#events-collapse) event documentation.
+For additional information check the [collapse](/api/web/treeview#events-collapse) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -333,7 +333,7 @@ For additional information check the [collapse](/kendo-ui/api/web/treeview#event
 Triggered after the dataSource change event has been processed (adding/removing items);
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/treeview#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/treeview#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -351,7 +351,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/treeview#even
 Triggered while a node is being dragged.
 
 
-For additional information check the [drag](/kendo-ui/api/web/treeview#events-drag) event documentation.
+For additional information check the [drag](/api/web/treeview#events-drag) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -369,7 +369,7 @@ For additional information check the [drag](/kendo-ui/api/web/treeview#events-dr
 Triggered after a node has been dropped.
 
 
-For additional information check the [dragend](/kendo-ui/api/web/treeview#events-dragend) event documentation.
+For additional information check the [dragend](/api/web/treeview#events-dragend) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -387,7 +387,7 @@ For additional information check the [dragend](/kendo-ui/api/web/treeview#events
 Triggered before the dragging of a node starts.
 
 
-For additional information check the [dragstart](/kendo-ui/api/web/treeview#events-dragstart) event documentation.
+For additional information check the [dragstart](/api/web/treeview#events-dragstart) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -405,7 +405,7 @@ For additional information check the [dragstart](/kendo-ui/api/web/treeview#even
 Triggered when a node is being dropped.
 
 
-For additional information check the [drop](/kendo-ui/api/web/treeview#events-drop) event documentation.
+For additional information check the [drop](/api/web/treeview#events-drop) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -423,7 +423,7 @@ For additional information check the [drop](/kendo-ui/api/web/treeview#events-dr
 Triggered before a subgroup gets expanded.
 
 
-For additional information check the [expand](/kendo-ui/api/web/treeview#events-expand) event documentation.
+For additional information check the [expand](/api/web/treeview#events-expand) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -441,7 +441,7 @@ For additional information check the [expand](/kendo-ui/api/web/treeview#events-
 Triggered when the selection has changed (either by the user or through the select method).
 
 
-For additional information check the [change](/kendo-ui/api/web/treeview#events-change) event documentation.
+For additional information check the [change](/api/web/treeview#events-change) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -459,7 +459,7 @@ For additional information check the [change](/kendo-ui/api/web/treeview#events-
 Triggered when a node is being selected by the user. Cancellable.
 
 
-For additional information check the [select](/kendo-ui/api/web/treeview#events-select) event documentation.
+For additional information check the [select](/api/web/treeview#events-select) event documentation.
 
 #### Example
     <kendo:treeView>
@@ -477,7 +477,7 @@ For additional information check the [select](/kendo-ui/api/web/treeview#events-
 Triggered when the user moves the focus on another node
 
 
-For additional information check the [navigate](/kendo-ui/api/web/treeview#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/treeview#events-navigate) event documentation.
 
 #### Example
     <kendo:treeView>

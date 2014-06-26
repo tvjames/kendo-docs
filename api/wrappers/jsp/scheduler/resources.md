@@ -22,7 +22,7 @@ with a scheduler event.
 The configuration of the scheduler resource(s). A scheduler resource is optional metadata that can be associated
 with a scheduler event.
 
-More documentation is available at [kendo:scheduler-resource](/kendo-ui/api/wrappers/jsp/scheduler/resource).
+More documentation is available at [kendo:scheduler-resource](/api/wrappers/jsp/scheduler/resource).
 
 #### Example
 

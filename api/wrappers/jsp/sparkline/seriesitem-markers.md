@@ -68,7 +68,7 @@ The markers visibility.
 
 The border of the markers.
 
-More documentation is available at [kendo:sparkline-seriesItem-markers-border](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-markers-border).
+More documentation is available at [kendo:sparkline-seriesItem-markers-border](/api/wrappers/jsp/sparkline/seriesitem-markers-border).
 
 #### Example
 

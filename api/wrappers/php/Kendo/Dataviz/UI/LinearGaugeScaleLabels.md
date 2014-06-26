@@ -40,7 +40,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeScaleLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\LinearGaugeScaleLabels();
     $border = new \Kendo\Dataviz\UI\LinearGaugeScaleLabelsBorder();

@@ -20,7 +20,7 @@ The configuration of the column command(s). If set the column would display a bu
 
 The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option.
 
-More documentation is available at [kendo:grid-column-commandItem](/kendo-ui/api/wrappers/jsp/grid/column-commanditem).
+More documentation is available at [kendo:grid-column-commandItem](/api/wrappers/jsp/grid/column-commanditem).
 
 #### Example
 

@@ -39,7 +39,7 @@ The border configuration options.
 ##### $value `\Kendo\Dataviz\UI\StockChartValueAxisItemCrosshairTooltipBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartValueAxisItemCrosshairTooltipBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartValueAxisItemCrosshairTooltipBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartValueAxisItemCrosshairTooltipBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartValueAxisItemCrosshairTooltipBorder)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\StockChartValueAxisItemCrosshairTooltip();
     $border = new \Kendo\Dataviz\UI\StockChartValueAxisItemCrosshairTooltipBorder();

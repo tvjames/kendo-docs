@@ -4,14 +4,14 @@ title: ProgressBar
 
 # \Kendo\UI\ProgressBar
 
-A PHP wrapper for Kendo UI [ProgressBar](/kendo-ui/api/web/progressbar).
+A PHP wrapper for Kendo UI [ProgressBar](/api/web/progressbar).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use ProgressBar in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo ProgressBar
 
@@ -42,7 +42,7 @@ Configures the progress animation. Currently only the duration of the animation 
 ##### $value `\Kendo\UI\ProgressBarAnimation|array`
 
 
-#### Example - using [\Kendo\UI\ProgressBarAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/ProgressBarAnimation)
+#### Example - using [\Kendo\UI\ProgressBarAnimation](/api/wrappers/php/Kendo/UI/ProgressBarAnimation)
     <?php
     $progressBar = new \Kendo\UI\ProgressBar('ProgressBar');
     $animation = new \Kendo\UI\ProgressBarAnimation();
@@ -61,7 +61,7 @@ Configures the progress animation. Currently only the duration of the animation 
 
 ### change
 Fired when the value of the ProgressBar has changed. If the progress animation is enabled, the event will be fired after the animation has completed (does not applies to chunk ProgressBar).
-For additional information check the [change](/kendo-ui/api/web/progressbar#events-change) event documentation.
+For additional information check the [change](/api/web/progressbar#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ProgressBar`
@@ -88,7 +88,7 @@ For additional information check the [change](/kendo-ui/api/web/progressbar#even
     $progressBar->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $progressBar = new \Kendo\UI\ProgressBar('ProgressBar');
@@ -115,7 +115,7 @@ Specifies the number of chunks.
 
 ### complete
 Fired when the value of the ProgressBar reaches the maximum value.
-For additional information check the [complete](/kendo-ui/api/web/progressbar#events-complete) event documentation.
+For additional information check the [complete](/api/web/progressbar#events-complete) event documentation.
 
 #### Returns
 `\Kendo\UI\ProgressBar`
@@ -142,7 +142,7 @@ For additional information check the [complete](/kendo-ui/api/web/progressbar#ev
     $progressBar->complete('onComplete');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $progressBar = new \Kendo\UI\ProgressBar('ProgressBar');

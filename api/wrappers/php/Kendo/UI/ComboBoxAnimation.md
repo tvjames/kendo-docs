@@ -21,7 +21,7 @@ A PHP class representing the animation setting of ComboBox.
 ##### $value `\Kendo\UI\ComboBoxAnimationClose|array`
 
 
-#### Example - using [\Kendo\UI\ComboBoxAnimationClose](/kendo-ui/api/wrappers/php/Kendo/UI/ComboBoxAnimationClose)
+#### Example - using [\Kendo\UI\ComboBoxAnimationClose](/api/wrappers/php/Kendo/UI/ComboBoxAnimationClose)
     <?php
     $animation = new \Kendo\UI\ComboBoxAnimation();
     $close = new \Kendo\UI\ComboBoxAnimationClose();
@@ -50,7 +50,7 @@ The animation played when the suggestion popup is opened.
 ##### $value `\Kendo\UI\ComboBoxAnimationOpen|array`
 
 
-#### Example - using [\Kendo\UI\ComboBoxAnimationOpen](/kendo-ui/api/wrappers/php/Kendo/UI/ComboBoxAnimationOpen)
+#### Example - using [\Kendo\UI\ComboBoxAnimationOpen](/api/wrappers/php/Kendo/UI/ComboBoxAnimationOpen)
     <?php
     $animation = new \Kendo\UI\ComboBoxAnimation();
     $open = new \Kendo\UI\ComboBoxAnimationOpen();

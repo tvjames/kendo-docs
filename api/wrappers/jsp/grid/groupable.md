@@ -20,7 +20,7 @@ If set to true the user could group the grid by dragging the column header cells
 
 The text messages displayed during grouping.
 
-More documentation is available at [kendo:grid-groupable-messages](/kendo-ui/api/wrappers/jsp/grid/groupable-messages).
+More documentation is available at [kendo:grid-groupable-messages](/api/wrappers/jsp/grid/groupable-messages).
 
 #### Example
 

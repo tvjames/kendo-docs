@@ -6,7 +6,7 @@ description: Documentation how to get started with the GanttTask.
 
 # kendo.data.GanttTask
 
-The `kendo.data.GanttTask` class represents a data item from the [kendo.data.GanttDataSource](/kendo-ui/api/framework/ganttdatasource). Inherits from [kendo.data.Model](/kendo-ui/api/framework/model).
+The `kendo.data.GanttTask` class represents a data item from the [kendo.data.GanttDataSource](/api/framework/ganttdatasource). Inherits from [kendo.data.Model](/api/framework/model).
 
 ## Configuration
 
@@ -317,7 +317,7 @@ The title of the task which is displayed by the gantt widget.
 
 ## Methods
 
-See the [Model methods](/kendo-ui/api/framework/model#methods) for all inherited methods.
+See the [Model methods](/api/framework/model#methods) for all inherited methods.
 
 ### GanttTask.define
 
@@ -363,7 +363,7 @@ Specifies the the type of the field. The available options are `"string"`, `"num
 
 ##### options.fields.fieldName.validation `Object`
 
-Specifies the validation options which will be used by [Kendo Validator](/kendo-ui/api/framework/validator).
+Specifies the validation options which will be used by [Kendo Validator](/api/framework/validator).
 
 #### Example - define custom gantt task
 
@@ -426,4 +426,4 @@ Checks whether the event has zero duration.
 
 ## Events
 
-See the [Model events](/kendo-ui/api/framework/model#events) for all inherited events.
+See the [Model events](/api/framework/model#events) for all inherited events.

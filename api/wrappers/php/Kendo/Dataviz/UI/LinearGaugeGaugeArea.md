@@ -34,7 +34,7 @@ The border of the gauge area.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeGaugeAreaBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeGaugeAreaBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeGaugeAreaBorder)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeGaugeAreaBorder](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeGaugeAreaBorder)
     <?php
     $gaugeArea = new \Kendo\Dataviz\UI\LinearGaugeGaugeArea();
     $border = new \Kendo\Dataviz\UI\LinearGaugeGaugeAreaBorder();

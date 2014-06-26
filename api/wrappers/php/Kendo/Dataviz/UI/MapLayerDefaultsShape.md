@@ -57,7 +57,7 @@ The default style for shapes.
 ##### $value `\Kendo\Dataviz\UI\MapLayerDefaultsShapeStyle|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsShapeStyle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsShapeStyle)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsShapeStyle](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsShapeStyle)
     <?php
     $shape = new \Kendo\Dataviz\UI\MapLayerDefaultsShape();
     $style = new \Kendo\Dataviz\UI\MapLayerDefaultsShapeStyle();

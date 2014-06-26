@@ -21,7 +21,7 @@ Configures the legend labels.
 ##### $value `\Kendo\Dataviz\UI\StockChartLegendInactiveItemsLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartLegendInactiveItemsLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendInactiveItemsLabels)
+#### Example - using [\Kendo\Dataviz\UI\StockChartLegendInactiveItemsLabels](/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendInactiveItemsLabels)
     <?php
     $inactiveItems = new \Kendo\Dataviz\UI\StockChartLegendInactiveItems();
     $labels = new \Kendo\Dataviz\UI\StockChartLegendInactiveItemsLabels();
@@ -50,7 +50,7 @@ Configures the legend markers.
 ##### $value `\Kendo\Dataviz\UI\StockChartLegendInactiveItemsMarkers|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartLegendInactiveItemsMarkers](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendInactiveItemsMarkers)
+#### Example - using [\Kendo\Dataviz\UI\StockChartLegendInactiveItemsMarkers](/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendInactiveItemsMarkers)
     <?php
     $inactiveItems = new \Kendo\Dataviz\UI\StockChartLegendInactiveItems();
     $markers = new \Kendo\Dataviz\UI\StockChartLegendInactiveItemsMarkers();

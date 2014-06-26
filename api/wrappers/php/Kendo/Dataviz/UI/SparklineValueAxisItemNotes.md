@@ -59,7 +59,7 @@ The icon of the notes.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemNotesIcon|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesIcon](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesIcon)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesIcon](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesIcon)
     <?php
     $notes = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotes();
     $icon = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotesIcon();
@@ -88,7 +88,7 @@ The label of the notes.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemNotesLabel|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesLabel](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesLabel)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesLabel](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesLabel)
     <?php
     $notes = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotes();
     $label = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotesLabel();
@@ -117,7 +117,7 @@ The line of the notes.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemNotesLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesLine)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesLine](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesLine)
     <?php
     $notes = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotes();
     $line = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotesLine();

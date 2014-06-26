@@ -21,7 +21,7 @@ Configures the scale labels.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeScaleLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleLabels)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleLabels](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleLabels)
     <?php
     $scale = new \Kendo\Dataviz\UI\LinearGaugeScale();
     $labels = new \Kendo\Dataviz\UI\LinearGaugeScaleLabels();
@@ -50,7 +50,7 @@ Configures the axis line.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeScaleLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleLine)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleLine](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleLine)
     <?php
     $scale = new \Kendo\Dataviz\UI\LinearGaugeScale();
     $line = new \Kendo\Dataviz\UI\LinearGaugeScaleLine();
@@ -79,7 +79,7 @@ Configures the scale major ticks.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeScaleMajorTicks|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleMajorTicks](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleMajorTicks)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleMajorTicks](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleMajorTicks)
     <?php
     $scale = new \Kendo\Dataviz\UI\LinearGaugeScale();
     $majorTicks = new \Kendo\Dataviz\UI\LinearGaugeScaleMajorTicks();
@@ -162,7 +162,7 @@ Configures the scale minor ticks.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeScaleMinorTicks|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleMinorTicks](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleMinorTicks)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScaleMinorTicks](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScaleMinorTicks)
     <?php
     $scale = new \Kendo\Dataviz\UI\LinearGaugeScale();
     $minorTicks = new \Kendo\Dataviz\UI\LinearGaugeScaleMinorTicks();

@@ -20,7 +20,7 @@ Set the object responsible for describing the image raw data format.
 
 Set the object which describes the image/directory entry fields. Note that a name, type and size fields should be set.
 
-More documentation is available at [kendo:editor-imageBrowser-schema-model](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-schema-model).
+More documentation is available at [kendo:editor-imageBrowser-schema-model](/api/wrappers/jsp/editor/imagebrowser-schema-model).
 
 #### Example
 

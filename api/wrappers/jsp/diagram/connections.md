@@ -20,7 +20,7 @@ Defines the connections configuration.
 
 Defines the connections configuration.
 
-More documentation is available at [kendo:diagram-connection](/kendo-ui/api/wrappers/jsp/diagram/connection).
+More documentation is available at [kendo:diagram-connection](/api/wrappers/jsp/diagram/connection).
 
 #### Example
 

@@ -39,7 +39,7 @@ The border of the title.
 ##### $value `\Kendo\Dataviz\UI\ChartPaneTitleBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPaneTitleBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneTitleBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartPaneTitleBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneTitleBorder)
     <?php
     $title = new \Kendo\Dataviz\UI\ChartPaneTitle();
     $border = new \Kendo\Dataviz\UI\ChartPaneTitleBorder();
@@ -113,7 +113,7 @@ The margin of the title. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartPaneTitleMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneTitleMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartPaneTitleMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartPaneTitleMargin)
     <?php
     $title = new \Kendo\Dataviz\UI\ChartPaneTitle();
     $margin = new \Kendo\Dataviz\UI\ChartPaneTitleMargin();

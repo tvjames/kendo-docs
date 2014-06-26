@@ -52,7 +52,7 @@ The width of the crosshair in pixels.
 
 The crosshar tooltip options.
 
-More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-crosshair-tooltip).
+More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip](/api/wrappers/jsp/chart/yaxisitem-crosshair-tooltip).
 
 #### Example
 

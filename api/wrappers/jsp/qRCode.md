@@ -3,7 +3,7 @@ title: qRCode
 ---
 
 # \<kendo:qRCode\>
-A JSP wrapper for Kendo UI [QRCode](/kendo-ui/api/dataviz/qrcode).
+A JSP wrapper for Kendo UI [QRCode](/api/dataviz/qrcode).
 
 ## Configuration Attributes
 
@@ -79,7 +79,7 @@ The value of the QRCode.
 
 The border of the QR code.
 
-More documentation is available at [kendo:qRCode-border](/kendo-ui/api/wrappers/jsp/qrcode/border).
+More documentation is available at [kendo:qRCode-border](/api/wrappers/jsp/qrcode/border).
 
 #### Example
 

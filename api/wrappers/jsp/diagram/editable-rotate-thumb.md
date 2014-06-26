@@ -28,7 +28,7 @@ Set the thumb backgorund.
 
 Specifies the thumb stroke styles.
 
-More documentation is available at [kendo:diagram-editable-rotate-thumb-stroke](/kendo-ui/api/wrappers/jsp/diagram/editable-rotate-thumb-stroke).
+More documentation is available at [kendo:diagram-editable-rotate-thumb-stroke](/api/wrappers/jsp/diagram/editable-rotate-thumb-stroke).
 
 #### Example
 

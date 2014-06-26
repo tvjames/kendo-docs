@@ -20,7 +20,7 @@ The plot bands of the y axis.
 
 The plot bands of the y axis.
 
-More documentation is available at [kendo:chart-yAxisItem-plotBand](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-plotband).
+More documentation is available at [kendo:chart-yAxisItem-plotBand](/api/wrappers/jsp/chart/yaxisitem-plotband).
 
 #### Example
 

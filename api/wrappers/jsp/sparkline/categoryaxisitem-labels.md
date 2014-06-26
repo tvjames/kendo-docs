@@ -137,7 +137,7 @@ The visibility of the labels.
 
 The border of the labels.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-labels-border](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-labels-border).
+More documentation is available at [kendo:sparkline-categoryAxisItem-labels-border](/api/wrappers/jsp/sparkline/categoryaxisitem-labels-border).
 
 #### Example
 

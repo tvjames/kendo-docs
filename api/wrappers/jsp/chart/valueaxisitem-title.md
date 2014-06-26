@@ -92,7 +92,7 @@ If set to true the chart will display the value axis title. By default the value
 
 The border of the title.
 
-More documentation is available at [kendo:chart-valueAxisItem-title-border](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-title-border).
+More documentation is available at [kendo:chart-valueAxisItem-title-border](/api/wrappers/jsp/chart/valueaxisitem-title-border).
 
 #### Example
 
@@ -104,7 +104,7 @@ More documentation is available at [kendo:chart-valueAxisItem-title-border](/ken
 
 The margin of the title. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-valueAxisItem-title-margin](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-title-margin).
+More documentation is available at [kendo:chart-valueAxisItem-title-margin](/api/wrappers/jsp/chart/valueaxisitem-title-margin).
 
 #### Example
 
@@ -116,7 +116,7 @@ More documentation is available at [kendo:chart-valueAxisItem-title-margin](/ken
 
 The padding of the title. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-valueAxisItem-title-padding](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-title-padding).
+More documentation is available at [kendo:chart-valueAxisItem-title-padding](/api/wrappers/jsp/chart/valueaxisitem-title-padding).
 
 #### Example
 

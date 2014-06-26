@@ -124,7 +124,7 @@ If set to true the chart will display the category axis labels. By default the c
 
 The border of the labels.
 
-More documentation is available at [kendo:chart-categoryAxisItem-labels-border](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-labels-border).
+More documentation is available at [kendo:chart-categoryAxisItem-labels-border](/api/wrappers/jsp/chart/categoryaxisitem-labels-border).
 
 #### Example
 
@@ -136,7 +136,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-labels-border](
 
 The format used to display the labels when the categories are dates. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
-More documentation is available at [kendo:chart-categoryAxisItem-labels-dateFormats](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-labels-dateformats).
+More documentation is available at [kendo:chart-categoryAxisItem-labels-dateFormats](/api/wrappers/jsp/chart/categoryaxisitem-labels-dateformats).
 
 #### Example
 
@@ -148,7 +148,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-labels-dateForm
 
 The margin of the labels. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-categoryAxisItem-labels-margin](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-labels-margin).
+More documentation is available at [kendo:chart-categoryAxisItem-labels-margin](/api/wrappers/jsp/chart/categoryaxisitem-labels-margin).
 
 #### Example
 
@@ -160,7 +160,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-labels-margin](
 
 The padding of the labels. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-categoryAxisItem-labels-padding](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-labels-padding).
+More documentation is available at [kendo:chart-categoryAxisItem-labels-padding](/api/wrappers/jsp/chart/categoryaxisitem-labels-padding).
 
 #### Example
 

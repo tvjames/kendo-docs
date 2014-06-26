@@ -39,7 +39,7 @@ Specifies the thumb stroke styles.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableRotateThumbStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableRotateThumbStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableRotateThumbStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableRotateThumbStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableRotateThumbStroke)
     <?php
     $thumb = new \Kendo\Dataviz\UI\DiagramEditableRotateThumb();
     $stroke = new \Kendo\Dataviz\UI\DiagramEditableRotateThumbStroke();

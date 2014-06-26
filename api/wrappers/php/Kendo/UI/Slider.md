@@ -4,14 +4,14 @@ title: Slider
 
 # \Kendo\UI\Slider
 
-A PHP wrapper for Kendo UI [Slider](/kendo-ui/api/web/slider).
+A PHP wrapper for Kendo UI [Slider](/api/web/slider).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Slider in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Slider
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the slider value changes as a result of selecting a new value with the drag handle, buttons or keyboard.
-For additional information check the [change](/kendo-ui/api/web/slider#events-change) event documentation.
+For additional information check the [change](/api/web/slider#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\Slider`
@@ -59,7 +59,7 @@ For additional information check the [change](/kendo-ui/api/web/slider#events-ch
     $slider->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $slider = new \Kendo\UI\Slider('Slider');
@@ -196,7 +196,7 @@ increase and decrease buttons of a Slider.
 
 ### slide
 Fires when the user drags the drag handle to a new position.
-For additional information check the [slide](/kendo-ui/api/web/slider#events-slide) event documentation.
+For additional information check the [slide](/api/web/slider#events-slide) event documentation.
 
 #### Returns
 `\Kendo\UI\Slider`
@@ -223,7 +223,7 @@ For additional information check the [slide](/kendo-ui/api/web/slider#events-sli
     $slider->slide('onSlide');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $slider = new \Kendo\UI\Slider('Slider');
@@ -280,7 +280,7 @@ Configuration of the Slider tooltip.
 ##### $value `\Kendo\UI\SliderTooltip|array`
 
 
-#### Example - using [\Kendo\UI\SliderTooltip](/kendo-ui/api/wrappers/php/Kendo/UI/SliderTooltip)
+#### Example - using [\Kendo\UI\SliderTooltip](/api/wrappers/php/Kendo/UI/SliderTooltip)
     <?php
     $slider = new \Kendo\UI\Slider('Slider');
     $tooltip = new \Kendo\UI\SliderTooltip();

@@ -92,7 +92,7 @@ If set to true the chart will display the series tooltip. By default the series 
 
 The border configuration options.
 
-More documentation is available at [kendo:chart-tooltip-border](/kendo-ui/api/wrappers/jsp/chart/tooltip-border).
+More documentation is available at [kendo:chart-tooltip-border](/api/wrappers/jsp/chart/tooltip-border).
 
 #### Example
 
@@ -104,7 +104,7 @@ More documentation is available at [kendo:chart-tooltip-border](/kendo-ui/api/wr
 
 The padding of the tooltip. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-tooltip-padding](/kendo-ui/api/wrappers/jsp/chart/tooltip-padding).
+More documentation is available at [kendo:chart-tooltip-padding](/api/wrappers/jsp/chart/tooltip-padding).
 
 #### Example
 

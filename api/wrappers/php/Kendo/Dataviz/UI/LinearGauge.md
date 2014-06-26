@@ -4,14 +4,14 @@ title: LinearGauge
 
 # \Kendo\Dataviz\UI\LinearGauge
 
-A PHP wrapper for Kendo UI [LinearGauge](/kendo-ui/api/dataviz/lineargauge).
+A PHP wrapper for Kendo UI [LinearGauge](/api/dataviz/lineargauge).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use LinearGauge in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo LinearGauge
 
@@ -43,7 +43,7 @@ This is the entire visible area of the gauge.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeGaugeArea|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeGaugeArea](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeGaugeArea)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeGaugeArea](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeGaugeArea)
     <?php
     $linearGauge = new \Kendo\Dataviz\UI\LinearGauge('LinearGauge');
     $gaugeArea = new \Kendo\Dataviz\UI\LinearGaugeGaugeArea();
@@ -72,7 +72,7 @@ The pointer configuration options.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugePointer|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugePointer](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugePointer)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugePointer](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugePointer)
     <?php
     $linearGauge = new \Kendo\Dataviz\UI\LinearGauge('LinearGauge');
     $pointer = new \Kendo\Dataviz\UI\LinearGaugePointer();
@@ -120,7 +120,7 @@ Configures the scale.
 ##### $value `\Kendo\Dataviz\UI\LinearGaugeScale|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScale](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScale)
+#### Example - using [\Kendo\Dataviz\UI\LinearGaugeScale](/api/wrappers/php/Kendo/Dataviz/UI/LinearGaugeScale)
     <?php
     $linearGauge = new \Kendo\Dataviz\UI\LinearGauge('LinearGauge');
     $scale = new \Kendo\Dataviz\UI\LinearGaugeScale();

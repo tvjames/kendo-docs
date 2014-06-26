@@ -205,7 +205,7 @@ The start of working week (index based).
 
 If set to true the user would be able to create new scheduler events and modify or delete existing ones.Overrides the editable option of the scheduler.
 
-More documentation is available at [kendo:scheduler-view-editable](/kendo-ui/api/wrappers/jsp/scheduler/view-editable).
+More documentation is available at [kendo:scheduler-view-editable](/api/wrappers/jsp/scheduler/view-editable).
 
 #### Example
 
@@ -217,7 +217,7 @@ More documentation is available at [kendo:scheduler-view-editable](/kendo-ui/api
 
 The configuration of the view resource(s) grouping.
 
-More documentation is available at [kendo:scheduler-view-group](/kendo-ui/api/wrappers/jsp/scheduler/view-group).
+More documentation is available at [kendo:scheduler-view-group](/api/wrappers/jsp/scheduler/view-group).
 
 #### Example
 

@@ -214,7 +214,7 @@ The line width.** Applicable for line series. **
 
 The border of the points.** Applicable to column, ohlc and candlestick series **
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-border](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-border).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-border](/api/wrappers/jsp/stockchart/navigator-seriesitem-border).
 
 #### Example
 
@@ -226,7 +226,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-border
 
 Configures the appearance of highlighted points.** Applicable to candlestick and ohlc series. **
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-highlight](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-highlight).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-highlight](/api/wrappers/jsp/stockchart/navigator-seriesitem-highlight).
 
 #### Example
 
@@ -238,7 +238,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-highli
 
 Configures the series data labels.
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-labels](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-labels).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-labels](/api/wrappers/jsp/stockchart/navigator-seriesitem-labels).
 
 #### Example
 
@@ -250,7 +250,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-labels
 
 Line options.** Applicable to area, candlestick and ohlc series. **
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-line](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-line).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-line](/api/wrappers/jsp/stockchart/navigator-seriesitem-line).
 
 #### Example
 
@@ -262,7 +262,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-line](
 
 Marker options.** Applicable for area and line series. **
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-markers](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-markers).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-markers](/api/wrappers/jsp/stockchart/navigator-seriesitem-markers).
 
 #### Example
 
@@ -274,7 +274,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-marker
 
 The effects overlay.
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-overlay](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-overlay).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-overlay](/api/wrappers/jsp/stockchart/navigator-seriesitem-overlay).
 
 #### Example
 
@@ -287,7 +287,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-overla
 A boolean value indicating if the series should be stacked.
 A string value is interpreted as navigator.series.stack.group.
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-stack](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-stack).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-stack](/api/wrappers/jsp/stockchart/navigator-seriesitem-stack).
 
 #### Example
 
@@ -299,7 +299,7 @@ More documentation is available at [kendo:stockChart-navigator-seriesItem-stack]
 
 The data point tooltip configuration options.
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-tooltip](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-tooltip).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-tooltip](/api/wrappers/jsp/stockchart/navigator-seriesitem-tooltip).
 
 #### Example
 

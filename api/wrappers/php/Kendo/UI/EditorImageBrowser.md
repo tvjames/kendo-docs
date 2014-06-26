@@ -39,7 +39,7 @@ Defines texts shown within the image browser.
 ##### $value `\Kendo\UI\EditorImageBrowserMessages|array`
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserMessages](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserMessages)
+#### Example - using [\Kendo\UI\EditorImageBrowserMessages](/api/wrappers/php/Kendo/UI/EditorImageBrowserMessages)
     <?php
     $imageBrowser = new \Kendo\UI\EditorImageBrowser();
     $messages = new \Kendo\UI\EditorImageBrowserMessages();
@@ -86,7 +86,7 @@ Set the object responsible for describing the image raw data format.
 ##### $value `\Kendo\UI\EditorImageBrowserSchema|array`
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserSchema](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserSchema)
+#### Example - using [\Kendo\UI\EditorImageBrowserSchema](/api/wrappers/php/Kendo/UI/EditorImageBrowserSchema)
     <?php
     $imageBrowser = new \Kendo\UI\EditorImageBrowser();
     $schema = new \Kendo\UI\EditorImageBrowserSchema();
@@ -115,7 +115,7 @@ Specifies the settings for loading and saving data.
 ##### $value `\Kendo\UI\EditorImageBrowserTransport|array`
 
 
-#### Example - using [\Kendo\UI\EditorImageBrowserTransport](/kendo-ui/api/wrappers/php/Kendo/UI/EditorImageBrowserTransport)
+#### Example - using [\Kendo\UI\EditorImageBrowserTransport](/api/wrappers/php/Kendo/UI/EditorImageBrowserTransport)
     <?php
     $imageBrowser = new \Kendo\UI\EditorImageBrowser();
     $transport = new \Kendo\UI\EditorImageBrowserTransport();

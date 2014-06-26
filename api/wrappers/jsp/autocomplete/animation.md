@@ -20,7 +20,7 @@ Configures the opening and closing animations of the suggestion popup. Setting t
 
 The animation played when the suggestion popup is closed.
 
-More documentation is available at [kendo:autoComplete-animation-close](/kendo-ui/api/wrappers/jsp/autocomplete/animation-close).
+More documentation is available at [kendo:autoComplete-animation-close](/api/wrappers/jsp/autocomplete/animation-close).
 
 #### Example
 
@@ -32,7 +32,7 @@ More documentation is available at [kendo:autoComplete-animation-close](/kendo-u
 
 The animation played when the suggestion popup is opened.
 
-More documentation is available at [kendo:autoComplete-animation-open](/kendo-ui/api/wrappers/jsp/autocomplete/animation-open).
+More documentation is available at [kendo:autoComplete-animation-open](/api/wrappers/jsp/autocomplete/animation-open).
 
 #### Example
 

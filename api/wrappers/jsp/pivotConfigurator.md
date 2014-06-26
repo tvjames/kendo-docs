@@ -3,7 +3,7 @@ title: pivotConfigurator
 ---
 
 # \<kendo:pivotConfigurator\>
-A JSP wrapper for Kendo UI [PivotConfigurator](/kendo-ui/api/web/pivotconfigurator).
+A JSP wrapper for Kendo UI [PivotConfigurator](/api/web/pivotconfigurator).
 
 ## Configuration Attributes
 
@@ -14,7 +14,7 @@ A JSP wrapper for Kendo UI [PivotConfigurator](/kendo-ui/api/web/pivotconfigurat
 
 The text messages displayed in the fields sections.
 
-More documentation is available at [kendo:pivotConfigurator-messages](/kendo-ui/api/wrappers/jsp/pivotconfigurator/messages).
+More documentation is available at [kendo:pivotConfigurator-messages](/api/wrappers/jsp/pivotconfigurator/messages).
 
 #### Example
 

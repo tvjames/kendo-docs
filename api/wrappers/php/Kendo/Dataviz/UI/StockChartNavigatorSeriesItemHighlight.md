@@ -21,7 +21,7 @@ The border of highlighted points. The color is computed automatically from the b
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSeriesItemHighlightBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSeriesItemHighlightBorder)
     <?php
     $highlight = new \Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlight();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightBorder();
@@ -68,7 +68,7 @@ Line options for highlighted points. The color is computed automatically from th
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSeriesItemHighlightLine)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightLine](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSeriesItemHighlightLine)
     <?php
     $highlight = new \Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlight();
     $line = new \Kendo\Dataviz\UI\StockChartNavigatorSeriesItemHighlightLine();

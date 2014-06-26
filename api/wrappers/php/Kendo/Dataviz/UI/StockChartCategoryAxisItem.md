@@ -23,7 +23,7 @@ categoryAxis.baseUnitStep is set to "auto".
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemAutoBaseUnitSteps|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemAutoBaseUnitSteps](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemAutoBaseUnitSteps)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemAutoBaseUnitSteps](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemAutoBaseUnitSteps)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $autoBaseUnitSteps = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemAutoBaseUnitSteps();
@@ -171,7 +171,7 @@ The crosshair configuration options.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemCrosshair|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemCrosshair](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemCrosshair)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemCrosshair](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemCrosshair)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $crosshair = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemCrosshair();
@@ -236,7 +236,7 @@ Configures the axis labels.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemLabels)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemLabels](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemLabels)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $labels = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemLabels();
@@ -265,7 +265,7 @@ Configures the axis line. This will also effect major and minor ticks, but not g
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemLine)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemLine](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemLine)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $line = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemLine();
@@ -295,7 +295,7 @@ body of the chart.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorGridLines|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorGridLines](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMajorGridLines)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorGridLines](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMajorGridLines)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $majorGridLines = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorGridLines();
@@ -324,7 +324,7 @@ The major ticks of the axis.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorTicks|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorTicks](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMajorTicks)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorTicks](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMajorTicks)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $majorTicks = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemMajorTicks();
@@ -403,7 +403,7 @@ the body of the chart.Note that minor grid lines are not visible by default, the
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorGridLines|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorGridLines](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMinorGridLines)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorGridLines](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMinorGridLines)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $minorGridLines = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorGridLines();
@@ -432,7 +432,7 @@ The minor ticks of the axis.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorTicks|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorTicks](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMinorTicks)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorTicks](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemMinorTicks)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $minorTicks = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemMinorTicks();
@@ -479,7 +479,7 @@ The category axis notes configuration.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotes)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemNotes)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $notes = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemNotes();
@@ -603,7 +603,7 @@ The selected axis range. If configured, axis selection will be enabled.** Availa
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemSelect|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemSelect](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemSelect)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemSelect](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemSelect)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $select = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemSelect();
@@ -632,7 +632,7 @@ The title of the category axis.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemTitle|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemTitle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemTitle)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemTitle](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemTitle)
     <?php
     $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartCategoryAxisItem();
     $title = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemTitle();

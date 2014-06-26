@@ -39,7 +39,7 @@ The border of the chart area.
 ##### $value `\Kendo\Dataviz\UI\StockChartChartAreaBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartChartAreaBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartChartAreaBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartChartAreaBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartChartAreaBorder)
     <?php
     $chartArea = new \Kendo\Dataviz\UI\StockChartChartArea();
     $border = new \Kendo\Dataviz\UI\StockChartChartAreaBorder();

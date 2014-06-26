@@ -3,7 +3,7 @@ title: treeMap
 ---
 
 # \<kendo:treeMap\>
-A JSP wrapper for Kendo UI [TreeMap](/kendo-ui/api/dataviz/treemap).
+A JSP wrapper for Kendo UI [TreeMap](/api/dataviz/treemap).
 
 ## Configuration Attributes
 
@@ -64,7 +64,7 @@ The data item field which contains the tile value.
 Fired when a tile has been created.
 
 
-For additional information check the [itemCreated](/kendo-ui/api/dataviz/treemap#events-itemCreated) event documentation.
+For additional information check the [itemCreated](/api/dataviz/treemap#events-itemCreated) event documentation.
 
 #### Example
     <kendo:treeMap itemCreated="handle_itemCreated">
@@ -80,7 +80,7 @@ For additional information check the [itemCreated](/kendo-ui/api/dataviz/treemap
 Fired when the widget is bound to data from its dataSource.
 
 
-For additional information check the [dataBound](/kendo-ui/api/dataviz/treemap#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/dataviz/treemap#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeMap dataBound="handle_dataBound">
@@ -98,7 +98,7 @@ For additional information check the [dataBound](/kendo-ui/api/dataviz/treemap#e
 Fired when a tile has been created.
 
 
-For additional information check the [itemCreated](/kendo-ui/api/dataviz/treemap#events-itemCreated) event documentation.
+For additional information check the [itemCreated](/api/dataviz/treemap#events-itemCreated) event documentation.
 
 #### Example
     <kendo:treeMap>
@@ -116,7 +116,7 @@ For additional information check the [itemCreated](/kendo-ui/api/dataviz/treemap
 Fired when the widget is bound to data from its dataSource.
 
 
-For additional information check the [dataBound](/kendo-ui/api/dataviz/treemap#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/dataviz/treemap#events-dataBound) event documentation.
 
 #### Example
     <kendo:treeMap>

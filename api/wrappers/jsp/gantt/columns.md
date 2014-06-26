@@ -22,7 +22,7 @@ field to which the column is bound. The gantt will create a column for every ite
 The configuration of the gantt columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
 field to which the column is bound. The gantt will create a column for every item of the array.
 
-More documentation is available at [kendo:gantt-column](/kendo-ui/api/wrappers/jsp/gantt/column).
+More documentation is available at [kendo:gantt-column](/api/wrappers/jsp/gantt/column).
 
 #### Example
 

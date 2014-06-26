@@ -21,7 +21,7 @@ Specifyes the thumb style.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableRotateThumb|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableRotateThumb](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableRotateThumb)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableRotateThumb](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableRotateThumb)
     <?php
     $rotate = new \Kendo\Dataviz\UI\DiagramEditableRotate();
     $thumb = new \Kendo\Dataviz\UI\DiagramEditableRotateThumb();

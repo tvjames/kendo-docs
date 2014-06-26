@@ -20,7 +20,7 @@ Contains the items of the treeview widget
 
 Contains the items of the treeview widget
 
-More documentation is available at [kendo:treeView-item](/kendo-ui/api/wrappers/jsp/treeview/item).
+More documentation is available at [kendo:treeView-item](/api/wrappers/jsp/treeview/item).
 
 #### Example
 

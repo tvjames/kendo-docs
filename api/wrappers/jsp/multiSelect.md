@@ -3,7 +3,7 @@ title: multiSelect
 ---
 
 # \<kendo:multiSelect\>
-A JSP wrapper for Kendo UI [MultiSelect](/kendo-ui/api/web/multiselect).
+A JSP wrapper for Kendo UI [MultiSelect](/api/web/multiselect).
 
 ## Configuration Attributes
 
@@ -159,7 +159,7 @@ Specifies the value binding behavior for the widget. If set to true, the View-Mo
 
 Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
-More documentation is available at [kendo:multiSelect-animation](/kendo-ui/api/wrappers/jsp/multiselect/animation).
+More documentation is available at [kendo:multiSelect-animation](/api/wrappers/jsp/multiselect/animation).
 
 #### Example
 
@@ -175,7 +175,7 @@ More documentation is available at [kendo:multiSelect-animation](/kendo-ui/api/w
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/multiselect#events-change) event documentation.
+For additional information check the [change](/api/web/multiselect#events-change) event documentation.
 
 #### Example
     <kendo:multiSelect change="handle_change">
@@ -191,7 +191,7 @@ For additional information check the [change](/kendo-ui/api/web/multiselect#even
 Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [close](/kendo-ui/api/web/multiselect#events-close) event documentation.
+For additional information check the [close](/api/web/multiselect#events-close) event documentation.
 
 #### Example
     <kendo:multiSelect close="handle_close">
@@ -207,7 +207,7 @@ For additional information check the [close](/kendo-ui/api/web/multiselect#event
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/multiselect#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
 
 #### Example
     <kendo:multiSelect dataBound="handle_dataBound">
@@ -223,7 +223,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/multiselect#e
 Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [open](/kendo-ui/api/web/multiselect#events-open) event documentation.
+For additional information check the [open](/api/web/multiselect#events-open) event documentation.
 
 #### Example
     <kendo:multiSelect open="handle_open">
@@ -239,7 +239,7 @@ For additional information check the [open](/kendo-ui/api/web/multiselect#events
 Fired when an item from the popup is selected by the user.
 
 
-For additional information check the [select](/kendo-ui/api/web/multiselect#events-select) event documentation.
+For additional information check the [select](/api/web/multiselect#events-select) event documentation.
 
 #### Example
     <kendo:multiSelect select="handle_select">
@@ -257,7 +257,7 @@ For additional information check the [select](/kendo-ui/api/web/multiselect#even
 Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/multiselect#events-change) event documentation.
+For additional information check the [change](/api/web/multiselect#events-change) event documentation.
 
 #### Example
     <kendo:multiSelect>
@@ -275,7 +275,7 @@ For additional information check the [change](/kendo-ui/api/web/multiselect#even
 Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [close](/kendo-ui/api/web/multiselect#events-close) event documentation.
+For additional information check the [close](/api/web/multiselect#events-close) event documentation.
 
 #### Example
     <kendo:multiSelect>
@@ -293,7 +293,7 @@ For additional information check the [close](/kendo-ui/api/web/multiselect#event
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/multiselect#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
 
 #### Example
     <kendo:multiSelect>
@@ -311,7 +311,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/multiselect#e
 Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [open](/kendo-ui/api/web/multiselect#events-open) event documentation.
+For additional information check the [open](/api/web/multiselect#events-open) event documentation.
 
 #### Example
     <kendo:multiSelect>
@@ -329,7 +329,7 @@ For additional information check the [open](/kendo-ui/api/web/multiselect#events
 Fired when an item from the popup is selected by the user.
 
 
-For additional information check the [select](/kendo-ui/api/web/multiselect#events-select) event documentation.
+For additional information check the [select](/api/web/multiselect#events-select) event documentation.
 
 #### Example
     <kendo:multiSelect>

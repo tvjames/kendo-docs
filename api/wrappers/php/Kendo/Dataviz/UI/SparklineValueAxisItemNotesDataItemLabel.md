@@ -39,7 +39,7 @@ The border of the label.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemNotesDataItemLabelBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesDataItemLabelBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesDataItemLabelBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemNotesDataItemLabelBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemNotesDataItemLabelBorder)
     <?php
     $label = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotesDataItemLabel();
     $border = new \Kendo\Dataviz\UI\SparklineValueAxisItemNotesDataItemLabelBorder();

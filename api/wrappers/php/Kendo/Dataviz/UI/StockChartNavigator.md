@@ -77,7 +77,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
@@ -124,7 +124,7 @@ Default options for the navigator hint.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorHint|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorHint](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorHint)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorHint](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorHint)
     <?php
     $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
     $hint = new \Kendo\Dataviz\UI\StockChartNavigatorHint();
@@ -153,7 +153,7 @@ The navigator pane configuration.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorPane|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPane](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPane)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPane](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPane)
     <?php
     $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
     $pane = new \Kendo\Dataviz\UI\StockChartNavigatorPane();
@@ -182,7 +182,7 @@ Specifies the initially selected range.The full range of values is shown if no r
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorSelect|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSelect](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSelect)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSelect](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSelect)
     <?php
     $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
     $select = new \Kendo\Dataviz\UI\StockChartNavigatorSelect();

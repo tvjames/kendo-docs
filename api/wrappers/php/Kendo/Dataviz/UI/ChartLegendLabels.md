@@ -66,7 +66,7 @@ The margin of the labels. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartLegendLabelsMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartLegendLabelsMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartLegendLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartLegendLabelsMargin)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartLegendLabels();
     $margin = new \Kendo\Dataviz\UI\ChartLegendLabelsMargin();
@@ -104,7 +104,7 @@ The padding of the labels. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartLegendLabelsPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartLegendLabelsPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartLegendLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartLegendLabelsPadding)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartLegendLabels();
     $padding = new \Kendo\Dataviz\UI\ChartLegendLabelsPadding();

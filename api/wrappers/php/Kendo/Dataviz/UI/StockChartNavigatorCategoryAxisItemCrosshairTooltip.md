@@ -39,7 +39,7 @@ The border options.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemCrosshairTooltipBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemCrosshairTooltipBorder)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltip();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipBorder();
@@ -131,7 +131,7 @@ The padding of the crosshair tooltip. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemCrosshairTooltipPadding)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipPadding](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemCrosshairTooltipPadding)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltip();
     $padding = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemCrosshairTooltipPadding();

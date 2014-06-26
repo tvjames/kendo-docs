@@ -54,7 +54,7 @@ The border of the outliers.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemOutliersBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemOutliersBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemOutliersBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemOutliersBorder)
     <?php
     $outliers = new \Kendo\Dataviz\UI\ChartSeriesItemOutliers();
     $border = new \Kendo\Dataviz\UI\ChartSeriesItemOutliersBorder();

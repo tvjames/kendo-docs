@@ -84,7 +84,7 @@ If set to true the chart will display the category notes label. By default the c
 
 The border of the label.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes-label-border](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes-label-border).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes-label-border](/api/wrappers/jsp/sparkline/categoryaxisitem-notes-label-border).
 
 #### Example
 

@@ -133,7 +133,7 @@ Either the distance between levels if the tree is up/down or between siblings if
 Each layout algorithm has a different set of parameters customizing the layout but they also all have a common collection of parameters which relate to the way 'pieces' of a diagram are organized.
 A diagram can have in general disconnected pieces, known as components, which can be organized in a way independent of the way a component on its own is arranged. In the picture above, this is one diagram consisting of four components.When you apply a certain layout an analysis will first split the diagram in components, arrange each component individually and thereafter organize the components in a grid. The common parameters referred above deal with this grid layout, they define the width, margin and padding of the (invisible) grid used to organize the components.
 
-More documentation is available at [kendo:diagram-layout-grid](/kendo-ui/api/wrappers/jsp/diagram/layout-grid).
+More documentation is available at [kendo:diagram-layout-grid](/api/wrappers/jsp/diagram/layout-grid).
 
 #### Example
 

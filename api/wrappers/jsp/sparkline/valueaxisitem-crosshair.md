@@ -60,7 +60,7 @@ The width of the crosshair.
 
 The crosshar tooltip configuration options.
 
-More documentation is available at [kendo:sparkline-valueAxisItem-crosshair-tooltip](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem-crosshair-tooltip).
+More documentation is available at [kendo:sparkline-valueAxisItem-crosshair-tooltip](/api/wrappers/jsp/sparkline/valueaxisitem-crosshair-tooltip).
 
 #### Example
 

@@ -20,7 +20,7 @@ The ranges of the scale.
 
 The ranges of the scale.
 
-More documentation is available at [kendo:linearGauge-scale-range](/kendo-ui/api/wrappers/jsp/lineargauge/scale-range).
+More documentation is available at [kendo:linearGauge-scale-range](/api/wrappers/jsp/lineargauge/scale-range).
 
 #### Example
 

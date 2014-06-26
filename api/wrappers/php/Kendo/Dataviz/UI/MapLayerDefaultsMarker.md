@@ -57,7 +57,7 @@ The default Kendo UI Tooltip options for all marker layers.
 ##### $value `\Kendo\Dataviz\UI\MapLayerDefaultsMarkerTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsMarkerTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsMarkerTooltip)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerDefaultsMarkerTooltip](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerDefaultsMarkerTooltip)
     <?php
     $marker = new \Kendo\Dataviz\UI\MapLayerDefaultsMarker();
     $tooltip = new \Kendo\Dataviz\UI\MapLayerDefaultsMarkerTooltip();

@@ -21,7 +21,7 @@ The icon of the notes.
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesIcon|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesIcon](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsNotesIcon)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesIcon](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsNotesIcon)
     <?php
     $notes = new \Kendo\Dataviz\UI\ChartSeriesDefaultsNotes();
     $icon = new \Kendo\Dataviz\UI\ChartSeriesDefaultsNotesIcon();
@@ -50,7 +50,7 @@ The label of the notes.
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLabel|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLabel](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsNotesLabel)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLabel](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsNotesLabel)
     <?php
     $notes = new \Kendo\Dataviz\UI\ChartSeriesDefaultsNotes();
     $label = new \Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLabel();
@@ -79,7 +79,7 @@ The line of the notes.
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsNotesLine)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLine](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsNotesLine)
     <?php
     $notes = new \Kendo\Dataviz\UI\ChartSeriesDefaultsNotes();
     $line = new \Kendo\Dataviz\UI\ChartSeriesDefaultsNotesLine();

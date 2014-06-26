@@ -30,7 +30,7 @@ Specifies the shape resizing.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResize](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResize)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResize](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResize)
     <?php
     $editable = new \Kendo\Dataviz\UI\DiagramEditable();
     $resize = new \Kendo\Dataviz\UI\DiagramEditableResize();
@@ -68,7 +68,7 @@ Specifyes the rotate style.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableRotate](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableRotate)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableRotate](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableRotate)
     <?php
     $editable = new \Kendo\Dataviz\UI\DiagramEditable();
     $rotate = new \Kendo\Dataviz\UI\DiagramEditableRotate();
@@ -106,7 +106,7 @@ Specifyes the select style.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableSelect](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableSelect)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableSelect](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableSelect)
     <?php
     $editable = new \Kendo\Dataviz\UI\DiagramEditable();
     $select = new \Kendo\Dataviz\UI\DiagramEditableSelect();

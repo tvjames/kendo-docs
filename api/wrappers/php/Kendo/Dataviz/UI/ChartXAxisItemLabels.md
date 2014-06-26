@@ -39,7 +39,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\ChartXAxisItemLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
     $border = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsBorder();
@@ -104,7 +104,7 @@ The format used to display the labels when the x values are dates. Uses kendo.fo
 ##### $value `\Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsDateFormats)
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsDateFormats)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
     $dateFormats = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsDateFormats();
@@ -178,7 +178,7 @@ The margin of the labels. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsMargin)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
     $margin = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsMargin();
@@ -234,7 +234,7 @@ The padding of the labels. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemLabelsPadding)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartXAxisItemLabels();
     $padding = new \Kendo\Dataviz\UI\ChartXAxisItemLabelsPadding();

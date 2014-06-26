@@ -108,7 +108,7 @@ The text similar to "Today" displayed in scheduler.
 
 The configuration of the scheduler editor messages. Use this option to customize or localize the scheduler editor messages.
 
-More documentation is available at [kendo:scheduler-messages-editor](/kendo-ui/api/wrappers/jsp/scheduler/messages-editor).
+More documentation is available at [kendo:scheduler-messages-editor](/api/wrappers/jsp/scheduler/messages-editor).
 
 #### Example
 
@@ -120,7 +120,7 @@ More documentation is available at [kendo:scheduler-messages-editor](/kendo-ui/a
 
 The configuration of the scheduler recurrence editor messages. Use this option to customize or localize the scheduler recurrence editor messages.
 
-More documentation is available at [kendo:scheduler-messages-recurrenceEditor](/kendo-ui/api/wrappers/jsp/scheduler/messages-recurrenceeditor).
+More documentation is available at [kendo:scheduler-messages-recurrenceEditor](/api/wrappers/jsp/scheduler/messages-recurrenceeditor).
 
 #### Example
 
@@ -132,7 +132,7 @@ More documentation is available at [kendo:scheduler-messages-recurrenceEditor](/
 
 The configuration of the scheduler recurrence messages. Use this option to customize or localize the scheduler recurrence messages.
 
-More documentation is available at [kendo:scheduler-messages-recurrenceMessages](/kendo-ui/api/wrappers/jsp/scheduler/messages-recurrencemessages).
+More documentation is available at [kendo:scheduler-messages-recurrenceMessages](/api/wrappers/jsp/scheduler/messages-recurrencemessages).
 
 #### Example
 
@@ -144,7 +144,7 @@ More documentation is available at [kendo:scheduler-messages-recurrenceMessages]
 
 The configuration of the scheduler views messages. Use this option to customize or localize the scheduler views messages.
 
-More documentation is available at [kendo:scheduler-messages-views](/kendo-ui/api/wrappers/jsp/scheduler/messages-views).
+More documentation is available at [kendo:scheduler-messages-views](/api/wrappers/jsp/scheduler/messages-views).
 
 #### Example
 

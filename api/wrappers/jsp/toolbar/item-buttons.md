@@ -20,7 +20,7 @@ Specifies the buttons of ButtonGroup.
 
 Specifies the buttons of ButtonGroup.
 
-More documentation is available at [kendo:toolBar-item-button](/kendo-ui/api/wrappers/jsp/toolbar/item-button).
+More documentation is available at [kendo:toolBar-item-button](/api/wrappers/jsp/toolbar/item-button).
 
 #### Example
 

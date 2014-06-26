@@ -3,7 +3,7 @@ title: map
 ---
 
 # \<kendo:map\>
-A JSP wrapper for Kendo UI [Map](/kendo-ui/api/dataviz/map).
+A JSP wrapper for Kendo UI [Map](/api/dataviz/map).
 
 ## Configuration Attributes
 
@@ -80,7 +80,7 @@ Controls whether the map zoom level can be changed by the user.
 
 The configuration of built-in map controls.
 
-More documentation is available at [kendo:map-controls](/kendo-ui/api/wrappers/jsp/map/controls).
+More documentation is available at [kendo:map-controls](/api/wrappers/jsp/map/controls).
 
 #### Example
 
@@ -92,7 +92,7 @@ More documentation is available at [kendo:map-controls](/kendo-ui/api/wrappers/j
 
 The default configuration for map layers by type.
 
-More documentation is available at [kendo:map-layerDefaults](/kendo-ui/api/wrappers/jsp/map/layerdefaults).
+More documentation is available at [kendo:map-layerDefaults](/api/wrappers/jsp/map/layerdefaults).
 
 #### Example
 
@@ -105,7 +105,7 @@ More documentation is available at [kendo:map-layerDefaults](/kendo-ui/api/wrapp
 The configuration of the map layers.
 The layer type is determined by the value of the type field.
 
-More documentation is available at [kendo:map-layers](/kendo-ui/api/wrappers/jsp/map/layers).
+More documentation is available at [kendo:map-layers](/api/wrappers/jsp/map/layers).
 
 #### Example
 
@@ -117,7 +117,7 @@ More documentation is available at [kendo:map-layers](/kendo-ui/api/wrappers/jsp
 
 The default options for all markers.
 
-More documentation is available at [kendo:map-markerDefaults](/kendo-ui/api/wrappers/jsp/map/markerdefaults).
+More documentation is available at [kendo:map-markerDefaults](/api/wrappers/jsp/map/markerdefaults).
 
 #### Example
 
@@ -129,7 +129,7 @@ More documentation is available at [kendo:map-markerDefaults](/kendo-ui/api/wrap
 
 Static markers to display on the map.
 
-More documentation is available at [kendo:map-markers](/kendo-ui/api/wrappers/jsp/map/markers).
+More documentation is available at [kendo:map-markers](/api/wrappers/jsp/map/markers).
 
 #### Example
 
@@ -145,7 +145,7 @@ More documentation is available at [kendo:map-markers](/kendo-ui/api/wrappers/js
 Fired when the user clicks on the map.
 
 
-For additional information check the [click](/kendo-ui/api/dataviz/map#events-click) event documentation.
+For additional information check the [click](/api/dataviz/map#events-click) event documentation.
 
 #### Example
     <kendo:map click="handle_click">
@@ -162,7 +162,7 @@ Fired when a marker has been created and is about to be displayed.
 Cancelling the event will prevent the marker from being shown.
 
 
-For additional information check the [markerCreated](/kendo-ui/api/dataviz/map#events-markerCreated) event documentation.
+For additional information check the [markerCreated](/api/dataviz/map#events-markerCreated) event documentation.
 
 #### Example
     <kendo:map markerCreated="handle_markerCreated">
@@ -178,7 +178,7 @@ For additional information check the [markerCreated](/kendo-ui/api/dataviz/map#e
 Fired while the map viewport is being moved.
 
 
-For additional information check the [pan](/kendo-ui/api/dataviz/map#events-pan) event documentation.
+For additional information check the [pan](/api/dataviz/map#events-pan) event documentation.
 
 #### Example
     <kendo:map pan="handle_pan">
@@ -194,7 +194,7 @@ For additional information check the [pan](/kendo-ui/api/dataviz/map#events-pan)
 Fires after the map viewport has been moved.
 
 
-For additional information check the [panEnd](/kendo-ui/api/dataviz/map#events-panEnd) event documentation.
+For additional information check the [panEnd](/api/dataviz/map#events-panEnd) event documentation.
 
 #### Example
     <kendo:map panEnd="handle_panEnd">
@@ -211,7 +211,7 @@ Fired when the map is reset.
 This typically occurs on initial load and after a zoom/center change.
 
 
-For additional information check the [reset](/kendo-ui/api/dataviz/map#events-reset) event documentation.
+For additional information check the [reset](/api/dataviz/map#events-reset) event documentation.
 
 #### Example
     <kendo:map reset="handle_reset">
@@ -227,7 +227,7 @@ For additional information check the [reset](/kendo-ui/api/dataviz/map#events-re
 Fired when a shape is clicked or tapped.
 
 
-For additional information check the [shapeClick](/kendo-ui/api/dataviz/map#events-shapeClick) event documentation.
+For additional information check the [shapeClick](/api/dataviz/map#events-shapeClick) event documentation.
 
 #### Example
     <kendo:map shapeClick="handle_shapeClick">
@@ -243,7 +243,7 @@ For additional information check the [shapeClick](/kendo-ui/api/dataviz/map#even
 Fired when a shape is created, but is not rendered yet.
 
 
-For additional information check the [shapeCreated](/kendo-ui/api/dataviz/map#events-shapeCreated) event documentation.
+For additional information check the [shapeCreated](/api/dataviz/map#events-shapeCreated) event documentation.
 
 #### Example
     <kendo:map shapeCreated="handle_shapeCreated">
@@ -259,7 +259,7 @@ For additional information check the [shapeCreated](/kendo-ui/api/dataviz/map#ev
 Fired when the mouse enters a shape.
 
 
-For additional information check the [shapeMouseEnter](/kendo-ui/api/dataviz/map#events-shapeMouseEnter) event documentation.
+For additional information check the [shapeMouseEnter](/api/dataviz/map#events-shapeMouseEnter) event documentation.
 
 #### Example
     <kendo:map shapeMouseEnter="handle_shapeMouseEnter">
@@ -275,7 +275,7 @@ For additional information check the [shapeMouseEnter](/kendo-ui/api/dataviz/map
 Fired when the mouse leaves a shape.
 
 
-For additional information check the [shapeMouseLeave](/kendo-ui/api/dataviz/map#events-shapeMouseLeave) event documentation.
+For additional information check the [shapeMouseLeave](/api/dataviz/map#events-shapeMouseLeave) event documentation.
 
 #### Example
     <kendo:map shapeMouseLeave="handle_shapeMouseLeave">
@@ -292,7 +292,7 @@ Fired when the map zoom level is about to change.
 Cancelling the event will prevent the user action.
 
 
-For additional information check the [zoomStart](/kendo-ui/api/dataviz/map#events-zoomStart) event documentation.
+For additional information check the [zoomStart](/api/dataviz/map#events-zoomStart) event documentation.
 
 #### Example
     <kendo:map zoomStart="handle_zoomStart">
@@ -308,7 +308,7 @@ For additional information check the [zoomStart](/kendo-ui/api/dataviz/map#event
 Fired when the map zoom level has changed.
 
 
-For additional information check the [zoomEnd](/kendo-ui/api/dataviz/map#events-zoomEnd) event documentation.
+For additional information check the [zoomEnd](/api/dataviz/map#events-zoomEnd) event documentation.
 
 #### Example
     <kendo:map zoomEnd="handle_zoomEnd">
@@ -326,7 +326,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/map#events-
 Fired when the user clicks on the map.
 
 
-For additional information check the [click](/kendo-ui/api/dataviz/map#events-click) event documentation.
+For additional information check the [click](/api/dataviz/map#events-click) event documentation.
 
 #### Example
     <kendo:map>
@@ -345,7 +345,7 @@ Fired when a marker has been created and is about to be displayed.
 Cancelling the event will prevent the marker from being shown.
 
 
-For additional information check the [markerCreated](/kendo-ui/api/dataviz/map#events-markerCreated) event documentation.
+For additional information check the [markerCreated](/api/dataviz/map#events-markerCreated) event documentation.
 
 #### Example
     <kendo:map>
@@ -363,7 +363,7 @@ For additional information check the [markerCreated](/kendo-ui/api/dataviz/map#e
 Fired while the map viewport is being moved.
 
 
-For additional information check the [pan](/kendo-ui/api/dataviz/map#events-pan) event documentation.
+For additional information check the [pan](/api/dataviz/map#events-pan) event documentation.
 
 #### Example
     <kendo:map>
@@ -381,7 +381,7 @@ For additional information check the [pan](/kendo-ui/api/dataviz/map#events-pan)
 Fires after the map viewport has been moved.
 
 
-For additional information check the [panEnd](/kendo-ui/api/dataviz/map#events-panEnd) event documentation.
+For additional information check the [panEnd](/api/dataviz/map#events-panEnd) event documentation.
 
 #### Example
     <kendo:map>
@@ -400,7 +400,7 @@ Fired when the map is reset.
 This typically occurs on initial load and after a zoom/center change.
 
 
-For additional information check the [reset](/kendo-ui/api/dataviz/map#events-reset) event documentation.
+For additional information check the [reset](/api/dataviz/map#events-reset) event documentation.
 
 #### Example
     <kendo:map>
@@ -418,7 +418,7 @@ For additional information check the [reset](/kendo-ui/api/dataviz/map#events-re
 Fired when a shape is clicked or tapped.
 
 
-For additional information check the [shapeClick](/kendo-ui/api/dataviz/map#events-shapeClick) event documentation.
+For additional information check the [shapeClick](/api/dataviz/map#events-shapeClick) event documentation.
 
 #### Example
     <kendo:map>
@@ -436,7 +436,7 @@ For additional information check the [shapeClick](/kendo-ui/api/dataviz/map#even
 Fired when a shape is created, but is not rendered yet.
 
 
-For additional information check the [shapeCreated](/kendo-ui/api/dataviz/map#events-shapeCreated) event documentation.
+For additional information check the [shapeCreated](/api/dataviz/map#events-shapeCreated) event documentation.
 
 #### Example
     <kendo:map>
@@ -454,7 +454,7 @@ For additional information check the [shapeCreated](/kendo-ui/api/dataviz/map#ev
 Fired when the mouse enters a shape.
 
 
-For additional information check the [shapeMouseEnter](/kendo-ui/api/dataviz/map#events-shapeMouseEnter) event documentation.
+For additional information check the [shapeMouseEnter](/api/dataviz/map#events-shapeMouseEnter) event documentation.
 
 #### Example
     <kendo:map>
@@ -472,7 +472,7 @@ For additional information check the [shapeMouseEnter](/kendo-ui/api/dataviz/map
 Fired when the mouse leaves a shape.
 
 
-For additional information check the [shapeMouseLeave](/kendo-ui/api/dataviz/map#events-shapeMouseLeave) event documentation.
+For additional information check the [shapeMouseLeave](/api/dataviz/map#events-shapeMouseLeave) event documentation.
 
 #### Example
     <kendo:map>
@@ -491,7 +491,7 @@ Fired when the map zoom level is about to change.
 Cancelling the event will prevent the user action.
 
 
-For additional information check the [zoomStart](/kendo-ui/api/dataviz/map#events-zoomStart) event documentation.
+For additional information check the [zoomStart](/api/dataviz/map#events-zoomStart) event documentation.
 
 #### Example
     <kendo:map>
@@ -509,7 +509,7 @@ For additional information check the [zoomStart](/kendo-ui/api/dataviz/map#event
 Fired when the map zoom level has changed.
 
 
-For additional information check the [zoomEnd](/kendo-ui/api/dataviz/map#events-zoomEnd) event documentation.
+For additional information check the [zoomEnd](/api/dataviz/map#events-zoomEnd) event documentation.
 
 #### Example
     <kendo:map>

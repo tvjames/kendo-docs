@@ -61,7 +61,7 @@ The width of the chart area.
 
 The border of the chart area.
 
-More documentation is available at [kendo:stockChart-chartArea-border](/kendo-ui/api/wrappers/jsp/stockchart/chartarea-border).
+More documentation is available at [kendo:stockChart-chartArea-border](/api/wrappers/jsp/stockchart/chartarea-border).
 
 #### Example
 

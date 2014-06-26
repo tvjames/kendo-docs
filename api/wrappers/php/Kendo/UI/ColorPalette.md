@@ -4,14 +4,14 @@ title: ColorPalette
 
 # \Kendo\UI\ColorPalette
 
-A PHP wrapper for Kendo UI [ColorPalette](/kendo-ui/api/web/colorpalette).
+A PHP wrapper for Kendo UI [ColorPalette](/api/web/colorpalette).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use ColorPalette in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo ColorPalette
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Triggers when a new color has been changed.
-For additional information check the [change](/kendo-ui/api/web/colorpalette#events-change) event documentation.
+For additional information check the [change](/api/web/colorpalette#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\ColorPalette`
@@ -59,7 +59,7 @@ For additional information check the [change](/kendo-ui/api/web/colorpalette#eve
     $colorPalette->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $colorPalette = new \Kendo\UI\ColorPalette('ColorPalette');
@@ -130,7 +130,7 @@ The size of a color cell.
     ?>
 
 
-#### Example - using [\Kendo\UI\ColorPaletteTileSize](/kendo-ui/api/wrappers/php/Kendo/UI/ColorPaletteTileSize)
+#### Example - using [\Kendo\UI\ColorPaletteTileSize](/api/wrappers/php/Kendo/UI/ColorPaletteTileSize)
     <?php
     $colorPalette = new \Kendo\UI\ColorPalette('ColorPalette');
     $tileSize = new \Kendo\UI\ColorPaletteTileSize();

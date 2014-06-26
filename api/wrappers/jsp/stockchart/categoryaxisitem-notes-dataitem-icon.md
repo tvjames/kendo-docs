@@ -56,7 +56,7 @@ The icon visibility.
 
 The border of the icon.
 
-More documentation is available at [kendo:stockChart-categoryAxisItem-notes-dataItem-icon-border](/kendo-ui/api/wrappers/jsp/stockchart/categoryaxisitem-notes-dataitem-icon-border).
+More documentation is available at [kendo:stockChart-categoryAxisItem-notes-dataItem-icon-border](/api/wrappers/jsp/stockchart/categoryaxisitem-notes-dataitem-icon-border).
 
 #### Example
 

@@ -39,7 +39,7 @@ The border of the chart area.
 ##### $value `\Kendo\Dataviz\UI\SparklineChartAreaBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineChartAreaBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineChartAreaBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineChartAreaBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineChartAreaBorder)
     <?php
     $chartArea = new \Kendo\Dataviz\UI\SparklineChartArea();
     $border = new \Kendo\Dataviz\UI\SparklineChartAreaBorder();

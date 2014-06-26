@@ -21,7 +21,7 @@ Specifies the handles style.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableResizeHandles|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandles](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandles)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandles](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandles)
     <?php
     $resize = new \Kendo\Dataviz\UI\DiagramEditableResize();
     $handles = new \Kendo\Dataviz\UI\DiagramEditableResizeHandles();

@@ -20,7 +20,7 @@ Contains the items of the menu widget
 
 Contains the items of the menu widget
 
-More documentation is available at [kendo:contextMenu-item](/kendo-ui/api/wrappers/jsp/contextmenu/item).
+More documentation is available at [kendo:contextMenu-item](/api/wrappers/jsp/contextmenu/item).
 
 #### Example
 

@@ -114,7 +114,7 @@ The default type of the series.The supported values are:
 
 The border of the series.
 
-More documentation is available at [kendo:stockChart-seriesDefaults-border](/kendo-ui/api/wrappers/jsp/stockchart/seriesdefaults-border).
+More documentation is available at [kendo:stockChart-seriesDefaults-border](/api/wrappers/jsp/stockchart/seriesdefaults-border).
 
 #### Example
 
@@ -126,7 +126,7 @@ More documentation is available at [kendo:stockChart-seriesDefaults-border](/ken
 
 Configures the series data labels.
 
-More documentation is available at [kendo:stockChart-seriesDefaults-labels](/kendo-ui/api/wrappers/jsp/stockchart/seriesdefaults-labels).
+More documentation is available at [kendo:stockChart-seriesDefaults-labels](/api/wrappers/jsp/stockchart/seriesdefaults-labels).
 
 #### Example
 
@@ -138,7 +138,7 @@ More documentation is available at [kendo:stockChart-seriesDefaults-labels](/ken
 
 A boolean value indicating if the series should be stacked.
 
-More documentation is available at [kendo:stockChart-seriesDefaults-stack](/kendo-ui/api/wrappers/jsp/stockchart/seriesdefaults-stack).
+More documentation is available at [kendo:stockChart-seriesDefaults-stack](/api/wrappers/jsp/stockchart/seriesdefaults-stack).
 
 #### Example
 
@@ -150,7 +150,7 @@ More documentation is available at [kendo:stockChart-seriesDefaults-stack](/kend
 
 The data point tooltip configuration options.
 
-More documentation is available at [kendo:stockChart-seriesDefaults-tooltip](/kendo-ui/api/wrappers/jsp/stockchart/seriesdefaults-tooltip).
+More documentation is available at [kendo:stockChart-seriesDefaults-tooltip](/api/wrappers/jsp/stockchart/seriesdefaults-tooltip).
 
 #### Example
 

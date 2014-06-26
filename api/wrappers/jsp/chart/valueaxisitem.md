@@ -127,7 +127,7 @@ If set to true the chart will display the value axis. By default the value axis 
 
 The crosshair configuration options.
 
-More documentation is available at [kendo:chart-valueAxisItem-crosshair](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-crosshair).
+More documentation is available at [kendo:chart-valueAxisItem-crosshair](/api/wrappers/jsp/chart/valueaxisitem-crosshair).
 
 #### Example
 
@@ -139,7 +139,7 @@ More documentation is available at [kendo:chart-valueAxisItem-crosshair](/kendo-
 
 The axis labels configuration.
 
-More documentation is available at [kendo:chart-valueAxisItem-labels](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-labels).
+More documentation is available at [kendo:chart-valueAxisItem-labels](/api/wrappers/jsp/chart/valueaxisitem-labels).
 
 #### Example
 
@@ -151,7 +151,7 @@ More documentation is available at [kendo:chart-valueAxisItem-labels](/kendo-ui/
 
 The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
 
-More documentation is available at [kendo:chart-valueAxisItem-line](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-line).
+More documentation is available at [kendo:chart-valueAxisItem-line](/api/wrappers/jsp/chart/valueaxisitem-line).
 
 #### Example
 
@@ -164,7 +164,7 @@ More documentation is available at [kendo:chart-valueAxisItem-line](/kendo-ui/ap
 The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
-More documentation is available at [kendo:chart-valueAxisItem-majorGridLines](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-majorgridlines).
+More documentation is available at [kendo:chart-valueAxisItem-majorGridLines](/api/wrappers/jsp/chart/valueaxisitem-majorgridlines).
 
 #### Example
 
@@ -176,7 +176,7 @@ More documentation is available at [kendo:chart-valueAxisItem-majorGridLines](/k
 
 The configuration of the value axis major ticks.
 
-More documentation is available at [kendo:chart-valueAxisItem-majorTicks](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-majorticks).
+More documentation is available at [kendo:chart-valueAxisItem-majorTicks](/api/wrappers/jsp/chart/valueaxisitem-majorticks).
 
 #### Example
 
@@ -189,7 +189,7 @@ More documentation is available at [kendo:chart-valueAxisItem-majorTicks](/kendo
 The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
 body of the chart.
 
-More documentation is available at [kendo:chart-valueAxisItem-minorGridLines](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-minorgridlines).
+More documentation is available at [kendo:chart-valueAxisItem-minorGridLines](/api/wrappers/jsp/chart/valueaxisitem-minorgridlines).
 
 #### Example
 
@@ -201,7 +201,7 @@ More documentation is available at [kendo:chart-valueAxisItem-minorGridLines](/k
 
 The configuration of the value axis minor ticks.
 
-More documentation is available at [kendo:chart-valueAxisItem-minorTicks](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-minorticks).
+More documentation is available at [kendo:chart-valueAxisItem-minorTicks](/api/wrappers/jsp/chart/valueaxisitem-minorticks).
 
 #### Example
 
@@ -213,7 +213,7 @@ More documentation is available at [kendo:chart-valueAxisItem-minorTicks](/kendo
 
 The value axis notes configuration.
 
-More documentation is available at [kendo:chart-valueAxisItem-notes](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-notes).
+More documentation is available at [kendo:chart-valueAxisItem-notes](/api/wrappers/jsp/chart/valueaxisitem-notes).
 
 #### Example
 
@@ -225,7 +225,7 @@ More documentation is available at [kendo:chart-valueAxisItem-notes](/kendo-ui/a
 
 The plot bands of the value axis.
 
-More documentation is available at [kendo:chart-valueAxisItem-plotBands](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-plotbands).
+More documentation is available at [kendo:chart-valueAxisItem-plotBands](/api/wrappers/jsp/chart/valueaxisitem-plotbands).
 
 #### Example
 
@@ -237,7 +237,7 @@ More documentation is available at [kendo:chart-valueAxisItem-plotBands](/kendo-
 
 The title configuration of the value axis.
 
-More documentation is available at [kendo:chart-valueAxisItem-title](/kendo-ui/api/wrappers/jsp/chart/valueaxisitem-title).
+More documentation is available at [kendo:chart-valueAxisItem-title](/api/wrappers/jsp/chart/valueaxisitem-title).
 
 #### Example
 

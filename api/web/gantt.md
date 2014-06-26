@@ -6,13 +6,13 @@ description: Code examples for Gantt UI widget configuration, learn how to use m
 
 # kendo.ui.Gantt
 
-Represents the Kendo UI Gantt widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
+Represents the Kendo UI Gantt widget. Inherits from [Widget](/api/framework/widget).
 
 ## Configuration
 
 ### autoBind `Boolean` *(default: true)*
 
-If set to `false` the widget will not bind to the data source during initialization. In this case data binding will occur when the [change](/kendo-ui/api/framework/datasource#events-change) event of the
+If set to `false` the widget will not bind to the data source during initialization. In this case data binding will occur when the [change](/api/framework/datasource#events-change) event of the
 data source is fired. By default the widget will bind to the data source specified in the configuration.
 
 > Setting `autoBind` to `false` is useful when multiple widgets are bound to the same data source. Disabling automatic binding ensures that the shared data source doesn't make more than one request to the remote service.
@@ -156,10 +156,10 @@ The text that is displayed in the column header cell. If not set the [field](#co
 
 ### columns.format `String`
 
-The format that is applied to the value before it is displayed. Takes the form "{0:format}" where "format" is a [standard number format](/kendo-ui/api/framework/kendo#standard-number-formats),
-[custom number format](/kendo-ui/api/framework/kendo#custom-number-formats), [standard date format](/kendo-ui/api/framework/kendo#standard-date-formats) or a [custom date format](/kendo-ui/api/framework/kendo#custom-date-formats).
+The format that is applied to the value before it is displayed. Takes the form "{0:format}" where "format" is a [standard number format](/api/framework/kendo#standard-number-formats),
+[custom number format](/api/framework/kendo#custom-number-formats), [standard date format](/api/framework/kendo#standard-date-formats) or a [custom date format](/api/framework/kendo#custom-date-formats).
 
-> The [kendo.format](/kendo-ui/api/framework/kendo#methods-format) function is used to format the value.
+> The [kendo.format](/api/framework/kendo#methods-format) function is used to format the value.
 
 #### Example - set format for the start and end column
 
@@ -377,12 +377,12 @@ If set to `true` the user could sort this column by clicking its header cells. B
 
 ### dataSource `Object|Array|kendo.data.GanttDataSource`
 
-The data source of the widget which contains the tasks. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.GanttDataSource](/kendo-ui/api/framework/ganttdatasource)
+The data source of the widget which contains the tasks. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.GanttDataSource](/api/framework/ganttdatasource)
 instance.
 
-If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.GanttDataSource](/kendo-ui/api/framework/ganttdatasource) instance using that value as data source configuration.
+If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.GanttDataSource](/api/framework/ganttdatasource) instance using that value as data source configuration.
 
-If the `dataSource` option is an existing [kendo.data.GanttDataSource](/kendo-ui/api/framework/ganttdatasource) instance the widget will use that instance and will **not** initialize a new one.
+If the `dataSource` option is an existing [kendo.data.GanttDataSource](/api/framework/ganttdatasource) instance the widget will use that instance and will **not** initialize a new one.
 
 > The Kendo UI Gantt widget can be bound *only* to a `kendo.data.GanttDataSource`. An exception will be thrown if the `dataSource` option is set to a `kendo.data.DataSource` instance.
 
@@ -490,12 +490,12 @@ If the `dataSource` option is an existing [kendo.data.GanttDataSource](/kendo-ui
   
 ### dependencies `Object|Array|kendo.data.GanttDependencyDataSource`
 
-The data source of the widget which contains the dependencies. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.GanttDependencyDataSource](/kendo-ui/api/framework/ganttdependencydatasource)
+The data source of the widget which contains the dependencies. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.GanttDependencyDataSource](/api/framework/ganttdependencydatasource)
 instance.
 
-If the `dependencies` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.GanttDependencyDataSource](/kendo-ui/api/framework/ganttdependencydatasource) instance using that value as data source configuration.
+If the `dependencies` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.GanttDependencyDataSource](/api/framework/ganttdependencydatasource) instance using that value as data source configuration.
 
-If the `dependencies` option is an existing [kendo.data.GanttDependencyDataSource](/kendo-ui/api/framework/ganttdependencydatasource) instance the widget will use that instance and will **not** initialize a new one.
+If the `dependencies` option is an existing [kendo.data.GanttDependencyDataSource](/api/framework/ganttdependencydatasource) instance the widget will use that instance and will **not** initialize a new one.
 
 > The Kendo UI Gantt dependencies can be bound *only* to a `kendo.data.GanttDependencyDataSource`. An exception will be thrown if the `dataSource` option is set to a `kendo.data.DataSource` instance.
 
@@ -1172,7 +1172,7 @@ The size of the time slot headers. Values are treated as pixels.
   
 ### views.timeHeaderTemplate `String|Function`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the time slots in "day" view
+The [template](/api/framework/kendo#methods-template used to render the time slots in "day" view
 
 #### Example
 
@@ -1197,7 +1197,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
   
 ### views.dayHeaderTemplate `String|Function`  
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
+The [template](/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
 
 #### Example - dayHeaderTemplate set for "day" view.
 
@@ -1249,7 +1249,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
   
 ### views.weekHeaderTemplate `String|Function`  
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
+The [template](/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
 
 #### Example - weekHeaderTemplate set for "week" view
 
@@ -1302,7 +1302,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
   
 ### views.monthHeaderTemplate `String|Function`  
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the month slots in "month" views.
+The [template](/api/framework/kendo#methods-template used to render the month slots in "month" views.
 
 #### Example
 
@@ -1333,7 +1333,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### dataSource `kendo.data.GanttDataSource`
 
-The [data source](/kendo-ui/api/framework/ganttdatasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
+The [data source](/api/framework/ganttdatasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
 
 > Changes of the data source will be reflected in the widget.
 
@@ -1439,7 +1439,7 @@ The [data source](/kendo-ui/api/framework/ganttdatasource) of the widget. Config
 
 ### dependencies `kendo.data.GanttDependencyDataSource`
 
-The [dependencies data source](/kendo-ui/api/framework/ganttdependencydatasource) of the widget. Configured via the [dependencies](#configuration-dependencies) option.
+The [dependencies data source](/api/framework/ganttdependencydatasource) of the widget. Configured via the [dependencies](#configuration-dependencies) option.
 
 > Changes of the data source will be reflected in the widget.
 

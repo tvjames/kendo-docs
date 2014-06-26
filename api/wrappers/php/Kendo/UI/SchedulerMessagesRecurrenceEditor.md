@@ -21,7 +21,7 @@ The configuration of the scheduler recurrence editor daily messages. Use this op
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorDaily|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorDaily](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorDaily)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorDaily](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorDaily)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $daily = new \Kendo\UI\SchedulerMessagesRecurrenceEditorDaily();
@@ -50,7 +50,7 @@ The configuration of the scheduler recurrence editor end messages. Use this opti
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorEnd|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorEnd](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorEnd)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorEnd](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorEnd)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $end = new \Kendo\UI\SchedulerMessagesRecurrenceEditorEnd();
@@ -79,7 +79,7 @@ The configuration of the scheduler recurrence editor frequencies messages. Use t
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorFrequencies|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorFrequencies](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorFrequencies)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorFrequencies](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorFrequencies)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $frequencies = new \Kendo\UI\SchedulerMessagesRecurrenceEditorFrequencies();
@@ -108,7 +108,7 @@ The configuration of the scheduler recurrence editor monthly messages. Use this 
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorMonthly|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorMonthly](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorMonthly)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorMonthly](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorMonthly)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $monthly = new \Kendo\UI\SchedulerMessagesRecurrenceEditorMonthly();
@@ -137,7 +137,7 @@ The configuration of the scheduler recurrence editor offsetPositions messages. U
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorOffsetPositions|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorOffsetPositions](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorOffsetPositions)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorOffsetPositions](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorOffsetPositions)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $offsetPositions = new \Kendo\UI\SchedulerMessagesRecurrenceEditorOffsetPositions();
@@ -166,7 +166,7 @@ The configuration of the scheduler recurrence editor week days messages. Use the
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorWeekdays|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorWeekdays](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorWeekdays)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorWeekdays](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorWeekdays)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $weekdays = new \Kendo\UI\SchedulerMessagesRecurrenceEditorWeekdays();
@@ -195,7 +195,7 @@ The configuration of the scheduler recurrence editor weekly messages. Use this o
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorWeekly|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorWeekly](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorWeekly)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorWeekly](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorWeekly)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $weekly = new \Kendo\UI\SchedulerMessagesRecurrenceEditorWeekly();
@@ -224,7 +224,7 @@ The configuration of the scheduler recurrence editor yearly messages. Use this o
 ##### $value `\Kendo\UI\SchedulerMessagesRecurrenceEditorYearly|array`
 
 
-#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorYearly](/kendo-ui/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorYearly)
+#### Example - using [\Kendo\UI\SchedulerMessagesRecurrenceEditorYearly](/api/wrappers/php/Kendo/UI/SchedulerMessagesRecurrenceEditorYearly)
     <?php
     $recurrenceEditor = new \Kendo\UI\SchedulerMessagesRecurrenceEditor();
     $yearly = new \Kendo\UI\SchedulerMessagesRecurrenceEditorYearly();

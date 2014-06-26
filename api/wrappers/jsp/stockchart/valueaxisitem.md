@@ -122,7 +122,7 @@ The visibility of the axis.
 
 The crosshair configuration options.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-crosshair](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-crosshair).
+More documentation is available at [kendo:stockChart-valueAxisItem-crosshair](/api/wrappers/jsp/stockchart/valueaxisitem-crosshair).
 
 #### Example
 
@@ -134,7 +134,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-crosshair](/k
 
 Configures the axis labels.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-labels](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-labels).
+More documentation is available at [kendo:stockChart-valueAxisItem-labels](/api/wrappers/jsp/stockchart/valueaxisitem-labels).
 
 #### Example
 
@@ -146,7 +146,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-labels](/kend
 
 Configures the axis line. This will also affect the major and minor ticks, but not the grid lines.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-line](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-line).
+More documentation is available at [kendo:stockChart-valueAxisItem-line](/api/wrappers/jsp/stockchart/valueaxisitem-line).
 
 #### Example
 
@@ -159,7 +159,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-line](/kendo-
 Configures the major grid lines. These are the lines that are an extension of the major ticks through the
 body of the chart.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-majorGridLines](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-majorgridlines).
+More documentation is available at [kendo:stockChart-valueAxisItem-majorGridLines](/api/wrappers/jsp/stockchart/valueaxisitem-majorgridlines).
 
 #### Example
 
@@ -171,7 +171,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-majorGridLine
 
 The major ticks of the axis.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-majorTicks](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-majorticks).
+More documentation is available at [kendo:stockChart-valueAxisItem-majorTicks](/api/wrappers/jsp/stockchart/valueaxisitem-majorticks).
 
 #### Example
 
@@ -183,7 +183,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-majorTicks](/
 
 Configures the minor grid lines.  These are the lines that are an extension of the minor ticks through the
 
-More documentation is available at [kendo:stockChart-valueAxisItem-minorGridLines](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-minorgridlines).
+More documentation is available at [kendo:stockChart-valueAxisItem-minorGridLines](/api/wrappers/jsp/stockchart/valueaxisitem-minorgridlines).
 
 #### Example
 
@@ -195,7 +195,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-minorGridLine
 
 The minor ticks of the axis.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-minorTicks](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-minorticks).
+More documentation is available at [kendo:stockChart-valueAxisItem-minorTicks](/api/wrappers/jsp/stockchart/valueaxisitem-minorticks).
 
 #### Example
 
@@ -207,7 +207,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-minorTicks](/
 
 The value axis notes configuration.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-notes](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-notes).
+More documentation is available at [kendo:stockChart-valueAxisItem-notes](/api/wrappers/jsp/stockchart/valueaxisitem-notes).
 
 #### Example
 
@@ -219,7 +219,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-notes](/kendo
 
 The plot bands of the value axis.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-plotBands](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-plotbands).
+More documentation is available at [kendo:stockChart-valueAxisItem-plotBands](/api/wrappers/jsp/stockchart/valueaxisitem-plotbands).
 
 #### Example
 
@@ -231,7 +231,7 @@ More documentation is available at [kendo:stockChart-valueAxisItem-plotBands](/k
 
 The title of the value axis.
 
-More documentation is available at [kendo:stockChart-valueAxisItem-title](/kendo-ui/api/wrappers/jsp/stockchart/valueaxisitem-title).
+More documentation is available at [kendo:stockChart-valueAxisItem-title](/api/wrappers/jsp/stockchart/valueaxisitem-title).
 
 #### Example
 

@@ -28,7 +28,7 @@ Set the thumb backgorund.
 
 Specifies the select stroke styles.
 
-More documentation is available at [kendo:diagram-editable-select-stroke](/kendo-ui/api/wrappers/jsp/diagram/editable-select-stroke).
+More documentation is available at [kendo:diagram-editable-select-stroke](/api/wrappers/jsp/diagram/editable-select-stroke).
 
 #### Example
 

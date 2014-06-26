@@ -21,7 +21,7 @@ The configuration of the gantt action messages. Use this option to customize or 
 ##### $value `\Kendo\UI\GanttMessagesActions|array`
 
 
-#### Example - using [\Kendo\UI\GanttMessagesActions](/kendo-ui/api/wrappers/php/Kendo/UI/GanttMessagesActions)
+#### Example - using [\Kendo\UI\GanttMessagesActions](/api/wrappers/php/Kendo/UI/GanttMessagesActions)
     <?php
     $messages = new \Kendo\UI\GanttMessages();
     $actions = new \Kendo\UI\GanttMessagesActions();
@@ -50,7 +50,7 @@ The configuration of the gantt view messages. Use this option to customize or lo
 ##### $value `\Kendo\UI\GanttMessagesViews|array`
 
 
-#### Example - using [\Kendo\UI\GanttMessagesViews](/kendo-ui/api/wrappers/php/Kendo/UI/GanttMessagesViews)
+#### Example - using [\Kendo\UI\GanttMessagesViews](/api/wrappers/php/Kendo/UI/GanttMessagesViews)
     <?php
     $messages = new \Kendo\UI\GanttMessages();
     $views = new \Kendo\UI\GanttMessagesViews();

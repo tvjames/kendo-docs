@@ -39,7 +39,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSeriesItemLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorSeriesItemLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorSeriesItemLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\StockChartNavigatorSeriesItemLabels();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorSeriesItemLabelsBorder();

@@ -84,7 +84,7 @@ Defines if a refresh button will be displayed.
 
 Defines texts shown within the pager.
 
-More documentation is available at [kendo:listView-pageable-messages](/kendo-ui/api/wrappers/jsp/listview/pageable-messages).
+More documentation is available at [kendo:listView-pageable-messages](/api/wrappers/jsp/listview/pageable-messages).
 
 #### Example
 

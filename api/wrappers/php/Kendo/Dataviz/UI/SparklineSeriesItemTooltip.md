@@ -39,7 +39,7 @@ The border configuration options.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesItemTooltipBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemTooltipBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemTooltipBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemTooltipBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemTooltipBorder)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\SparklineSeriesItemTooltip();
     $border = new \Kendo\Dataviz\UI\SparklineSeriesItemTooltipBorder();

@@ -40,7 +40,7 @@ The border of the title.
 ##### $value `\Kendo\Dataviz\UI\StockChartPaneTitleBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartPaneTitleBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartPaneTitleBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartPaneTitleBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartPaneTitleBorder)
     <?php
     $title = new \Kendo\Dataviz\UI\StockChartPaneTitle();
     $border = new \Kendo\Dataviz\UI\StockChartPaneTitleBorder();

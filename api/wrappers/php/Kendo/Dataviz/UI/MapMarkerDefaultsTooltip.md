@@ -22,7 +22,7 @@ will disable all animations in the widget.
 ##### $value `\Kendo\Dataviz\UI\MapMarkerDefaultsTooltipAnimation|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapMarkerDefaultsTooltipAnimation](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapMarkerDefaultsTooltipAnimation)
+#### Example - using [\Kendo\Dataviz\UI\MapMarkerDefaultsTooltipAnimation](/api/wrappers/php/Kendo/Dataviz/UI/MapMarkerDefaultsTooltipAnimation)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\MapMarkerDefaultsTooltip();
     $animation = new \Kendo\Dataviz\UI\MapMarkerDefaultsTooltipAnimation();
@@ -103,7 +103,7 @@ By default the tooltip will display the target element title attribute content.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapMarkerDefaultsTooltipContent](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapMarkerDefaultsTooltipContent)
+#### Example - using [\Kendo\Dataviz\UI\MapMarkerDefaultsTooltipContent](/api/wrappers/php/Kendo/Dataviz/UI/MapMarkerDefaultsTooltipContent)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\MapMarkerDefaultsTooltip();
     $content = new \Kendo\Dataviz\UI\MapMarkerDefaultsTooltipContent();

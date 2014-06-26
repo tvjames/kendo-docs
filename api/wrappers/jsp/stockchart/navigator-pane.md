@@ -68,7 +68,7 @@ The title configuration of the navigator pane. Further configuration is availabl
 
 The border of the navigator pane.
 
-More documentation is available at [kendo:stockChart-navigator-pane-border](/kendo-ui/api/wrappers/jsp/stockchart/navigator-pane-border).
+More documentation is available at [kendo:stockChart-navigator-pane-border](/api/wrappers/jsp/stockchart/navigator-pane-border).
 
 #### Example
 
@@ -80,7 +80,7 @@ More documentation is available at [kendo:stockChart-navigator-pane-border](/ken
 
 The margin of the pane. A numeric value will set all margins.
 
-More documentation is available at [kendo:stockChart-navigator-pane-margin](/kendo-ui/api/wrappers/jsp/stockchart/navigator-pane-margin).
+More documentation is available at [kendo:stockChart-navigator-pane-margin](/api/wrappers/jsp/stockchart/navigator-pane-margin).
 
 #### Example
 
@@ -92,7 +92,7 @@ More documentation is available at [kendo:stockChart-navigator-pane-margin](/ken
 
 The padding of the pane. A numeric value will set all paddings.
 
-More documentation is available at [kendo:stockChart-navigator-pane-padding](/kendo-ui/api/wrappers/jsp/stockchart/navigator-pane-padding).
+More documentation is available at [kendo:stockChart-navigator-pane-padding](/api/wrappers/jsp/stockchart/navigator-pane-padding).
 
 #### Example
 
@@ -104,7 +104,7 @@ More documentation is available at [kendo:stockChart-navigator-pane-padding](/ke
 
 The title configuration of the navigator pane.
 
-More documentation is available at [kendo:stockChart-navigator-pane-title](/kendo-ui/api/wrappers/jsp/stockchart/navigator-pane-title).
+More documentation is available at [kendo:stockChart-navigator-pane-title](/api/wrappers/jsp/stockchart/navigator-pane-title).
 
 #### Example
 

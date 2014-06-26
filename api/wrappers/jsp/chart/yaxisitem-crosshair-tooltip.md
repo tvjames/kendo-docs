@@ -76,7 +76,7 @@ If set to true the chart will display the scatter chart y axis crosshair tooltip
 
 The border options.
 
-More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-border](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-crosshair-tooltip-border).
+More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-border](/api/wrappers/jsp/chart/yaxisitem-crosshair-tooltip-border).
 
 #### Example
 
@@ -88,7 +88,7 @@ More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-bord
 
 The padding of the crosshair tooltip. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-padding](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-crosshair-tooltip-padding).
+More documentation is available at [kendo:chart-yAxisItem-crosshair-tooltip-padding](/api/wrappers/jsp/chart/yaxisitem-crosshair-tooltip-padding).
 
 #### Example
 

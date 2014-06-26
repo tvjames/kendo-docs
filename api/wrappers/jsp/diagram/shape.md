@@ -109,7 +109,7 @@ Defines the y-coordinate of the shape when added to the diagram.
 
 Defines the connectors the shape owns.
 
-More documentation is available at [kendo:diagram-shape-connectors](/kendo-ui/api/wrappers/jsp/diagram/shape-connectors).
+More documentation is available at [kendo:diagram-shape-connectors](/api/wrappers/jsp/diagram/shape-connectors).
 
 #### Example
 
@@ -121,7 +121,7 @@ More documentation is available at [kendo:diagram-shape-connectors](/kendo-ui/ap
 
 Defines the shapes content settings.
 
-More documentation is available at [kendo:diagram-shape-content](/kendo-ui/api/wrappers/jsp/diagram/shape-content).
+More documentation is available at [kendo:diagram-shape-content](/api/wrappers/jsp/diagram/shape-content).
 
 #### Example
 
@@ -133,7 +133,7 @@ More documentation is available at [kendo:diagram-shape-content](/kendo-ui/api/w
 
 Defines the hover configuration.
 
-More documentation is available at [kendo:diagram-shape-hover](/kendo-ui/api/wrappers/jsp/diagram/shape-hover).
+More documentation is available at [kendo:diagram-shape-hover](/api/wrappers/jsp/diagram/shape-hover).
 
 #### Example
 
@@ -145,7 +145,7 @@ More documentation is available at [kendo:diagram-shape-hover](/kendo-ui/api/wra
 
 The function that positions the connector.
 
-More documentation is available at [kendo:diagram-shape-rotation](/kendo-ui/api/wrappers/jsp/diagram/shape-rotation).
+More documentation is available at [kendo:diagram-shape-rotation](/api/wrappers/jsp/diagram/shape-rotation).
 
 #### Example
 
@@ -157,7 +157,7 @@ More documentation is available at [kendo:diagram-shape-rotation](/kendo-ui/api/
 
 Defines the stroke configuration.
 
-More documentation is available at [kendo:diagram-shape-stroke](/kendo-ui/api/wrappers/jsp/diagram/shape-stroke).
+More documentation is available at [kendo:diagram-shape-stroke](/api/wrappers/jsp/diagram/shape-stroke).
 
 #### Example
 

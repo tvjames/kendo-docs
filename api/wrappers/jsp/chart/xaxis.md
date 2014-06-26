@@ -20,7 +20,7 @@ The X-axis configuration options of the scatter chart X-axis. Supports all value
 
 The X-axis configuration options of the scatter chart X-axis. Supports all valueAxis options.
 
-More documentation is available at [kendo:chart-xAxisItem](/kendo-ui/api/wrappers/jsp/chart/xaxisitem).
+More documentation is available at [kendo:chart-xAxisItem](/api/wrappers/jsp/chart/xaxisitem).
 
 #### Example
 

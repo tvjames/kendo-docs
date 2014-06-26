@@ -44,7 +44,7 @@ The hangles width.
 
 Set the handles hover styles.
 
-More documentation is available at [kendo:diagram-editable-resize-handles-hover](/kendo-ui/api/wrappers/jsp/diagram/editable-resize-handles-hover).
+More documentation is available at [kendo:diagram-editable-resize-handles-hover](/api/wrappers/jsp/diagram/editable-resize-handles-hover).
 
 #### Example
 
@@ -56,7 +56,7 @@ More documentation is available at [kendo:diagram-editable-resize-handles-hover]
 
 Specifies the handles stroke styles.
 
-More documentation is available at [kendo:diagram-editable-resize-handles-stroke](/kendo-ui/api/wrappers/jsp/diagram/editable-resize-handles-stroke).
+More documentation is available at [kendo:diagram-editable-resize-handles-stroke](/api/wrappers/jsp/diagram/editable-resize-handles-stroke).
 
 #### Example
 

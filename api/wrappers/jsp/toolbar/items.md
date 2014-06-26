@@ -20,7 +20,7 @@ A JavaScript array that contains the ToolBar's commands configuration.
 
 A JavaScript array that contains the ToolBar's commands configuration.
 
-More documentation is available at [kendo:toolBar-item](/kendo-ui/api/wrappers/jsp/toolbar/item).
+More documentation is available at [kendo:toolBar-item](/api/wrappers/jsp/toolbar/item).
 
 #### Example
 

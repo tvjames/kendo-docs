@@ -21,7 +21,7 @@ A PHP class representing the model setting of EditorFileBrowserSchema.
 ##### $value `\Kendo\UI\EditorFileBrowserSchemaModelFields|array`
 
 
-#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFields](/kendo-ui/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFields)
+#### Example - using [\Kendo\UI\EditorFileBrowserSchemaModelFields](/api/wrappers/php/Kendo/UI/EditorFileBrowserSchemaModelFields)
     <?php
     $model = new \Kendo\UI\EditorFileBrowserSchemaModel();
     $fields = new \Kendo\UI\EditorFileBrowserSchemaModelFields();

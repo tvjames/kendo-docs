@@ -174,7 +174,7 @@ Use the kendo.days constants to specify the day by name.
 
 The crosshair configuration options.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-crosshair](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-crosshair).
+More documentation is available at [kendo:sparkline-categoryAxisItem-crosshair](/api/wrappers/jsp/sparkline/categoryaxisitem-crosshair).
 
 #### Example
 
@@ -186,7 +186,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-crosshair](
 
 Configures the axis labels.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-labels](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-labels).
+More documentation is available at [kendo:sparkline-categoryAxisItem-labels](/api/wrappers/jsp/sparkline/categoryaxisitem-labels).
 
 #### Example
 
@@ -198,7 +198,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-labels](/ke
 
 Configures the axis line. This will also effect major and minor ticks, but not gridlines.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-line](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-line).
+More documentation is available at [kendo:sparkline-categoryAxisItem-line](/api/wrappers/jsp/sparkline/categoryaxisitem-line).
 
 #### Example
 
@@ -211,7 +211,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-line](/kend
 Configures the major grid lines.
 These are the lines that are an extension of the major ticks through the body of the chart.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-majorGridLines](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-majorgridlines).
+More documentation is available at [kendo:sparkline-categoryAxisItem-majorGridLines](/api/wrappers/jsp/sparkline/categoryaxisitem-majorgridlines).
 
 #### Example
 
@@ -223,7 +223,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-majorGridLi
 
 The major ticks of the axis.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-majorTicks](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-majorticks).
+More documentation is available at [kendo:sparkline-categoryAxisItem-majorTicks](/api/wrappers/jsp/sparkline/categoryaxisitem-majorticks).
 
 #### Example
 
@@ -236,7 +236,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-majorTicks]
 Configures the minor grid lines.  These are the lines that are an extension of the minor ticks through
 the body of the chart.Note that minor grid lines are not visible by default, therefore none of these settings will take effect with the minor grid lines visibility being set to true.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-minorGridLines](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-minorgridlines).
+More documentation is available at [kendo:sparkline-categoryAxisItem-minorGridLines](/api/wrappers/jsp/sparkline/categoryaxisitem-minorgridlines).
 
 #### Example
 
@@ -248,7 +248,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-minorGridLi
 
 The minor ticks of the axis.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-minorTicks](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-minorticks).
+More documentation is available at [kendo:sparkline-categoryAxisItem-minorTicks](/api/wrappers/jsp/sparkline/categoryaxisitem-minorticks).
 
 #### Example
 
@@ -260,7 +260,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-minorTicks]
 
 The category axis notes configuration.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes](/api/wrappers/jsp/sparkline/categoryaxisitem-notes).
 
 #### Example
 
@@ -272,7 +272,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-notes](/ken
 
 The plot bands of the category axis.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-plotBands](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-plotbands).
+More documentation is available at [kendo:sparkline-categoryAxisItem-plotBands](/api/wrappers/jsp/sparkline/categoryaxisitem-plotbands).
 
 #### Example
 
@@ -284,7 +284,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-plotBands](
 
 The title of the category axis.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-title](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-title).
+More documentation is available at [kendo:sparkline-categoryAxisItem-title](/api/wrappers/jsp/sparkline/categoryaxisitem-title).
 
 #### Example
 

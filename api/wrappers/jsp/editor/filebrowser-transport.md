@@ -60,7 +60,7 @@ The URL which will handle the upload of the new files. If not specified the Uplo
 
 Options or URL which will handle the directory creation. If not specified that create new folder button will not be present.
 
-More documentation is available at [kendo:editor-fileBrowser-transport-create](/kendo-ui/api/wrappers/jsp/editor/filebrowser-transport-create).
+More documentation is available at [kendo:editor-fileBrowser-transport-create](/api/wrappers/jsp/editor/filebrowser-transport-create).
 
 #### Example
 
@@ -72,7 +72,7 @@ More documentation is available at [kendo:editor-fileBrowser-transport-create](/
 
 Options or URL which will handle the file and directory deletion. If not specified the delete button will not be present.
 
-More documentation is available at [kendo:editor-fileBrowser-transport-destroy](/kendo-ui/api/wrappers/jsp/editor/filebrowser-transport-destroy).
+More documentation is available at [kendo:editor-fileBrowser-transport-destroy](/api/wrappers/jsp/editor/filebrowser-transport-destroy).
 
 #### Example
 
@@ -84,7 +84,7 @@ More documentation is available at [kendo:editor-fileBrowser-transport-destroy](
 
 Options or URL for remote file retrieval.
 
-More documentation is available at [kendo:editor-fileBrowser-transport-read](/kendo-ui/api/wrappers/jsp/editor/filebrowser-transport-read).
+More documentation is available at [kendo:editor-fileBrowser-transport-read](/api/wrappers/jsp/editor/filebrowser-transport-read).
 
 #### Example
 

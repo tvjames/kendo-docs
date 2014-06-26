@@ -22,7 +22,7 @@ field to which the column is bound. The grid will create a column for every item
 The configuration of the grid columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
 field to which the column is bound. The grid will create a column for every item of the array.
 
-More documentation is available at [kendo:grid-column](/kendo-ui/api/wrappers/jsp/grid/column).
+More documentation is available at [kendo:grid-column](/api/wrappers/jsp/grid/column).
 
 #### Example
 

@@ -71,7 +71,7 @@ The configuration used when the data source saves updated data items. Those are 
 
 The configuration used when the data source saves newly created data items. Those are items added to the data source via the add or insert methods.If the value of transport.create is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.create is a string the data source uses this string as the URL of the remote service.
 
-More documentation is available at [kendo:dataSource-transport-create](/kendo-ui/api/wrappers/jsp/datasource/transport-create).
+More documentation is available at [kendo:dataSource-transport-create](/api/wrappers/jsp/datasource/transport-create).
 
 #### Example
 
@@ -83,7 +83,7 @@ More documentation is available at [kendo:dataSource-transport-create](/kendo-ui
 
 The configuration used when the data source destroys data items. Those are items removed from the data source via the remove method.If the value of transport.destroy is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.destroy is a string the data source uses this string as the URL of the remote service.
 
-More documentation is available at [kendo:dataSource-transport-destroy](/kendo-ui/api/wrappers/jsp/datasource/transport-destroy).
+More documentation is available at [kendo:dataSource-transport-destroy](/api/wrappers/jsp/datasource/transport-destroy).
 
 #### Example
 
@@ -95,7 +95,7 @@ More documentation is available at [kendo:dataSource-transport-destroy](/kendo-u
 
 The configuration used when the data source loads data items from a remote service.If the value of transport.read is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.read is a string the data source uses this string as the URL of the remote service.
 
-More documentation is available at [kendo:dataSource-transport-read](/kendo-ui/api/wrappers/jsp/datasource/transport-read).
+More documentation is available at [kendo:dataSource-transport-read](/api/wrappers/jsp/datasource/transport-read).
 
 #### Example
 
@@ -107,7 +107,7 @@ More documentation is available at [kendo:dataSource-transport-read](/kendo-ui/a
 
 The configuration used when the data source saves updated data items. Those are data items whose fields have been updated.If the value of transport.update is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.update is a string the data source uses this string as the URL of the remote service.
 
-More documentation is available at [kendo:dataSource-transport-update](/kendo-ui/api/wrappers/jsp/datasource/transport-update).
+More documentation is available at [kendo:dataSource-transport-update](/api/wrappers/jsp/datasource/transport-update).
 
 #### Example
 

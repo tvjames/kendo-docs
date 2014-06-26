@@ -4,14 +4,14 @@ title: NumericTextBox
 
 # \Kendo\UI\NumericTextBox
 
-A PHP wrapper for Kendo UI [NumericTextBox](/kendo-ui/api/web/numerictextbox).
+A PHP wrapper for Kendo UI [NumericTextBox](/api/web/numerictextbox).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use NumericTextBox in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo NumericTextBox
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### change
 Fires when the value is changed
-For additional information check the [change](/kendo-ui/api/web/numerictextbox#events-change) event documentation.
+For additional information check the [change](/api/web/numerictextbox#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`
@@ -59,7 +59,7 @@ For additional information check the [change](/kendo-ui/api/web/numerictextbox#e
     $numericTextBox->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $numericTextBox = new \Kendo\UI\NumericTextBox('NumericTextBox');
@@ -194,7 +194,7 @@ The hint displayed by the widget when it is empty. Not set by default.
 
 ### spin
 Fires when the value is changed from the spin buttons
-For additional information check the [spin](/kendo-ui/api/web/numerictextbox#events-spin) event documentation.
+For additional information check the [spin](/api/web/numerictextbox#events-spin) event documentation.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`
@@ -221,7 +221,7 @@ For additional information check the [spin](/kendo-ui/api/web/numerictextbox#eve
     $numericTextBox->spin('onSpin');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $numericTextBox = new \Kendo\UI\NumericTextBox('NumericTextBox');

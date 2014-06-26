@@ -4,14 +4,14 @@ title: TabStrip
 
 # \Kendo\UI\TabStrip
 
-A PHP wrapper for Kendo UI [TabStrip](/kendo-ui/api/web/tabstrip).
+A PHP wrapper for Kendo UI [TabStrip](/api/web/tabstrip).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use TabStrip in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo TabStrip
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### activate
 Triggered after a tab is being made visible and its animation complete. Before Q2 2014 this event was invoked after tab show, but before the end of the animation.
-For additional information check the [activate](/kendo-ui/api/web/tabstrip#events-activate) event documentation.
+For additional information check the [activate](/api/web/tabstrip#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -59,7 +59,7 @@ For additional information check the [activate](/kendo-ui/api/web/tabstrip#event
     $tabStrip->activate('onActivate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $tabStrip = new \Kendo\UI\TabStrip('TabStrip');
@@ -88,7 +88,7 @@ user interactions. Setting this option to false will disable all animations.
     ?>
 
 
-#### Example - using [\Kendo\UI\TabStripAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/TabStripAnimation)
+#### Example - using [\Kendo\UI\TabStripAnimation](/api/wrappers/php/Kendo/UI/TabStripAnimation)
     <?php
     $tabStrip = new \Kendo\UI\TabStrip('TabStrip');
     $animation = new \Kendo\UI\TabStripAnimation();
@@ -125,7 +125,7 @@ Specifies whether the TabStrip should be able to collapse completely when clicki
 
 ### contentLoad
 Triggered when content is fetched from an AJAX request.
-For additional information check the [contentLoad](/kendo-ui/api/web/tabstrip#events-contentLoad) event documentation.
+For additional information check the [contentLoad](/api/web/tabstrip#events-contentLoad) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -152,7 +152,7 @@ For additional information check the [contentLoad](/kendo-ui/api/web/tabstrip#ev
     $tabStrip->contentLoad('onContentLoad');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $tabStrip = new \Kendo\UI\TabStrip('TabStrip');
@@ -292,7 +292,7 @@ tab.
 
 ### error
 Triggered when an AJAX request results in an error.
-For additional information check the [error](/kendo-ui/api/web/tabstrip#events-error) event documentation.
+For additional information check the [error](/api/web/tabstrip#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -319,7 +319,7 @@ For additional information check the [error](/kendo-ui/api/web/tabstrip#events-e
     $tabStrip->error('onError');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $tabStrip = new \Kendo\UI\TabStrip('TabStrip');
@@ -384,7 +384,7 @@ Specifies whether the TabStrip should be keyboard navigatable.
 
 ### select
 Triggered before a tab is selected.
-For additional information check the [select](/kendo-ui/api/web/tabstrip#events-select) event documentation.
+For additional information check the [select](/api/web/tabstrip#events-select) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -411,7 +411,7 @@ For additional information check the [select](/kendo-ui/api/web/tabstrip#events-
     $tabStrip->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $tabStrip = new \Kendo\UI\TabStrip('TabStrip');
@@ -420,7 +420,7 @@ For additional information check the [select](/kendo-ui/api/web/tabstrip#events-
 
 ### show
 Triggered just after a tab is being made visible, but before the end of the animation. Before Q2 2014 this event was called activate.
-For additional information check the [show](/kendo-ui/api/web/tabstrip#events-show) event documentation.
+For additional information check the [show](/api/web/tabstrip#events-show) event documentation.
 
 #### Returns
 `\Kendo\UI\TabStrip`
@@ -447,7 +447,7 @@ For additional information check the [show](/kendo-ui/api/web/tabstrip#events-sh
     $tabStrip->show('onShow');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $tabStrip = new \Kendo\UI\TabStrip('TabStrip');

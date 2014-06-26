@@ -4,14 +4,14 @@ title: Window
 
 # \Kendo\UI\Window
 
-A PHP wrapper for Kendo UI [Window](/kendo-ui/api/web/window).
+A PHP wrapper for Kendo UI [Window](/api/web/window).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Window in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Window
 
@@ -51,7 +51,7 @@ and "Maximize".
 
 ### activate
 Triggered when a Window has finished its opening animation.
-For additional information check the [activate](/kendo-ui/api/web/window#events-activate) event documentation.
+For additional information check the [activate](/api/web/window#events-activate) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -78,7 +78,7 @@ For additional information check the [activate](/kendo-ui/api/web/window#events-
     $window->activate('onActivate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -98,7 +98,7 @@ will disable all animations in the widget.
 ##### $value `\Kendo\UI\WindowAnimation|array`
 
 
-#### Example - using [\Kendo\UI\WindowAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/WindowAnimation)
+#### Example - using [\Kendo\UI\WindowAnimation](/api/wrappers/php/Kendo/UI/WindowAnimation)
     <?php
     $window = new \Kendo\UI\Window('Window');
     $animation = new \Kendo\UI\WindowAnimation();
@@ -142,7 +142,7 @@ Note that this does not constrain the window dragging within the given element.
 
 ### close
 Triggered when a Window is closed (by a user or through the close() method).
-For additional information check the [close](/kendo-ui/api/web/window#events-close) event documentation.
+For additional information check the [close](/api/web/window#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -169,7 +169,7 @@ For additional information check the [close](/kendo-ui/api/web/window#events-clo
     $window->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -196,7 +196,7 @@ Sets the HTML content of the Window.
 
 ### deactivate
 Triggered when a Window has finished its closing animation.
-For additional information check the [deactivate](/kendo-ui/api/web/window#events-deactivate) event documentation.
+For additional information check the [deactivate](/api/web/window#events-deactivate) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -223,7 +223,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/window#event
     $window->deactivate('onDeactivate');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -232,7 +232,7 @@ For additional information check the [deactivate](/kendo-ui/api/web/window#event
 
 ### dragend
 Triggered when a Window has been moved by a user.
-For additional information check the [dragend](/kendo-ui/api/web/window#events-dragend) event documentation.
+For additional information check the [dragend](/api/web/window#events-dragend) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -259,7 +259,7 @@ For additional information check the [dragend](/kendo-ui/api/web/window#events-d
     $window->dragend('onDragend');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -286,7 +286,7 @@ Enables (true) or disables (false) the ability for users to move/drag the widget
 
 ### dragstart
 Triggered when the user starts to move the window.
-For additional information check the [dragstart](/kendo-ui/api/web/window#events-dragstart) event documentation.
+For additional information check the [dragstart](/api/web/window#events-dragstart) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -313,7 +313,7 @@ For additional information check the [dragstart](/kendo-ui/api/web/window#events
     $window->dragstart('onDragstart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -337,7 +337,7 @@ Stops output bufferring and sets the preceding markup as the content of the Wind
 
 ### error
 Triggered when an AJAX request for content fails.
-For additional information check the [error](/kendo-ui/api/web/window#events-error) event documentation.
+For additional information check the [error](/api/web/window#events-error) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -364,7 +364,7 @@ For additional information check the [error](/kendo-ui/api/web/window#events-err
     $window->error('onError');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -505,7 +505,7 @@ Specifies whether the window should show a modal overlay over the page.
 
 ### open
 Triggered when a Window is opened (i.e. the open() method is called).
-For additional information check the [open](/kendo-ui/api/web/window#events-open) event documentation.
+For additional information check the [open](/api/web/window#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -532,7 +532,7 @@ For additional information check the [open](/kendo-ui/api/web/window#events-open
     $window->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -569,7 +569,7 @@ A collection of one or two members, which define the initial Window's top and/or
 ##### $value `\Kendo\UI\WindowPosition|array`
 
 
-#### Example - using [\Kendo\UI\WindowPosition](/kendo-ui/api/wrappers/php/Kendo/UI/WindowPosition)
+#### Example - using [\Kendo\UI\WindowPosition](/api/wrappers/php/Kendo/UI/WindowPosition)
     <?php
     $window = new \Kendo\UI\Window('Window');
     $position = new \Kendo\UI\WindowPosition();
@@ -590,7 +590,7 @@ A collection of one or two members, which define the initial Window's top and/or
 Triggered when the content of a Window has finished loading via AJAX,
 when the window iframe has finished loading, or when the refresh button
 has been clicked on a window with static content.
-For additional information check the [refresh](/kendo-ui/api/web/window#events-refresh) event documentation.
+For additional information check the [refresh](/api/web/window#events-refresh) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -617,7 +617,7 @@ For additional information check the [refresh](/kendo-ui/api/web/window#events-r
     $window->refresh('onRefresh');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');
@@ -644,7 +644,7 @@ Enables (true) or disables (false) the ability for users to resize a Window.
 
 ### resize
 Triggered when a window has been resized by a user.
-For additional information check the [resize](/kendo-ui/api/web/window#events-resize) event documentation.
+For additional information check the [resize](/api/web/window#events-resize) event documentation.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -671,7 +671,7 @@ For additional information check the [resize](/kendo-ui/api/web/window#events-re
     $window->resize('onResize');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $window = new \Kendo\UI\Window('Window');

@@ -172,7 +172,7 @@ Specifies the url to navigate to.
 
 Specifies the buttons of ButtonGroup.
 
-More documentation is available at [kendo:toolBar-item-buttons](/kendo-ui/api/wrappers/jsp/toolbar/item-buttons).
+More documentation is available at [kendo:toolBar-item-buttons](/api/wrappers/jsp/toolbar/item-buttons).
 
 #### Example
 
@@ -184,7 +184,7 @@ More documentation is available at [kendo:toolBar-item-buttons](/kendo-ui/api/wr
 
 Specifies the menu buttons of a SplitButton.
 
-More documentation is available at [kendo:toolBar-item-menuButtons](/kendo-ui/api/wrappers/jsp/toolbar/item-menubuttons).
+More documentation is available at [kendo:toolBar-item-menuButtons](/api/wrappers/jsp/toolbar/item-menubuttons).
 
 #### Example
 

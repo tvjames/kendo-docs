@@ -39,7 +39,7 @@ The border options.
 ##### $value `\Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartYAxisItemCrosshairTooltipBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartYAxisItemCrosshairTooltipBorder)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltip();
     $border = new \Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipBorder();
@@ -131,7 +131,7 @@ The padding of the crosshair tooltip. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartYAxisItemCrosshairTooltipPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartYAxisItemCrosshairTooltipPadding)
     <?php
     $tooltip = new \Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltip();
     $padding = new \Kendo\Dataviz\UI\ChartYAxisItemCrosshairTooltipPadding();

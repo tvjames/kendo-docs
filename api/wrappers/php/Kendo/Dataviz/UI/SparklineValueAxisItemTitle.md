@@ -40,7 +40,7 @@ The border of the title.
 ##### $value `\Kendo\Dataviz\UI\SparklineValueAxisItemTitleBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemTitleBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemTitleBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineValueAxisItemTitleBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineValueAxisItemTitleBorder)
     <?php
     $title = new \Kendo\Dataviz\UI\SparklineValueAxisItemTitle();
     $border = new \Kendo\Dataviz\UI\SparklineValueAxisItemTitleBorder();

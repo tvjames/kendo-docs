@@ -56,7 +56,7 @@ The icon visibility.
 
 The border of the icon.
 
-More documentation is available at [kendo:chart-yAxisItem-notes-icon-border](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-notes-icon-border).
+More documentation is available at [kendo:chart-yAxisItem-notes-icon-border](/api/wrappers/jsp/chart/yaxisitem-notes-icon-border).
 
 #### Example
 

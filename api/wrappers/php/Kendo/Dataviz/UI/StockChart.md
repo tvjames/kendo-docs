@@ -4,14 +4,14 @@ title: StockChart
 
 # \Kendo\Dataviz\UI\StockChart
 
-A PHP wrapper for Kendo UI [StockChart](/kendo-ui/api/dataviz/stockchart).
+A PHP wrapper for Kendo UI [StockChart](/api/dataviz/stockchart).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use StockChart in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo StockChart
 
@@ -62,7 +62,7 @@ Default options for all chart axes.
 
 ### axisLabelClick
 Fires when an axis label is clicked.
-For additional information check the [axisLabelClick](/kendo-ui/api/dataviz/stockchart#events-axisLabelClick) event documentation.
+For additional information check the [axisLabelClick](/api/dataviz/stockchart#events-axisLabelClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -89,7 +89,7 @@ For additional information check the [axisLabelClick](/kendo-ui/api/dataviz/stoc
     $stockChart->axisLabelClick('onAxisLabelClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -147,7 +147,7 @@ This is the entire visible area of the chart.
 ##### $value `\Kendo\Dataviz\UI\StockChartChartArea|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartChartArea](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartChartArea)
+#### Example - using [\Kendo\Dataviz\UI\StockChartChartArea](/api/wrappers/php/Kendo/Dataviz/UI/StockChartChartArea)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $chartArea = new \Kendo\Dataviz\UI\StockChartChartArea();
@@ -167,7 +167,7 @@ This is the entire visible area of the chart.
 ### dataBound
 Fires when the chart has received data from the data source
 and is about to render it.
-For additional information check the [dataBound](/kendo-ui/api/dataviz/stockchart#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/dataviz/stockchart#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -194,7 +194,7 @@ For additional information check the [dataBound](/kendo-ui/api/dataviz/stockchar
     $stockChart->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -212,7 +212,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -249,7 +249,7 @@ It is used as a default categoryField for all series.The data item field value m
 
 ### drag
 Fires as long as the user is dragging the chart using the mouse or swipe gestures.
-For additional information check the [drag](/kendo-ui/api/dataviz/stockchart#events-drag) event documentation.
+For additional information check the [drag](/api/dataviz/stockchart#events-drag) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -276,7 +276,7 @@ For additional information check the [drag](/kendo-ui/api/dataviz/stockchart#eve
     $stockChart->drag('onDrag');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -285,7 +285,7 @@ For additional information check the [drag](/kendo-ui/api/dataviz/stockchart#eve
 
 ### dragEnd
 Fires when the user stops dragging the chart.
-For additional information check the [dragEnd](/kendo-ui/api/dataviz/stockchart#events-dragEnd) event documentation.
+For additional information check the [dragEnd](/api/dataviz/stockchart#events-dragEnd) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -312,7 +312,7 @@ For additional information check the [dragEnd](/kendo-ui/api/dataviz/stockchart#
     $stockChart->dragEnd('onDragEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -321,7 +321,7 @@ For additional information check the [dragEnd](/kendo-ui/api/dataviz/stockchart#
 
 ### dragStart
 Fires when the user has used the mouse or a swipe gesture to drag the chart.The drag operation can be aborted by calling e.preventDefault().
-For additional information check the [dragStart](/kendo-ui/api/dataviz/stockchart#events-dragStart) event documentation.
+For additional information check the [dragStart](/api/dataviz/stockchart#events-dragStart) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -348,7 +348,7 @@ For additional information check the [dragStart](/kendo-ui/api/dataviz/stockchar
     $stockChart->dragStart('onDragStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -367,7 +367,7 @@ The chart legend configuration options.
 ##### $value `\Kendo\Dataviz\UI\StockChartLegend|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartLegend](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegend)
+#### Example - using [\Kendo\Dataviz\UI\StockChartLegend](/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegend)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $legend = new \Kendo\Dataviz\UI\StockChartLegend();
@@ -386,7 +386,7 @@ The chart legend configuration options.
 
 ### legendItemClick
 Fires when an legend item is clicked.
-For additional information check the [legendItemClick](/kendo-ui/api/dataviz/stockchart#events-legendItemClick) event documentation.
+For additional information check the [legendItemClick](/api/dataviz/stockchart#events-legendItemClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -413,7 +413,7 @@ For additional information check the [legendItemClick](/kendo-ui/api/dataviz/sto
     $stockChart->legendItemClick('onLegendItemClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -422,7 +422,7 @@ For additional information check the [legendItemClick](/kendo-ui/api/dataviz/sto
 
 ### legendItemHover
 Fires when an legend item is hovered.
-For additional information check the [legendItemHover](/kendo-ui/api/dataviz/stockchart#events-legendItemHover) event documentation.
+For additional information check the [legendItemHover](/api/dataviz/stockchart#events-legendItemHover) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -449,7 +449,7 @@ For additional information check the [legendItemHover](/kendo-ui/api/dataviz/sto
     $stockChart->legendItemHover('onLegendItemHover');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -468,7 +468,7 @@ The data navigator configuration options.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigator|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigator](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigator)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigator](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigator)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
@@ -487,7 +487,7 @@ The data navigator configuration options.
 
 ### noteClick
 Fired when the user clicks one of the notes.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [noteClick](/kendo-ui/api/dataviz/stockchart#events-noteClick) event documentation.
+For additional information check the [noteClick](/api/dataviz/stockchart#events-noteClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -514,7 +514,7 @@ For additional information check the [noteClick](/kendo-ui/api/dataviz/stockchar
     $stockChart->noteClick('onNoteClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -523,7 +523,7 @@ For additional information check the [noteClick](/kendo-ui/api/dataviz/stockchar
 
 ### noteHover
 Fired when the user hovers one of the notes.The event handler function context (available via the this keyword) will be set to the widget instance.
-For additional information check the [noteHover](/kendo-ui/api/dataviz/stockchart#events-noteHover) event documentation.
+For additional information check the [noteHover](/api/dataviz/stockchart#events-noteHover) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -550,7 +550,7 @@ For additional information check the [noteHover](/kendo-ui/api/dataviz/stockchar
     $stockChart->noteHover('onNoteHover');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -607,7 +607,7 @@ The plot area configuration options. This is the area containing the plotted ser
 ##### $value `\Kendo\Dataviz\UI\StockChartPlotArea|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartPlotArea](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartPlotArea)
+#### Example - using [\Kendo\Dataviz\UI\StockChartPlotArea](/api/wrappers/php/Kendo/Dataviz/UI/StockChartPlotArea)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $plotArea = new \Kendo\Dataviz\UI\StockChartPlotArea();
@@ -626,7 +626,7 @@ The plot area configuration options. This is the area containing the plotted ser
 
 ### plotAreaClick
 Fires when plot area is clicked.
-For additional information check the [plotAreaClick](/kendo-ui/api/dataviz/stockchart#events-plotAreaClick) event documentation.
+For additional information check the [plotAreaClick](/api/dataviz/stockchart#events-plotAreaClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -653,7 +653,7 @@ For additional information check the [plotAreaClick](/kendo-ui/api/dataviz/stock
     $stockChart->plotAreaClick('onPlotAreaClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -681,7 +681,7 @@ If it is not supported by the browser, the Chart will switch to the first availa
 
 ### select
 Fires when the user modifies the selection.The range units are:
-For additional information check the [select](/kendo-ui/api/dataviz/stockchart#events-select) event documentation.
+For additional information check the [select](/api/dataviz/stockchart#events-select) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -708,7 +708,7 @@ For additional information check the [select](/kendo-ui/api/dataviz/stockchart#e
     $stockChart->select('onSelect');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -717,7 +717,7 @@ For additional information check the [select](/kendo-ui/api/dataviz/stockchart#e
 
 ### selectEnd
 Fires when the user completes modifying the selection.
-For additional information check the [selectEnd](/kendo-ui/api/dataviz/stockchart#events-selectEnd) event documentation.
+For additional information check the [selectEnd](/api/dataviz/stockchart#events-selectEnd) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -744,7 +744,7 @@ For additional information check the [selectEnd](/kendo-ui/api/dataviz/stockchar
     $stockChart->selectEnd('onSelectEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -753,7 +753,7 @@ For additional information check the [selectEnd](/kendo-ui/api/dataviz/stockchar
 
 ### selectStart
 Fires when the user starts modifying the axis selection.The range units are:
-For additional information check the [selectStart](/kendo-ui/api/dataviz/stockchart#events-selectStart) event documentation.
+For additional information check the [selectStart](/api/dataviz/stockchart#events-selectStart) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -780,7 +780,7 @@ For additional information check the [selectStart](/kendo-ui/api/dataviz/stockch
     $stockChart->selectStart('onSelectStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -827,7 +827,7 @@ Adds one or more StockChartSeriesItem to the StockChart.
 
 ### seriesClick
 Fires when chart series are clicked.
-For additional information check the [seriesClick](/kendo-ui/api/dataviz/stockchart#events-seriesClick) event documentation.
+For additional information check the [seriesClick](/api/dataviz/stockchart#events-seriesClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -854,7 +854,7 @@ For additional information check the [seriesClick](/kendo-ui/api/dataviz/stockch
     $stockChart->seriesClick('onSeriesClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -891,7 +891,7 @@ Default values for each series.
 ##### $value `\Kendo\Dataviz\UI\StockChartSeriesDefaults|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaults](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaults)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesDefaults](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesDefaults)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $seriesDefaults = new \Kendo\Dataviz\UI\StockChartSeriesDefaults();
@@ -910,7 +910,7 @@ Default values for each series.
 
 ### seriesHover
 Fires when chart series are hovered.
-For additional information check the [seriesHover](/kendo-ui/api/dataviz/stockchart#events-seriesHover) event documentation.
+For additional information check the [seriesHover](/api/dataviz/stockchart#events-seriesHover) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -937,7 +937,7 @@ For additional information check the [seriesHover](/kendo-ui/api/dataviz/stockch
     $stockChart->seriesHover('onSeriesHover');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -974,7 +974,7 @@ The chart title configuration options or text.
 ##### $value `\Kendo\Dataviz\UI\StockChartTitle|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartTitle](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartTitle)
+#### Example - using [\Kendo\Dataviz\UI\StockChartTitle](/api/wrappers/php/Kendo/Dataviz/UI/StockChartTitle)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $title = new \Kendo\Dataviz\UI\StockChartTitle();
@@ -1003,7 +1003,7 @@ The data point tooltip configuration options.
 ##### $value `\Kendo\Dataviz\UI\StockChartTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartTooltip)
+#### Example - using [\Kendo\Dataviz\UI\StockChartTooltip](/api/wrappers/php/Kendo/Dataviz/UI/StockChartTooltip)
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
     $tooltip = new \Kendo\Dataviz\UI\StockChartTooltip();
@@ -1078,7 +1078,7 @@ Adds one or more StockChartValueAxisItem to the StockChart.
 
 ### zoom
 Fires as long as the user is zooming the chart using the mousewheel.
-For additional information check the [zoom](/kendo-ui/api/dataviz/stockchart#events-zoom) event documentation.
+For additional information check the [zoom](/api/dataviz/stockchart#events-zoom) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -1105,7 +1105,7 @@ For additional information check the [zoom](/kendo-ui/api/dataviz/stockchart#eve
     $stockChart->zoom('onZoom');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -1114,7 +1114,7 @@ For additional information check the [zoom](/kendo-ui/api/dataviz/stockchart#eve
 
 ### zoomEnd
 Fires when the user stops zooming the chart.
-For additional information check the [zoomEnd](/kendo-ui/api/dataviz/stockchart#events-zoomEnd) event documentation.
+For additional information check the [zoomEnd](/api/dataviz/stockchart#events-zoomEnd) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -1141,7 +1141,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/stockchart#
     $stockChart->zoomEnd('onZoomEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');
@@ -1150,7 +1150,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/stockchart#
 
 ### zoomStart
 Fires when the user has used the mousewheel to zoom the chart.The zoom operation can be aborted by calling e.preventDefault().
-For additional information check the [zoomStart](/kendo-ui/api/dataviz/stockchart#events-zoomStart) event documentation.
+For additional information check the [zoomStart](/api/dataviz/stockchart#events-zoomStart) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\StockChart`
@@ -1177,7 +1177,7 @@ For additional information check the [zoomStart](/kendo-ui/api/dataviz/stockchar
     $stockChart->zoomStart('onZoomStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $stockChart = new \Kendo\Dataviz\UI\StockChart('StockChart');

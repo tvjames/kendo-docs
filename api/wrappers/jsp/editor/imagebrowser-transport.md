@@ -69,7 +69,7 @@ The URL which will handle the upload of the new images. If not specified the Upl
 
 Options or URL which will handle the directory creation. If not specified that create new folder button will not be present.
 
-More documentation is available at [kendo:editor-imageBrowser-transport-create](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport-create).
+More documentation is available at [kendo:editor-imageBrowser-transport-create](/api/wrappers/jsp/editor/imagebrowser-transport-create).
 
 #### Example
 
@@ -81,7 +81,7 @@ More documentation is available at [kendo:editor-imageBrowser-transport-create](
 
 Options or URL which will handle the file and directory deletion. If not specified the delete button will not be present.
 
-More documentation is available at [kendo:editor-imageBrowser-transport-destroy](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport-destroy).
+More documentation is available at [kendo:editor-imageBrowser-transport-destroy](/api/wrappers/jsp/editor/imagebrowser-transport-destroy).
 
 #### Example
 
@@ -93,7 +93,7 @@ More documentation is available at [kendo:editor-imageBrowser-transport-destroy]
 
 Options or URL for remote image retrieval.
 
-More documentation is available at [kendo:editor-imageBrowser-transport-read](/kendo-ui/api/wrappers/jsp/editor/imagebrowser-transport-read).
+More documentation is available at [kendo:editor-imageBrowser-transport-read](/api/wrappers/jsp/editor/imagebrowser-transport-read).
 
 #### Example
 

@@ -39,7 +39,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
     $border = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsBorder();
@@ -131,7 +131,7 @@ The margin of the labels. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsMargin)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
     $margin = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsMargin();
@@ -169,7 +169,7 @@ The padding of the labels. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesDefaultsLabelsPadding)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabels();
     $padding = new \Kendo\Dataviz\UI\ChartSeriesDefaultsLabelsPadding();

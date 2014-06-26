@@ -4,14 +4,14 @@ title: Notification
 
 # \Kendo\UI\Notification
 
-A PHP wrapper for Kendo UI [Notification](/kendo-ui/api/web/notification).
+A PHP wrapper for Kendo UI [Notification](/api/web/notification).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Notification in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Notification
 
@@ -152,7 +152,7 @@ Defines the notifications' height. Numbers are treated as pixels.
 
 ### hide
 Fires when a notification's hiding animation starts.
-For additional information check the [hide](/kendo-ui/api/web/notification#events-hide) event documentation.
+For additional information check the [hide](/api/web/notification#events-hide) event documentation.
 
 #### Returns
 `\Kendo\UI\Notification`
@@ -179,7 +179,7 @@ For additional information check the [hide](/kendo-ui/api/web/notification#event
     $notification->hide('onHide');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $notification = new \Kendo\UI\Notification('Notification');
@@ -218,7 +218,7 @@ top takes precedence over bottom and left takes precedence over right.
 ##### $value `\Kendo\UI\NotificationPosition|array`
 
 
-#### Example - using [\Kendo\UI\NotificationPosition](/kendo-ui/api/wrappers/php/Kendo/UI/NotificationPosition)
+#### Example - using [\Kendo\UI\NotificationPosition](/api/wrappers/php/Kendo/UI/NotificationPosition)
     <?php
     $notification = new \Kendo\UI\Notification('Notification');
     $position = new \Kendo\UI\NotificationPosition();
@@ -237,7 +237,7 @@ top takes precedence over bottom and left takes precedence over right.
 
 ### show
 Fires when a notification's showing animation starts.
-For additional information check the [show](/kendo-ui/api/web/notification#events-show) event documentation.
+For additional information check the [show](/api/web/notification#events-show) event documentation.
 
 #### Returns
 `\Kendo\UI\Notification`
@@ -264,7 +264,7 @@ For additional information check the [show](/kendo-ui/api/web/notification#event
     $notification->show('onShow');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $notification = new \Kendo\UI\Notification('Notification');

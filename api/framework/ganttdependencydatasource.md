@@ -6,14 +6,14 @@ description: Learn more about the configuration of Kendo UI GanttDependencyDataS
 
 # kendo.data.GanttDependencyDataSource
 
-The dependencies data source used by the [kendo.ui.Gantt](/kendo-ui/api/web/gantt) widget.
-Inherits from [kendo.data.DataSource](/kendo-ui/api/framework/datasource). The GanttDependencyDataSource contains instances of the
-[kendo.data.GanttDependency](/kendo-ui/api/framework/ganttdependency) class.
+The dependencies data source used by the [kendo.ui.Gantt](/api/web/gantt) widget.
+Inherits from [kendo.data.DataSource](/api/framework/datasource). The GanttDependencyDataSource contains instances of the
+[kendo.data.GanttDependency](/api/framework/ganttdependency) class.
 
 
 ## Configuration
 
-See the [DataSource configuration](/kendo-ui/api/framework/datasource#configuration) for all inherited configuration options.
+See the [DataSource configuration](/api/framework/datasource#configuration) for all inherited configuration options.
 
 ### schema `Object`
 
@@ -21,7 +21,7 @@ The schema configuration of the GanttDependencyDataSource.
 
 ### schema.model `Object`
 
-The model configuration of the GanttDependencyDataSource. See [GanttDependency](/kendo-ui/api/framework/ganttdependency#configuration) for more info.
+The model configuration of the GanttDependencyDataSource. See [GanttDependency](/api/framework/ganttdependency#configuration) for more info.
 
 #### Example - configure the dependency data source model schema
 
@@ -61,7 +61,7 @@ The model configuration of the GanttDependencyDataSource. See [GanttDependency](
 
 ## Methods
 
-See the [DataSource methods](/kendo-ui/api/framework/datasource#methods) for all inherited methods.
+See the [DataSource methods](/api/framework/datasource#methods) for all inherited methods.
 
 
 

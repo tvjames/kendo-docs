@@ -39,7 +39,7 @@ Specifies the handles stroke styles.
 ##### $value `\Kendo\Dataviz\UI\DiagramEditableResizeHandlesHoverStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandlesHoverStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandlesHoverStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramEditableResizeHandlesHoverStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramEditableResizeHandlesHoverStroke)
     <?php
     $hover = new \Kendo\Dataviz\UI\DiagramEditableResizeHandlesHover();
     $stroke = new \Kendo\Dataviz\UI\DiagramEditableResizeHandlesHoverStroke();

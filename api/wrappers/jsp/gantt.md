@@ -3,7 +3,7 @@ title: gantt
 ---
 
 # \<kendo:gantt\>
-A JSP wrapper for Kendo UI [Gantt](/kendo-ui/api/web/gantt).
+A JSP wrapper for Kendo UI [Gantt](/api/web/gantt).
 
 ## Configuration Attributes
 
@@ -129,7 +129,7 @@ The start of working week (index based).
 The configuration of the gantt columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
 field to which the column is bound. The gantt will create a column for every item of the array.
 
-More documentation is available at [kendo:gantt-columns](/kendo-ui/api/wrappers/jsp/gantt/columns).
+More documentation is available at [kendo:gantt-columns](/api/wrappers/jsp/gantt/columns).
 
 #### Example
 
@@ -141,7 +141,7 @@ More documentation is available at [kendo:gantt-columns](/kendo-ui/api/wrappers/
 
 The configuration of the gantt messages. Use this option to customize or localize the gantt messages.
 
-More documentation is available at [kendo:gantt-messages](/kendo-ui/api/wrappers/jsp/gantt/messages).
+More documentation is available at [kendo:gantt-messages](/api/wrappers/jsp/gantt/messages).
 
 #### Example
 
@@ -154,7 +154,7 @@ More documentation is available at [kendo:gantt-messages](/kendo-ui/api/wrappers
 The views displayed by the gantt and their configuration. The array items can be either objects specifying the view configuration or strings representing the view types (assuming default configuration).
 By default the Kendo UI Gantt widget displays all three ("day", "week", and "month") views.
 
-More documentation is available at [kendo:gantt-views](/kendo-ui/api/wrappers/jsp/gantt/views).
+More documentation is available at [kendo:gantt-views](/api/wrappers/jsp/gantt/views).
 
 #### Example
 
@@ -170,7 +170,7 @@ More documentation is available at [kendo:gantt-views](/kendo-ui/api/wrappers/js
 Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBinding](/kendo-ui/api/web/gantt#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/gantt#events-dataBinding) event documentation.
 
 #### Example
     <kendo:gantt dataBinding="handle_dataBinding">
@@ -186,7 +186,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/gantt#event
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/gantt#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/gantt#events-dataBound) event documentation.
 
 #### Example
     <kendo:gantt dataBound="handle_dataBound">
@@ -202,7 +202,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/gantt#events-
 Fired when a new task or a new dependency is about to be added.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [add](/kendo-ui/api/web/gantt#events-add) event documentation.
+For additional information check the [add](/api/web/gantt#events-add) event documentation.
 
 #### Example
     <kendo:gantt add="handle_add">
@@ -218,7 +218,7 @@ For additional information check the [add](/kendo-ui/api/web/gantt#events-add) e
 Fired when the user starts task edit upon double click on a cell.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [edit](/kendo-ui/api/web/gantt#events-edit) event documentation.
+For additional information check the [edit](/api/web/gantt#events-edit) event documentation.
 
 #### Example
     <kendo:gantt edit="handle_edit">
@@ -234,7 +234,7 @@ For additional information check the [edit](/kendo-ui/api/web/gantt#events-edit)
 Fired when a task or a dependency is about to be removed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [remove](/kendo-ui/api/web/gantt#events-remove) event documentation.
+For additional information check the [remove](/api/web/gantt#events-remove) event documentation.
 
 #### Example
     <kendo:gantt remove="handle_remove">
@@ -250,7 +250,7 @@ For additional information check the [remove](/kendo-ui/api/web/gantt#events-rem
 Fired when the user cancels tasks's cell editing by pressing the 'Esc' key.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [cancel](/kendo-ui/api/web/gantt#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/gantt#events-cancel) event documentation.
 
 #### Example
     <kendo:gantt cancel="handle_cancel">
@@ -266,7 +266,7 @@ For additional information check the [cancel](/kendo-ui/api/web/gantt#events-can
 Fired when a task field is updated upon user interaction.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [save](/kendo-ui/api/web/gantt#events-save) event documentation.
+For additional information check the [save](/api/web/gantt#events-save) event documentation.
 
 #### Example
     <kendo:gantt save="handle_save">
@@ -282,7 +282,7 @@ For additional information check the [save](/kendo-ui/api/web/gantt#events-save)
 Fired when the user selects a task in the gantt.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/gantt#events-change) event documentation.
+For additional information check the [change](/api/web/gantt#events-change) event documentation.
 
 #### Example
     <kendo:gantt change="handle_change">
@@ -298,7 +298,7 @@ For additional information check the [change](/kendo-ui/api/web/gantt#events-cha
 Fired when the user changes the selected view of the gantt.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [navigate](/kendo-ui/api/web/gantt#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/gantt#events-navigate) event documentation.
 
 #### Example
     <kendo:gantt navigate="handle_navigate">
@@ -314,7 +314,7 @@ For additional information check the [navigate](/kendo-ui/api/web/gantt#events-n
 Fired when the user starts to drag a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [moveStart](/kendo-ui/api/web/gantt#events-moveStart) event documentation.
+For additional information check the [moveStart](/api/web/gantt#events-moveStart) event documentation.
 
 #### Example
     <kendo:gantt moveStart="handle_moveStart">
@@ -330,7 +330,7 @@ For additional information check the [moveStart](/kendo-ui/api/web/gantt#events-
 Fired when the user is moving a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [move](/kendo-ui/api/web/gantt#events-move) event documentation.
+For additional information check the [move](/api/web/gantt#events-move) event documentation.
 
 #### Example
     <kendo:gantt move="handle_move">
@@ -346,7 +346,7 @@ For additional information check the [move](/kendo-ui/api/web/gantt#events-move)
 Fired when the user stops moving a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [moveEnd](/kendo-ui/api/web/gantt#events-moveEnd) event documentation.
+For additional information check the [moveEnd](/api/web/gantt#events-moveEnd) event documentation.
 
 #### Example
     <kendo:gantt moveEnd="handle_moveEnd">
@@ -362,7 +362,7 @@ For additional information check the [moveEnd](/kendo-ui/api/web/gantt#events-mo
 Fired when the user starts to resize a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [resizeStart](/kendo-ui/api/web/gantt#events-resizeStart) event documentation.
+For additional information check the [resizeStart](/api/web/gantt#events-resizeStart) event documentation.
 
 #### Example
     <kendo:gantt resizeStart="handle_resizeStart">
@@ -378,7 +378,7 @@ For additional information check the [resizeStart](/kendo-ui/api/web/gantt#event
 Fired when the user is resizing a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [resize](/kendo-ui/api/web/gantt#events-resize) event documentation.
+For additional information check the [resize](/api/web/gantt#events-resize) event documentation.
 
 #### Example
     <kendo:gantt resize="handle_resize">
@@ -394,7 +394,7 @@ For additional information check the [resize](/kendo-ui/api/web/gantt#events-res
 Fired when the user releases the mouse after resizing a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [resizeEnd](/kendo-ui/api/web/gantt#events-resizeEnd) event documentation.
+For additional information check the [resizeEnd](/api/web/gantt#events-resizeEnd) event documentation.
 
 #### Example
     <kendo:gantt resizeEnd="handle_resizeEnd">
@@ -412,7 +412,7 @@ For additional information check the [resizeEnd](/kendo-ui/api/web/gantt#events-
 Fired before the widget binds to its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBinding](/kendo-ui/api/web/gantt#events-dataBinding) event documentation.
+For additional information check the [dataBinding](/api/web/gantt#events-dataBinding) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -430,7 +430,7 @@ For additional information check the [dataBinding](/kendo-ui/api/web/gantt#event
 Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [dataBound](/kendo-ui/api/web/gantt#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/web/gantt#events-dataBound) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -448,7 +448,7 @@ For additional information check the [dataBound](/kendo-ui/api/web/gantt#events-
 Fired when a new task or a new dependency is about to be added.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [add](/kendo-ui/api/web/gantt#events-add) event documentation.
+For additional information check the [add](/api/web/gantt#events-add) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -466,7 +466,7 @@ For additional information check the [add](/kendo-ui/api/web/gantt#events-add) e
 Fired when the user starts task edit upon double click on a cell.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [edit](/kendo-ui/api/web/gantt#events-edit) event documentation.
+For additional information check the [edit](/api/web/gantt#events-edit) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -484,7 +484,7 @@ For additional information check the [edit](/kendo-ui/api/web/gantt#events-edit)
 Fired when a task or a dependency is about to be removed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [remove](/kendo-ui/api/web/gantt#events-remove) event documentation.
+For additional information check the [remove](/api/web/gantt#events-remove) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -502,7 +502,7 @@ For additional information check the [remove](/kendo-ui/api/web/gantt#events-rem
 Fired when the user cancels tasks's cell editing by pressing the 'Esc' key.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [cancel](/kendo-ui/api/web/gantt#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/gantt#events-cancel) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -520,7 +520,7 @@ For additional information check the [cancel](/kendo-ui/api/web/gantt#events-can
 Fired when a task field is updated upon user interaction.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [save](/kendo-ui/api/web/gantt#events-save) event documentation.
+For additional information check the [save](/api/web/gantt#events-save) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -538,7 +538,7 @@ For additional information check the [save](/kendo-ui/api/web/gantt#events-save)
 Fired when the user selects a task in the gantt.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [change](/kendo-ui/api/web/gantt#events-change) event documentation.
+For additional information check the [change](/api/web/gantt#events-change) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -556,7 +556,7 @@ For additional information check the [change](/kendo-ui/api/web/gantt#events-cha
 Fired when the user changes the selected view of the gantt.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [navigate](/kendo-ui/api/web/gantt#events-navigate) event documentation.
+For additional information check the [navigate](/api/web/gantt#events-navigate) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -574,7 +574,7 @@ For additional information check the [navigate](/kendo-ui/api/web/gantt#events-n
 Fired when the user starts to drag a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [moveStart](/kendo-ui/api/web/gantt#events-moveStart) event documentation.
+For additional information check the [moveStart](/api/web/gantt#events-moveStart) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -592,7 +592,7 @@ For additional information check the [moveStart](/kendo-ui/api/web/gantt#events-
 Fired when the user is moving a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [move](/kendo-ui/api/web/gantt#events-move) event documentation.
+For additional information check the [move](/api/web/gantt#events-move) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -610,7 +610,7 @@ For additional information check the [move](/kendo-ui/api/web/gantt#events-move)
 Fired when the user stops moving a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [moveEnd](/kendo-ui/api/web/gantt#events-moveEnd) event documentation.
+For additional information check the [moveEnd](/api/web/gantt#events-moveEnd) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -628,7 +628,7 @@ For additional information check the [moveEnd](/kendo-ui/api/web/gantt#events-mo
 Fired when the user starts to resize a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [resizeStart](/kendo-ui/api/web/gantt#events-resizeStart) event documentation.
+For additional information check the [resizeStart](/api/web/gantt#events-resizeStart) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -646,7 +646,7 @@ For additional information check the [resizeStart](/kendo-ui/api/web/gantt#event
 Fired when the user is resizing a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [resize](/kendo-ui/api/web/gantt#events-resize) event documentation.
+For additional information check the [resize](/api/web/gantt#events-resize) event documentation.
 
 #### Example
     <kendo:gantt>
@@ -664,7 +664,7 @@ For additional information check the [resize](/kendo-ui/api/web/gantt#events-res
 Fired when the user releases the mouse after resizing a task.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
-For additional information check the [resizeEnd](/kendo-ui/api/web/gantt#events-resizeEnd) event documentation.
+For additional information check the [resizeEnd](/api/web/gantt#events-resizeEnd) event documentation.
 
 #### Example
     <kendo:gantt>

@@ -55,7 +55,7 @@ The icon visibility.
 
 The border of the icon.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes-icon-border](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes-icon-border).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes-icon-border](/api/wrappers/jsp/sparkline/categoryaxisitem-notes-icon-border).
 
 #### Example
 

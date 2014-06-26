@@ -4,14 +4,14 @@ title: Sparkline
 
 # \Kendo\Dataviz\UI\Sparkline
 
-A PHP wrapper for Kendo UI [Sparkline](/kendo-ui/api/dataviz/sparkline).
+A PHP wrapper for Kendo UI [Sparkline](/api/dataviz/sparkline).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use Sparkline in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo Sparkline
 
@@ -62,7 +62,7 @@ Default options for all chart axes.
 
 ### axisLabelClick
 Fires when an axis label is clicked.
-For additional information check the [axisLabelClick](/kendo-ui/api/dataviz/sparkline#events-axisLabelClick) event documentation.
+For additional information check the [axisLabelClick](/api/dataviz/sparkline#events-axisLabelClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -89,7 +89,7 @@ For additional information check the [axisLabelClick](/kendo-ui/api/dataviz/spar
     $sparkline->axisLabelClick('onAxisLabelClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -147,7 +147,7 @@ This is the entire visible area of the chart.
 ##### $value `\Kendo\Dataviz\UI\SparklineChartArea|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineChartArea](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineChartArea)
+#### Example - using [\Kendo\Dataviz\UI\SparklineChartArea](/api/wrappers/php/Kendo/Dataviz/UI/SparklineChartArea)
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
     $chartArea = new \Kendo\Dataviz\UI\SparklineChartArea();
@@ -185,7 +185,7 @@ The data for the default sparkline series.Will be discareded if series are suppl
 ### dataBound
 Fires when the sparkline has received data from the data source
 and is about to render it.
-For additional information check the [dataBound](/kendo-ui/api/dataviz/sparkline#events-dataBound) event documentation.
+For additional information check the [dataBound](/api/dataviz/sparkline#events-dataBound) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -212,7 +212,7 @@ For additional information check the [dataBound](/kendo-ui/api/dataviz/sparkline
     $sparkline->dataBound('onDataBound');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -230,7 +230,7 @@ Sets the data source of the dataSource.
 
 ##### $value `\Kendo\Data\DataSource|array`
 
-#### Example - using [\Kendo\Data\DataSource](/kendo-ui/api/wrappers/php/kendo/data/datasource)
+#### Example - using [\Kendo\Data\DataSource](/api/wrappers/php/kendo/data/datasource)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -248,7 +248,7 @@ Sets the data source of the dataSource.
 
 ### drag
 Fires as long as the user is dragging the sparkline using the mouse or swipe gestures.
-For additional information check the [drag](/kendo-ui/api/dataviz/sparkline#events-drag) event documentation.
+For additional information check the [drag](/api/dataviz/sparkline#events-drag) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -275,7 +275,7 @@ For additional information check the [drag](/kendo-ui/api/dataviz/sparkline#even
     $sparkline->drag('onDrag');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -284,7 +284,7 @@ For additional information check the [drag](/kendo-ui/api/dataviz/sparkline#even
 
 ### dragEnd
 Fires when the user stops dragging the sparkline.
-For additional information check the [dragEnd](/kendo-ui/api/dataviz/sparkline#events-dragEnd) event documentation.
+For additional information check the [dragEnd](/api/dataviz/sparkline#events-dragEnd) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -311,7 +311,7 @@ For additional information check the [dragEnd](/kendo-ui/api/dataviz/sparkline#e
     $sparkline->dragEnd('onDragEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -320,7 +320,7 @@ For additional information check the [dragEnd](/kendo-ui/api/dataviz/sparkline#e
 
 ### dragStart
 Fires when the user has used the mouse or a swipe gesture to drag the sparkline.The drag operation can be aborted by calling e.preventDefault().
-For additional information check the [dragStart](/kendo-ui/api/dataviz/sparkline#events-dragStart) event documentation.
+For additional information check the [dragStart](/api/dataviz/sparkline#events-dragStart) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -347,7 +347,7 @@ For additional information check the [dragStart](/kendo-ui/api/dataviz/sparkline
     $sparkline->dragStart('onDragStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -366,7 +366,7 @@ The plot area configuration options. This is the area containing the plotted ser
 ##### $value `\Kendo\Dataviz\UI\SparklinePlotArea|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklinePlotArea](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklinePlotArea)
+#### Example - using [\Kendo\Dataviz\UI\SparklinePlotArea](/api/wrappers/php/Kendo/Dataviz/UI/SparklinePlotArea)
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
     $plotArea = new \Kendo\Dataviz\UI\SparklinePlotArea();
@@ -385,7 +385,7 @@ The plot area configuration options. This is the area containing the plotted ser
 
 ### plotAreaClick
 Fires when plot area is clicked.
-For additional information check the [plotAreaClick](/kendo-ui/api/dataviz/sparkline#events-plotAreaClick) event documentation.
+For additional information check the [plotAreaClick](/api/dataviz/sparkline#events-plotAreaClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -412,7 +412,7 @@ For additional information check the [plotAreaClick](/kendo-ui/api/dataviz/spark
     $sparkline->plotAreaClick('onPlotAreaClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -496,7 +496,7 @@ Adds one or more SparklineSeriesItem to the Sparkline.
 
 ### seriesClick
 Fires when chart series are clicked.
-For additional information check the [seriesClick](/kendo-ui/api/dataviz/sparkline#events-seriesClick) event documentation.
+For additional information check the [seriesClick](/api/dataviz/sparkline#events-seriesClick) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -523,7 +523,7 @@ For additional information check the [seriesClick](/kendo-ui/api/dataviz/sparkli
     $sparkline->seriesClick('onSeriesClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -560,7 +560,7 @@ Default values for each series.
 ##### $value `\Kendo\Dataviz\UI\SparklineSeriesDefaults|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesDefaults](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesDefaults)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesDefaults](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesDefaults)
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
     $seriesDefaults = new \Kendo\Dataviz\UI\SparklineSeriesDefaults();
@@ -579,7 +579,7 @@ Default values for each series.
 
 ### seriesHover
 Fires when chart series are hovered.
-For additional information check the [seriesHover](/kendo-ui/api/dataviz/sparkline#events-seriesHover) event documentation.
+For additional information check the [seriesHover](/api/dataviz/sparkline#events-seriesHover) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -606,7 +606,7 @@ For additional information check the [seriesHover](/kendo-ui/api/dataviz/sparkli
     $sparkline->seriesHover('onSeriesHover');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -643,7 +643,7 @@ The data point tooltip configuration options.
 ##### $value `\Kendo\Dataviz\UI\SparklineTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineTooltip)
+#### Example - using [\Kendo\Dataviz\UI\SparklineTooltip](/api/wrappers/php/Kendo/Dataviz/UI/SparklineTooltip)
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
     $tooltip = new \Kendo\Dataviz\UI\SparklineTooltip();
@@ -736,7 +736,7 @@ Adds one or more SparklineValueAxisItem to the Sparkline.
 
 ### zoom
 Fires as long as the user is zooming the chart using the mousewheel.
-For additional information check the [zoom](/kendo-ui/api/dataviz/sparkline#events-zoom) event documentation.
+For additional information check the [zoom](/api/dataviz/sparkline#events-zoom) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -763,7 +763,7 @@ For additional information check the [zoom](/kendo-ui/api/dataviz/sparkline#even
     $sparkline->zoom('onZoom');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -772,7 +772,7 @@ For additional information check the [zoom](/kendo-ui/api/dataviz/sparkline#even
 
 ### zoomEnd
 Fires when the user stops zooming the chart.
-For additional information check the [zoomEnd](/kendo-ui/api/dataviz/sparkline#events-zoomEnd) event documentation.
+For additional information check the [zoomEnd](/api/dataviz/sparkline#events-zoomEnd) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -799,7 +799,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/sparkline#e
     $sparkline->zoomEnd('onZoomEnd');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');
@@ -808,7 +808,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/sparkline#e
 
 ### zoomStart
 Fires when the user has used the mousewheel to zoom the chart.The zoom operation can be aborted by calling e.preventDefault().
-For additional information check the [zoomStart](/kendo-ui/api/dataviz/sparkline#events-zoomStart) event documentation.
+For additional information check the [zoomStart](/api/dataviz/sparkline#events-zoomStart) event documentation.
 
 #### Returns
 `\Kendo\Dataviz\UI\Sparkline`
@@ -835,7 +835,7 @@ For additional information check the [zoomStart](/kendo-ui/api/dataviz/sparkline
     $sparkline->zoomStart('onZoomStart');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $sparkline = new \Kendo\Dataviz\UI\Sparkline('Sparkline');

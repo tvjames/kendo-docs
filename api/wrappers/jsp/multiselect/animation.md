@@ -20,7 +20,7 @@ Configures the opening and closing animations of the suggestion popup. Setting t
 
 
 
-More documentation is available at [kendo:multiSelect-animation-close](/kendo-ui/api/wrappers/jsp/multiselect/animation-close).
+More documentation is available at [kendo:multiSelect-animation-close](/api/wrappers/jsp/multiselect/animation-close).
 
 #### Example
 
@@ -32,7 +32,7 @@ More documentation is available at [kendo:multiSelect-animation-close](/kendo-ui
 
 The animation played when the suggestion popup is opened.
 
-More documentation is available at [kendo:multiSelect-animation-open](/kendo-ui/api/wrappers/jsp/multiselect/animation-open).
+More documentation is available at [kendo:multiSelect-animation-open](/api/wrappers/jsp/multiselect/animation-open).
 
 #### Example
 

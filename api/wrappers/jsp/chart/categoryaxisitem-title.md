@@ -92,7 +92,7 @@ If set to true the chart will display the category axis title. By default the ca
 
 The border of the title.
 
-More documentation is available at [kendo:chart-categoryAxisItem-title-border](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-title-border).
+More documentation is available at [kendo:chart-categoryAxisItem-title-border](/api/wrappers/jsp/chart/categoryaxisitem-title-border).
 
 #### Example
 
@@ -104,7 +104,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-title-border](/
 
 The margin of the title. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-categoryAxisItem-title-margin](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-title-margin).
+More documentation is available at [kendo:chart-categoryAxisItem-title-margin](/api/wrappers/jsp/chart/categoryaxisitem-title-margin).
 
 #### Example
 
@@ -116,7 +116,7 @@ More documentation is available at [kendo:chart-categoryAxisItem-title-margin](/
 
 The padding of the title. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-categoryAxisItem-title-padding](/kendo-ui/api/wrappers/jsp/chart/categoryaxisitem-title-padding).
+More documentation is available at [kendo:chart-categoryAxisItem-title-padding](/api/wrappers/jsp/chart/categoryaxisitem-title-padding).
 
 #### Example
 

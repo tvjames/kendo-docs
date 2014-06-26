@@ -76,7 +76,7 @@ If set to true the chart will display the category axis crosshair tooltip. By de
 
 The border options.
 
-More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-crosshair-tooltip-border](/kendo-ui/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-crosshair-tooltip-border).
+More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-crosshair-tooltip-border](/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-crosshair-tooltip-border).
 
 #### Example
 
@@ -88,7 +88,7 @@ More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-
 
 The padding of the crosshair tooltip. A numeric value will set all paddings.
 
-More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-crosshair-tooltip-padding](/kendo-ui/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-crosshair-tooltip-padding).
+More documentation is available at [kendo:stockChart-navigator-categoryAxisItem-crosshair-tooltip-padding](/api/wrappers/jsp/stockchart/navigator-categoryaxisitem-crosshair-tooltip-padding).
 
 #### Example
 

@@ -20,7 +20,7 @@ The value axis configuration options.
 
 The value axis configuration options.
 
-More documentation is available at [kendo:sparkline-valueAxisItem](/kendo-ui/api/wrappers/jsp/sparkline/valueaxisitem).
+More documentation is available at [kendo:sparkline-valueAxisItem](/api/wrappers/jsp/sparkline/valueaxisitem).
 
 #### Example
 

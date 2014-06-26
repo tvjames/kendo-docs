@@ -44,7 +44,7 @@ The field which contains the type of the entry. Either f for file or d for direc
 
 The field which contains the name of the file/directory
 
-More documentation is available at [kendo:editor-fileBrowser-schema-model-fields-name](/kendo-ui/api/wrappers/jsp/editor/filebrowser-schema-model-fields-name).
+More documentation is available at [kendo:editor-fileBrowser-schema-model-fields-name](/api/wrappers/jsp/editor/filebrowser-schema-model-fields-name).
 
 #### Example
 
@@ -56,7 +56,7 @@ More documentation is available at [kendo:editor-fileBrowser-schema-model-fields
 
 The field which contains the size of file.
 
-More documentation is available at [kendo:editor-fileBrowser-schema-model-fields-size](/kendo-ui/api/wrappers/jsp/editor/filebrowser-schema-model-fields-size).
+More documentation is available at [kendo:editor-fileBrowser-schema-model-fields-size](/api/wrappers/jsp/editor/filebrowser-schema-model-fields-size).
 
 #### Example
 
@@ -68,7 +68,7 @@ More documentation is available at [kendo:editor-fileBrowser-schema-model-fields
 
 The field which contains the type of the entry. Either f for file or d for directory.
 
-More documentation is available at [kendo:editor-fileBrowser-schema-model-fields-type](/kendo-ui/api/wrappers/jsp/editor/filebrowser-schema-model-fields-type).
+More documentation is available at [kendo:editor-fileBrowser-schema-model-fields-type](/api/wrappers/jsp/editor/filebrowser-schema-model-fields-type).
 
 #### Example
 

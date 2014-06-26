@@ -59,7 +59,7 @@ Mousewheel zoom settings for the selection.
 ##### $value `\Kendo\Dataviz\UI\StockChartCategoryAxisItemSelectMousewheel|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemSelectMousewheel](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemSelectMousewheel)
+#### Example - using [\Kendo\Dataviz\UI\StockChartCategoryAxisItemSelectMousewheel](/api/wrappers/php/Kendo/Dataviz/UI/StockChartCategoryAxisItemSelectMousewheel)
     <?php
     $select = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemSelect();
     $mousewheel = new \Kendo\Dataviz\UI\StockChartCategoryAxisItemSelectMousewheel();

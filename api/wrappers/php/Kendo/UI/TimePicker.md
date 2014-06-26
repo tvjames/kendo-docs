@@ -4,14 +4,14 @@ title: TimePicker
 
 # \Kendo\UI\TimePicker
 
-A PHP wrapper for Kendo UI [TimePicker](/kendo-ui/api/web/timepicker).
+A PHP wrapper for Kendo UI [TimePicker](/api/web/timepicker).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use TimePicker in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo TimePicker
 
@@ -42,7 +42,7 @@ Configures the opening and closing animations of the popup. Setting the animatio
 ##### $value `\Kendo\UI\TimePickerAnimation|array`
 
 
-#### Example - using [\Kendo\UI\TimePickerAnimation](/kendo-ui/api/wrappers/php/Kendo/UI/TimePickerAnimation)
+#### Example - using [\Kendo\UI\TimePickerAnimation](/api/wrappers/php/Kendo/UI/TimePickerAnimation)
     <?php
     $timePicker = new \Kendo\UI\TimePicker('TimePicker');
     $animation = new \Kendo\UI\TimePickerAnimation();
@@ -61,7 +61,7 @@ Configures the opening and closing animations of the popup. Setting the animatio
 
 ### change
 Fires when the selected date is changed
-For additional information check the [change](/kendo-ui/api/web/timepicker#events-change) event documentation.
+For additional information check the [change](/api/web/timepicker#events-change) event documentation.
 
 #### Returns
 `\Kendo\UI\TimePicker`
@@ -88,7 +88,7 @@ For additional information check the [change](/kendo-ui/api/web/timepicker#event
     $timePicker->change('onChange');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $timePicker = new \Kendo\UI\TimePicker('TimePicker');
@@ -97,7 +97,7 @@ For additional information check the [change](/kendo-ui/api/web/timepicker#event
 
 ### close
 Fires when the time drop-down list is closed
-For additional information check the [close](/kendo-ui/api/web/timepicker#events-close) event documentation.
+For additional information check the [close](/api/web/timepicker#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\TimePicker`
@@ -124,7 +124,7 @@ For additional information check the [close](/kendo-ui/api/web/timepicker#events
     $timePicker->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $timePicker = new \Kendo\UI\TimePicker('TimePicker');
@@ -241,7 +241,7 @@ Specifies the start value in the popup list.
 
 ### open
 Fires when the time drop-down list is opened
-For additional information check the [open](/kendo-ui/api/web/timepicker#events-open) event documentation.
+For additional information check the [open](/api/web/timepicker#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\TimePicker`
@@ -268,7 +268,7 @@ For additional information check the [open](/kendo-ui/api/web/timepicker#events-
     $timePicker->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $timePicker = new \Kendo\UI\TimePicker('TimePicker');

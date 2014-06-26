@@ -44,7 +44,7 @@ If set to false the barcode will not display the value as a text below the barco
 
 The margin of the text
 
-More documentation is available at [kendo:barcode-text-margin](/kendo-ui/api/wrappers/jsp/barcode/text-margin).
+More documentation is available at [kendo:barcode-text-margin](/api/wrappers/jsp/barcode/text-margin).
 
 #### Example
 

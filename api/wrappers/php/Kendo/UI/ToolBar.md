@@ -4,14 +4,14 @@ title: ToolBar
 
 # \Kendo\UI\ToolBar
 
-A PHP wrapper for Kendo UI [ToolBar](/kendo-ui/api/web/toolbar).
+A PHP wrapper for Kendo UI [ToolBar](/api/web/toolbar).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use ToolBar in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo ToolBar
 
@@ -32,7 +32,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### click
 Fires when the user clicks a command button.
-For additional information check the [click](/kendo-ui/api/web/toolbar#events-click) event documentation.
+For additional information check the [click](/api/web/toolbar#events-click) event documentation.
 
 #### Returns
 `\Kendo\UI\ToolBar`
@@ -59,7 +59,7 @@ For additional information check the [click](/kendo-ui/api/web/toolbar#events-cl
     $toolBar->click('onClick');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $toolBar = new \Kendo\UI\ToolBar('ToolBar');
@@ -68,7 +68,7 @@ For additional information check the [click](/kendo-ui/api/web/toolbar#events-cl
 
 ### close
 Fires when the SplitButton's popup closes.
-For additional information check the [close](/kendo-ui/api/web/toolbar#events-close) event documentation.
+For additional information check the [close](/api/web/toolbar#events-close) event documentation.
 
 #### Returns
 `\Kendo\UI\ToolBar`
@@ -95,7 +95,7 @@ For additional information check the [close](/kendo-ui/api/web/toolbar#events-cl
     $toolBar->close('onClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $toolBar = new \Kendo\UI\ToolBar('ToolBar');
@@ -142,7 +142,7 @@ Adds one or more ToolBarItem to the ToolBar.
 
 ### open
 Fires when the Split Button's popup opens.
-For additional information check the [open](/kendo-ui/api/web/toolbar#events-open) event documentation.
+For additional information check the [open](/api/web/toolbar#events-open) event documentation.
 
 #### Returns
 `\Kendo\UI\ToolBar`
@@ -169,7 +169,7 @@ For additional information check the [open](/kendo-ui/api/web/toolbar#events-ope
     $toolBar->open('onOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $toolBar = new \Kendo\UI\ToolBar('ToolBar');
@@ -178,7 +178,7 @@ For additional information check the [open](/kendo-ui/api/web/toolbar#events-ope
 
 ### overflowClose
 Fires when the overflow popup container is about to close.
-For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#events-overflowClose) event documentation.
+For additional information check the [overflowClose](/api/web/toolbar#events-overflowClose) event documentation.
 
 #### Returns
 `\Kendo\UI\ToolBar`
@@ -205,7 +205,7 @@ For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#e
     $toolBar->overflowClose('onOverflowClose');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $toolBar = new \Kendo\UI\ToolBar('ToolBar');
@@ -214,7 +214,7 @@ For additional information check the [overflowClose](/kendo-ui/api/web/toolbar#e
 
 ### overflowOpen
 Fires when the overflow popup container is about to open.
-For additional information check the [overflowOpen](/kendo-ui/api/web/toolbar#events-overflowOpen) event documentation.
+For additional information check the [overflowOpen](/api/web/toolbar#events-overflowOpen) event documentation.
 
 #### Returns
 `\Kendo\UI\ToolBar`
@@ -241,7 +241,7 @@ For additional information check the [overflowOpen](/kendo-ui/api/web/toolbar#ev
     $toolBar->overflowOpen('onOverflowOpen');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $toolBar = new \Kendo\UI\ToolBar('ToolBar');
@@ -268,7 +268,7 @@ If resizable is set to true the widget will detect changes in the viewport width
 
 ### toggle
 Fires when the user changes the checked state of a toggle button.
-For additional information check the [toggle](/kendo-ui/api/web/toolbar#events-toggle) event documentation.
+For additional information check the [toggle](/api/web/toolbar#events-toggle) event documentation.
 
 #### Returns
 `\Kendo\UI\ToolBar`
@@ -295,7 +295,7 @@ For additional information check the [toggle](/kendo-ui/api/web/toolbar#events-t
     $toolBar->toggle('onToggle');
     ?>
 
-#### Example - using [\Kendo\JavaScriptFunction](/kendo-ui/api/wrappers/php/kendo/javascriptfunction)
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
 
     <?php
     $toolBar = new \Kendo\UI\ToolBar('ToolBar');

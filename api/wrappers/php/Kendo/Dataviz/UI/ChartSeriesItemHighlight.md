@@ -21,7 +21,7 @@ The border of the highlighted chart series. The color is computed automatically 
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemHighlightBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemHighlightBorder)
     <?php
     $highlight = new \Kendo\Dataviz\UI\ChartSeriesItemHighlight();
     $border = new \Kendo\Dataviz\UI\ChartSeriesItemHighlightBorder();
@@ -68,7 +68,7 @@ The line of the highlighted chart series. The color is computed automatically fr
 ##### $value `\Kendo\Dataviz\UI\ChartSeriesItemHighlightLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemHighlightLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemHighlightLine)
+#### Example - using [\Kendo\Dataviz\UI\ChartSeriesItemHighlightLine](/api/wrappers/php/Kendo/Dataviz/UI/ChartSeriesItemHighlightLine)
     <?php
     $highlight = new \Kendo\Dataviz\UI\ChartSeriesItemHighlight();
     $line = new \Kendo\Dataviz\UI\ChartSeriesItemHighlightLine();

@@ -39,7 +39,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabels();
     $border = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsBorder();
@@ -104,7 +104,7 @@ The format used to display the labels when the categories are dates. Uses kendo.
 ##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsDateFormats|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsDateFormats](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsDateFormats)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsDateFormats](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsDateFormats)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabels();
     $dateFormats = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsDateFormats();
@@ -178,7 +178,7 @@ The margin of the labels. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsMargin)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsMargin)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabels();
     $margin = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsMargin();
@@ -234,7 +234,7 @@ The padding of the labels. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsPadding)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemLabelsPadding)
     <?php
     $labels = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabels();
     $padding = new \Kendo\Dataviz\UI\ChartCategoryAxisItemLabelsPadding();

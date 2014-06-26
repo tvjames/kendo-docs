@@ -60,7 +60,7 @@ The yAxis error bars value. See the series.errorBars.value option for a list of 
 
 The error bars line options.
 
-More documentation is available at [kendo:chart-seriesItem-errorBars-line](/kendo-ui/api/wrappers/jsp/chart/seriesitem-errorbars-line).
+More documentation is available at [kendo:chart-seriesItem-errorBars-line](/api/wrappers/jsp/chart/seriesitem-errorbars-line).
 
 #### Example
 

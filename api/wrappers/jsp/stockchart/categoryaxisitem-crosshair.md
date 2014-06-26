@@ -60,7 +60,7 @@ The width of the crosshair.
 
 The crosshar tooltip configuration options.
 
-More documentation is available at [kendo:stockChart-categoryAxisItem-crosshair-tooltip](/kendo-ui/api/wrappers/jsp/stockchart/categoryaxisitem-crosshair-tooltip).
+More documentation is available at [kendo:stockChart-categoryAxisItem-crosshair-tooltip](/api/wrappers/jsp/stockchart/categoryaxisitem-crosshair-tooltip).
 
 #### Example
 

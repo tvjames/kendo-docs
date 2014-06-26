@@ -3,7 +3,7 @@ title: upload
 ---
 
 # \<kendo:upload\>
-A JSP wrapper for Kendo UI [Upload](/kendo-ui/api/web/upload).
+A JSP wrapper for Kendo UI [Upload](/api/web/upload).
 
 ## Configuration Attributes
 
@@ -61,7 +61,7 @@ Configures the ability to upload a file(s) in an asynchronous manner. Please ref
 async mode help topic
 for more details.
 
-More documentation is available at [kendo:upload-async](/kendo-ui/api/wrappers/jsp/upload/async).
+More documentation is available at [kendo:upload-async](/api/wrappers/jsp/upload/async).
 
 #### Example
 
@@ -73,7 +73,7 @@ More documentation is available at [kendo:upload-async](/kendo-ui/api/wrappers/j
 
 Sets the strings rendered by the Upload.
 
-More documentation is available at [kendo:upload-localization](/kendo-ui/api/wrappers/jsp/upload/localization).
+More documentation is available at [kendo:upload-localization](/api/wrappers/jsp/upload/localization).
 
 #### Example
 
@@ -90,7 +90,7 @@ Fires when the upload has been cancelled while in progress.Note: The cancel even
 async mode.
 
 
-For additional information check the [cancel](/kendo-ui/api/web/upload#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/upload#events-cancel) event documentation.
 
 #### Example
     <kendo:upload cancel="handle_cancel">
@@ -107,7 +107,7 @@ Fires when all active uploads have completed either successfully or with errors.
 async mode.
 
 
-For additional information check the [complete](/kendo-ui/api/web/upload#events-complete) event documentation.
+For additional information check the [complete](/api/web/upload#events-complete) event documentation.
 
 #### Example
     <kendo:upload complete="handle_complete">
@@ -124,7 +124,7 @@ Fires when an upload / remove operation has failed.Note: The error event fires o
 async mode.
 
 
-For additional information check the [error](/kendo-ui/api/web/upload#events-error) event documentation.
+For additional information check the [error](/api/web/upload#events-error) event documentation.
 
 #### Example
     <kendo:upload error="handle_error">
@@ -142,7 +142,7 @@ async mode.Note: The progress event is not fired in IE.
 See Supported Browsers
 
 
-For additional information check the [progress](/kendo-ui/api/web/upload#events-progress) event documentation.
+For additional information check the [progress](/api/web/upload#events-progress) event documentation.
 
 #### Example
     <kendo:upload progress="handle_progress">
@@ -159,7 +159,7 @@ Fires when an uploaded file is about to be removed.
 Cancelling the event will prevent the remove.
 
 
-For additional information check the [remove](/kendo-ui/api/web/upload#events-remove) event documentation.
+For additional information check the [remove](/api/web/upload#events-remove) event documentation.
 
 #### Example
     <kendo:upload remove="handle_remove">
@@ -176,7 +176,7 @@ Triggered when a file(s) is selected. Note: Cancelling this event will prevent t
 occurring.
 
 
-For additional information check the [select](/kendo-ui/api/web/upload#events-select) event documentation.
+For additional information check the [select](/api/web/upload#events-select) event documentation.
 
 #### Example
     <kendo:upload select="handle_select">
@@ -193,7 +193,7 @@ Fires when an upload / remove operation has been completed successfully.Note: Th
 async mode.
 
 
-For additional information check the [success](/kendo-ui/api/web/upload#events-success) event documentation.
+For additional information check the [success](/api/web/upload#events-success) event documentation.
 
 #### Example
     <kendo:upload success="handle_success">
@@ -211,7 +211,7 @@ Cancelling the event will prevent the upload.Note: The upload event fires only w
 async mode.
 
 
-For additional information check the [upload](/kendo-ui/api/web/upload#events-upload) event documentation.
+For additional information check the [upload](/api/web/upload#events-upload) event documentation.
 
 #### Example
     <kendo:upload upload="handle_upload">
@@ -230,7 +230,7 @@ Fires when the upload has been cancelled while in progress.Note: The cancel even
 async mode.
 
 
-For additional information check the [cancel](/kendo-ui/api/web/upload#events-cancel) event documentation.
+For additional information check the [cancel](/api/web/upload#events-cancel) event documentation.
 
 #### Example
     <kendo:upload>
@@ -249,7 +249,7 @@ Fires when all active uploads have completed either successfully or with errors.
 async mode.
 
 
-For additional information check the [complete](/kendo-ui/api/web/upload#events-complete) event documentation.
+For additional information check the [complete](/api/web/upload#events-complete) event documentation.
 
 #### Example
     <kendo:upload>
@@ -268,7 +268,7 @@ Fires when an upload / remove operation has failed.Note: The error event fires o
 async mode.
 
 
-For additional information check the [error](/kendo-ui/api/web/upload#events-error) event documentation.
+For additional information check the [error](/api/web/upload#events-error) event documentation.
 
 #### Example
     <kendo:upload>
@@ -288,7 +288,7 @@ async mode.Note: The progress event is not fired in IE.
 See Supported Browsers
 
 
-For additional information check the [progress](/kendo-ui/api/web/upload#events-progress) event documentation.
+For additional information check the [progress](/api/web/upload#events-progress) event documentation.
 
 #### Example
     <kendo:upload>
@@ -307,7 +307,7 @@ Fires when an uploaded file is about to be removed.
 Cancelling the event will prevent the remove.
 
 
-For additional information check the [remove](/kendo-ui/api/web/upload#events-remove) event documentation.
+For additional information check the [remove](/api/web/upload#events-remove) event documentation.
 
 #### Example
     <kendo:upload>
@@ -326,7 +326,7 @@ Triggered when a file(s) is selected. Note: Cancelling this event will prevent t
 occurring.
 
 
-For additional information check the [select](/kendo-ui/api/web/upload#events-select) event documentation.
+For additional information check the [select](/api/web/upload#events-select) event documentation.
 
 #### Example
     <kendo:upload>
@@ -345,7 +345,7 @@ Fires when an upload / remove operation has been completed successfully.Note: Th
 async mode.
 
 
-For additional information check the [success](/kendo-ui/api/web/upload#events-success) event documentation.
+For additional information check the [success](/api/web/upload#events-success) event documentation.
 
 #### Example
     <kendo:upload>
@@ -365,7 +365,7 @@ Cancelling the event will prevent the upload.Note: The upload event fires only w
 async mode.
 
 
-For additional information check the [upload](/kendo-ui/api/web/upload#events-upload) event documentation.
+For additional information check the [upload](/api/web/upload#events-upload) event documentation.
 
 #### Example
     <kendo:upload>

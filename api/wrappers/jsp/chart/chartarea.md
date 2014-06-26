@@ -60,7 +60,7 @@ The width of the chart area.
 
 The border of the chart area.
 
-More documentation is available at [kendo:chart-chartArea-border](/kendo-ui/api/wrappers/jsp/chart/chartarea-border).
+More documentation is available at [kendo:chart-chartArea-border](/api/wrappers/jsp/chart/chartarea-border).
 
 #### Example
 
@@ -72,7 +72,7 @@ More documentation is available at [kendo:chart-chartArea-border](/kendo-ui/api/
 
 The margin of the chart area. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-chartArea-margin](/kendo-ui/api/wrappers/jsp/chart/chartarea-margin).
+More documentation is available at [kendo:chart-chartArea-margin](/api/wrappers/jsp/chart/chartarea-margin).
 
 #### Example
 

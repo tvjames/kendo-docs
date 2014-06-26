@@ -84,7 +84,7 @@ The visibility of the title.
 
 The border of the title.
 
-More documentation is available at [kendo:stockChart-title-border](/kendo-ui/api/wrappers/jsp/stockchart/title-border).
+More documentation is available at [kendo:stockChart-title-border](/api/wrappers/jsp/stockchart/title-border).
 
 #### Example
 

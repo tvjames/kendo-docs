@@ -24,7 +24,7 @@ A collection of tools that are used to interact with the Editor.
 Tools may be switched on by specifying their name.
 Custom tools and tools that require configuration are defined as objects.The available editor commands are:
 
-More documentation is available at [kendo:editor-tool](/kendo-ui/api/wrappers/jsp/editor/tool).
+More documentation is available at [kendo:editor-tool](/api/wrappers/jsp/editor/tool).
 
 #### Example
 

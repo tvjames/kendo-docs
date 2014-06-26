@@ -20,7 +20,7 @@ The default configuration for map layers by type.
 
 The default configuration for Bing (tm) tile layers.
 
-More documentation is available at [kendo:map-layerDefaults-bing](/kendo-ui/api/wrappers/jsp/map/layerdefaults-bing).
+More documentation is available at [kendo:map-layerDefaults-bing](/api/wrappers/jsp/map/layerdefaults-bing).
 
 #### Example
 
@@ -32,7 +32,7 @@ More documentation is available at [kendo:map-layerDefaults-bing](/kendo-ui/api/
 
 The default configuration for bubble layers.
 
-More documentation is available at [kendo:map-layerDefaults-bubble](/kendo-ui/api/wrappers/jsp/map/layerdefaults-bubble).
+More documentation is available at [kendo:map-layerDefaults-bubble](/api/wrappers/jsp/map/layerdefaults-bubble).
 
 #### Example
 
@@ -44,7 +44,7 @@ More documentation is available at [kendo:map-layerDefaults-bubble](/kendo-ui/ap
 
 The default configuration for marker layers.
 
-More documentation is available at [kendo:map-layerDefaults-marker](/kendo-ui/api/wrappers/jsp/map/layerdefaults-marker).
+More documentation is available at [kendo:map-layerDefaults-marker](/api/wrappers/jsp/map/layerdefaults-marker).
 
 #### Example
 
@@ -56,7 +56,7 @@ More documentation is available at [kendo:map-layerDefaults-marker](/kendo-ui/ap
 
 The default configuration for shape layers.
 
-More documentation is available at [kendo:map-layerDefaults-shape](/kendo-ui/api/wrappers/jsp/map/layerdefaults-shape).
+More documentation is available at [kendo:map-layerDefaults-shape](/api/wrappers/jsp/map/layerdefaults-shape).
 
 #### Example
 
@@ -68,7 +68,7 @@ More documentation is available at [kendo:map-layerDefaults-shape](/kendo-ui/api
 
 The default configuration for tile layers.
 
-More documentation is available at [kendo:map-layerDefaults-tile](/kendo-ui/api/wrappers/jsp/map/layerdefaults-tile).
+More documentation is available at [kendo:map-layerDefaults-tile](/api/wrappers/jsp/map/layerdefaults-tile).
 
 #### Example
 

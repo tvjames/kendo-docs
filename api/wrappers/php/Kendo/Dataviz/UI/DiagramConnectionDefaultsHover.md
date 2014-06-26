@@ -21,7 +21,7 @@ Defines the hover stroke configuration.
 ##### $value `\Kendo\Dataviz\UI\DiagramConnectionDefaultsHoverStroke|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\DiagramConnectionDefaultsHoverStroke](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/DiagramConnectionDefaultsHoverStroke)
+#### Example - using [\Kendo\Dataviz\UI\DiagramConnectionDefaultsHoverStroke](/api/wrappers/php/Kendo/Dataviz/UI/DiagramConnectionDefaultsHoverStroke)
     <?php
     $hover = new \Kendo\Dataviz\UI\DiagramConnectionDefaultsHover();
     $stroke = new \Kendo\Dataviz\UI\DiagramConnectionDefaultsHoverStroke();

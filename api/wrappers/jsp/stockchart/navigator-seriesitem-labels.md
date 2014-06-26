@@ -92,7 +92,7 @@ The visibility of the labels.
 
 The border of the labels.
 
-More documentation is available at [kendo:stockChart-navigator-seriesItem-labels-border](/kendo-ui/api/wrappers/jsp/stockchart/navigator-seriesitem-labels-border).
+More documentation is available at [kendo:stockChart-navigator-seriesItem-labels-border](/api/wrappers/jsp/stockchart/navigator-seriesitem-labels-border).
 
 #### Example
 

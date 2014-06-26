@@ -30,7 +30,7 @@ The border of the target.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesItemTargetBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesItemTargetBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesItemTargetBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesItemTargetBorder)
     <?php
     $target = new \Kendo\Dataviz\UI\StockChartSeriesItemTarget();
     $border = new \Kendo\Dataviz\UI\StockChartSeriesItemTargetBorder();
@@ -83,7 +83,7 @@ The target line.
 ##### $value `\Kendo\Dataviz\UI\StockChartSeriesItemTargetLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesItemTargetLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesItemTargetLine)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesItemTargetLine](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesItemTargetLine)
     <?php
     $target = new \Kendo\Dataviz\UI\StockChartSeriesItemTarget();
     $line = new \Kendo\Dataviz\UI\StockChartSeriesItemTargetLine();

@@ -3,7 +3,7 @@ title: diagram
 ---
 
 # \<kendo:diagram\>
-A JSP wrapper for Kendo UI [Diagram](/kendo-ui/api/dataviz/diagram).
+A JSP wrapper for Kendo UI [Diagram](/api/dataviz/diagram).
 
 ## Configuration Attributes
 
@@ -79,7 +79,7 @@ The zoom step when using the mouse-wheel to zoom in or out.
 
 Defines the connections configuration.
 
-More documentation is available at [kendo:diagram-connectionDefaults](/kendo-ui/api/wrappers/jsp/diagram/connectiondefaults).
+More documentation is available at [kendo:diagram-connectionDefaults](/api/wrappers/jsp/diagram/connectiondefaults).
 
 #### Example
 
@@ -91,7 +91,7 @@ More documentation is available at [kendo:diagram-connectionDefaults](/kendo-ui/
 
 Defines the connections configuration.
 
-More documentation is available at [kendo:diagram-connections](/kendo-ui/api/wrappers/jsp/diagram/connections).
+More documentation is available at [kendo:diagram-connections](/api/wrappers/jsp/diagram/connections).
 
 #### Example
 
@@ -103,7 +103,7 @@ More documentation is available at [kendo:diagram-connections](/kendo-ui/api/wra
 
 Specifies the shape editable.
 
-More documentation is available at [kendo:diagram-editable](/kendo-ui/api/wrappers/jsp/diagram/editable).
+More documentation is available at [kendo:diagram-editable](/api/wrappers/jsp/diagram/editable).
 
 #### Example
 
@@ -115,7 +115,7 @@ More documentation is available at [kendo:diagram-editable](/kendo-ui/api/wrappe
 
 The layout of a diagram consists in arranging the shapes (sometimes also the connections) in some fashion in order to achieve an aesthetically pleasing experience to the user. It aims at giving a more direct insight in the information contained within the diagram and its relational structure.On a technical level, layout consists of a multitude of algorithms and optimizations:and various ad-hoc calculations which depend on the type of layout. The criteria on which an algorithm is based vary but the common denominator is:Kendo diagram includes three of the most used layout algorithms which should cover most of your layout needs - tree layout, force-directed layout and layered layout. Please, check the type property for more details regarding each type.The generic way to apply a layout is by calling the layout() method on the diagram. The method has a single parameter options. It is an object, which can contain parameters which are specific to the layout as well as parameters customizing the global grid layout. Parameters which apply to other layout algorithms can be included but are overlooked if not applicable to the chose layout type. This means that you can define a set of parameters which cover all possible layout types and simply pass it in the method whatever the layout define in the first parameter.
 
-More documentation is available at [kendo:diagram-layout](/kendo-ui/api/wrappers/jsp/diagram/layout).
+More documentation is available at [kendo:diagram-layout](/api/wrappers/jsp/diagram/layout).
 
 #### Example
 
@@ -127,7 +127,7 @@ More documentation is available at [kendo:diagram-layout](/kendo-ui/api/wrappers
 
 Defines the shape options.
 
-More documentation is available at [kendo:diagram-shapeDefaults](/kendo-ui/api/wrappers/jsp/diagram/shapedefaults).
+More documentation is available at [kendo:diagram-shapeDefaults](/api/wrappers/jsp/diagram/shapedefaults).
 
 #### Example
 
@@ -139,7 +139,7 @@ More documentation is available at [kendo:diagram-shapeDefaults](/kendo-ui/api/w
 
 Defines the shape options.
 
-More documentation is available at [kendo:diagram-shapes](/kendo-ui/api/wrappers/jsp/diagram/shapes).
+More documentation is available at [kendo:diagram-shapes](/api/wrappers/jsp/diagram/shapes).
 
 #### Example
 
@@ -155,7 +155,7 @@ More documentation is available at [kendo:diagram-shapes](/kendo-ui/api/wrappers
 Fired when an item is added or removed to/from the diagram.
 
 
-For additional information check the [change](/kendo-ui/api/dataviz/diagram#events-change) event documentation.
+For additional information check the [change](/api/dataviz/diagram#events-change) event documentation.
 
 #### Example
     <kendo:diagram change="handle_change">
@@ -171,7 +171,7 @@ For additional information check the [change](/kendo-ui/api/dataviz/diagram#even
 Fired when the location or size of an item are changed.
 
 
-For additional information check the [itemBoundsChange](/kendo-ui/api/dataviz/diagram#events-itemBoundsChange) event documentation.
+For additional information check the [itemBoundsChange](/api/dataviz/diagram#events-itemBoundsChange) event documentation.
 
 #### Example
     <kendo:diagram itemBoundsChange="handle_itemBoundsChange">
@@ -187,7 +187,7 @@ For additional information check the [itemBoundsChange](/kendo-ui/api/dataviz/di
 Fired when an item is rotated.
 
 
-For additional information check the [itemRotate](/kendo-ui/api/dataviz/diagram#events-itemRotate) event documentation.
+For additional information check the [itemRotate](/api/dataviz/diagram#events-itemRotate) event documentation.
 
 #### Example
     <kendo:diagram itemRotate="handle_itemRotate">
@@ -203,7 +203,7 @@ For additional information check the [itemRotate](/kendo-ui/api/dataviz/diagram#
 Fired when the user pans the diagram.
 
 
-For additional information check the [pan](/kendo-ui/api/dataviz/diagram#events-pan) event documentation.
+For additional information check the [pan](/api/dataviz/diagram#events-pan) event documentation.
 
 #### Example
     <kendo:diagram pan="handle_pan">
@@ -219,7 +219,7 @@ For additional information check the [pan](/kendo-ui/api/dataviz/diagram#events-
 Fired when the user selects one or more items.
 
 
-For additional information check the [select](/kendo-ui/api/dataviz/diagram#events-select) event documentation.
+For additional information check the [select](/api/dataviz/diagram#events-select) event documentation.
 
 #### Example
     <kendo:diagram select="handle_select">
@@ -235,7 +235,7 @@ For additional information check the [select](/kendo-ui/api/dataviz/diagram#even
 Fired when the user starts changing the diagram zoom level.
 
 
-For additional information check the [zoomStart](/kendo-ui/api/dataviz/diagram#events-zoomStart) event documentation.
+For additional information check the [zoomStart](/api/dataviz/diagram#events-zoomStart) event documentation.
 
 #### Example
     <kendo:diagram zoomStart="handle_zoomStart">
@@ -251,7 +251,7 @@ For additional information check the [zoomStart](/kendo-ui/api/dataviz/diagram#e
 Fired when the user changes the diagram zoom level.
 
 
-For additional information check the [zoomEnd](/kendo-ui/api/dataviz/diagram#events-zoomEnd) event documentation.
+For additional information check the [zoomEnd](/api/dataviz/diagram#events-zoomEnd) event documentation.
 
 #### Example
     <kendo:diagram zoomEnd="handle_zoomEnd">
@@ -267,7 +267,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/diagram#eve
 Fired when the user clicks on a shape or a connection.
 
 
-For additional information check the [click](/kendo-ui/api/dataviz/diagram#events-click) event documentation.
+For additional information check the [click](/api/dataviz/diagram#events-click) event documentation.
 
 #### Example
     <kendo:diagram click="handle_click">
@@ -285,7 +285,7 @@ For additional information check the [click](/kendo-ui/api/dataviz/diagram#event
 Fired when an item is added or removed to/from the diagram.
 
 
-For additional information check the [change](/kendo-ui/api/dataviz/diagram#events-change) event documentation.
+For additional information check the [change](/api/dataviz/diagram#events-change) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -303,7 +303,7 @@ For additional information check the [change](/kendo-ui/api/dataviz/diagram#even
 Fired when the location or size of an item are changed.
 
 
-For additional information check the [itemBoundsChange](/kendo-ui/api/dataviz/diagram#events-itemBoundsChange) event documentation.
+For additional information check the [itemBoundsChange](/api/dataviz/diagram#events-itemBoundsChange) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -321,7 +321,7 @@ For additional information check the [itemBoundsChange](/kendo-ui/api/dataviz/di
 Fired when an item is rotated.
 
 
-For additional information check the [itemRotate](/kendo-ui/api/dataviz/diagram#events-itemRotate) event documentation.
+For additional information check the [itemRotate](/api/dataviz/diagram#events-itemRotate) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -339,7 +339,7 @@ For additional information check the [itemRotate](/kendo-ui/api/dataviz/diagram#
 Fired when the user pans the diagram.
 
 
-For additional information check the [pan](/kendo-ui/api/dataviz/diagram#events-pan) event documentation.
+For additional information check the [pan](/api/dataviz/diagram#events-pan) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -357,7 +357,7 @@ For additional information check the [pan](/kendo-ui/api/dataviz/diagram#events-
 Fired when the user selects one or more items.
 
 
-For additional information check the [select](/kendo-ui/api/dataviz/diagram#events-select) event documentation.
+For additional information check the [select](/api/dataviz/diagram#events-select) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -375,7 +375,7 @@ For additional information check the [select](/kendo-ui/api/dataviz/diagram#even
 Fired when the user starts changing the diagram zoom level.
 
 
-For additional information check the [zoomStart](/kendo-ui/api/dataviz/diagram#events-zoomStart) event documentation.
+For additional information check the [zoomStart](/api/dataviz/diagram#events-zoomStart) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -393,7 +393,7 @@ For additional information check the [zoomStart](/kendo-ui/api/dataviz/diagram#e
 Fired when the user changes the diagram zoom level.
 
 
-For additional information check the [zoomEnd](/kendo-ui/api/dataviz/diagram#events-zoomEnd) event documentation.
+For additional information check the [zoomEnd](/api/dataviz/diagram#events-zoomEnd) event documentation.
 
 #### Example
     <kendo:diagram>
@@ -411,7 +411,7 @@ For additional information check the [zoomEnd](/kendo-ui/api/dataviz/diagram#eve
 Fired when the user clicks on a shape or a connection.
 
 
-For additional information check the [click](/kendo-ui/api/dataviz/diagram#events-click) event documentation.
+For additional information check the [click](/api/dataviz/diagram#events-click) event documentation.
 
 #### Example
     <kendo:diagram>

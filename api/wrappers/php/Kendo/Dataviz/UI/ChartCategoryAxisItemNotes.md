@@ -59,7 +59,7 @@ The icon of the notes.
 ##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesIcon|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesIcon](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemNotesIcon)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesIcon](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemNotesIcon)
     <?php
     $notes = new \Kendo\Dataviz\UI\ChartCategoryAxisItemNotes();
     $icon = new \Kendo\Dataviz\UI\ChartCategoryAxisItemNotesIcon();
@@ -88,7 +88,7 @@ The label of the notes.
 ##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLabel|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLabel](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemNotesLabel)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLabel](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemNotesLabel)
     <?php
     $notes = new \Kendo\Dataviz\UI\ChartCategoryAxisItemNotes();
     $label = new \Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLabel();
@@ -117,7 +117,7 @@ The line of the notes.
 ##### $value `\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLine|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLine](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemNotesLine)
+#### Example - using [\Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLine](/api/wrappers/php/Kendo/Dataviz/UI/ChartCategoryAxisItemNotesLine)
     <?php
     $notes = new \Kendo\Dataviz\UI\ChartCategoryAxisItemNotes();
     $line = new \Kendo\Dataviz\UI\ChartCategoryAxisItemNotesLine();

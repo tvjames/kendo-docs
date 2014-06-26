@@ -84,7 +84,7 @@ If set to true the chart will display the y axis notes label. By default the y a
 
 The border of the label.
 
-More documentation is available at [kendo:chart-yAxisItem-notes-label-border](/kendo-ui/api/wrappers/jsp/chart/yaxisitem-notes-label-border).
+More documentation is available at [kendo:chart-yAxisItem-notes-label-border](/api/wrappers/jsp/chart/yaxisitem-notes-label-border).
 
 #### Example
 

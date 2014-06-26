@@ -39,7 +39,7 @@ The border of the labels.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsBorder)
     <?php
     $labels = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabels();
     $border = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsBorder();
@@ -104,7 +104,7 @@ The format used to display the labels when the categories are dates. Uses kendo.
 ##### $value `\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsDateFormats|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsDateFormats](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsDateFormats)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsDateFormats](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsDateFormats)
     <?php
     $labels = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabels();
     $dateFormats = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsDateFormats();
@@ -178,7 +178,7 @@ The margin of the labels. A numeric value will set all margins.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsMargin](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsMargin)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsMargin](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsMargin)
     <?php
     $labels = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabels();
     $margin = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsMargin();
@@ -234,7 +234,7 @@ The padding of the labels. A numeric value will set all paddings.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsPadding](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsPadding)
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsPadding](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorCategoryAxisItemLabelsPadding)
     <?php
     $labels = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabels();
     $padding = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItemLabelsPadding();

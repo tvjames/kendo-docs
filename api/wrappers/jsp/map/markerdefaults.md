@@ -28,7 +28,7 @@ The default marker shape. Supported shapes are "pin" and "pinTarget".
 
 Default Kendo UI Tooltip options for this marker.
 
-More documentation is available at [kendo:map-markerDefaults-tooltip](/kendo-ui/api/wrappers/jsp/map/markerdefaults-tooltip).
+More documentation is available at [kendo:map-markerDefaults-tooltip](/api/wrappers/jsp/map/markerdefaults-tooltip).
 
 #### Example
 

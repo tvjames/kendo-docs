@@ -16,7 +16,7 @@ By default the Kendo UI Gantt widget displays all three ("day", "week", and "mon
 
 ### dayHeaderTemplate `java.lang.String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
+The [template](/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
 
 #### Example
     <kendo:gantt-view dayHeaderTemplate="dayHeaderTemplate">
@@ -24,7 +24,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### monthHeaderTemplate `java.lang.String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the month slots in "month" views.
+The [template](/api/framework/kendo#methods-template used to render the month slots in "month" views.
 
 #### Example
     <kendo:gantt-view monthHeaderTemplate="monthHeaderTemplate">
@@ -48,7 +48,7 @@ The size of the time slot headers. Values are treated as pixels.
 
 ### timeHeaderTemplate `java.lang.String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the time slots in "day" view
+The [template](/api/framework/kendo#methods-template used to render the time slots in "day" view
 
 #### Example
     <kendo:gantt-view timeHeaderTemplate="timeHeaderTemplate">
@@ -64,7 +64,7 @@ The view type. Supported types are "day", "week", and "month".
 
 ### weekHeaderTemplate `java.lang.String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
+The [template](/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
 
 #### Example
     <kendo:gantt-view weekHeaderTemplate="weekHeaderTemplate">
@@ -75,7 +75,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### timeHeaderTemplate `String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the time slots in "day" view
+The [template](/api/framework/kendo#methods-template used to render the time slots in "day" view
 
 
 #### Example
@@ -89,7 +89,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### dayHeaderTemplate `String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
+The [template](/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
 
 
 #### Example
@@ -103,7 +103,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### weekHeaderTemplate `String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
+The [template](/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
 
 
 #### Example
@@ -117,7 +117,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### monthHeaderTemplate `String`
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the month slots in "month" views.
+The [template](/api/framework/kendo#methods-template used to render the month slots in "month" views.
 
 
 #### Example
@@ -133,7 +133,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### kendo:gantt-view-timeHeaderTemplate
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the time slots in "day" view
+The [template](/api/framework/kendo#methods-template used to render the time slots in "day" view
 
 
 #### Example
@@ -149,7 +149,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### kendo:gantt-view-dayHeaderTemplate
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
+The [template](/api/framework/kendo#methods-template used to render the day slots in "day" and "week" views.
 
 
 #### Example
@@ -165,7 +165,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### kendo:gantt-view-weekHeaderTemplate
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
+The [template](/api/framework/kendo#methods-template used to render the week slots in "week" and "month" views.
 
 
 #### Example
@@ -181,7 +181,7 @@ The [template](/kendo-ui/api/framework/kendo#methods-template used to render the
 
 ### kendo:gantt-view-monthHeaderTemplate
 
-The [template](/kendo-ui/api/framework/kendo#methods-template used to render the month slots in "month" views.
+The [template](/api/framework/kendo#methods-template used to render the month slots in "month" views.
 
 
 #### Example

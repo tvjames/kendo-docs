@@ -3,7 +3,7 @@ title: colorPicker
 ---
 
 # \<kendo:colorPicker\>
-A JSP wrapper for Kendo UI [ColorPicker](/kendo-ui/api/web/colorpicker).
+A JSP wrapper for Kendo UI [ColorPicker](/api/web/colorpicker).
 
 ## Configuration Attributes
 
@@ -93,7 +93,7 @@ Note that when initializing the widget from an <input> element, the initial colo
 
 The size of a color cell.
 
-More documentation is available at [kendo:colorPicker-tileSize](/kendo-ui/api/wrappers/jsp/colorpicker/tilesize).
+More documentation is available at [kendo:colorPicker-tileSize](/api/wrappers/jsp/colorpicker/tilesize).
 
 #### Example
 
@@ -111,7 +111,7 @@ simple picker), by clicking ENTER or by pressing "Apply" in the HSV
 picker.
 
 
-For additional information check the [change](/kendo-ui/api/web/colorpicker#events-change) event documentation.
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
 
 #### Example
     <kendo:colorPicker change="handle_change">
@@ -131,7 +131,7 @@ ESC would cancel the selection and the color will revert to the
 original value.
 
 
-For additional information check the [select](/kendo-ui/api/web/colorpicker#events-select) event documentation.
+For additional information check the [select](/api/web/colorpicker#events-select) event documentation.
 
 #### Example
     <kendo:colorPicker select="handle_select">
@@ -147,7 +147,7 @@ For additional information check the [select](/kendo-ui/api/web/colorpicker#even
 Fires when the picker popup is opening.
 
 
-For additional information check the [open](/kendo-ui/api/web/colorpicker#events-open) event documentation.
+For additional information check the [open](/api/web/colorpicker#events-open) event documentation.
 
 #### Example
     <kendo:colorPicker open="handle_open">
@@ -163,7 +163,7 @@ For additional information check the [open](/kendo-ui/api/web/colorpicker#events
 Fires when the picker popup is closing.
 
 
-For additional information check the [close](/kendo-ui/api/web/colorpicker#events-close) event documentation.
+For additional information check the [close](/api/web/colorpicker#events-close) event documentation.
 
 #### Example
     <kendo:colorPicker close="handle_close">
@@ -183,7 +183,7 @@ simple picker), by clicking ENTER or by pressing "Apply" in the HSV
 picker.
 
 
-For additional information check the [change](/kendo-ui/api/web/colorpicker#events-change) event documentation.
+For additional information check the [change](/api/web/colorpicker#events-change) event documentation.
 
 #### Example
     <kendo:colorPicker>
@@ -205,7 +205,7 @@ ESC would cancel the selection and the color will revert to the
 original value.
 
 
-For additional information check the [select](/kendo-ui/api/web/colorpicker#events-select) event documentation.
+For additional information check the [select](/api/web/colorpicker#events-select) event documentation.
 
 #### Example
     <kendo:colorPicker>
@@ -223,7 +223,7 @@ For additional information check the [select](/kendo-ui/api/web/colorpicker#even
 Fires when the picker popup is opening.
 
 
-For additional information check the [open](/kendo-ui/api/web/colorpicker#events-open) event documentation.
+For additional information check the [open](/api/web/colorpicker#events-open) event documentation.
 
 #### Example
     <kendo:colorPicker>
@@ -241,7 +241,7 @@ For additional information check the [open](/kendo-ui/api/web/colorpicker#events
 Fires when the picker popup is closing.
 
 
-For additional information check the [close](/kendo-ui/api/web/colorpicker#events-close) event documentation.
+For additional information check the [close](/api/web/colorpicker#events-close) event documentation.
 
 #### Example
     <kendo:colorPicker>

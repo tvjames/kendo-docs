@@ -39,7 +39,7 @@ The border of the legend.
 ##### $value `\Kendo\Dataviz\UI\StockChartLegendBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartLegendBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartLegendBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendBorder)
     <?php
     $legend = new \Kendo\Dataviz\UI\StockChartLegend();
     $border = new \Kendo\Dataviz\UI\StockChartLegendBorder();
@@ -68,7 +68,7 @@ Configures the legend inactive items.
 ##### $value `\Kendo\Dataviz\UI\StockChartLegendInactiveItems|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartLegendInactiveItems](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendInactiveItems)
+#### Example - using [\Kendo\Dataviz\UI\StockChartLegendInactiveItems](/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendInactiveItems)
     <?php
     $legend = new \Kendo\Dataviz\UI\StockChartLegend();
     $inactiveItems = new \Kendo\Dataviz\UI\StockChartLegendInactiveItems();
@@ -97,7 +97,7 @@ Configures the legend labels.
 ##### $value `\Kendo\Dataviz\UI\StockChartLegendLabels|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartLegendLabels](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendLabels)
+#### Example - using [\Kendo\Dataviz\UI\StockChartLegendLabels](/api/wrappers/php/Kendo/Dataviz/UI/StockChartLegendLabels)
     <?php
     $legend = new \Kendo\Dataviz\UI\StockChartLegend();
     $labels = new \Kendo\Dataviz\UI\StockChartLegendLabels();

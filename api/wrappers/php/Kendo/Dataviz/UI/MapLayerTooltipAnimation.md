@@ -21,7 +21,7 @@ The animation that will be used when a Tooltip closes.
 ##### $value `\Kendo\Dataviz\UI\MapLayerTooltipAnimationClose|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerTooltipAnimationClose](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerTooltipAnimationClose)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerTooltipAnimationClose](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerTooltipAnimationClose)
     <?php
     $animation = new \Kendo\Dataviz\UI\MapLayerTooltipAnimation();
     $close = new \Kendo\Dataviz\UI\MapLayerTooltipAnimationClose();
@@ -50,7 +50,7 @@ The animation that will be used when a Tooltip opens.
 ##### $value `\Kendo\Dataviz\UI\MapLayerTooltipAnimationOpen|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapLayerTooltipAnimationOpen](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapLayerTooltipAnimationOpen)
+#### Example - using [\Kendo\Dataviz\UI\MapLayerTooltipAnimationOpen](/api/wrappers/php/Kendo/Dataviz/UI/MapLayerTooltipAnimationOpen)
     <?php
     $animation = new \Kendo\Dataviz\UI\MapLayerTooltipAnimation();
     $open = new \Kendo\Dataviz\UI\MapLayerTooltipAnimationOpen();

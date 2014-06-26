@@ -4,14 +4,14 @@ title: RadialGauge
 
 # \Kendo\Dataviz\UI\RadialGauge
 
-A PHP wrapper for Kendo UI [RadialGauge](/kendo-ui/api/dataviz/radialgauge).
+A PHP wrapper for Kendo UI [RadialGauge](/api/dataviz/radialgauge).
 
-Inherits from [\Kendo\UI\Widget](/kendo-ui/api/wrappers/php/Kendo/UI/Widget).
+Inherits from [\Kendo\UI\Widget](/api/wrappers/php/Kendo/UI/Widget).
 
 ## Usage
 
 To use RadialGauge in a PHP page instantiate a new instance, configure it via the available
-configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/kendo-ui/api/wrappers/php/Kendo/UI/Widget#render) method.
+configuration [methods](#methods) and output it by `echo`-ing the result of the [render](/api/wrappers/php/Kendo/UI/Widget#render) method.
 
 ### Using Kendo RadialGauge
 
@@ -43,7 +43,7 @@ This is the entire visible area of the gauge.
 ##### $value `\Kendo\Dataviz\UI\RadialGaugeGaugeArea|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\RadialGaugeGaugeArea](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/RadialGaugeGaugeArea)
+#### Example - using [\Kendo\Dataviz\UI\RadialGaugeGaugeArea](/api/wrappers/php/Kendo/Dataviz/UI/RadialGaugeGaugeArea)
     <?php
     $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
     $gaugeArea = new \Kendo\Dataviz\UI\RadialGaugeGaugeArea();
@@ -72,7 +72,7 @@ The pointer configuration options.
 ##### $value `\Kendo\Dataviz\UI\RadialGaugePointer|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\RadialGaugePointer](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/RadialGaugePointer)
+#### Example - using [\Kendo\Dataviz\UI\RadialGaugePointer](/api/wrappers/php/Kendo/Dataviz/UI/RadialGaugePointer)
     <?php
     $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
     $pointer = new \Kendo\Dataviz\UI\RadialGaugePointer();
@@ -120,7 +120,7 @@ Configures the scale.
 ##### $value `\Kendo\Dataviz\UI\RadialGaugeScale|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\RadialGaugeScale](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/RadialGaugeScale)
+#### Example - using [\Kendo\Dataviz\UI\RadialGaugeScale](/api/wrappers/php/Kendo/Dataviz/UI/RadialGaugeScale)
     <?php
     $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
     $scale = new \Kendo\Dataviz\UI\RadialGaugeScale();

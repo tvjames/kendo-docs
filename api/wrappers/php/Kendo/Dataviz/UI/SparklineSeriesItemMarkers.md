@@ -54,7 +54,7 @@ The border of the markers.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemMarkersBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemMarkersBorder)
+#### Example - using [\Kendo\Dataviz\UI\SparklineSeriesItemMarkersBorder](/api/wrappers/php/Kendo/Dataviz/UI/SparklineSeriesItemMarkersBorder)
     <?php
     $markers = new \Kendo\Dataviz\UI\SparklineSeriesItemMarkers();
     $border = new \Kendo\Dataviz\UI\SparklineSeriesItemMarkersBorder();

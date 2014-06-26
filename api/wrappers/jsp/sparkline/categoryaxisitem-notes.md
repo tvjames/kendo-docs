@@ -28,7 +28,7 @@ The position of the category axis note.
 
 The items of the notes.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes-data](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes-data).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes-data](/api/wrappers/jsp/sparkline/categoryaxisitem-notes-data).
 
 #### Example
 
@@ -40,7 +40,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-notes-data]
 
 The icon of the notes.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes-icon](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes-icon).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes-icon](/api/wrappers/jsp/sparkline/categoryaxisitem-notes-icon).
 
 #### Example
 
@@ -52,7 +52,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-notes-icon]
 
 The label of the notes.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes-label](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes-label).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes-label](/api/wrappers/jsp/sparkline/categoryaxisitem-notes-label).
 
 #### Example
 
@@ -64,7 +64,7 @@ More documentation is available at [kendo:sparkline-categoryAxisItem-notes-label
 
 The line of the notes.
 
-More documentation is available at [kendo:sparkline-categoryAxisItem-notes-line](/kendo-ui/api/wrappers/jsp/sparkline/categoryaxisitem-notes-line).
+More documentation is available at [kendo:sparkline-categoryAxisItem-notes-line](/api/wrappers/jsp/sparkline/categoryaxisitem-notes-line).
 
 #### Example
 

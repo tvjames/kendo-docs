@@ -20,7 +20,7 @@ Specifies the shape resizing.
 
 Specifies the handles style.
 
-More documentation is available at [kendo:diagram-editable-resize-handles](/kendo-ui/api/wrappers/jsp/diagram/editable-resize-handles).
+More documentation is available at [kendo:diagram-editable-resize-handles](/api/wrappers/jsp/diagram/editable-resize-handles).
 
 #### Example
 

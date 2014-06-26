@@ -44,7 +44,7 @@ A value indicating if the series points should be highlighted.
 
 The border of highlighted points. The color is computed automatically from the base point color.** Applicable to pie series. **
 
-More documentation is available at [kendo:sparkline-seriesItem-highlight-border](/kendo-ui/api/wrappers/jsp/sparkline/seriesitem-highlight-border).
+More documentation is available at [kendo:sparkline-seriesItem-highlight-border](/api/wrappers/jsp/sparkline/seriesitem-highlight-border).
 
 #### Example
 

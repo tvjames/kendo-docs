@@ -39,7 +39,7 @@ The border of the label.
 ##### $value `\Kendo\Dataviz\UI\ChartXAxisItemNotesLabelBorder|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemNotesLabelBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemNotesLabelBorder)
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemNotesLabelBorder](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemNotesLabelBorder)
     <?php
     $label = new \Kendo\Dataviz\UI\ChartXAxisItemNotesLabel();
     $border = new \Kendo\Dataviz\UI\ChartXAxisItemNotesLabelBorder();

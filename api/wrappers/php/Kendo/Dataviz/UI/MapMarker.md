@@ -75,7 +75,7 @@ Kendo UI Tooltip options for this marker.
 ##### $value `\Kendo\Dataviz\UI\MapMarkerTooltip|array`
 
 
-#### Example - using [\Kendo\Dataviz\UI\MapMarkerTooltip](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/MapMarkerTooltip)
+#### Example - using [\Kendo\Dataviz\UI\MapMarkerTooltip](/api/wrappers/php/Kendo/Dataviz/UI/MapMarkerTooltip)
     <?php
     $marker = new \Kendo\Dataviz\UI\MapMarker();
     $tooltip = new \Kendo\Dataviz\UI\MapMarkerTooltip();

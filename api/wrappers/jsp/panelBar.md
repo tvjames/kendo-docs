@@ -3,7 +3,7 @@ title: panelBar
 ---
 
 # \<kendo:panelBar\>
-A JSP wrapper for Kendo UI [PanelBar](/kendo-ui/api/web/panelbar).
+A JSP wrapper for Kendo UI [PanelBar](/api/web/panelbar).
 
 ## Configuration Attributes
 
@@ -41,7 +41,7 @@ are available:
 A collection of visual animations used when PanelBar items are expand or collapsed through
 user interactions. Setting this option to false will disable all animations.
 
-More documentation is available at [kendo:panelBar-animation](/kendo-ui/api/wrappers/jsp/panelbar/animation).
+More documentation is available at [kendo:panelBar-animation](/api/wrappers/jsp/panelbar/animation).
 
 #### Example
 
@@ -53,7 +53,7 @@ More documentation is available at [kendo:panelBar-animation](/kendo-ui/api/wrap
 
 Contains the items of the panelbar widget
 
-More documentation is available at [kendo:panelBar-items](/kendo-ui/api/wrappers/jsp/panelbar/items).
+More documentation is available at [kendo:panelBar-items](/api/wrappers/jsp/panelbar/items).
 
 #### Example
 
@@ -69,7 +69,7 @@ More documentation is available at [kendo:panelBar-items](/kendo-ui/api/wrappers
 Triggered when an item of a PanelBar is activated.
 
 
-For additional information check the [activate](/kendo-ui/api/web/panelbar#events-activate) event documentation.
+For additional information check the [activate](/api/web/panelbar#events-activate) event documentation.
 
 #### Example
     <kendo:panelBar activate="handle_activate">
@@ -85,7 +85,7 @@ For additional information check the [activate](/kendo-ui/api/web/panelbar#event
 Triggered when an item of a PanelBar is collapsed.
 
 
-For additional information check the [collapse](/kendo-ui/api/web/panelbar#events-collapse) event documentation.
+For additional information check the [collapse](/api/web/panelbar#events-collapse) event documentation.
 
 #### Example
     <kendo:panelBar collapse="handle_collapse">
@@ -101,7 +101,7 @@ For additional information check the [collapse](/kendo-ui/api/web/panelbar#event
 Fires when content is fetched from an AJAX request.
 
 
-For additional information check the [contentLoad](/kendo-ui/api/web/panelbar#events-contentLoad) event documentation.
+For additional information check the [contentLoad](/api/web/panelbar#events-contentLoad) event documentation.
 
 #### Example
     <kendo:panelBar contentLoad="handle_contentLoad">
@@ -117,7 +117,7 @@ For additional information check the [contentLoad](/kendo-ui/api/web/panelbar#ev
 Fires when AJAX request results in an error.
 
 
-For additional information check the [error](/kendo-ui/api/web/panelbar#events-error) event documentation.
+For additional information check the [error](/api/web/panelbar#events-error) event documentation.
 
 #### Example
     <kendo:panelBar error="handle_error">
@@ -133,7 +133,7 @@ For additional information check the [error](/kendo-ui/api/web/panelbar#events-e
 Triggered when an item of a PanelBar is expanded.
 
 
-For additional information check the [expand](/kendo-ui/api/web/panelbar#events-expand) event documentation.
+For additional information check the [expand](/api/web/panelbar#events-expand) event documentation.
 
 #### Example
     <kendo:panelBar expand="handle_expand">
@@ -149,7 +149,7 @@ For additional information check the [expand](/kendo-ui/api/web/panelbar#events-
 Triggered when an item of a PanelBar is selected.
 
 
-For additional information check the [select](/kendo-ui/api/web/panelbar#events-select) event documentation.
+For additional information check the [select](/api/web/panelbar#events-select) event documentation.
 
 #### Example
     <kendo:panelBar select="handle_select">
@@ -167,7 +167,7 @@ For additional information check the [select](/kendo-ui/api/web/panelbar#events-
 Triggered when an item of a PanelBar is activated.
 
 
-For additional information check the [activate](/kendo-ui/api/web/panelbar#events-activate) event documentation.
+For additional information check the [activate](/api/web/panelbar#events-activate) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -185,7 +185,7 @@ For additional information check the [activate](/kendo-ui/api/web/panelbar#event
 Triggered when an item of a PanelBar is collapsed.
 
 
-For additional information check the [collapse](/kendo-ui/api/web/panelbar#events-collapse) event documentation.
+For additional information check the [collapse](/api/web/panelbar#events-collapse) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -203,7 +203,7 @@ For additional information check the [collapse](/kendo-ui/api/web/panelbar#event
 Fires when content is fetched from an AJAX request.
 
 
-For additional information check the [contentLoad](/kendo-ui/api/web/panelbar#events-contentLoad) event documentation.
+For additional information check the [contentLoad](/api/web/panelbar#events-contentLoad) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -221,7 +221,7 @@ For additional information check the [contentLoad](/kendo-ui/api/web/panelbar#ev
 Fires when AJAX request results in an error.
 
 
-For additional information check the [error](/kendo-ui/api/web/panelbar#events-error) event documentation.
+For additional information check the [error](/api/web/panelbar#events-error) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -239,7 +239,7 @@ For additional information check the [error](/kendo-ui/api/web/panelbar#events-e
 Triggered when an item of a PanelBar is expanded.
 
 
-For additional information check the [expand](/kendo-ui/api/web/panelbar#events-expand) event documentation.
+For additional information check the [expand](/api/web/panelbar#events-expand) event documentation.
 
 #### Example
     <kendo:panelBar>
@@ -257,7 +257,7 @@ For additional information check the [expand](/kendo-ui/api/web/panelbar#events-
 Triggered when an item of a PanelBar is selected.
 
 
-For additional information check the [select](/kendo-ui/api/web/panelbar#events-select) event documentation.
+For additional information check the [select](/api/web/panelbar#events-select) event documentation.
 
 #### Example
     <kendo:panelBar>

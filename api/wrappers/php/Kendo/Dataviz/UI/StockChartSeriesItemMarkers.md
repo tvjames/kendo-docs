@@ -54,7 +54,7 @@ The border of the markers.
     ?>
 
 
-#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesItemMarkersBorder](/kendo-ui/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesItemMarkersBorder)
+#### Example - using [\Kendo\Dataviz\UI\StockChartSeriesItemMarkersBorder](/api/wrappers/php/Kendo/Dataviz/UI/StockChartSeriesItemMarkersBorder)
     <?php
     $markers = new \Kendo\Dataviz\UI\StockChartSeriesItemMarkers();
     $border = new \Kendo\Dataviz\UI\StockChartSeriesItemMarkersBorder();

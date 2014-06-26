@@ -21,7 +21,7 @@ The texts of the filter operators displayed for columns bound to date fields.
 ##### $value `\Kendo\UI\GridFilterableOperatorsDate|array`
 
 
-#### Example - using [\Kendo\UI\GridFilterableOperatorsDate](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterableOperatorsDate)
+#### Example - using [\Kendo\UI\GridFilterableOperatorsDate](/api/wrappers/php/Kendo/UI/GridFilterableOperatorsDate)
     <?php
     $operators = new \Kendo\UI\GridFilterableOperators();
     $date = new \Kendo\UI\GridFilterableOperatorsDate();
@@ -50,7 +50,7 @@ The texts of the filter operators displayed for columns which have their values 
 ##### $value `\Kendo\UI\GridFilterableOperatorsEnums|array`
 
 
-#### Example - using [\Kendo\UI\GridFilterableOperatorsEnums](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterableOperatorsEnums)
+#### Example - using [\Kendo\UI\GridFilterableOperatorsEnums](/api/wrappers/php/Kendo/UI/GridFilterableOperatorsEnums)
     <?php
     $operators = new \Kendo\UI\GridFilterableOperators();
     $enums = new \Kendo\UI\GridFilterableOperatorsEnums();
@@ -79,7 +79,7 @@ The texts of the filter operators displayed for columns bound to number fields.
 ##### $value `\Kendo\UI\GridFilterableOperatorsNumber|array`
 
 
-#### Example - using [\Kendo\UI\GridFilterableOperatorsNumber](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterableOperatorsNumber)
+#### Example - using [\Kendo\UI\GridFilterableOperatorsNumber](/api/wrappers/php/Kendo/UI/GridFilterableOperatorsNumber)
     <?php
     $operators = new \Kendo\UI\GridFilterableOperators();
     $number = new \Kendo\UI\GridFilterableOperatorsNumber();
@@ -108,7 +108,7 @@ The texts of the filter operators displayed for columns bound to string fields.
 ##### $value `\Kendo\UI\GridFilterableOperatorsString|array`
 
 
-#### Example - using [\Kendo\UI\GridFilterableOperatorsString](/kendo-ui/api/wrappers/php/Kendo/UI/GridFilterableOperatorsString)
+#### Example - using [\Kendo\UI\GridFilterableOperatorsString](/api/wrappers/php/Kendo/UI/GridFilterableOperatorsString)
     <?php
     $operators = new \Kendo\UI\GridFilterableOperators();
     $string = new \Kendo\UI\GridFilterableOperatorsString();

@@ -77,7 +77,7 @@ The title configuration of the chart pane. Further configuration is available vi
 
 The border of the chart pane.
 
-More documentation is available at [kendo:chart-pane-border](/kendo-ui/api/wrappers/jsp/chart/pane-border).
+More documentation is available at [kendo:chart-pane-border](/api/wrappers/jsp/chart/pane-border).
 
 #### Example
 
@@ -89,7 +89,7 @@ More documentation is available at [kendo:chart-pane-border](/kendo-ui/api/wrapp
 
 The margin of the pane. A numeric value will set all margins.
 
-More documentation is available at [kendo:chart-pane-margin](/kendo-ui/api/wrappers/jsp/chart/pane-margin).
+More documentation is available at [kendo:chart-pane-margin](/api/wrappers/jsp/chart/pane-margin).
 
 #### Example
 
@@ -101,7 +101,7 @@ More documentation is available at [kendo:chart-pane-margin](/kendo-ui/api/wrapp
 
 The padding of the pane. A numeric value will set all paddings.
 
-More documentation is available at [kendo:chart-pane-padding](/kendo-ui/api/wrappers/jsp/chart/pane-padding).
+More documentation is available at [kendo:chart-pane-padding](/api/wrappers/jsp/chart/pane-padding).
 
 #### Example
 
@@ -113,7 +113,7 @@ More documentation is available at [kendo:chart-pane-padding](/kendo-ui/api/wrap
 
 The title configuration of the chart pane.
 
-More documentation is available at [kendo:chart-pane-title](/kendo-ui/api/wrappers/jsp/chart/pane-title).
+More documentation is available at [kendo:chart-pane-title](/api/wrappers/jsp/chart/pane-title).
 
 #### Example
 
