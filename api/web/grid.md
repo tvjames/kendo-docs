@@ -1582,25 +1582,27 @@ Can be set to a function which will be called, passing the model instance, to re
     </script>
 
 #### Example - set delete confirmation as function
+
     <div id="grid"></div>
     <script>
     $("#grid").kendoGrid({
-        columns: [
-            { field: "name" },
-            { field: "age" },
-            { command: "destroy" }
-        ],
-        dataSource: [
-            { name: "Jane Doe", age: 30 },
-            { name: "John Doe", age: 33 }
-        ],
-        editable: {
+       columns: [
+         { field: "name" },
+         { field: "age" },
+         { command: "destroy" }
+       ],
+       dataSource: [
+         { name: "Jane Doe", age: 30 },
+         { name: "John Doe", age: 33 }
+       ],
+       editable: {
             confirmation: function(e) {
                 return "Are you sure that you want to delete the record for " + e.name + "?";
             }
-        }
+       }
     });
     </script>
+   
 
 ### editable.cancelDelete `String` *(default: "Cancel")*
 
