@@ -414,6 +414,10 @@ Finds all Kendo widgets that are children of the specified element and calls the
 
 ##### element `String|jQuery|Node`
 
+##### force `Boolean`*(default: false)*
+
+Determines whether the resizing routine should be executed even if the respective widget's outer dimensions have not changed. The parameter will be passed to the [widget's `resize` method](/kendo-ui/getting-started/using-kendo-with/using-kendo-in-responsive-web-pages#individual-widget-resizing).
+
 ### stringify
 
 Converts a JavaScript object to [JSON](http://en.wikipedia.org/wiki/JSON). Uses [JSON.stringify](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify) in browsers that support it.
