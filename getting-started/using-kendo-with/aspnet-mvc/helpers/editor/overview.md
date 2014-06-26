@@ -49,6 +49,8 @@ In order to decode the value, use the [HttpUtility.HtmlDecode method](http://msd
         return View();
     }
 
+> You can suppress the editor encoding by specifying Encode(false) via the fluent API and adding the [AllowHtml attribute](http://msdn.microsoft.com/en-us/library/system.web.mvc.allowhtmlattribute(v=vs.118).aspx) to the model field that stores the HTML.
+
 ## Accessing an Existing Editor
 
 You can reference an existing Editor instance via [jQuery.data()](http://api.jquery.com/jQuery.data/).
