@@ -1596,13 +1596,12 @@ Can be set to a function which will be called, passing the model instance, to re
          { name: "John Doe", age: 33 }
        ],
        editable: {
-            confirmation: function(e) {
-                return "Are you sure that you want to delete the record for " + e.name + "?";
-            }
+         confirmation: function(e) {
+             return  "Are you sure that you want to delete record for " + e.name + "?";
+         }
        }
     });
     </script>
-   
 
 ### editable.cancelDelete `String` *(default: "Cancel")*
 
