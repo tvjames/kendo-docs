@@ -110,7 +110,7 @@ If set to `true` the data source would automatically save any changed data items
 If set to `true` the data source will batch CRUD operation requests. For example updating two data items would cause one HTTP request instead of two. By default the data source
 makes a HTTP request for every CRUD operation.
 
-> The changed data items are sent by default as `models`. This can be changed via the [parameterMap](#configuration-transport-parameterMap) option.
+> The changed data items are sent by default as `models`. This can be changed via the [parameterMap](#configuration-transport.parameterMap) option.
 
 #### Example - enable batch mode
     <script>
