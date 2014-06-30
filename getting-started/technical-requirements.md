@@ -39,25 +39,21 @@ Below are the system requirements for the Kendo UI Framework.
    <tbody>
         <tr>
             <th class="browsers" style="width: 120px"></th>
-            <th class="browsers" style="width: 100px">Kendo UI Web</th>
-            <th class="browsers" style="width: 115px">Kendo UI DataViz</th>
-            <th class="browsers" style="width: 110px">Kendo UI Mobile</th>
+            <th class="browsers" style="width: 165px">Kendo UI Core</th>
+            <th class="browsers" style="width: 165px">Kendo UI Professional</th>
         </tr>
         <tr>
            <td><span class="ie"></span>Internet Explorer</td>
-           <td>7+</td>
-           <td>7+</td>
-           <td>10+</td>
+           <td>7+<br/>10+ (for mobile widgets)</td>
+           <td>7+<br/>10+ (for mobile widgets)</td>
         </tr>
         <tr>
             <td><span class="firefox"></span>Firefox</td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</td>
-            <td>-</td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</br>*not supported by mobile widgets</td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</br>*not supported by mobile widgets</td>
         </tr>
         <tr>
             <td><span class="chrome"></span>Chrome</td>
-            <td>Yes</td>
             <td>Yes</td>
             <td>Yes</td>
         </tr>
@@ -65,11 +61,9 @@ Below are the system requirements for the Kendo UI Framework.
             <td><span class="opera"></span>Opera</td>
             <td>15.0 +</td>
             <td>15.0 +</td>
-            <td>15.0 +</td>
         </tr>
         <tr>
             <td><span class="safari"></span>Safari 5+ (OS X)</td>
-            <td>Yes</td>
             <td>Yes</td>
             <td>Yes</td>
         </tr>
@@ -127,7 +121,7 @@ It is highly recommended to use IE's [Edge mode](http://blogs.msdn.com/b/ie/arch
 
 **NOTES:**
 
-* In Android 2.3 Kendo UI DataViz only supports Canvas rendering mode.
+* In Android 2.3 dataviz widgets support only Canvas rendering mode.
 * Hybrid mouse and touch devices are supported (for instance IE10, Chrome and Firefox on Windows 8).
 
 
