@@ -49,8 +49,8 @@ Below are the system requirements for the Kendo UI Framework.
         </tr>
         <tr>
             <td><span class="firefox"></span>Firefox</td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</br>*not supported by mobile widgets</td>
-            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +</br>*not supported by mobile widgets</td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +<br/>*not supported by mobile widgets</td>
+            <td><a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> +<br/>*not supported by mobile widgets</td>
         </tr>
         <tr>
             <td><span class="chrome"></span>Chrome</td>
