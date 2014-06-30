@@ -39,8 +39,8 @@ Below are the system requirements for the Kendo UI Framework.
    <tbody>
         <tr>
             <th class="browsers" style="width: 120px"></th>
-            <th class="browsers" style="width: 165px">Kendo UI Core</th>
-            <th class="browsers" style="width: 165px">Kendo UI Professional</th>
+            <th class="browsers" style="width: 220px">Kendo UI Core</th>
+            <th class="browsers" style="width: 220px">Kendo UI Professional</th>
         </tr>
         <tr>
            <td><span class="ie"></span>Internet Explorer</td>
