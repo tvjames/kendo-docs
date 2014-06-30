@@ -5,7 +5,7 @@ module Jekyll
             @navigation = Hash[(config['navigation'] || {}).map { |key, value| [/^#{key.gsub('*', '.*?')}$/, value] }]
         end
 
-        def generate(site)
+        def categories(site)
             categories = {}
 
             site.pages.each do |page|
@@ -19,7 +19,7 @@ module Jekyll
                     categories[category] = node = []
                 end
 
-                url = page.url
+                url = page.url.sub('/', '')
 
                 segments = url.split('/')
 
@@ -34,7 +34,7 @@ module Jekyll
                             item['position'] = page.data['position'] if page.data['position']
                             item['text'] = page.data['title']
                         else
-                            path = segments.slice(1,index).join('/')
+                            path = segments[0..index].join('/')
                             navigation_entry =  @navigation.find { |key, value| path =~ key }
                             mapping = navigation_entry ? navigation_entry[1] : {}
                             item['text'] = mapping['title'] || segment
@@ -50,21 +50,22 @@ module Jekyll
                 end
             end
 
-            categories.each do |key, value|
+            categories.each {  |key, value| sort!(value) }
+
+            categories
+        end
+
+        def generate(site)
+            categories(site).each do |key, value|
                 filename = "#{key}.json"
 
                 FileUtils.mkdir_p(site.dest) unless File.exist?(site.dest)
 
-                items = value[0]['items']
-
-                sort!(items)
-
-                File.write(File.join(site.dest, filename), items.to_json)
+                File.write(File.join(site.dest, filename), value.to_json)
 
                 # Keep the file from being cleaned by Jekyll
                 site.keep_files << filename
             end
-
         end
 
         def sort!(items)
