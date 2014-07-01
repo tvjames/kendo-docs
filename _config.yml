@@ -85,6 +85,8 @@ navigation:
         title: "LinearGauge"
     "*map":
         title: "Map"
+    "*treemap":
+        title: "TreeMap"
     "*qrcode":
         title: "QRCode"
     "*radialgauge":

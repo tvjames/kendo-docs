@@ -7,8 +7,7 @@ position: 1
 
 # Overview
 
-The TreeMap displays hierarchical data in a traditional tree structure. It supports user
-interaction through the mouse or touch to perform re-ordering operations via drag-and-drop.
+The TreeMap displays hierarchical data in a traditional tree structure. It supports user interaction through the mouse or touch to perform re-ordering operations via drag-and-drop.
 
 ## Getting Started
 
