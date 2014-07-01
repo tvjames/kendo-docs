@@ -4,7 +4,7 @@ page_title: Kendo UI PivotGrid Frequently Asked Questions
 description: Answers to Frequently Asked Questions about what Kendo UI PivotGrid supports
 ---
 
-# Kendo UI Mobile Frequently Asked Questions
+# Kendo UI PivotGrid Frequently Asked Questions
 
 This is a collection of frequently asked questions about what Kendo UI PivotGrid supports.
 

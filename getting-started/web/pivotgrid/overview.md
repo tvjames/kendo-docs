@@ -2,6 +2,7 @@
 title: Overview
 page_title: Overview of the Kendo UI PivotGrid widget
 description: Quick steps to help you create a Kendo UI PivotGrid.
+position: 1
 ---
 
 # PivotGrid Overview
