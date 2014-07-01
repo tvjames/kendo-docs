@@ -83,10 +83,10 @@ navigation:
         title: "Diagram"
     "*lineargauge":
         title: "LinearGauge"
-    "*map":
-        title: "Map"
     "*treemap":
         title: "TreeMap"
+    "*map":
+        title: "Map"
     "*qrcode":
         title: "QRCode"
     "*radialgauge":
