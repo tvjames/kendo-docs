@@ -95,6 +95,8 @@ navigation:
         title: "Sparkline"
     "*stockchart":
         title: "StockChart"
+    "*hierarchicaldatasource":
+        title: "HierarchicalDataSource"
     "*datasource":
         title: "DataSource"
     "*draganddrop":
@@ -103,8 +105,6 @@ navigation:
         title: "FX"
     "*globalization":
         title: "Globalization"
-    "*hierarchicaldatasource":
-        title: "HierarchicalDataSource"
     "*mvvm":
         title: "MVVM"
     "*spa":
