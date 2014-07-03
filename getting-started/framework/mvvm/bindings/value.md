@@ -51,6 +51,8 @@ Likewise, if the value of the `textarea` changes so will `textareaValue`. Changi
 
 By default the `value` binding relies on the `change` DOM event which is raised after blurring the element whose value has changed. This means that the value from the View-Model will be updated when the element loses focus. The `data-value-update` attribute can be used to specify a different DOM event e.g. `keyup` or `keypress`. The `keydown` event is **not** supported because the DOM element value is not yet updated when that event triggers.
 
+> The [input DOM event](https://developer.mozilla.org/en-US/docs/Web/Events/input) may be used in case you need to update the viewmodel value on each keypress *and* when the user pastes content in the field. Keep in mind that the input event is supported in IE9+.
+
 ### Using the data-value-update attribute
 
     <div id="view">
@@ -139,7 +141,7 @@ You can also use the `value` binding with a View-Model field which is of primiti
 
 ### Use the value binding with a select widget to update the View-Model field with the value field when the initial value is null.
 
-    <select data-role="dropdownlist" data-option-label="Select product..." data-value-primitive="true" 
+    <select data-role="dropdownlist" data-option-label="Select product..." data-value-primitive="true"
       data-value-field="id" data-text-field="name" data-bind="value: selectedProductId, source: products">
     </select>
     <script>
