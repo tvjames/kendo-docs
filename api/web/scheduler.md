@@ -5611,6 +5611,14 @@ The event handler function context (available via the `this` keyword) will be se
 
 #### Event Data
 
+##### e.start `Date`
+
+The start date of the dragged range.
+
+##### e.end `Date`
+
+The end date of the dragged range.
+
 ##### e.event `kendo.data.SchedulerEvent`
 
 The event which is being moved.
