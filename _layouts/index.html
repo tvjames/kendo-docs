@@ -11,6 +11,9 @@
         <script src="http://cdn.kendostatic.com/2014.1.528/js/kendo.web.min.js"></script>
         <script src="{{site.baseurl}}/assets/js/prettify.js"></script>
         <script src="{{site.baseurl}}/assets/js/app.js"></script>
+        {% if page.category == 'api' %}{% unless page.dir contains 'wrappers' %}
+        <script src="{{site.baseurl}}/assets/js/dojo.js"></script>
+        {% endunless %}{% endif %}
         <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '{{site.google_analytics}}'],
@@ -33,6 +36,7 @@
         <noscript>
             <iframe src="//www.googletagmanager.com/ns.html?id={{site.google_tag_manager}}" height="0" width="0" style="display: none; visibility: hidden"></iframe>
         </noscript>
+        {{ page.dir }}
         <script>(function(w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', '{{site.google_tag_manager}}');</script>
         <!-- End Google Tag Manager -->
         <div id="page-header">
