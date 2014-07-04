@@ -479,7 +479,7 @@ Additional options passed to the SchedulerEvent constructor.
 
 ##### updateUid `Boolean`*(default: false)*
 
-If you pass `true` the `uid` of the event will be preserved.
+If you pass `true` the `uid` of the event will be **updated**.
 
 #### Returns
 
