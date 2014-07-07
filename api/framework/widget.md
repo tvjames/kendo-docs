@@ -21,6 +21,36 @@ Prepares the widget for safe removal from the DOM. Detaches all event handlers a
 Attaches a handler to an event. The handler is executed only once. Examples and more info can be found in the [one](/api/framework/observable#one) section of the
 `kendo.Observable` API reference.
 
+### setOptions
+
+Allows changing the widget configuration after initialization. Depending on the widget, some properties may not be changed, e.g. ones that influence the widget's HTML output (such as Grid scrollability or columns).
+
+#### Parameters
+
+##### newOptions `Object`
+
+The options to be changed or added.
+
+#### Example - use setOptions to change the maximum value of a NumericTextBox
+
+    <input type="number" id="ntb" value="1" />
+    
+    <script>
+    
+    $(function(){
+        $("#ntb").kendoNumericTextBox({
+            max: 5
+        });
+        
+        // ...
+
+        $("#ntb").data("kendoNumericTextBox").setOptions({
+            max: 10
+        });
+    });
+    
+    </script>
+
 ### trigger
 
 Executes all handlers attached to the given event. More info can be found in the [trigger](/api/framework/observable#trigger) section of the
