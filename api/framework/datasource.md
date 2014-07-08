@@ -278,7 +278,7 @@ The data item field to which the filter operator is applied.
 
 The nested filter expressions. Suppor the same options as [filter](#configuration-filter). Filters can be nested indefinitely.
 
-### Example - nested filters
+#### Example - nested filters
 
     <script>
     var dataSource = new kendo.data.DataSource({
@@ -309,7 +309,7 @@ The nested filter expressions. Suppor the same options as [filter](#configuratio
 
 The logical operation to use when the `filter.filters` option is set. The supported values are "and" and "or".
 
-### Example - set the filter logic
+#### Example - set the filter logic
 
     <script>
     var dataSource = new kendo.data.DataSource({
