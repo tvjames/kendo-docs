@@ -32,7 +32,7 @@ You can use any valid [jQuery selector](http://api.jquery.com/category/selectors
 
 > **Note:** A Kendo UI widget will be initialized for every element that matches the specified jQuery selector.
 
-> All Kendo UI widgets, which are defined with a **server wrapper**, are **initialized automatically**. If a widget is initialized again, this can cause unexpected side effects.
+> All Kendo UI widgets, which are defined with a **server wrapper**, are **initialized automatically**. If a widget is [initialized again](/getting-started/widgets#duplicate-kendo-ui-widget-initialization), this will cause unexpected side effects.
 
 ## Configuring Kendo UI widgets
 
@@ -97,17 +97,19 @@ is the name of the jQuery plugin itself - "kendoAutoComplete", "kendoGrid" etc.
 
 ## Duplicate Kendo UI widget initialization
 
-Please be careful **not** to initialize an existing Kendo UI widget instance again. This is especially applicable to Kendo UI server wrappers, or scenarios in which a widget is created in an event handler that can be
-executed multiple times. Duplicate initialization is unnecessary, unsupported and usually leads to unexpected side effects. For example:
+Please be careful **not** to initialize an existing Kendo UI widget instance again. This is especially applicable to Kendo UI server wrappers (they are initialized automatically), or scenarios in which a widget is created in an event handler that can be
+executed multiple times. A common mistake is to recreate a widget instance when the goal is simply to obtain the instance object (see below). Duplicate initialization is unnecessary, unsupported and usually leads to unexpected side effects. If a widget instance must be recreated, it must be destroyed first.
+
+### Example - incorrect duplicate initialization
 
     <input id="autocomplete" />
     <script>
     // initialization code here...
     $("#autocomplete").kendoAutoComplete(["Apples", "Oranges", "Grapes"]);
     // ...
-    // correct:
+    // correct - instance reference is obtained:
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
-    // incorrect:
+    // incorrect - instance reference is obtained while creating a duplicate instance:
     var duplicate = $("#autocomplete").kendoAutoComplete().data("kendoAutoComplete");
     </script>
 
