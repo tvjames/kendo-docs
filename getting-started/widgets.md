@@ -97,8 +97,7 @@ is the name of the jQuery plugin itself - "kendoAutoComplete", "kendoGrid" etc.
 
 ## Duplicate Kendo UI widget initialization
 
-Please be careful **not** to initialize an existing Kendo UI widget instance again. This is especially applicable to Kendo UI server wrappers (they are initialized automatically), or scenarios in which a widget is created in an event handler that can be
-executed multiple times. A common mistake is to recreate a widget instance when the goal is simply to obtain the instance object (see below). Duplicate initialization is unnecessary, unsupported and usually leads to unexpected side effects. If a widget instance must be recreated, it must be destroyed first.
+Please be careful **not** to initialize an existing Kendo UI widget instance again. This is especially applicable to Kendo UI server wrappers (they are initialized automatically), or scenarios in which a widget is created in an event handler that can be executed multiple times. A common mistake is to recreate a widget instance when the goal is simply to obtain the instance object (see below). Duplicate initialization is unnecessary, unsupported and usually leads to unexpected side effects. If a widget instance must be recreated, it must be [destroyed](/getting-started/widgets#destroying-kendo-ui-widgets) first.
 
 ### Example - incorrect duplicate initialization
 
