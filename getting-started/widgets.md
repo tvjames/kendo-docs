@@ -1,7 +1,8 @@
 ---
-title: Widgets
-page_title: Kendo UI widgets
+title: Fundamentals
+page_title: Kendo UI widget fundamentals
 description: Initialize Kendo UI widgets, set configuration, get the client object, use event binding.
+position: 2
 ---
 
 # Kendo UI Widgets

@@ -2,6 +2,7 @@
 title: Technical Requirements
 page_title: Technical Requirements for using Kendo UI JavaScript framework
 description: Check browser and platform support and prerequisites for best performance when working with Kendo UI.
+position: 3
 ---
 
 <style scoped>

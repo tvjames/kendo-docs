@@ -2,6 +2,7 @@
 title: Javascript Dependencies
 page_title: Javascript Dependencies
 description: A list of scripts that Kendo UI widgets require to work, detailed explanation about all JavaScript files
+position: 4
 ---
 
 # JavaScript files used by Kendo UI
