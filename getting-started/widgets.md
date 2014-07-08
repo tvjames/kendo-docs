@@ -95,8 +95,10 @@ The `$("#autocomplete").data("kendoAutoComplete")` statement returns the Kendo A
 > Kendo UI widget instances are associated with their elements via the [jQuery data](http://api.jquery.com/data/) method. The key passed to the jQuery data method
 is the name of the jQuery plugin itself - "kendoAutoComplete", "kendoGrid" etc.
 
+## Duplicate Kendo UI widget initialization
+
 Please be careful **not** to initialize an existing Kendo UI widget instance again. This is especially applicable to Kendo UI server wrappers, or scenarios in which a widget is created in an event handler that can be
-executed multiple times. Duplicate initialization can lead to unexpected side effects. For example:
+executed multiple times. Duplicate initialization is unnecessary, unsupported and usually leads to unexpected side effects. For example:
 
     <input id="autocomplete" />
     <script>
@@ -106,7 +108,7 @@ executed multiple times. Duplicate initialization can lead to unexpected side ef
     // correct:
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
     // incorrect:
-    var autocomplete = $("#autocomplete").kendoAutoComplete().data("kendoAutoComplete");
+    var duplicate = $("#autocomplete").kendoAutoComplete().data("kendoAutoComplete");
     </script>
 
 ## Getting reference to an unknown Kendo UI widget
