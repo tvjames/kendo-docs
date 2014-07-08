@@ -5,7 +5,7 @@ description: Initialize Kendo UI widgets, set configuration, get the client obje
 position: 2
 ---
 
-# Kendo UI Widgets
+# Kendo UI Widget Fundamentals
 
 Kendo UI is based on the [jQuery](http://jquery.com) library. The Kendo UI widgets are exposed as jQuery plugins. The name of the jQuery plugin is formed
 by adding the "kendo" prefix to the name of the Kendo UI widget. For example the Kendo AutoComplete is exposed as "kendoAutoComplete". Kendo UI Mobile widgets
