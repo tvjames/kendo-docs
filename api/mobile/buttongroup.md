@@ -10,6 +10,24 @@ Represents the Kendo UI Mobile ButtonGroup widget. Inherits from [kendo.mobile.u
 
 ## Configuration
 
+### enable `Boolean` *(default: true)*
+
+Defines if the widget is initially enabled or disabled.
+
+#### Example
+
+    <div data-role="view">
+      <ul data-role="buttongroup" data-enable="false">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+
+    <script>
+    var app = new kendo.mobile.Application();
+    </script>
+
 ### index `Number`
 
 Defines the initially selected Button (zero based index).
@@ -147,6 +165,35 @@ Prepares the **ButtonGroup** for safe removal from DOM. Detaches all event handl
     function destroy() {
       $("#buttongroup").data("kendoMobileButtonGroup").destroy(); //detach events
       $("#buttongroup").remove(); //remove the button from the DOM
+    }
+    </script>
+
+### enable
+
+Enables or disables the widget.
+
+#### Parameters
+
+##### enable `Boolean`
+
+A boolean flag that indicates whether the widget should be enabled or disabled.
+
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-click="enable">Enable</a>
+      <ul id="btnGroup" data-role="buttongroup" data-enable="false">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+
+    <script>
+    var app = new kendo.mobile.Application();
+
+    function enable() {
+        $("#btnGroup").data("kendoMobileButtonGroup").enable(true);
     }
     </script>
 
