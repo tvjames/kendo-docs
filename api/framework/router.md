@@ -4,11 +4,60 @@ title: Router
 
 # kendo.Router
 
+## Configuration
+
+### pushState `Boolean` *(default: false)*
+
+If set to true, the router will use the [history pushState API](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history#The_pushState().C2.A0method).
+
+> The history pushState API currently has [limited support accross current browsers](http://caniuse.com/#search=pushstate).
+
+### root `String` *(default: "/")*
+
+Applicable if `pushState` is used and the application is deployed to a path different than `/`. If the application start page is hosted on `http://foo.com/myapp/`, the root option should be set to `/myapp/`.
+
+#### Example
+    <script>
+    var router = new kendo.Router({ pushState: true, root: "/myapp/" });
+
+    $(function() {
+      router.route("bar", function() {
+          console.log("navigated to bar");
+      });
+      
+      router.start();
+    });
+    </script>
+
+### hashBang `Boolean` *(default: false)*
+
+Introduced in the 2014 Q1 Service Pack 1 release. If set to `true`, the hash based navigation will parse and prefix the fragment value with `!`,
+which [should be SEO friendly](http://googlewebmastercentral.blogspot.com/2009/10/proposal-for-making-ajax-crawlable.html), and allows non-prefixed anchor links to work as expected.
+
+#### Example
+    <a href="#!bar">Go to bar</a>
+
+    <a href="#bar">I am a regular bar anchor tag</a>
+
+    <script>
+    var router = new kendo.Router({ hashBang: true });
+
+    $(function() {
+      router.route("bar", function() {
+          console.log("navigated to bar");
+      });
+      
+      router.start();
+    });
+    </script>
+
 ## Methods
 
 ### start
 
-Activates the router binding to the URL fragment part changes.
+Activates the router binding to the URL fragment part changes. 
+
+> Start should only be called once the routes have been registered. Otherwise the route for the current page/fragment will not be called. 
 
 #### Example
 
@@ -20,45 +69,9 @@ Activates the router binding to the URL fragment part changes.
     });
     </script>
 
-#### Parameters
-
-##### options `Object`
-
-The router configuration options. The following options are supported:
-
-##### options.pushState `Boolean` *(default: false)*
-
-If set to true, the router will use the [history pushState API](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history#The_pushState().C2.A0method).
-
-> The history pushState API currently has [limited support accross current browsers](http://caniuse.com/#search=pushstate).
-
-##### options.root `String` *(default: "/")*
-
-Applicable if `pushState` is used and the application is deployed to a path different than `/`. If the application start page is hosted on `http://foo.com/myapp/`, the root option should be set to `/myapp/`.
-
-##### options.hashBang `Boolean` *(default: false)*
-
-Introduced in the 2014 Q1 Service Pack 1 release. If set to `true`, the hash based navigation will parse and prefix the fragment value with `!`,
-which [should be SEO friendly](http://googlewebmastercentral.blogspot.com/2009/10/proposal-for-making-ajax-crawlable.html), and allows non-prefixed anchor links to work as expected.
-
-#### Example
-    <a href="#!bar">Go to bar</a>
-
-    <a href="#bar">I am a regular bar anchor tag</a>
-
-    <script>
-    var router = new kendo.Router();
-
-    $(function() {
-      router.start({ hashBang: true });
-
-      router.route("bar", function() {
-          console.log("navigated to bar");
-      });
-    });
-    </script>
-
 ### route
+
+Registers a route with the router.
 
 #### Example
 
